@@ -118,8 +118,8 @@ Sbteclipse provides SBT command to create Eclipse project files
 	Use "Brows" to look up the project root ....
 
 
-User powered basic example 
-==========================
+User powered Lift module 
+========================
 **(*)** This is a _unofficial_ user powered Lift module which means it is a work based on the 
 sound foundation of Lift and done by a developer who uses Lift for development ;), sharing it with others.
 
