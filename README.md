@@ -4,23 +4,21 @@ FoBo - A Lift Front-End Toolkit Module
 This external/optional Lift module is a love, peace and harmony mix of the [Twitter Bootstrap](http://twitter.github.com/bootstrap/) 
 and the [ZURB/Foundation](http://foundation.zurb.com/) toolkits.  
 
-If you do not need the mix of both the toolkits it is also easy to set up this module for use for either of the toolkits.    
+If you do not need the mix of both the toolkits it is also easy to set up this module for use with either of the toolkits separately.    
 
-Lift comes by default, at this writing, bundled with [blueprint](http://blueprintcss.org/) as hooked up CSS toolkit, 
-with this module you can replace blueprint with a awesome combination of two cutting edge front-end toolkits that 
-will jazz up your Lift applications with a concert mix of the twitter bootstrap:s front-end toolkit brilliance and the 
-rock & roll solid reactive, mobile scalable zurb/foundation front-end framework.
+Lift comes by default, at this writing, bundled with [blueprint](http://blueprintcss.org/) as hooked up CSS toolkit, with this module 
+you can replace blueprint with a awesome combination of two cutting edge front-end toolkits that will jazz up your Lift applications 
+with a concert mix of the twitter bootstrap:s front-end toolkit brilliance and the rock & roll solid reactive, mobile scalable 
+zurb/foundation front-end framework.
 
-The prefered way to work with these toolkits is to leave there files untouched and use application specific css/js files  
-for application specific tweaks and overrides, so apart from the benefits outlined above, by using this module you will get  
-a clean separation of the static toolkit files and your application specific resources as the module dose not cluttering 
-your applications webapp resources directory. 
+The prefered way to work with these toolkits is to leave there files untouched and use application specific css/js files for application 
+specific tweaks and overrides, so apart from the benefits outlined above, by using this module you will get a clean separation of the static 
+toolkit files and your application specific resources as the module dose not cluttering your applications webapp resources directory. 
 
-After many years of Java EE development I started look at Scala/Lift in May 2011 so there may be some none "best 
-practice" stuff in there and if you find something you think could be done in a more Scala/Lift fashion please let me 
-know.
+After many years of Java EE development I started look at Scala/Lift in May 2011 so there may be some none "best practice" stuff in there 
+and if you find something you think could be done in a more Scala/Lift fashion please let me know.
 
-Improvements, contributions and suggestions are welcome! Leave a issue report or drop a question/suggestion on 
+Improvements, contributions and suggestions are welcome! Leave a issue report or drop a question/suggestion to my priv. e-mail or on 
 [Lift's mailing list](http://groups.google.com/group/liftweb/) 
 
 best regards 
@@ -75,7 +73,7 @@ Put something like the following in your Lift templat(s) head section
  	
     <link rel="stylesheet" type='text/css' href='/classpath/fobo/css/fobo.css'/> 	
     <link rel="stylesheet" type='text/css' href='[path/to/you/app/specific/css/file/in/the/webapp/dir]'/>
-    
+    <script type="text/javascript" src="/classpath/fobo/js/jquery-[1.6.4 || 1.7.1].js"></script>
 Using the included bootstrap scripts, place them at the bottom of the body section
 
     <script type="text/javascript" src="/classpath/fobo/js/bootstrap-twipsy.js"></script>
