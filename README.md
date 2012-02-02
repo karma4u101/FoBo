@@ -83,9 +83,9 @@ Using the included bootstrap scripts, place them at the bottom of the body secti
     
 Alternatively if you like to use only the bootstrap or foundation toolkit use
 
-    <script type="text/javascript" src="/classpath/fobo/orgin/css/bootstrap.css"></script>
+    <link rel="stylesheet" type='text/css' href='/classpath/fobo/orgin/css/bootstrap.css'/>
     or
-    <script type="text/javascript" src="/classpath/fobo/orgin/css/foundation.css"></script>      
+    <link rel="stylesheet" type='text/css' href='/classpath/fobo/orgin/css/foundation.css'/>    
     
 ### FoBo front-end toolkits documentation ###
 
