@@ -1,4 +1,4 @@
-/* Foundation v2.1.4 http://foundation.zurb.com */
+/* Foundation v2.1.3 http://foundation.zurb.com */
 /* Artfully Masterminded by ZURB */
 
 /* -------------------------------------------------- 
@@ -153,7 +153,7 @@
 	
 	h1 small, h2 small, h3 small, h4 small, h5 small { color: #777; }
 	
-	/*	Blockquotes  */
+/*	Blockquotes  */
 	blockquote, blockquote p { line-height: 20px; color: #777; }
 	blockquote { margin: 0 0 18px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
 	blockquote cite { display: block; font-size: 12px; font-size: 1.2rem; color: #555; }
@@ -171,22 +171,19 @@
 	 * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
 	 * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
 	 */
-	.print-only { display: none !important; }
 	@media print {
-		* { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
-		-ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
-		p a, p a:visited { color: #444 !important; text-decoration: underline; }
-		p a[href]:after { content: " (" attr(href) ")"; }
-		abbr[title]:after { content: " (" attr(title) ")"; }
-		.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-		pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-		thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
-		tr, img { page-break-inside: avoid; }
-		@page { margin: 0.5cm; }
-		p, h2, h3 { orphans: 3; widows: 3; }
-		h2, h3{ page-break-after: avoid; }
-		.hide-on-print { display: none !important; }
-		.print-only { display: block !important; }
+	  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+	  -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+	  p a, p a:visited { color: #444 !important; text-decoration: underline; }
+	  p a[href]:after { content: " (" attr(href) ")"; }
+	  abbr[title]:after { content: " (" attr(title) ")"; }
+	  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+	  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+	  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+	  tr, img { page-break-inside: avoid; }
+	  @page { margin: 0.5cm; }
+	  p, h2, h3 { orphans: 3; widows: 3; }
+	  h2, h3{ page-break-after: avoid; }
 	}
 /* Arfully Masterminded by ZURB */
 
@@ -210,7 +207,7 @@
 	.row .one.columns 		{ width: 4.3%; }
 	.row .two.columns 		{ width: 13%; }
 	.row .three.columns 	{ width: 21.68%; }
-	.row .four.columns 		{ width: 30.37%; }
+	.row .four.columns 		{ width: 30.4%; }
 	.row .five.columns 		{ width: 39.1%; }
 	.row .six.columns 		{ width: 47.8%; }
 	.row .seven.columns 	{ width: 56.5%; }
@@ -245,29 +242,6 @@
 	.row .offset-by-ten:first-child 	{ margin-left: 87%;  }
 	.row .offset-by-eleven:first-child 	{ margin-left: 95.7%;  }
 	
-	/* Source Ordering */
-	.push-two 		{ left: 17.4% }
-	.push-three 	{ left: 26.1%; }
-	.push-four 		{ left: 34.8%; }
-	.push-five 		{ left: 43.5%; }
-	.push-six 		{ left: 52.2%; }
-	.push-seven 	{ left: 60.9%; }
-	.push-eight 	{ left: 69.6%; }
-	.push-nine 		{ left: 78.3%; }
-	.push-ten 		{ left: 87%; }
-	
-	.pull-two 		{ right: 17.4% }
-	.pull-three 	{ right: 26.1%; }
-	.pull-four 		{ right: 34.8%; }
-	.pull-five 		{ right: 43.5%; }
-	.pull-six 		{ right: 52.2%; }
-	.pull-seven 	{ right: 60.9%; }
-	.pull-eight 	{ right: 69.6%; }
-	.pull-nine 		{ right: 78.3%; }
-	.pull-ten 		{ right: 87%; }
-	
-	
-	
 	img, object, embed { max-width: 100%; height: auto; }
 	img { -ms-interpolation-mode: bicubic; }
 	 
@@ -286,11 +260,6 @@
 	for repeating blocks of content. Add 'mobile' to
 	them to switch them just like the layout grid
 	(one item per line) on phones
-	
-	For IE7/8 compatibility block-grid items need to be
-	the same height. You can optionally uncomment the
-	lines below to support arbitrary height, but know
-	that IE7/8 do not support :nth-child.
 	-------------------------------------------------- */
 	
 	.block-grid { display: block; overflow: hidden; }
@@ -298,19 +267,15 @@
 	
 	.block-grid.two-up { margin-left: -4% }
 	.block-grid.two-up>li { margin-left: 4%; width: 46%; }
-/* 	.block-grid.two-up>li:nth-child(2n+1) {clear: left;} */
 	
 	.block-grid.three-up { margin-left: -2% }
 	.block-grid.three-up>li { margin-left: 2%; width: 31.3%; }
-/* 	.block-grid.three-up>li:nth-child(3n+1) {clear: left;} */
 	
 	.block-grid.four-up { margin-left: -2% }
 	.block-grid.four-up>li { margin-left: 2%; width: 23%; }
-/* 	.block-grid.four-up>li:nth-child(4n+1) {clear: left;} */
 	
 	.block-grid.five-up { margin-left: -1.5% }
 	.block-grid.five-up>li { margin-left: 1.5%; width: 18.5%; }
-/* 	.block-grid.five-up>li:nth-child(5n+1) {clear: left;} */
 
 /* Artfully masterminded by ZURB  */
 
@@ -327,7 +292,6 @@
 :: Lists
 :: Panels
 :: Nav
-:: Video
 :: Microformats
 */
 
@@ -531,34 +495,6 @@
 	.nav-bar>li:hover .flyout { display: block; }
 
 
-/*	--------------------------------------------------
-   	Video
-   	Mad props to http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
-	-------------------------------------------------- */
-	
-	.flex-video {
-		position: relative;
-		padding-top: 25px;
-		padding-bottom: 67.5%;
-		height: 0;
-		margin-bottom: 16px;
-		overflow: hidden;
-	}
-	
-	.flex-video.widescreen { padding-bottom: 57.25%; }
-	.flex-video.vimeo { padding-top: 0; }
-	
-	.flex-video iframe,
-	.flex-video object,
-	.flex-video embed {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-	}
-
-
 
 /*	--------------------------------------------------
    	Microformats
@@ -614,9 +550,9 @@
 	.form-field input[type=radio], div.form-field input[type=checkbox] { display: inline; width:auto; margin-bottom:0; }
 
 	/* Errors */
-	.form-field.error input, input.input-text.red { border-color: #C00000; background-color: rgba(255,0,0,0.15); }
-	.form-field.error label, label.red { color: #C00000; }
-	.form-field.error small, small.error { margin-top: -6px; display: block; margin-bottom: 9px; font-size: 11px; color: #C00000; width: 260px; }
+	.form-field.error input, input.input-text.red { border-color: red; background-color: rgba(255,0,0,0.15); }
+	.form-field.error label, label.red { color: red; }
+	.form-field.error small, small.error { margin-top: -6px; display: block; margin-bottom: 9px; font-size: 11px; color: red; width: 260px; }
 
 	.small + small.error { width: 140px; }
 	.medium + small.error { width: 260px; }
@@ -633,7 +569,7 @@
 
 	form.nice div.form-field input[type=radio], form.nice div.form-field input[type=checkbox] { display: inline; width:auto; margin-bottom:0; }
 
-	form.nice div.form-field.error small, form.nice small.error { padding: 6px 4px; border: solid 0 #C00000; border-width: 0 1px 1px 1px; margin-top: -10px; background: #C00000; color: #fff; font-size: 12px; font-weight: bold; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; -webkit-border-bottom-left-radius: 2px; -webkit-border-bottom-right-radius: 2px; -moz-border-radius-bottomleft: 2px; -moz-border-radius-bottomright: 2px; }
+	form.nice div.form-field.error small, form.nice small.error { padding: 6px 4px; border: solid 0 red; border-width: 0 1px 1px 1px; margin-top: -10px; background: red; color: #fff; font-size: 12px; font-weight: bold; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; -webkit-border-bottom-left-radius: 2px; -webkit-border-bottom-right-radius: 2px; -moz-border-radius-bottomleft: 2px; -moz-border-radius-bottomright: 2px; }
 
  	form.nice div.form-field.error .small + small, form.nice .small + small.error { width: 132px; }
 	form.nice div.form-field.error .medium + small, form.nice .medium + small.error { width: 252px; }
@@ -655,7 +591,7 @@
 	form.custom div.custom.dropdown.open a.selector { background-position: -14px -26px; }
 	
 	form.custom div.custom.dropdown ul { position: absolute; width: auto; display: none; margin: 0; left: 0; top: 27px; margin: 0; padding: 0; background: rgba(255,255,255,0.9); border: solid 1px #ddd; z-index: 10; }
-	form.custom div.custom.dropdown ul li { cursor: pointer; padding: 3px 38px 3px 6px; margin: 0; white-space: nowrap}
+	form.custom div.custom.dropdown ul li { cursor: pointer; padding: 3px 38px 3px 6px; margin: 0; }
 	form.custom div.custom.dropdown ul li.selected { background: url(../images/misc/custom-form-sprites.png) right -52px no-repeat; }
 	form.custom div.custom.dropdown ul li:hover { background-color: #2a85e8; color: #fff; }
 	form.custom div.custom.dropdown ul li.selected:hover { background: url(../images/misc/custom-form-sprites.png) #2a85e8 right -78px no-repeat; }
@@ -1039,11 +975,8 @@ div.slider-nav span.left {
 		.row .row .column, .row .row .columns { padding: 0; }
 		.column, .columns { width: auto !important; float: none; margin-left: 0; margin-right: 0; }
 		.column:last-child, .columns:last-child { margin-right: 0; }
-		
 		.offset-by-one, .offset-by-two, .offset-by-three, .offset-by-four, .offset-by-five, .offset-by-six, .offset-by-seven, .offset-by-eight, .offset-by-nine, .offset-by-ten, .offset-by-eleven, .centered { margin-left: 0 !important; }
 		
-		.push-two, .push-three, .push-four, .push-five, .push-six, .push-seven, .push-eight, .push-nine, .push-ten { left: auto; }
-		.pull-two, .pull-three, .pull-four, .pull-five, .pull-six, .pull-seven, .pull-eight, .pull-nine, .pull-ten { right: auto; }
 		
 		/* Mobile 4-column Grid */
 		.row .phone-one.column:first-child, .row .phone-two.column:first-child, .row .phone-three.column:first-child, .row .phone-four.column:first-child, .row .phone-one.columns:first-child, .row .phone-two.columns:first-child, .row .phone-three.columns:first-child, .row .phone-four.columns:first-child { margin-left: 0; }
@@ -1051,18 +984,10 @@ div.slider-nav span.left {
 		.row .phone-one.column, .row .phone-two.column, .row .phone-three.column, .row .phone-four.column,
 		.row .phone-one.columns, .row .phone-two.columns, .row .phone-three.columns, .row .phone-four.columns { margin-left: 4.4%; float: left; min-height: 1px; position: relative; padding: 0; }
 		
-		.row .phone-one.columns 	{ width: 21.68% !important; }
-		.row .phone-two.columns 	{ width: 47.8% !important; }
-		.row .phone-three.columns 	{ width: 73.9% !important; }
-		.row .phone-four.columns 	{ width: 100% !important; }
-		
-		.row .columns.push-one-phone { left: 26.08%; }
-		.row .columns.push-two-phone { left: 52.2% }
-		.row .columns.push-three-phone { left: 78.3% }
-		
-		.row .columns.pull-one-phone { right: 26.08% }
-		.row .columns.pull-two-phone { right: 52.2% }
-		.row .columns.pull-three-phone { right: 78.3%; }
+		.row .phone-one.columns { width: 21.68% !important; }
+		.row .phone-two.columns { width: 47.8% !important; }
+		.row .phone-three.columns { width: 73.9% !important; }
+		.row .phone-four.columns { width: 100% !important; }
 		
 		
 	}
@@ -1196,10 +1121,4 @@ div.slider-nav span.left {
 		.flyout.right { float: none; right: auto; left: -1px; }
 		.flyout.small, .flyout.large { width: auto; }
 		.flyout p:last-child { margin-bottom: 18px; }
-	}
-	
-	/* Nav Bar */
-	
-	@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px) {
-		.video { padding-top: 0; }
 	}

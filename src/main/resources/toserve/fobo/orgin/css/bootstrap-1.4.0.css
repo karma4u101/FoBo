@@ -188,9 +188,7 @@ body {
   font-weight: normal;
   line-height: 18px;
   color: #404040;
-  position: relative;
 }
-
 .container {
   width: 940px;
   margin-left: auto;
@@ -251,24 +249,23 @@ a:hover {
 .show {
   display: block;
 }
-
-/* .row { */
-/*   zoom: 1; */
-/*   margin-left: -20px; */
-/* } */
-/* .row:before, .row:after { */
-/*   display: table; */
-/*   content: ""; */
-/*   zoom: 1; */
-/* } */
-/* .row:after { */
-/*   clear: both; */
-/* } */
-/* .row > [class*="span"] { */
-/*   display: inline; */
-/*   float: left; */
-/*   margin-left: 20px; */
-/* } */
+.row {
+  zoom: 1;
+  margin-left: -20px;
+}
+.row:before, .row:after {
+  display: table;
+  content: "";
+  zoom: 1;
+}
+.row:after {
+  clear: both;
+}
+.row > [class*="span"] {
+  display: inline;
+  float: left;
+  margin-left: 20px;
+}
 .span1 {
   width: 40px;
 }
@@ -1304,7 +1301,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
  * Repeatable UI elements outside the base styles provided from the scaffolding
  * ---------------------------------------------------------------------------- */
 .topbar {
-  height: 30px;
+  height: 40px;
   position: fixed;
   top: 0;
   left: 0;
@@ -1328,7 +1325,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
 .topbar h3 a, .topbar .brand {
   float: left;
   display: block;
-  padding: 3px 20px 8px;
+  padding: 8px 20px 12px;
   margin-left: -20px;
   color: #ffffff;
   font-size: 20px;
@@ -1337,7 +1334,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
 }
 .topbar p {
   margin: 0;
-  line-height: 30px;
+  line-height: 40px;
 }
 .topbar p a:hover {
   background-color: transparent;
@@ -1430,7 +1427,7 @@ table .headerSortUp.purple, table .headerSortDown.purple {
 .topbar div > ul a, .nav a {
   display: block;
   float: none;
-  padding: 2px 10px 8px;
+  padding: 10px 10px 11px;
   line-height: 19px;
   text-decoration: none;
 }
@@ -1439,9 +1436,8 @@ table .headerSortUp.purple, table .headerSortDown.purple {
   text-decoration: none;
 }
 .topbar div > ul .active > a, .nav .active > a {
-  background-color: #114d6a; /*#222;*/
-  /*background-color: rgba(0, 0, 0, 0.5);*/
-  background-color: rgba(15, 70, 130, 0.5);
+  background-color: #222;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .topbar div > ul.secondary-nav, .nav.secondary-nav {
   float: right;
@@ -1532,7 +1528,6 @@ table .headerSortUp.purple, table .headerSortDown.purple {
 .topbar ul .menu-dropdown li a, .topbar ul .dropdown-menu li a {
   padding: 4px 15px;
 }
-
 li.menu, .dropdown {
   position: relative;
 }
