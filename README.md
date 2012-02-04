@@ -1,5 +1,5 @@
-FoBo - A Lift Front-End Toolkit Module
-======================================
+FoBo - Lift Front-End Toolkit Module
+====================================
 
 This external/optional Lift module is a love, peace and harmony mix of the [Twitter Bootstrap](http://twitter.github.com/bootstrap/) 
 and the [ZURB/Foundation](http://foundation.zurb.com/) toolkits.  
@@ -27,7 +27,7 @@ Peter Petersson
 Toolkit and Module Versions
 ---------------------------
 
-Current module version: 0.2.0-SNAPSHOT
+Current module version: 0.2.2-SNAPSHOT
 
 This module includes the following toolkits and selectable versions.
 
@@ -35,11 +35,6 @@ This module includes the following toolkits and selectable versions.
 * Bootstrap version 1.4.0
 * Foundation version 2.1.4
 * jquery version [1.6.4, 1.7.1]
-
-Known issues
-------------
-
-2011-02-03 Orbit is currently not working correctly. 
     
 Quick Start
 -----------
