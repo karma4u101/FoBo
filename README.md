@@ -67,23 +67,6 @@ Put the following in your project build.sbt files lift libraryDependencies secti
     "net.liftmodules" %% "fobo" % (liftVersion+"-[module version]")
 	
 now do a sbt clean update .....
-
-### A bit about the versioning schema for this module  
-
-A clear intention is that (for module versions >=1.0) no module updates should break code based on older versions, 
-this will be accomplished by leaving existing files untouched in all instances except for a obvious bug fix that are not 
-likely to break anything, if for any reason this statement dose not hold for special/planed reasons additional information 
-will be posted in this readme.
-
-By using this schema a module user will be able to switch version and evaluate it and if need arises easily switch back to the 
-previously used toolkit version in the case unresolvable problems should occur. Special/planed possibly breakable updates 
-will always be a major version number change with a clear notice and instruction on how to adjust usage code to amend the brake.
-
-Major module version number changes will in most cases reflect a addition of a new fobo css mix version in the bundle. 
-A new fobo.css version update will be a update of foundation and/or bootstrap and/or orbit in the fobo-<version>.css mix. 
-Other reasons for a major number change is stated above.
-Minor module version number changes will reflect additions of newer versions of a toolkit outside of the fobo css mix for 
-instance adding a more resent jquery script.     	
 	
 ### Bootstrap hook 
 
