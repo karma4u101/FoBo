@@ -4,6 +4,9 @@ FoBo - Lift Front-End Toolkit Module
 This external/optional Lift module is a love, peace and harmony mix of the [Twitter Bootstrap](http://twitter.github.com/bootstrap/) 
 and the [ZURB/Foundation](http://foundation.zurb.com/) toolkits.  
 
+A **live demo** of the use of this demo can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/) and the github repo for 
+the lift basic template (demo) using this module can be found [here](https://github.com/karma4u101/FoBo-Lift-Template).
+
 If you do not need the mix of both the toolkits it is also easy to set up this module for use with either of the toolkits separately.    
 
 Lift comes by default, at this writing, bundled with [blueprint](http://blueprintcss.org/) as hooked up CSS toolkit, with this module 
@@ -11,7 +14,7 @@ you can replace blueprint with a awesome combination of two cutting edge front-e
 with a concert mix of the twitter bootstrap:s front-end toolkit brilliance and the rock & roll solid reactive, mobile scalable 
 zurb/foundation front-end framework.
 
-The prefered way to work with these toolkits is to leave there files untouched and use application specific css/js files for application 
+The preferred way to work with these toolkits is to leave there files untouched and use application specific css/js files for application 
 specific tweaks and overrides, so apart from the benefits outlined above, by using this module you will get a clean separation of the static 
 toolkit files and your application specific resources as the module dose not cluttering your applications webapp resources directory. 
 
