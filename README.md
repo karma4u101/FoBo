@@ -30,13 +30,13 @@ Peter Petersson
 Toolkit and Module Versions
 ---------------------------
 
-Current module version: 0.2.2-SNAPSHOT
+Current module version: 0.2.3-SNAPSHOT
 
 This module includes the following toolkits and selectable versions.
 
 * FoBo version 0.1 (comprised of foundation 2.1.4,bootstrap 1.4.0,orbit 1.3.0)
-* Bootstrap version 1.4.0
-* Foundation version 2.1.4
+* Bootstrap version [1.4.0, 2.0.0]
+* Foundation version [2.1.4, 2.1.5]
 * jquery version [1.6.4, 1.7.1]
     
 Quick Start
