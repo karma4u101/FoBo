@@ -5,7 +5,7 @@ This external/optional Lift module is a love, peace and harmony mix of the [Twit
 and the [ZURB/Foundation](http://foundation.zurb.com/) toolkits.  
 
 A **live demo** of the use of this demo can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/) and the github repo for 
-the lift basic template (demo) using this module can be found [here](https://github.com/karma4u101/FoBo-Lift-Template).
+the lift basic template (the demo) using this module can be found [here](https://github.com/karma4u101/FoBo-Lift-Template).
 
 If you do not need the mix of both the toolkits it is also easy to set up this module for use with either of the toolkits separately.    
 
