@@ -1,22 +1,23 @@
 FoBo - Lift Front-End Toolkit Module
 ====================================
 
-This external/optional Lift module is a love, peace and harmony mix of the [Twitter Bootstrap](http://twitter.github.com/bootstrap/) 
-and the [ZURB/Foundation](http://foundation.zurb.com/) toolkits.  
+With this module you can chose among some of the industry leading web-centric open source front-end toolkits and the modules own fobo mix. 
+The module will also simultaneously support several versions of the includes toolkits making maintenance, upgrade and fall-back quick and 
+easy and ultimately jazz up your Lift applications with the toolkit of your choice or with a concert fobo mix of the twitter bootstrap:s 
+front-end toolkit brilliance and the rock & roll solid reactive, mobile scalable zurb/foundation front-end framework.
 
-A **live demo** of the use of this demo can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/) and the github repo for 
+As one of it's convenience options this external/optional Lift module comes with a love, peace and harmony mix of the 
+[Twitter Bootstrap](http://twitter.github.com/bootstrap/) and the [ZURB/Foundation](http://foundation.zurb.com/) toolkits. 
+But if you do not need the mix of these toolkits provided by the fobo setup option it is seemingly easy to setup and use any of 
+the included toolkits separately. For a list on what toolkits and versions supported see below. 
+
+A **live demo** of the use of this module can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/) and the github repo for 
 the lift basic template (the demo) using this module can be found [here](https://github.com/karma4u101/FoBo-Lift-Template).
 
-If you do not need the mix of both the toolkits it is also easy to set up this module for use with either of the toolkits separately.    
-
-Lift comes by default, at this writing, bundled with [blueprint](http://blueprintcss.org/) as hooked up CSS toolkit, with this module 
-you can replace blueprint with a awesome combination of two cutting edge front-end toolkits that will jazz up your Lift applications 
-with a concert mix of the twitter bootstrap:s front-end toolkit brilliance and the rock & roll solid reactive, mobile scalable 
-zurb/foundation front-end framework.
-
-The preferred way to work with these toolkits is to leave there files untouched and use application specific css/js files for application 
-specific tweaks and overrides, so apart from the benefits outlined above, by using this module you will get a clean separation of the static 
-toolkit files and your application specific resources as the module dose not cluttering your applications webapp resources directory. 
+As the preferred way to work with these toolkits is to leave the toolkit files untouched and use application specific css/js files for 
+application specific tweaks and overrides moving the toolkits into a module is ideal and apart from the benefits outlined above, by using 
+this module you will get a clean separation of the static toolkit files and your application specific resources as the module dose not 
+cluttering your applications webapp resources directory. 
 
 After many years of Java EE development I started look at Scala/Lift in May 2011 so there may be some none "best practice" stuff in there 
 and if you find something you think could be done in a more Scala/Lift fashion please let me know.
@@ -38,6 +39,27 @@ This module includes the following toolkits and selectable versions.
 * Bootstrap version [1.4.0, 2.0.0]
 * Foundation version [2.1.4, 2.1.5]
 * jquery version [1.6.4, 1.7.1]
+
+Planed improvement
+------------------
+
+There is a future planed improvement that will add some kind of init parameter setting for the module the benefits  
+of this change will be that you will get one place to change the jquery and toolkit versions (in boot) and it will 
+let you use something like the following cleaner (shorter), easier maintainable and version less settings in your 
+templates 
+
+    <link rel="stylesheet" type='text/css' href='/classpath/fobo/bootstrap.css'/> 
+    <script type="text/javascript" src="/classpath/fobo/jquery.js"></script>
+    
+instead of 
+
+    <link rel="stylesheet" type='text/css' href='/classpath/fobo/orgin/css/bootstrap-[bootstrap version].css'/>      
+    <script type="text/javascript" src="/classpath/fobo/js/jquery-[jquery version].js"></script>
+ 
+If you already are using this module beware that when this change is introduced it may require you to change 
+the template paths accordingly. 
+
+For more information see [Issue #1](https://github.com/karma4u101/FoBo/issues/1)        
     
 Quick Start
 -----------
