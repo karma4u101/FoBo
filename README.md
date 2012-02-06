@@ -30,7 +30,7 @@ Peter Petersson
 Toolkit and Module Versions
 ---------------------------
 
-Current module version: 0.2.3-SNAPSHOT
+Current module version: 0.2.4-SNAPSHOT
 
 This module includes the following toolkits and selectable versions.
 
