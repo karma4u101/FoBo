@@ -1,13 +1,16 @@
 FoBo - Lift Front-End Toolkit Module
 ====================================
 
-With this module you can chose among some of the industry leading web-centric open source front-end toolkits and the modules own fobo mix. 
-The module will also simultaneously support several versions of the includes toolkits making maintenance, upgrade and fall-back quick and 
-easy and ultimately jazz up your Lift applications with the toolkit of your choice or with a concert fobo mix of the twitter bootstrap:s 
-front-end toolkit brilliance and the rock & roll solid reactive, mobile scalable zurb/foundation front-end framework.
+With this external/optional Lift module you can chose among some of the industry leading web-centric open source front-end 
+toolkits and the modules own fobo mix. The module will also simultaneously support several versions of the included toolkits, 
+making maintenance, upgrade and fall-back quick and easy and ultimately jazz up your Lift applications with the toolkit of 
+your choice.    
 
-As one of it's convenience options this external/optional Lift module comes with a love, peace and harmony mix of the 
-[Twitter Bootstrap](http://twitter.github.com/bootstrap/) and the [ZURB/Foundation](http://foundation.zurb.com/) toolkits. 
+One of the convenience options this Lift module comes with is the fobo option, that is a love, peace and harmony mix of the 
+[Twitter Bootstrap](http://twitter.github.com/bootstrap/) and the [ZURB/Foundation](http://foundation.zurb.com/) toolkits, 
+This concert mix will give you the brilliance of bootstraps and its components and the awesomeness of foundation with its 
+rock & roll solid reactive, mobile scalability.  
+
 But if you do not need the mix of these toolkits provided by the fobo setup option it is seemingly easy to setup and use any of 
 the included toolkits separately. For a list on what toolkits and versions supported see below. 
 
@@ -28,12 +31,12 @@ Improvements, contributions and suggestions are welcome! Leave a issue report or
 best regards 
 Peter Petersson     
 
-Toolkit and Module Versions
----------------------------
+Toolkit:s and Module Versions Options
+-------------------------------------
 
 Current module version: 0.2.4-SNAPSHOT
 
-This module includes the following toolkits and selectable versions.
+This module includes the following toolkits and selectable versions options.
 
 * FoBo version 0.1 (comprised of foundation 2.1.4,bootstrap 1.4.0,orbit 1.3.0)
 * Bootstrap version [1.4.0, 2.0.0]
@@ -43,7 +46,7 @@ This module includes the following toolkits and selectable versions.
 Planed improvement
 ------------------
 
-There is a future planed improvement that will add some kind of init parameter setting for the module the benefits  
+There is a future planed improvement that will add some kind of init parameter setting for the module. The benefits 
 of this change will be that you will get one place to change the jquery and toolkit versions (in boot) and it will 
 let you use something like the following cleaner (shorter), easier maintainable and version less settings in your 
 templates 
@@ -56,8 +59,8 @@ instead of
     <link rel="stylesheet" type='text/css' href='/classpath/fobo/orgin/css/bootstrap-[bootstrap version].css'/>      
     <script type="text/javascript" src="/classpath/fobo/js/jquery-[jquery version].js"></script>
  
-If you already are using this module beware that when this change is introduced it may require you to change 
-the template paths accordingly. 
+If you already are using this module beware that when this change is introduced it 
+_may require that you change the template paths accordingly_. 
 
 For more information see [Issue #1](https://github.com/karma4u101/FoBo/issues/1)        
     
