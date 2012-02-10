@@ -153,15 +153,16 @@ case object Foundation214 extends FoBoToolkit {
   }
 }
 
-case object Foundation215 extends FoBoToolkit {
+case object Foundation215 extends FoBoToolkit with Loggable {
+  logger.debug("")
   ResourceServer.rewrite {
     case "fobo" :: "foundation.css" :: Nil if Props.devMode => List("fobo","orgin","css","foundation-2.1.5.css")
     case "fobo" :: "foundation.css" :: Nil => List("fobo","orgin","css","foundation-2.1.5.css")
     case "fobo" :: "foundation-ie.css" :: Nil if Props.devMode => List("fobo","orgin","css","foundation-ie-2.1.5.css")
     case "fobo" :: "foundation-ie.css" :: Nil => List("fobo","orgin","css","foundation-ie-2.1.5.css")
 
-    case "fobo" :: "orbit.css" :: Nil if Props.devMode => List("fobo","orgin","css","orbit-1.4.0.js")
-    case "fobo" :: "orbit.css" :: Nil => List("fobo","js","fobo","orgin","css","orbit-1.4.0.js")    
+    case "fobo" :: "orbit.css" :: Nil if Props.devMode => List("fobo","orgin","css","orbit-1.4.0.css")
+    case "fobo" :: "orbit.css" :: Nil => List("fobo","orgin","css","orbit-1.4.0.css")    
     
     case "fobo" :: "foundation.js" :: Nil if Props.devMode => List("fobo","js","foundation-2.1.5.js")
     case "fobo" :: "foundation.js" :: Nil => List("fobo","js","foundation-2.1.5.js")    
@@ -171,6 +172,7 @@ case object Foundation215 extends FoBoToolkit {
     case "fobo" :: "orbit.js" :: Nil if Props.devMode => List("fobo","js","jquery.orbit-1.4.0.js")
     case "fobo" :: "orbit.js" :: Nil => List("fobo","js","jquery.orbit-1.4.0.js")      
   }
+  logger.debug("")
 }
 
 
