@@ -49,6 +49,7 @@
   })
   
 }( window.jQuery )
+
 /* ==========================================================
  * bootstrap-alert.js v2.0.0
  * http://twitter.github.com/bootstrap/javascript.html#alerts
@@ -140,6 +141,8 @@
   })
 
 }( window.jQuery )
+
+
 /* ============================================================
  * bootstrap-button.js v2.0.0
  * http://twitter.github.com/bootstrap/javascript.html#buttons
@@ -238,6 +241,7 @@
   })
 
 }( window.jQuery )
+
 /* ==========================================================
  * bootstrap-carousel.js v2.0.0
  * http://twitter.github.com/bootstrap/javascript.html#carousel

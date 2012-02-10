@@ -31,38 +31,31 @@ Improvements, contributions and suggestions are welcome! Leave a issue report or
 best regards 
 Peter Petersson     
 
-Toolkit:s and Module Versions Options
--------------------------------------
+Toolkit:s and available versions
+--------------------------------
 
-Current module version: 0.2.4-SNAPSHOT
+Current module version: 0.2.6-SNAPSHOT
 
-This module includes the following toolkits and selectable versions options.
+This module includes the following toolkits versions
 
-* FoBo version 0.1 (comprised of foundation 2.1.4,bootstrap 1.4.0,orbit 1.3.0)
+* FoBo 0.1 (comprised of foundation 2.1.4,bootstrap 1.4.0,orbit 1.3.0)
 * Bootstrap version [1.4.0, 2.0.0]
 * Foundation version [2.1.4, 2.1.5]
 * jquery version [1.6.4, 1.7.1]
 
-Planed improvement
-------------------
+Module names that can bee used in boot corresponding to the toolkit version above is
 
-There is a future planed improvement that will add some kind of init parameter setting for the module. The benefits 
-of this change will be that you will get one place to change the jquery and toolkit versions (in boot) and it will 
-let you use something like the following cleaner (shorter), easier maintainable and version less settings in your 
-templates 
+* FoBo010
+* Bootstrap140 
+* Bootstrap200 (current default)
+* Foundation214
+* Foundation215
+* JQuery164
+* JQuery171 (current default)
 
-    <link rel="stylesheet" type='text/css' href='/classpath/fobo/bootstrap.css'/> 
-    <script type="text/javascript" src="/classpath/fobo/jquery.js"></script>
-    
-instead of 
-
-    <link rel="stylesheet" type='text/css' href='/classpath/fobo/orgin/css/bootstrap-[bootstrap version].css'/>      
-    <script type="text/javascript" src="/classpath/fobo/js/jquery-[jquery version].js"></script>
- 
-If you already are using this module beware that when this change is introduced it 
-_may require that you change the template paths accordingly_. 
-
-For more information see [Issue #1](https://github.com/karma4u101/FoBo/issues/1)        
+If you will be using the defaults FoBoInitParams dose not need to be specified. For more information on how to set this up see below. 
+Be aware that the defaults most likely will be changed between module updates so if you do not want any module update surprises 
+set the FoBoInitParams in boot.        
     
 Quick Start
 -----------
@@ -100,34 +93,117 @@ now do a sbt clean update .....
 
 Put the following into your lift Boot
 
-    net.liftmodules.FoBo.FoBo.init()  
+    import net.liftmodules.FoBo._
+    
+    //Init parrams can bee omitted if defaults is used
+    FoBoInitParams.JQuery=[jquery module name]  
+    FoBoInitParams.ToolKit=[toolkit module name]
+    FoBo.init()  
 
 ### Template hooks
 
 Put something like the following in your Lift templat(s) head section 	
  	
-    <link rel="stylesheet" type='text/css' href='/classpath/fobo/css/fobo-[fobo version].css'> 	
+    <link rel="stylesheet" type='text/css' href='/classpath/fobo/[css file name]'> 	
     <link rel="stylesheet" type='text/css' href='[path/to/you/app/specific/css/file/in/the/webapp/dir]'>
-    <script type="text/javascript" src="/classpath/fobo/js/jquery-[jquery version].js"></script>
-Using the included bootstrap scripts, place them at the bottom of the body section
-
-    <script type="text/javascript" src="/classpath/fobo/js/bootstrap-twipsy-[bootstrap version].js"></script>
-    <script type="text/javascript" src="/classpath/fobo/js/bootstrap-dropdown-[bootstrap version].js"></script> 
-    <script type="text/javascript" src="/classpath/fobo/js/bootstrap-popover-[bootstrap version].js"></script>
-    <script type="text/javascript" src="/classpath/fobo/js/bootstrap-scrollspy-[bootstrap version].js"></script> 
+    <script type="text/javascript" src="/classpath/fobo/[script file name]"></script>
     
-Alternatively if you like to use only the bootstrap or foundation toolkit use
+Available CSS and JavaScript files 
+----------------------------------
 
-    <link rel="stylesheet" type='text/css' href='/classpath/fobo/orgin/css/bootstrap-[bootstrap version].css'/>
-    or
-    <link rel="stylesheet" type='text/css' href='/classpath/fobo/orgin/css/foundation-[foundation version].css'/>    
+The [css file name]:s and [script file name]:s that are available for each toolkit option and that can bee used in Lift templates. 
+
+###FoBo Toolkit
+
+FoBoInitParams.ToolKit=FoBoXXX 
+
+Base css
+
+* fobo.css - (comprised of foundation,slightly modified bootstrap,orbit)
+
+Alternative separate orgin css files (do not mix orgin bootstrap and foundation on same page)
+
+* bootstrap.css 
+* foundation.css
+* orbit.css
+* foundation-ie.css
+
+All in one Script
+
+* bootstrap.js
+
+Alternative separate script files
+
+* bootstrap-alerts.js
+* bootstrap-alerts.js
+* bootstrap-buttons.js
+* bootstrap-dropdown.js
+* bootstrap-modal.js
+* bootstrap-popover.js
+* bootstrap-scrollspy.js
+* bootstrap-tabs.js
+* bootstrap-twipsy.js
+
+Orbit script file
+
+* orbit.js
+
+###Bootstrap Toolkit
+
+FoBoInitParams.ToolKit=BootstrapXXX
+
+Base css file
+
+* bootstrap.css
+
+Extra css files
+
+* bootstrap-responsive.css (only in 2.0.0)
+
+All in one Script
+
+* bootstrap.js
+
+Alternative separate script files
+
+* bootstrap-alerts.js
+* bootstrap-alerts.js
+* bootstrap-buttons.js
+* bootstrap-dropdown.js
+* bootstrap-modal.js
+* bootstrap-popover.js
+* bootstrap-scrollspy.js
+* bootstrap-tabs.js
+* bootstrap-twipsy.js (only in 1.4.0)
+* bootstrap-tooltip.js (only in 2.0.0)
+* bootstrap-typeahead.js (only in 2.0.0)
+
+###Foundation Toolkit
+
+Base css file
+
+* foundation.css
+
+Extra css files
+
+* foundation-ie.css 
+* orbit.css
+
+Script files
+
+* foundation.js
+* modernizr.foundation.js (only in 2.1.5)
+* orbit.js
+ 
     
-### FoBo front-end toolkits documentation ###
+FoBo front-end toolkits documentation
+-------------------------------------
 
 The [ZURB/Foundation](http://foundation.zurb.com/) and the [Twitter Bootstrap](http://twitter.github.com/bootstrap/) 
-links contains plenty of documentation so that will be your no.1 resources. I am planing to make a fobo-base template 
-project, however in the mean time here is a couple of tips for you to make the most of the FoBo (Foundation/Bootstrap) 
-mix.
+links contains plenty of documentation so that will be your no.1 resources. There is also a simple fobo-base template 
+demo project and separate foundation and bootstrap template demo projects in my github home. 
+
+Here is a couple of tips for you to make the most of the FoBoXXX toolkit option (Foundation/Bootstrap) mix.
 
     1) The only place for using bootstraps container class (bo-container) would be in the topbar structure.
     2) Make use of foundations reactive fluid mobile scalable grid system in favor for bootstrap grids. 
