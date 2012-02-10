@@ -96,8 +96,8 @@ Put the following into your lift Boot
     import net.liftmodules.FoBo._
     
     //Init parrams can bee omitted if defaults is used
-    FoBoInitParams.JQuery=[jquery module name]  
-    FoBoInitParams.ToolKit=[toolkit module name]
+    FoBoInitParams.JQuery=[JQueryXX module option name]  
+    FoBoInitParams.ToolKit=[ToolkitXXX module option name]
     FoBo.init()  
 
 ### Template hooks
