@@ -2,7 +2,7 @@ name := "FoBo"
 
 organization := "net.liftmodules"
 
-version := "2.4-0.2.7-SNAPSHOT"
+version := "2.4-0.2.8-SNAPSHOT"
 
 scalaVersion := "2.9.1"
 
@@ -22,6 +22,8 @@ libraryDependencies ++= {
     "net.liftweb" %% "lift-testkit" % liftVersion % "compile->default"
     )
 }
+
+
 
 //use sbt clean update compile package publish-local
 

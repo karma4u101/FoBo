@@ -12,7 +12,7 @@ This concert mix will give you the brilliance of bootstraps and its components a
 rock & roll solid reactive, mobile scalability.  
 
 But if you do not need the mix of these toolkits provided by the fobo setup option it is seemingly easy to setup and use any of 
-the included toolkits separately. For a list on what toolkits and versions supported see below. 
+the included toolkits separately. For a list on what toolkits and versions is supported see below. 
 
 A **live demo** of the use of this module can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/) and the github repo for 
 the lift basic template (the demo) using this module can be found [here](https://github.com/karma4u101/FoBo-Lift-Template).
@@ -34,10 +34,11 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
-Current module version: 0.2.7-SNAPSHOT
+Current module version: 0.2.8-SNAPSHOT
 
 This module includes the following toolkits versions
 
+* FoBo 0.2 (comprised of foundation 2.1.5,bootstrap 2.0.0,orbit 1.4.0, google-code-prettify)
 * FoBo 0.1 (comprised of foundation 2.1.4,bootstrap 1.4.0,orbit 1.3.0)
 * Bootstrap version [1.4.0, 2.0.0]
 * Foundation version [2.1.4, 2.1.5]
@@ -45,6 +46,7 @@ This module includes the following toolkits versions
 
 Module names that can bee used in boot corresponding to the toolkit version above is
 
+* FoBo020
 * FoBo010
 * Bootstrap140 
 * Bootstrap200 (current default)
@@ -127,6 +129,7 @@ Alternative separate orgin css files (do not mix orgin bootstrap and foundation 
 * foundation.css
 * orbit.css
 * foundation-ie.css
+* prettify.css (FoBo020)
 
 All in one Script
 
@@ -134,15 +137,7 @@ All in one Script
 
 Alternative separate script files
 
-* bootstrap-alerts.js
-* bootstrap-alerts.js
-* bootstrap-buttons.js
-* bootstrap-dropdown.js
-* bootstrap-modal.js
-* bootstrap-popover.js
-* bootstrap-scrollspy.js
-* bootstrap-tabs.js
-* bootstrap-twipsy.js
+* See bootstrap and foundation sections
 
 Orbit script file
 
@@ -159,6 +154,7 @@ Base css file
 Extra css files
 
 * bootstrap-responsive.css (only in 2.0.0)
+* prettify.css (only in 2.0.0)
 
 All in one Script
 
@@ -166,17 +162,23 @@ All in one Script
 
 Alternative separate script files
 
-* bootstrap-alerts.js
-* bootstrap-alerts.js
-* bootstrap-buttons.js
+* bootstrap-alerts.js (1.4.0)
+* bootstrap-alert.js (2.0.0)
+* bootstrap-buttons.js (1.4.0)
+* bootstrap-button.js (2.0.0)
+* bootstrap-carousel.js (2.0.0)
+* bootstrap-collapse.js (2.0.0)
 * bootstrap-dropdown.js
 * bootstrap-modal.js
 * bootstrap-popover.js
 * bootstrap-scrollspy.js
-* bootstrap-tabs.js
-* bootstrap-twipsy.js (only in 1.4.0)
-* bootstrap-tooltip.js (only in 2.0.0)
-* bootstrap-typeahead.js (only in 2.0.0)
+* bootstrap-tabs.js (1.4.0)
+* bootstrap-tab.js (2.0.0)
+* bootstrap-twipsy.js (1.4.0)
+* bootstrap-tooltip.js (2.0.0)
+* bootstrap-transition.js (2.0.0)
+* bootstrap-typeahead.js (2.0.0)
+* prettify.js (2.0.0)
 
 ###Foundation Toolkit
 
