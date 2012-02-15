@@ -11,7 +11,7 @@
 #orbit4u { 
 	width: 640px;
 	height: 360px;
-	background: #000 url('/classpath/fobo/images/orbit/loading.gif') no-repeat center center;
+	background: #000 url('../fobo/images/orbit/loading.gif') no-repeat center center;
 	overflow: hidden; }
 #orbit4u>img,  
 #orbit4u>div,
@@ -83,7 +83,7 @@ span.rotator {
     position: absolute;
     top: 0;
     left: -20px;
-    background: url(/classpath/fobo/images/orbit/rotator-black.png) no-repeat;
+    background: url(../fobo/images/orbit/rotator-black.png) no-repeat;
     z-index: 3; }
 
 span.mask {
@@ -103,7 +103,7 @@ span.mask.move {
     width: 40px;
     left: 0;
 /*     background: url(../orbit/timer-black.png) repeat 0 0; } */
-    background: url(/classpath/fobo/images/orbit/timer-black.png) repeat 0 0; }
+    background: url(../fobo/images/orbit/timer-black.png) repeat 0 0; }
 
 span.pause {
     display: block;
@@ -112,12 +112,12 @@ span.pause {
     position: absolute;
     top: 0;
     left: 0;
-    background: url(/classpath/fobo/images/orbit/pause-black.png) no-repeat;
+    background: url(../fobo/images/orbit/pause-black.png) no-repeat;
     z-index: 4;
     opacity: 0; }
 
 span.pause.active {
-    background: url(/classpath/fobo/images/orbit/pause-black.png) no-repeat 0 -40px }
+    background: url(../fobo/images/orbit/pause-black.png) no-repeat 0 -40px }
 
 div.timer:hover span.pause,
 span.pause.active {
@@ -162,14 +162,14 @@ div.slider-nav span {
     cursor: pointer; }
 
 div.slider-nav span.right {
-    background:  url(/classpath/fobo/images/orbit/right-arrow.png);
+    background:  url(../fobo/images/orbit/right-arrow.png);
     right: 0; 
     opacity:0.40;
     filter:alpha(opacity=40); For IE8 and earlier 
     }
 
 div.slider-nav span.left {
-    background:  url(/classpath/fobo/images/orbit/left-arrow.png);
+    background:  url(../fobo/images/orbit/left-arrow.png);
     left: 0; 
     opacity:0.40;
     filter:alpha(opacity=40); For IE8 and earlier
@@ -195,7 +195,7 @@ div.slider-nav span.left {
     cursor: pointer;
     color: #999;
     text-indent: -9999px;
-    background: url(/classpath/fobo/images/orbit/bullets.jpg) no-repeat 4px 0;
+    background: url(../fobo/images/orbit/bullets.jpg) no-repeat 4px 0;
     width: 13px;
     height: 12px;
     overflow: hidden; }
