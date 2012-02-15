@@ -38,22 +38,18 @@ Current module version: 0.2.8-SNAPSHOT
 
 This module includes the following toolkits versions
 
-* FoBo 0.2 (comprised of foundation 2.1.5,bootstrap 2.0.0,orbit 1.4.0, google-code-prettify)
-* FoBo 0.1 (comprised of foundation 2.1.4,bootstrap 1.4.0,orbit 1.3.0)
-* Bootstrap version [1.4.0, 2.0.0]
-* Foundation version [2.1.4, 2.1.5]
-* jquery version [1.6.4, 1.7.1]
+* FoBo v0.2 (comprised of foundation v2.1.5,bootstrap v2.0.0,orbit v1.4.0, google-code-prettify)
+* FoBo v0.1 (comprised of foundation v2.1.4,bootstrap v1.4.0,orbit v1.3.0)
+* Bootstrap [v1.4.0, v2.0.0]
+* Foundation [v2.1.4, v2.1.5]
+* JQuery  [v1.6.4, v1.7.1]
 
 Module names that can bee used in boot corresponding to the toolkit version above is
 
-* FoBo020
-* FoBo010
-* Bootstrap140 
-* Bootstrap200 (current default)
-* Foundation214
-* Foundation215
-* JQuery164
-* JQuery171 (current default)
+* FoBo010, FoBo020
+* Bootstrap140, Bootstrap200 (current default)
+* Foundation214, Foundation215
+* JQuery164, JQuery171 (current default)
 
 If you will be using the defaults FoBoInitParams dose not need to be specified. For more information on how to set this up see below. 
 Be aware that the defaults most likely will be changed between module updates so if you do not want any module update surprises 
@@ -121,27 +117,27 @@ FoBoInitParams.ToolKit=FoBoXXX
 
 Base css
 
-* fobo.css - (comprised of foundation,slightly modified bootstrap,orbit)
+- fobo.css - (comprised of foundation,slightly modified bootstrap,orbit)
 
 Alternative separate orgin css files (do not mix orgin bootstrap and foundation on same page)
 
-* bootstrap.css 
-* foundation.css
-* orbit.css
-* foundation-ie.css
-* prettify.css (FoBo020)
+- bootstrap.css 
+- foundation.css
+- orbit.css
+- foundation-ie.css
+- prettify.css (FoBo020)
 
 All in one Script
 
-* bootstrap.js
+- bootstrap.js
 
 Alternative separate script files
 
-* See bootstrap and foundation sections
+- See bootstrap and foundation sections
 
 Orbit script file
 
-* orbit.js
+- orbit.js
 
 ###Bootstrap Toolkit
 
@@ -149,61 +145,62 @@ FoBoInitParams.ToolKit=BootstrapXXX
 
 Base css file
 
-* bootstrap.css
+- bootstrap.css
 
 Extra css files
 
-* bootstrap-responsive.css (only in 2.0.0)
-* prettify.css (only in 2.0.0)
+- bootstrap-responsive.css (only in 2.0.0)
+- prettify.css (only in 2.0.0)
 
 All in one Script
 
-* bootstrap.js
+- bootstrap.js
 
 Alternative separate script files
 
-* bootstrap-alerts.js (1.4.0)
-* bootstrap-alert.js (2.0.0)
-* bootstrap-buttons.js (1.4.0)
-* bootstrap-button.js (2.0.0)
-* bootstrap-carousel.js (2.0.0)
-* bootstrap-collapse.js (2.0.0)
-* bootstrap-dropdown.js
-* bootstrap-modal.js
-* bootstrap-popover.js
-* bootstrap-scrollspy.js
-* bootstrap-tabs.js (1.4.0)
-* bootstrap-tab.js (2.0.0)
-* bootstrap-twipsy.js (1.4.0)
-* bootstrap-tooltip.js (2.0.0)
-* bootstrap-transition.js (2.0.0)
-* bootstrap-typeahead.js (2.0.0)
-* prettify.js (2.0.0)
+- bootstrap-alerts.js (1.4.0)
+- bootstrap-alert.js (2.0.0)
+- bootstrap-buttons.js (1.4.0)
+- bootstrap-button.js (2.0.0)
+- bootstrap-carousel.js (2.0.0)
+- bootstrap-collapse.js (2.0.0)
+- bootstrap-dropdown.js
+- bootstrap-modal.js
+- bootstrap-popover.js
+- bootstrap-scrollspy.js
+- bootstrap-tabs.js (1.4.0)
+- bootstrap-tab.js (2.0.0)
+- bootstrap-twipsy.js (1.4.0)
+- bootstrap-tooltip.js (2.0.0)
+- bootstrap-transition.js (2.0.0)
+- bootstrap-typeahead.js (2.0.0)
+- prettify.js (2.0.0)
 
 ###Foundation Toolkit
 
 Base css file
 
-* foundation.css
+- foundation.css
 
 Extra css files
 
-* foundation-ie.css 
-* orbit.css
+- foundation-ie.css 
+- orbit.css
 
 Script files
 
-* foundation.js
-* modernizr.foundation.js (only in 2.1.5)
-* orbit.js
+- foundation.js
+- modernizr.foundation.js (only in 2.1.5)
+- orbit.js
  
     
 FoBo front-end toolkits documentation
 -------------------------------------
 
 The [ZURB/Foundation](http://foundation.zurb.com/) and the [Twitter Bootstrap](http://twitter.github.com/bootstrap/) 
-links contains plenty of documentation so that will be your no.1 resources. There is also a simple fobo-base template 
-demo project and separate foundation and bootstrap template demo projects in my github home. 
+links contains plenty of documentation so that will be your no.1 resources. There is also a simple fobo lift template 
+demo [project](https://github.com/karma4u101/FoBo-Lift-Template) containing bootstrap and foundation documentation and separate foundation and bootstrap template demo 
+projects in my github home. 
 
 Here is a couple of tips for you to make the most of the FoBoXXX toolkit option (Foundation/Bootstrap) mix.
 
