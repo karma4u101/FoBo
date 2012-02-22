@@ -1,5 +1,5 @@
-FoBo - Lift Generic Front-End Toolkit Module
-============================================
+FoBo - Generic Front-End Toolkit Module for Lift
+================================================
 
 With this external/optional Lift module you can chose among some of the industry leading web-centric open source front-end 
 toolkits and the modules own fobo mix. The module will also simultaneously support several versions of the included toolkits, 
