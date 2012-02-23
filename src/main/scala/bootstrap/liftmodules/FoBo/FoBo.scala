@@ -17,7 +17,7 @@ object FoBo {
 abstract trait FoBoJQuery
 abstract trait FoBoToolkit
 abstract trait FoBoMobileToolkit
-object FoBoInitParams extends FoBoToolkit with FoBoJQuery {
+object FoBoInitParams extends FoBoToolkit with FoBoMobileToolkit with FoBoJQuery {
   var JQuery: FoBoJQuery = JQuery171
   var ToolKit: FoBoToolkit = Bootstrap200
   var MobileToolKit:FoBoMobileToolkit=JQueryMobile101
@@ -34,6 +34,7 @@ case object JQuery164 extends FoBoJQuery {
 case object JQueryMobile101 extends FoBoMobileToolkit {
   FoBoResources.jquerymobile101
 }
+
 case object FoBo020 extends FoBoToolkit {
   FoBoResources.fobo020
   //FoBoResources.foboTweekedStagingBootstrap200
