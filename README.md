@@ -34,7 +34,7 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
-Current module version: 0.2.9-SNAPSHOT
+Current module version: 0.3.0-SNAPSHOT
 
 This module includes the following toolkits versions
 
@@ -42,6 +42,7 @@ This module includes the following toolkits versions
 * FoBo v0.1 (comprised of foundation v2.1.4,bootstrap v1.4.0,orbit v1.3.0)
 * Bootstrap [v1.4.0, v2.0.0]
 * Foundation [v2.1.4, v2.1.5]
+* JQuery-mobile [v1.0.1]
 * JQuery  [v1.6.4, v1.7.1]
 
 Module names that can bee used in boot corresponding to the toolkit version above is
@@ -49,6 +50,7 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 * FoBo010, FoBo020
 * Bootstrap140, Bootstrap200 (current default)
 * Foundation214, Foundation215
+* JQueryMobile101
 * JQuery164, JQuery171 (current default)
 
 If you will be using the defaults FoBoInitParams dose not need to be specified. For more information on how to set this up see below. 
@@ -96,6 +98,7 @@ Put the following into your lift Boot
     //Init parrams can bee omitted if defaults is used
     FoBoInitParams.JQuery=[JQueryXX module option name]  
     FoBoInitParams.ToolKit=[ToolkitXXX module option name]
+    FoBoInitParams.MobileToolKit=[MobiletoolkitXXX module name]
     FoBo.init()  
 
 ### Template hooks
@@ -193,14 +196,27 @@ Script files
 - modernizr.foundation.js (only in 2.1.5)
 - orbit.js
  
+ ###JQuery Mobile Toolkit
+ 
+Css files
+
+- jquery.mobile.css
+- jquery.mobile.structure.css
+
+Script files
+
+- jquery.mobile.js
+- jquery.mobile.themeswitcher.js
+    
     
 FoBo front-end toolkits documentation
 -------------------------------------
 
 The [ZURB/Foundation](http://foundation.zurb.com/) and the [Twitter Bootstrap](http://twitter.github.com/bootstrap/) 
-links contains plenty of documentation so that will be your no.1 resources. There is also a simple fobo lift template 
-demo [project](https://github.com/karma4u101/FoBo-Lift-Template) containing bootstrap and foundation documentation and separate foundation and bootstrap template demo 
-projects in my github home. 
+and the [JQuery Mobile](http://jquerymobile.com/) links contains plenty of documentation so that will be your no.1 resources. 
+There is also a fobo lift template/demo (more of a demo) [project](https://github.com/karma4u101/FoBo-Lift-Template) 
+containing bootstrap and foundation and jquery mobile documentation. There are also separate foundation and bootstrap 
+template demo projects in my github home. 
 
 Here is a couple of tips for you to make the most of the FoBoXXX toolkit option (Foundation/Bootstrap) mix.
 
