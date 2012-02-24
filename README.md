@@ -142,6 +142,11 @@ Orbit script file
 
 - orbit.js
 
+Prittify script file
+
+- prettify.js (FoBo020)
+- lang-xxx.js xxx=[apollo,clj,css,go,hs,listp,lua,ml,n,proto,scala,sql,tex,vb,vhdl,wiki,xq,yaml]
+
 ###Bootstrap Toolkit
 
 FoBoInitParams.ToolKit=BootstrapXXX
@@ -161,23 +166,24 @@ All in one Script
 
 Alternative separate script files
 
-- bootstrap-alerts.js (1.4.0)
-- bootstrap-alert.js (2.0.0)
-- bootstrap-buttons.js (1.4.0)
-- bootstrap-button.js (2.0.0)
-- bootstrap-carousel.js (2.0.0)
-- bootstrap-collapse.js (2.0.0)
+- bootstrap-alerts.js (v1.4.0)
+- bootstrap-alert.js (v2.0.0)
+- bootstrap-buttons.js (v1.4.0)
+- bootstrap-button.js (v2.0.0)
+- bootstrap-carousel.js (v2.0.0)
+- bootstrap-collapse.js (v2.0.0)
 - bootstrap-dropdown.js
 - bootstrap-modal.js
 - bootstrap-popover.js
 - bootstrap-scrollspy.js
-- bootstrap-tabs.js (1.4.0)
-- bootstrap-tab.js (2.0.0)
-- bootstrap-twipsy.js (1.4.0)
-- bootstrap-tooltip.js (2.0.0)
-- bootstrap-transition.js (2.0.0)
-- bootstrap-typeahead.js (2.0.0)
-- prettify.js (2.0.0)
+- bootstrap-tabs.js (v1.4.0)
+- bootstrap-tab.js (v2.0.0)
+- bootstrap-twipsy.js (v1.4.0)
+- bootstrap-tooltip.js (v2.0.0)
+- bootstrap-transition.js (v2.0.0)
+- bootstrap-typeahead.js (v2.0.0)
+- prettify.js (v2.0.0 only)
+- lang-xxx.js prettify lang comp. script xxx=[apollo,clj,css,go,hs,listp,lua,ml,n,proto,scala,sql,tex,vb,vhdl,wiki,xq,yaml]
 
 ###Foundation Toolkit
 
@@ -189,13 +195,16 @@ Extra css files
 
 - foundation-ie.css 
 - orbit.css
+- prettify.css
 
 Script files
 
 - foundation.js
 - modernizr.foundation.js (only in 2.1.5)
 - orbit.js
- 
+- prettify.js
+- lang-xxx.js prettify lang comp. script xxx=[apollo,clj,css,go,hs,listp,lua,ml,n,proto,scala,sql,tex,vb,vhdl,wiki,xq,yaml]
+
  ###JQuery Mobile Toolkit
  
 Css files
