@@ -16,11 +16,17 @@ object FoBo {
 
 abstract trait FoBoJQuery
 abstract trait FoBoToolkit
-abstract trait FoBoMobileToolkit
-object FoBoInitParams extends FoBoToolkit with FoBoMobileToolkit with FoBoJQuery {
+object FoBoInitParams extends FoBoToolkit with FoBoJQuery {
   var JQuery: FoBoJQuery = JQuery171
   var ToolKit: FoBoToolkit = Bootstrap200
-  var MobileToolKit:FoBoMobileToolkit=JQueryMobile101
+}
+
+case object DataTables extends FoBoToolkit {
+//   FoBoResources.dataTables
+}
+
+case object PrettifyJun2011 extends FoBoToolkit {
+   FoBoResources.googleCodePrettify
 }
 
 case object JQuery171 extends FoBoJQuery {
@@ -31,47 +37,45 @@ case object JQuery164 extends FoBoJQuery {
   FoBoResources.jquery164
 }
 
-case object JQueryMobile101 extends FoBoMobileToolkit {
+case object JQueryMobile101 extends FoBoToolkit {
   FoBoResources.jquerymobile101
 }
 
 case object FoBo020 extends FoBoToolkit {
   FoBoResources.fobo020
-  //FoBoResources.foboTweekedStagingBootstrap200
   FoBoResources.bootstrap200
   FoBoResources.foundation215
-  FoBoResources.googleCodePrettify
+  //FoBoResources.googleCodePrettify
 }
 
 case object FoBo010 extends FoBoToolkit {
   FoBoResources.fobo010
   FoBoResources.bootstrap140
   FoBoResources.foundation214
-  FoBoResources.googleCodePrettify
+  //FoBoResources.googleCodePrettify
 }
 
 case object Bootstrap140 extends FoBoToolkit {
   FoBoResources.bootstrap140
-  FoBoResources.googleCodePrettify
+  //FoBoResources.googleCodePrettify
 }
 
 case object Bootstrap200 extends FoBoToolkit {
   FoBoResources.bootstrap200
-  FoBoResources.googleCodePrettify
+  //FoBoResources.googleCodePrettify
 }
 
 case object Foundation214 extends FoBoToolkit {
   FoBoResources.foundation214
-  FoBoResources.googleCodePrettify
+  //FoBoResources.googleCodePrettify
 }
 
 case object Foundation215 extends FoBoToolkit {
   FoBoResources.foundation215
-  FoBoResources.googleCodePrettify
+  //FoBoResources.googleCodePrettify
 }
 
 private object FoBoResources {
-
    
   lazy val fobo020 = {
     ResourceServer.rewrite {
@@ -140,7 +144,13 @@ private object FoBoResources {
       /*Google code prettify*/
       case "fobo" :: "prettify.css" :: Nil if Props.devMode => List("fobo", "google-code", "css", "prettify.css")
       case "fobo" :: "prettify.css" :: Nil => List("fobo", "google-code", "css", "prettify.css")
-        
+ 
+      case "fobo" :: "desert.css" :: Nil if Props.devMode => List("fobo", "google-code", "css", "desert.css")
+      case "fobo" :: "desert.css" :: Nil => List("fobo", "google-code", "css", "desert.css")
+
+      case "fobo" :: "sunburst.css" :: Nil if Props.devMode => List("fobo", "google-code", "css", "sunburst.css")
+      case "fobo" :: "sunburst.css" :: Nil => List("fobo", "google-code", "css", "sunburst.css")
+      
       /*google code prettify*/
       case "fobo" :: "prettify.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "prettify.js")
       case "fobo" :: "prettify.js" :: Nil => List("fobo", "google-code", "js", "prettify.js")

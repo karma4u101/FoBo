@@ -95,10 +95,11 @@ Put the following into your lift Boot
 
     import net.liftmodules.FoBo._
     
-    //Init parrams can bee omitted if defaults is used
+    //If using defaults FoBo init params can be omitted
     FoBoInitParams.JQuery=[JQueryXX module option name]  
     FoBoInitParams.ToolKit=[ToolkitXXX module option name]
-    FoBoInitParams.MobileToolKit=[MobiletoolkitXXX module name]
+    FoBoInitParams.ToolKit=[ev. additional/extra toolkit module name]
+       :
     FoBo.init()  
 
 ### Template hooks
@@ -128,7 +129,6 @@ Alternative separate orgin css files (do not mix orgin bootstrap and foundation 
 - foundation.css
 - orbit.css
 - foundation-ie.css
-- prettify.css (FoBo020)
 
 All in one Script
 
@@ -142,11 +142,6 @@ Orbit script file
 
 - orbit.js
 
-Prittify script file
-
-- prettify.js (FoBo020)
-- lang-xxx.js xxx=[apollo,clj,css,go,hs,listp,lua,ml,n,proto,scala,sql,tex,vb,vhdl,wiki,xq,yaml]
-
 ###Bootstrap Toolkit
 
 FoBoInitParams.ToolKit=BootstrapXXX
@@ -158,7 +153,6 @@ Base css file
 Extra css files
 
 - bootstrap-responsive.css (only in 2.0.0)
-- prettify.css (only in 2.0.0)
 
 All in one Script
 
@@ -182,10 +176,10 @@ Alternative separate script files
 - bootstrap-tooltip.js (v2.0.0)
 - bootstrap-transition.js (v2.0.0)
 - bootstrap-typeahead.js (v2.0.0)
-- prettify.js (v2.0.0 only)
-- lang-xxx.js prettify lang comp. script xxx=[apollo,clj,css,go,hs,listp,lua,ml,n,proto,scala,sql,tex,vb,vhdl,wiki,xq,yaml]
 
 ###Foundation Toolkit
+
+FoBoInitParams.ToolKit=FoundationXXX
 
 Base css file
 
@@ -195,15 +189,12 @@ Extra css files
 
 - foundation-ie.css 
 - orbit.css
-- prettify.css
 
 Script files
 
 - foundation.js
 - modernizr.foundation.js (only in 2.1.5)
 - orbit.js
-- prettify.js
-- lang-xxx.js prettify lang comp. script xxx=[apollo,clj,css,go,hs,listp,lua,ml,n,proto,scala,sql,tex,vb,vhdl,wiki,xq,yaml]
 
  ###JQuery Mobile Toolkit
  
@@ -217,6 +208,33 @@ Script files
 - jquery.mobile.js
 - jquery.mobile.themeswitcher.js
     
+### JQuery Mobile Toolkit
+
+FoBoInitParams.ToolKit=JQueryMobileXXX
+
+Css files
+
+- jquery.mobile.css
+- jquery.mobile.structure.css
+
+Script files
+
+- jquery.mobile.js
+- jquery.mobile.themeswitcher.js
+    
+### Google Code Prettify
+
+FoBoInitParams.ToolKit=PrettifyJun2011
+
+Css files
+
+- prettify.css
+
+Script files
+
+- prettify.js
+- lang-xxx.js where xxx=[apollo,clj,css,go,hs,listp,lua,ml,n,proto,scala,sql,tex,vb,vhdl,wiki,xq,yaml]
+
     
 FoBo front-end toolkits documentation
 -------------------------------------
