@@ -1,13 +1,24 @@
-package net.liftmodules
-package FoBo
+package net.liftmodules.FoBo
+
+/**
+ * Welcome to the FoBo package. 
+ * @version - 0.3.2
+ * @author Peter Petersson (Github karma4u101)
+ */
 
 import _root_.net.liftweb._
 import util.{ Props }
 import http._
 import common._
 
+/**
+ * 
+ * @example To initiate this module for usage in your Project use FoBo.init() in your projects Lift Boot.
+ */
 object FoBo {
+  
   def init() {
+    LiftRules.addToPackages("net.liftmodules.FoBo")
     ResourceServer.allow {
       case "fobo" :: tail => true
     }
@@ -16,63 +27,118 @@ object FoBo {
 
 abstract trait FoBoJQuery
 abstract trait FoBoToolkit
+/**
+ * @example Usage - Use before FoBo.init() in your Lift boot to set init params for FoBo.
+ * 
+ * FoBoInitParams.FoBoJQuery=JQueryXXX
+ * FoBoInitParams.FoBoToolkit=ToolkitXXX
+ */
 object FoBoInitParams extends FoBoToolkit with FoBoJQuery {
   var JQuery: FoBoJQuery = JQuery171
   var ToolKit: FoBoToolkit = Bootstrap200
 }
 
-case object DataTables extends FoBoToolkit {
-//   FoBoResources.dataTables
+/**
+ * Enable usage of DataTables v1.9.0 in your project
+ * @example FoBoInitParams.FoBoToolkit=DataTables190
+ * @todo - Usage of this toolkit is not implemented yet. 
+ */
+case object DataTables190 extends FoBoToolkit {
+//   FoBoResources.dataTables190
 }
 
+/**
+ * Enable usage of Prettify vJun2011 in your project.
+ * @example FoBoInitParams.FoBoToolkit=PrettifyJun2011
+ * 
+ */
 case object PrettifyJun2011 extends FoBoToolkit {
    FoBoResources.googleCodePrettify
 }
 
+/**
+ * Enable usage of JQuery v1.7.1 in your project.
+ * @example FoBoInitParams.FoBoJQuery=JQuery171
+ * 
+ */
 case object JQuery171 extends FoBoJQuery {
   FoBoResources.jquery171
 }
 
+/**
+ * Enable usage of JQuery v1.6.4 in your project.
+ * @example FoBoInitParams.FoBoJQuery=JQuery164
+ * 
+ */
 case object JQuery164 extends FoBoJQuery {
   FoBoResources.jquery164
 }
 
+/**
+ * Enable usage of JQueryMobile v1.0.1 in your project.
+ * @example FoBoInitParams.FoBoToolkit=JQueryMobile101
+ * 
+ */
 case object JQueryMobile101 extends FoBoToolkit {
   FoBoResources.jquerymobile101
 }
 
+/**
+ * Enable usage of FoBo v1.0.2.0 in your project.
+ * @example FoBoInitParams.FoBoToolkit=FoBo020
+ * 
+ */
 case object FoBo020 extends FoBoToolkit {
   FoBoResources.fobo020
   FoBoResources.bootstrap200
   FoBoResources.foundation215
-  //FoBoResources.googleCodePrettify
 }
 
+/**
+ * Enable usage of FoBo v1.0.1.0 in your project.
+ * @example FoBoInitParams.FoBoToolkit=FoBo010
+ * 
+ */
 case object FoBo010 extends FoBoToolkit {
   FoBoResources.fobo010
   FoBoResources.bootstrap140
   FoBoResources.foundation214
-  //FoBoResources.googleCodePrettify
 }
 
+/**
+ * Enable usage of Bootstrap v1.1.4.0 in your project.
+ * @example FoBoInitParams.FoBoToolkit=Bootstrap140
+ * 
+ */
 case object Bootstrap140 extends FoBoToolkit {
   FoBoResources.bootstrap140
-  //FoBoResources.googleCodePrettify
 }
 
+/**
+ * Enable usage of Bootstrap v2.0.0 in your project.
+ * @example FoBoInitParams.FoBoToolkit=Bootstrap200
+ * 
+ */
 case object Bootstrap200 extends FoBoToolkit {
   FoBoResources.bootstrap200
-  //FoBoResources.googleCodePrettify
 }
 
+/**
+ * Enable usage of Foundation v2.1.4 in your project.
+ * @example FoBoInitParams.FoBoToolkit=Foundation214
+ * 
+ */
 case object Foundation214 extends FoBoToolkit {
   FoBoResources.foundation214
-  //FoBoResources.googleCodePrettify
 }
 
+/**
+ * Enable usage of Foundation v2.1.5 in your project.
+ * @example FoBoInitParams.FoBoToolkit=Foundation215
+ * 
+ */
 case object Foundation215 extends FoBoToolkit {
   FoBoResources.foundation215
-  //FoBoResources.googleCodePrettify
 }
 
 private object FoBoResources {
