@@ -1,10 +1,4 @@
-package net.liftmodules.FoBo
-
-/**
- * Welcome to the FoBo package. 
- * @version - 0.3.2
- * @author Peter Petersson (Github karma4u101)
- */
+package net.liftmodules
 
 import _root_.net.liftweb._
 import util.{ Props }
@@ -12,35 +6,112 @@ import http._
 import common._
 
 /**
+ * ==Welcome to FoBo - A generic Front-End Toolkit Lift Module== 
  * 
- * @example To initiate this module for usage in your Project use FoBo.init() in your projects Lift Boot.
+ * The [[net.liftmodules.FoBo]] Package is the starting point for this API. 
+ * The FoBo modules Github home is [[https://github.com/karma4u101/FoBo here]]
+ *
+ *===What FoBo will do for you===
+ *
+ * This module gives you quick and easy integration of some of the industry leading web-centric open source 
+ * front-end toolkits with some carefully thought throw and Lift inherit extra benefits. 
+ * 
+ * Among the benefits is:
+ *  - due to a small footprint and uniform declaration and integration points across toolkit versions only a 
+ *    small amount of changes will bee needed for a up/down-grading of a used Toolkit, optimally it will just be  
+ *    a version change of the FoBo.Initparam in Lift bootstrap.liftweb.Boot. 
+ *  - the modules included lib Objects and Snippet helpers will ease you from writing some common toolkit component 
+ *    integration scripts. At this writing the snippet helpers is few but expect the numbers to grow as the 
+ *    module matures. 
+ *  - Great mobile scalablity with the modules own unique FoBo mix is a love, peace and harmony mix of the ZURB/Foundation and the Twitter 
+ *    Bootstrap front-end toolkit.   
+ *  - As more front-end toolkits and JQuery plugins will be available to you just a FoBo.Initparam away you will, 
+ *    when needed, be able to quick and easy test out and use nifty features like the Google code Prettify kit, DataTables
+ *    and more.   
+ *      
+ * ===Setup===     
+ * 
+ *  - The module is known to work with Lift v2.4 and Scala v2.9.1 but expect it to work with other versions as well.  
+ *  - For a demonstration of this module see the live [[http://www.media4u101.se/fobo-lift-template-demo/ FoBo demo]] the 
+ *    FoBo demo source is available [[https://github.com/karma4u101/FoBo-Lift-Template  here]] 
+ *
+ * @example To initiate this module for usage in your Lift project 
+ * set something like the following in the projects Lift bootstrap.liftweb.Boot  
+ * {{{
+ *    import net.liftmodules.FoBo
+ *     :
+ *     :
+ *    //If using defaults FoBo init params can be omitted
+ *    FoBo.InitParam.JQuery=FoBo.JQueryXXX  //one jquery version
+ *    FoBo.InitParam.ToolKit=FoBo.TheFirstToolkitXXX //one or more toolkits 
+ *    FoBo.InitParam.ToolKit=FoBo.TheSecondToolkitYYY
+ *     : 
+ *    FoBo.init() //now do init
+ * }}}
+ * 
+ * @version 0.3.3
+ * @author Peter Petersson (Github karma4u101)
+ * 
  */
-object FoBo {
+package object FoBo {
   
+  /**
+   * @example In bootstrap liftweb Boot set
+   * {{{
+   *   FoBo.init()
+   * }}}
+   * The above example just calls init without specifying fobo init 
+   * params so default Toolkit and JQuery values will be used. 
+   */
   def init() {
     LiftRules.addToPackages("net.liftmodules.FoBo")
     ResourceServer.allow {
       case "fobo" :: tail => true
     }
   }
-}
+
 
 abstract trait FoBoJQuery
 abstract trait FoBoToolkit
 /**
- * @example Usage - Use before FoBo.init() in your Lift boot to set init params for FoBo.
+ * Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot
  * 
- * FoBoInitParams.FoBoJQuery=JQueryXXX
- * FoBoInitParams.FoBoToolkit=ToolkitXXX
+ * '''Example:''
+ * 
+ * {{{
+ *   //init params can be skipped as it sets the current default values
+ *   FoBo.InitParam.JQuery=FoBo.JQuery171
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap200
+ *   FoBo.init()
+ * }}}
+ * This example is explicitly setting the current default jquery and toolkit 
+ * setup options and could alternatively just have called FoBo.init()
+ * 
+ * '''Example:'''
+ *  
+ * {{{
+ *   FoBo.InitParam.JQuery=FoBo.JQuery171
+ *   FoBo.InitParam.Toolkit=FoBo.FoBo020
+ *   FoBo.InitParam.Toolkit=FoBo.PrettifyJun2011
+ * }}}
+ * This example uses the FoBo v0.2.0 option and adds the Google code Prettify vJun2011 
+ * to the enabled toolkits.  
  */
-object FoBoInitParams extends FoBoToolkit with FoBoJQuery {
+object InitParam extends FoBoToolkit with FoBoJQuery {
   var JQuery: FoBoJQuery = JQuery171
   var ToolKit: FoBoToolkit = Bootstrap200
 }
 
 /**
- * Enable usage of DataTables v1.9.0 in your project
- * @example FoBoInitParams.FoBoToolkit=DataTables190
+ * Enable usage of DataTables version 1 9 0 in your bootstrap liftweb Boot.
+ * @version 1.9.0
+ * 
+ *  '''Example:'''
+ *  
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.DataTables190
+ * }}}
+ * 
  * @todo - Usage of this toolkit is not implemented yet. 
  */
 case object DataTables190 extends FoBoToolkit {
@@ -48,45 +119,73 @@ case object DataTables190 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Prettify vJun2011 in your project.
- * @example FoBoInitParams.FoBoToolkit=PrettifyJun2011
+ * Enable usage of Prettify version Jun2011 in your bootstrap liftweb Boot.
+ * @version Jun2011
  * 
+ * '''Example:'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.PrettifyJun2011
+ * }}}
  */
 case object PrettifyJun2011 extends FoBoToolkit {
    FoBoResources.googleCodePrettify
 }
 
 /**
- * Enable usage of JQuery v1.7.1 in your project.
- * @example FoBoInitParams.FoBoJQuery=JQuery171
+ * Enable usage of JQuery version 1_7_1 in your bootstrap liftweb Boot.
+ * @version 1.7.1
  * 
+ * '''Example:'''
+ * 
+ * {{{
+ *   FoBo.InitParam.JQuery=FoBo.JQuery171
+ * }}}
  */
 case object JQuery171 extends FoBoJQuery {
   FoBoResources.jquery171
 }
 
 /**
- * Enable usage of JQuery v1.6.4 in your project.
- * @example FoBoInitParams.FoBoJQuery=JQuery164
+ * Enable usage of JQuery version 1_6_4 in your bootstrap liftweb Boot.
  * 
+ * @version 1.6.4 
+ * 
+ * '''Example:'''
+ * 
+ * {{{
+ *   FoBo.InitParam.JQuery=FoBo.JQuery164
+ * }}}
  */
 case object JQuery164 extends FoBoJQuery {
   FoBoResources.jquery164
 }
 
 /**
- * Enable usage of JQueryMobile v1.0.1 in your project.
- * @example FoBoInitParams.FoBoToolkit=JQueryMobile101
+ * Enable usage of JQueryMobile version 1_0_1 in your bootstrap liftweb Boot.
  * 
+ * @version 1.0.1
+ * 
+ * '''Example:'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.JQueryMobile101
+ * }}}
  */
 case object JQueryMobile101 extends FoBoToolkit {
   FoBoResources.jquerymobile101
 }
 
 /**
- * Enable usage of FoBo v1.0.2.0 in your project.
- * @example FoBoInitParams.FoBoToolkit=FoBo020
+ * Enable usage of FoBo version 0_2_0 in your bootstrap liftweb Boot.
  * 
+ * @version 0.2.0
+ * 
+ * '''Example'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.FoBo020
+ * }}}
  */
 case object FoBo020 extends FoBoToolkit {
   FoBoResources.fobo020
@@ -95,9 +194,15 @@ case object FoBo020 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of FoBo v1.0.1.0 in your project.
- * @example FoBoInitParams.FoBoToolkit=FoBo010
+ * Enable usage of FoBo version 0_1_0 in your bootstrap liftweb Boot.
  * 
+ * @version 0.1.0
+ * 
+ * '''Example'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.FoBo010
+ * }}}
  */
 case object FoBo010 extends FoBoToolkit {
   FoBoResources.fobo010
@@ -106,36 +211,57 @@ case object FoBo010 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Bootstrap v1.1.4.0 in your project.
- * @example FoBoInitParams.FoBoToolkit=Bootstrap140
+ * Enable usage of Twitter Bootstrap version 1_4_0 in your bootstrap liftweb Boot.
  * 
+ * @version 1.4.0
+ * 
+ * '''Example'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap140
+ * }}}
  */
 case object Bootstrap140 extends FoBoToolkit {
   FoBoResources.bootstrap140
 }
 
 /**
- * Enable usage of Bootstrap v2.0.0 in your project.
- * @example FoBoInitParams.FoBoToolkit=Bootstrap200
+ * Enable usage of Twitter Bootstrap version 2_0_0 in your bootstrap liftweb Boot.
+ * @version 2.0.0
  * 
+ * '''Example'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap200
+ * }}}
  */
 case object Bootstrap200 extends FoBoToolkit {
   FoBoResources.bootstrap200
 }
 
 /**
- * Enable usage of Foundation v2.1.4 in your project.
- * @example FoBoInitParams.FoBoToolkit=Foundation214
+ * Enable usage of Foundation version 2_1_4 in your bootstrap liftweb Boot.
+ * @version 2.1.4
  * 
+ * '''Example'''
+ *  
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.Foundation214
+ * }}}
  */
 case object Foundation214 extends FoBoToolkit {
   FoBoResources.foundation214
 }
 
 /**
- * Enable usage of Foundation v2.1.5 in your project.
- * @example FoBoInitParams.FoBoToolkit=Foundation215
+ * Enable usage of Foundation version 2_1_5 in your bootstrap liftweb Boot.
+ * @version 2.1.5
  * 
+ * '''Example'''
+ *  
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.Foundation215
+ * }}}
  */
 case object Foundation215 extends FoBoToolkit {
   FoBoResources.foundation215
@@ -386,6 +512,5 @@ private object FoBoResources {
 
 }
   
-
-
+}
 

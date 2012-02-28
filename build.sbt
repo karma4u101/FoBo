@@ -2,11 +2,16 @@ name := "FoBo"
 
 organization := "net.liftmodules"
 
-version := "2.4-0.3.2-SNAPSHOT"
+version := "2.4-0.3.3-SNAPSHOT"
 
 scalaVersion := "2.9.1"
 
+logLevel := Level.Info
+//Level.Info.Debug
+
 scalacOptions ++= Seq("-deprecation")
+
+//scalacOptions in doc <++= (version).map(v => Seq("--doc-version", v ,"-doc-root-content", "net.liftmodules.FoBo"))
 
 EclipseKeys.withSource := true
 

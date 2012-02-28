@@ -11,10 +11,29 @@ import net.liftweb.http.js.JE.JsRaw
 import net.liftweb.http.js.JsCmd
 
 /**
-* This object is a helper that implements some commonly used 
-* bootstrap convenience script functions used in the FoBo.Bootstrap snippet.
-* It can also be used as a helper in your own customized snippets.  
-*/
+ * ==BootstrapScriptHelper==
+ * BootstrapScriptHelper is a helper object that implements some commonly 
+ * used bootstrap component init/usage script functions. 
+ * This convenience script functions is used in the FoBo.Bootstrap snippet but
+ * can also be used as a convenience helper in your own customized snippets.
+ *  
+ * @example If you find that the net.FoBo.Bootstrap dose not fit you exact needs 
+ * your can still use the BootstrapScriptHelper object to customize your own project 
+ * snippets.
+ * {{{
+ *   import net.liftmodules.FoBo.lib.{BootstrapScriptHelper=>bsh}
+ *    :
+ *   class MySnippet {
+ *     def someFunc = {
+ *       :
+ *       bsh.fobohelper(...)
+ *       :
+ *     }
+ *     :
+ *   }
+ * }}}
+ *  
+ */
 object BootstrapScriptHelper {
   
   /**

@@ -9,12 +9,17 @@ your choice.
 One of the convenience options this Lift module comes with is the fobo option, that is a love, peace and harmony mix of the 
 [Twitter Bootstrap](http://twitter.github.com/bootstrap/) and the [ZURB/Foundation](http://foundation.zurb.com/) toolkits, 
 This concert mix will give you the brilliance of bootstraps and its components and the awesomeness of foundation with its 
-rock & roll solid reactive, mobile scalability.  
+rock & roll solid reactive, mobile scalability.
 
-But if you do not need the mix of these toolkits provided by the fobo setup option it is seemingly easy to setup and use any of 
+Another benefit of using this module is the avalabilty of its included helper object:s and snippt:s (see API documents for usage) 
+that will take care of some common toolkit initiation, component initiation and more. At this writing the helpers are few but as
+the module mature it will provide plenty of useful help functions see the demo for a teaser and potential. 
+If you have ideas and suggestions let me know! contact me or add a issue and/or contribute a patch.      
+
+If you do not need the mix of these toolkits provided by the fobo setup option it is seemingly easy to setup and use any of 
 the included toolkits separately. For a list on what toolkits and versions is supported see below. 
 
-A **live demo** of the use of this module can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/) and the github repo for 
+A **live demo** of the use of this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/) and the github repo for 
 the lift basic template (the demo) using this module can be found [here](https://github.com/karma4u101/FoBo-Lift-Template).
 
 As the preferred way to work with these toolkits is to leave the toolkit files untouched and use application specific css/js files for 
@@ -34,7 +39,7 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
-Current module version: 0.3.1-SNAPSHOT
+Current module version: 0.3.3-SNAPSHOT
 
 This module includes the following toolkits versions
 
@@ -93,12 +98,12 @@ now do a sbt clean update .....
 
 Put the following into your lift Boot
 
-    import net.liftmodules.FoBo._
+    import net.liftmodules.FoBo
     
     //If using defaults FoBo init params can be omitted
-    FoBoInitParams.JQuery=[JQueryXX module option name]  
-    FoBoInitParams.ToolKit=[ToolkitXXX module option name]
-    FoBoInitParams.ToolKit=[ev. additional/extra toolkit module name]
+    FoBo.InitParam.JQuery=FoBo.[JQueryXX module option name]  
+    FoBo.InitParam.ToolKit=FoBo.[ToolkitXXX module option name]
+    FoBo.InitParam.ToolKit=FoBo.[ev. additional/extra toolkit module name]
        :
     FoBo.init()  
 

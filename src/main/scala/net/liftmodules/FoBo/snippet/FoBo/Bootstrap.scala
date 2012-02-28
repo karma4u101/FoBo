@@ -9,9 +9,12 @@ import Helpers._
 import net.liftmodules.FoBo.lib.{BootstrapScriptHelper=>bsh}
 
 /**
- * The Bootstrap snippet class contains functions for common transform 
- * operations useful when working with the Bootstrap toolkit.
+ * ==Bootstrap Snippet==
+ * 
+ * This snippet class contains functions for common transform operations useful when working 
+ * with the Bootstrap toolkit.
  * @example Invoke with {{{ data-lift="FoBo.Bootstrap.functionName?paramName=paramValue&...." }}} 
+ * For more examples see the individual transform functions.
  */
 class Bootstrap extends StatefulSnippet with Loggable {
 
@@ -22,9 +25,11 @@ class Bootstrap extends StatefulSnippet with Loggable {
   
   /**
    * This function sets a popover action on a element.
+   *
+   * '''Snippet Params:'''
    * 
-   * $ - '''Snippet param''' ''id'' The element id 
-   * $ - '''Snippet param''' ''option'' The option string see bootstrap documentation for available options.
+   *  - '''Param''' ''id'' - The element id 
+   *  - '''Param''' ''option'' - The option string see bootstrap documentation for available options.
    * 
    * @example {{{ <script data-lift="FoBo.Bootstrap.popover?id=theId&option=placement:'left'"></script> }}}
    */
@@ -37,7 +42,9 @@ class Bootstrap extends StatefulSnippet with Loggable {
   /**
    * This function prevents the default action on a popover element.
    * 
-   * $ - '''Snippet param''' ''on'' The element id or something more general like the default value a[rel=popover]
+   * '''Snippet Params:'''
+   * 
+   *  - '''Param''' ''on'' - The element id or something more general like the default value a[rel=popover]
    * 
    * @example {{{ <script data-lift="FoBo.Bootstrap.popoverPreventDefault?on=theId"></script> }}}
    */  
