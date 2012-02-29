@@ -38,6 +38,7 @@ import net.liftweb.http.js.JsCmd
  *  
  */
 class BootstrapScriptHelper() extends ScriptHelper {
+
     
   /**
    * This function sets a modal action on a element.
@@ -190,6 +191,7 @@ class BootstrapScriptHelper() extends ScriptHelper {
     var sc = JsRaw("""$(function () { $('%s').collapse('%s'); }); """.format(id,action)).cmd
     JsCmds.Script(sc)  
   }   
+  
   /*
    * Generate script block 200
    */
