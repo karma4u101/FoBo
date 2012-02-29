@@ -28,6 +28,13 @@ import common._
  *  - As more front-end toolkits and JQuery plugins will be available to you just a FoBo.Initparam away you will, 
  *    when needed, be able to quick and easy test out and use nifty features like the Google code Prettify kit, DataTables
  *    and more.   
+ * 
+ * ===Small heads up usage warning===
+ * 
+ * This API is very young so if you make direct usage of some FoBoHelpers in lib chances are that things change. 
+ * If you want to stay on the safe side usage of FoBo snippets and init operations should be fairly safe. 
+ * After a stable release (we are not there yet) changes to a API function will be announced as deprecated 
+ * at least one release cycle before removed.  
  *      
  * ===Setup===     
  * 
@@ -103,7 +110,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
 }
 
 /**
- * Enable usage of DataTables version 1 9 0 in your bootstrap liftweb Boot.
+ * Enable usage of DataTables version 1_9_0 in your bootstrap liftweb Boot.
  * @version 1.9.0
  * 
  *  '''Example:'''
