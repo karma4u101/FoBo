@@ -52,15 +52,10 @@ class ScriptHelper extends StatefulSnippet with Loggable {
    *                      oldonload();
    *                   }
    *                   func();
-<<<<<<< HEAD
+
    *                }
    *             }
    *          }
-=======
-   *             }
-   *          }
-   *       ;
->>>>>>> branch 'master' of git@github.com:karma4u101/FoBo.git
    *    // ]]>  
    *  </script>
    * }}}
