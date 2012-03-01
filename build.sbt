@@ -2,7 +2,7 @@ name := "FoBo"
 
 organization := "net.liftmodules"
 
-version := "2.4-0.3.3-SNAPSHOT"
+version := "2.4-0.3.4-SNAPSHOT"
 
 scalaVersion := "2.9.1"
 
@@ -14,6 +14,15 @@ scalacOptions ++= Seq("-deprecation")
 //scalacOptions in doc <++= (version).map(v => Seq("--doc-version", v ,"-doc-root-content", "net.liftmodules.FoBo"))
 
 EclipseKeys.withSource := true
+
+seq(lessSettings:_*)
+
+(sourceDirectory in (Compile, LessKeys.less)) <<= (sourceDirectory in Compile)(_ / "less" / "bootstrap" / "2.0.0")
+
+(resourceManaged in (Compile, LessKeys.less)) <<= (crossTarget in Compile)(_ / "classes" / "toserve" / "fobo" / "bootstrap" / "2.0.0" / "css" )
+
+(LessKeys.filter in (Compile, LessKeys.less)) := "bootstrap.less"
+
 
 resolvers ++= Seq(
   "Scala Tools Releases" at "http://scala-tools.org/repo-releases/",

@@ -31,7 +31,8 @@ import common._
  * 
  * ===Small heads up usage warning===
  * 
- * This API is very young so if you make direct usage of some FoBoHelpers in lib chances are that things change. 
+ * This API is very young (with only snapshot releases) so if you make direct usage of some FoBoHelpers in lib chances 
+ * is that things change. 
  * If you want to stay on the safe side usage of FoBo snippets and init operations should be fairly safe. 
  * After a stable release (we are not there yet) changes to a API function will be announced as deprecated 
  * at least one release cycle before removed.  
