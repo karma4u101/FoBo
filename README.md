@@ -39,7 +39,7 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
-Current module version: 0.3.3-SNAPSHOT
+Current module version: 0.3.4-SNAPSHOT
 
 This module includes the following toolkits versions
 
@@ -254,6 +254,12 @@ Here is a couple of tips for you to make the most of the FoBoXXX toolkit option 
 
     1) The only place for using bootstraps container class (bo-container) would be in the topbar structure.
     2) Make use of foundations reactive fluid mobile scalable grid system in favor for bootstrap grids. 
+
+FoBo Bootstrap and Less
+-----------------------
+
+The FoBo module allows you to tweak your generated bootstrap.css via variables.less in src/main/less/... see bootstrap 
+documentation for available tweaks.
 
 Authors
 -------

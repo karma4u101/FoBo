@@ -11,6 +11,7 @@ import common._
  * The [[net.liftmodules.FoBo]] Package is the starting point for this API. 
  * The FoBo modules Github home is [[https://github.com/karma4u101/FoBo here]]
  *
+ *
  *===What FoBo will do for you===
  *
  * This module gives you quick and easy integration of some of the industry leading web-centric open source 
@@ -28,6 +29,9 @@ import common._
  *  - As more front-end toolkits and JQuery plugins will be available to you just a FoBo.Initparam away you will, 
  *    when needed, be able to quick and easy test out and use nifty features like the Google code Prettify kit, DataTables
  *    and more.   
+ *  - FoBo uses Less to build the (all in one) bootstrap.css out of the box (no hands on needed) so if you like you 
+ *    can (if you fork the module source) and easily tweak your bootstrap css (via variables.less) see bootstrap 
+ *    documentation form more information.       
  * 
  * ===Small heads up usage warning===
  * 
@@ -57,7 +61,7 @@ import common._
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version 0.3.3
+ * @version v0.3.4
  * @author Peter Petersson (Github karma4u101)
  * 
  */
