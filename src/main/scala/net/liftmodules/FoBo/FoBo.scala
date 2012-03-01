@@ -30,7 +30,7 @@ import common._
  *    when needed, be able to quick and easy test out and use nifty features like the Google code Prettify kit, DataTables
  *    and more.   
  *  - FoBo uses Less to build the (all in one) bootstrap.css out of the box (no hands on needed) so if you like you 
- *    can (if you fork the module source) and easily tweak your bootstrap css (via variables.less) see bootstrap 
+ *    can (if you fork the module source) easily tweak your bootstrap css (via variables.less) see bootstrap 
  *    documentation form more information.       
  * 
  * ===Small heads up usage warning===
