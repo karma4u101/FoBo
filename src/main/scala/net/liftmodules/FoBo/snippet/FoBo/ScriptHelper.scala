@@ -13,7 +13,8 @@ import net.liftmodules.FoBo.lib.{ScriptHelper=>sch}
  * 
  * This snippet class contains functions for common transform operations useful when working 
  * with the any toolkit.
- * @example Invoke with {{{ data-lift="FoBo.ScriptHelper.functionName?paramName=paramValue&...." }}} 
+ * '''Example''' Most of the functions in this class can be invoced using the following pattern. 
+ * {{{ data-lift="FoBo.ScriptHelper.functionName?paramName=paramValue&...." }}} 
  * For more examples see the individual transform functions.
  */
 class ScriptHelper extends StatefulSnippet with Loggable {
@@ -27,7 +28,7 @@ class ScriptHelper extends StatefulSnippet with Loggable {
   /**
    * This function register a load event factory script
    * 
-   * @example 
+   * '''Example'''  
    * {{{ 
    *     <head>
    *       :

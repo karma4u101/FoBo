@@ -33,6 +33,40 @@ import common._
  *    can (if you fork the module source) easily tweak your bootstrap css (via variables.less) see bootstrap 
  *    documentation form more information.       
  * 
+ * ===Okey, okey I get it, now take me to the most interesting stuff===
+ * From a user perspective, the most interesting stuff is probably in the snippet classes in [[net.liftmodules.FoBo.snippet.FoBo]].
+ * Great care has been taken to explain and illustrate how to use the snippet functions so that you can use them 
+ * even if you are not a Lift expert, to show you what I am talking about '''here is a example showing one way to use the tooltip function:'''
+ * 
+ * ------------------------
+ * def '''tooltip''' : CssSel
+ * 
+   * This function sets a tooltip action on a element.
+   *
+   * '''Snippet Params:'''
+   * 
+   *  - '''Param''' ''id'' - The element id 
+   *  - '''Param''' ''option'' - The option string see bootstrap documentation for available options.
+   * 
+   * '''Example''' Showing a example element using the tooltip and the actual snippet invocation  
+   * {{{
+   *  <a id="aId" 
+   *     title="The most powerful, most secure web framework available today. It simply rocks!" 
+   *     href="http://liftweb.net/">Lift</a> 
+   *  <script data-lift="FoBo.Bootstrap.tooltip?id=#aId&option=placement:'bottom'"></script> 
+   * }}}
+   * 
+   * '''Result:''' The script tag with the snippet invocation will result in the following being injected in place of the snippet invocation:
+   * {{{
+   *   <script type="text/javascript">
+   *     // <![CDATA[
+   *       $(function () { $('#aId').tooltip({placement:'bottom'}); }); ;
+   *     // ]]>
+   *   </script> 
+   * }}}
+ *    
+ * ------------------------
+ * 
  * ===Small heads up usage warning===
  * 
  * This API is very young (with only snapshot releases) so if you make direct usage of some FoBoHelpers in lib chances 

@@ -22,6 +22,7 @@ class Bootstrap extends StatefulSnippet with Loggable {
   
   def dispatch = {
     case "popover" => popover
+    case "tooltip" => tooltip
     case "popoverPreventDefault" => popoverPreventDefault
     case "activateDropdown" => activateDropdown
   }
@@ -50,6 +51,37 @@ class Bootstrap extends StatefulSnippet with Loggable {
     var options = S.attr("options") openOr "" 
     " *" #> bsh.popover(id, options)
   }
+  
+  /**
+   * This function sets a tooltip action on a element.
+   *
+   * '''Snippet Params:'''
+   * 
+   *  - '''Param''' ''id'' - The element id 
+   *  - '''Param''' ''option'' - The option string see bootstrap documentation for available options.
+   * 
+   * '''Example''' Showing a example element using the tooltip and the actual snippet invocation  
+   * {{{
+   *  <a id="aId" 
+   *     title="The most powerful, most secure web framework available today. It simply rocks!" 
+   *     href="http://liftweb.net/">Lift</a> 
+   *  <script data-lift="FoBo.Bootstrap.tooltip?id=#aId&option=placement:'bottom'"></script> 
+   * }}}
+   * 
+   * '''Result:''' The script tag with the snippet invocation will result in the following being injected in place of the snippet invocation:
+   * {{{
+   *   <script type="text/javascript">
+   *     // <![CDATA[
+   *       $(function () { $('#aId').tooltip({placement:'bottom'}); }); ;
+   *     // ]]>
+   *   </script> 
+   * }}}
+   */
+  def tooltip = { 
+    var id = S.attr("id") openOr "id: NOT DEFINED!?"
+    var options = S.attr("options") openOr "" 
+    " *" #> bsh.tooltip(id, options)
+  }  
  
   /**
    * This function prevents the default action on a popover element.
