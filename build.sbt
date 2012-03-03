@@ -21,8 +21,30 @@ seq(lessSettings:_*)
 
 (resourceManaged in (Compile, LessKeys.less)) <<= (crossTarget in Compile)(_ / "classes" / "toserve" / "fobo" / "bootstrap" / "2.0.0" / "css" )
 
-(LessKeys.filter in (Compile, LessKeys.less)) := "bootstrap.less"
+//(includeFilter in (Compile, LessKeys.less)) := ("*.include.less": FileFilter)
+                                                                             
+//(excludeFilter in (Compile, LessKeys.less)) := ("*.exclude*": FileFilter) 
 
+(includeFilter in (Compile, LessKeys.less)) := ("bootstrap.less": FileFilter)
+
+//(LessKeys.filter in (Compile, LessKeys.less)) := "bootstrap.less"
+
+InputKey[Unit]("contents") <<= inputTask { (argsTask: TaskKey[Seq[String]]) =>
+  (argsTask, streams) map { (args, out) =>
+    args match {
+      case Seq(actual, expected) =>
+        if(IO.read(file(actual)).trim.equals(IO.read(file(expected)).trim)) {
+          out.log.debug("Contents match")
+        } else {
+          error("\nContents of %s\n%s\ndoes not match %s\n%s\n".format(
+                actual,
+                IO.read(file(actual)),
+                expected,
+                IO.read(file(expected))))
+        }
+    }
+  }
+}
 
 resolvers ++= Seq(
   "Scala Tools Releases" at "http://scala-tools.org/repo-releases/",
@@ -38,7 +60,7 @@ libraryDependencies ++= {
 }
 
 
-
-//use sbt clean update compile package publish-local
+//use ./sbt-pulish-local
+//or use individual steps ./sbt clean update less compile package publish-local
 
 

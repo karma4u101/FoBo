@@ -8,8 +8,8 @@ resolvers += Resolver.url("sbt-plugin-releases",
   new URL("http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/"))(
     Resolver.ivyStylePatterns)
 
-resolvers += Classpaths.typesafeResolver
+addSbtPlugin("com.untyped" %% "sbt-less" % "0.3")
 
-addSbtPlugin("me.lessis" % "less-sbt" % "0.1.9")
+resolvers += Classpaths.typesafeResolver
 
 addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.0.0")

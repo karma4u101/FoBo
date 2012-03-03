@@ -77,9 +77,11 @@ IDE section below.
 
 ### Update, package & install 
 
-There is also a sbt.bat for windows users.
+There is also a sbt*.bat for windows users.
 
-	./sbt clean update compile package publish-local
+    ./sbt-publish-local
+     or 
+	./sbt clean update less compile package publish-local
 
 The module should now be in your local ivy repository and available for your local projects	
 
@@ -258,8 +260,8 @@ Here is a couple of tips for you to make the most of the FoBoXXX toolkit option 
 FoBo Bootstrap and Less
 -----------------------
 
-The FoBo module allows you to tweak your generated bootstrap.css via variables.less in src/main/less/... see bootstrap 
-documentation for available tweaks.
+The FoBo module allows you to tweak your generated bootstrap.css (only available for bootstrap >= v2.0.0 via variables.less in src/main/less/bootstrap/[version]/ 
+see bootstrap documentation for available tweaks.
 
 Authors
 -------
