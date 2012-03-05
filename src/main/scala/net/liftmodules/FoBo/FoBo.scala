@@ -58,6 +58,9 @@ import common._
    * 
    * '''Result:''' The script tag with the snippet invocation will result in the following being injected in place of the snippet invocation:
    * {{{
+   *  <a id="aId" 
+   *     title="The most powerful, most secure web framework available today. It simply rocks!" 
+   *     href="http://liftweb.net/">Lift</a>  
    *   <script type="text/javascript">
    *     // <![CDATA[
    *       $(function () { $('#aId').tooltip({placement:'bottom'}); }); ;

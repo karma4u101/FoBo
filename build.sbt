@@ -21,13 +21,7 @@ seq(lessSettings:_*)
 
 (resourceManaged in (Compile, LessKeys.less)) <<= (crossTarget in Compile)(_ / "classes" / "toserve" / "fobo" / "bootstrap" / "2.0.0" / "css" )
 
-//(includeFilter in (Compile, LessKeys.less)) := ("*.include.less": FileFilter)
-                                                                             
-//(excludeFilter in (Compile, LessKeys.less)) := ("*.exclude*": FileFilter) 
-
 (includeFilter in (Compile, LessKeys.less)) := ("bootstrap.less": FileFilter)
-
-//(LessKeys.filter in (Compile, LessKeys.less)) := "bootstrap.less"
 
 InputKey[Unit]("contents") <<= inputTask { (argsTask: TaskKey[Seq[String]]) =>
   (argsTask, streams) map { (args, out) =>
