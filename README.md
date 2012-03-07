@@ -39,7 +39,7 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
-Current module version: 0.3.4-SNAPSHOT
+Current module version: 0.3.5-SNAPSHOT
 
 This module includes the following toolkits versions
 
@@ -47,6 +47,7 @@ This module includes the following toolkits versions
 * FoBo v0.1 (comprised of foundation v2.1.4,bootstrap v1.4.0,orbit v1.3.0)
 * Bootstrap [v1.4.0, v2.0.0]
 * Foundation [v2.1.4, v2.1.5]
+* DataTables [v1.9.0]
 * JQuery-mobile [v1.0.1]
 * JQuery  [v1.6.4, v1.7.1]
 
@@ -55,6 +56,7 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 * FoBo010, FoBo020
 * Bootstrap140, Bootstrap200 (current default)
 * Foundation214, Foundation215
+* DataTables190
 * JQueryMobile101
 * JQuery164, JQuery171 (current default)
 
@@ -96,7 +98,7 @@ Put the following in your project build.sbt files lift libraryDependencies secti
 	
 now do a sbt clean update .....
 	
-### Bootstrap hook 
+### Lift Bootstrap hook 
 
 Put the following into your lift Boot
 
@@ -109,7 +111,7 @@ Put the following into your lift Boot
        :
     FoBo.init()  
 
-### Template hooks
+### Lift Template hooks
 
 Put something like the following in your Lift templat(s) head section 	
  	
@@ -120,15 +122,15 @@ Put something like the following in your Lift templat(s) head section
 Available CSS and JavaScript files 
 ----------------------------------
 
-The [css file name]:s and [script file name]:s that are available for each toolkit option and that can bee used in Lift templates. 
+The following is a list of **css file name:s** and **script file name:s** available in each toolkit option for used in Lift templates. 
 
 ###FoBo Toolkit
 
-FoBoInitParams.ToolKit=FoBoXXX 
+FoBo.InitParam.ToolKit=FoBo.FoBoXXX 
 
 Base css
 
-- fobo.css - (comprised of foundation,slightly modified bootstrap,orbit)
+- fobo.css - (comprised of foundation,slightly modified bootstrap,orbit css)
 
 Alternative separate orgin css files (do not mix orgin bootstrap and foundation on same page)
 
@@ -151,7 +153,7 @@ Orbit script file
 
 ###Bootstrap Toolkit
 
-FoBoInitParams.ToolKit=BootstrapXXX
+FoBo.InitParam.ToolKit=FoBo.BootstrapXXX
 
 Base css file
 
@@ -186,7 +188,7 @@ Alternative separate script files
 
 ###Foundation Toolkit
 
-FoBoInitParams.ToolKit=FoundationXXX
+FoBo.InitParam.ToolKit=FoBo.FoundationXXX
 
 Base css file
 
@@ -215,9 +217,9 @@ Script files
 - jquery.mobile.js
 - jquery.mobile.themeswitcher.js
     
-### JQuery Mobile Toolkit
+###JQuery Mobile Toolkit
 
-FoBoInitParams.ToolKit=JQueryMobileXXX
+FoBo.InitParam.ToolKit=FoBo.JQueryMobileXXX
 
 Css files
 
@@ -228,10 +230,43 @@ Script files
 
 - jquery.mobile.js
 - jquery.mobile.themeswitcher.js
+
+###DataTables JQuery-plugin
+
+FoBo.InitParam.ToolKit=FoBo.DataTablesXXX
+
+Css files
+
+- jquery.dataTables.css
+- jquery.dataTables_themeroller.css
+- AutoFill.css
+- ColReorder.css
+- ColVis.css
+- ColVisAlt.css
+- TableTools_JUI.css
+- TableTools.css
+
+Script files
+
+- jquery.dataTables.js
+- AutoFill.js
+- ColReorder.js
+- ColVis.js
+- FixedColumns.js
+- FixedHeader.js
+- KeyTable.js
+- Scroller.js
+- TableTools.js
+- ZeroClipboard.js
+
+swf files
+
+- copy_cvs_xls_pdf.swf
+- copy_cvs_xls.swf
     
 ### Google Code Prettify
 
-FoBoInitParams.ToolKit=PrettifyJun2011
+FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
 
 Css files
 

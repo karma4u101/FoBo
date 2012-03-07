@@ -77,6 +77,11 @@ import common._
  * If you want to stay on the safe side usage of FoBo snippets and init operations should be fairly safe. 
  * After a stable release (we are not there yet) changes to a API function will be announced as deprecated 
  * at least one release cycle before removed.  
+ *  
+ * ===Help out!===
+ * 
+ * There is a lot more that can be done within the boundaries of this API and the FoBo module as a hole so  
+ * your help, suggestions, encouragement, engagement, patches (pull requests) bug-fixes/reports are highly appreciated.     
  *      
  * ===Setup===     
  * 
@@ -98,7 +103,7 @@ import common._
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version v0.3.4
+ * @version v0.3.5
  * @author Peter Petersson (Github karma4u101)
  * 
  */
@@ -164,7 +169,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * @todo - Usage of this toolkit is not implemented yet. 
  */
 case object DataTables190 extends FoBoToolkit {
-//   FoBoResources.dataTables190
+   FoBoResources.dataTables190
 }
 
 /**
@@ -316,8 +321,77 @@ case object Foundation215 extends FoBoToolkit {
   FoBoResources.foundation215
 }
 
+
+/**
+ * Object holding internally used FoBo resources. 
+ */
 private object FoBoResources {
    
+  lazy val dataTables190 = {
+    ResourceServer.rewrite {
+
+      case "fobo" :: "jquery.dataTables.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "jquery.dataTables.css")
+      case "fobo" :: "jquery.dataTables.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "jquery.dataTables.css")          
+      
+      case "fobo" :: "jquery.dataTables_themeroller.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "jquery.dataTables_themeroller.css")
+      case "fobo" :: "jquery.dataTables_themeroller.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "jquery.dataTables_themeroller.css")          
+            
+      case "fobo" :: "AutoFill.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "AutoFill.css")
+      case "fobo" :: "AutoFill.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "AutoFill.css")
+      
+      case "fobo" :: "ColReorder.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "ColReorder.css")
+      case "fobo" :: "ColReorder.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "ColReorder.css")
+
+      case "fobo" :: "ColVis.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "ColVis.css")
+      case "fobo" :: "ColVis.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "ColVis.css")
+      
+      case "fobo" :: "ColVisAlt.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "ColVisAlt.css")
+      case "fobo" :: "ColVisAlt.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "ColVisAlt.css")    
+      
+      case "fobo" :: "TableTools_JUI.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "TableTools_JUI.css")
+      case "fobo" :: "TableTools_JUI.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "TableTools_JUI.css")    
+
+      case "fobo" :: "TableTools.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "TableTools.css")
+      case "fobo" :: "TableTools.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "TableTools.css")    
+
+      
+      case "fobo" :: "jquery.dataTables.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "jquery.dataTables.js")
+      case "fobo" :: "jquery.dataTables.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "jquery.dataTables.js")
+      
+      case "fobo" :: "AutoFill.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "AutoFill.js")
+      case "fobo" :: "AutoFill.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "AutoFill.js")    
+      
+      case "fobo" :: "ColReorder.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "ColReorder.js")
+      case "fobo" :: "ColReorder.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "ColReorder.js")    
+
+      case "fobo" :: "ColVis.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "ColVis.js")
+      case "fobo" :: "ColVis.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "ColVis.js")    
+
+      case "fobo" :: "FixedColumns.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "FixedColumns.js")
+      case "fobo" :: "FixedColumns.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "FixedColumns.js")   
+      
+      case "fobo" :: "FixedHeader.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "FixedHeader.js")
+      case "fobo" :: "FixedHeader.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "FixedHeader.js")   
+
+      case "fobo" :: "KeyTable.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "KeyTable.js")
+      case "fobo" :: "KeyTable.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "KeyTable.js")   
+
+      case "fobo" :: "Scroller.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "Scroller.js")
+      case "fobo" :: "Scroller.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "Scroller.js")   
+
+      case "fobo" :: "TableTools.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "TableTools.js")
+      case "fobo" :: "TableTools.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "TableTools.js")   
+
+      case "fobo" :: "ZeroClipboard.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "ZeroClipboard.js")
+      case "fobo" :: "ZeroClipboard.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "ZeroClipboard.js")   
+      
+      
+      case "fobo" :: "copy_cvs_xls_pdf.swf" :: Nil => List("fobo", "datatables", "1.9.0", "swf", "copy_cvs_xls_pdf.swf") 
+      case "fobo" :: "copy_cvs_xls.swf" :: Nil => List("fobo", "datatables", "1.9.0", "swf", "copy_cvs_xls.swf") 
+       
+    }
+  }
+  
   lazy val fobo020 = {
     ResourceServer.rewrite {
       /*includes foundation bootstrap and orbit css*/
