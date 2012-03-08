@@ -6,7 +6,7 @@ import net.liftweb.common._
 import net.liftweb.http._
 import net.liftweb._
 import Helpers._
-import net.liftmodules.FoBo.lib.{BootstrapScriptHelper=>bsh}
+import net.liftmodules.FoBo.lib.{BootstrapScriptHelper=>sch}
 
 /**
  * ==Bootstrap Snippet==
@@ -18,7 +18,7 @@ import net.liftmodules.FoBo.lib.{BootstrapScriptHelper=>bsh}
  */
 class Bootstrap extends StatefulSnippet with Loggable {
 
-  lazy val bsh = new bsh()
+  lazy val sch = new sch()
   
   def dispatch = {
     case "popover" => popover
@@ -49,7 +49,7 @@ class Bootstrap extends StatefulSnippet with Loggable {
   def popover = { 
     var id = S.attr("id") openOr "id: NOT DEFINED!?"
     var options = S.attr("options") openOr "" 
-    " *" #> bsh.popover(id, options)
+    " *" #> sch.popover(id, options)
   }
   
   /**
@@ -80,7 +80,7 @@ class Bootstrap extends StatefulSnippet with Loggable {
   def tooltip = { 
     var id = S.attr("id") openOr "id: NOT DEFINED!?"
     var options = S.attr("options") openOr "" 
-    " *" #> bsh.tooltip(id, options)
+    " *" #> sch.tooltip(id, options)
   }  
  
   /**
@@ -103,7 +103,7 @@ class Bootstrap extends StatefulSnippet with Loggable {
    */  
   def popoverPreventDefault = {
      var on = onTest(S.attr("on") openOr "a[rel=popover]")
-    " *" #> bsh.popoverPreventDefault(on)
+    " *" #> sch.popoverPreventDefault(on)
   }
 
   /**
@@ -136,7 +136,7 @@ class Bootstrap extends StatefulSnippet with Loggable {
    */
   def activateDropdown = {
     var on = S.attr("on") openOr "on: ELEMENT CLASS or ID NOT DEFINED!?"
-    " *" #> bsh.activateDropdown(on)
+    " *" #> sch.activateDropdown(on)
   }
   
   private def onTest(on:String):String = on match {
