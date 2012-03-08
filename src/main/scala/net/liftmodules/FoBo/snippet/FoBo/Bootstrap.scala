@@ -6,7 +6,7 @@ import net.liftweb.common._
 import net.liftweb.http._
 import net.liftweb._
 import Helpers._
-import net.liftmodules.FoBo.lib.{BootstrapScriptHelper=>sch}
+import net.liftmodules.FoBo.lib.{BootstrapSH=>sch}
 
 /**
  * ==Bootstrap Snippet==

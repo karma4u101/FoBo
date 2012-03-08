@@ -6,14 +6,14 @@ import net.liftweb.common._
 import net.liftweb.http._
 import net.liftweb._
 import Helpers._
-import net.liftmodules.FoBo.lib.{DataTablesScriptHelper=>sch}
+import net.liftmodules.FoBo.lib.{DataTablesSH=>sch}
 
 /**
- * ==Script Helper Snippet==
+ * ==Bootstrap Snippet==
  * 
  * This snippet class contains functions for common transform operations useful when working 
- * with the any toolkit.
- * '''Example''' Most of the functions in this class can be invoced using the following pattern. 
+ * with the the DataTables toolkit.
+ * '''Example''' Most of the functions in this class can be invoked using the following pattern. 
  * {{{ data-lift="FoBo.ScriptHelper.functionName?paramName=paramValue&...." }}} 
  * For more examples see the individual transform functions.
  */

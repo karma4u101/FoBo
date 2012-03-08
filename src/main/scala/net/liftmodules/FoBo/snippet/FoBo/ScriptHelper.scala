@@ -13,7 +13,7 @@ import net.liftmodules.FoBo.lib.{ScriptHelper=>sch}
  * 
  * This snippet class contains functions for common transform operations useful when working 
  * with the any toolkit.
- * '''Example''' Most of the functions in this class can be invoced using the following pattern. 
+ * '''Example''' Most of the functions in this class can be invoked using the following pattern. 
  * {{{ data-lift="FoBo.ScriptHelper.functionName?paramName=paramValue&...." }}} 
  * For more examples see the individual transform functions.
  */
