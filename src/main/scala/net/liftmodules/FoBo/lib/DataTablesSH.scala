@@ -36,19 +36,21 @@ import net.liftweb.http.js.JsCmd
  *   }
  * }}}
  */
-class DataTablesSH {
+class DataTablesSH extends Loggable {
 
   /**
    * This function sets a dataTable element.
    * 
    * @param id - The id for which the dataTable should be set 
+   * @param options - dataTable options default=""
    * 
    */
-  def dataTable(id:String):scala.xml.Node = {
+  def dataTable(id:String,options:String=""):scala.xml.Node = {
     var sc = JsRaw("""$(document).ready(function() {
-				         $('%s').dataTable();
-			           } );""".format(id)).cmd
+				         oTable = $('%s').dataTable({%s});
+			           } );""".format(id,options)).cmd
+	logger.debug("lib.DataTablesSH.dataTable(id,options) id=%s options=%s"format(id,options))		           
     JsCmds.Script(sc)  
-  }  
+  }   
   
 }

@@ -39,28 +39,32 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
-Current module version: 0.3.5-SNAPSHOT
+Current module version: 0.3.6-SNAPSHOT
 
 This module includes the following toolkits versions
 
-* FoBo v0.2 (comprised of foundation v2.1.5,bootstrap v2.0.0,orbit v1.4.0, google-code-prettify)
-* FoBo v0.1 (comprised of foundation v2.1.4,bootstrap v1.4.0,orbit v1.3.0)
-* Bootstrap [v1.4.0, v2.0.0]
-* Foundation [v2.1.4, v2.1.5]
-* DataTables [v1.9.0]
-* JQuery-mobile [v1.0.1]
-* JQuery  [v1.6.4, v1.7.1]
+- FoBo v0.2 (comprised of foundation v2.1.5,bootstrap v2.0.0,orbit v1.4.0)
+- FoBo v0.1 (comprised of foundation v2.1.4,bootstrap v1.4.0,orbit v1.3.0)
+- Bootstrap [v1.4.0, v2.0.0] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+- Foundation [v2.1.4, v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
+- DataTables [v1.9.0] - [DataTables.net](http://datatables.net/)
+- JQuery Mobile [v1.0.1] - [JQuery Mobile](http://jquerymobile.com/)
+- JQuery  [v1.6.4, v1.7.1] - [JQuery](http://jquery.com/)
+- Google Code Prettify [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
+- Knockout JS [v2.0.0] - [Knockout](http://knockoutjs.com/)
 
 Module names that can bee used in boot corresponding to the toolkit version above is
 
-* FoBo010, FoBo020
-* Bootstrap140, Bootstrap200 (current default)
-* Foundation214, Foundation215
-* DataTables190
-* JQueryMobile101
-* JQuery164, JQuery171 (current default)
+- FoBo010, FoBo020
+- Bootstrap140, Bootstrap200 (current default)
+- Foundation214, Foundation215
+- DataTables190
+- JQueryMobile101
+- JQuery164, JQuery171 (current default)
+- PrettifyJun2011
+- Knockout200
 
-If you will be using the defaults FoBoInitParams dose not need to be specified. For more information on how to set this up see below. 
+If you will be using the defaults FoBo.InitParam dose not need to be specified. For more information on how to set this up see below. 
 Be aware that the defaults most likely will be changed between module updates so if you do not want any module update surprises 
 set the FoBoInitParams in boot.        
     
@@ -113,7 +117,7 @@ Put the following into your lift Boot
 
 ### Lift Template hooks
 
-Put something like the following in your Lift templat(s) head section 	
+Put something like the following in your Lift templat(s) head section (see below for available names)	
  	
     <link rel="stylesheet" type='text/css' href='/classpath/fobo/[css file name]'> 	
     <link rel="stylesheet" type='text/css' href='[path/to/you/app/specific/css/file/in/the/webapp/dir]'>
@@ -122,7 +126,8 @@ Put something like the following in your Lift templat(s) head section
 Available CSS and JavaScript files 
 ----------------------------------
 
-The following is a list of **css file name:s** and **script file name:s** available in each toolkit option for used in Lift templates. 
+The following is a list of **css file** and **script file**-name:s available in each toolkit for used as 
+[script/css file name] -hooks in your Lift templates. 
 
 ###FoBo Toolkit
 
@@ -259,10 +264,16 @@ Script files
 - TableTools.js
 - ZeroClipboard.js
 
+Themes files
+
+- themes/smoothness.css 
+- themes/ui-lightness.css
+
 swf files
 
 - copy_cvs_xls_pdf.swf
 - copy_cvs_xls.swf
+    
     
 ### Google Code Prettify
 
@@ -276,6 +287,14 @@ Script files
 
 - prettify.js
 - lang-xxx.js where xxx=[apollo,clj,css,go,hs,listp,lua,ml,n,proto,scala,sql,tex,vb,vhdl,wiki,xq,yaml]
+
+###Knockout
+
+Fobo.InitParam.ToolKit=FoBo.KnockoutXXX
+
+Script files
+
+- knockout.js
 
     
 FoBo front-end toolkits documentation

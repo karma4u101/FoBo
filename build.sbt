@@ -2,7 +2,7 @@ name := "FoBo"
 
 organization := "net.liftmodules"
 
-version := "2.4-0.3.5-SNAPSHOT"
+version := "2.4-0.3.6-SNAPSHOT"
 
 scalaVersion  := "2.9.1"
 

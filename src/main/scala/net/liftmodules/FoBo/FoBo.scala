@@ -11,31 +11,44 @@ import common._
  * The [[net.liftmodules.FoBo]] Package is the starting point for this API. 
  * The FoBo modules Github home is [[https://github.com/karma4u101/FoBo here]]
  *
- *
  *===What FoBo will do for you===
  *
  * This module gives you quick and easy integration of some of the industry leading web-centric open source 
- * front-end toolkits with some carefully thought throw and Lift inherit extra benefits. 
+ * front-end toolkits with some carefully thought throw Scala/Lift inherit extra benefits. 
  * 
  * Among the benefits is:
  *  - due to a small footprint and uniform declaration and integration points across toolkit versions only a 
- *    small amount of changes will bee needed for a up/down-grading of a used Toolkit, optimally it will just be  
- *    a version change of the FoBo.Initparam in Lift bootstrap.liftweb.Boot. 
- *  - the modules included lib Objects and Snippet helpers will ease you from writing some common toolkit component 
- *    integration scripts. At this writing the snippet helpers is few but expect the numbers to grow as the 
- *    module matures. 
- *  - Great mobile scalablity with the modules own unique FoBo mix is a love, peace and harmony mix of the ZURB/Foundation and the Twitter 
- *    Bootstrap front-end toolkit.   
+ *    small amount of changes will bee needed for a up/down-grading of a used Toolkit, optimally, if the toolkit 
+ *    has no breaking changes it will just be a version change of the FoBo.Initparam in Lift bootstrap.liftweb.Boot. 
+ *  - the modules included lib Classes and Snippet helpers will ease you from writing some commonly used toolkit 
+ *    component integration scripts making it a simple snippet invocation. 
+ *    At this writing the snippet helpers is few but expect the numbers to grow as the module matures. 
+ *  - Great mobile scalablity with some mobile enabled toolkits and the modules own unique FoBo mix that is a 
+ *    love, peace and harmony mix of the ZURB/Foundation and the Twitter Bootstrap front-end toolkit.   
  *  - As more front-end toolkits and JQuery plugins will be available to you just a FoBo.Initparam away you will, 
- *    when needed, be able to quick and easy test out and use nifty features like the Google code Prettify kit, DataTables
- *    and more.   
+ *    when needed, be able to quick and easy test out and use nifty features like the Google code Prettify kit, 
+ *    DataTables and more.   
  *  - FoBo uses Less to build the (all in one) bootstrap.css out of the box (no hands on needed) so if you like you 
  *    can (if you fork the module source) easily tweak your bootstrap css (via variables.less) see bootstrap 
  *    documentation form more information.       
+ *
+ * ===FoBo supported toolkits and plugins=== 
  * 
+ * The following is a list of available toolkits and plugins 
+ *  
+ *  - JQuery  [v1.6.4, v1.7.1]
+ *  - Bootstrap [v1.4.0, v2.0.0]
+ *  - Foundation [v2.1.4, v2.1.5]
+ *  - DataTables [v1.9.0]
+ *  - JQuery-mobile [v1.0.1]
+ *  - Google Code Prettify [vJun2011]
+ *  - Knockout JS [v2.0.0]
+ *  - FoBo v0.2 (comprised of foundation v2.1.5,bootstrap v2.0.0,orbit v1.4.0)
+ *  - FoBo v0.1 (comprised of foundation v2.1.4,bootstrap v1.4.0,orbit v1.3.0)
+ *  
  * ===Okey, okey I get it, now take me to the most interesting stuff===
  * From a user perspective, the most interesting stuff is probably in the snippet classes in [[net.liftmodules.FoBo.snippet.FoBo]].
- * Great care has been taken to explain and illustrate how to use the snippet functions so that you can use them 
+ * Great care has been taken to explain and illustrate how to use the snippet methods so that you can use them 
  * even if you are not a Lift expert, to show you what I am talking about '''here is a example showing one way to use the tooltip function:'''
  * 
  * ------------------------
@@ -75,8 +88,8 @@ import common._
  * This API is very young (with only snapshot releases) so if you make direct usage of some FoBoHelpers in lib chances 
  * is that things change. 
  * If you want to stay on the safe side usage of FoBo snippets and init operations should be fairly safe. 
- * After a stable release (we are not there yet) changes to a API function will be announced as deprecated 
- * at least one release cycle before removed.  
+ * After a stable release (we are not there yet) changes to a API method will be announced as deprecated 
+ * at least one release cycle before method signature changes or removal.  
  *  
  * ===Help out!===
  * 
@@ -103,7 +116,7 @@ import common._
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version v0.3.5
+ * @version v0.3.6
  * @author Peter Petersson (Github karma4u101)
  * 
  */
@@ -156,6 +169,21 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   var ToolKit: FoBoToolkit = Bootstrap200
 }
 
+
+/**
+ * Enable usage of KnockOut version 2_0_0 in your bootstrap liftweb Boot.
+ * @version 2.0.0
+ * 
+ *  '''Example:'''
+ *  
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.KnockOut200
+ * }}}
+ *  
+ */
+case object Knockout200 extends FoBoToolkit {
+  FoBoResources.knockout200
+}
 /**
  * Enable usage of DataTables version 1_9_0 in your bootstrap liftweb Boot.
  * @version 1.9.0
@@ -165,8 +193,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.DataTables190
  * }}}
- * 
- * @todo - Usage of this toolkit is not implemented yet. 
+ *  
  */
 case object DataTables190 extends FoBoToolkit {
    FoBoResources.dataTables190
@@ -327,6 +354,13 @@ case object Foundation215 extends FoBoToolkit {
  */
 private object FoBoResources {
    
+  lazy val knockout200 = {
+    ResourceServer.rewrite {
+      case "fobo" :: "knockout.js" :: Nil if Props.devMode => List("fobo", "knockout", "2.0.0", "js", "knockout-2.0.0.debug.js")
+      case "fobo" :: "knockout.js" :: Nil => List("fobo", "knockout", "2.0.0", "js", "knockout-2.0.0.js")         
+    }
+  }
+  
   lazy val dataTables190 = {
     ResourceServer.rewrite {
 
@@ -354,6 +388,13 @@ private object FoBoResources {
       case "fobo" :: "TableTools.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "TableTools.css")
       case "fobo" :: "TableTools.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "TableTools.css")    
 
+      
+      case "fobo" :: "themes" :: "smoothness.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "themes", "smoothness", "jquery-ui-1.8.4.custom.css") 
+      case "fobo" :: "themes" :: "smoothness.css" :: Nil => List("fobo", "datatables", "1.9.0", "themes", "smoothness", "jquery-ui-1.8.4.custom.css") 
+
+      case "fobo" :: "themes" :: "ui-lightness.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "themes", "ui-lightness", "jquery-ui-1.8.4.custom.css") 
+      case "fobo" :: "themes" :: "ui-lightness.css" :: Nil => List("fobo", "datatables", "1.9.0", "themes", "ui-lightness", "jquery-ui-1.8.4.custom.css") 
+      
       
       case "fobo" :: "jquery.dataTables.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "jquery.dataTables.js")
       case "fobo" :: "jquery.dataTables.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "jquery.dataTables.js")
@@ -388,7 +429,7 @@ private object FoBoResources {
       
       case "fobo" :: "copy_cvs_xls_pdf.swf" :: Nil => List("fobo", "datatables", "1.9.0", "swf", "copy_cvs_xls_pdf.swf") 
       case "fobo" :: "copy_cvs_xls.swf" :: Nil => List("fobo", "datatables", "1.9.0", "swf", "copy_cvs_xls.swf") 
-       
+      
     }
   }
   
