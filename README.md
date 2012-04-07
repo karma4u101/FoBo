@@ -78,7 +78,7 @@ IDE section below.
 
 ### Get the code
 
-	git clone git@github.com:karma4u101/FoBo.git
+	git clone git://github.com/karma4u101/FoBo.git
 	cd FoBo
 
 ### Update, package & install 
