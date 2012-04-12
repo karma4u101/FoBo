@@ -2,7 +2,7 @@ name := "FoBo"
 
 organization := "net.liftmodules"
 
-version := "2.4-0.3.6-SNAPSHOT"
+version := "0.3.7-SNAPSHOT"
 
 scalaVersion  := "2.9.1"
 
@@ -26,6 +26,16 @@ libraryDependencies ++= {
     "net.liftweb" %% "lift-testkit" % liftVersion % "compile->default"
     )
 }
+
+/*https://github.com/sbt/sbt-buildinfo */
+seq(buildInfoSettings: _*)
+
+sourceGenerators in Compile <+= buildInfo
+
+buildInfoKeys := Seq[Scoped](name, version, scalaVersion, sbtVersion)
+
+buildInfoPackage := "net.liftmodules.FoBo"
+
 
 seq(lessSettings:_*)
 
