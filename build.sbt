@@ -34,7 +34,7 @@ sourceGenerators in Compile <+= buildInfo
 
 buildInfoKeys := Seq[Scoped](name, version, scalaVersion, sbtVersion)
 
-buildInfoPackage := "net.liftmodules.FoBo"
+buildInfoPackage := "net.liftmodules.FoBo.lib"
 
 
 seq(lessSettings:_*)

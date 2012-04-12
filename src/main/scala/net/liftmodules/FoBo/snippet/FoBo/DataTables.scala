@@ -32,7 +32,8 @@ class DataTables extends StatefulSnippet with Loggable {
    * 
    *  - '''Param''' ''id'' - The element id 
    * 
-   * @example {{{ <script data-lift="FoBo.DataTables.dataTable?id=#theId&option='bJQueryUI':false,'sPaginationType':'full numbers'"></script> }}}
+   * '''Example''' 
+   * {{{ <script data-lift="FoBo.DataTables.dataTable?id=#theId&option='bJQueryUI':false,'sPaginationType':'full numbers'"></script> }}}
    * 
    * '''Result:''' This example will result in the following being injected in place of the snippet invocation:
    * {{{
