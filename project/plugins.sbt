@@ -8,7 +8,9 @@ resolvers += Resolver.url("sbt-plugin-releases",
   new URL("http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases/"))(
     Resolver.ivyStylePatterns)
 
-addSbtPlugin("com.untyped" %% "sbt-less" % "0.3")
+resolvers += "Untyped" at "http://repo.untyped.com"
+
+addSbtPlugin("com.untyped" % "sbt-less"    % "0.4-SNAPSHOT")
 
 resolvers += Classpaths.typesafeResolver
 
