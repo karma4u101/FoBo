@@ -7,9 +7,15 @@ import net.liftweb.common.Logger
 import net.liftweb.util.IterableFunc
 
 /**
- * This object transforms lift menu with specified loc group name into Bootsrap nav menu items including dropdown menu items.
+ * ==BootstrapNav Snippet==
+ * 
+ * This snippet object transforms lift sitemap menu with specified loc group name into Bootsrap nav menu items including dropdown menu items.
  * This work is originally contributed to the FoBo module by community member Damian Helme.
- * http://tech.damianhelme.com/twitter-bootstrap-navbar-dropdowns-and-lifts
+ * http://tech.damianhelme.com/twitter-bootstrap-navbar-dropdowns-and-lifts.
+ * '''Example''' Invoke with
+ * {{{<span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true"> 
+ *     <span data-lift="Menu.builder?top:class=nav pull-right;li_item:class=active;linkToSelf=true;expandAll=true;group=frontNav"></span>
+ *	  </span>}}}
  */
 
 object BootstrapNav extends Logger {
@@ -27,6 +33,17 @@ object BootstrapNav extends Logger {
   will be transformed into Twitter Bootstrap dropdown menus
   */
 
+  /**
+   * This method will transform the enclosed menu builder call adding provided bootstrap attributes 
+   * for declared items in lift sitemap loc locgroup.   
+   * '''Example'''
+   * {{{<span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true"> 
+   *     <span data-lift="Menu.builder?top:class=nav;li_item:class=active;linkToSelf=true;expandAll=true;group=frontNav"></span>
+   *  </span>}}}
+   *  '''Result:''' Depending on the items in and the structure of the net.liftweb.sitemap.loc.LocGroup
+   *   matching the value specified by the group parameter a nodeSeq formated as a "bootstrap navigation 
+   *   menu" containing the declared sitemap items will be returned.
+   */
   def menuToTBNav(in: NodeSeq): NodeSeq = {
 
     object t1 extends RewriteRule {
@@ -59,7 +76,6 @@ object BootstrapNav extends Logger {
               </li>
            </ul>
         </li>
-
         */
         case li @ Elem(liPrefix, "li", liAttribs, liScope,
           span @ Elem(spanPrefix, "span", spanAttribs, spanScope, spanChildren @ _*),
@@ -99,7 +115,6 @@ object BootstrapNav extends Logger {
               </li>
            </ul>
         </li>
-
         */
         case li @ Elem(liPrefix, "li", liAttribs, liScope,
           a @ Elem(aPrefix, "a", aAttribs, aScope, aChildren @ _*),
