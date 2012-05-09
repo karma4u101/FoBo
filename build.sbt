@@ -2,7 +2,13 @@ name := "FoBo"
 
 organization := "net.liftmodules"
 
-version := "0.3.8-SNAPSHOT"
+liftVersion <<= liftVersion ?? "2.4"
+
+version <<= liftVersion apply { _ + "-0.3.8-SNAPSHOT" }
+
+//version := "0.3.8-SNAPSHOT"
+
+crossScalaVersions := Seq("2.8.1", "2.9.0-1", "2.9.1")
 
 scalaVersion  := "2.9.1"
 
@@ -19,12 +25,12 @@ resolvers ++= Seq(
   "Scala Tools Snapshot" at "http://scala-tools.org/repo-snapshots/"
 )
 
-libraryDependencies ++= {
-  val liftVersion = "2.4" // Put the current/latest lift version here
-  Seq(
-    "net.liftweb" %% "lift-webkit" % liftVersion % "compile->default" withSources(),
-    "net.liftweb" %% "lift-testkit" % liftVersion % "compile->default"
-    )
+//"net.liftweb" %% "lift-webkit" % v % "compile->default" withSources() ::
+
+libraryDependencies <++= liftVersion { v =>
+    "net.liftweb" %% "lift-webkit" % v % "compile->default" ::
+    "net.liftweb" %% "lift-testkit" % v % "compile->default" ::
+    Nil
 }
 
 /*https://github.com/sbt/sbt-buildinfo */
