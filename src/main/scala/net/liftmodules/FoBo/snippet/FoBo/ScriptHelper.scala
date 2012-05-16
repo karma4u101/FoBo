@@ -19,7 +19,7 @@ import net.liftmodules.FoBo.lib.{ScriptHelper=>sch}
  */
 class ScriptHelper extends StatefulSnippet with Loggable {
 
-  lazy val sch = new sch()
+  private lazy val sch = new sch()
   
   def dispatch = {
     case "registerLoadEventFactory" => registerLoadEventFactory

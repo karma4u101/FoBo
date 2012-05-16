@@ -19,7 +19,7 @@ import net.liftmodules.FoBo.lib.{BootstrapSH=>sch}
  */
 class Bootstrap extends StatefulSnippet with Loggable {
 
-  lazy val sch = new sch()
+  private lazy val sch = new sch()
   
   def dispatch = {
     case "popover" => popover

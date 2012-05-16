@@ -19,7 +19,7 @@ import net.liftmodules.FoBo.lib.{DataTablesSH=>sch}
  */
 class DataTables extends StatefulSnippet with Loggable {
 
-  lazy val sch = new sch()
+  private lazy val sch = new sch()
   
   def dispatch = {
     case "dataTable" => dataTable
