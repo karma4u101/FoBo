@@ -39,7 +39,7 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
-Current module version: 0.3.8-SNAPSHOT
+Current module version: 0.4.0-SNAPSHOT
 
 This module includes the following toolkits versions
 
@@ -48,7 +48,7 @@ This module includes the following toolkits versions
 - Bootstrap [v1.4.0, v2.0.0] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 - Foundation [v2.1.4, v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
 - DataTables [v1.9.0] - [DataTables.net](http://datatables.net/)
-- JQuery Mobile [v1.0.1] - [JQuery Mobile](http://jquerymobile.com/)
+- JQuery Mobile [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
 - JQuery  [v1.6.4, v1.7.1] - [JQuery](http://jquery.com/)
 - Google Code Prettify [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
 - Knockout JS [v2.0.0] - [Knockout](http://knockoutjs.com/)
@@ -59,7 +59,7 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 - Bootstrap140, Bootstrap200 (current default)
 - Foundation214, Foundation215
 - DataTables190
-- JQueryMobile101
+- JQueryMobile101 JQueryMobile101
 - JQuery164, JQuery171 (current default)
 - PrettifyJun2011
 - Knockout200
@@ -209,18 +209,6 @@ Script files
 - foundation.js
 - modernizr.foundation.js (only in 2.1.5)
 - orbit.js
-
- ###JQuery Mobile Toolkit
- 
-Css files
-
-- jquery.mobile.css
-- jquery.mobile.structure.css
-
-Script files
-
-- jquery.mobile.js
-- jquery.mobile.themeswitcher.js
     
 ###JQuery Mobile Toolkit
 
@@ -230,11 +218,12 @@ Css files
 
 - jquery.mobile.css
 - jquery.mobile.structure.css
+- jquery.mobile.theme.css (only in 1.1.0)
 
 Script files
 
 - jquery.mobile.js
-- jquery.mobile.themeswitcher.js
+- jquery.mobile.themeswitcher.js (only in 1.0.1)
 
 ###DataTables JQuery-plugin
 

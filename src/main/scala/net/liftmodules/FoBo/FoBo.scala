@@ -40,7 +40,7 @@ import common._
  *  - Bootstrap [v1.4.0, v2.0.0]
  *  - Foundation [v2.1.4, v2.1.5]
  *  - DataTables [v1.9.0]
- *  - JQuery-mobile [v1.0.1]
+ *  - JQuery-mobile [v1.0.1, v1.1.0]
  *  - Google Code Prettify [vJun2011]
  *  - Knockout JS [v2.0.0]
  *  - FoBo v0.2 (comprised of foundation v2.1.5,bootstrap v2.0.0,orbit v1.4.0)
@@ -116,7 +116,7 @@ import common._
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version v0.3.8
+ * @version v0.4.0
  * @author Peter Petersson (Github karma4u101)
  * 
  */
@@ -243,7 +243,7 @@ case object JQuery164 extends FoBoJQuery {
 }
 
 /**
- * Enable usage of JQueryMobile version 1_0_1 in your bootstrap liftweb Boot.
+ * Enable usage of JQueryMobile version 1_0_1 in your liftweb Boot.
  * 
  * @version 1.0.1
  * 
@@ -255,6 +255,21 @@ case object JQuery164 extends FoBoJQuery {
  */
 case object JQueryMobile101 extends FoBoToolkit {
   FoBoResources.jquerymobile101
+}
+
+/**
+ * Enable usage of JQueryMobile version 1_1_0 in your liftweb Boot.
+ * 
+ * @version 1.0.1
+ * 
+ * '''Example:'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.JQueryMobile110
+ * }}}
+ */
+case object JQueryMobile110 extends FoBoToolkit {
+  FoBoResources.jquerymobile110
 }
 
 /**
@@ -468,6 +483,23 @@ private object FoBoResources {
     }
   }
   
+   lazy val jquerymobile110 = {
+    ResourceServer.rewrite {
+      case "fobo" :: "jquery.mobile.css" :: Nil if Props.devMode => List("fobo", "jquery-mobile", "1.1.0", "css", "jquery.mobile-1.1.0.css")
+      case "fobo" :: "jquery.mobile.css" :: Nil => List("fobo", "jquery-mobile", "1.1.0", "css", "jquery.mobile-1.1.0.css")
+
+      case "fobo" :: "jquery.mobile.structure.css" :: Nil if Props.devMode => List("fobo", "jquery-mobile", "1.1.0", "css", "jquery.mobile.structure-1.1.0.css")
+      case "fobo" :: "jquery.mobile.structure.css" :: Nil => List("fobo", "jquery-mobile", "1.1.0", "css", "jquery.mobile.structure-1.1.0.css")
+      
+      case "fobo" :: "jquery.mobile.theme.css" :: Nil if Props.devMode => List("fobo", "jquery-mobile", "1.1.0", "css", "jquery.mobile.theme-1.1.0.css")
+      case "fobo" :: "jquery.mobile.theme.css" :: Nil => List("fobo", "jquery-mobile", "1.1.0", "css", "jquery.mobile.theme-1.1.0.css")
+      
+      case "fobo" :: "jquery.mobile.js" :: Nil if Props.devMode => List("fobo", "jquery-mobile", "1.1.0", "js", "jquery.mobile-1.1.0.js")
+      case "fobo" :: "jquery.mobile.js" :: Nil => List("fobo", "jquery-mobile", "1.1.0", "js", "jquery.mobile-1.1.0.js") 
+
+    }
+  }
+   
   lazy val jquery171 = {
     ResourceServer.rewrite {
       case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("fobo", "jquery", "1.7.1", "js", "jquery.js")
