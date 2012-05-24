@@ -39,7 +39,7 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
-Current module version: 0.4.0-SNAPSHOT
+Current module version: 0.4.1-SNAPSHOT
 
 This module includes the following toolkits versions
 
@@ -223,7 +223,7 @@ Css files
 Script files
 
 - jquery.mobile.js
-- jquery.mobile.themeswitcher.js (only in 1.0.1)
+- jquery.mobile.themeswitcher.js 
 
 ###DataTables JQuery-plugin
 
