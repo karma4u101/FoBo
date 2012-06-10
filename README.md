@@ -39,7 +39,7 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
-Current module version: 0.4.1-SNAPSHOT
+Current module version: 0.4.2-SNAPSHOT
 
 This module includes the following toolkits versions
 
@@ -51,7 +51,7 @@ This module includes the following toolkits versions
 - JQuery Mobile [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
 - JQuery  [v1.6.4, v1.7.1] - [JQuery](http://jquery.com/)
 - Google Code Prettify [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
-- Knockout JS [v2.0.0] - [Knockout](http://knockoutjs.com/)
+- Knockout JS [v2.0.0, v2.1.0] - [Knockout](http://knockoutjs.com/)
 
 Module names that can bee used in boot corresponding to the toolkit version above is
 
@@ -62,7 +62,7 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 - JQueryMobile101 JQueryMobile101
 - JQuery164, JQuery171 (current default)
 - PrettifyJun2011
-- Knockout200
+- Knockout200, Knockout210
 
 If you will be using the defaults FoBo.InitParam dose not need to be specified. For more information on how to set this up see below. 
 Be aware that the defaults most likely will be changed between module updates so if you do not want any module update surprises 
@@ -329,6 +329,6 @@ Sbteclipse provides SBT command to create Eclipse project files
 
 User powered Lift module 
 ========================
-**(*)** This is a _unofficial_ user powered Lift module which means it is a work based on the 
-sound foundation of Lift and done by a developer who uses Lift for development ;), sharing it with others.
+**(*)** This is a _optional_ Lift user community powered Lift module which means it is a work based on the 
+sound foundation of Lift done by developers who uses Lift for development, sharing it with others.
 

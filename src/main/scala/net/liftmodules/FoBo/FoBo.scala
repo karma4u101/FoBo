@@ -42,9 +42,9 @@ import common._
  *  - DataTables [v1.9.0]
  *  - JQuery-mobile [v1.0.1, v1.1.0]
  *  - Google Code Prettify [vJun2011]
- *  - Knockout JS [v2.0.0]
- *  - FoBo v0.2 (comprised of foundation v2.1.5,bootstrap v2.0.0,orbit v1.4.0)
- *  - FoBo v0.1 (comprised of foundation v2.1.4,bootstrap v1.4.0,orbit v1.3.0)
+ *  - Knockout JS [v2.0.0, v2.1.0]
+ *  - FoBo v0.2.0 (comprised of foundation v2.1.5,bootstrap v2.0.0,orbit v1.4.0)
+ *  - FoBo v0.1.0 (comprised of foundation v2.1.4,bootstrap v1.4.0,orbit v1.3.0)
  *  
  * ===Okey, okey I get it, now take me to the most interesting stuff===
  * From a user perspective, the most interesting stuff is probably in the snippet classes in [[net.liftmodules.FoBo.snippet.FoBo]].
@@ -116,7 +116,7 @@ import common._
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version v0.4.1
+ * @version v0.4.2
  * @author Peter Petersson (Github karma4u101)
  * 
  */
@@ -178,6 +178,20 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  *  
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.KnockOut200
+ * }}}
+ *  
+ */
+case object Knockout210 extends FoBoToolkit {
+  FoBoResources.knockout200
+}
+/**
+ * Enable usage of KnockOut version 2_1_0 in your bootstrap liftweb Boot.
+ * @version 2.1.0
+ * 
+ *  '''Example:'''
+ *  
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.KnockOut210
  * }}}
  *  
  */
@@ -375,6 +389,12 @@ private object FoBoResources {
       case "fobo" :: "knockout.js" :: Nil => List("fobo", "knockout", "2.0.0", "js", "knockout-2.0.0.js")         
     }
   }
+  lazy val knockout210 = {
+    ResourceServer.rewrite {
+      case "fobo" :: "knockout.js" :: Nil if Props.devMode => List("fobo", "knockout", "2.1.0", "js", "knockout-2.1.0.debug.js")
+      case "fobo" :: "knockout.js" :: Nil => List("fobo", "knockout", "2.1.0", "js", "knockout-2.1.0.js")         
+    }
+  }  
   
   lazy val dataTables190 = {
     ResourceServer.rewrite {
