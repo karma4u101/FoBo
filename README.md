@@ -81,13 +81,15 @@ IDE section below.
 	git clone git://github.com/karma4u101/FoBo.git
 	cd FoBo
 
-### Update, package & install 
+### Cmd-line update, less compile, package & publish-local (with optional override of liftVersion)  
 
 There is also a sbt*.bat for windows users.
 
     ./sbt-publish-local
      or 
-	./sbt clean update less compile package publish-local
+    ./sbt clean update less compile package publish-local
+     or override default lift version (currently 2.4) like this
+    ./sbt "set liftVersion:=\"2.5-SNAPSHOT\"" clean update less compile package publish-local
 
 The module should now be in your local ivy repository and available for your local projects	
 
