@@ -41,6 +41,14 @@ buildInfoKeys := Seq[Scoped](name, version, scalaVersion, sbtVersion)
 buildInfoPackage := "net.liftmodules.FoBo.lib"
 
 
+####
+# Less setup heads up! 
+# Bootstrap v2.0.4 is not yet supported with the less setup below this is due to the fact 
+# that less compile on bootstrap v2.0.4 needs to produce both a bootstrap.css, bootstrap.min.css  
+# as well as a bootstrap-responsive.css, bootstrap-responsive.min.css 
+# If you have a working setup for this you are welcome to contribute it.
+####
+
 seq(lessSettings:_*)
 
 (sourceDirectory in (Compile, LessKeys.less)) <<= (sourceDirectory in Compile)(_ / "less" / "bootstrap" / "2.0.0")
