@@ -41,13 +41,12 @@ buildInfoKeys := Seq[Scoped](name, version, scalaVersion, sbtVersion)
 buildInfoPackage := "net.liftmodules.FoBo.lib"
 
 
-####
-# Less setup heads up! 
-# Bootstrap v2.0.4 is not yet supported with the less setup below this is due to the fact 
-# that less compile on bootstrap v2.0.4 needs to produce both a bootstrap.css, bootstrap.min.css  
-# as well as a bootstrap-responsive.css, bootstrap-responsive.min.css 
-# If you have a working setup for this you are welcome to contribute it.
-####
+//#### Less setup heads up! ############
+//####  
+//# Less compile of Bootstrap v2.0.4 is not working due to some combinations 
+//# of bugs in less v1.3 and bootstrap v2.0.4 less setup.
+//####
+//######################################
 
 seq(lessSettings:_*)
 
@@ -74,7 +73,22 @@ InputKey[Unit]("contents") <<= inputTask { (argsTask: TaskKey[Seq[String]]) =>
   }
 }
 
-//use ./sbt-pulish-local
-//or use individual steps ./sbt clean update less compile package publish-local
+//seq(yuiSettings: _*)
+
+//excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js"
+
+//excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css"
+
+//YuiCompressorKeys.minSuffix := "-min"
+
+//YuiCompressorKeys.options in (Compile,YuiCompressorKeys.jsCompressor) += yuiCompressor.Opts.js.nomunge
+
+//YuiCompressorKeys.options in (Compile,YuiCompressorKeys.jsCompressor) += yuiCompressor.Opts.js.preserveSemi
+
+//YuiCompressorKeys.options in (Compile,YuiCompressorKeys.jsCompressor) += yuiCompressor.Opts.js.disableOptimizations
+
+
+
+
 
 
