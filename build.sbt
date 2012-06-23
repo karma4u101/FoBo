@@ -4,7 +4,7 @@ organization := "net.liftmodules"
 
 liftVersion <<= liftVersion ?? "2.4"
 
-version <<= liftVersion apply { _ + "-0.4.2-SNAPSHOT" }
+version <<= liftVersion apply { _ + "-0.4.3-SNAPSHOT" }
 
 crossScalaVersions := Seq("2.8.1", "2.9.0-1", "2.9.1")
 
@@ -41,51 +41,31 @@ buildInfoKeys := Seq[Scoped](name, version, scalaVersion, sbtVersion)
 buildInfoPackage := "net.liftmodules.FoBo.lib"
 
 
-//#### Less setup heads up! ############
-//####  
-//# Less compile of Bootstrap v2.0.4 is not working due to some combinations 
-//# of bugs in less v1.3 and bootstrap v2.0.4 less setup.
-//####
-//######################################
-
 seq(lessSettings:_*)
 
-(sourceDirectory in (Compile, LessKeys.less)) <<= (sourceDirectory in Compile)(_ / "less" / "bootstrap" / "2.0.0")
+(sourceDirectories in (Compile, LessKeys.less)) <<= (sourceDirectory in Compile) {
+  srcDir =>
+    Seq(
+      srcDir / "less" / "bootstrap" / "2.0.0" / "overrides",
+      srcDir / "less" / "bootstrap" / "2.0.0" / "origin"
+    )
+}
+
+(LessKeys.prettyPrint in (Compile, LessKeys.less)) := true
+
+(includeFilter in (Compile, LessKeys.less)) := ("bootstrap.less" | "responsive.less": FileFilter)
 
 (resourceManaged in (Compile, LessKeys.less)) <<= (crossTarget in Compile)(_ / "classes" / "toserve" / "fobo" / "bootstrap" / "2.0.0" / "css" )
 
-(includeFilter in (Compile, LessKeys.less)) := ("bootstrap.less": FileFilter)
 
-InputKey[Unit]("contents") <<= inputTask { (argsTask: TaskKey[Seq[String]]) =>
-  (argsTask, streams) map { (args, out) =>
-    args match {
-      case Seq(actual, expected) =>
-        if(IO.read(file(actual)).trim.equals(IO.read(file(expected)).trim)) {
-          out.log.debug("Contents match")
-        } else {
-          error("\nContents of %s\n%s\ndoes not match %s\n%s\n".format(
-                actual,
-                IO.read(file(actual)),
-                expected,
-                IO.read(file(expected))))
-        }
-    }
-  }
-}
+//The yui js compression stuff dose currently not work so for now the last filter string in exludeFilter for js will exlude every .js file
+seq(yuiSettings: _*)
 
-//seq(yuiSettings: _*)
+excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" | "*.js"
 
-//excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js"
+excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css"
 
-//excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css"
-
-//YuiCompressorKeys.minSuffix := "-min"
-
-//YuiCompressorKeys.options in (Compile,YuiCompressorKeys.jsCompressor) += yuiCompressor.Opts.js.nomunge
-
-//YuiCompressorKeys.options in (Compile,YuiCompressorKeys.jsCompressor) += yuiCompressor.Opts.js.preserveSemi
-
-//YuiCompressorKeys.options in (Compile,YuiCompressorKeys.jsCompressor) += yuiCompressor.Opts.js.disableOptimizations
+YuiCompressorKeys.minSuffix := "-min"
 
 
 

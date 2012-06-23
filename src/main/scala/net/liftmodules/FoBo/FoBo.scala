@@ -400,35 +400,35 @@ private object FoBoResources {
     ResourceServer.rewrite {
 
       case "fobo" :: "jquery.dataTables.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "jquery.dataTables.css")
-      case "fobo" :: "jquery.dataTables.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "jquery.dataTables.css")          
+      case "fobo" :: "jquery.dataTables.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "jquery.dataTables-min.css")          
       
       case "fobo" :: "jquery.dataTables_themeroller.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "jquery.dataTables_themeroller.css")
-      case "fobo" :: "jquery.dataTables_themeroller.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "jquery.dataTables_themeroller.css")          
+      case "fobo" :: "jquery.dataTables_themeroller.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "jquery.dataTables_themeroller-min.css")          
             
       case "fobo" :: "AutoFill.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "AutoFill.css")
-      case "fobo" :: "AutoFill.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "AutoFill.css")
+      case "fobo" :: "AutoFill.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "AutoFill-min.css")
       
       case "fobo" :: "ColReorder.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "ColReorder.css")
-      case "fobo" :: "ColReorder.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "ColReorder.css")
+      case "fobo" :: "ColReorder.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "ColReorder-min.css")
 
       case "fobo" :: "ColVis.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "ColVis.css")
-      case "fobo" :: "ColVis.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "ColVis.css")
+      case "fobo" :: "ColVis.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "ColVis-min.css")
       
       case "fobo" :: "ColVisAlt.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "ColVisAlt.css")
-      case "fobo" :: "ColVisAlt.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "ColVisAlt.css")    
+      case "fobo" :: "ColVisAlt.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "ColVisAlt-min.css")    
       
       case "fobo" :: "TableTools_JUI.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "TableTools_JUI.css")
-      case "fobo" :: "TableTools_JUI.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "TableTools_JUI.css")    
+      case "fobo" :: "TableTools_JUI.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "TableTools_JUI-min.css")    
 
       case "fobo" :: "TableTools.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "TableTools.css")
-      case "fobo" :: "TableTools.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "TableTools.css")    
+      case "fobo" :: "TableTools.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "TableTools-min.css")    
 
       
       case "fobo" :: "themes" :: "smoothness.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "themes", "smoothness", "jquery-ui-1.8.4.custom.css") 
-      case "fobo" :: "themes" :: "smoothness.css" :: Nil => List("fobo", "datatables", "1.9.0", "themes", "smoothness", "jquery-ui-1.8.4.custom.css") 
+      case "fobo" :: "themes" :: "smoothness.css" :: Nil => List("fobo", "datatables", "1.9.0", "themes", "smoothness", "jquery-ui-1.8.4.custom-min.css") 
 
       case "fobo" :: "themes" :: "ui-lightness.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "themes", "ui-lightness", "jquery-ui-1.8.4.custom.css") 
-      case "fobo" :: "themes" :: "ui-lightness.css" :: Nil => List("fobo", "datatables", "1.9.0", "themes", "ui-lightness", "jquery-ui-1.8.4.custom.css") 
+      case "fobo" :: "themes" :: "ui-lightness.css" :: Nil => List("fobo", "datatables", "1.9.0", "themes", "ui-lightness", "jquery-ui-1.8.4.custom-min.css") 
       
       
       case "fobo" :: "jquery.dataTables.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "jquery.dataTables.js")
@@ -473,7 +473,7 @@ private object FoBoResources {
       /*includes foundation bootstrap and orbit css*/
       /*All in on fobo tweaked css (except ie)*/
       case "fobo" :: "fobo.css" :: Nil if Props.devMode => List("fobo", "fobo", "0.2", "css", "fobo.css")
-      case "fobo" :: "fobo.css" :: Nil => List("fobo", "fobo", "0.2", "css", "fobo.css")
+      case "fobo" :: "fobo.css" :: Nil => List("fobo", "fobo", "0.2", "css", "fobo-min.css")
     }
   }
 
@@ -482,17 +482,17 @@ private object FoBoResources {
       /*includes foundation bootstrap and orbit css*/
       /*All in on fobo tweaked css (except ie)*/
       case "fobo" :: "fobo.css" :: Nil if Props.devMode => List("fobo", "fobo", "0.1", "css", "fobo.css")
-      case "fobo" :: "fobo.css" :: Nil => List("fobo", "fobo", "0.1", "css", "fobo.css")
+      case "fobo" :: "fobo.css" :: Nil => List("fobo", "fobo", "0.1", "css", "fobo-min.css")
     }
   }
 
   lazy val jquerymobile101 = {
     ResourceServer.rewrite {
       case "fobo" :: "jquery.mobile.css" :: Nil if Props.devMode => List("fobo", "jquery-mobile", "1.0.1", "css", "jquery.mobile-1.0.1.css")
-      case "fobo" :: "jquery.mobile.css" :: Nil => List("fobo", "jquery-mobile", "1.0.1", "css", "jquery.mobile-1.0.1.css")
+      case "fobo" :: "jquery.mobile.css" :: Nil => List("fobo", "jquery-mobile", "1.0.1", "css", "jquery.mobile-1.0.1-min.css")
 
       case "fobo" :: "jquery.mobile.structure.css" :: Nil if Props.devMode => List("fobo", "jquery-mobile", "1.0.1", "css", "jquery.mobile.structure-1.0.1.css")
-      case "fobo" :: "jquery.mobile.structure.css" :: Nil => List("fobo", "jquery-mobile", "1.0.1", "css", "jquery.mobile.structure-1.0.1.css")
+      case "fobo" :: "jquery.mobile.structure.css" :: Nil => List("fobo", "jquery-mobile", "1.0.1", "css", "jquery.mobile.structure-1.0.1-min.css")
       
       case "fobo" :: "jquery.mobile.js" :: Nil if Props.devMode => List("fobo", "jquery-mobile", "1.0.1", "js", "jquery.mobile-1.0.1.js")
       case "fobo" :: "jquery.mobile.js" :: Nil => List("fobo", "jquery-mobile", "1.0.1", "js", "jquery.mobile-1.0.1.js") 
@@ -506,13 +506,13 @@ private object FoBoResources {
    lazy val jquerymobile110 = {
     ResourceServer.rewrite {
       case "fobo" :: "jquery.mobile.css" :: Nil if Props.devMode => List("fobo", "jquery-mobile", "1.1.0", "css", "jquery.mobile-1.1.0.css")
-      case "fobo" :: "jquery.mobile.css" :: Nil => List("fobo", "jquery-mobile", "1.1.0", "css", "jquery.mobile-1.1.0.css")
+      case "fobo" :: "jquery.mobile.css" :: Nil => List("fobo", "jquery-mobile", "1.1.0", "css", "jquery.mobile-1.1.0-min.css")
 
       case "fobo" :: "jquery.mobile.structure.css" :: Nil if Props.devMode => List("fobo", "jquery-mobile", "1.1.0", "css", "jquery.mobile.structure-1.1.0.css")
-      case "fobo" :: "jquery.mobile.structure.css" :: Nil => List("fobo", "jquery-mobile", "1.1.0", "css", "jquery.mobile.structure-1.1.0.css")
+      case "fobo" :: "jquery.mobile.structure.css" :: Nil => List("fobo", "jquery-mobile", "1.1.0", "css", "jquery.mobile.structure-1.1.0-min.css")
       
       case "fobo" :: "jquery.mobile.theme.css" :: Nil if Props.devMode => List("fobo", "jquery-mobile", "1.1.0", "css", "jquery.mobile.theme-1.1.0.css")
-      case "fobo" :: "jquery.mobile.theme.css" :: Nil => List("fobo", "jquery-mobile", "1.1.0", "css", "jquery.mobile.theme-1.1.0.css")
+      case "fobo" :: "jquery.mobile.theme.css" :: Nil => List("fobo", "jquery-mobile", "1.1.0", "css", "jquery.mobile.theme-1.1.0-min.css")
       
       case "fobo" :: "jquery.mobile.js" :: Nil if Props.devMode => List("fobo", "jquery-mobile", "1.1.0", "js", "jquery.mobile-1.1.0.js")
       case "fobo" :: "jquery.mobile.js" :: Nil => List("fobo", "jquery-mobile", "1.1.0", "js", "jquery.mobile-1.1.0.js") 
@@ -555,13 +555,13 @@ private object FoBoResources {
     ResourceServer.rewrite {
       /*Google code prettify*/
       case "fobo" :: "prettify.css" :: Nil if Props.devMode => List("fobo", "google-code", "css", "prettify.css")
-      case "fobo" :: "prettify.css" :: Nil => List("fobo", "google-code", "css", "prettify.css")
+      case "fobo" :: "prettify.css" :: Nil => List("fobo", "google-code", "css", "prettify-min.css")
  
       case "fobo" :: "desert.css" :: Nil if Props.devMode => List("fobo", "google-code", "css", "desert.css")
-      case "fobo" :: "desert.css" :: Nil => List("fobo", "google-code", "css", "desert.css")
+      case "fobo" :: "desert.css" :: Nil => List("fobo", "google-code", "css", "desert-min.css")
 
       case "fobo" :: "sunburst.css" :: Nil if Props.devMode => List("fobo", "google-code", "css", "sunburst.css")
-      case "fobo" :: "sunburst.css" :: Nil => List("fobo", "google-code", "css", "sunburst.css")
+      case "fobo" :: "sunburst.css" :: Nil => List("fobo", "google-code", "css", "sunburst-min.css")
       
       /*google code prettify*/
       case "fobo" :: "prettify.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "prettify.js")
@@ -625,9 +625,9 @@ private object FoBoResources {
     ResourceServer.rewrite {
       /*Separate orgin css*/
       case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.0", "css", "bootstrap.css")
-      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.0.0", "css", "bootstrap.css")
+      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.0.0", "css", "bootstrap-min.css")
       case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "css", "bootstrap-responsive.css")
-      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "orgin", "bootstrap","2.0.0", "bootstrap-responsive.css")
+      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "orgin", "bootstrap","2.0.0", "bootstrap-responsive-min.css")
       /*All in one script*/
       case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-all.js")
       case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-all.js")
@@ -665,7 +665,7 @@ private object FoBoResources {
   lazy val bootstrap140: Unit = {
     ResourceServer.rewrite {
       case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "css", "bootstrap.css")
-      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "orgin", "css", "bootstrap.css")
+      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "orgin", "css", "bootstrap-min.css")
       /*All in one script*/
       case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-all.js")
       case "fobo" :: "bootstrap.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-all.js")
@@ -692,12 +692,12 @@ private object FoBoResources {
   lazy val foundation215: Unit = {
     ResourceServer.rewrite {
       case "fobo" :: "foundation.css" :: Nil if Props.devMode => List("fobo", "foundation", "2.1.5", "css", "foundation.css")
-      case "fobo" :: "foundation.css" :: Nil => List("fobo", "foundation", "2.1.5", "css", "foundation.css")
+      case "fobo" :: "foundation.css" :: Nil => List("fobo", "foundation", "2.1.5", "css", "foundation-min.css")
       case "fobo" :: "foundation-ie.css" :: Nil if Props.devMode => List("fobo", "foundation", "2.1.5", "css", "foundation-ie.css")
-      case "fobo" :: "foundation-ie.css" :: Nil => List("fobo", "foundation", "2.1.5", "css", "foundation-ie.css")
+      case "fobo" :: "foundation-ie.css" :: Nil => List("fobo", "foundation", "2.1.5", "css", "foundation-ie-min.css")
 
       case "fobo" :: "orbit.css" :: Nil if Props.devMode => List("fobo", "foundation", "2.1.5", "css", "orbit.css")
-      case "fobo" :: "orbit.css" :: Nil => List("fobo", "foundation", "2.1.5", "css", "orbit.css")
+      case "fobo" :: "orbit.css" :: Nil => List("fobo", "foundation", "2.1.5", "css", "orbit-min.css")
 
       /*All in one script*/
       case "fobo" :: "foundation.js" :: Nil if Props.devMode => List("fobo", "foundation", "2.1.5", "js", "foundation.js")
@@ -715,12 +715,12 @@ private object FoBoResources {
   lazy val foundation214: Unit = {
     ResourceServer.rewrite {
       case "fobo" :: "foundation.css" :: Nil if Props.devMode => List("fobo", "foundation", "2.1.4", "css", "foundation.css")
-      case "fobo" :: "foundation.css" :: Nil => List("fobo", "foundation", "2.1.4", "css", "foundation.css")
+      case "fobo" :: "foundation.css" :: Nil => List("fobo", "foundation", "2.1.4", "css", "foundation-min.css")
       case "fobo" :: "foundation-ie.css" :: Nil if Props.devMode => List("fobo", "foundation", "2.1.4", "css", "foundation-ie.css")
-      case "fobo" :: "foundation-ie.css" :: Nil => List("fobo", "foundation", "2.1.4", "css", "foundation-ie.css")
+      case "fobo" :: "foundation-ie.css" :: Nil => List("fobo", "foundation", "2.1.4", "css", "foundation-ie-min.css")
 
       case "fobo" :: "orbit.css" :: Nil if Props.devMode => List("fobo", "foundation", "2.1.4", "css", "orbit.css")
-      case "fobo" :: "orbit.css" :: Nil => List("fobo", "orgin", "foundation", "2.1.4", "css", "orbit.css")
+      case "fobo" :: "orbit.css" :: Nil => List("fobo", "orgin", "foundation", "2.1.4", "css", "orbit-min.css")
 
       case "fobo" :: "foundation.js" :: Nil if Props.devMode => List("fobo", "foundation", "2.1.4", "js", "foundation.js")
       case "fobo" :: "foundation.js" :: Nil => List("fobo", "foundation", "2.1.4", "js", "foundation.js")
