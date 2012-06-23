@@ -58,7 +58,7 @@ seq(lessSettings:_*)
 (resourceManaged in (Compile, LessKeys.less)) <<= (crossTarget in Compile)(_ / "classes" / "toserve" / "fobo" / "bootstrap" / "2.0.0" / "css" )
 
 
-//The yui js compression stuff dose currently not work so for now the last filter string in exludeFilter for js will exlude every .js file
+//The yui js compression stuff dose currently not work so for now the last filter string in exludeFilter for js will exclude every .js file
 seq(yuiSettings: _*)
 
 excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" | "*.js"
