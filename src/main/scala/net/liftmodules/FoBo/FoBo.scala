@@ -350,6 +350,20 @@ case object Bootstrap200 extends FoBoToolkit {
 }
 
 /**
+ * Enable usage of Twitter Bootstrap version 2_0_4 in your bootstrap liftweb Boot.
+ * @version 2.0.4
+ * 
+ * '''Example'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap204
+ * }}}
+ */
+case object Bootstrap204 extends FoBoToolkit {
+  FoBoResources.bootstrap204
+}
+
+/**
  * Enable usage of Foundation version 2_1_4 in your bootstrap liftweb Boot.
  * @version 2.1.4
  * 
@@ -621,13 +635,25 @@ private object FoBoResources {
     }
   }
 
+    lazy val bootstrap204: Unit = {
+    ResourceServer.rewrite {
+      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.4", "css", "bootstrap.css")
+      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.0.4", "css", "bootstrap-min.css")
+      case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.4", "css", "responsive.css")
+      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "orgin", "bootstrap","2.0.4", "responsive-min.css")
+      
+      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.4", "js", "bootstrap.js")
+      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.0.4", "js", "bootstrap.js")      
+    }
+  }
+    
   lazy val bootstrap200: Unit = {
     ResourceServer.rewrite {
       /*Separate orgin css*/
       case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.0", "css", "bootstrap.css")
       case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.0.0", "css", "bootstrap-min.css")
-      case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "css", "bootstrap-responsive.css")
-      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "orgin", "bootstrap","2.0.0", "bootstrap-responsive-min.css")
+      case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "css", "responsive.css")
+      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "orgin", "bootstrap","2.0.0", "responsive-min.css")
       /*All in one script*/
       case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-all.js")
       case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-all.js")
