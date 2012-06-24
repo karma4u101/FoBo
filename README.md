@@ -19,8 +19,8 @@ If you have ideas and suggestions let me know! contact me or add a issue and/or 
 If you do not need the mix of these toolkits provided by the fobo setup option it is seemingly easy to setup and use any of 
 the included toolkits separately. For a list on what toolkits and versions is supported see below. 
 
-A **live demo** of the use of this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/) and the github repo for 
-the lift basic template (the demo) using this module can be found [here](https://github.com/karma4u101/FoBo-Lift-Template).
+A **live demo** of the use of this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/) 
+and the github repo for the lift basic template (the demo) using this module can be found [here](https://github.com/karma4u101/FoBo-Lift-Template).
 
 As the preferred way to work with these toolkits is to leave the toolkit files untouched and use application specific css/js files for 
 application specific tweaks and overrides moving the toolkits into a module is ideal and apart from the benefits outlined above, by using 
@@ -39,7 +39,7 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
-Current module version: 0.4.2-SNAPSHOT
+Current module version: 0.5.0-SNAPSHOT
 
 This module includes the following toolkits versions
 
@@ -56,7 +56,7 @@ This module includes the following toolkits versions
 Module names that can bee used in boot corresponding to the toolkit version above is
 
 - FoBo010, FoBo020
-- Bootstrap140, Bootstrap200 (current default)
+- Bootstrap140, Bootstrap200, Bootstrap204 (current default)
 - Foundation214, Foundation215
 - DataTables190
 - JQueryMobile101 JQueryMobile101
@@ -164,17 +164,17 @@ FoBo.InitParam.ToolKit=FoBo.BootstrapXXX
 
 Base css file
 
-- bootstrap.css
+- bootstrap.css (all versions)
 
 Extra css files
 
-- bootstrap-responsive.css (only in 2.0.0)
+- bootstrap-responsive.css (all versions except v1.4.0)
 
 All in one Script
 
-- bootstrap.js
+- bootstrap.js (all versions)
 
-Alternative separate script files
+Alternative separate script files (not supported in v2.0.4)
 
 - bootstrap-alerts.js (v1.4.0)
 - bootstrap-alert.js (v2.0.0)

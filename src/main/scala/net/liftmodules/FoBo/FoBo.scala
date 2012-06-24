@@ -166,7 +166,7 @@ abstract trait FoBoToolkit
  */
 object InitParam extends FoBoToolkit with FoBoJQuery {
   var JQuery: FoBoJQuery = JQuery171
-  var ToolKit: FoBoToolkit = Bootstrap200
+  var ToolKit: FoBoToolkit = Bootstrap204
 }
 
 
