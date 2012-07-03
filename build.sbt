@@ -17,13 +17,14 @@ scalacOptions ++= Seq("-deprecation")
 EclipseKeys.withSource := true
 
 resolvers ++= Seq(
-  "Scala Tools Releases" at "http://scala-tools.org/repo-releases/",
-  "Scala Tools Snapshot" at "http://scala-tools.org/repo-snapshots/"
+  "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
+  "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
 )
 
 libraryDependencies <++= liftVersion { v =>
     "net.liftweb" %% "lift-webkit" % v % "compile->default" ::
     "net.liftweb" %% "lift-testkit" % v % "compile->default" ::
+    "net.liftmodules" %% "lift-jquery-module" % (v+"-0.0.4-SNAPSHOT") % "compile->default" ::
     Nil
 }
 
@@ -47,7 +48,7 @@ buildInfoPackage := "net.liftmodules.FoBo.lib"
 //## version at a time.
 //## To change the less path and target of the less build edit the 
 //## tbVerPath val in project/FoBoLessBuild.scala 
-//## Allso if you change the path make sure to rename the corresponding 
+//## Also if you change the path make sure to rename the corresponding 
 //## files in resources/toserve/... for example move bootstrap.css to 
 //## bootstrap-no-less.css this will prevent the built less file from 
 //## being overrided by the original file.
@@ -82,6 +83,49 @@ excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*
 
 YuiCompressorKeys.minSuffix := "-min"
 
+//################################################################
+//#### Publish to Media4u101
+//## 
+//##  
+//## 
+//################################################################
+credentials += Credentials(Path.userHome / ".sbt" / ".credentials" )
+
+publishTo <<= version { v: String =>
+   val nexus = "http://www.media4u101.se:8081/nexus/"
+   if (v.trim.endsWith("SNAPSHOT"))
+	 Some("snapshots" at nexus + "content/repositories/snapshots")
+   else
+     Some("releases" at nexus + "content/repositories/releases")
+   }
+
+publishMavenStyle := true
+
+publishArtifact in Test := false
+
+pomIncludeRepository := { x => false }
+
+pomExtra := (
+  <url>http://www.media4u101.org/fobo-lift-template-demo/</url>
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://maven.apache.org/ref/2.1.0/maven-profile/license.html</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <url>git@github.com:karma4u101/lift-jquery-module.git</url>
+    <connection>scm:git:git@github.com:karma4u101/lift-jquery-module.git</connection>
+  </scm>
+  <developers>
+    <developer>
+      <id>karma4u101</id>
+      <name>Peter Petersson</name>
+      <url>http://www.media4u101.se</url>
+    </developer>
+  </developers>
+)
 
 
 

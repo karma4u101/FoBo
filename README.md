@@ -71,7 +71,7 @@ set the FoBoInitParams in boot.
 Quick Start
 -----------
 The only prerequisites for this Lift module is that you have Git and Java installed and configured on the target 
-computer, a suitable Lift template project will also come in handy.
+computer, a suitable Lift template project will also come in handy if you like you can use [Templating-With-Twitter-Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap) it comes with a FoBo setup. 
 You don't need to use it but this project also includes a Eclipse plug-in for browsing the code, see the Scala 
 IDE section below.   
 
@@ -98,6 +98,10 @@ Integration into your project
 
 ### Dependancy 
 	
+Add the following resolver or clone the project and do a local-publish 
+
+    resolvers += "Media4u101 SNAPSHOT Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/snapshots/"
+
 Put the following in your project build.sbt files lift libraryDependencies section 
 
     "net.liftmodules" %% "fobo" % (liftVersion+"-[module version]")
