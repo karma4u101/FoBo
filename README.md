@@ -43,19 +43,18 @@ Current module version: 0.5.0-SNAPSHOT
 
 This module includes the following toolkits versions
 
-- FoBo v0.2 (comprised of foundation v2.1.5,bootstrap v2.0.0,orbit v1.4.0)
-- FoBo v0.1 (comprised of foundation v2.1.4,bootstrap v1.4.0,orbit v1.3.0)
-- Bootstrap [v1.4.0, v2.0.0] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+- Bootstrap [v1.4.0, v2.0.0, v2.0.4] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 - Foundation [v2.1.4, v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
 - DataTables [v1.9.0] - [DataTables.net](http://datatables.net/)
 - JQuery Mobile [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
 - JQuery  [v1.6.4, v1.7.1] - [JQuery](http://jquery.com/)
 - Google Code Prettify [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
 - Knockout JS [v2.0.0, v2.1.0] - [Knockout](http://knockoutjs.com/)
+- FoBo v0.2 (comprised of foundation v2.1.5,bootstrap v2.0.0,orbit v1.4.0)
+- FoBo v0.1 (comprised of foundation v2.1.4,bootstrap v1.4.0,orbit v1.3.0)
 
 Module names that can bee used in boot corresponding to the toolkit version above is
 
-- FoBo010, FoBo020
 - Bootstrap140, Bootstrap200, Bootstrap204 (current default)
 - Foundation214, Foundation215
 - DataTables190
@@ -63,6 +62,7 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 - JQuery164, JQuery171 (current default)
 - PrettifyJun2011
 - Knockout200, Knockout210
+- FoBo010, FoBo020
 
 If you will be using the defaults FoBo.InitParam dose not need to be specified. For more information on how to set this up see below. 
 Be aware that the defaults most likely will be changed between module updates so if you do not want any module update surprises 
@@ -134,33 +134,6 @@ Available CSS and JavaScript files
 
 The following is a list of **css file** and **script file**-name:s available in each toolkit for used as 
 [script/css file name] -hooks in your Lift templates. 
-
-###FoBo Toolkit
-
-FoBo.InitParam.ToolKit=FoBo.FoBoXXX 
-
-Base css
-
-- fobo.css - (comprised of foundation,slightly modified bootstrap,orbit css)
-
-Alternative separate orgin css files (do not mix orgin bootstrap and foundation on same page)
-
-- bootstrap.css 
-- foundation.css
-- orbit.css
-- foundation-ie.css
-
-All in one Script
-
-- bootstrap.js
-
-Alternative separate script files
-
-- See bootstrap and foundation sections
-
-Orbit script file
-
-- orbit.js
 
 ###Bootstrap Toolkit
 
@@ -291,6 +264,32 @@ Script files
 
 - knockout.js
 
+###FoBo Toolkit
+
+FoBo.InitParam.ToolKit=FoBo.FoBoXXX 
+
+Base css
+
+- fobo.css - (comprised of foundation,slightly modified bootstrap,orbit css)
+
+Alternative separate orgin css files (do not mix orgin bootstrap and foundation on same page)
+
+- bootstrap.css 
+- foundation.css
+- orbit.css
+- foundation-ie.css
+
+All in one Script
+
+- bootstrap.js
+
+Alternative separate script files
+
+- See bootstrap and foundation sections
+
+Orbit script file
+
+- orbit.js
     
 FoBo front-end toolkits documentation
 -------------------------------------
