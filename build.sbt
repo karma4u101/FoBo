@@ -24,7 +24,7 @@ resolvers ++= Seq(
 libraryDependencies <++= liftVersion { v =>
     "net.liftweb" %% "lift-webkit" % v % "compile->default" ::
     "net.liftweb" %% "lift-testkit" % v % "compile->default" ::
-    "net.liftmodules" %% "lift-jquery-module" % (v+"-0.0.4-SNAPSHOT") % "compile->default" ::
+    "net.liftmodules" %% "lift-jquery-module" % (v+"-1.0") % "compile->default" ::
     Nil
 }
 
