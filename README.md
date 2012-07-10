@@ -39,7 +39,8 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
-Current module version: 0.5.0-SNAPSHOT
+Current snapshot module version: 0.5.0-SNAPSHOT
+Current stable module version: 0.5
 
 This module includes the following toolkits versions
 
@@ -59,7 +60,8 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 - Foundation214, Foundation215
 - DataTables190
 - JQueryMobile101 JQueryMobile101
-- JQuery164, JQuery171 (current default)
+- FoBo.JQuery164, FoBo.JQuery171 (current FoBo jquery default)
+- JQueryModule.JQuery172 (alt. jquery-module setup with FoBo included lift-jquery-module)
 - PrettifyJun2011
 - Knockout200, Knockout210
 - FoBo010, FoBo020
@@ -101,6 +103,8 @@ Integration into your project
 Add the following resolver or clone the project and do a local-publish 
 
     resolvers += "Media4u101 SNAPSHOT Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/snapshots/"
+    alt.
+    resolvers += "Media4u101 Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/releases/"    
 
 Put the following in your project build.sbt files lift libraryDependencies section 
 

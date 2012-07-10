@@ -7,6 +7,8 @@ object LiftModuleFoBoBuild extends Build {
   val liftVersion = SettingKey[String]("liftVersion", "Version number of the Lift Web Framework")
   
   val project = Project("FoBo", file("."))
+  
+  
 /*  
   lazy val foboProjects = foboLess //++ core
   
@@ -64,3 +66,4 @@ object LiftModuleFoBoBuild extends Build {
     Project(id, base)//.settings(liftBuildSettings: _*)  
  */   
 }
+

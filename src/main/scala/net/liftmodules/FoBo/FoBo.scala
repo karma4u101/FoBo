@@ -98,7 +98,7 @@ import common._
  *      
  * ===Setup===     
  * 
- *  - The module is known to work with Lift v2.4 and Scala v2.9.1 but expect it to work with other versions as well.  
+ *  - The module is known to work with Lift v2.4/v2.5-SNAPSHOT and Scala v2.9.1 but expect it to work with other versions as well.  
  *  - For a demonstration of this module see the live [[http://www.media4u101.se/fobo-lift-template-demo/ FoBo demo]] the 
  *    FoBo demo source is available [[https://github.com/karma4u101/FoBo-Lift-Template  here]] 
  *
@@ -116,7 +116,7 @@ import common._
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version v0.4.2
+ * @version v0.5
  * @author Peter Petersson (Github karma4u101)
  * 
  */
