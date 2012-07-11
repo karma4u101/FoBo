@@ -4,7 +4,7 @@ organization := "net.liftmodules"
 
 liftVersion <<= liftVersion ?? "2.4"
 
-version <<= liftVersion apply { _ + "-0.5.0-SNAPSHOT" }
+version <<= liftVersion apply { _ + "-0.5.2-SNAPSHOT" }
 
 crossScalaVersions := Seq("2.8.1", "2.9.0-1", "2.9.1")
 
@@ -24,7 +24,6 @@ resolvers ++= Seq(
 libraryDependencies <++= liftVersion { v =>
     "net.liftweb" %% "lift-webkit" % v % "compile->default" ::
     "net.liftweb" %% "lift-testkit" % v % "compile->default" ::
-    "net.liftmodules" %% "lift-jquery-module" % (v+"-1.0") % "compile->default" ::
     Nil
 }
 
@@ -44,30 +43,15 @@ buildInfoPackage := "net.liftmodules.FoBo.lib"
 
 //#########################################################################
 //#### THE LESS BUILD
-//## The fobo build currently only support less build of one bootstrap  
-//## version at a time.
-//## To change the less path and target of the less build edit the 
-//## tbVerPath val in project/FoBoLessBuild.scala 
-//## Also if you change the path make sure to rename the corresponding 
-//## files in resources/toserve/... for example move bootstrap.css to 
-//## bootstrap-no-less.css this will prevent the built less file from 
-//## being overrided by the original file.
+//## 
+//## To simplify, the less build has been moved to the FoBo-Less project. 
+//## Bootstrap css files, slightly modified to work in the FoBo environment,  
+//## is built in the FoBo-Less project and then copied (already present) to 
+//## there corresponding src/resources directories.
+//## 
 //#########################################################################
-seq(lessSettings:_*)
 
-(sourceDirectories in (Compile, LessKeys.less)) <<= (sourceDirectory in Compile) { 
-  srcDir =>
-    Seq(
-      srcDir / "less" / "bootstrap" / tbVerPath  / "overrides",
-      srcDir / "less" / "bootstrap" / tbVerPath  / "origin"
-    )
-}
-
-(LessKeys.prettyPrint in (Compile, LessKeys.less)) := true
-
-(includeFilter in (Compile, LessKeys.less)) := ("bootstrap.less" | "responsive.less": FileFilter)
-
-(resourceManaged in (Compile, LessKeys.less)) <<= (crossTarget in Compile)(_ / "classes" / "toserve" / "fobo" / "bootstrap" / tbVerPath / "css" )
+//Take a look att FoBo-Less and read the above.
 
 //################################################################
 //#### THE YUI COMPRESSION BUILD
@@ -81,7 +65,7 @@ excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-m
 
 excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css"
 
-YuiCompressorKeys.minSuffix := "-min"
+YuiCompressorKeys.minSuffix := "-min" 
 
 //################################################################
 //#### Publish to Media4u101

@@ -39,7 +39,7 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
-Current snapshot module version: 0.5.0-SNAPSHOT
+Current snapshot module version: 0.5.2-SNAPSHOT
 Current stable module version: 0.5
 
 This module includes the following toolkits versions
@@ -61,7 +61,7 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 - DataTables190
 - JQueryMobile101 JQueryMobile101
 - FoBo.JQuery164, FoBo.JQuery171 (current FoBo jquery default)
-- JQueryModule.JQuery172 (alt. jquery-module setup with FoBo included lift-jquery-module)
+- JQueryModule.JQuery172 (recommended alt. jquery-module setup for FoBo is to use this lift-jquery-module)
 - PrettifyJun2011
 - Knockout200, Knockout210
 - FoBo010, FoBo020
