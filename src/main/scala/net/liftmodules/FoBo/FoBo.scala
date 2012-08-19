@@ -148,7 +148,7 @@ abstract trait FoBoToolkit
  * {{{
  *   //init params can be skipped as it sets the current default values
  *   FoBo.InitParam.JQuery=FoBo.JQuery171
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap200
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap210
  *   FoBo.init()
  * }}}
  * This example is explicitly setting the current default jquery and toolkit 
@@ -361,6 +361,20 @@ case object Bootstrap200 extends FoBoToolkit {
  */
 case object Bootstrap204 extends FoBoToolkit {
   FoBoResources.bootstrap204
+}
+
+/**
+ * Enable usage of Twitter Bootstrap version 2_1_0 in your bootstrap liftweb Boot.
+ * @version 2.1.0
+ * 
+ * '''Example'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap210
+ * }}}
+ */
+case object Bootstrap210 extends FoBoToolkit {
+  FoBoResources.bootstrap210
 }
 
 /**
@@ -635,6 +649,57 @@ private object FoBoResources {
     }
   }
 
+    lazy val bootstrap210: Unit = {
+    ResourceServer.rewrite {
+      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.1.0", "css", "bootstrap.css")
+      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.1.0", "css", "bootstrap-min.css")
+      case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "css", "responsive.css")
+      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "bootstrap","2.1.0","css", "responsive-min.css")
+      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-all.js")
+      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-all.js")   
+      /*js splitt*/
+      case "fobo" :: "bootstrap-affix.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-affix.js")
+      case "fobo" :: "bootstrap-affix.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-affix.js")   
+
+      case "fobo" :: "bootstrap-alert.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-alert.js")
+      case "fobo" :: "bootstrap-alert.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-alert.js")   
+
+      case "fobo" :: "bootstrap-button.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-button.js")
+      case "fobo" :: "bootstrap-button.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-button.js")   
+
+      case "fobo" :: "bootstrap-carousel.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-carousel.js")
+      case "fobo" :: "bootstrap-carousel.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-carousel.js")   
+      
+      case "fobo" :: "bootstrap-collapse.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-collapse.js")
+      case "fobo" :: "bootstrap-collapse.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-collapse.js")   
+
+      case "fobo" :: "bootstrap-dropdown.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-dropdown.js")
+      case "fobo" :: "bootstrap-dropdown.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-dropdown.js")   
+
+      case "fobo" :: "bootstrap-modal.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-modal.js")
+      case "fobo" :: "bootstrap-modal.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-modal.js")   
+
+      case "fobo" :: "bootstrap-popover.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-popover.js")
+      case "fobo" :: "bootstrap-popover.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-popover.js")   
+
+      case "fobo" :: "bootstrap-scrollspy.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-scrollspy.js")
+      case "fobo" :: "bootstrap-scrollspy.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-scrollspy.js")   
+
+      case "fobo" :: "bootstrap-tab.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-tab.js")
+      case "fobo" :: "bootstrap-tab.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-tab.js")   
+ 
+      case "fobo" :: "bootstrap-tooltip.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-tooltip.js")
+      case "fobo" :: "bootstrap-tooltip.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-tooltip.js")   
+
+      case "fobo" :: "bootstrap-transition.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-transition.js")
+      case "fobo" :: "bootstrap-transition.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-transition.js")   
+
+      case "fobo" :: "bootstrap-typeahead.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-typeahead.js")
+      case "fobo" :: "bootstrap-typeahead.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-typeahead.js")   
+      
+    }
+  }  
+  
     lazy val bootstrap204: Unit = {
     ResourceServer.rewrite {
       case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.4", "css", "bootstrap.css")

@@ -39,11 +39,11 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
-Current snapshot module version: 0.5.4-SNAPSHOT
+Current snapshot module version: 0.5.5-SNAPSHOT
 
 This module includes the following toolkits versions
 
-- Bootstrap [v1.4.0, v2.0.0, v2.0.4] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+- Bootstrap [v1.4.0, v2.0.0, v2.0.4, v2.1.0] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 - Foundation [v2.1.4, v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
 - DataTables [v1.9.0] - [DataTables.net](http://datatables.net/)
 - JQuery Mobile [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
@@ -55,7 +55,7 @@ This module includes the following toolkits versions
 
 Module names that can bee used in boot corresponding to the toolkit version above is
 
-- Bootstrap140, Bootstrap200, Bootstrap204 (current default)
+- Bootstrap140, Bootstrap200, Bootstrap204 (current default) Bootstrap210 (pre. view)
 - Foundation214, Foundation215
 - DataTables190
 - JQueryMobile101 JQueryMobile101
