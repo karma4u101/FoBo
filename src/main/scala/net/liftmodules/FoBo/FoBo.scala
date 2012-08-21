@@ -37,7 +37,7 @@ import common._
  * The following is a list of available toolkits and plugins 
  *  
  *  - JQuery  [v1.6.4, v1.7.1]
- *  - Bootstrap [v1.4.0, v2.0.0]
+ *  - Bootstrap [v1.4.0, v2.0.0, v2.0.4, v2.1.0]
  *  - Foundation [v2.1.4, v2.1.5]
  *  - DataTables [v1.9.0]
  *  - JQuery-mobile [v1.0.1, v1.1.0]
@@ -116,7 +116,7 @@ import common._
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version v0.5
+ * @version v0.6.0
  * @author Peter Petersson (Github karma4u101)
  * 
  */
@@ -143,30 +143,19 @@ abstract trait FoBoToolkit
 /**
  * Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot
  * 
- * '''Example:''
- * 
- * {{{
- *   //init params can be skipped as it sets the current default values
- *   FoBo.InitParam.JQuery=FoBo.JQuery171
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap210
- *   FoBo.init()
- * }}}
- * This example is explicitly setting the current default jquery and toolkit 
- * setup options and could alternatively just have called FoBo.init()
- * 
  * '''Example:'''
  *  
  * {{{
  *   FoBo.InitParam.JQuery=FoBo.JQuery171
- *   FoBo.InitParam.Toolkit=FoBo.FoBo020
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap210
  *   FoBo.InitParam.Toolkit=FoBo.PrettifyJun2011
  * }}}
- * This example uses the FoBo v0.2.0 option and adds the Google code Prettify vJun2011 
+ * This example uses the Bootstrap v2.1.0 option and adds the Google code Prettify vJun2011 
  * to the enabled toolkits.  
  */
 object InitParam extends FoBoToolkit with FoBoJQuery {
   var JQuery: FoBoJQuery = JQuery171
-  var ToolKit: FoBoToolkit = Bootstrap204
+  var ToolKit: FoBoToolkit = Bootstrap210
 }
 
 

@@ -39,7 +39,7 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
-Current snapshot module version: 0.5.5-SNAPSHOT
+Current snapshot module version: 0.6.0-SNAPSHOT
 
 This module includes the following toolkits versions
 
@@ -55,7 +55,7 @@ This module includes the following toolkits versions
 
 Module names that can bee used in boot corresponding to the toolkit version above is
 
-- Bootstrap140, Bootstrap200, Bootstrap204 (current default) Bootstrap210 (pre. view)
+- Bootstrap140, Bootstrap200, Bootstrap204 (current default) Bootstrap210 
 - Foundation214, Foundation215
 - DataTables190
 - JQueryMobile101 JQueryMobile101

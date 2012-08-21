@@ -1,5 +1,5 @@
 /*!
- * Bootstrap Responsive v2.0.4
+ * Bootstrap Responsive v2.1.0
  *
  * Copyright 2012 Twitter, Inc
  * Licensed under the Apache License v2.0
@@ -97,6 +97,7 @@
     margin-left: 30px;
   }
   .container,
+  .navbar-static-top .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
     width: 1170px;
@@ -417,6 +418,7 @@
     margin-left: 20px;
   }
   .container,
+  .navbar-static-top .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
     width: 724px;
@@ -743,6 +745,7 @@
   }
   .thumbnails > li {
     float: none;
+    margin-left: 0;
   }
   [class*="span"],
   .row-fluid [class*="span"] {
