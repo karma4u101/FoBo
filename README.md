@@ -96,6 +96,7 @@ The module should now be in your local ivy repository and available for your loc
 
 If you like to **customize your bootstrap css files** you can tweak the overrides/variables.less file (and/or and more tweaked files to the override dir) in the FoBo-Less project compile it and copy the resulting files over to FoBo.
 
+
 Integration into your project 
 -------------------------------
 
