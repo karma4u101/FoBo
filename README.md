@@ -82,7 +82,7 @@ IDE section below.
 	git clone git://github.com/karma4u101/FoBo.git
 	cd FoBo
 
-### Cmd-line update, less compile, package & publish-local (with optional override of liftVersion)  
+### Cmd-line update, package & publish-local (with optional override of liftVersion)  
 
 There is also a sbt*.bat for windows users.
 
@@ -93,6 +93,8 @@ There is also a sbt*.bat for windows users.
     ./sbt "set liftVersion:=\"2.5-SNAPSHOT\"" clean update less compile package publish-local
 
 The module should now be in your local ivy repository and available for your local projects	
+
+If you like to **customize your bootstrap css files** you can tweak less files in the FoBo-Less project and copy them over to FoBo.
 
 Integration into your project 
 -------------------------------
