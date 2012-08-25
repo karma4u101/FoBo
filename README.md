@@ -2,33 +2,21 @@ FoBo - Generic Front-End Toolkit Module for Lift
 ================================================
 
 With this external/optional Lift module you can chose among some of the industry leading web-centric open source front-end 
-toolkits and the modules own fobo mix. The module will also simultaneously support several versions of the included toolkits, 
-making maintenance, upgrade and fall-back quick and easy and ultimately jazz up your Lift applications with the toolkit of 
+toolkits. The module is simultaneously supporting several versions of the included toolkits, making maintenance, upgrade and 
+fall-back quick and easy (typically a one liner change in lift boot) and will ultimately jazz up your Lift applications with the toolkit(s) of 
 your choice.    
 
-One of the convenience options this Lift module comes with is the fobo option, that is a love, peace and harmony mix of the 
-[Twitter Bootstrap](http://twitter.github.com/bootstrap/) and the [ZURB/Foundation](http://foundation.zurb.com/) toolkits, 
-This concert mix will give you the brilliance of bootstraps and its components and the awesomeness of foundation with its 
-rock & roll solid reactive, mobile scalability.
-
-Another benefit of using this module is the avalabilty of its included helper object:s and snippt:s (see API documents for usage) 
-that will take care of some common toolkit initiation, component initiation and more. At this writing the helpers are few but as
-the module mature it will provide plenty of useful help functions see the demo for a teaser and potential. 
+Another benefit of using this module is the small but growing API that includes helper object:s and snippet:s (see API documents for usage) 
+that will take care of some common toolkit and component initiation, script generation and more. 
+At this writing the helpers are few but as the module mature it will provide plenty of useful help functions see the demo for a teaser and potential. 
 If you have ideas and suggestions let me know! contact me or add a issue and/or contribute a patch.      
 
-If you do not need the mix of these toolkits provided by the fobo setup option it is seemingly easy to setup and use any of 
-the included toolkits separately. For a list on what toolkits and versions is supported see below. 
+A third benefit of using this module is that you will get a clean separation of the toolkit files and your application specific resources as 
+the module dose not cluttering your applications webapp resources directory. 
 
 A **live demo** of the use of this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/) 
-and the github repo for the lift basic template (the demo) using this module can be found [here](https://github.com/karma4u101/FoBo-Lift-Template).
-
-As the preferred way to work with these toolkits is to leave the toolkit files untouched and use application specific css/js files for 
-application specific tweaks and overrides moving the toolkits into a module is ideal and apart from the benefits outlined above, by using 
-this module you will get a clean separation of the static toolkit files and your application specific resources as the module dose not 
-cluttering your applications webapp resources directory. 
-
-After many years of Java EE development I started look at Scala/Lift in May 2011 so there may be some none "best practice" stuff in there 
-and if you find something you think could be done in a more Scala/Lift fashion please let me know.
+and the Github repository for the demo can be found [here](https://github.com/karma4u101/FoBo-Lift-Template).
+A Lift basic template with FoBo setup for bootstrap usage can be found here [Templating With Twitter Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap)  
 
 Improvements, contributions and suggestions are welcome! Leave a issue report or drop a question/suggestion to my priv. e-mail or on 
 [Lift's mailing list](http://groups.google.com/group/liftweb/) 
@@ -55,19 +43,17 @@ This module includes the following toolkits versions
 
 Module names that can bee used in boot corresponding to the toolkit version above is
 
-- Bootstrap140, Bootstrap200, Bootstrap204 (current default) Bootstrap210 
+- Bootstrap140, Bootstrap200, Bootstrap204, Bootstrap210 
 - Foundation214, Foundation215
 - DataTables190
 - JQueryMobile101 JQueryMobile101
-- FoBo.JQuery164, FoBo.JQuery171 (current FoBo jquery default)
-- JQueryModule.JQuery172 (recommended alt. jquery-module setup for FoBo is to use this lift-jquery-module)
+- FoBo.JQuery164, FoBo.JQuery171 
+- JQueryModule.JQuery172 (A alt. jquery-module setup for FoBo is to use the [lift-jquery-module](https://github.com/karma4u101/lift-jquery-module))
 - PrettifyJun2011
 - Knockout200, Knockout210
 - FoBo010, FoBo020
 
-If you will be using the defaults FoBo.InitParam dose not need to be specified. For more information on how to set this up see below. 
-Be aware that the defaults most likely will be changed between module updates so if you do not want any module update surprises 
-set the FoBoInitParams in boot.        
+For more information on how to set this up see below. 
     
 Quick Start
 -----------
@@ -94,7 +80,8 @@ There is also a sbt*.bat for windows users.
 
 The module should now be in your local ivy repository and available for your local projects	
 
-If you like to **customize your bootstrap css files** you can tweak the overrides/variables.less file (and/or and more tweaked files to the override dir) in the FoBo-Less project compile it and copy the resulting files over to FoBo.
+If you like to **customize your FoBo bootstrap css files** you can tweak the overrides/variables.less file in the FoBo-Less project. 
+Just less compile it and copy the resulting files over to FoBo.
 
 
 Integration into your project 
@@ -102,7 +89,7 @@ Integration into your project
 
 ### Dependancy 
 	
-Add the following resolver or clone the project and do a local-publish 
+Add the following resolver or clone the project and do a local-publish (tweaks, suggestions and contributions are welcome) 
 
     resolvers += "Media4u101 SNAPSHOT Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/snapshots/"
     alt.
@@ -114,7 +101,7 @@ Put the following in your project build.sbt files lift libraryDependencies secti
 	
 now do a sbt clean update .....
 	
-### Lift Bootstrap hook 
+### Lift FoBo boot hooks 
 
 Put the following into your lift Boot
 
@@ -127,7 +114,7 @@ Put the following into your lift Boot
        :
     FoBo.init()  
 
-### Lift Template hooks
+### Lift FoBo Template hooks
 
 Put something like the following in your Lift templat(s) head section (see below for available names)	
  	
@@ -159,22 +146,21 @@ All in one Script
 
 Alternative separate script files (not supported in v2.0.4)
 
-- bootstrap-alerts.js (v1.4.0)
-- bootstrap-alert.js (v2.0.0)
-- bootstrap-buttons.js (v1.4.0)
-- bootstrap-button.js (v2.0.0)
-- bootstrap-carousel.js (v2.0.0)
-- bootstrap-collapse.js (v2.0.0)
-- bootstrap-dropdown.js
-- bootstrap-modal.js
-- bootstrap-popover.js
-- bootstrap-scrollspy.js
-- bootstrap-tabs.js (v1.4.0)
-- bootstrap-tab.js (v2.0.0)
-- bootstrap-twipsy.js (v1.4.0)
-- bootstrap-tooltip.js (v2.0.0)
-- bootstrap-transition.js (v2.0.0)
-- bootstrap-typeahead.js (v2.0.0)
+- bootstrap-affix.js (v2.1.0+)
+- bootstrap-alerts.js (v1.4.0+)
+- bootstrap-buttons.js (v1.4.0+)
+- bootstrap-carousel.js (v2.0.0+)
+- bootstrap-collapse.js (v2.0.0+)
+- bootstrap-dropdown.js (v1.4.0+)
+- bootstrap-modal.js (v1.4.0+)
+- bootstrap-popover.js (v1.4.0+)
+- bootstrap-scrollspy.js (v1.4.0+)
+- bootstrap-tabs.js (v1.4.0+)
+- bootstrap-tab.js (v2.0.0+)
+- bootstrap-twipsy.js (v1.4.0+)
+- bootstrap-tooltip.js (v2.0.0+)
+- bootstrap-transition.js (v2.0.0+)
+- bootstrap-typeahead.js (v2.0.0+)
 
 ###Foundation Toolkit
 
@@ -270,57 +256,29 @@ Script files
 
 - knockout.js
 
-###FoBo Toolkit
-
-FoBo.InitParam.ToolKit=FoBo.FoBoXXX 
-
-Base css
-
-- fobo.css - (comprised of foundation,slightly modified bootstrap,orbit css)
-
-Alternative separate orgin css files (do not mix orgin bootstrap and foundation on same page)
-
-- bootstrap.css 
-- foundation.css
-- orbit.css
-- foundation-ie.css
-
-All in one Script
-
-- bootstrap.js
-
-Alternative separate script files
-
-- See bootstrap and foundation sections
-
-Orbit script file
-
-- orbit.js
     
 FoBo front-end toolkits documentation
 -------------------------------------
 
 The [ZURB/Foundation](http://foundation.zurb.com/) and the [Twitter Bootstrap](http://twitter.github.com/bootstrap/) 
 and the [JQuery Mobile](http://jquerymobile.com/) links contains plenty of documentation so that will be your no.1 resources. 
-There is also a fobo lift template/demo (more of a demo) [project](https://github.com/karma4u101/FoBo-Lift-Template) 
-containing bootstrap and foundation and jquery mobile documentation. There are also separate foundation and bootstrap 
-template demo projects in my github home. 
-
-Here is a couple of tips for you to make the most of the FoBoXXX toolkit option (Foundation/Bootstrap) mix.
-
-    1) The only place for using bootstraps container class (bo-container) would be in the topbar structure.
-    2) Make use of foundations reactive fluid mobile scalable grid system in favor for bootstrap grids. 
+There is also a fobo lift demo [project](https://github.com/karma4u101/FoBo-Lift-Template) 
+containing bootstrap and foundation and jquery mobile documentation. 
 
 FoBo Bootstrap and Less
 -----------------------
 
-The FoBo-Less module allows you to tweak your generated bootstrap.css (only available for bootstrap >= v2.0.0 via variables.less 
-see bootstrap documentation for available tweaks.
+The [FoBo-Less project](https://github.com/karma4u101/FoBo-Less) allows you to tweak your generated bootstrap.css this is available 
+for bootstrap >= v2.0.0 via variables.less, see bootstrap documentation for available tweaks. Put the file to tweek in the 
+bootstrap/version/orverrides library, tweaks is normally done in the overrides/variables.less file already available in the overrides lib.
 
 Authors
 -------
 This FoBo Lift module were written by [Peter Petersson](http://www.media4u101.se). The Lift Module conventions were 
 developed by the [Lift community](http://groups.google.com/group/liftweb/).
+
+After many years of Java EE development I started look at Scala/Lift in May 2011 so there may be some none "best practice" stuff in there 
+and if you find something you think could be done in a more Scala/Lift fashion please let me know.
 
 Scala IDE for Eclipse
 ---------------------
