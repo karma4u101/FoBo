@@ -23,12 +23,11 @@ import common._
  *  - the modules included lib Classes and Snippet helpers will ease you from writing some commonly used toolkit 
  *    component integration scripts making it a simple snippet invocation. 
  *    At this writing the snippet helpers is few but expect the numbers to grow as the module matures. 
- *  - Great mobile scalablity with some mobile enabled toolkits and the modules own unique FoBo mix that is a 
- *    love, peace and harmony mix of the ZURB/Foundation and the Twitter Bootstrap front-end toolkit.   
+ *  - Great mobile scalablity with some mobile enabled toolkits.  
  *  - As more front-end toolkits and JQuery plugins will be available to you just a FoBo.Initparam away you will, 
  *    when needed, be able to quick and easy test out and use nifty features like the Google code Prettify kit, 
  *    DataTables and more.   
- *  - FoBo uses Less to build the (all in one) bootstrap.css out of the box (no hands on needed) so if you like you 
+ *  - FoBo uses Less to build (using the FoBo-Less project) the bootstrap css files so if you like you 
  *    can (if you fork the module source) easily tweak your bootstrap css (via variables.less) see bootstrap 
  *    documentation form more information.       
  *
@@ -36,7 +35,7 @@ import common._
  * 
  * The following is a list of available toolkits and plugins 
  *  
- *  - JQuery  [v1.6.4, v1.7.1]
+ *  - JQuery  [v1.6.4, v1.7.1] 
  *  - Bootstrap [v1.4.0, v2.0.0, v2.0.4, v2.1.0]
  *  - Foundation [v2.1.4, v2.1.5]
  *  - DataTables [v1.9.0]
@@ -85,9 +84,9 @@ import common._
  * 
  * ===Small heads up usage warning===
  * 
- * This API is very young (with only snapshot releases) so if you make direct usage of some FoBoHelpers in lib chances 
- * is that things change. 
- * If you want to stay on the safe side usage of FoBo snippets and init operations should be fairly safe. 
+ * This API is very young (with only snapshot releases) so if you make direct usage of some FoBoHelpers in lib 
+ * chances is that things change. 
+ * If you want to stay a bit more on the safe side usage of FoBo snippets and init operations should be fairly safe. 
  * After a stable release (we are not there yet) changes to a API method will be announced as deprecated 
  * at least one release cycle before method signature changes or removal.  
  *  
