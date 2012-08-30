@@ -2,9 +2,9 @@ name := "FoBo"
 
 organization := "net.liftmodules"
 
-liftVersion <<= liftVersion ?? "2.5-SNAPSHOT"
+liftVersion <<= liftVersion ?? "2.4"
 
-version <<= liftVersion apply { _ + "-0.7.0-SNAPSHOT" }
+version <<= liftVersion apply { _ + "-0.7.1-SNAPSHOT" }
 
 crossScalaVersions := Seq("2.9.2", "2.9.1-1", "2.9.1", "2.9.0-1", "2.9.0")
 

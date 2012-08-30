@@ -115,7 +115,7 @@ import common._
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version v0.6.0
+ * @version v0.7.1
  * @author Peter Petersson (Github karma4u101)
  * 
  */
