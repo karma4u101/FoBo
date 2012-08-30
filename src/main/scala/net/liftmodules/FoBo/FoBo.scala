@@ -35,7 +35,7 @@ import common._
  * 
  * The following is a list of available toolkits and plugins 
  *  
- *  - JQuery  [v1.6.4, v1.7.1] 
+ *  - JQuery  [v1.6.4, v1.7.1, v1.7.2] 
  *  - Bootstrap [v1.4.0, v2.0.0, v2.0.4, v2.1.0]
  *  - Foundation [v2.1.4, v2.1.5]
  *  - DataTables [v1.9.0]
@@ -145,7 +145,7 @@ abstract trait FoBoToolkit
  * '''Example:'''
  *  
  * {{{
- *   FoBo.InitParam.JQuery=FoBo.JQuery171
+ *   FoBo.InitParam.JQuery=FoBo.JQuery172
  *   FoBo.InitParam.Toolkit=FoBo.Bootstrap210
  *   FoBo.InitParam.Toolkit=FoBo.PrettifyJun2011
  * }}}
@@ -153,7 +153,7 @@ abstract trait FoBoToolkit
  * to the enabled toolkits.  
  */
 object InitParam extends FoBoToolkit with FoBoJQuery {
-  var JQuery: FoBoJQuery = JQuery171
+  var JQuery: FoBoJQuery = JQuery172
   var ToolKit: FoBoToolkit = Bootstrap210
 }
 
@@ -213,6 +213,20 @@ case object DataTables190 extends FoBoToolkit {
  */
 case object PrettifyJun2011 extends FoBoToolkit {
    FoBoResources.googleCodePrettify
+}
+
+/**
+ * Enable usage of JQuery version 1_7_2 in your bootstrap liftweb Boot.
+ * @version 1.7.2
+ * 
+ * '''Example:'''
+ * 
+ * {{{
+ *   FoBo.InitParam.JQuery=FoBo.JQuery172
+ * }}}
+ */
+case object JQuery172 extends FoBoJQuery {
+  FoBoResources.jquery172
 }
 
 /**
@@ -540,6 +554,13 @@ private object FoBoResources {
     }
   }
    
+  lazy val jquery172 = {
+    ResourceServer.rewrite {
+      case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("fobo", "jquery", "1.7.2", "js", "jquery.js")
+      case "fobo" :: "jquery.js" :: Nil => List("fobo", "jquery", "1.7.2", "js", "jquery.js")
+    }
+  }
+  
   lazy val jquery171 = {
     ResourceServer.rewrite {
       case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("fobo", "jquery", "1.7.1", "js", "jquery.js")

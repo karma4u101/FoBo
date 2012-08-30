@@ -27,7 +27,7 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
-Current snapshot module version: 0.6.0-SNAPSHOT
+Current snapshot module version: 0.7.0-SNAPSHOT
 
 This module includes the following toolkits versions
 
@@ -35,7 +35,7 @@ This module includes the following toolkits versions
 - Foundation [v2.1.4, v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
 - DataTables [v1.9.0] - [DataTables.net](http://datatables.net/)
 - JQuery Mobile [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
-- JQuery  [v1.6.4, v1.7.1] - [JQuery](http://jquery.com/)
+- JQuery  [v1.6.4, v1.7.1, v1.7.2] - [JQuery](http://jquery.com/)
 - Google Code Prettify [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
 - Knockout JS [v2.0.0, v2.1.0] - [Knockout](http://knockoutjs.com/)
 - FoBo v0.2 (comprised of foundation v2.1.5,bootstrap v2.0.0,orbit v1.4.0)
@@ -47,7 +47,7 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 - Foundation214, Foundation215
 - DataTables190
 - JQueryMobile101 JQueryMobile101
-- FoBo.JQuery164, FoBo.JQuery171 
+- FoBo.JQuery164, FoBo.JQuery171, FoBo.JQuery172 
 - JQueryModule.JQuery172 (A alt. jquery-module setup for FoBo is to use the [lift-jquery-module](https://github.com/karma4u101/lift-jquery-module))
 - PrettifyJun2011
 - Knockout200, Knockout210
