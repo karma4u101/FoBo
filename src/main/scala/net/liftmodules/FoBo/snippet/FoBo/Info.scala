@@ -45,7 +45,7 @@ object Info extends StatefulSnippet with Loggable {
   def buildInfo = {
     "#name *+" #> BuildInfo.name &
     "#version *+" #> BuildInfo.version &
-    "#shortVersion *+" #> (StringHelpers.splitAt(BuildInfo.version,"-SNAPSHOT")).head._1 &
+    "#shortVersion *+" #> (BuildInfo.version.replace("-SNAPSHOT","").split("-")).last &
     "#scalaVersion *+" #> BuildInfo.scalaVersion &
     "#sbtVersion *+" #> BuildInfo.sbtVersion    
   }

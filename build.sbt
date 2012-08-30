@@ -2,7 +2,7 @@ name := "FoBo"
 
 organization := "net.liftmodules"
 
-liftVersion <<= liftVersion ?? "2.4"
+liftVersion <<= liftVersion ?? "2.5-SNAPSHOT"
 
 version <<= liftVersion apply { _ + "-0.7.0-SNAPSHOT" }
 
@@ -99,8 +99,8 @@ pomExtra := (
     </license>
   </licenses>
   <scm>
-    <url>git@github.com:karma4u101/lift-jquery-module.git</url>
-    <connection>scm:git:git@github.com:karma4u101/lift-jquery-module.git</connection>
+    <url>git@github.com:karma4u101/FoBo.git</url>
+    <connection>scm:git:git@github.com:karma4u101/FoBo.git</connection>
   </scm>
   <developers>
     <developer>
