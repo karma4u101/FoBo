@@ -170,7 +170,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  *  
  */
 case object Knockout210 extends FoBoToolkit {
-  FoBoResources.knockout200
+  FoBoResources.knockout210
 }
 /**
  * Enable usage of KnockOut version 2_1_0 in your bootstrap liftweb Boot.
