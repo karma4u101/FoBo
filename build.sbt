@@ -4,7 +4,7 @@ organization := "net.liftmodules"
 
 liftVersion <<= liftVersion ?? "2.4"
 
-version <<= liftVersion apply { _ + "-0.7.1-SNAPSHOT" }
+version <<= liftVersion apply { _ + "-0.7.2-SNAPSHOT" }
 
 crossScalaVersions := Seq("2.9.2", "2.9.1-1", "2.9.1", "2.9.0-1", "2.9.0")
 
