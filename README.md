@@ -29,6 +29,8 @@ Toolkit:s and available versions
 
 Current snapshot module version: 0.7.2-SNAPSHOT
 
+Artifacts available for: Lift 2.4 and 2.5-M1
+
 This module includes the following toolkits versions
 
 - Bootstrap [v1.4.0, v2.0.0, v2.0.4, v2.1.0] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
