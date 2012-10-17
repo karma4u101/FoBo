@@ -8,7 +8,7 @@ version <<= liftVersion apply { _ + "-0.7.2-SNAPSHOT" }
 
 crossScalaVersions := Seq("2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion  := "2.9.1"
+scalaVersion  := "2.9.2"
 
 logLevel := Level.Info  //Level.Info.Debug
 
@@ -22,7 +22,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies <++= liftVersion { v =>
-    "net.liftweb" %% "lift-webkit" % v % "compile->default" ::
+    "net.liftweb" %% "lift-webkit"  % v % "compile->default" ::
     "net.liftweb" %% "lift-testkit" % v % "compile->default" ::
     Nil
 }

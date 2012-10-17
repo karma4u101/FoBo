@@ -99,7 +99,7 @@ Add the following resolver or clone the project and do a local-publish (tweaks, 
 
 Put the following in your project build.sbt files lift libraryDependencies section 
 
-    "net.liftmodules" %% "fobo" % (liftVersion+"-[module version]")
+    "net.liftmodules" %% "fobo" % (liftVersion+"-[module version]") 
 	
 now do a sbt clean update .....
 	

@@ -34,10 +34,10 @@ class Bootstrap extends StatefulSnippet with Loggable {
    * '''Snippet Params:'''
    * 
    *  - '''Param''' ''id'' - The element id 
-   *  - '''Param''' ''option'' - The option string see bootstrap documentation for available options.
+   *  - '''Param''' ''options'' - The option string see bootstrap documentation for available options.
    * 
    * '''Example''' 
-   * {{{ <script data-lift="FoBo.Bootstrap.popover?id=#theId&option=placement:'left'"></script> }}}
+   * {{{ <script data-lift="FoBo.Bootstrap.popover?id=#theId&options=placement:'left'"></script> }}}
    * 
    * '''Result:''' This example will result in the following being injected in place of the snippet invocation:
    * {{{
@@ -60,14 +60,14 @@ class Bootstrap extends StatefulSnippet with Loggable {
    * '''Snippet Params:'''
    * 
    *  - '''Param''' ''id'' - The element id 
-   *  - '''Param''' ''option'' - The option string see bootstrap documentation for available options.
+   *  - '''Param''' ''options'' - The option string see bootstrap documentation for available options.
    * 
    * '''Example''' Showing a example element using the tooltip and the actual snippet invocation  
    * {{{
    *  <a id="aId" 
    *     title="The most powerful, most secure web framework available today. It simply rocks!" 
    *     href="http://liftweb.net/">Lift</a> 
-   *  <script data-lift="FoBo.Bootstrap.tooltip?id=#aId&option=placement:'bottom'"></script> 
+   *  <script data-lift="FoBo.Bootstrap.tooltip?id=#aId&options=placement:'bottom'"></script> 
    * }}}
    * 
    * '''Result:''' The script tag with the snippet invocation will result in the following being injected in place of the snippet invocation:
