@@ -29,7 +29,7 @@ Toolkit:s and available versions
 
 Current snapshot module version: 0.7.2-SNAPSHOT
 
-Artifacts available for: Lift 2.4 and 2.5-M1
+Artifacts available for: Lift 2.4 and 2.5-M1, 2.5-M2
 
 This module includes the following toolkits versions
 

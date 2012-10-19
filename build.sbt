@@ -2,7 +2,7 @@ name := "FoBo"
 
 organization := "net.liftmodules"
 
-liftVersion <<= liftVersion ?? "2.5-M1"
+liftVersion <<= liftVersion ?? "2.5-M2"
 
 version <<= liftVersion apply { _ + "-0.7.2-SNAPSHOT" }
 
