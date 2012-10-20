@@ -74,7 +74,8 @@ YuiCompressorKeys.minSuffix := "-min"
 //## 
 //################################################################
 credentials += Credentials(Path.userHome / ".sbt" / "liftmodules" /".credentials" )
-//credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
+
+credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
 
 //credentials += Credentials(Path.userHome / ".sbt" / ".credentials" )
 //publishTo <<= version { v: String =>
