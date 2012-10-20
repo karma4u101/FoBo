@@ -73,14 +73,24 @@ YuiCompressorKeys.minSuffix := "-min"
 //##  
 //## 
 //################################################################
-credentials += Credentials(Path.userHome / ".sbt" / ".credentials" )
+credentials += Credentials(Path.userHome / ".sbt" / "liftmodules" /".credentials" )
+//credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
+
+//credentials += Credentials(Path.userHome / ".sbt" / ".credentials" )
+//publishTo <<= version { v: String =>
+//   val nexus = "http://www.media4u101.se:8081/nexus/"
+//   if (v.trim.endsWith("SNAPSHOT"))
+//	 Some("snapshots" at nexus + "content/repositories/snapshots")
+//   else
+//     Some("releases" at nexus + "content/repositories/releases")
+//   }
 
 publishTo <<= version { v: String =>
-   val nexus = "http://www.media4u101.se:8081/nexus/"
+   val sonatype = "https://oss.sonatype.org/"
    if (v.trim.endsWith("SNAPSHOT"))
-	 Some("snapshots" at nexus + "content/repositories/snapshots")
+	 Some("snapshots" at sonatype + "content/repositories/snapshots")
    else
-     Some("releases" at nexus + "content/repositories/releases")
+     Some("releases" at sonatype + "service/local/staging/deploy/maven2")
    }
 
 publishMavenStyle := true
@@ -90,7 +100,7 @@ publishArtifact in Test := false
 pomIncludeRepository := { x => false }
 
 pomExtra := (
-  <url>http://www.media4u101.org/fobo-lift-template-demo/</url>
+  <url>http://www.media4u101.se/fobo-lift-template-demo/</url>
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>

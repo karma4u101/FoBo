@@ -29,7 +29,7 @@ Toolkit:s and available versions
 
 Current snapshot module version: 0.7.2-SNAPSHOT
 
-Artifacts available for: Lift 2.4 and 2.5-M1, 2.5-M2
+Artifacts available for: Lift 2.4, 2.5-M1 and 2.5-M2
 
 This module includes the following toolkits versions
 
@@ -91,8 +91,9 @@ Integration into your project
 
 ### Dependancy 
 	
-Add the following resolver or clone the project and do a local-publish (tweaks, suggestions and contributions are welcome) 
+Add the following resolver OR clone the project and do a local-publish (tweaks, suggestions and contributions are welcome) 
 
+    **Note:** For lift version 2.5-M2 and forward the resolvers is the same as for Lift it self so there is no need to add extra sesolvers.
     resolvers += "Media4u101 SNAPSHOT Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/snapshots/"
     alt.
     resolvers += "Media4u101 Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/releases/"    
