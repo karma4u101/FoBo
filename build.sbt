@@ -2,7 +2,7 @@ name := "FoBo"
 
 organization := "net.liftmodules"
 
-liftVersion <<= liftVersion ?? "2.5-M2"
+liftVersion <<= liftVersion ?? "2.5-SNAPSHOT"
 
 version <<= liftVersion apply { _ + "-0.7.2-SNAPSHOT" }
 
@@ -27,6 +27,11 @@ libraryDependencies <++= liftVersion { v =>
     Nil
 }
 
+// Customize any further dependencies as desired
+libraryDependencies ++= Seq(
+   "org.specs2"        %% "specs2"             % "1.12.1"           % "test"
+)
+
 //############################################################
 //#### THE BUILDINFO BUILD
 //## https://github.com/sbt/sbt-buildinfo
@@ -37,7 +42,7 @@ seq(buildInfoSettings: _*)
 
 sourceGenerators in Compile <+= buildInfo
 
-buildInfoKeys := Seq[Scoped](name, version, scalaVersion, sbtVersion)
+buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
 
 buildInfoPackage := "net.liftmodules.FoBo.lib"
 
