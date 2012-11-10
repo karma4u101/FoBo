@@ -27,7 +27,17 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
-Current module version: 0.7.2-SNAPSHOT
+**Module version:** 
+- **2012-11-10** 0.7.2-SNAPSHOT
+
+**Latest updates**
+- **2012-11-10** 0.7.2-SNAPSHOT Lift 2.5-M3 released to oss.sonatype.org
+
+**Latest Stable Releases:** 
+- 
+
+**Latest snapshot Release:**
+- **2012-11-03** 0.7.2-SNAPSHOT release for Lift 2.5-M3 (Scala 2.9.1, 2.9.1-1, 2.9.1)
 
 Artifacts available for: Lift 2.4, 2.5-M1 to M3 
 
