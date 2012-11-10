@@ -2,7 +2,7 @@ name := "FoBo"
 
 organization := "net.liftmodules"
 
-liftVersion <<= liftVersion ?? "2.5-SNAPSHOT"
+liftVersion <<= liftVersion ?? "2.5-M3"
 
 version <<= liftVersion apply { _ + "-0.7.2-SNAPSHOT" }
 
@@ -22,8 +22,8 @@ resolvers ++= Seq(
 )
 
 libraryDependencies <++= liftVersion { v =>
-    "net.liftweb" %% "lift-webkit"  % v % "compile->default" ::
-    "net.liftweb" %% "lift-testkit" % v % "compile->default" ::
+    "net.liftweb" %% "lift-webkit"  % v % "compile" ::
+    "net.liftweb" %% "lift-testkit" % v % "compile" ::
     Nil
 }
 
