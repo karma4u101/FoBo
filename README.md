@@ -27,6 +27,7 @@ Peter Petersson
 Toolkit:s and available versions
 --------------------------------
 
+<<<<<<< HEAD
 **Module version:** 
 - **2012-11-10** 0.7.2-SNAPSHOT
 
