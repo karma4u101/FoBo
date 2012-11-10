@@ -33,8 +33,8 @@ Toolkit:s and available versions
 **Latest updates**
 - **2012-11-10** 0.7.2-SNAPSHOT Lift 2.5-M3 released to oss.sonatype.org
 
-**Latest Stable Releases:** 
-- 
+**Latest Stable Releases:**
+- None
 
 **Latest snapshot Release:**
 - **2012-11-03** 0.7.2-SNAPSHOT release for Lift 2.5-M3 (Scala 2.9.1, 2.9.1-1, 2.9.1)
