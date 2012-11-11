@@ -31,12 +31,14 @@ Toolkit:s and available versions
 - **2012-11-10** -- 0.7.2-SNAPSHOT
 
 **Latest Updates:**
+- **2012-11-11** -- 0.7.2-SNAPSHOT Lift 2.5-SNAPSHOT artifacts (for the inpatient) published to oss.sonatype.org
 - **2012-11-10** -- 0.7.2-SNAPSHOT Lift 2.5-M3 released to oss.sonatype.org
 
 **Latest Stable Releases:**
 - None
 
 **Latest Snapshot Release:**
+- **2012-11-03** -- 0.7.2-SNAPSHOT artifacts for Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-11-03** -- 0.7.2-SNAPSHOT release for Lift 2.5-M3 (Scala 2.9.1, 2.9.1-1, 2.9.1)
 
 Artifacts available for: Lift 2.4, 2.5-M1 to M3 
