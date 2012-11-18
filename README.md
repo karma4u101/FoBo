@@ -32,7 +32,7 @@ Toolkit:s and available versions
 - **2012-11-10** -- 0.7.2-SNAPSHOT
 
 **Latest Updates:**
-- **2012-11-18** -- 0.7.3-SNAPSHOT Added Bootstrap v2.2.0
+- **2012-11-18** -- 0.7.3-SNAPSHOT Added Bootstrap v2.2.0 and released artifacts
 - **2012-11-11** -- 0.7.2-SNAPSHOT Lift 2.5-SNAPSHOT artifacts (for the inpatient) published to oss.sonatype.org
 - **2012-11-10** -- 0.7.2-SNAPSHOT Lift 2.5-M3 released to oss.sonatype.org
 
@@ -40,6 +40,7 @@ Toolkit:s and available versions
 - None
 
 **Latest Snapshot Release:**
+- **2012-11-18** -- 0.7.3-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-11-03** -- 0.7.2-SNAPSHOT artifacts for Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-11-03** -- 0.7.2-SNAPSHOT release for Lift 2.5-M3 (Scala 2.9.1, 2.9.1-1, 2.9.1)
 
@@ -59,14 +60,6 @@ This module includes the following toolkits versions
 - FoBo v0.2 (comprised of foundation v2.1.5,bootstrap v2.0.0,orbit v1.4.0)
 - FoBo v0.1 (comprised of foundation v2.1.4,bootstrap v1.4.0,orbit v1.3.0)
 
-**Deprecated:**
-**2012-11-18** -- As of v0.7.3-SNAPSHOT the following artifacts has been deprecated and will bee removed before v.1.0.0 release 
-- Bootstrap v1.4.0 to v2.0.4  -- Use v2.1.0 or newer 
-- Foundation v2.1.4           -- Use v2.1.5 or newer
-- JQuery v1.6.4               -- Use v1.7.2 or the Lift-JQuery-Module
-- JQuery-Mobile v1.0.1        -- Use v1.1.0 
-- FoBo v0.1 to v2.0           -- There is no longer any need for this mix as Bootstrap now have excellent mobile scalability (reactive web and fluid grid)
-
 Module names that can bee used in boot corresponding to the toolkit version above is
 
 - Bootstrap140, Bootstrap200, Bootstrap204, Bootstrap210 
@@ -79,7 +72,19 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 - Knockout200, Knockout210
 - FoBo010, FoBo020
 
-For more information on how to set this up see below. 
+For more information on how to set this up see below.
+
+Deprecated
+----------
+
+**2012-11-18**
+As of v0.7.3-SNAPSHOT the following artifacts has been deprecated and will bee removed before v.1.0.0 release 
+
+- Bootstrap v1.4.0 to v2.0.4  -- Use v2.1.0 or newer 
+- Foundation v2.1.4           -- Use v2.1.5 or newer
+- JQuery v1.6.4               -- Use v1.7.2 or the Lift-JQuery-Module
+- JQuery-Mobile v1.0.1        -- Use v1.1.0 
+- FoBo v0.1 to v2.0           -- There is no longer any need for this mix as Bootstrap now have excellent mobile scalability (reactive web and fluid grid) 
     
 Quick Start
 -----------
