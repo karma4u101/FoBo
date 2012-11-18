@@ -146,15 +146,15 @@ abstract trait FoBoToolkit
  *  
  * {{{
  *   FoBo.InitParam.JQuery=FoBo.JQuery172
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap210
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap220
  *   FoBo.InitParam.Toolkit=FoBo.PrettifyJun2011
  * }}}
- * This example uses the Bootstrap v2.1.0 option and adds the Google code Prettify vJun2011 
+ * This example uses the Bootstrap v2.2.0 option and adds the Google code Prettify vJun2011 
  * to the enabled toolkits.  
  */
 object InitParam extends FoBoToolkit with FoBoJQuery {
   var JQuery: FoBoJQuery = JQuery172
-  var ToolKit: FoBoToolkit = Bootstrap210
+  var ToolKit: FoBoToolkit = Bootstrap220
 }
 
 
@@ -239,11 +239,13 @@ case object JQuery172 extends FoBoJQuery {
  *   FoBo.InitParam.JQuery=FoBo.JQuery171
  * }}}
  */
+@deprecated("Use JQuery172 or the Lift-JQuery-Module","FoBo v0.7.3") 
 case object JQuery171 extends FoBoJQuery {
   FoBoResources.jquery171
 }
 
 /**
+ * 
  * Enable usage of JQuery version 1_6_4 in your bootstrap liftweb Boot.
  * 
  * @version 1.6.4 
@@ -253,7 +255,8 @@ case object JQuery171 extends FoBoJQuery {
  * {{{
  *   FoBo.InitParam.JQuery=FoBo.JQuery164
  * }}}
- */
+ */ 
+@deprecated("Use JQuery172 or the Lift-JQuery-Module","FoBo v0.7.3") 
 case object JQuery164 extends FoBoJQuery {
   FoBoResources.jquery164
 }
@@ -269,6 +272,7 @@ case object JQuery164 extends FoBoJQuery {
  *   FoBo.InitParam.Toolkit=FoBo.JQueryMobile101
  * }}}
  */
+@deprecated("Use JQueryMobile110","FoBo v0.7.3") 
 case object JQueryMobile101 extends FoBoToolkit {
   FoBoResources.jquerymobile101
 }
@@ -299,6 +303,7 @@ case object JQueryMobile110 extends FoBoToolkit {
  *   FoBo.InitParam.Toolkit=FoBo.FoBo020
  * }}}
  */
+@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3") 
 case object FoBo020 extends FoBoToolkit {
   FoBoResources.fobo020
   FoBoResources.bootstrap200
@@ -316,6 +321,7 @@ case object FoBo020 extends FoBoToolkit {
  *   FoBo.InitParam.Toolkit=FoBo.FoBo010
  * }}}
  */
+@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3") 
 case object FoBo010 extends FoBoToolkit {
   FoBoResources.fobo010
   FoBoResources.bootstrap140
@@ -333,6 +339,7 @@ case object FoBo010 extends FoBoToolkit {
  *   FoBo.InitParam.Toolkit=FoBo.Bootstrap140
  * }}}
  */
+@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3") 
 case object Bootstrap140 extends FoBoToolkit {
   FoBoResources.bootstrap140
 }
@@ -347,6 +354,7 @@ case object Bootstrap140 extends FoBoToolkit {
  *   FoBo.InitParam.Toolkit=FoBo.Bootstrap200
  * }}}
  */
+@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3") 
 case object Bootstrap200 extends FoBoToolkit {
   FoBoResources.bootstrap200
 }
@@ -361,6 +369,7 @@ case object Bootstrap200 extends FoBoToolkit {
  *   FoBo.InitParam.Toolkit=FoBo.Bootstrap204
  * }}}
  */
+@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3")
 case object Bootstrap204 extends FoBoToolkit {
   FoBoResources.bootstrap204
 }
@@ -380,6 +389,20 @@ case object Bootstrap210 extends FoBoToolkit {
 }
 
 /**
+ * Enable usage of Twitter Bootstrap version 2_2_0 in your bootstrap liftweb Boot.
+ * @version 2.2.0
+ * 
+ * '''Example'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap220
+ * }}}
+ */
+case object Bootstrap220 extends FoBoToolkit {
+  FoBoResources.bootstrap220
+}
+
+/**
  * Enable usage of Foundation version 2_1_4 in your bootstrap liftweb Boot.
  * @version 2.1.4
  * 
@@ -389,6 +412,7 @@ case object Bootstrap210 extends FoBoToolkit {
  *   FoBo.InitParam.Toolkit=FoBo.Foundation214
  * }}}
  */
+@deprecated("Use Foundation215","FoBo v0.7.3") 
 case object Foundation214 extends FoBoToolkit {
   FoBoResources.foundation214
 }
@@ -549,8 +573,7 @@ private object FoBoResources {
       
       case "fobo" :: "jquery.mobile.themeswitcher.js" :: Nil if Props.devMode => List("fobo", "jquery-mobile", "1.1.0", "js", "jquery.mobile.themeswitcher.js")
       case "fobo" :: "jquery.mobile.themeswitcher.js" :: Nil => List("fobo", "jquery-mobile", "1.1.0", "js", "jquery.mobile.themeswitcher.js") 
-      
-
+    
     }
   }
    
@@ -574,19 +597,6 @@ private object FoBoResources {
       case "fobo" :: "jquery.js" :: Nil => List("fobo", "jquery", "1.6.4", "js", "jquery.js")
     }
   }
-
-// only used during test period has never been a documented feature so better to remove it.
-//  lazy val foboTweekedStagingBootstrap200: Unit = {
-//    ResourceServer.rewrite {
-//      /*Separate staging, separate fobo tweaked css*/
-//      case "fobo" :: "staging" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "staging", "css", "bootstrap-2.0.0.css")
-//      case "fobo" :: "staging" :: "bootstrap.css" :: Nil => List("fobo", "staging", "css", "bootstrap-2.0.0.css")
-//      case "fobo" :: "staging" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo", "staging", "css", "bootstrap-responsive-2.0.0.css")
-//      case "fobo" :: "staging" :: "bootstrap-responsive.css" :: Nil => List("fobo", "staging", "css", "bootstrap-responsive-2.0.0.css")
-//      case "fobo" :: "staging" :: "foundation.css" :: Nil if Props.devMode => List("fobo", "staging", "css", "foundation-2.1.5.css")
-//      case "fobo" :: "staging" :: "foundation.css" :: Nil => List("fobo", "staging", "css", "foundation-2.1.5.css")
-//    }
-//  }
 
   lazy val googleCodePrettify: Unit = {
     ResourceServer.rewrite {
@@ -657,6 +667,57 @@ private object FoBoResources {
            
     }
   }
+  
+    lazy val bootstrap220: Unit = {
+    ResourceServer.rewrite {
+      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.2.0", "css", "bootstrap.css")
+      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.2.0", "css", "bootstrap-min.css")
+      case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "css", "responsive.css")
+      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "bootstrap","2.2.0","css", "responsive-min.css")
+      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-all.js")
+      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-all.js")   
+      /*js splitt*/
+      case "fobo" :: "bootstrap-affix.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-affix.js")
+      case "fobo" :: "bootstrap-affix.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-affix.js")   
+
+      case "fobo" :: "bootstrap-alert.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-alert.js")
+      case "fobo" :: "bootstrap-alert.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-alert.js")   
+
+      case "fobo" :: "bootstrap-button.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-button.js")
+      case "fobo" :: "bootstrap-button.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-button.js")   
+
+      case "fobo" :: "bootstrap-carousel.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-carousel.js")
+      case "fobo" :: "bootstrap-carousel.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-carousel.js")   
+      
+      case "fobo" :: "bootstrap-collapse.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-collapse.js")
+      case "fobo" :: "bootstrap-collapse.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-collapse.js")   
+
+      case "fobo" :: "bootstrap-dropdown.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-dropdown.js")
+      case "fobo" :: "bootstrap-dropdown.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-dropdown.js")   
+
+      case "fobo" :: "bootstrap-modal.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-modal.js")
+      case "fobo" :: "bootstrap-modal.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-modal.js")   
+
+      case "fobo" :: "bootstrap-popover.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-popover.js")
+      case "fobo" :: "bootstrap-popover.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-popover.js")   
+
+      case "fobo" :: "bootstrap-scrollspy.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-scrollspy.js")
+      case "fobo" :: "bootstrap-scrollspy.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-scrollspy.js")   
+
+      case "fobo" :: "bootstrap-tab.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-tab.js")
+      case "fobo" :: "bootstrap-tab.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-tab.js")   
+ 
+      case "fobo" :: "bootstrap-tooltip.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-tooltip.js")
+      case "fobo" :: "bootstrap-tooltip.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-tooltip.js")   
+
+      case "fobo" :: "bootstrap-transition.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-transition.js")
+      case "fobo" :: "bootstrap-transition.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-transition.js")   
+
+      case "fobo" :: "bootstrap-typeahead.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-typeahead.js")
+      case "fobo" :: "bootstrap-typeahead.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-typeahead.js")   
+      
+    }
+  }    
 
     lazy val bootstrap210: Unit = {
     ResourceServer.rewrite {
