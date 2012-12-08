@@ -18,8 +18,9 @@ A **live demo** of the use of this module including API documentation can be [se
 and the Github repository for the demo can be found [here](https://github.com/karma4u101/FoBo-Lift-Template).
 A Lift basic template with FoBo setup for bootstrap usage can be found here [Templating With Twitter Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap)  
 
-Improvements, contributions and suggestions are welcome! Leave a issue report or drop a question/suggestion to my priv. e-mail or on 
-[Lift's mailing list](http://groups.google.com/group/liftweb/) 
+Contributions
+------
+Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion to my priv. e-mail or on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
 
 best regards 
 Peter Petersson     
