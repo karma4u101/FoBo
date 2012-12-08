@@ -16,4 +16,5 @@ addSbtPlugin("com.eed3si9n" % "sbt-buildinfo" % "0.2.0")
 
 addSbtPlugin("in.drajit.sbt" % "sbt-yui-compressor" % "0.2.1")
 
+//addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.1.0")
 
