@@ -12,7 +12,7 @@ At this point you're waiting on us. We like to at least comment on, if not accep
 
 Some things that will increase the chance that your pull request is accepted
 
-* Update the API documentation and whatever is affected by your contribution.
+* Update the documentation, including the API documentation and whatever is affected by your contribution.
 * Comment your pull request with clear explanation of what your contribution will accomplish.
 
 Syntax:
