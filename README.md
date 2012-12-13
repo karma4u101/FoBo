@@ -29,10 +29,12 @@ Toolkit:s and available versions
 --------------------------------
 
 **Latest Module Version:** 
+- **2012-12-13** -- 0.7.4-SNAPSHOT
 - **2012-11-18** -- 0.7.3-SNAPSHOT
 - **2012-11-10** -- 0.7.2-SNAPSHOT
 
 **Latest Updates:**
+- **2012-12-13** -- 0.7.4-SNAPSHOT Extended the FoBo API with a new Bootstrap menu builder that transforms a Lift SiteMap (LocGroup) to a bootstrap navbar. More TB* menu builders is in the pipeline.
 - **2012-11-18** -- 0.7.3-SNAPSHOT Added Bootstrap v2.2.0 and released artifacts
 - **2012-11-11** -- 0.7.2-SNAPSHOT Lift 2.5-SNAPSHOT artifacts (for the inpatient) published to oss.sonatype.org
 - **2012-11-10** -- 0.7.2-SNAPSHOT Lift 2.5-M3 released to oss.sonatype.org

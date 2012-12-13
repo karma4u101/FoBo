@@ -36,7 +36,7 @@ import common._
  * The following is a list of available toolkits and plugins 
  *  
  *  - JQuery  [v1.6.4, v1.7.1, v1.7.2] 
- *  - Bootstrap [v1.4.0, v2.0.0, v2.0.4, v2.1.0]
+ *  - Bootstrap [v1.4.0, v2.0.0, v2.0.4, v2.1.0, v2.2.0]
  *  - Foundation [v2.1.4, v2.1.5]
  *  - DataTables [v1.9.0]
  *  - JQuery-mobile [v1.0.1, v1.1.0]
@@ -97,7 +97,7 @@ import common._
  *      
  * ===Setup===     
  * 
- *  - The module is known to work with Lift v2.4/v2.5-SNAPSHOT and Scala v2.9.1 but expect it to work with other versions as well.  
+ *  - The module is known to work with Lift v2.4/v2.5-SNAPSHOT and Scala v2.9.2 but expect it to work with other versions as well.  
  *  - For a demonstration of this module see the live [[http://www.media4u101.se/fobo-lift-template-demo/ FoBo demo]] the 
  *    FoBo demo source is available [[https://github.com/karma4u101/FoBo-Lift-Template  here]] 
  *
@@ -115,8 +115,8 @@ import common._
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version v0.7.1
- * @author Peter Petersson (Github karma4u101)
+ * @version v0.7.4
+ * @authors Peter Petersson (Github karma4u101), The Lift community  
  * 
  */
 package object FoBo {
@@ -139,6 +139,57 @@ package object FoBo {
 
 abstract trait FoBoJQuery
 abstract trait FoBoToolkit
+
+/**
+ * Extends your Lift SiteMap with various common bootstrap menu manipulations such 
+ * as horizontal and vertical menu dividers and menu labels (labels coming soon).
+ *  
+ * This object should be used in conjunction with the TB* menu builder objects in [[net.liftmodules.FoBo.snippet.FoBo]] snippet's.
+ * 
+ * '''Example:'''
+ * {{{ 
+ *   : 
+ *  //add a horizontal menu divider 
+ *  divider1 >> LocGroup(...) >> FoBo.TBLocInfo.Divider,
+ *   :
+ *  //add a vertical menu divider 
+ *  divider2 >> LocGroup(...) >> FoBo.TBLocInfo.DividerVertical,
+ *   : 
+ * }}} 
+ */
+object TBLocInfo {
+  private val hd: Box[String] = Full("divider")
+  private val vd: Box[String] = Full("divider-vertical")  
+  /**
+   * Provides a way to specify a horizontal divider for your bootstrap menu in Lift's SiteMap.
+   * 
+   * '''Example:'''
+   * {{{
+   * val index            = Menu.i("Home") / "index"
+   *      : 
+   * val about            = Menu.i("About") / "about"
+   * val divider2         = Menu("divider2") / "divider2" //dummy entry only showing a menu divider 
+   * 
+   * def sitemap = SiteMap(
+   *   index >> LocGroup("top",...),
+   *    :
+   *   ddLabel >> LocGroup("top",...)  >> PlaceHolder submenus(
+   *       about ,
+   *       divider2 >> FoBo.TBLocInfo.Divider,
+   *       contact,
+   *       feedback  
+   *       )
+   * )      
+   * }}} 
+   */
+  val Divider = new net.liftweb.sitemap.Loc.LocInfo[String]{def apply() = hd.map(x => () => x) }
+  /**
+   * Add a vertical divider in your bootstrap menu.
+   * For a usage example see the Divider val above. 
+   */
+  val DividerVertical = new net.liftweb.sitemap.Loc.LocInfo[String]{def apply() = vd.map(x => () => x) }  
+}
+
 /**
  * Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot
  * 

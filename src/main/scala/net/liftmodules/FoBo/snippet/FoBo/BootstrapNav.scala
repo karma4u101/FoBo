@@ -17,7 +17,7 @@ import net.liftweb.util.IterableFunc
  *     <span data-lift="Menu.builder?top:class=nav pull-right;li_item:class=active;linkToSelf=true;expandAll=true;group=frontNav"></span>
  *	  </span>}}}
  */
- //deprecated("For Lift >= v2.5 use the newer TB***Menu snippets","FoBo v0.7.3")
+@deprecated("For Lift >= v2.5 use the newer TB***Menu snippets","FoBo v0.7.3")
 object BootstrapNav extends Logger {
 
   /* Transforms the XML produced by Menu.build such that any menus defined as:
