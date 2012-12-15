@@ -29,11 +29,13 @@ Toolkit:s and available versions
 --------------------------------
 
 **Latest Module Version:** 
+- **2012-12-15** -- 0.7.5-SNAPSHOT
 - **2012-12-13** -- 0.7.4-SNAPSHOT
 - **2012-11-18** -- 0.7.3-SNAPSHOT
 - **2012-11-10** -- 0.7.2-SNAPSHOT
 
 **Latest Updates:**
+- **2012-12-15** -- 0.7.5-SNAPSHOT Added Bootstrap v2.2.2
 - **2012-12-13** -- 0.7.4-SNAPSHOT Extended the FoBo API with a new Bootstrap menu builder that transforms a Lift SiteMap (LocGroup) to a bootstrap navbar. More TB* menu builders is in the pipeline.
 - **2012-11-18** -- 0.7.3-SNAPSHOT Added Bootstrap v2.2.0 and released artifacts
 - **2012-11-11** -- 0.7.2-SNAPSHOT Lift 2.5-SNAPSHOT artifacts (for the inpatient) published to oss.sonatype.org
@@ -53,7 +55,7 @@ Artifacts is available for: Lift 2.4, 2.5-M1 to M3 and 2.5-SNAPSHOT
 
 This module includes the following toolkits versions
 
-- Bootstrap [v1.4.0, v2.0.0, v2.0.4, v2.1.0, v2.2.0] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+- Bootstrap [v1.4.0, v2.0.0, v2.0.4, v2.1.0, v2.2.0, v2.2.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 - Foundation [v2.1.4, v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
 - DataTables [v1.9.0] - [DataTables.net](http://datatables.net/)
 - JQuery Mobile [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
