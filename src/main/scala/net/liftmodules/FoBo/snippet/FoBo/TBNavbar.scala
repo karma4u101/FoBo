@@ -18,9 +18,9 @@ import xml._
  * See also the TBLocInfo object in [[net.liftmodules.FoBo]] for various, simple to use, SiteMap manipulation functions.  
  * 
  * '''Snippet Usage:'''
- * {{{<span data-lift="FoBo.TBNavbar.builder?group=[locGroup name]"></span>}}}
+ * {{{<span data-lift="FoBo.TBNavbar.builder?group=[LocGroup name]"></span>}}}
  * and/or
- * {{{<span data-lift="FoBo.TBNavbar.builderPullRight?group=[locGroup name]"></span>}}} 
+ * {{{<span data-lift="FoBo.TBNavbar.builderPullRight?group=[LocGroup name]"></span>}}} 
  * 
  * '''Snippet Params:'''
  * 
