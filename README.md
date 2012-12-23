@@ -45,6 +45,7 @@ Toolkit:s and available versions
 - None
 
 **Latest Snapshot Release:**
+- **2012-12-23** -- 0.7.5-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-11-18** -- 0.7.3-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-11-03** -- 0.7.2-SNAPSHOT artifacts for Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-11-03** -- 0.7.2-SNAPSHOT release for Lift 2.5-M3 (Scala 2.9.1, 2.9.1-1, 2.9.1)
