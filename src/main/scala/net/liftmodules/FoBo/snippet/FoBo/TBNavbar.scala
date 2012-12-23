@@ -185,7 +185,6 @@ object TBNavbar extends FlexMenuBuilder with DispatchSnippet {
       }
       case Nil => {
         //there was no info
-        var c = item.current
         buildInnerTag(<xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>, item.path, item.current)
       }
     }
