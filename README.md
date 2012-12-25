@@ -1,7 +1,7 @@
 FoBo - Generic Front-End Toolkit Module for Lift
 ================================================
 
-With this external/optional Lift module you can chose among some of the industry leading web-centric open source front-end 
+With this Lift module you can chose among some of the industry leading web-centric open source front-end 
 toolkits. The module is simultaneously supporting several versions of the included toolkits, making maintenance, upgrade and 
 fall-back quick and easy (typically a one liner change in lift boot) and will ultimately jazz up your Lift applications with the toolkit(s) of 
 your choice.    
@@ -88,7 +88,7 @@ As of v0.7.3-SNAPSHOT the following artifacts has been deprecated and will bee r
 
 - Bootstrap v1.4.0 to v2.0.4  -- Use v2.1.0 or newer 
 - Foundation v2.1.4           -- Use v2.1.5 or newer
-- JQuery v1.6.4               -- Use v1.7.2 or the Lift-JQuery-Module
+- JQuery v1.6.4               -- Use v1.7.2 or the [Lift-JQuery-Module](https://github.com/karma4u101/Lift-JQuery-Module)
 - JQuery-Mobile v1.0.1        -- Use v1.1.0 
 - FoBo v0.1 to v2.0           -- There is no longer any need for this mix as Bootstrap now have excellent mobile scalability (reactive web and fluid grid) 
     
@@ -128,7 +128,7 @@ Integration into your project
 	
 Add the following resolver OR clone the project and do a local-publish (tweaks, suggestions and contributions are welcome) 
 
-    **Note:** For lift version 2.5-M2 and forward the resolvers is the same as for Lift it self so there is no need to add extra sesolvers.
+    **Note:** For lift version 2.5-M2 and forward the resolvers is the same as for Lift it self so there is no need to add extra resolvers.
     resolvers += "Media4u101 SNAPSHOT Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/snapshots/"
     alt.
     resolvers += "Media4u101 Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/releases/"    
@@ -336,6 +336,6 @@ Sbteclipse provides SBT command to create Eclipse project files
 
 User powered Lift module 
 ========================
-**(*)** This is a _optional_ Lift user community powered Lift module which means it is a work based on the 
-sound foundation of Lift done by developers who uses Lift for development, sharing it with others.
+**(*)** This is a Lift user community powered Lift module which means it is a work based on the 
+sound foundation of Lift done by Lift user community developers too share it with others
 
