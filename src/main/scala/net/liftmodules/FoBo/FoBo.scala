@@ -115,7 +115,7 @@ import common._
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version v0.7.5
+ * @version v0.7.6
  * @author Peter Petersson (Github karma4u101), The Lift community  
  * 
  */
@@ -160,6 +160,7 @@ abstract trait FoBoToolkit
 object TBLocInfo {
   private val hd: Box[String] = Full("divider")
   private val vd: Box[String] = Full("divider-vertical")  
+  private val nh: Box[String] = Full("nav-header") 
   /**
    * Provides a way to specify a horizontal divider for your bootstrap menu in Lift's SiteMap.
    * 
@@ -169,9 +170,11 @@ object TBLocInfo {
    *      : 
    * val about            = Menu.i("About") / "about"
    * val divider2         = Menu("divider2") / "divider2" //dummy entry only showing a menu divider 
+   * val navHeader1       = Menu.i("navHeader1") / "navHeader1" //Adds a header (label) to your FoBo.NavList
    * 
    * def sitemap = SiteMap(
-   *   index >> LocGroup("top",...),
+   *   navHeader1 >> LocGroup("nl1") >> FoBo.TBLocInfo.NavHeader,
+   *   index >> LocGroup("top","nl1",...),
    *    :
    *   ddLabel >> LocGroup("top",...)  >> PlaceHolder submenus(
    *       about ,
@@ -188,6 +191,11 @@ object TBLocInfo {
    * For a usage example see the Divider val above. 
    */
   val DividerVertical = new net.liftweb.sitemap.Loc.LocInfo[String]{def apply() = vd.map(x => () => x) }  
+  /**
+   * Add nav header(s) to your bootstrap nav list.
+   * For a usage example see the NavHeader val above. 
+   */
+  val NavHeader = new net.liftweb.sitemap.Loc.LocInfo[String]{def apply() = nh.map(x => () => x) } 
 }
 
 /**
