@@ -29,6 +29,7 @@ Toolkit:s and available versions
 --------------------------------
 
 **Latest Module Version:** 
+- **2012-12-29** -- 0.7.7-SNAPSHOT
 - **2012-12-26** -- 0.7.6-SNAPSHOT
 - **2012-12-15** -- 0.7.5-SNAPSHOT
 - **2012-12-13** -- 0.7.4-SNAPSHOT
@@ -36,6 +37,7 @@ Toolkit:s and available versions
 - **2012-11-10** -- 0.7.2-SNAPSHOT
 
 **Latest Updates:**
+- **2012-12-29** -- 0.7.7-SNAPSHOT Added support for JQuery v1.8.2
 - **2012-12-26** -- 0.7.6-SNAPSHOT Extended the FoBo API with a new Bootstrap menu builder that transforms Lift SiteMap's LocGroup(s) to bootstrap navlist's.
 - **2012-12-15** -- 0.7.5-SNAPSHOT Added Bootstrap v2.2.2
 - **2012-12-13** -- 0.7.4-SNAPSHOT Extended the FoBo API with a new Bootstrap menu builder that transforms Lift SiteMap's LocGroup(s) to bootstrap navbar's. 
@@ -47,6 +49,7 @@ Toolkit:s and available versions
 - None
 
 **Latest Snapshot Release:**
+- **2012-12-29** -- 0.7.7-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-12-26** -- 0.7.6-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-12-23** -- 0.7.5-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-11-18** -- 0.7.3-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
@@ -63,7 +66,7 @@ This module includes the following toolkits versions
 - Foundation [v2.1.4, v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
 - DataTables [v1.9.0] - [DataTables.net](http://datatables.net/)
 - JQuery Mobile [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
-- JQuery  [v1.6.4, v1.7.1, v1.7.2] - [JQuery](http://jquery.com/)
+- JQuery  [v1.6.4, v1.7.1, v1.7.2, v1.8,2] - [JQuery](http://jquery.com/)
 - Google Code Prettify [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
 - Knockout JS [v2.0.0, v2.1.0] - [Knockout](http://knockoutjs.com/)
 - FoBo v0.2 (comprised of foundation v2.1.5,bootstrap v2.0.0,orbit v1.4.0)
@@ -75,8 +78,8 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 - Foundation214, Foundation215
 - DataTables190
 - JQueryMobile101 JQueryMobile101
-- FoBo.JQuery164, FoBo.JQuery171, FoBo.JQuery172 
-- JQueryModule.JQuery172 (A alt. jquery-module setup for FoBo is to use the [lift-jquery-module](https://github.com/karma4u101/lift-jquery-module))
+- FoBo.JQuery164, FoBo.JQuery171, FoBo.JQuery172, FoBo.JQuery182 
+- JQueryModule.JQuery182 
 - PrettifyJun2011
 - Knockout200, Knockout210
 - FoBo010, FoBo020
@@ -91,7 +94,7 @@ As of v0.7.3-SNAPSHOT the following artifacts has been deprecated and will bee r
 
 - Bootstrap v1.4.0 to v2.0.4  -- Use v2.1.0 or newer 
 - Foundation v2.1.4           -- Use v2.1.5 or newer
-- JQuery v1.6.4               -- Use v1.7.2 or the [Lift-JQuery-Module](https://github.com/karma4u101/Lift-JQuery-Module)
+- JQuery v1.6.4               -- Use v1.7.2 or newer
 - JQuery-Mobile v1.0.1        -- Use v1.1.0 
 - FoBo v0.1 to v2.0           -- There is no longer any need for this mix as Bootstrap now have excellent mobile scalability (reactive web and fluid grid) 
     

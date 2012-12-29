@@ -5,6 +5,7 @@ import util.{ Props }
 import http._
 import common._
 
+
 /**
  * ==Welcome to FoBo - A generic Front-End Toolkit Lift Module== 
  * 
@@ -212,7 +213,7 @@ object TBLocInfo {
  * to the enabled toolkits.  
  */
 object InitParam extends FoBoToolkit with FoBoJQuery {
-  var JQuery: FoBoJQuery = JQuery172
+  var JQuery: FoBoJQuery = JQuery182
   var ToolKit: FoBoToolkit = Bootstrap222
 }
 
@@ -272,6 +273,20 @@ case object DataTables190 extends FoBoToolkit {
  */
 case object PrettifyJun2011 extends FoBoToolkit {
    FoBoResources.googleCodePrettify
+}
+
+/**
+ * Enable usage of JQuery version 1_8_2 in your bootstrap liftweb Boot.
+ * @version 1.8.2
+ * 
+ * '''Example:'''
+ * 
+ * {{{
+ *   FoBo.InitParam.JQuery=FoBo.JQuery182
+ * }}}
+ */
+case object JQuery182 extends FoBoJQuery {
+  FoBoResources.jquery182
 }
 
 /**
@@ -650,24 +665,31 @@ private object FoBoResources {
     }
   }
    
+  lazy val jquery182 = {
+    ResourceServer.rewrite {//fetched from the jquery module
+      case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "1.8.2", "js", "jquery.js")
+      case "fobo" :: "jquery.js" :: Nil => List("jquery", "1.8.2", "js", "jquery-min.js")
+    }
+  }   
+   
   lazy val jquery172 = {
     ResourceServer.rewrite {
-      case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("fobo", "jquery", "1.7.2", "js", "jquery.js")
-      case "fobo" :: "jquery.js" :: Nil => List("fobo", "jquery", "1.7.2", "js", "jquery.js")
+      case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "1.7.2", "js", "jquery.js")
+      case "fobo" :: "jquery.js" :: Nil => List("jquery", "1.7.2", "js", "jquery-min.js")
     }
   }
   
   lazy val jquery171 = {
     ResourceServer.rewrite {
-      case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("fobo", "jquery", "1.7.1", "js", "jquery.js")
-      case "fobo" :: "jquery.js" :: Nil => List("fobo", "jquery", "1.7.1", "js", "jquery.js")
+      case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "1.7.1", "js", "jquery.js")
+      case "fobo" :: "jquery.js" :: Nil => List("jquery", "1.7.1", "js", "jquery-min.js")
     }
   }
 
   lazy val jquery164 = {
     ResourceServer.rewrite {
-      case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("fobo", "jquery", "1.6.4", "js", "jquery.js")
-      case "fobo" :: "jquery.js" :: Nil => List("fobo", "jquery", "1.6.4", "js", "jquery.js")
+      case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "1.6.4", "js", "jquery.js")
+      case "fobo" :: "jquery.js" :: Nil => List("jquery", "1.6.4", "js", "jquery-min.js")
     }
   }
 

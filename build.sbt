@@ -4,11 +4,11 @@ organization := "net.liftmodules"
 
 liftVersion <<= liftVersion ?? "2.5-SNAPSHOT"
 
-version <<= liftVersion apply { _ + "-0.7.6-SNAPSHOT" }
+version <<= liftVersion apply { _ + "-0.7.7-SNAPSHOT" }
 
 crossScalaVersions := Seq("2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion  := "2.9.1"
+scalaVersion  := "2.9.2"
 
 logLevel := Level.Info  //Level.Info.Debug
 
@@ -22,8 +22,9 @@ resolvers ++= Seq(
 )
 
 libraryDependencies <++= liftVersion { v =>
-    "net.liftweb" %% "lift-webkit"  % v % "compile" ::
-    "net.liftweb" %% "lift-testkit" % v % "compile" ::
+    "net.liftweb"      %% "lift-webkit"          % v          % "compile" ::
+    "net.liftweb"      %% "lift-testkit"         % v          % "compile" ::
+    "net.liftmodules"  %% "lift-jquery-module"   % (v+"-2.0") % "compile->default" ::
     Nil
 }
 
