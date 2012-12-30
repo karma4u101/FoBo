@@ -215,10 +215,11 @@ Alternative separate script files (not supported in v2.0.4)
 
 FoBo.InitParam.ToolKit=FoBo.FontAwesomeXXX
 
-Please notice that using font awesome with a FoBo.BootstrapXXX setting you also need to change your template to use a "no-icons bootstrap" css.
+Please notice that using font awesome with a FoBo.Bootstrap222 (or newer) setting in your Boot.scala you also 
+need to change the template file to use a "no-icons bootstrap" css or you may in some cases see overlapping icons.
 
-   <link data-lift="head" rel="stylesheet" type='text/css' href="/classpath/fobo/bootstrap-no-icons.css"/> 
-   <link data-lift="head" rel="stylesheet" href="/classpath/fobo/font-awesome.css">
+	<link data-lift="head" rel="stylesheet" type='text/css' href="/classpath/fobo/bootstrap-no-icons.css"/> 
+	<link data-lift="head" rel="stylesheet" href="/classpath/fobo/font-awesome.css">
 
 ###Foundation Toolkit
 
