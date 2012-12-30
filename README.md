@@ -29,6 +29,7 @@ Toolkit:s and available versions
 --------------------------------
 
 **Latest Module Version:** 
+- **2012-12-30** -- 0.7.8-SNAPSHOT
 - **2012-12-29** -- 0.7.7-SNAPSHOT
 - **2012-12-26** -- 0.7.6-SNAPSHOT
 - **2012-12-15** -- 0.7.5-SNAPSHOT
@@ -37,6 +38,7 @@ Toolkit:s and available versions
 - **2012-11-10** -- 0.7.2-SNAPSHOT
 
 **Latest Updates:**
+- **2012-12-30** -- 0.7.8-SNAPSHOT Adding "Font Awesome" Bootstrap extras and a bootstrap-no-icons.css to TB v2.2.2.
 - **2012-12-29** -- 0.7.7-SNAPSHOT Added support for JQuery v1.8.2
 - **2012-12-26** -- 0.7.6-SNAPSHOT Extended the FoBo API with a new Bootstrap menu builder that transforms Lift SiteMap's LocGroup(s) to bootstrap navlist's.
 - **2012-12-15** -- 0.7.5-SNAPSHOT Added Bootstrap v2.2.2
@@ -49,6 +51,7 @@ Toolkit:s and available versions
 - None
 
 **Latest Snapshot Release:**
+- **2012-12-30** -- 0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-12-29** -- 0.7.7-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-12-26** -- 0.7.6-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-12-23** -- 0.7.5-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
@@ -63,6 +66,7 @@ Artifacts is available for: Lift 2.4, 2.5-M1 to M3 and 2.5-SNAPSHOT
 This module includes the following toolkits versions
 
 - Bootstrap [v1.4.0, v2.0.0, v2.0.4, v2.1.0, v2.2.0, v2.2.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+- Font Awesome [v2.0.0] [Font Awesome](http://fortawesome.github.com/Font-Awesome/) -- TB extras (**EXPERIMENTAL** imp. is subject to change)
 - Foundation [v2.1.4, v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
 - DataTables [v1.9.0] - [DataTables.net](http://datatables.net/)
 - JQuery Mobile [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
@@ -75,6 +79,7 @@ This module includes the following toolkits versions
 Module names that can bee used in boot corresponding to the toolkit version above is
 
 - Bootstrap140, Bootstrap200, Bootstrap204, Bootstrap210 
+- FontAwesome200 
 - Foundation214, Foundation215
 - DataTables190
 - JQueryMobile101 JQueryMobile101
@@ -205,6 +210,15 @@ Alternative separate script files (not supported in v2.0.4)
 - bootstrap-tooltip.js (v2.0.0+)
 - bootstrap-transition.js (v2.0.0+)
 - bootstrap-typeahead.js (v2.0.0+)
+
+###Font Awesome
+
+FoBo.InitParam.ToolKit=FoBo.FontAwesomeXXX
+
+Please notice that using font awesome with a FoBo.BootstrapXXX setting you also need to change your template to use a "no-icons bootstrap" css.
+
+   <link data-lift="head" rel="stylesheet" type='text/css' href="/classpath/fobo/bootstrap-no-icons.css"/> 
+   <link data-lift="head" rel="stylesheet" href="/classpath/fobo/font-awesome.css">
 
 ###Foundation Toolkit
 

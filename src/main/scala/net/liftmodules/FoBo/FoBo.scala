@@ -449,6 +449,21 @@ case object Bootstrap204 extends FoBoToolkit {
 }
 
 /**
+ * Enable usage of Font-Awesome version 2_0_0 in your bootstrap liftweb Boot.
+ * @version 2.0.0
+ * 
+ *  '''Example:'''
+ *  
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.FontAwesome200
+ * }}}
+ *  
+ */
+case object FontAwesome200 extends FoBoToolkit {
+  FoBoResources.fontAwesome200 
+}
+
+/**
  * Enable usage of Twitter Bootstrap version 2_1_0 in your bootstrap liftweb Boot.
  * @version 2.1.0
  * 
@@ -763,8 +778,17 @@ private object FoBoResources {
     }
   }
   
-    lazy val bootstrap222: Unit = {
+  lazy val fontAwesome200 = {
     ResourceServer.rewrite {
+      case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "2.0.0", "css", "font-awesome.css")
+      case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "2.0.0", "css", "font-awesome-min.css")         
+    }
+  }  
+  
+  lazy val bootstrap222: Unit = {
+    ResourceServer.rewrite {
+      case "fobo" :: "bootstrap-no-icons.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.2.2", "css", "bootstrap-no-icons.css")
+      case "fobo" :: "bootstrap-no-icons.css" :: Nil => List("fobo", "bootstrap","2.2.2", "css", "bootstrap-no-icons-min.css")      
       case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.2.2", "css", "bootstrap.css")
       case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.2.2", "css", "bootstrap-min.css")
       case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "css", "responsive.css")
@@ -814,7 +838,7 @@ private object FoBoResources {
     }
   }      
   
-    lazy val bootstrap220: Unit = {
+  lazy val bootstrap220: Unit = {
     ResourceServer.rewrite {
       case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.2.0", "css", "bootstrap.css")
       case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.2.0", "css", "bootstrap-min.css")
@@ -865,7 +889,7 @@ private object FoBoResources {
     }
   }    
 
-    lazy val bootstrap210: Unit = {
+  lazy val bootstrap210: Unit = {
     ResourceServer.rewrite {
       case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.1.0", "css", "bootstrap.css")
       case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.1.0", "css", "bootstrap-min.css")
@@ -916,7 +940,7 @@ private object FoBoResources {
     }
   }  
   
-    lazy val bootstrap204: Unit = {
+  lazy val bootstrap204: Unit = {
     ResourceServer.rewrite {
       case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.4", "css", "bootstrap.css")
       case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.0.4", "css", "bootstrap-min.css")

@@ -4,7 +4,7 @@ organization := "net.liftmodules"
 
 liftVersion <<= liftVersion ?? "2.5-SNAPSHOT"
 
-version <<= liftVersion apply { _ + "-0.7.7-SNAPSHOT" }
+version <<= liftVersion apply { _ + "-0.7.8-SNAPSHOT" }
 
 crossScalaVersions := Seq("2.9.2", "2.9.1-1", "2.9.1")
 
@@ -22,9 +22,10 @@ resolvers ++= Seq(
 )
 
 libraryDependencies <++= liftVersion { v =>
-    "net.liftweb"      %% "lift-webkit"          % v          % "compile" ::
-    "net.liftweb"      %% "lift-testkit"         % v          % "compile" ::
-    "net.liftmodules"  %% "lift-jquery-module"   % (v+"-2.0") % "compile->default" ::
+    "net.liftweb"      %% "lift-webkit"          % v          % "compile" :: 
+    "net.liftweb"      %% "lift-testkit"         % v          % "compile" :: 
+    "net.liftmodules"  %% "fobo-font-awesome"    % (v+"-0.0.1-SNAPSHOT") % "compile" :: 
+    "net.liftmodules"  %% "lift-jquery-module"   % (v+"-2.0") % "compile" ::     
     Nil
 }
 
