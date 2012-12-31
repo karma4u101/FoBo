@@ -5,7 +5,11 @@ object LiftModuleFoBoBuild extends Build {
   
   val liftVersion = SettingKey[String]("liftVersion", "Version number of the Lift Web Framework")
   
-  val project = Project("FoBo", file("."))
+  lazy val root = Project(id   = "FoBo", 
+                             base = file(".")) aggregate(fontAwesome)                                       
+                        
+  lazy val fontAwesome = Project(id   = "FoBo-Font-Awesome", 
+                             base = file("Font-Awesome"))                      
   
 }
 

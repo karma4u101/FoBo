@@ -1,14 +1,14 @@
-name := "FoBo"
+name := "FoBo-Font-Awesome"
 
 organization := "net.liftmodules"
 
 liftVersion <<= liftVersion ?? "2.5-SNAPSHOT"
 
-version <<= liftVersion apply { _ + "-0.7.8-SNAPSHOT" }
+version <<= liftVersion apply { _ + "-0.0.1-SNAPSHOT" }
 
 crossScalaVersions := Seq("2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion in ThisBuild := "2.9.2"
+scalaVersion  := "2.9.2"
 
 logLevel := Level.Info  //Level.Info.Debug
 
@@ -16,16 +16,15 @@ scalacOptions ++= Seq("-deprecation")
 
 EclipseKeys.withSource := true
 
+
 resolvers ++= Seq(
   "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
 )
 
 libraryDependencies <++= liftVersion { v =>
-    "net.liftweb"      %% "lift-webkit"          % v          % "compile" :: 
-    "net.liftweb"      %% "lift-testkit"         % v          % "compile" :: 
-    "net.liftmodules"  %% "fobo-font-awesome"    % (v+"-0.0.1-SNAPSHOT") % "compile" :: 
-    "net.liftmodules"  %% "lift-jquery-module"   % (v+"-2.0") % "compile" ::     
+    "net.liftweb"      %% "lift-webkit"          % v          % "compile" ::
+    "net.liftweb"      %% "lift-testkit"         % v          % "compile" ::
     Nil
 }
 
@@ -34,19 +33,22 @@ libraryDependencies ++= Seq(
    "org.specs2"        %% "specs2"             % "1.12.1"           % "test"
 )
 
+
 //############################################################
 //#### THE BUILDINFO BUILD
 //## https://github.com/sbt/sbt-buildinfo
 //## 
 //##
 //#############################################################
-seq(buildInfoSettings: _*)
 
-sourceGenerators in Compile <+= buildInfo
+//seq(buildInfoSettings: _*)
 
-buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
+//sourceGenerators in Compile <+= buildInfo
 
-buildInfoPackage := "net.liftmodules.FoBo.lib"
+//buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
+
+//buildInfoPackage := "net.liftmodules.FoBo.lib"
+
 
 //#########################################################################
 //#### THE LESS BUILD
