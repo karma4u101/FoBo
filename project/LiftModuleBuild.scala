@@ -9,7 +9,10 @@ object LiftModuleFoBoBuild extends Build {
                              base = file(".")) aggregate(fontAwesome)                                       
                         
   lazy val fontAwesome = Project(id   = "FoBo-Font-Awesome", 
-                             base = file("Font-Awesome"))                      
+                             base = file("Font-Awesome"))  
+                             
+  lazy val foboLess = Project(id   = "FoBo-Less", 
+                             base = file("FoBo-Less"))                             
   
 }
 
