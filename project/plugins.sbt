@@ -10,6 +10,8 @@ resolvers += Resolver.url("sbt-plugin-releases",
 
 resolvers += Classpaths.typesafeResolver
 
+addSbtPlugin("com.untyped" %% "sbt-less" % "latest.integration")
+
 addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.0.0")
 
 addSbtPlugin("com.eed3si9n" % "sbt-buildinfo" % "0.2.0")
