@@ -29,15 +29,13 @@ Toolkit:s and available versions
 --------------------------------
 
 **Latest Module Version:** 
+- **2013-01-92** -- 0.7.9-SNAPSHOT
 - **2012-12-30** -- 0.7.8-SNAPSHOT
 - **2012-12-29** -- 0.7.7-SNAPSHOT
-- **2012-12-26** -- 0.7.6-SNAPSHOT
-- **2012-12-15** -- 0.7.5-SNAPSHOT
-- **2012-12-13** -- 0.7.4-SNAPSHOT
-- **2012-11-18** -- 0.7.3-SNAPSHOT
-- **2012-11-10** -- 0.7.2-SNAPSHOT
+  :
 
 **Latest Updates:**
+- **2013-01-92** -- 0.7.9-SNAPSHOT Updated dep. on FoBo-Font-Awesome to v0.0.2.
 - **2012-12-30** -- 0.7.8-SNAPSHOT Adding "Font Awesome" Bootstrap extras and a bootstrap-no-icons.css to TB v2.2.2.
 - **2012-12-29** -- 0.7.7-SNAPSHOT Added support for JQuery v1.8.2
 - **2012-12-26** -- 0.7.6-SNAPSHOT Extended the FoBo API with a new Bootstrap menu builder that transforms Lift SiteMap's LocGroup(s) to bootstrap navlist's.
@@ -51,13 +49,10 @@ Toolkit:s and available versions
 - None
 
 **Latest Snapshot Release:**
+- **2013-01-02** -- 0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-12-30** -- 0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-12-29** -- 0.7.7-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
-- **2012-12-26** -- 0.7.6-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
-- **2012-12-23** -- 0.7.5-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
-- **2012-11-18** -- 0.7.3-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
-- **2012-11-03** -- 0.7.2-SNAPSHOT artifacts for Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
-- **2012-11-03** -- 0.7.2-SNAPSHOT release for Lift 2.5-M3 (Scala 2.9.1, 2.9.1-1, 2.9.1)
+  :
 
 
 

@@ -2,13 +2,13 @@ name := "FoBo-Font-Awesome"
 
 organization := "net.liftmodules"
 
-liftVersion <<= liftVersion ?? "2.5-SNAPSHOT"
+//liftVersion <<= liftVersion ?? "2.5-SNAPSHOT"
 
-version <<= liftVersion apply { _ + "-0.0.1-SNAPSHOT" }
+version <<= liftVersion apply { _ + "-0.0.2-SNAPSHOT" }
 
 crossScalaVersions := Seq("2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion  := "2.9.2"
+//scalaVersion  := "2.9.2"
 
 logLevel := Level.Info  //Level.Info.Debug
 
