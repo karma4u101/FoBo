@@ -29,12 +29,14 @@ Toolkit:s and available versions
 --------------------------------
 
 **Latest Module Version:** 
-- **2013-01-92** -- 0.7.9-SNAPSHOT
+- **2013-01-04** -- 0.7.10-SNAPSHOT
+- **2013-01-02** -- 0.7.9-SNAPSHOT
 - **2012-12-30** -- 0.7.8-SNAPSHOT
 - **2012-12-29** -- 0.7.7-SNAPSHOT
   :
 
 **Latest Updates:**
+- **2013-01-04** -- 0.7.10-SNAPSHOT Decoupling the FoBo-Font-Awesome module future (v0.0.3)
 - **2013-01-92** -- 0.7.9-SNAPSHOT Updated dep. on FoBo-Font-Awesome to v0.0.2.
 - **2012-12-30** -- 0.7.8-SNAPSHOT Adding "Font Awesome" Bootstrap extras and a bootstrap-no-icons.css to TB v2.2.2.
 - **2012-12-29** -- 0.7.7-SNAPSHOT Added support for JQuery v1.8.2
@@ -49,6 +51,7 @@ Toolkit:s and available versions
 - None
 
 **Latest Snapshot Release:**
+- **2013-01-04** -- 0.7.10-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
 - **2013-01-02** -- 0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
 - **2012-12-30** -- 0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
 - **2012-12-29** -- 0.7.7-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
@@ -61,7 +64,7 @@ Artifacts is available for: Lift 2.4, 2.5-M1 to M3 and 2.5-SNAPSHOT
 This module includes the following toolkits versions
 
 - Bootstrap [v1.4.0, v2.0.0, v2.0.4, v2.1.0, v2.2.0, v2.2.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
-- Font Awesome [v2.0.0] [Font Awesome](http://fortawesome.github.com/Font-Awesome/) -- TB extras (**EXPERIMENTAL** imp. is subject to change)
+- Font Awesome [v2.0.0] [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
 - Foundation [v2.1.4, v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
 - DataTables [v1.9.0] - [DataTables.net](http://datatables.net/)
 - JQuery Mobile [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
