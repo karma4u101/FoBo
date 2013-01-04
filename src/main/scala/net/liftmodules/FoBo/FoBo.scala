@@ -6,6 +6,7 @@ import http._
 import common._
 
 
+
 /**
  * ==Welcome to FoBo - A generic Front-End Toolkit Lift Module== 
  * 
@@ -460,7 +461,7 @@ case object Bootstrap204 extends FoBoToolkit {
  *  
  */
 case object FontAwesome200 extends FoBoToolkit {
-  FoBoResources.fontAwesome200 
+   net.liftmodules.FoBoFontAwesome.FontAwesome200
 }
 
 /**
@@ -778,12 +779,12 @@ private object FoBoResources {
     }
   }
   
-  lazy val fontAwesome200 = {
-    ResourceServer.rewrite {
-      case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "2.0.0", "css", "font-awesome.css")
-      case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "2.0.0", "css", "font-awesome-min.css")         
-    }
-  }  
+//  lazy val fontAwesome200 = {
+//    ResourceServer.rewrite {
+//      case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "2.0.0", "css", "font-awesome.css")
+//      case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "2.0.0", "css", "font-awesome-min.css")         
+//    }
+//  }  
   
   lazy val bootstrap222: Unit = {
     ResourceServer.rewrite {
