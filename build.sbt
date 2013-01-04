@@ -16,6 +16,8 @@ scalacOptions ++= Seq("-deprecation")
 
 EclipseKeys.withSource := true
 
+EclipseKeys.skipParents in ThisBuild := false
+
 resolvers ++= Seq(
   "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
