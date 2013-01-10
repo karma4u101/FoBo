@@ -29,6 +29,7 @@ Toolkit:s and available versions
 --------------------------------
 
 **Latest Module Version:** 
+- **2013-01-10** -- 0.7.11-SNAPSHOT
 - **2013-01-04** -- 0.7.10-SNAPSHOT
 - **2013-01-02** -- 0.7.9-SNAPSHOT
 - **2012-12-30** -- 0.7.8-SNAPSHOT
@@ -36,6 +37,7 @@ Toolkit:s and available versions
   :
 
 **Latest Updates:**
+- **2013-01-10** -- 0.7.11-SNAPSHOT Now internally using the FoBo-Twitter-Bootstrap module (v0.0.1) and added Scala version 2.10 build. 
 - **2013-01-04** -- 0.7.10-SNAPSHOT Decoupling the FoBo-Font-Awesome module future (v0.0.3)
 - **2013-01-92** -- 0.7.9-SNAPSHOT Updated dep. on FoBo-Font-Awesome to v0.0.2.
 - **2012-12-30** -- 0.7.8-SNAPSHOT Adding "Font Awesome" Bootstrap extras and a bootstrap-no-icons.css to TB v2.2.2.
@@ -51,6 +53,7 @@ Toolkit:s and available versions
 - None
 
 **Latest Snapshot Release:**
+- **2013-01-10** -- 0.7.11-SNAPSHOT artifacts for Lift 2.5-SNAPSHOTS (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
 - **2013-01-04** -- 0.7.10-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
 - **2013-01-02** -- 0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
 - **2012-12-30** -- 0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
@@ -76,8 +79,8 @@ This module includes the following toolkits versions
 
 Module names that can bee used in boot corresponding to the toolkit version above is
 
-- Bootstrap140, Bootstrap200, Bootstrap204, Bootstrap210 
-- FontAwesome200 
+- Bootstrap140, Bootstrap200, Bootstrap204, Bootstrap210, Bootstrap222 
+- FontAwesome200, FontAwesome200TB222 
 - Foundation214, Foundation215
 - DataTables190
 - JQueryMobile101 JQueryMobile101
@@ -182,6 +185,7 @@ FoBo.InitParam.ToolKit=FoBo.BootstrapXXX
 Base css file
 
 - bootstrap.css (all versions)
+- bootstrap-no-icons.css (v2.2.2+ used by font-awesome to override default icons)
 
 Extra css files
 
@@ -211,12 +215,12 @@ Alternative separate script files (not supported in v2.0.4)
 
 ###Font Awesome
 
-FoBo.InitParam.ToolKit=FoBo.FontAwesomeXXX
+FoBo.InitParam.ToolKit=FoBo.FontAwesomeXXX -- Primary for use stand alone (without twitter bootstrap)
+or
+FoBo.InitParam.ToolKit=FoBo.FontAwesomeXXXTBXYZ (for use with twitter bootstrap version X.Y.Z)
 
-Please notice that using font awesome with a FoBo.Bootstrap222 (or newer) setting in your Boot.scala you also 
-need to change the template file to use a "no-icons bootstrap" css or you may in some cases see overlapping icons.
+Add the following to your template
 
-	<link data-lift="head" rel="stylesheet" type='text/css' href="/classpath/fobo/bootstrap-no-icons.css"/> 
 	<link data-lift="head" rel="stylesheet" href="/classpath/fobo/font-awesome.css">
 
 ###Foundation Toolkit

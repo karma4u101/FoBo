@@ -4,11 +4,11 @@ organization := "net.liftmodules"
 
 liftVersion in ThisBuild <<= liftVersion ?? "2.5-SNAPSHOT"
 
-version <<= liftVersion apply { _ + "-0.7.10-SNAPSHOT" }
+version <<= liftVersion apply { _ + "-0.7.11-SNAPSHOT" }
 
-crossScalaVersions := Seq("2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion in ThisBuild := "2.9.2"
+scalaVersion in ThisBuild := "2.10.0"
 
 logLevel := Level.Info  //Level.Info.Debug
 
@@ -26,15 +26,26 @@ resolvers ++= Seq(
 libraryDependencies <++= liftVersion { v =>
     "net.liftweb"      %% "lift-webkit"          % v          % "compile" :: 
     "net.liftweb"      %% "lift-testkit"         % v          % "compile" :: 
-    "net.liftmodules"  %% "fobo-font-awesome"    % (v+"-0.0.3-SNAPSHOT") % "compile" :: 
-    "net.liftmodules"  %% "lift-jquery-module"   % (v+"-2.0") % "compile" ::     
+    "net.liftmodules"  %% "fobo-font-awesome"    % (v+"-0.0.4-SNAPSHOT") % "compile" :: 
+    "net.liftmodules"  %% "fobo-twitter-bootstrap"    % (v+"-0.0.1-SNAPSHOT") % "compile" :: 
+    "net.liftmodules"  %% "lift-jquery-module"   % (v+"-2.1-SNAPSHOT") % "compile" ::     
     Nil
 }
 
-// Customize any further dependencies as desired
-libraryDependencies ++= Seq(
-   "org.specs2"        %% "specs2"             % "1.12.1"           % "test"
-)
+libraryDependencies <++= scalaVersion { sv =>
+  "ch.qos.logback" % "logback-classic" % "1.0.0" % "provided" ::
+  "log4j" % "log4j" % "1.2.16" % "provided" ::
+  (sv match {
+      case "2.10.0" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
+      case _ => "org.specs2" %% "specs2" % "1.12.3" % "test"
+      }) ::
+   (sv match {
+      case "2.10.0" | "2.9.2" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+      case _ => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+      }) ::
+  Nil
+}
+
 
 //############################################################
 //#### THE BUILDINFO BUILD

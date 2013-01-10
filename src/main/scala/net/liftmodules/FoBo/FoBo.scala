@@ -215,7 +215,7 @@ object TBLocInfo {
  */
 object InitParam extends FoBoToolkit with FoBoJQuery {
   var JQuery: FoBoJQuery = JQuery182
-  var ToolKit: FoBoToolkit = Bootstrap222
+  var ToolKit: FoBoToolkit = null //Bootstrap222
 }
 
 
@@ -367,87 +367,88 @@ case object JQueryMobile110 extends FoBoToolkit {
   FoBoResources.jquerymobile110
 }
 
-/**
- * Enable usage of FoBo version 0_2_0 in your bootstrap liftweb Boot.
- * 
- * @version 0.2.0
- * 
- * '''Example'''
- * 
- * {{{
- *   FoBo.InitParam.Toolkit=FoBo.FoBo020
- * }}}
- */
-@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3") 
-case object FoBo020 extends FoBoToolkit {
-  FoBoResources.fobo020
-  FoBoResources.bootstrap200
-  FoBoResources.foundation215
-}
+///**
+// * Enable usage of FoBo version 0_2_0 in your bootstrap liftweb Boot.
+// * 
+// * @version 0.2.0
+// * 
+// * '''Example'''
+// * 
+// * {{{
+// *   FoBo.InitParam.Toolkit=FoBo.FoBo020
+// * }}}
+// */
+//@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3") 
+//case object FoBo020 extends FoBoToolkit {
+//  FoBoResources.fobo020
+//  FoBoResources.bootstrap200
+//  FoBoResources.foundation215
+//}
 
-/**
- * Enable usage of FoBo version 0_1_0 in your bootstrap liftweb Boot.
- * 
- * @version 0.1.0
- * 
- * '''Example'''
- * 
- * {{{
- *   FoBo.InitParam.Toolkit=FoBo.FoBo010
- * }}}
- */
-@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3") 
-case object FoBo010 extends FoBoToolkit {
-  FoBoResources.fobo010
-  FoBoResources.bootstrap140
-  FoBoResources.foundation214
-}
+///**
+// * Enable usage of FoBo version 0_1_0 in your bootstrap liftweb Boot.
+// * 
+// * @version 0.1.0
+// * 
+// * '''Example'''
+// * 
+// * {{{
+// *   FoBo.InitParam.Toolkit=FoBo.FoBo010
+// * }}}
+// */
+//@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3") 
+//case object FoBo010 extends FoBoToolkit {
+//  FoBoResources.fobo010
+//  FoBoResources.bootstrap140
+//  FoBoResources.foundation214
+//}
 
-/**
- * Enable usage of Twitter Bootstrap version 1_4_0 in your bootstrap liftweb Boot.
- * 
- * @version 1.4.0
- * 
- * '''Example'''
- * 
- * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap140
- * }}}
- */
-@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3") 
-case object Bootstrap140 extends FoBoToolkit {
-  FoBoResources.bootstrap140
-}
+//
+///**
+// * Enable usage of Twitter Bootstrap version 1_4_0 in your bootstrap liftweb Boot.
+// * 
+// * @version 1.4.0
+// * 
+// * '''Example'''
+// * 
+// * {{{
+// *   FoBo.InitParam.Toolkit=FoBo.Bootstrap140
+// * }}}
+// */
+//@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3") 
+//case object Bootstrap140 extends FoBoToolkit {
+//  net.liftmodules.FoBoTB.Bootstrap140
+//}
 
-/**
- * Enable usage of Twitter Bootstrap version 2_0_0 in your bootstrap liftweb Boot.
- * @version 2.0.0
- * 
- * '''Example'''
- * 
- * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap200
- * }}}
- */
-@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3") 
-case object Bootstrap200 extends FoBoToolkit {
-  FoBoResources.bootstrap200
-}
+///**
+// * Enable usage of Twitter Bootstrap version 2_0_0 in your bootstrap liftweb Boot.
+// * @version 2.0.0
+// * 
+// * '''Example'''
+// * 
+// * {{{
+// *   FoBo.InitParam.Toolkit=FoBo.Bootstrap200
+// * }}}
+// */
+//@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3") 
+//case object Bootstrap200 extends FoBoToolkit {
+//  net.liftmodules.FoBoTB.Bootstrap200
+//}
 
-/**
- * Enable usage of Twitter Bootstrap version 2_0_4 in your bootstrap liftweb Boot.
- * @version 2.0.4
- * 
- * '''Example'''
- * 
- * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap204
- * }}}
- */
-@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3")
-case object Bootstrap204 extends FoBoToolkit {
-  FoBoResources.bootstrap204
-}
+///**
+// * Enable usage of Twitter Bootstrap version 2_0_4 in your bootstrap liftweb Boot.
+// * @version 2.0.4
+// * 
+// * '''Example'''
+// * 
+// * {{{
+// *   FoBo.InitParam.Toolkit=FoBo.Bootstrap204
+// * }}}
+// */
+//@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3")
+//case object Bootstrap204 extends FoBoToolkit {
+//  net.liftmodules.FoBoTB.Bootstrap204
+//}
 
 /**
  * Enable usage of Font-Awesome version 2_0_0 in your bootstrap liftweb Boot.
@@ -461,7 +462,29 @@ case object Bootstrap204 extends FoBoToolkit {
  *  
  */
 case object FontAwesome200 extends FoBoToolkit {
-   net.liftmodules.FoBoFontAwesome.FontAwesome200
+   net.liftmodules.FoBoFA.FontAwesome200
+}
+
+/**
+ * Enable usage of Font-Awesome version 2_0_0 in your bootstrap liftweb Boot.
+ * 
+ * This TB222 variant is optimized for use with FoBo.Bootstrap222. 
+ * The effect of using this TB222 variant is that you can keep using the  
+ * /classpath/fobo/bootstrap.css path in your template i.e there is 
+ * no need to explicitly set the no icon css variant as  
+ * /classpath/fobo/bootstrap-no-icons.css in your template FoBo will 
+ * load a FontAwesome modified icon less bootstrap css for you. 
+ * @version 2.0.0
+ * 
+ *  '''Example:'''
+ *  
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.FontAwesome200TB222
+ * }}}
+ *  
+ */
+case object FontAwesome200TB222 extends FoBoToolkit {
+   net.liftmodules.FoBoFA.FontAwesome200TB222
 }
 
 /**
@@ -475,7 +498,7 @@ case object FontAwesome200 extends FoBoToolkit {
  * }}}
  */
 case object Bootstrap210 extends FoBoToolkit {
-  FoBoResources.bootstrap210
+  net.liftmodules.FoBoTB.Bootstrap210
 }
 
 /**
@@ -489,7 +512,7 @@ case object Bootstrap210 extends FoBoToolkit {
  * }}}
  */
 case object Bootstrap220 extends FoBoToolkit {
-  FoBoResources.bootstrap220
+  net.liftmodules.FoBoTB.Bootstrap220
 }
 
 /**
@@ -503,7 +526,7 @@ case object Bootstrap220 extends FoBoToolkit {
  * }}}
  */
 case object Bootstrap222 extends FoBoToolkit {
-  FoBoResources.bootstrap222
+  net.liftmodules.FoBoTB.Bootstrap222
 }
 
 /**
@@ -626,23 +649,23 @@ private object FoBoResources {
     }
   }
   
-  lazy val fobo020 = {
-    ResourceServer.rewrite {
-      /*includes foundation bootstrap and orbit css*/
-      /*All in on fobo tweaked css (except ie)*/
-      case "fobo" :: "fobo.css" :: Nil if Props.devMode => List("fobo", "fobo", "0.2", "css", "fobo.css")
-      case "fobo" :: "fobo.css" :: Nil => List("fobo", "fobo", "0.2", "css", "fobo-min.css")
-    }
-  }
-
-  lazy val fobo010 = {
-    ResourceServer.rewrite {
-      /*includes foundation bootstrap and orbit css*/
-      /*All in on fobo tweaked css (except ie)*/
-      case "fobo" :: "fobo.css" :: Nil if Props.devMode => List("fobo", "fobo", "0.1", "css", "fobo.css")
-      case "fobo" :: "fobo.css" :: Nil => List("fobo", "fobo", "0.1", "css", "fobo-min.css")
-    }
-  }
+//  lazy val fobo020 = {
+//    ResourceServer.rewrite {
+//      /*includes foundation bootstrap and orbit css*/
+//      /*All in on fobo tweaked css (except ie)*/
+//      case "fobo" :: "fobo.css" :: Nil if Props.devMode => List("fobo", "fobo", "0.2", "css", "fobo.css")
+//      case "fobo" :: "fobo.css" :: Nil => List("fobo", "fobo", "0.2", "css", "fobo-min.css")
+//    }
+//  }
+//
+//  lazy val fobo010 = {
+//    ResourceServer.rewrite {
+//      /*includes foundation bootstrap and orbit css*/
+//      /*All in on fobo tweaked css (except ie)*/
+//      case "fobo" :: "fobo.css" :: Nil if Props.devMode => List("fobo", "fobo", "0.1", "css", "fobo.css")
+//      case "fobo" :: "fobo.css" :: Nil => List("fobo", "fobo", "0.1", "css", "fobo-min.css")
+//    }
+//  }
 
   lazy val jquerymobile101 = {
     ResourceServer.rewrite {
@@ -786,239 +809,239 @@ private object FoBoResources {
 //    }
 //  }  
   
-  lazy val bootstrap222: Unit = {
-    ResourceServer.rewrite {
-      case "fobo" :: "bootstrap-no-icons.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.2.2", "css", "bootstrap-no-icons.css")
-      case "fobo" :: "bootstrap-no-icons.css" :: Nil => List("fobo", "bootstrap","2.2.2", "css", "bootstrap-no-icons-min.css")      
-      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.2.2", "css", "bootstrap.css")
-      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.2.2", "css", "bootstrap-min.css")
-      case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "css", "responsive.css")
-      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "bootstrap","2.2.2","css", "responsive-min.css")
-      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-all.js")
-      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-all.js")   
-      /*js splitt*/
-      case "fobo" :: "bootstrap-affix.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-affix.js")
-      case "fobo" :: "bootstrap-affix.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-affix.js")   
-
-      case "fobo" :: "bootstrap-alert.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-alert.js")
-      case "fobo" :: "bootstrap-alert.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-alert.js")   
-
-      case "fobo" :: "bootstrap-button.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-button.js")
-      case "fobo" :: "bootstrap-button.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-button.js")   
-
-      case "fobo" :: "bootstrap-carousel.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-carousel.js")
-      case "fobo" :: "bootstrap-carousel.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-carousel.js")   
-      
-      case "fobo" :: "bootstrap-collapse.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-collapse.js")
-      case "fobo" :: "bootstrap-collapse.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-collapse.js")   
-
-      case "fobo" :: "bootstrap-dropdown.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-dropdown.js")
-      case "fobo" :: "bootstrap-dropdown.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-dropdown.js")   
-
-      case "fobo" :: "bootstrap-modal.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-modal.js")
-      case "fobo" :: "bootstrap-modal.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-modal.js")   
-
-      case "fobo" :: "bootstrap-popover.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-popover.js")
-      case "fobo" :: "bootstrap-popover.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-popover.js")   
-
-      case "fobo" :: "bootstrap-scrollspy.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-scrollspy.js")
-      case "fobo" :: "bootstrap-scrollspy.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-scrollspy.js")   
-
-      case "fobo" :: "bootstrap-tab.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-tab.js")
-      case "fobo" :: "bootstrap-tab.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-tab.js")   
- 
-      case "fobo" :: "bootstrap-tooltip.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-tooltip.js")
-      case "fobo" :: "bootstrap-tooltip.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-tooltip.js")   
-
-      case "fobo" :: "bootstrap-transition.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-transition.js")
-      case "fobo" :: "bootstrap-transition.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-transition.js")   
-
-      case "fobo" :: "bootstrap-typeahead.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-typeahead.js")
-      case "fobo" :: "bootstrap-typeahead.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-typeahead.js")   
-      
-    }
-  }      
+//  lazy val bootstrap222: Unit = {
+//    ResourceServer.rewrite {
+//      case "fobo" :: "bootstrap-no-icons.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.2.2", "css", "bootstrap-no-icons.css")
+//      case "fobo" :: "bootstrap-no-icons.css" :: Nil => List("fobo", "bootstrap","2.2.2", "css", "bootstrap-no-icons-min.css")      
+//      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.2.2", "css", "bootstrap.css")
+//      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.2.2", "css", "bootstrap-min.css")
+//      case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "css", "responsive.css")
+//      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "bootstrap","2.2.2","css", "responsive-min.css")
+//      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-all.js")
+//      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-all.js")   
+//      /*js splitt*/
+//      case "fobo" :: "bootstrap-affix.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-affix.js")
+//      case "fobo" :: "bootstrap-affix.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-affix.js")   
+//
+//      case "fobo" :: "bootstrap-alert.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-alert.js")
+//      case "fobo" :: "bootstrap-alert.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-alert.js")   
+//
+//      case "fobo" :: "bootstrap-button.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-button.js")
+//      case "fobo" :: "bootstrap-button.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-button.js")   
+//
+//      case "fobo" :: "bootstrap-carousel.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-carousel.js")
+//      case "fobo" :: "bootstrap-carousel.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-carousel.js")   
+//      
+//      case "fobo" :: "bootstrap-collapse.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-collapse.js")
+//      case "fobo" :: "bootstrap-collapse.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-collapse.js")   
+//
+//      case "fobo" :: "bootstrap-dropdown.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-dropdown.js")
+//      case "fobo" :: "bootstrap-dropdown.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-dropdown.js")   
+//
+//      case "fobo" :: "bootstrap-modal.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-modal.js")
+//      case "fobo" :: "bootstrap-modal.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-modal.js")   
+//
+//      case "fobo" :: "bootstrap-popover.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-popover.js")
+//      case "fobo" :: "bootstrap-popover.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-popover.js")   
+//
+//      case "fobo" :: "bootstrap-scrollspy.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-scrollspy.js")
+//      case "fobo" :: "bootstrap-scrollspy.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-scrollspy.js")   
+//
+//      case "fobo" :: "bootstrap-tab.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-tab.js")
+//      case "fobo" :: "bootstrap-tab.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-tab.js")   
+// 
+//      case "fobo" :: "bootstrap-tooltip.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-tooltip.js")
+//      case "fobo" :: "bootstrap-tooltip.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-tooltip.js")   
+//
+//      case "fobo" :: "bootstrap-transition.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-transition.js")
+//      case "fobo" :: "bootstrap-transition.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-transition.js")   
+//
+//      case "fobo" :: "bootstrap-typeahead.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-typeahead.js")
+//      case "fobo" :: "bootstrap-typeahead.js" :: Nil => List("fobo",  "bootstrap","2.2.2", "js", "bootstrap-typeahead.js")   
+//      
+//    }
+//  }      
   
-  lazy val bootstrap220: Unit = {
-    ResourceServer.rewrite {
-      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.2.0", "css", "bootstrap.css")
-      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.2.0", "css", "bootstrap-min.css")
-      case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "css", "responsive.css")
-      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "bootstrap","2.2.0","css", "responsive-min.css")
-      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-all.js")
-      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-all.js")   
-      /*js splitt*/
-      case "fobo" :: "bootstrap-affix.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-affix.js")
-      case "fobo" :: "bootstrap-affix.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-affix.js")   
+//  lazy val bootstrap220: Unit = {
+//    ResourceServer.rewrite {
+//      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.2.0", "css", "bootstrap.css")
+//      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.2.0", "css", "bootstrap-min.css")
+//      case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "css", "responsive.css")
+//      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "bootstrap","2.2.0","css", "responsive-min.css")
+//      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-all.js")
+//      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-all.js")   
+//      /*js splitt*/
+//      case "fobo" :: "bootstrap-affix.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-affix.js")
+//      case "fobo" :: "bootstrap-affix.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-affix.js")   
+//
+//      case "fobo" :: "bootstrap-alert.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-alert.js")
+//      case "fobo" :: "bootstrap-alert.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-alert.js")   
+//
+//      case "fobo" :: "bootstrap-button.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-button.js")
+//      case "fobo" :: "bootstrap-button.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-button.js")   
+//
+//      case "fobo" :: "bootstrap-carousel.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-carousel.js")
+//      case "fobo" :: "bootstrap-carousel.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-carousel.js")   
+//      
+//      case "fobo" :: "bootstrap-collapse.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-collapse.js")
+//      case "fobo" :: "bootstrap-collapse.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-collapse.js")   
+//
+//      case "fobo" :: "bootstrap-dropdown.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-dropdown.js")
+//      case "fobo" :: "bootstrap-dropdown.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-dropdown.js")   
+//
+//      case "fobo" :: "bootstrap-modal.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-modal.js")
+//      case "fobo" :: "bootstrap-modal.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-modal.js")   
+//
+//      case "fobo" :: "bootstrap-popover.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-popover.js")
+//      case "fobo" :: "bootstrap-popover.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-popover.js")   
+//
+//      case "fobo" :: "bootstrap-scrollspy.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-scrollspy.js")
+//      case "fobo" :: "bootstrap-scrollspy.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-scrollspy.js")   
+//
+//      case "fobo" :: "bootstrap-tab.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-tab.js")
+//      case "fobo" :: "bootstrap-tab.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-tab.js")   
+// 
+//      case "fobo" :: "bootstrap-tooltip.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-tooltip.js")
+//      case "fobo" :: "bootstrap-tooltip.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-tooltip.js")   
+//
+//      case "fobo" :: "bootstrap-transition.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-transition.js")
+//      case "fobo" :: "bootstrap-transition.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-transition.js")   
+//
+//      case "fobo" :: "bootstrap-typeahead.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-typeahead.js")
+//      case "fobo" :: "bootstrap-typeahead.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-typeahead.js")   
+//      
+//    }
+//  }    
 
-      case "fobo" :: "bootstrap-alert.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-alert.js")
-      case "fobo" :: "bootstrap-alert.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-alert.js")   
-
-      case "fobo" :: "bootstrap-button.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-button.js")
-      case "fobo" :: "bootstrap-button.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-button.js")   
-
-      case "fobo" :: "bootstrap-carousel.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-carousel.js")
-      case "fobo" :: "bootstrap-carousel.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-carousel.js")   
-      
-      case "fobo" :: "bootstrap-collapse.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-collapse.js")
-      case "fobo" :: "bootstrap-collapse.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-collapse.js")   
-
-      case "fobo" :: "bootstrap-dropdown.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-dropdown.js")
-      case "fobo" :: "bootstrap-dropdown.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-dropdown.js")   
-
-      case "fobo" :: "bootstrap-modal.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-modal.js")
-      case "fobo" :: "bootstrap-modal.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-modal.js")   
-
-      case "fobo" :: "bootstrap-popover.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-popover.js")
-      case "fobo" :: "bootstrap-popover.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-popover.js")   
-
-      case "fobo" :: "bootstrap-scrollspy.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-scrollspy.js")
-      case "fobo" :: "bootstrap-scrollspy.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-scrollspy.js")   
-
-      case "fobo" :: "bootstrap-tab.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-tab.js")
-      case "fobo" :: "bootstrap-tab.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-tab.js")   
- 
-      case "fobo" :: "bootstrap-tooltip.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-tooltip.js")
-      case "fobo" :: "bootstrap-tooltip.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-tooltip.js")   
-
-      case "fobo" :: "bootstrap-transition.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-transition.js")
-      case "fobo" :: "bootstrap-transition.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-transition.js")   
-
-      case "fobo" :: "bootstrap-typeahead.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-typeahead.js")
-      case "fobo" :: "bootstrap-typeahead.js" :: Nil => List("fobo",  "bootstrap","2.2.0", "js", "bootstrap-typeahead.js")   
-      
-    }
-  }    
-
-  lazy val bootstrap210: Unit = {
-    ResourceServer.rewrite {
-      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.1.0", "css", "bootstrap.css")
-      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.1.0", "css", "bootstrap-min.css")
-      case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "css", "responsive.css")
-      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "bootstrap","2.1.0","css", "responsive-min.css")
-      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-all.js")
-      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-all.js")   
-      /*js splitt*/
-      case "fobo" :: "bootstrap-affix.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-affix.js")
-      case "fobo" :: "bootstrap-affix.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-affix.js")   
-
-      case "fobo" :: "bootstrap-alert.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-alert.js")
-      case "fobo" :: "bootstrap-alert.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-alert.js")   
-
-      case "fobo" :: "bootstrap-button.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-button.js")
-      case "fobo" :: "bootstrap-button.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-button.js")   
-
-      case "fobo" :: "bootstrap-carousel.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-carousel.js")
-      case "fobo" :: "bootstrap-carousel.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-carousel.js")   
-      
-      case "fobo" :: "bootstrap-collapse.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-collapse.js")
-      case "fobo" :: "bootstrap-collapse.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-collapse.js")   
-
-      case "fobo" :: "bootstrap-dropdown.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-dropdown.js")
-      case "fobo" :: "bootstrap-dropdown.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-dropdown.js")   
-
-      case "fobo" :: "bootstrap-modal.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-modal.js")
-      case "fobo" :: "bootstrap-modal.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-modal.js")   
-
-      case "fobo" :: "bootstrap-popover.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-popover.js")
-      case "fobo" :: "bootstrap-popover.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-popover.js")   
-
-      case "fobo" :: "bootstrap-scrollspy.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-scrollspy.js")
-      case "fobo" :: "bootstrap-scrollspy.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-scrollspy.js")   
-
-      case "fobo" :: "bootstrap-tab.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-tab.js")
-      case "fobo" :: "bootstrap-tab.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-tab.js")   
- 
-      case "fobo" :: "bootstrap-tooltip.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-tooltip.js")
-      case "fobo" :: "bootstrap-tooltip.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-tooltip.js")   
-
-      case "fobo" :: "bootstrap-transition.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-transition.js")
-      case "fobo" :: "bootstrap-transition.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-transition.js")   
-
-      case "fobo" :: "bootstrap-typeahead.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-typeahead.js")
-      case "fobo" :: "bootstrap-typeahead.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-typeahead.js")   
-      
-    }
-  }  
+//  lazy val bootstrap210: Unit = {
+//    ResourceServer.rewrite {
+//      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.1.0", "css", "bootstrap.css")
+//      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.1.0", "css", "bootstrap-min.css")
+//      case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "css", "responsive.css")
+//      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "bootstrap","2.1.0","css", "responsive-min.css")
+//      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-all.js")
+//      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-all.js")   
+//      /*js splitt*/
+//      case "fobo" :: "bootstrap-affix.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-affix.js")
+//      case "fobo" :: "bootstrap-affix.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-affix.js")   
+//
+//      case "fobo" :: "bootstrap-alert.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-alert.js")
+//      case "fobo" :: "bootstrap-alert.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-alert.js")   
+//
+//      case "fobo" :: "bootstrap-button.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-button.js")
+//      case "fobo" :: "bootstrap-button.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-button.js")   
+//
+//      case "fobo" :: "bootstrap-carousel.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-carousel.js")
+//      case "fobo" :: "bootstrap-carousel.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-carousel.js")   
+//      
+//      case "fobo" :: "bootstrap-collapse.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-collapse.js")
+//      case "fobo" :: "bootstrap-collapse.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-collapse.js")   
+//
+//      case "fobo" :: "bootstrap-dropdown.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-dropdown.js")
+//      case "fobo" :: "bootstrap-dropdown.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-dropdown.js")   
+//
+//      case "fobo" :: "bootstrap-modal.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-modal.js")
+//      case "fobo" :: "bootstrap-modal.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-modal.js")   
+//
+//      case "fobo" :: "bootstrap-popover.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-popover.js")
+//      case "fobo" :: "bootstrap-popover.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-popover.js")   
+//
+//      case "fobo" :: "bootstrap-scrollspy.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-scrollspy.js")
+//      case "fobo" :: "bootstrap-scrollspy.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-scrollspy.js")   
+//
+//      case "fobo" :: "bootstrap-tab.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-tab.js")
+//      case "fobo" :: "bootstrap-tab.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-tab.js")   
+// 
+//      case "fobo" :: "bootstrap-tooltip.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-tooltip.js")
+//      case "fobo" :: "bootstrap-tooltip.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-tooltip.js")   
+//
+//      case "fobo" :: "bootstrap-transition.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-transition.js")
+//      case "fobo" :: "bootstrap-transition.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-transition.js")   
+//
+//      case "fobo" :: "bootstrap-typeahead.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-typeahead.js")
+//      case "fobo" :: "bootstrap-typeahead.js" :: Nil => List("fobo",  "bootstrap","2.1.0", "js", "bootstrap-typeahead.js")   
+//      
+//    }
+//  }  
   
-  lazy val bootstrap204: Unit = {
-    ResourceServer.rewrite {
-      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.4", "css", "bootstrap.css")
-      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.0.4", "css", "bootstrap-min.css")
-      case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.4", "css", "responsive.css")
-      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "bootstrap","2.0.4","css", "responsive-min.css")
-      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.4", "js", "bootstrap.js")
-      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.0.4", "js", "bootstrap.js")      
-    }
-  }
+//  lazy val bootstrap204: Unit = {
+//    ResourceServer.rewrite {
+//      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.4", "css", "bootstrap.css")
+//      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.0.4", "css", "bootstrap-min.css")
+//      case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.4", "css", "responsive.css")
+//      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "bootstrap","2.0.4","css", "responsive-min.css")
+//      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.4", "js", "bootstrap.js")
+//      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.0.4", "js", "bootstrap.js")      
+//    }
+//  }
     
-  lazy val bootstrap200: Unit = {
-    ResourceServer.rewrite {
-      /*Separate orgin css*/
-      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.0", "css", "bootstrap.css")
-      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.0.0", "css", "bootstrap-min.css")
-      case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "css", "responsive.css")
-      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "orgin", "bootstrap","2.0.0", "css", "responsive-min.css")
-      /*All in one script*/
-      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-all.js")
-      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-all.js")
-      /*split from all script*/
-      case "fobo" :: "bootstrap-alert.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-alert.js")
-      case "fobo" :: "bootstrap-alert.js" :: Nil => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-alert.js")
-      case "fobo" :: "bootstrap-button.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-button.js")
-      case "fobo" :: "bootstrap-button.js" :: Nil => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-button.js")
-      case "fobo" :: "bootstrap-carousel.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-carousel.js")
-      case "fobo" :: "bootstrap-carousel.js" :: Nil => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-carousel.js")
-      case "fobo" :: "bootstrap-collapse.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-collapse.js")
-      case "fobo" :: "bootstrap-collapse.js" :: Nil => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-collapse.js")
-      case "fobo" :: "bootstrap-dropdown.js" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-dropdown.js")
-      case "fobo" :: "bootstrap-dropdown.js" :: Nil => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-dropdown.js")
-      case "fobo" :: "bootstrap-modal.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-modal.js")
-      case "fobo" :: "bootstrap-modal.js" :: Nil => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-modal.js")
-      case "fobo" :: "bootstrap-popover.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-popover.js")
-      case "fobo" :: "bootstrap-popover.js" :: Nil => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-popover.js")
-      case "fobo" :: "bootstrap-scrollspy.js" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-scrollspy.js")
-      case "fobo" :: "bootstrap-scrollspy.js" :: Nil => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-scrollspy.js")
-      case "fobo" :: "bootstrap-tab.js" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-tab.js")
-      case "fobo" :: "bootstrap-tab.js" :: Nil => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-tab.js")
-      case "fobo" :: "bootstrap-tooltip.js" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-tooltip.js")
-      case "fobo" :: "bootstrap-tooltip.js" :: Nil => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-tooltip.js")
+//  lazy val bootstrap200: Unit = {
+//    ResourceServer.rewrite {
+//      /*Separate orgin css*/
+//      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.0", "css", "bootstrap.css")
+//      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.0.0", "css", "bootstrap-min.css")
+//      case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "css", "responsive.css")
+//      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "orgin", "bootstrap","2.0.0", "css", "responsive-min.css")
+//      /*All in one script*/
+//      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-all.js")
+//      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-all.js")
+//      /*split from all script*/
+//      case "fobo" :: "bootstrap-alert.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-alert.js")
+//      case "fobo" :: "bootstrap-alert.js" :: Nil => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-alert.js")
+//      case "fobo" :: "bootstrap-button.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-button.js")
+//      case "fobo" :: "bootstrap-button.js" :: Nil => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-button.js")
+//      case "fobo" :: "bootstrap-carousel.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-carousel.js")
+//      case "fobo" :: "bootstrap-carousel.js" :: Nil => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-carousel.js")
+//      case "fobo" :: "bootstrap-collapse.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-collapse.js")
+//      case "fobo" :: "bootstrap-collapse.js" :: Nil => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-collapse.js")
+//      case "fobo" :: "bootstrap-dropdown.js" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-dropdown.js")
+//      case "fobo" :: "bootstrap-dropdown.js" :: Nil => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-dropdown.js")
+//      case "fobo" :: "bootstrap-modal.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-modal.js")
+//      case "fobo" :: "bootstrap-modal.js" :: Nil => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-modal.js")
+//      case "fobo" :: "bootstrap-popover.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.0.0", "js", "bootstrap-popover.js")
+//      case "fobo" :: "bootstrap-popover.js" :: Nil => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-popover.js")
+//      case "fobo" :: "bootstrap-scrollspy.js" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-scrollspy.js")
+//      case "fobo" :: "bootstrap-scrollspy.js" :: Nil => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-scrollspy.js")
+//      case "fobo" :: "bootstrap-tab.js" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-tab.js")
+//      case "fobo" :: "bootstrap-tab.js" :: Nil => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-tab.js")
+//      case "fobo" :: "bootstrap-tooltip.js" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-tooltip.js")
+//      case "fobo" :: "bootstrap-tooltip.js" :: Nil => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-tooltip.js")
+//
+//      case "fobo" :: "bootstrap-transition.js" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-transition.js")
+//      case "fobo" :: "bootstrap-transition.js" :: Nil => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-transition.js")
+//
+//      case "fobo" :: "bootstrap-typeahead.js" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-typeahead.js")
+//      case "fobo" :: "bootstrap-typeahead.js" :: Nil => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-typeahead.js")
+//
+//    }
+//  }
 
-      case "fobo" :: "bootstrap-transition.js" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-transition.js")
-      case "fobo" :: "bootstrap-transition.js" :: Nil => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-transition.js")
-
-      case "fobo" :: "bootstrap-typeahead.js" :: Nil if Props.devMode => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-typeahead.js")
-      case "fobo" :: "bootstrap-typeahead.js" :: Nil => List("fobo", "bootstrap","2.0.0", "js", "bootstrap-typeahead.js")
-
-    }
-  }
-
-  lazy val bootstrap140: Unit = {
-    ResourceServer.rewrite {
-      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "css", "bootstrap.css")
-      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "orgin", "css", "bootstrap-min.css")
-      /*All in one script*/
-      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-all.js")
-      case "fobo" :: "bootstrap.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-all.js")
-      /*split from all script*/
-      case "fobo" :: "bootstrap-alerts.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-alerts.js")
-      case "fobo" :: "bootstrap-alerts.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-alerts.js")
-      case "fobo" :: "bootstrap-buttons.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-buttons.js")
-      case "fobo" :: "bootstrap-buttons.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-buttons.js")
-      case "fobo" :: "bootstrap-dropdown.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-dropdown.js")
-      case "fobo" :: "bootstrap-dropdown.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-dropdown.js")
-      case "fobo" :: "bootstrap-modal.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-modal.js")
-      case "fobo" :: "bootstrap-modal.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-modal.js")
-      case "fobo" :: "bootstrap-popover.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-popover.js")
-      case "fobo" :: "bootstrap-popover.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-popover.js")
-      case "fobo" :: "bootstrap-scrollspy.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-scrollspy.js")
-      case "fobo" :: "bootstrap-scrollspy.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-scrollspy.js")
-      case "fobo" :: "bootstrap-tabs.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-tabs.js")
-      case "fobo" :: "bootstrap-tabs.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-tabs.js")
-      case "fobo" :: "bootstrap-twipsy.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-twipsy.js")
-      case "fobo" :: "bootstrap-twipsy.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-twipsy.js")
-    }
-  }
+//  lazy val bootstrap140: Unit = {
+//    ResourceServer.rewrite {
+//      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "css", "bootstrap.css")
+//      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "orgin", "css", "bootstrap-min.css")
+//      /*All in one script*/
+//      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-all.js")
+//      case "fobo" :: "bootstrap.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-all.js")
+//      /*split from all script*/
+//      case "fobo" :: "bootstrap-alerts.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-alerts.js")
+//      case "fobo" :: "bootstrap-alerts.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-alerts.js")
+//      case "fobo" :: "bootstrap-buttons.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-buttons.js")
+//      case "fobo" :: "bootstrap-buttons.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-buttons.js")
+//      case "fobo" :: "bootstrap-dropdown.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-dropdown.js")
+//      case "fobo" :: "bootstrap-dropdown.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-dropdown.js")
+//      case "fobo" :: "bootstrap-modal.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-modal.js")
+//      case "fobo" :: "bootstrap-modal.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-modal.js")
+//      case "fobo" :: "bootstrap-popover.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-popover.js")
+//      case "fobo" :: "bootstrap-popover.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-popover.js")
+//      case "fobo" :: "bootstrap-scrollspy.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-scrollspy.js")
+//      case "fobo" :: "bootstrap-scrollspy.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-scrollspy.js")
+//      case "fobo" :: "bootstrap-tabs.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-tabs.js")
+//      case "fobo" :: "bootstrap-tabs.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-tabs.js")
+//      case "fobo" :: "bootstrap-twipsy.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-twipsy.js")
+//      case "fobo" :: "bootstrap-twipsy.js" :: Nil => List("fobo", "bootstrap", "1.4.0", "js", "bootstrap-twipsy.js")
+//    }
+//  }
 
   lazy val foundation215: Unit = {
     ResourceServer.rewrite {

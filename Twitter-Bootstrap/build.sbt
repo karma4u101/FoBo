@@ -1,8 +1,8 @@
-name := "FoBo-Font-Awesome"
+name := "FoBo-Twitter-Bootstrap"
 
 organization := "net.liftmodules"
 
-version <<= liftVersion apply { _ + "-0.0.4-SNAPSHOT" }
+version <<= liftVersion apply { _ + "-0.0.1-SNAPSHOT" }
 
 crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 
@@ -11,7 +11,6 @@ logLevel := Level.Info  //Level.Info.Debug
 scalacOptions ++= Seq("-deprecation")
 
 EclipseKeys.withSource := true
-
 
 resolvers ++= Seq(
   "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
