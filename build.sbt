@@ -4,11 +4,11 @@ organization := "net.liftmodules"
 
 liftVersion in ThisBuild <<= liftVersion ?? "2.5-SNAPSHOT"
 
-version <<= liftVersion apply { _ + "-0.7.11-SNAPSHOT" }
+version <<= liftVersion apply { _ + "-0.8.0-SNAPSHOT" }
 
 crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion in ThisBuild := "2.10.0"
+scalaVersion in ThisBuild := "2.9.2"
 
 logLevel := Level.Info  //Level.Info.Debug
 
@@ -26,7 +26,7 @@ resolvers ++= Seq(
 libraryDependencies <++= liftVersion { v =>
     "net.liftweb"      %% "lift-webkit"          % v          % "compile" :: 
     "net.liftweb"      %% "lift-testkit"         % v          % "compile" :: 
-    "net.liftmodules"  %% "fobo-font-awesome"    % (v+"-0.0.4-SNAPSHOT") % "compile" :: 
+    "net.liftmodules"  %% "fobo-font-awesome"    % (v+"-0.1.0-SNAPSHOT") % "compile" :: 
     "net.liftmodules"  %% "fobo-twitter-bootstrap"    % (v+"-0.0.1-SNAPSHOT") % "compile" :: 
     "net.liftmodules"  %% "lift-jquery-module"   % (v+"-2.1-SNAPSHOT") % "compile" ::     
     Nil
