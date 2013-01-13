@@ -14,29 +14,19 @@ Peter Petersson
 Update log
 ----------
 
+For update history see the [History log] section
+
 **Latest Module Version:**
 - **2013-01-12** -- 0.1.0-SNAPSHOT 
-- **2013-01-10** -- 0.0.4-SNAPSHOT 
-- **2013-01-04** -- 0.0.3-SNAPSHOT
-- **2013-01-02** -- 0.0.2-SNAPSHOT
-- **2012-12-30** -- 0.0.1-SNAPSHOT
 
-**Latest Updates:**
+**Latest Update:**
 - **2013-01-12** -- 0.1.0-SNAPSHOT Adding font-awesome v3.0.0
-- **2013-01-10** -- 0.0.4-SNAPSHOT Using font-awesome with TB it is no longer needed to explicitly specify a modified bootstrap.css file.
-- **2013-01-04** -- 0.0.3-SNAPSHOT Changed package object name and decoupling the module future for use in FoBo.
-- **2013-01-02** -- 0.0.2-SNAPSHOT Updated from 2.0 tag data to master/zip from homepage as there was issues on windows.
-- **2012-12-30** -- 0.0.1-SNAPSHOT First draft.
 
 **Latest Stable Releases:**
 - None
 
 **Latest Snapshot Release:**
 - **2013-01-10** -- 0.0.4-SNAPSHOT artifacts for Lift 2.5-SNAPSHOTS (Scala 2.10.0, 2.9.1, 2.9.1-1, 2.9.1)
-- **2013-01-02** -- 0.0.3-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
-- **2013-01-02** -- 0.0.2-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
-- **2012-12-30** -- 0.0.1-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
-
 
 Integration into your project 
 -------------------------------
@@ -68,5 +58,25 @@ Put the following in your project build.sbt files lift libraryDependencies secti
     <link rel="stylesheet" type='text/css' href='[path/to/you/app/specific/css/file/in/the/webapp/dir]'>
 
 For more information on how to use the font awesome fonts see [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
+
+### History log
+----------------
+
+**Module Version:**
+- **2013-01-10** -- 0.0.4-SNAPSHOT 
+- **2013-01-04** -- 0.0.3-SNAPSHOT
+- **2013-01-02** -- 0.0.2-SNAPSHOT
+- **2012-12-30** -- 0.0.1-SNAPSHOT
+
+**Updates:**
+- **2013-01-10** -- 0.0.4-SNAPSHOT Using font-awesome with TB it is no longer needed to explicitly specify a modified bootstrap.css file.
+- **2013-01-04** -- 0.0.3-SNAPSHOT Changed package object name and decoupling the module future for use in FoBo.
+- **2013-01-02** -- 0.0.2-SNAPSHOT Updated from 2.0 tag data to master/zip from homepage as there was issues on windows.
+- **2012-12-30** -- 0.0.1-SNAPSHOT First draft.
+
+**Snapshot Release:**
+- **2013-01-02** -- 0.0.3-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
+- **2013-01-02** -- 0.0.2-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
+- **2012-12-30** -- 0.0.1-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 
 
