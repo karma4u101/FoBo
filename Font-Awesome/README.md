@@ -26,13 +26,16 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - None
 
 **Latest Snapshot Release:**
-- **2013-01-10** -- 0.0.4-SNAPSHOT artifacts for Lift 2.5-SNAPSHOTS (Scala 2.10.0, 2.9.1, 2.9.1-1, 2.9.1)
+- **2013-01-12** -- 0.1.0-SNAPSHOT published artifacts for Lift 2.5-M4 and 2.5-SNAPSHOT (Scala 2.10.0, 2.9.1, 2.9.1-1, 2.9.1)
+
 
 Integration into your project 
 -------------------------------
 
-This module is used by the FoBo module to, via [FoBo](http://fortawesome.github.com/FoBo/) provide [Font Awesome](http://fortawesome.github.com/Font-Awesome/). 
-However the module can be used separatly, the following describes how to use it as a separate module (without the use of the [FoBo](http://fortawesome.github.com/FoBo/)).
+This module is used by the FoBo module to, via [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md) provide [Font Awesome](http://fortawesome.github.com/Font-Awesome/). 
+However the module can be used separatly and the following describes how to set up the module in your project **as a separate module** (without using the [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md) meta module). 
+For information on how to use Font-Awesome with the FoBo module see [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md)
+
 
 ### Dependancy
 
@@ -46,11 +49,7 @@ Put the following in your project build.sbt files lift libraryDependencies secti
     :
     //Use this if you are planing to use font-awesome without twitter bootstrap 
     FoBoFontAwesome.InitParam.ToolKit=FoBoFontAwesome.FontAwesomeXYZ 
-    (usage with FoBo is FoBo.InitParam.ToolKit=FoBo.FontAwesomeXYZ)
-
-    //Use this if you are planing to use font-awesome with Twitter Bootstrap version XYZ 
-    FoBoFontAwesome.InitParam.ToolKit=FoBoFontAwesome.FontAwesomeXYZTBXYZ 
-    (usage with FoBo is FoBo.InitParam.ToolKit=FoBo.FontAwesomeXXXTBXYZ)    
+    (usage with FoBo is FoBo.InitParam.ToolKit=FoBo.FontAwesomeXYZ)   
 
 ### Lift FoBo Template hooks
 
@@ -63,19 +62,20 @@ For more information on how to use the font awesome fonts see [Font Awesome](htt
 ### History log
 ----------------
 
-**Module Version:**
+**Module Version history:**
 - **2013-01-10** -- 0.0.4-SNAPSHOT 
 - **2013-01-04** -- 0.0.3-SNAPSHOT
 - **2013-01-02** -- 0.0.2-SNAPSHOT
 - **2012-12-30** -- 0.0.1-SNAPSHOT
 
-**Updates:**
+**Updates history:**
 - **2013-01-10** -- 0.0.4-SNAPSHOT Using font-awesome with TB it is no longer needed to explicitly specify a modified bootstrap.css file.
 - **2013-01-04** -- 0.0.3-SNAPSHOT Changed package object name and decoupling the module future for use in FoBo.
 - **2013-01-02** -- 0.0.2-SNAPSHOT Updated from 2.0 tag data to master/zip from homepage as there was issues on windows.
 - **2012-12-30** -- 0.0.1-SNAPSHOT First draft.
 
-**Snapshot Release:**
+**Snapshot Release history:**
+- **2013-01-10** -- 0.0.4-SNAPSHOT artifacts for Lift 2.5-SNAPSHOTS (Scala 2.10.0, 2.9.1, 2.9.1-1, 2.9.1)
 - **2013-01-02** -- 0.0.3-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2013-01-02** -- 0.0.2-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
 - **2012-12-30** -- 0.0.1-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.1)
