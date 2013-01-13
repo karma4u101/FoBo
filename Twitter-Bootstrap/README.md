@@ -1,5 +1,5 @@
-FoBo-Font-Awesome
-=================
+FoBo-Twitter-Bootstrap
+======================
 
 This sub module provides Twitter Bootstrap to the Fobo Module, but can also be used as-is (see below for setup information).
 For more information on how to use Twitter Bootstrap in the FoBo module see the [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo).
@@ -14,24 +14,28 @@ Peter Petersson
 Update log
 ----------
 
+For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap#history-log) section
+
 **Latest Module Version:** 
 - **2013-01-10** -- 0.0.1-SNAPSHOT
 
 **Latest Updates:**
-- **2013-01-10** -- 0.0.1-SNAPSHOT
+- **2013-01-10** -- 0.0.1-SNAPSHOT First Draft
 
 **Latest Stable Releases:**
 - None
 
 **Latest Snapshot Release:**
-- **2013-01-10** -- 0.0.4-SNAPSHOT artifacts for Lift 2.5-SNAPSHOTS (Scala 2.10.0, 2.9.1, 2.9.1-1, 2.9.1)
+- **2013-01-12** -- 0.0.1-SNAPSHOT published artifacts for Lift 2.5-M4 and 2.5-SNAPSHOT (Scala 2.10.0, 2.9.1, 2.9.1-1, 2.9.1)
+
 
 
 Integration into your project 
 -------------------------------
 
-This module is used by the FoBo module to, via [FoBo](http://fortawesome.github.com/FoBo/) provide [Twitter Bootstrap](http://twitter.github.com/bootstrap/). 
-However the module can be used separatly, the following describes how to use it as a separate module (without the use of the [FoBo](http://fortawesome.github.com/FoBo/)).
+This module is used by the FoBo module to, via [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md) provide [Twitter Bootstrap](http://twitter.github.com/bootstrap/). 
+However the module can be used separatly and the following describes how to set up the module in your project **as a separate module** (without using the [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md) meta module). 
+For information on how to use this module with the FoBo module see [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md)
 
 ### Dependancy
 
@@ -58,4 +62,12 @@ Put the following in your project build.sbt files lift libraryDependencies secti
 
 For more information on how to use Twitter Bootstrap see [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 
+### History log
+----------------
+
+**Module Version history:**
+
+**Updates history:**
+
+**Snapshot Release history:**
 
