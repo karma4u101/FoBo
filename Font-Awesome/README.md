@@ -15,12 +15,14 @@ Update log
 ----------
 
 **Latest Module Version:**
+- **2013-01-12** -- 0.1.0-SNAPSHOT 
 - **2013-01-10** -- 0.0.4-SNAPSHOT 
 - **2013-01-04** -- 0.0.3-SNAPSHOT
 - **2013-01-02** -- 0.0.2-SNAPSHOT
 - **2012-12-30** -- 0.0.1-SNAPSHOT
 
 **Latest Updates:**
+- **2013-01-12** -- 0.1.0-SNAPSHOT Adding font-awesome v3.0.0
 - **2013-01-10** -- 0.0.4-SNAPSHOT Using font-awesome with TB it is no longer needed to explicitly specify a modified bootstrap.css file.
 - **2013-01-04** -- 0.0.3-SNAPSHOT Changed package object name and decoupling the module future for use in FoBo.
 - **2013-01-02** -- 0.0.2-SNAPSHOT Updated from 2.0 tag data to master/zip from homepage as there was issues on windows.

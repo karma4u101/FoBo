@@ -17,21 +17,27 @@ package object FoBoFA {
     abstract trait FAToolkit
 
     /**
-     * Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot
      *
-     * '''Example:'''
-     *
-     * {{{
-     *   FoBo.InitParam.JQuery=FoBo.JQuery172
-     *   FoBo.InitParam.Toolkit=FoBo.Bootstrap222
-     *   FoBo.InitParam.Toolkit=FoBo.PrettifyJun2011
-     * }}}
-     * This example uses the Bootstrap v2.2.2 option and adds the Google code Prettify vJun2011
-     * to the enabled toolkits.
      */
     object InitParam extends FAToolkit {
       var ToolKit: FAToolkit = null //FontAwesome200
     }
+    
+    /**
+     * Enable usage of Font-Awesome version 3_0_0 in your bootstrap liftweb Boot.
+     * @version 3.0.0
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome300
+     * }}}
+     *
+     */
+    case object FontAwesome300 extends FAToolkit {
+      FAResources.fontAwesome300
+    }
+        
 
     /**
      * Enable usage of Font-Awesome version 2_0_0 in your bootstrap liftweb Boot.
@@ -40,7 +46,7 @@ package object FoBoFA {
      *  '''Example:'''
      *
      * {{{
-     *   FoBo.InitParam.Toolkit=FoBo.FontAwesome200
+     *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome200
      * }}}
      *
      */
@@ -56,7 +62,7 @@ package object FoBoFA {
      *  '''Example:'''
      *
      * {{{
-     *   FoBo.InitParam.Toolkit=FoBo.FontAwesome200
+     *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome200
      * }}}
      *
      */
@@ -75,6 +81,16 @@ package object FoBoFA {
           case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "2.0.0", "css", "font-awesome-min.css")
         }
       }
+      
+      lazy val fontAwesome300 = {
+        ResourceServer.rewrite {
+          case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "3.0.0", "css", "font-awesome.css")
+          case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "3.0.0", "css", "font-awesome-min.css")
+          case "fobo" :: "font-awesome-ie7.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "3.0.0", "css", "font-awesome-ie7.css")
+          case "fobo" :: "font-awesome-ie7.css" :: Nil => List("fobo", "font-awesome", "3.0.0", "css", "font-awesome-ie7.css")
+
+        }
+      }      
       
       lazy val fontAwesome200TB222 = {
         ResourceServer.rewrite {

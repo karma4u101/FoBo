@@ -29,6 +29,7 @@ Toolkit:s and available versions
 --------------------------------
 
 **Latest Module Version:** 
+- **2013-01-13** -- 0.8.0-SNAPSHOT
 - **2013-01-10** -- 0.7.11-SNAPSHOT
 - **2013-01-04** -- 0.7.10-SNAPSHOT
 - **2013-01-02** -- 0.7.9-SNAPSHOT
@@ -37,6 +38,7 @@ Toolkit:s and available versions
   :
 
 **Latest Updates:**
+- **2013-01-13** -- 0.8.0-SNAPSHOT Added support for Font-Awesome v3.0.0 in FoBo-Font-Awesome v0.1.0 included in this build.
 - **2013-01-10** -- 0.7.11-SNAPSHOT Now internally using the FoBo-Twitter-Bootstrap module (v0.0.1) and added Scala version 2.10 build. 
 - **2013-01-04** -- 0.7.10-SNAPSHOT Decoupling the FoBo-Font-Awesome module future (v0.0.3)
 - **2013-01-92** -- 0.7.9-SNAPSHOT Updated dep. on FoBo-Font-Awesome to v0.0.2.
@@ -53,6 +55,7 @@ Toolkit:s and available versions
 - None
 
 **Latest Snapshot Release:**
+- **2013-01-13** -- 0.8.0-SNAPSHOT artifacts for Lift 2.5-M4 (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
 - **2013-01-10** -- 0.7.11-SNAPSHOT artifacts for Lift 2.5-SNAPSHOTS (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
 - **2013-01-04** -- 0.7.10-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
 - **2013-01-02** -- 0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
