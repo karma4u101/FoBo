@@ -8,7 +8,7 @@ version <<= liftVersion apply { _ + "-0.8.0-SNAPSHOT" }
 
 crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion in ThisBuild := "2.9.1"
+scalaVersion in ThisBuild := "2.9.2"
 
 logLevel := Level.Info  //Level.Info.Debug
 
