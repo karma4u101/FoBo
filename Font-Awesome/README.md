@@ -14,7 +14,7 @@ Peter Petersson
 Update log
 ----------
 
-For update history see the [[History log]] section
+For update history see the [History log][#history-log] section
 
 **Latest Module Version:**
 - **2013-01-12** -- 0.1.0-SNAPSHOT 
@@ -59,8 +59,9 @@ Put the following in your project build.sbt files lift libraryDependencies secti
 
 For more information on how to use the font awesome fonts see [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 
-History log
------------
+
+### History log
+----------------
 
 **Module Version:**
 - **2013-01-10** -- 0.0.4-SNAPSHOT 
