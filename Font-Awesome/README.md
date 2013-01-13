@@ -14,7 +14,7 @@ Peter Petersson
 Update log
 ----------
 
-For update history see the [History log] section
+For update history see the [History log](href=#history-log) section
 
 **Latest Module Version:**
 - **2013-01-12** -- 0.1.0-SNAPSHOT 
