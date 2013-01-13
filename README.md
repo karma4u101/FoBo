@@ -28,7 +28,7 @@ Peter Petersson
 Update log
 ----------
 
-For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/FoBo#history-log) section
+For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Module Version:** 
 - **2013-01-13** -- 0.8.0-SNAPSHOT
@@ -40,7 +40,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - None
 
 **Latest Snapshot Release:**
-- **2013-01-13** -- 0.8.0-SNAPSHOT artifacts for Lift 2.5-M4 (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
+- **2013-01-13** -- 0.8.0-SNAPSHOT artifacts for Lift 2.5-M4 and Lift 2.5-SNAPSHOT (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
 
 
 Toolkit:s and available versions
