@@ -59,6 +59,7 @@ Put the following in your project build.sbt files lift libraryDependencies secti
 
 For more information on how to use the font awesome fonts see [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 
+
 ### History log
 ----------------
 
