@@ -33,8 +33,10 @@ Integration into your project
 -------------------------------
 
 This module is used by the FoBo module to, via [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md) provide [Font Awesome](http://fortawesome.github.com/Font-Awesome/). 
-However the module can be used separatly and the following describes how to set up the module in your project **as a separate module** (without using the [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md) meta module). 
-For information on how to use Font-Awesome with the FoBo module see [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md)
+
+However the FoBo-Font-Awesome module can be used separatly the only difference from using it from within FoBo is usage of a slightly different package object name in Lift boot. The following describes how to set up the module in your project **as a separate module** (without using the [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md) meta module). For setup in FoBo see the FoBo documentation.
+
+For more information on how to use Font-Awesome see the [FoBo Demo](http://www.media4u101.se/fobo-lift-template-demo/libo) and [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md).  
 
 
 ### Dependancy
@@ -48,7 +50,8 @@ Put the following in your project build.sbt files lift libraryDependencies secti
     import net.liftmodules.FoBo-Font-Awesome 
     :
     //Use this if you are planing to use font-awesome without twitter bootstrap 
-    FoBoFontAwesome.InitParam.ToolKit=FoBoFontAwesome.FontAwesomeXYZ 
+    FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesomeXYZ 
+    FoBoFA.init()
     (usage with FoBo is FoBo.InitParam.ToolKit=FoBo.FontAwesomeXYZ)   
 
 ### Lift FoBo Template hooks
