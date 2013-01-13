@@ -33,9 +33,13 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 Integration into your project 
 -------------------------------
 
-This module is used by the FoBo module to, via [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md) provide [Twitter Bootstrap](http://twitter.github.com/bootstrap/). 
-However the module can be used separatly and the following describes how to set up the module in your project **as a separate module** (without using the [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md) meta module). 
-For information on how to use this module with the FoBo module see [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md)
+This module is internaly used by the FoBo module to, via [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md) provide [Twitter Bootstrap](http://twitter.github.com/bootstrap/). 
+
+However the FoBo-Twitter-Bootstrap module can be used separatly the only difference from using it from within the FoBo meta module is the usage of a slightly different package object name in Lift boot. 
+
+The following describes how to set up the module in your project **as a separate module** (without using the [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md) meta module). For setup in FoBo see the FoBo documentation.
+
+For more information on how to use this module see the [FoBo Demo](http://www.media4u101.se/fobo-lift-template-demo/libo) and [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md).  
 
 ### Dependancy
 
@@ -48,6 +52,7 @@ Put the following in your project build.sbt files lift libraryDependencies secti
     import net.liftmodules.FoBo-Twitter-Bootstrap 
     :
     FoBoTB.InitParam.ToolKit=FoBoTB.BootstrapXXX 
+    FoBoTB.init()
     (usage with FoBo is FoBo.InitParam.ToolKit=FoBo.BootstrapXXX)
 
 ### Lift FoBo Template hooks
