@@ -26,8 +26,8 @@ seq(lessSettings:_*)
 (sourceDirectories in (Compile, LessKeys.less)) <<= (sourceDirectory in Compile) { 
   srcDir =>
     Seq(
-      srcDir / "less" / "bootstrap" / "2.2.2-no-icon"  / "overrides",
-      srcDir / "less" / "bootstrap" / "2.2.2-no-icon"  / "origin"
+      srcDir / "less" / "bootstrap" / "2.2.2"  / "overrides",
+      srcDir / "less" / "bootstrap" / "2.2.2"  / "origin"
     )
 }
 
@@ -35,7 +35,7 @@ seq(lessSettings:_*)
 
 (includeFilter in (Compile, LessKeys.less)) := ("bootstrap.less" | "responsive.less": FileFilter)
 
-(resourceManaged in (Compile, LessKeys.less)) <<= (crossTarget in Compile)(_ / "classes" / "toserve" / "fobo" / "bootstrap" / "2.2.2-no-icon" / "css" )
+(resourceManaged in (Compile, LessKeys.less)) <<= (crossTarget in Compile)(_ / "classes" / "toserve" / "fobo" / "bootstrap" / "2.2.2" / "css" )
 
 
 
