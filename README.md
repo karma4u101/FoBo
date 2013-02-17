@@ -31,15 +31,16 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Module Version:** 
-- **2013-01-13** -- 0.8.0-SNAPSHOT
+- **2013-01-17** -- 0.9.0-SNAPSHOT
 
 **Latest Updates:**
-- **2013-01-13** -- 0.8.0-SNAPSHOT Added support for Font-Awesome v3.0.0 in FoBo-Font-Awesome v0.1.0 included in this build. 
+- **2013-01-17** -- 0.9.0-SNAPSHOT Added support for Bootstrap v2.3.0 
 
 **Latest Stable Releases:**
 - None
 
 **Latest Snapshot Release:**
+- **2013-02-17** -- 0.9.0-SNAPSHOT artifacts for Lift 3.0-SNAPSHOT / Scala 2.10, Lift 2.5-SNAPSHOT (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2)
 - **2013-02-15** -- 0.8.0-SNAPSHOT artifacts for Lift 3.0-SNAPSHOT / Scala 2.10
 - **2013-01-13** -- 0.8.0-SNAPSHOT artifacts for Lift 2.5-M4 and Lift 2.5-SNAPSHOT (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
 
@@ -47,11 +48,11 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 Toolkit:s and available versions
 --------------------------------
 
-Artifacts is available for: Lift 2.4, 2.5-M1 to M4 and 2.5-SNAPSHOT 
+Artifacts is available for: Lift 2.4, 2.5-M1 to M4 and 2.5 and 3.0 SNAPSHOT
 
 This module includes the following toolkits versions
 
-- Bootstrap [v2.1.0, v2.2.0, v2.2.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+- Bootstrap [v2.1.0, v2.2.0, v2.2.2, v2.3.0] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 - Font Awesome [v2.0.0, v3.0.0] [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
 - Foundation [v2.1.4, v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
 - DataTables [v1.9.0] - [DataTables.net](http://datatables.net/)
@@ -84,7 +85,7 @@ As of v0.7.3-SNAPSHOT the following artifacts has been deprecated and will bee r
 - Foundation v2.1.4           -- Use v2.1.5 or newer
 - JQuery v1.6.4               -- Use v1.7.2 or newer
 - JQuery-Mobile v1.0.1        -- Use v1.1.0 
-- FoBo                        -- Use Bootstrap or Foundaton (removed in 0.8.0-SNAPSHOT)
+- FoBo                        -- Use Bootstrap or Foundation (removed in 0.8.0-SNAPSHOT)
     
 Quick Start
 -----------
@@ -332,6 +333,7 @@ Sbteclipse provides SBT command to create Eclipse project files
 ----------------
 
 **Module Version history:**
+- **2013-01-13** -- 0.8.0-SNAPSHOT
 - **2013-01-10** -- 0.7.11-SNAPSHOT
 - **2013-01-04** -- 0.7.10-SNAPSHOT
 - **2013-01-02** -- 0.7.9-SNAPSHOT
@@ -339,6 +341,7 @@ Sbteclipse provides SBT command to create Eclipse project files
 - **2012-12-29** -- 0.7.7-SNAPSHOT
 
 **Updates history:**
+- **2013-01-13** -- 0.8.0-SNAPSHOT Added support for Font-Awesome v3.0.0 in FoBo-Font-Awesome v0.1.0 included in this build. 
 - **2013-01-10** -- 0.7.11-SNAPSHOT Now internally using the FoBo-Twitter-Bootstrap module (v0.0.1) and added Scala version 2.10 build. 
 - **2013-01-04** -- 0.7.10-SNAPSHOT Decoupling the FoBo-Font-Awesome module future (v0.0.3)
 - **2013-01-92** -- 0.7.9-SNAPSHOT Updated dep. on FoBo-Font-Awesome to v0.0.2.
@@ -355,6 +358,8 @@ Sbteclipse provides SBT command to create Eclipse project files
 - None
 
 **Snapshot Release history:**
+- **2013-02-15** -- 0.8.0-SNAPSHOT artifacts for Lift 3.0-SNAPSHOT / Scala 2.10
+- **2013-01-13** -- 0.8.0-SNAPSHOT artifacts for Lift 2.5-M4 and Lift 2.5-SNAPSHOT (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
 - **2013-01-10** -- 0.7.11-SNAPSHOT artifacts for Lift 2.5-SNAPSHOTS (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
 - **2013-01-04** -- 0.7.10-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
 - **2013-01-02** -- 0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)

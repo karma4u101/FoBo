@@ -531,6 +531,7 @@ case object Bootstrap220 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap220
 }
 
+
 /**
  * Enable usage of Twitter Bootstrap version 2_2_2 in your bootstrap liftweb Boot.
  * @version 2.2.2
@@ -543,6 +544,20 @@ case object Bootstrap220 extends FoBoToolkit {
  */
 case object Bootstrap222 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap222
+}
+
+/**
+ * Enable usage of Twitter Bootstrap version 2_3_0 in your bootstrap liftweb Boot.
+ * @version 2.3.0
+ * 
+ * '''Example'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap230
+ * }}}
+ */
+case object Bootstrap230 extends FoBoToolkit {
+  net.liftmodules.FoBoTB.Bootstrap230
 }
 
 /**
