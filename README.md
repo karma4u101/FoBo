@@ -31,19 +31,17 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Module Version:** 
-- **2013-01-17** -- 0.9.0-SNAPSHOT
+- **2013-01-22** -- 0.9.1-SNAPSHOT
 
 **Latest Updates:**
+- **2013-01-22** -- 0.9.1-SNAPSHOT Using fobo-twitter-bootstrap v0.1.1 that fixes serving of minified bootstrap.js when not in development.
 - **2013-01-17** -- 0.9.0-SNAPSHOT Added support for Bootstrap v2.3.0 
 
 **Latest Stable Releases:**
 - None
 
 **Latest Snapshot Release:**
-- **2013-02-17** -- 0.9.0-SNAPSHOT artifacts for Lift 3.0-SNAPSHOT / Scala 2.10, Lift 2.5-SNAPSHOT (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2)
-- **2013-02-15** -- 0.8.0-SNAPSHOT artifacts for Lift 3.0-SNAPSHOT / Scala 2.10
-- **2013-01-13** -- 0.8.0-SNAPSHOT artifacts for Lift 2.5-M4 and Lift 2.5-SNAPSHOT (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
-
+- **2013-01-22** -- 0.9.1-SNAPSHOT artifacts for Lift 2.5-RC1 (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0-SNAPSHOT (Scala 2.10)
 
 Toolkit:s and available versions
 --------------------------------
@@ -333,6 +331,7 @@ Sbteclipse provides SBT command to create Eclipse project files
 ----------------
 
 **Module Version history:**
+- **2013-01-17** -- 0.9.0-SNAPSHOT
 - **2013-01-13** -- 0.8.0-SNAPSHOT
 - **2013-01-10** -- 0.7.11-SNAPSHOT
 - **2013-01-04** -- 0.7.10-SNAPSHOT
@@ -341,6 +340,7 @@ Sbteclipse provides SBT command to create Eclipse project files
 - **2012-12-29** -- 0.7.7-SNAPSHOT
 
 **Updates history:**
+- **2013-01-17** -- 0.9.0-SNAPSHOT Added support for Bootstrap v2.3.0 
 - **2013-01-13** -- 0.8.0-SNAPSHOT Added support for Font-Awesome v3.0.0 in FoBo-Font-Awesome v0.1.0 included in this build. 
 - **2013-01-10** -- 0.7.11-SNAPSHOT Now internally using the FoBo-Twitter-Bootstrap module (v0.0.1) and added Scala version 2.10 build. 
 - **2013-01-04** -- 0.7.10-SNAPSHOT Decoupling the FoBo-Font-Awesome module future (v0.0.3)
@@ -358,6 +358,7 @@ Sbteclipse provides SBT command to create Eclipse project files
 - None
 
 **Snapshot Release history:**
+- **2013-02-17** -- 0.9.0-SNAPSHOT artifacts for Lift 3.0-SNAPSHOT / Scala 2.10, Lift 2.5-SNAPSHOT 
 - **2013-02-15** -- 0.8.0-SNAPSHOT artifacts for Lift 3.0-SNAPSHOT / Scala 2.10
 - **2013-01-13** -- 0.8.0-SNAPSHOT artifacts for Lift 2.5-M4 and Lift 2.5-SNAPSHOT (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
 - **2013-01-10** -- 0.7.11-SNAPSHOT artifacts for Lift 2.5-SNAPSHOTS (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
@@ -365,6 +366,7 @@ Sbteclipse provides SBT command to create Eclipse project files
 - **2013-01-02** -- 0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
 - **2012-12-30** -- 0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
 - **2012-12-29** -- 0.7.7-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
+
   
 Authors
 -------
