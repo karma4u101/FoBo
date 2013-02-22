@@ -17,10 +17,10 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap#history-log) section
 
 **Latest Module Version:** 
-- **2013-01-10** -- 0.0.1-SNAPSHOT
+- **2013-01-22** -- 0.1.1-SNAPSHOT
 
 **Latest Updates:**
-- **2013-01-10** -- 0.0.1-SNAPSHOT First Draft
+- **2013-01-22** -- 0.1.1-SNAPSHOT Fixing serving of minified bootstrap.js when not in development.
 
 **Latest Stable Releases:**
 - None
@@ -71,8 +71,11 @@ For more information on how to use Twitter Bootstrap see [Twitter Bootstrap](htt
 ----------------
 
 **Module Version history:**
+- **2013-01-17** -- 0.1.0-SNAPSHOT
+- **2013-01-10** -- 0.0.1-SNAPSHOT
 
 **Updates history:**
+- **2013-01-10** -- 0.0.1-SNAPSHOT First Draft
 
 **Snapshot Release history:**
 

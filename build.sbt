@@ -27,7 +27,7 @@ libraryDependencies <++= liftVersion { v =>
     "net.liftweb"      %% "lift-webkit"          % v          % "compile" :: 
     "net.liftweb"      %% "lift-testkit"         % v          % "compile" :: 
     "net.liftmodules"  %% "fobo-font-awesome"    % (v+"-0.1.0-SNAPSHOT") % "compile" :: 
-    "net.liftmodules"  %% "fobo-twitter-bootstrap"    % (v+"-0.1.0-SNAPSHOT") % "compile" :: 
+    "net.liftmodules"  %% "fobo-twitter-bootstrap"    % (v+"-0.1.1-SNAPSHOT") % "compile" :: 
     "net.liftmodules"  %% "lift-jquery-module"   % (v+"-2.1-SNAPSHOT") % "compile" ::     
     Nil
 }

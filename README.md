@@ -31,9 +31,10 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Module Version:** 
-- **2013-01-17** -- 0.9.0-SNAPSHOT
+- **2013-01-22** -- 0.9.1-SNAPSHOT
 
 **Latest Updates:**
+- **2013-01-22** -- 0.9.1-SNAPSHOT Using fobo-twitter-bootstrap v0.1.1 that fixes serving of minified bootstrap.js when not in development.
 - **2013-01-17** -- 0.9.0-SNAPSHOT Added support for Bootstrap v2.3.0 
 
 **Latest Stable Releases:**
@@ -333,6 +334,7 @@ Sbteclipse provides SBT command to create Eclipse project files
 ----------------
 
 **Module Version history:**
+- **2013-01-17** -- 0.9.0-SNAPSHOT
 - **2013-01-13** -- 0.8.0-SNAPSHOT
 - **2013-01-10** -- 0.7.11-SNAPSHOT
 - **2013-01-04** -- 0.7.10-SNAPSHOT
