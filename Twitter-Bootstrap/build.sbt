@@ -2,7 +2,7 @@ name := "FoBo-Twitter-Bootstrap"
 
 organization := "net.liftmodules"
 
-version <<= liftVersion apply { _ + "-0.1.0-SNAPSHOT" }
+version <<= liftVersion apply { _ + "-0.1.1-SNAPSHOT" }
 
 crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 
@@ -38,22 +38,6 @@ libraryDependencies <++= scalaVersion { sv =>
 }
 
 
-//############################################################
-//#### THE BUILDINFO BUILD
-//## https://github.com/sbt/sbt-buildinfo
-//## 
-//##
-//#############################################################
-
-//seq(buildInfoSettings: _*)
-
-//sourceGenerators in Compile <+= buildInfo
-
-//buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
-
-//buildInfoPackage := "net.liftmodules.FoBo.lib"
-
-
 //#########################################################################
 //#### THE LESS BUILD
 //## 
@@ -73,12 +57,31 @@ libraryDependencies <++= scalaVersion { sv =>
 //## will exclude every .js file
 //################################################################
 seq(yuiSettings: _*)
-
+ 
 excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" | "*.js"
-
+ 
 excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css"
-
+ 
 YuiCompressorKeys.minSuffix := "-min" 
+ 
+//################################################################
+//#### THE SBT-JS COMPRESSION BUILD
+//## The 
+//## 
+//################################################################
+seq(jsSettings : _*)
+ 
+//(includeFilter in (Compile, JsKeys.js)) := ("*.jsm": FileFilter)
+ 
+//(excludeFilter in (Compile, JsKeys.js)) := ("*.js": FileFilter)
+ 
+//(sourceDirectories in (Compile, JsKeys.js)) <<= (sourceDirectory in Compile) {
+//  srcDir =>
+//    Seq(
+//      srcDir / "resources" / "toserve" / "fobo" / "bootstrap" / "2.3.0" / "js"
+//    )
+//}
+
 
 //################################################################
 //#### Publish to Media4u101

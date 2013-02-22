@@ -285,7 +285,7 @@ private object FoBoResources {
       case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.3.0", "css", "responsive.css")
       case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "bootstrap","2.3.0","css", "responsive-min.css")
       case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.3.0", "js", "bootstrap-all.js")
-      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.3.0", "js", "bootstrap-all.js")   
+      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.3.0", "js", "bootstrap-all-min.js")   
       /*js splitt*/
       case "fobo" :: "bootstrap-affix.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.3.0", "js", "bootstrap-affix.js")
       case "fobo" :: "bootstrap-affix.js" :: Nil => List("fobo",  "bootstrap","2.3.0", "js", "bootstrap-affix.js")   
