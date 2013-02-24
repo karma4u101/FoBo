@@ -6,13 +6,18 @@ object LiftModuleFoBoBuild extends Build {
   val liftVersion = SettingKey[String]("liftVersion", "Version number of the Lift Web Framework")
   
   lazy val root = Project(id   = "FoBo", 
-                             base = file(".")) aggregate(fontAwesome,bootstrap)                                       
-                                                     
+                             base = file(".")) dependsOn(bootstrap,fontAwesome,datatables)                                                 
+                  
+//aggregate(fontAwesome,bootstrap)                             
+                             
    lazy val fontAwesome = Project(id   = "FoBo-Font-Awesome", 
                              base = file("Font-Awesome"))  
                              
   lazy val bootstrap = Project(id   = "FoBo-Twitter-Bootstrap", 
                              base = file("Twitter-Bootstrap"))  
+                             
+lazy val datatables = Project(id   = "FoBo-DataTables", 
+                             base = file("DataTables"))                               
                              
   lazy val foboLess = Project(id   = "FoBo-Less", 
                              base = file("FoBo-Less"))                             

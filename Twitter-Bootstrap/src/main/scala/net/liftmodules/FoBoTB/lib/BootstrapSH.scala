@@ -1,4 +1,4 @@
-package net.liftmodules.FoBoTB.lib
+package net.liftmodules.FoBo.lib
 
 import _root_.net.liftweb._
 import util.{ Props }

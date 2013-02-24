@@ -31,9 +31,11 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Module Version:** 
+- **2013-01-24** -- 0.9.2-SNAPSHOT
 - **2013-01-22** -- 0.9.1-SNAPSHOT
 
 **Latest Updates:**
+- **2013-01-24** -- 0.9.2-SNAPSHOT Completed fobo-twitter-bootstrap and fobo-datatables module transaction.
 - **2013-01-22** -- 0.9.1-SNAPSHOT Using fobo-twitter-bootstrap v0.1.1 that fixes serving of minified bootstrap.js when not in development.
 - **2013-01-17** -- 0.9.0-SNAPSHOT Added support for Bootstrap v2.3.0 
 
@@ -41,12 +43,13 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - None
 
 **Latest Snapshot Release:**
+- **2013-01-24** -- 0.9.2-SNAPSHOT artifacts for Lift 2.5-RC1 and 2.5-SNAPSHOT (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0 -SNAPSHOT (Scala 2.10)
 - **2013-01-22** -- 0.9.1-SNAPSHOT artifacts for Lift 2.5-RC1 (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0-SNAPSHOT (Scala 2.10)
 
 Toolkit:s and available versions
 --------------------------------
 
-Artifacts is available for: Lift 2.4, 2.5-M1 to M4 and 2.5 and 3.0 SNAPSHOT
+Artifacts is available for: Lift 2.4, 2.5-M1 to M4, RC1 and 2.5, 3.0 SNAPSHOT
 
 This module includes the following toolkits versions
 

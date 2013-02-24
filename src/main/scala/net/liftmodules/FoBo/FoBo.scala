@@ -1,6 +1,6 @@
 package net.liftmodules
 
-import _root_.net.liftweb._
+import net.liftweb._
 import util.{ Props }
 import http._
 import common._
@@ -247,20 +247,6 @@ case object Knockout210 extends FoBoToolkit {
 case object Knockout200 extends FoBoToolkit {
   FoBoResources.knockout200
 }
-/**
- * Enable usage of DataTables version 1_9_0 in your bootstrap liftweb Boot.
- * @version 1.9.0
- * 
- *  '''Example:'''
- *  
- * {{{
- *   FoBo.InitParam.Toolkit=FoBo.DataTables190
- * }}}
- *  
- */
-case object DataTables190 extends FoBoToolkit {
-   FoBoResources.dataTables190
-}
 
 /**
  * Enable usage of Prettify version Jun2011 in your bootstrap liftweb Boot.
@@ -463,7 +449,7 @@ case object JQueryMobile110 extends FoBoToolkit {
  *  
  */
 case object FontAwesome300 extends FoBoToolkit {
-   net.liftmodules.FoBoFA.FontAwesome300
+  net.liftmodules.FoBoFA.FontAwesome300
 }
 
 /**
@@ -478,7 +464,7 @@ case object FontAwesome300 extends FoBoToolkit {
  *  
  */
 case object FontAwesome200 extends FoBoToolkit {
-   net.liftmodules.FoBoFA.FontAwesome200
+  net.liftmodules.FoBoFA.FontAwesome200
 }
 
 /**
@@ -500,7 +486,7 @@ case object FontAwesome200 extends FoBoToolkit {
  *  
  */
 case object FontAwesome200TB222 extends FoBoToolkit {
-   net.liftmodules.FoBoFA.FontAwesome200TB222
+  net.liftmodules.FoBoFA.FontAwesome200TB222
 }
 
 /**
@@ -561,6 +547,21 @@ case object Bootstrap230 extends FoBoToolkit {
 }
 
 /**
+ * Enable usage of DataTables version 1_9_0 in your bootstrap liftweb Boot.
+ * @version 1.9.0
+ * 
+ *  '''Example:'''
+ *  
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.DataTables190
+ * }}}
+ *  
+ */
+case object DataTables190 extends FoBoToolkit {
+  net.liftmodules.FoBoDT.DataTables190
+}
+
+/**
  * Enable usage of Foundation version 2_1_4 in your bootstrap liftweb Boot.
  * @version 2.1.4
  * 
@@ -590,6 +591,7 @@ case object Foundation215 extends FoBoToolkit {
 }
 
 
+
 /**
  * Object holding internally used FoBo resources. 
  */
@@ -608,77 +610,7 @@ private object FoBoResources {
     }
   }  
   
-  lazy val dataTables190 = {
-    ResourceServer.rewrite {
 
-      case "fobo" :: "jquery.dataTables.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "jquery.dataTables.css")
-      case "fobo" :: "jquery.dataTables.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "jquery.dataTables-min.css")          
-      
-      case "fobo" :: "jquery.dataTables_themeroller.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "jquery.dataTables_themeroller.css")
-      case "fobo" :: "jquery.dataTables_themeroller.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "jquery.dataTables_themeroller-min.css")          
-            
-      case "fobo" :: "AutoFill.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "AutoFill.css")
-      case "fobo" :: "AutoFill.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "AutoFill-min.css")
-      
-      case "fobo" :: "ColReorder.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "ColReorder.css")
-      case "fobo" :: "ColReorder.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "ColReorder-min.css")
-
-      case "fobo" :: "ColVis.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "ColVis.css")
-      case "fobo" :: "ColVis.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "ColVis-min.css")
-      
-      case "fobo" :: "ColVisAlt.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "ColVisAlt.css")
-      case "fobo" :: "ColVisAlt.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "ColVisAlt-min.css")    
-      
-      case "fobo" :: "TableTools_JUI.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "TableTools_JUI.css")
-      case "fobo" :: "TableTools_JUI.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "TableTools_JUI-min.css")    
-
-      case "fobo" :: "TableTools.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "css", "TableTools.css")
-      case "fobo" :: "TableTools.css" :: Nil => List("fobo", "datatables", "1.9.0", "css", "TableTools-min.css")    
-
-      
-      case "fobo" :: "themes" :: "smoothness.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "themes", "smoothness", "jquery-ui-1.8.4.custom.css") 
-      case "fobo" :: "themes" :: "smoothness.css" :: Nil => List("fobo", "datatables", "1.9.0", "themes", "smoothness", "jquery-ui-1.8.4.custom-min.css") 
-
-      case "fobo" :: "themes" :: "ui-lightness.css" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "themes", "ui-lightness", "jquery-ui-1.8.4.custom.css") 
-      case "fobo" :: "themes" :: "ui-lightness.css" :: Nil => List("fobo", "datatables", "1.9.0", "themes", "ui-lightness", "jquery-ui-1.8.4.custom-min.css") 
-      
-      
-      case "fobo" :: "jquery.dataTables.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "jquery.dataTables.js")
-      case "fobo" :: "jquery.dataTables.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "jquery.dataTables.js")
-      
-      case "fobo" :: "AutoFill.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "AutoFill.js")
-      case "fobo" :: "AutoFill.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "AutoFill.js")    
-      
-      case "fobo" :: "ColReorder.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "ColReorder.js")
-      case "fobo" :: "ColReorder.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "ColReorder.js")    
-
-      case "fobo" :: "ColVis.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "ColVis.js")
-      case "fobo" :: "ColVis.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "ColVis.js")    
-
-      case "fobo" :: "FixedColumns.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "FixedColumns.js")
-      case "fobo" :: "FixedColumns.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "FixedColumns.js")   
-      
-      case "fobo" :: "FixedHeader.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "FixedHeader.js")
-      case "fobo" :: "FixedHeader.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "FixedHeader.js")   
-
-      case "fobo" :: "KeyTable.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "KeyTable.js")
-      case "fobo" :: "KeyTable.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "KeyTable.js")   
-
-      case "fobo" :: "Scroller.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "Scroller.js")
-      case "fobo" :: "Scroller.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "Scroller.js")   
-
-      case "fobo" :: "TableTools.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "TableTools.js")
-      case "fobo" :: "TableTools.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "TableTools.js")   
-
-      case "fobo" :: "ZeroClipboard.js" :: Nil if Props.devMode => List("fobo", "datatables", "1.9.0", "js", "ZeroClipboard.js")
-      case "fobo" :: "ZeroClipboard.js" :: Nil => List("fobo", "datatables", "1.9.0", "js", "ZeroClipboard.js")   
-      
-      
-      case "fobo" :: "copy_cvs_xls_pdf.swf" :: Nil => List("fobo", "datatables", "1.9.0", "swf", "copy_cvs_xls_pdf.swf") 
-      case "fobo" :: "copy_cvs_xls.swf" :: Nil => List("fobo", "datatables", "1.9.0", "swf", "copy_cvs_xls.swf") 
-      
-    }
-  }
   
 //  lazy val fobo020 = {
 //    ResourceServer.rewrite {
