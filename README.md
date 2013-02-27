@@ -1,10 +1,10 @@
-FoBo - Generic Front-End Toolkit Module for Lift
-================================================
+FoBo - A Generic Front-End Toolkit Module for Lift
+==================================================
 
-With this Lift module you can chose among some of the industry leading web-centric open source front-end 
-toolkits. The module is simultaneously supporting several versions of the included toolkits, making maintenance, upgrade and 
-fall-back quick and easy (typically a one liner change in lift boot) and will ultimately jazz up your Lift applications with the toolkit(s) of 
-your choice.    
+With this Lift module you can chose among some of the industry leading web-centric open source front-end toolkits. 
+The module is simultaneously supporting several versions of the included toolkits, providing debuggable js and css files in development and minimized files otherwise, 
+making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot) and will ultimately jazz up your 
+Lift applications with the toolkit(s) of your choice.    
 
 Another benefit of using this module is the small but growing API that includes helper object:s and snippet:s (see API documents for usage) 
 that will take care of some common toolkit and component initiation, script generation and more. 
