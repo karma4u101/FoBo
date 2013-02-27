@@ -50,7 +50,7 @@ Put the following in your project build.sbt files lift libraryDependencies secti
 
 ### Lift FoBo boot hooks
 
-    import net.liftmodules.FoBo-Font-Awesome 
+    import net.liftmodules.FoBoFA 
     :
     //Use this if you are planing to use font-awesome without twitter bootstrap 
     FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesomeXYZ 

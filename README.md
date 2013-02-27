@@ -31,20 +31,22 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Module Version:** 
-- **2013-01-24** -- 0.9.2-SNAPSHOT
-- **2013-01-22** -- 0.9.1-SNAPSHOT
+- **2013-02-27** -- 0.9.3-SNAPSHOT
+- **2013-02-24** -- 0.9.2-SNAPSHOT
+- **2013-02-22** -- 0.9.1-SNAPSHOT
 
 **Latest Updates:**
-- **2013-01-24** -- 0.9.2-SNAPSHOT Completed fobo-twitter-bootstrap and fobo-datatables module transaction.
-- **2013-01-22** -- 0.9.1-SNAPSHOT Using fobo-twitter-bootstrap v0.1.1 that fixes serving of minified bootstrap.js when not in development.
+- **2013-02-27** -- 0.9.3-SNAPSHOT Adding knockout.js v2.2.1 and moving knockout to sub module/proj fobo-knockout. 
+- **2013-02-24** -- 0.9.2-SNAPSHOT Completed fobo-twitter-bootstrap and fobo-datatables module transaction.
+- **2013-02-22** -- 0.9.1-SNAPSHOT Using fobo-twitter-bootstrap v0.1.1 that fixes serving of minified bootstrap.js when not in development.
 - **2013-01-17** -- 0.9.0-SNAPSHOT Added support for Bootstrap v2.3.0 
 
 **Latest Stable Releases:**
 - None
 
 **Latest Snapshot Release:**
-- **2013-01-24** -- 0.9.2-SNAPSHOT artifacts for Lift 2.5-RC1 and 2.5-SNAPSHOT (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0 -SNAPSHOT (Scala 2.10)
-- **2013-01-22** -- 0.9.1-SNAPSHOT artifacts for Lift 2.5-RC1 (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0-SNAPSHOT (Scala 2.10)
+- **2013-02-24** -- 0.9.2-SNAPSHOT artifacts for Lift 2.5-RC1 and 2.5-SNAPSHOT (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0 -SNAPSHOT (Scala 2.10)
+- **2013-02-22** -- 0.9.1-SNAPSHOT artifacts for Lift 2.5-RC1 (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0-SNAPSHOT (Scala 2.10)
 
 Toolkit:s and available versions
 --------------------------------
@@ -60,7 +62,7 @@ This module includes the following toolkits versions
 - JQuery Mobile [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
 - JQuery  [v1.6.4, v1.7.1, v1.7.2, v1.8,2] - [JQuery](http://jquery.com/)
 - Google Code Prettify [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
-- Knockout JS [v2.0.0, v2.1.0] - [Knockout](http://knockoutjs.com/)
+- Knockout JS [v2.0.0, v2.1.0, v2.2.1] - [Knockout](http://knockoutjs.com/)
 
 Module names that can bee used in boot corresponding to the toolkit version above is
 
@@ -72,7 +74,7 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 - JQuery164,JQuery171,JQuery172,JQuery182 
 - JQueryModule.JQuery182 
 - PrettifyJun2011
-- Knockout200, Knockout210
+- Knockout200, Knockout210, Knockout221
 
 For more information on how to set this up see below.
 
