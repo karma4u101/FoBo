@@ -2,7 +2,7 @@ name := "FoBo"
 
 organization := "net.liftmodules"
 
-liftVersion in ThisBuild <<= liftVersion ?? "3.0-SNAPSHOT"
+liftVersion in ThisBuild <<= liftVersion ?? "2.5-RC2"
 
 version <<= liftVersion apply { _ + "-0.9.3-SNAPSHOT" }
 
@@ -30,7 +30,7 @@ libraryDependencies <++= liftVersion { v =>
     "net.liftmodules"  %% "fobo-datatables"    % (v+"-0.1.0-SNAPSHOT") % "compile" :: 
     "net.liftmodules"  %% "fobo-font-awesome"    % (v+"-0.1.0-SNAPSHOT") % "compile" :: 
     "net.liftmodules"  %% "fobo-twitter-bootstrap"    % (v+"-0.2.0-SNAPSHOT") % "compile" :: 
-    "net.liftmodules"  %% "lift-jquery-module"   % (v+"-2.2-SNAPSHOT") % "compile" ::     
+    "net.liftmodules"  %% "lift-jquery-module"   % (v+"-2.2") % "compile" ::     
     Nil
 }
 
