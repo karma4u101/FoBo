@@ -1,8 +1,12 @@
-name := "FoBo-DataTables"
+//name := "FoBo-DataTables"
+
+name <<= liftVersion apply { "FoBo-DataTables" + "_" + _ }
 
 organization := "net.liftmodules"
 
-version <<= liftVersion apply { _ + "-0.1.0-SNAPSHOT" }
+//version <<= liftVersion apply { _ + "-0.1.0-SNAPSHOT" }
+
+version := "0.1.0-SNAPSHOT"
 
 crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 

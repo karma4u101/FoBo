@@ -1,14 +1,18 @@
-name := "FoBo"
+liftVersion in ThisBuild <<= liftVersion ?? "2.5-RC2"
+
+//name := "FoBo"
+
+name <<= liftVersion apply { "FoBo" + "_" + _ }
 
 organization := "net.liftmodules"
 
-liftVersion in ThisBuild <<= liftVersion ?? "2.5-RC2"
+//version <<= liftVersion apply { _ + "-0.9.3-SNAPSHOT" }
 
-version <<= liftVersion apply { _ + "-0.9.3-SNAPSHOT" }
+version := "0.9.3-SNAPSHOT"
 
 crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion in ThisBuild := "2.10.0"
+scalaVersion in ThisBuild := "2.9.2"
 
 logLevel := Level.Info  //Level.Info.Debug
 
@@ -24,13 +28,17 @@ resolvers ++= Seq(
 )
 
 libraryDependencies <++= liftVersion { v =>
-    "net.liftweb"      %% "lift-webkit"          % v          % "compile" :: 
-    "net.liftweb"      %% "lift-testkit"         % v          % "compile" :: 
-    "net.liftmodules"  %% "fobo-knockout"    % (v+"-0.1.0-SNAPSHOT") % "compile" :: 
-    "net.liftmodules"  %% "fobo-datatables"    % (v+"-0.1.0-SNAPSHOT") % "compile" :: 
-    "net.liftmodules"  %% "fobo-font-awesome"    % (v+"-0.1.0-SNAPSHOT") % "compile" :: 
-    "net.liftmodules"  %% "fobo-twitter-bootstrap"    % (v+"-0.2.0-SNAPSHOT") % "compile" :: 
-    "net.liftmodules"  %% "lift-jquery-module"   % (v+"-2.2") % "compile" ::     
+    "net.liftweb"      %% "lift-webkit"                                 % v                     % "compile" :: 
+    "net.liftweb"      %% "lift-testkit"                                % v                     % "compile" :: 
+    "net.liftmodules"  %% ("fobo-knockout"+"_"+v.toLowerCase)           % "0.1.0-SNAPSHOT"      % "compile" :: 
+    "net.liftmodules"  %% ("fobo-datatables"+"_"+v.toLowerCase)         % "0.1.0-SNAPSHOT"      % "compile" :: 
+    "net.liftmodules"  %% ("fobo-font-awesome"+"_"+v.toLowerCase)       % "0.1.0-SNAPSHOT"      % "compile" :: 
+    "net.liftmodules"  %% ("fobo-twitter-bootstrap"+"_"+v.toLowerCase)  % "0.2.0-SNAPSHOT"      % "compile" :: 
+//    "net.liftmodules"  %% "fobo-knockout"                               % (v+"-0.1.0-SNAPSHOT") % "compile" :: 
+//    "net.liftmodules"  %% "fobo-datatables"                             % (v+"-0.1.0-SNAPSHOT") % "compile" :: 
+//    "net.liftmodules"  %% "fobo-font-awesome"                           % (v+"-0.1.0-SNAPSHOT") % "compile" :: 
+//    "net.liftmodules"  %% "fobo-twitter-bootstrap"                      % (v+"-0.2.0-SNAPSHOT") % "compile" ::     
+    "net.liftmodules"  %% "lift-jquery-module"                        % (v+"-2.2")            % "compile" ::     
     Nil
 }
 
