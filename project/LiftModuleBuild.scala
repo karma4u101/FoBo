@@ -1,9 +1,12 @@
 import sbt._
 import sbt.Keys._
+import java.lang.String
 
 object LiftModuleFoBoBuild extends Build {
   
   val liftVersion = SettingKey[String]("liftVersion", "Version number of the Lift Web Framework")
+  
+  val liftVName = SettingKey[String]("liftVName", "Lift Web Framework short version number to append to artifact name")
   
   lazy val root = Project(id   = "FoBo", 
                              base = file(".")) dependsOn(bootstrap,fontAwesome,datatables,knockout)                                                 
