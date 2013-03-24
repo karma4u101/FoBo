@@ -42,9 +42,39 @@ The following describes how to set up the module in your project **as a separate
 For more information on how to use Font-Awesome see the [FoBo Demo](http://www.media4u101.se/fobo-lift-template-demo/libo) and [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md).  
 
 
-### Dependancy
+### Dependency settings
 
-Put the following in your project build.sbt files lift libraryDependencies section 
+For module versions >= 0.9.3 put the following in your project build.sbt files lift libraryDependencies section 
+
+    "net.liftmodules" %% "moduleName_x1.y1 % "x2.y2[.z2][-SNAPSHOT/rcx/mx]"
+
+or if you are using Maven
+
+    <dependency>
+      <groupId>net.liftmodules</groupId>
+      <artifactId>moduleName_x1.y1_a.b.c</artifactId>
+      <version>x2.y2[.z2][-SNAPSHOT/rcx/mx]</version>
+    </dependency>
+
+Where x1.y1 is Lift major and minor version numbers and a.b.c is Scala
+version number and x2.y2.[z2] is the module's major x2, minor y2 and
+eventual incremental numbers z2 followed by a eventual SNAPSHOT 
+release candidate (rcX) or milestone (mX) version part.
+
+For example:
+
+    "net.liftmodules" %% "fobo-font-awesome_2.5 % "0.1.0-SNAPSHOT"
+      :
+    <dependency>
+      <groupId>net.liftmodules</groupId>
+      <artifactId>fobo-font-awesome_2.5_2.9.2</artifactId>
+      <version>0.1.0-SNAPSHOT</version>
+    </dependency>
+
+The example will include a module built for lift 2.5. If you are using maven observe that the artifact id also needs the Scala version.
+
+
+For older versions <= 0.9.2 put the following in your project build.sbt files lift libraryDependencies section 
 
     "net.liftmodules" %% "fobo-font-awesome" % (liftVersion+"-[module version]") 
 

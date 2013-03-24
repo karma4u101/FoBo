@@ -41,15 +41,45 @@ The following describes how to set up the module in your project **as a separate
 For more information on how to use DataTables see the [FoBo Demo](http://www.media4u101.se/fobo-lift-template-demo/) and [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md).  
 
 
-### Dependancy
+### Dependancy settings
 
-Put the following in your project build.sbt files lift libraryDependencies section 
+For module versions >= 0.9.3 put the following in your project build.sbt files lift libraryDependencies section 
+
+    "net.liftmodules" %% "moduleName_x1.y1 % "x2.y2[.z2][-SNAPSHOT/rcx/mx]"
+
+or if you are using Maven
+
+    <dependency>
+      <groupId>net.liftmodules</groupId>
+      <artifactId>moduleName_x1.y1_a.b.c</artifactId>
+      <version>x2.y2[.z2][-SNAPSHOT/rcx/mx]</version>
+    </dependency>
+
+Where x1.y1 is Lift major and minor version numbers and a.b.c is Scala
+version number and x2.y2.[z2] is the module's major x2, minor y2 and
+eventual incremental numbers z2 followed by a eventual SNAPSHOT 
+release candidate (rcX) or milestone (mX) version part.
+
+For example:
+
+    "net.liftmodules" %% "fobo-datatables_2.5 % "0.1.0-SNAPSHOT"
+      :
+    <dependency>
+      <groupId>net.liftmodules</groupId>
+      <artifactId>fobo-datatables_2.5_2.9.2</artifactId>
+      <version>0.1.0-SNAPSHOT</version>
+    </dependency>
+
+The example will include a module built for lift 2.5. If you are using maven observe that the artifact id also needs the Scala version.
+
+
+For older versions <= 0.9.2 put the following in your project build.sbt files lift libraryDependencies section 
 
     "net.liftmodules" %% "fobo-datatables" % (liftVersion+"-[module version]") 
 
 ### Lift FoBo boot hooks
 
-    import net.liftmodules.FoBo-DataTables 
+    import net.liftmodules.FoBoDT
     :
     //Use this if you are planing to use the FoBo DataTables sub module without using the FoBo meta module. 
     FoBoDT.InitParam.ToolKit=FoBoDT.DataTablesXYZ 
@@ -58,9 +88,9 @@ Put the following in your project build.sbt files lift libraryDependencies secti
 
 ### Lift FoBo Template hooks
 
-    <script src="/classpath/fobo/jquery.dataTables.js" charset="utf-8" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="/classpath/fobo/themes/smoothness.css">
     <link rel="stylesheet" type="text/css" href="/classpath/fobo/jquery.dataTables_themeroller.css">
+    <script src="/classpath/fobo/jquery.dataTables.js" charset="utf-8" type="text/javascript"></script>
 
 For more information on how to use datatables see [DataTables.net](http://datatables.net/)
 

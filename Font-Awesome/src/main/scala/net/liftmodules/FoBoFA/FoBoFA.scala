@@ -8,7 +8,7 @@ import common._
 package object FoBoFA {
 
     def init() {
-      LiftRules.addToPackages("net.liftmodules.FoBo")
+      LiftRules.addToPackages("net.liftmodules.FoBoFA")
       ResourceServer.allow {
         case "fobo" :: tail => true
       }

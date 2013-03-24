@@ -1,8 +1,11 @@
 FoBo - A Generic Front-End Toolkit Module for Lift
 ==================================================
 
+**OBS!** Note that there is a new version schema for module versions >= 0.9.3 
+See the [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) section for more information.
+
 With this Lift module you can chose among some of the industry leading web-centric open source front-end toolkits. 
-The module is simultaneously supporting several versions of the included toolkits, providing debuggable js and css files in development and minimized files otherwise, 
+The module is simultaneously supporting several versions of the included toolkits, providing debug-able js and css files in development and minimized files otherwise, 
 making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot) and will ultimately jazz up your 
 Lift applications with the toolkit(s) of your choice.    
 
@@ -123,16 +126,38 @@ Just less compile it and copy the resulting files over to FoBo.
 Integration into your project 
 -------------------------------
 
-### Dependancy 
+### Dependency settings
 	
-Add the following resolver OR clone the project and do a local-publish (tweaks, suggestions and contributions are welcome) 
+For module versions >= 0.9.3 put the following in your project build.sbt files lift libraryDependencies section 
 
-    **Note:** For lift version 2.5-M2 and forward the resolvers is the same as for Lift it self so there is no need to add extra resolvers.
-    resolvers += "Media4u101 SNAPSHOT Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/snapshots/"
-    alt.
-    resolvers += "Media4u101 Repository" at "http://www.media4u101.se:8081/nexus/content/repositories/releases/"    
+    "net.liftmodules" %% "moduleName_x1.y1 % "x2.y2[.z2][-SNAPSHOT/rcx/mx]"
 
-Put the following in your project build.sbt files lift libraryDependencies section 
+or if you are using Maven
+
+    <dependency>
+      <groupId>net.liftmodules</groupId>
+      <artifactId>moduleName_x1.y1_a.b.c</artifactId>
+      <version>x2.y2[.z2][-SNAPSHOT/rcx/mx]</version>
+    </dependency>
+
+Where x1.y1 is Lift major and minor version numbers and a.b.c is Scala
+version number and x2.y2.[z2] is the module's major x2, minor y2 and
+eventual incremental numbers z2 followed by a eventual SNAPSHOT 
+release candidate (rcX) or milestone (mX) version part.
+
+For example:
+
+    "net.liftmodules" %% "fobo_2.5 % "0.1.0-SNAPSHOT"
+      :
+    <dependency>
+      <groupId>net.liftmodules</groupId>
+      <artifactId>fobo_2.5_2.9.2</artifactId>
+      <version>0.1.0-SNAPSHOT</version>
+    </dependency>
+
+The example will include a module built for lift 2.5. If you are using maven observe that the artifact id also needs the Scala version.
+
+For older versions <= 0.9.2 put the following in your project build.sbt files lift libraryDependencies section 
 
     "net.liftmodules" %% "fobo" % (liftVersion+"-[module version]") 
 	
@@ -206,7 +231,7 @@ FoBo.InitParam.ToolKit=FoBo.FontAwesomeXXX
 
 Add the following to your template
 
-	<link data-lift="head" rel="stylesheet" href="/classpath/fobo/font-awesome.css">
+	<link rel="stylesheet" href="/classpath/fobo/font-awesome.css">
 
 ###Foundation Toolkit
 
