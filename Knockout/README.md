@@ -14,7 +14,7 @@ Peter Petersson
 Update log
 ----------
 
-For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome#history-log) section
+For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/Knockout#history-log) section
 
 **Latest Module Version:**
 - **2013-02-27** -- 0.1.0-SNAPSHOT 
