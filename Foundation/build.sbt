@@ -1,18 +1,12 @@
-name := "FoBo"
+name := "FoBo-Foundation"
 
 organization := "net.liftmodules"
 
-version := "0.9.3-SNAPSHOT"
-
-liftVersion in ThisBuild <<= liftVersion ?? "2.5-RC2"
-
-liftVName in ThisBuild <<= liftVersion apply { _.substring(0,3) }
+version := "0.1.0-SNAPSHOT"
 
 name <<= (name, liftVName) { (n, v) =>  n + "_" + v }
 
 crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
-
-scalaVersion in ThisBuild := "2.9.2"
 
 logLevel := Level.Info  //Level.Info.Debug
 
@@ -20,23 +14,15 @@ scalacOptions ++= Seq("-deprecation")
 
 EclipseKeys.withSource := true
 
-EclipseKeys.skipParents in ThisBuild := false
 
 resolvers ++= Seq(
   "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
 )
 
-libraryDependencies <++= (liftVersion,liftVName) { (v,n) =>
-    "net.liftweb"      %% "lift-webkit"                     % v                     % "provided" :: 
-    "net.liftweb"      %% "lift-testkit"                    % v                     % "provided" :: 
-    "net.liftmodules"  %% ("fobo-knockout"+"_"+n)           % "0.1.0-SNAPSHOT"      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-foundation"+"_"+n)         % "0.1.0-SNAPSHOT"      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-datatables"+"_"+n)         % "0.1.0-SNAPSHOT"      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-font-awesome"+"_"+n)       % "0.1.0-SNAPSHOT"      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-jquery-mobile"+"_"+n)      % "0.1.0-SNAPSHOT"      % "compile" ::
-    "net.liftmodules"  %% ("fobo-twitter-bootstrap"+"_"+n)  % "0.2.0-SNAPSHOT"      % "compile" ::      
-    "net.liftmodules"  %% "lift-jquery-module"              % (v+"-2.2")            % "compile" ::     
+libraryDependencies <++= liftVersion { v =>
+    "net.liftweb"      %% "lift-webkit"          % v          % "provided" ::
+    "net.liftweb"      %% "lift-testkit"         % v          % "provided" ::
     Nil
 }
 
@@ -61,13 +47,15 @@ libraryDependencies <++= scalaVersion { sv =>
 //## 
 //##
 //#############################################################
-seq(buildInfoSettings: _*)
 
-sourceGenerators in Compile <+= buildInfo
+//seq(buildInfoSettings: _*)
 
-buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
+//sourceGenerators in Compile <+= buildInfo
 
-buildInfoPackage := "net.liftmodules.FoBo.lib"
+//buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
+
+//buildInfoPackage := "net.liftmodules.FoBo.lib"
+
 
 //#########################################################################
 //#### THE LESS BUILD

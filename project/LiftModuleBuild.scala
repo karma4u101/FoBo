@@ -9,7 +9,7 @@ object LiftModuleFoBoBuild extends Build {
   val liftVName = SettingKey[String]("liftVName", "Lift Web Framework short version number to append to artifact name")
   
   lazy val root = Project(id   = "FoBo", 
-                             base = file(".")) dependsOn(bootstrap,fontAwesome,datatables,knockout,jquerymobile)                                                 
+                             base = file(".")) dependsOn(bootstrap,fontAwesome,foundation,datatables,knockout,jquerymobile)                                                 
                   
 //aggregate(fontAwesome,bootstrap)                             
                              
@@ -18,6 +18,9 @@ object LiftModuleFoBoBuild extends Build {
                              
   lazy val bootstrap = Project(id   = "FoBo-Twitter-Bootstrap", 
                              base = file("Twitter-Bootstrap"))  
+                             
+  lazy val foundation = Project(id   = "FoBo-Foundation", 
+                             base = file("Foundation"))                                               
                              
   lazy val datatables = Project(id   = "FoBo-DataTables", 
                              base = file("DataTables"))                  
