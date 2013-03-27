@@ -8,7 +8,7 @@ import common._
 package object FoBoFo {
 
   def init() {
-    LiftRules.addToPackages("net.liftmodules.FoBoFo")
+    LiftRules.addToPackages("net.liftmodules.FoBo")
     ResourceServer.allow {
       case "fobo" :: tail => true
     }

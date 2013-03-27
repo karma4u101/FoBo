@@ -132,7 +132,7 @@ package object FoBoTB {
    * params so default Toolkit and JQuery values will be used. 
    */
   def init() {
-    LiftRules.addToPackages("net.liftmodules.FoBoTB")
+    LiftRules.addToPackages("net.liftmodules.FoBo")
     ResourceServer.allow {
       case "fobo" :: tail => true
     }
