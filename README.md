@@ -34,11 +34,13 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Module Version:** 
+- **2013-03-27** -- 0.9.4-SNAPSHOT
 - **2013-02-27** -- 0.9.3-SNAPSHOT
 - **2013-02-24** -- 0.9.2-SNAPSHOT
 - **2013-02-22** -- 0.9.1-SNAPSHOT
 
 **Latest Updates:**
+- **2013-03-27** -- 0.9.4-SNAPSHOT New version schema see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) foundation is moved to sub module. 
 - **2013-02-27** -- 0.9.3-SNAPSHOT Adding knockout.js v2.2.1 and moving knockout to sub module/proj fobo-knockout. 
 - **2013-02-24** -- 0.9.2-SNAPSHOT Completed fobo-twitter-bootstrap and fobo-datatables module transaction.
 - **2013-02-22** -- 0.9.1-SNAPSHOT Using fobo-twitter-bootstrap v0.1.1 that fixes serving of minified bootstrap.js when not in development.
@@ -48,6 +50,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - None
 
 **Latest Snapshot Release:**
+- **2013-03-27** -- 0.9.4-SNAPSHOT artifacts for Lift 2.5 and 3.0 see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) for more information.
 - **2013-03-08** -- 0.9.3-SNAPSHOT artifacts for Lift 2.5-RC2 and Lift 3.0-SNAPSHOT
 - **2013-02-24** -- 0.9.2-SNAPSHOT artifacts for Lift 2.5-RC1 and 2.5-SNAPSHOT (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0 -SNAPSHOT (Scala 2.10)
 - **2013-02-22** -- 0.9.1-SNAPSHOT artifacts for Lift 2.5-RC1 (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0-SNAPSHOT (Scala 2.10)

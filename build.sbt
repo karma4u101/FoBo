@@ -12,7 +12,7 @@ name <<= (name, liftVName) { (n, v) =>  n + "_" + v }
 
 crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion in ThisBuild := "2.9.2"
+scalaVersion in ThisBuild := "2.10.0"
 
 logLevel := Level.Info  //Level.Info.Debug
 
