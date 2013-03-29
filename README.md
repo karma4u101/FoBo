@@ -34,26 +34,21 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Module Version:** 
+- **2013-03-29** -- 0.9.5-SNAPSHOT
 - **2013-03-27** -- 0.9.4-SNAPSHOT
-- **2013-02-27** -- 0.9.3-SNAPSHOT
-- **2013-02-24** -- 0.9.2-SNAPSHOT
-- **2013-02-22** -- 0.9.1-SNAPSHOT
+
 
 **Latest Updates:**
+- **2013-03-29** -- 0.9.5-SNAPSHOT Google-Code-Prettify and JQuery is moved to sub FoBo modules
 - **2013-03-27** -- 0.9.4-SNAPSHOT New version schema see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) foundation is moved to sub module. 
-- **2013-02-27** -- 0.9.3-SNAPSHOT Adding knockout.js v2.2.1 and moving knockout to sub module/proj fobo-knockout. 
-- **2013-02-24** -- 0.9.2-SNAPSHOT Completed fobo-twitter-bootstrap and fobo-datatables module transaction.
-- **2013-02-22** -- 0.9.1-SNAPSHOT Using fobo-twitter-bootstrap v0.1.1 that fixes serving of minified bootstrap.js when not in development.
-- **2013-01-17** -- 0.9.0-SNAPSHOT Added support for Bootstrap v2.3.0 
+
 
 **Latest Stable Releases:**
 - None
 
 **Latest Snapshot Release:**
+- **2013-03-29** -- 0.9.5-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
 - **2013-03-27** -- 0.9.4-SNAPSHOT artifacts for Lift 2.5 and 3.0 see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) for more information.
-- **2013-03-08** -- 0.9.3-SNAPSHOT artifacts for Lift 2.5-RC2 and Lift 3.0-SNAPSHOT
-- **2013-02-24** -- 0.9.2-SNAPSHOT artifacts for Lift 2.5-RC1 and 2.5-SNAPSHOT (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0 -SNAPSHOT (Scala 2.10)
-- **2013-02-22** -- 0.9.1-SNAPSHOT artifacts for Lift 2.5-RC1 (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0-SNAPSHOT (Scala 2.10)
 
 Toolkit:s and available versions
 --------------------------------
@@ -64,10 +59,10 @@ This module includes the following toolkits versions
 
 - Bootstrap [v2.1.0, v2.2.0, v2.2.2, v2.3.0] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 - Font Awesome [v2.0.0, v3.0.0] [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
-- Foundation [v2.1.4, v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
+- Foundation [v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
 - DataTables [v1.9.0] - [DataTables.net](http://datatables.net/)
 - JQuery Mobile [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
-- JQuery  [v1.6.4, v1.7.1, v1.7.2, v1.8,2] - [JQuery](http://jquery.com/)
+- JQuery  [v1.7.2, v1.8,2] - [JQuery](http://jquery.com/)
 - Google Code Prettify [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
 - Knockout JS [v2.0.0, v2.1.0, v2.2.1] - [Knockout](http://knockoutjs.com/)
 
@@ -365,6 +360,9 @@ Sbteclipse provides SBT command to create Eclipse project files
 ----------------
 
 **Module Version history:**
+- **2013-02-27** -- 0.9.3-SNAPSHOT
+- **2013-02-24** -- 0.9.2-SNAPSHOT
+- **2013-02-22** -- 0.9.1-SNAPSHOT
 - **2013-01-17** -- 0.9.0-SNAPSHOT
 - **2013-01-13** -- 0.8.0-SNAPSHOT
 - **2013-01-10** -- 0.7.11-SNAPSHOT
@@ -374,6 +372,10 @@ Sbteclipse provides SBT command to create Eclipse project files
 - **2012-12-29** -- 0.7.7-SNAPSHOT
 
 **Updates history:**
+- **2013-02-27** -- 0.9.3-SNAPSHOT Adding knockout.js v2.2.1 and moving knockout to sub module/proj fobo-knockout. 
+- **2013-02-24** -- 0.9.2-SNAPSHOT Completed fobo-twitter-bootstrap and fobo-datatables module transaction.
+- **2013-02-22** -- 0.9.1-SNAPSHOT Using fobo-twitter-bootstrap v0.1.1 that fixes serving of minified bootstrap.js when not in development.
+- **2013-01-17** -- 0.9.0-SNAPSHOT Added support for Bootstrap v2.3.0 
 - **2013-01-17** -- 0.9.0-SNAPSHOT Added support for Bootstrap v2.3.0 
 - **2013-01-13** -- 0.8.0-SNAPSHOT Added support for Font-Awesome v3.0.0 in FoBo-Font-Awesome v0.1.0 included in this build. 
 - **2013-01-10** -- 0.7.11-SNAPSHOT Now internally using the FoBo-Twitter-Bootstrap module (v0.0.1) and added Scala version 2.10 build. 
@@ -392,6 +394,9 @@ Sbteclipse provides SBT command to create Eclipse project files
 - None
 
 **Snapshot Release history:**
+- **2013-03-08** -- 0.9.3-SNAPSHOT artifacts for Lift 2.5-RC2 and Lift 3.0-SNAPSHOT
+- **2013-02-24** -- 0.9.2-SNAPSHOT artifacts for Lift 2.5-RC1 and 2.5-SNAPSHOT (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0 -SNAPSHOT (Scala 2.10)
+- **2013-02-22** -- 0.9.1-SNAPSHOT artifacts for Lift 2.5-RC1 (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0-SNAPSHOT (Scala 2.10)
 - **2013-02-17** -- 0.9.0-SNAPSHOT artifacts for Lift 3.0-SNAPSHOT / Scala 2.10, Lift 2.5-SNAPSHOT 
 - **2013-02-15** -- 0.8.0-SNAPSHOT artifacts for Lift 3.0-SNAPSHOT / Scala 2.10
 - **2013-01-13** -- 0.8.0-SNAPSHOT artifacts for Lift 2.5-M4 and Lift 2.5-SNAPSHOT (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 

@@ -22,11 +22,8 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 **Latest Update:**
 - **2013-02-24** -- 0.1.0-SNAPSHOT Initial split of DataTables into this sub project
 
-**Latest Stable Releases:**
-- None
-
-**Latest Snapshot Release:**
-- **2013-02-24** -- 0.1.0-SNAPSHOT published artifacts for Lift 2.5-RC1, 2.5-SNAPSHOT (Scala 2.10.0, 2.9.1, 2.9.1-1, 2.9.1) and Lift 3.0-SNAPSHOT
+**Latest Releases:**
+- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for releas information.
 
 
 Integration into your project 
@@ -104,7 +101,6 @@ For more information on how to use datatables see [DataTables.net](http://datata
 **Updates history:**
 - 
 
-**Snapshot Release history:**
-- 
+
 
 

@@ -22,12 +22,8 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 **Latest Update:**
 - **2013-01-12** -- 0.1.0-SNAPSHOT Adding font-awesome v3.0.0
 
-**Latest Stable Releases:**
-- None
-
-**Latest Snapshot Release:**
-- **2013-02-24** -- 0.1.0-SNAPSHOT published artifacts for Lift 2.5-RC1, 2.5-SNAPSHOT (Scala 2.10.0, 2.9.1, 2.9.1-1, 2.9.1) and Lift 3.0-SNAPSHOT
-- **2013-01-12** -- 0.1.0-SNAPSHOT published artifacts for Lift 2.5-M4 and 2.5-SNAPSHOT (Scala 2.10.0, 2.9.1, 2.9.1-1, 2.9.1)
+**Latest Releases:**
+- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for releas information.
 
 
 Integration into your project 

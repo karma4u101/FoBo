@@ -4,7 +4,7 @@ organization := "net.liftmodules"
 
 version := "0.9.5-SNAPSHOT"
 
-liftVersion in ThisBuild <<= liftVersion ?? "3.0-SNAPSHOT"
+liftVersion in ThisBuild <<= liftVersion ?? "2.5-RC2"
 
 liftVName in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
@@ -12,7 +12,7 @@ name <<= (name, liftVName) { (n, v) =>  n + "_" + v }
 
 crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion in ThisBuild := "2.10.0"
+scalaVersion in ThisBuild := "2.9.1"
 
 logLevel in ThisBuild := Level.Debug  //Level.Info.Debug
 

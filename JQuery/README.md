@@ -1,7 +1,7 @@
 FoBo-JQuery
 =========================
 
-This sub module provides JQuery to the Fobo Module, but can also be used as-is (see below for setup information).
+This sub module provides JQuery to the Fobo Module.
 For more information on how to use FoBo-JQuery in the FoBo module see the [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo).
 
 Contributions
@@ -20,13 +20,11 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2013-03-29** -- 0.1.0-SNAPSHOT 
 
 **Latest Update:**
-- **2013-03-29** -- 0.1.0-SNAPSHOT Making JQuery a FoBo subproject.
+- **2013-03-29** -- 0.1.0-SNAPSHOT Making JQuery a FoBo sub-module/project.
 
-**Latest Stable Releases:**
-- None
+**Latest Releases:**
+- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for releas information.
 
-**Latest Snapshot Release:**
-- 
 
 
 Integration into your project 

@@ -22,10 +22,8 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 **Latest Update:**
 - **2013-03-26** -- 0.1.0-SNAPSHOT Making ZURB/Foundation a FoBo subproject.
 
-**Latest Stable Releases:**
-- None
-
-**Latest Snapshot Release:**
+**Latest Releases:**
+- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for releas information.ot Release:**
 - 
 
 
