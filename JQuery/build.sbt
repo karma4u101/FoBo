@@ -1,4 +1,4 @@
-name := "FoBo-Font-Awesome"
+name := "FoBo-JQuery"
 
 organization := "net.liftmodules"
 
@@ -19,8 +19,9 @@ resolvers ++= Seq(
 )
 
 libraryDependencies <++= liftVersion { v =>
-    "net.liftweb"      %% "lift-webkit"          % v          % "provided" ::
-    "net.liftweb"      %% "lift-testkit"         % v          % "provided" ::
+    "net.liftweb"      %% "lift-webkit"          % v                     % "provided" ::
+    "net.liftweb"      %% "lift-testkit"         % v                     % "provided" ::
+    "net.liftmodules"  %% "lift-jquery-module"   % (v+"-2.3-SNAPSHOT")   % "compile" :: 
     Nil
 }
 

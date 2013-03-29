@@ -288,7 +288,7 @@ case object PrettifyJun2011 extends FoBoToolkit {
  * }}}
  */
 case object JQuery182 extends FoBoJQuery {
-  FoBoResources.jquery182
+  net.liftmodules.FoBoJQ.JQuery182
 }
 
 /**
@@ -302,7 +302,7 @@ case object JQuery182 extends FoBoJQuery {
  * }}}
  */
 case object JQuery172 extends FoBoJQuery {
-  FoBoResources.jquery172
+  net.liftmodules.FoBoJQ.JQuery172
 }
 
 /**
@@ -319,90 +319,6 @@ case object JQuery172 extends FoBoJQuery {
 case object JQueryMobile110 extends FoBoToolkit {
   net.liftmodules.FoBoJQM.JQueryMobile110
 }
-
-///**
-// * Enable usage of FoBo version 0_2_0 in your bootstrap liftweb Boot.
-// * 
-// * @version 0.2.0
-// * 
-// * '''Example'''
-// * 
-// * {{{
-// *   FoBo.InitParam.Toolkit=FoBo.FoBo020
-// * }}}
-// */
-//@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3") 
-//case object FoBo020 extends FoBoToolkit {
-//  FoBoResources.fobo020
-//  FoBoResources.bootstrap200
-//  FoBoResources.foundation215
-//}
-
-///**
-// * Enable usage of FoBo version 0_1_0 in your bootstrap liftweb Boot.
-// * 
-// * @version 0.1.0
-// * 
-// * '''Example'''
-// * 
-// * {{{
-// *   FoBo.InitParam.Toolkit=FoBo.FoBo010
-// * }}}
-// */
-//@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3") 
-//case object FoBo010 extends FoBoToolkit {
-//  FoBoResources.fobo010
-//  FoBoResources.bootstrap140
-//  FoBoResources.foundation214
-//}
-
-//
-///**
-// * Enable usage of Twitter Bootstrap version 1_4_0 in your bootstrap liftweb Boot.
-// * 
-// * @version 1.4.0
-// * 
-// * '''Example'''
-// * 
-// * {{{
-// *   FoBo.InitParam.Toolkit=FoBo.Bootstrap140
-// * }}}
-// */
-//@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3") 
-//case object Bootstrap140 extends FoBoToolkit {
-//  net.liftmodules.FoBoTB.Bootstrap140
-//}
-
-///**
-// * Enable usage of Twitter Bootstrap version 2_0_0 in your bootstrap liftweb Boot.
-// * @version 2.0.0
-// * 
-// * '''Example'''
-// * 
-// * {{{
-// *   FoBo.InitParam.Toolkit=FoBo.Bootstrap200
-// * }}}
-// */
-//@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3") 
-//case object Bootstrap200 extends FoBoToolkit {
-//  net.liftmodules.FoBoTB.Bootstrap200
-//}
-
-///**
-// * Enable usage of Twitter Bootstrap version 2_0_4 in your bootstrap liftweb Boot.
-// * @version 2.0.4
-// * 
-// * '''Example'''
-// * 
-// * {{{
-// *   FoBo.InitParam.Toolkit=FoBo.Bootstrap204
-// * }}}
-// */
-//@deprecated("Use Bootstrap210 or newer","FoBo v0.7.3")
-//case object Bootstrap204 extends FoBoToolkit {
-//  net.liftmodules.FoBoTB.Bootstrap204
-//}
-
 
 /**
  * Enable usage of Font-Awesome version 3_0_0 in your bootstrap liftweb Boot.
@@ -550,38 +466,6 @@ case object Foundation215 extends FoBoToolkit {
  */
 private object FoBoResources {
    
-  lazy val jquery182 = {
-    ResourceServer.rewrite {//fetched from the jquery module
-      case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "1.8.2", "js", "jquery.js")
-      case "fobo" :: "jquery.js" :: Nil => List("jquery", "1.8.2", "js", "jquery-min.js")
-    }
-  }   
-   
-  lazy val jquery172 = {
-    ResourceServer.rewrite {
-      case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "1.7.2", "js", "jquery.js")
-      case "fobo" :: "jquery.js" :: Nil => List("jquery", "1.7.2", "js", "jquery-min.js")
-    }
-  }
-  
-  lazy val jquery171 = {
-    ResourceServer.rewrite {
-      case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "1.7.1", "js", "jquery.js")
-      case "fobo" :: "jquery.js" :: Nil => List("jquery", "1.7.1", "js", "jquery-min.js")
-    }
-  }
-
-  lazy val jquery164 = {
-    ResourceServer.rewrite {
-      case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "1.6.4", "js", "jquery.js")
-      case "fobo" :: "jquery.js" :: Nil => List("jquery", "1.6.4", "js", "jquery-min.js")
-    }
-  }
-
-
-  
-
-
 }
   
 }

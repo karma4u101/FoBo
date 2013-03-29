@@ -6,8 +6,6 @@ version := "0.5-SNAPSHOT"
 
 //scalaVersion  := "2.9.1"
 
-logLevel := Level.Info
-//Level.Info.Debug
 
 //#########################################################################
 //#### THE LESS BUILD

@@ -14,7 +14,7 @@ crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 
 scalaVersion in ThisBuild := "2.10.0"
 
-logLevel := Level.Info  //Level.Info.Debug
+logLevel in ThisBuild := Level.Debug  //Level.Info.Debug
 
 scalacOptions ++= Seq("-deprecation")
 
@@ -30,14 +30,14 @@ resolvers ++= Seq(
 libraryDependencies <++= (liftVersion,liftVName) { (v,n) =>
     "net.liftweb"      %% "lift-webkit"                       % v                     % "provided" :: 
     "net.liftweb"      %% "lift-testkit"                      % v                     % "provided" :: 
+    "net.liftmodules"  %% ("fobo-jquery"+"_"+n)               % "0.1.0-SNAPSHOT"      % "compile" :: 
     "net.liftmodules"  %% ("fobo-knockout"+"_"+n)             % "0.1.0-SNAPSHOT"      % "compile" :: 
     "net.liftmodules"  %% ("fobo-foundation"+"_"+n)           % "0.1.0-SNAPSHOT"      % "compile" :: 
     "net.liftmodules"  %% ("fobo-datatables"+"_"+n)           % "0.1.0-SNAPSHOT"      % "compile" :: 
     "net.liftmodules"  %% ("fobo-font-awesome"+"_"+n)         % "0.1.0-SNAPSHOT"      % "compile" :: 
     "net.liftmodules"  %% ("fobo-jquery-mobile"+"_"+n)        % "0.1.0-SNAPSHOT"      % "compile" ::
+    "net.liftmodules"  %% ("fobo-twitter-bootstrap"+"_"+n)    % "0.2.0-SNAPSHOT"      % "compile" :: 
     "net.liftmodules"  %% ("fobo-google-code-prettify"+"_"+n) % "0.1.0-SNAPSHOT"      % "compile" ::
-    "net.liftmodules"  %% ("fobo-twitter-bootstrap"+"_"+n)    % "0.2.0-SNAPSHOT"      % "compile" ::      
-    "net.liftmodules"  %% "lift-jquery-module"                % (v+"-2.2-SNAPSHOT")   % "compile" ::     
     Nil
 }
 
