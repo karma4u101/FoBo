@@ -20,7 +20,7 @@ package object FoBoKO {
    *
    */
   object InitParam extends KOToolkit {
-    var ToolKit: KOToolkit = null //FontAwesome200
+    var ToolKit: KOToolkit = null 
   }
 
   /**

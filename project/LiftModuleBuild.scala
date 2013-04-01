@@ -9,8 +9,10 @@ object LiftModuleFoBoBuild extends Build {
   val liftVName = SettingKey[String]("liftVName", "Lift Web Framework short version number to append to artifact name")
   
   lazy val root = Project(id   = "FoBo", 
-                             base = file(".")) dependsOn(jquery,bootstrap,fontAwesome,foundation,datatables,knockout,jquerymobile,prettify)                                                 
-                  
+                             base = file(".")) 
+                             .dependsOn(jquery,bootstrap,fontAwesome,foundation,datatables,knockout,jquerymobile,prettify)                                                 
+                             .settings(description := "FoBo", parallelExecution in Test := false)
+                             
 //aggregate(fontAwesome,bootstrap)                             
                              
    lazy val fontAwesome = Project(id   = "FoBo-Font-Awesome", 
