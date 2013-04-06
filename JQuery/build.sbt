@@ -4,7 +4,7 @@ organization := "net.liftmodules"
 
 version := "0.2.0-SNAPSHOT"
 
-name <<= (name, liftVName) { (n, v) =>  n + "_" + v }
+name <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
 crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 
@@ -18,10 +18,10 @@ resolvers ++= Seq(
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
 )
 
-libraryDependencies <++= (liftVersion,liftVName) { (v,n) =>
+libraryDependencies <++= (liftVersion,liftEdition) { (v,e) =>
     "net.liftweb"      %% "lift-webkit"                % v       % "provided" ::
     "net.liftweb"      %% "lift-testkit"               % v       % "provided" ::
-    "net.liftmodules"  %% ("lift-jquery-module"+"_"+n) % "2.3"   % "compile" :: 
+    "net.liftmodules"  %% ("lift-jquery-module"+"_"+e) % "2.3"   % "compile" :: 
     Nil
 }
 
