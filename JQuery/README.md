@@ -17,9 +17,11 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/Foundation#history-log) section
 
 **Latest Module Version:**
+- **2013-04-06** -- 0.2.0-SNAPSHOT
 - **2013-03-29** -- 0.1.0-SNAPSHOT 
 
 **Latest Update:**
+- **2013-04-06** -- 0.2.0-SNAPSHOT Using lift-query-module v2.3 for Lift v2.5 with new version schema.
 - **2013-03-29** -- 0.1.0-SNAPSHOT Making JQuery a FoBo sub-module/project.
 
 **Latest Releases:**

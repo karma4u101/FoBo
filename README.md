@@ -34,11 +34,13 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Module Version:** 
+- **2013-04-06** -- 0.9.6-SNAPSHOT
 - **2013-03-29** -- 0.9.5-SNAPSHOT
 - **2013-03-27** -- 0.9.4-SNAPSHOT
 
 
 **Latest Updates:**
+- **2013-03-29** -- 0.9.6-SNAPSHOT FoBo-JQuery dependency update. 
 - **2013-03-29** -- 0.9.5-SNAPSHOT Google-Code-Prettify and JQuery is moved to sub FoBo modules
 - **2013-03-27** -- 0.9.4-SNAPSHOT New version schema see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) foundation is moved to sub module. 
 
@@ -47,6 +49,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - None
 
 **Latest Snapshot Release:**
+- **2013-04-06** -- 0.9.6-SNAPSHOT artifacts for Lift 2.5
 - **2013-03-29** -- 0.9.5-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
 - **2013-03-27** -- 0.9.4-SNAPSHOT artifacts for Lift 2.5 and 3.0 see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) for more information.
 

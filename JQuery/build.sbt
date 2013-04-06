@@ -2,7 +2,7 @@ name := "FoBo-JQuery"
 
 organization := "net.liftmodules"
 
-version := "0.1.0-SNAPSHOT"
+version := "0.2.0-SNAPSHOT"
 
 name <<= (name, liftVName) { (n, v) =>  n + "_" + v }
 
@@ -18,10 +18,10 @@ resolvers ++= Seq(
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
 )
 
-libraryDependencies <++= liftVersion { v =>
-    "net.liftweb"      %% "lift-webkit"          % v                     % "provided" ::
-    "net.liftweb"      %% "lift-testkit"         % v                     % "provided" ::
-    "net.liftmodules"  %% "lift-jquery-module"   % (v+"-2.3-SNAPSHOT")   % "compile" :: 
+libraryDependencies <++= (liftVersion,liftVName) { (v,n) =>
+    "net.liftweb"      %% "lift-webkit"                % v       % "provided" ::
+    "net.liftweb"      %% "lift-testkit"               % v       % "provided" ::
+    "net.liftmodules"  %% ("lift-jquery-module"+"_"+n) % "2.3"   % "compile" :: 
     Nil
 }
 

@@ -2,9 +2,9 @@ name := "FoBo"
 
 organization := "net.liftmodules"
 
-version := "0.9.5-SNAPSHOT"
+version := "0.9.6-SNAPSHOT"
 
-liftVersion in ThisBuild <<= liftVersion ?? "2.5-RC2"
+liftVersion in ThisBuild <<= liftVersion ?? "2.5-RC4"
 
 liftVName in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
@@ -12,7 +12,7 @@ name <<= (name, liftVName) { (n, v) =>  n + "_" + v }
 
 crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion in ThisBuild := "2.9.1"
+scalaVersion in ThisBuild := "2.10.0"
 
 logLevel in ThisBuild := Level.Debug  //Level.Info.Debug
 
@@ -30,7 +30,7 @@ resolvers ++= Seq(
 libraryDependencies <++= (liftVersion,liftVName) { (v,n) =>
     "net.liftweb"      %% "lift-webkit"                       % v                     % "provided" :: 
     "net.liftweb"      %% "lift-testkit"                      % v                     % "provided" :: 
-    "net.liftmodules"  %% ("fobo-jquery"+"_"+n)               % "0.1.0-SNAPSHOT"      % "compile" :: 
+    "net.liftmodules"  %% ("fobo-jquery"+"_"+n)               % "0.2.0-SNAPSHOT"      % "compile" :: 
     "net.liftmodules"  %% ("fobo-knockout"+"_"+n)             % "0.1.0-SNAPSHOT"      % "compile" :: 
     "net.liftmodules"  %% ("fobo-foundation"+"_"+n)           % "0.1.0-SNAPSHOT"      % "compile" :: 
     "net.liftmodules"  %% ("fobo-datatables"+"_"+n)           % "0.1.0-SNAPSHOT"      % "compile" :: 
