@@ -6,7 +6,7 @@ object LiftModuleFoBoBuild extends Build {
   
   val liftVersion = SettingKey[String]("liftVersion", "Version number of the Lift Web Framework")
   
-  val liftVName = SettingKey[String]("liftVName", "Lift Web Framework short version number to append to artifact name")
+  val liftEdition = SettingKey[String]("liftEdition", "Lift Edition (short version number to append to artifact name)")
   
   lazy val root = Project(id   = "FoBo", 
                              base = file(".")) 
