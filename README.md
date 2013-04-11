@@ -1,8 +1,8 @@
 FoBo - A Generic Front-End Toolkit Module for Lift
 ==================================================
 
-**OBS!** Note that there is a new version schema for module versions >= 0.9.3 
-See the [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) section for more information.
+A **live demo** and introduction of this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/). 
+A Lift basic template with FoBo setup for Twitter Bootstrap usage can be found here [Templating With Twitter Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap)  
 
 With this Lift module you can chose among some of the industry leading web-centric open source front-end toolkits. 
 The module is simultaneously supporting several versions of the included toolkits, providing debug-able js and css files in development and minimized files otherwise, 
@@ -17,9 +17,10 @@ If you have ideas and suggestions let me know! contact me or add a issue and/or 
 A third benefit of using this module is that you will get a clean separation of the toolkit files and your application specific resources as 
 the module dose not cluttering your applications web-app resources directory. 
 
-A **live demo** of the use of this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/) 
-and the Github repository for the demo can be found [here](https://github.com/karma4u101/FoBo-Lift-Template).
-A Lift basic template with FoBo setup for bootstrap usage can be found here [Templating With Twitter Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap)  
+The Github repository for the demo can be found [here](https://github.com/karma4u101/FoBo-Lift-Template).
+
+**OBS!** Note that as of Apr 2013 there is a new version schema for Lift modules and FoBo module version >= 0.9.3 
+See the [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) section for more information.
 
 Contributions
 ------
