@@ -7,12 +7,12 @@ A Lift basic template with FoBo setup for Twitter Bootstrap usage can be found h
 With this Lift module you can chose among some of the industry leading web-centric open source front-end toolkits. 
 The module is simultaneously supporting several versions of the included toolkits, providing debug-able js and css files in development and minimized files otherwise, 
 making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot) and will ultimately jazz up your 
-Lift applications with the toolkit(s) of your choice.    
+Lift applications with the toolkit(s) of your choice. 
 
 Another benefit of using this module is the small but growing API that includes helper object:s and snippet:s (see API documents for usage) 
 that will take care of some common toolkit and component initiation, script generation and more. 
 At this writing the helpers are few but as the module mature it will provide plenty of useful help functions see the demo for a teaser and potential. 
-If you have ideas and suggestions let me know! contact me or add a issue and/or contribute a patch.      
+If you have ideas and suggestions let me know! contact me or add a issue and/or contribute a patch. 
 
 A third benefit of using this module is that you will get a clean separation of the toolkit files and your application specific resources as 
 the module dose not cluttering your applications web-app resources directory. 
@@ -27,7 +27,7 @@ Contributions
 Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion to my priv. e-mail or on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
 
 best regards 
-Peter Petersson     
+Peter Petersson 
 
 Update log
 ----------
@@ -37,13 +37,11 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 **Latest Module Version:** 
 - **2013-04-06** -- 0.9.6-SNAPSHOT
 - **2013-03-29** -- 0.9.5-SNAPSHOT
-- **2013-03-27** -- 0.9.4-SNAPSHOT
 
 
 **Latest Updates:**
 - **2013-03-29** -- 0.9.6-SNAPSHOT FoBo-JQuery dependency update. 
 - **2013-03-29** -- 0.9.5-SNAPSHOT Google-Code-Prettify and JQuery is moved to sub FoBo modules
-- **2013-03-27** -- 0.9.4-SNAPSHOT New version schema see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) foundation is moved to sub module. 
 
 
 **Latest Stable Releases:**
@@ -52,7 +50,6 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 **Latest Snapshot Release:**
 - **2013-04-06** -- 0.9.6-SNAPSHOT artifacts for Lift 2.5
 - **2013-03-29** -- 0.9.5-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
-- **2013-03-27** -- 0.9.4-SNAPSHOT artifacts for Lift 2.5 and 3.0 see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) for more information.
 
 Toolkit:s and available versions
 --------------------------------
@@ -364,6 +361,7 @@ Sbteclipse provides SBT command to create Eclipse project files
 ----------------
 
 **Module Version history:**
+- **2013-03-27** -- 0.9.4-SNAPSHOT
 - **2013-02-27** -- 0.9.3-SNAPSHOT
 - **2013-02-24** -- 0.9.2-SNAPSHOT
 - **2013-02-22** -- 0.9.1-SNAPSHOT
@@ -376,6 +374,7 @@ Sbteclipse provides SBT command to create Eclipse project files
 - **2012-12-29** -- 0.7.7-SNAPSHOT
 
 **Updates history:**
+- **2013-03-27** -- 0.9.4-SNAPSHOT New version schema see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) foundation is moved to sub module. 
 - **2013-02-27** -- 0.9.3-SNAPSHOT Adding knockout.js v2.2.1 and moving knockout to sub module/proj fobo-knockout. 
 - **2013-02-24** -- 0.9.2-SNAPSHOT Completed fobo-twitter-bootstrap and fobo-datatables module transaction.
 - **2013-02-22** -- 0.9.1-SNAPSHOT Using fobo-twitter-bootstrap v0.1.1 that fixes serving of minified bootstrap.js when not in development.
@@ -398,6 +397,7 @@ Sbteclipse provides SBT command to create Eclipse project files
 - None
 
 **Snapshot Release history:**
+- **2013-03-27** -- 0.9.4-SNAPSHOT artifacts for Lift 2.5 and 3.0 see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) for more information.
 - **2013-03-08** -- 0.9.3-SNAPSHOT artifacts for Lift 2.5-RC2 and Lift 3.0-SNAPSHOT
 - **2013-02-24** -- 0.9.2-SNAPSHOT artifacts for Lift 2.5-RC1 and 2.5-SNAPSHOT (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0 -SNAPSHOT (Scala 2.10)
 - **2013-02-22** -- 0.9.1-SNAPSHOT artifacts for Lift 2.5-RC1 (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0-SNAPSHOT (Scala 2.10)
