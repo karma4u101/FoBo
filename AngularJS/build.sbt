@@ -1,44 +1,26 @@
-name := "FoBo"
+name := "FoBo-AngularJS"
 
 organization := "net.liftmodules"
 
-version := "0.9.7-SNAPSHOT"
-
-liftVersion in ThisBuild <<= liftVersion ?? "2.5-RC4"
-
-liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
+version := "0.1.0-SNAPSHOT"
 
 name <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
 crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion in ThisBuild := "2.10.0"
-
-logLevel in ThisBuild := Level.Debug  //Level.Info.Debug
-
 scalacOptions ++= Seq("-deprecation")
 
 EclipseKeys.withSource := true
 
-EclipseKeys.skipParents in ThisBuild := false
 
 resolvers ++= Seq(
   "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
 )
 
-libraryDependencies <++= (liftVersion,liftEdition) { (v,e) =>
-    "net.liftweb"      %% "lift-webkit"                       % v                     % "provided" :: 
-    "net.liftweb"      %% "lift-testkit"                      % v                     % "provided" :: 
-    "net.liftmodules"  %% ("fobo-jquery"+"_"+e)               % "0.2.0-SNAPSHOT"      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-knockout"+"_"+e)             % "0.1.0-SNAPSHOT"      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-angularjs"+"_"+e)            % "0.1.0-SNAPSHOT"      % "compile" ::     
-    "net.liftmodules"  %% ("fobo-foundation"+"_"+e)           % "0.1.0-SNAPSHOT"      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-datatables"+"_"+e)           % "0.1.0-SNAPSHOT"      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-font-awesome"+"_"+e)         % "0.1.0-SNAPSHOT"      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-jquery-mobile"+"_"+e)        % "0.1.0-SNAPSHOT"      % "compile" ::
-    "net.liftmodules"  %% ("fobo-twitter-bootstrap"+"_"+e)    % "0.2.0-SNAPSHOT"      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-google-code-prettify"+"_"+e) % "0.1.0-SNAPSHOT"      % "compile" ::
+libraryDependencies <++= liftVersion { v =>
+    "net.liftweb"      %% "lift-webkit"          % v          % "provided" ::
+    "net.liftweb"      %% "lift-testkit"         % v          % "provided" ::
     Nil
 }
 
@@ -63,13 +45,15 @@ libraryDependencies <++= scalaVersion { sv =>
 //## 
 //##
 //#############################################################
-seq(buildInfoSettings: _*)
 
-sourceGenerators in Compile <+= buildInfo
+//seq(buildInfoSettings: _*)
 
-buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
+//sourceGenerators in Compile <+= buildInfo
 
-buildInfoPackage := "net.liftmodules.FoBo.lib"
+//buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
+
+//buildInfoPackage := "net.liftmodules.FoBo.lib"
+
 
 //#########################################################################
 //#### THE LESS BUILD

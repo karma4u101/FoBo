@@ -35,11 +35,13 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Module Version:** 
+- **2013-04-13** -- 0.9.7-SNAPSHOT
 - **2013-04-06** -- 0.9.6-SNAPSHOT
 - **2013-03-29** -- 0.9.5-SNAPSHOT
 
 
 **Latest Updates:**
+- **2013-04-13** -- 0.9.7-SNAPSHOT Added AngularJS components as a FoBo module.
 - **2013-03-29** -- 0.9.6-SNAPSHOT FoBo-JQuery dependency update. 
 - **2013-03-29** -- 0.9.5-SNAPSHOT Google-Code-Prettify and JQuery is moved to sub FoBo modules
 
@@ -66,6 +68,7 @@ This module includes the following toolkits versions
 - JQuery  [v1.7.2, v1.8,2] - [JQuery](http://jquery.com/)
 - Google Code Prettify [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
 - Knockout JS [v2.0.0, v2.1.0, v2.2.1] - [Knockout](http://knockoutjs.com/)
+- AngularJS [v1.0.6, (and components components)] - [AngularJS](http://angularjs.org/) For information on included components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS)
 
 Module names that can bee used in boot corresponding to the toolkit version above is
 
