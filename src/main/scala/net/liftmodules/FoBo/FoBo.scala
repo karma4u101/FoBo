@@ -262,6 +262,21 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   case object AJSNGGrid204 extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AJSNGGrid204
   }  
+  
+  /**
+   * Enable usage of Angular-UI version 0_4_0 in your bootstrap liftweb Boot.
+   * @version 0.4.0
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AJSUI040
+   * }}}
+   *
+   */
+  case object AJSUI040 extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AJSUI040
+  }   
 
 /**
  * Enable usage of KnockOut version 2_2_1 in your bootstrap liftweb Boot.

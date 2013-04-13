@@ -91,7 +91,7 @@ The example will include a module built for lift 2.5. If you are using maven obs
 
 ### Lift FoBo Template hooks
 
-    <!-- core files-->
+    <!-- AngularJS core files-->
     <script type="text/javascript" src="/classpath/fobo/angular.js"></script>
     <!-- ui-bootstrap with templats -->
     <script type="text/javascript" src="/classpath/fobo/ui-bootstrap-tpls.js"></script>
