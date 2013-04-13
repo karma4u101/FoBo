@@ -50,6 +50,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - None
 
 **Latest Snapshot Release:**
+- **2013-04-13** -- 0.9.7-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
 - **2013-04-06** -- 0.9.6-SNAPSHOT artifacts for Lift 2.5
 - **2013-03-29** -- 0.9.5-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
 
@@ -58,17 +59,17 @@ Toolkit:s and available versions
 
 Artifacts is available for: Lift 2.4, 2.5-M1 to M4, RC1 and 2.5, 3.0 SNAPSHOT
 
-This module includes the following toolkits versions
+The FoBo module includes the following sub-modules and supports the following toolkit versions
 
-- Bootstrap [v2.1.0, v2.2.0, v2.2.2, v2.3.0] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
-- Font Awesome [v2.0.0, v3.0.0] [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
-- Foundation [v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
-- DataTables [v1.9.0] - [DataTables.net](http://datatables.net/)
-- JQuery Mobile [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
-- JQuery  [v1.7.2, v1.8,2] - [JQuery](http://jquery.com/)
-- Google Code Prettify [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
-- Knockout JS [v2.0.0, v2.1.0, v2.2.1] - [Knockout](http://knockoutjs.com/)
-- AngularJS [v1.0.6, (and components components)] - [AngularJS](http://angularjs.org/) For information on included components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS)
+- [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.1.0, v2.2.0, v2.2.2, v2.3.0] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+- [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0] [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
+- [FoBo-Foundation](https://github.com/karma4u101/FoBo/tree/master/Foundation) [v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
+- [FoBo-DataTables](https://github.com/karma4u101/FoBo/tree/master/DataTables) [v1.9.0] - [DataTables.net](http://datatables.net/)
+- [FoBo-JQuery-Mobile](https://github.com/karma4u101/FoBo/tree/master/JQuery-Mobile) [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
+- [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2] - [JQuery](http://jquery.com/)
+- [FoBo-Google-Code-Prettify](https://github.com/karma4u101/FoBo/tree/master/Google-Code-Prettify) [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
+- [FoBo-Knockout](https://github.com/karma4u101/FoBo/tree/master/Knockout) [v2.0.0, v2.1.0, v2.2.1] - [KnockoutJS](http://knockoutjs.com/)
+- [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) [v1.0.6, (and components components)] - [AngularJS](http://angularjs.org/) For information on included components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS)
 
 Module names that can bee used in boot corresponding to the toolkit version above is
 
@@ -81,6 +82,8 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 - JQueryModule.JQuery182 
 - PrettifyJun2011
 - Knockout200, Knockout210, Knockout221
+- AngularJS106 with components (AJSUI040, AJSUIBootstrap020, AJSNGGrid204)
+
 
 For more information on how to set this up see below.
 
