@@ -218,6 +218,50 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   var ToolKit: FoBoToolkit = null 
 }
 
+  /**
+   * Enable usage of AngularJS version 1_0_6 in your bootstrap liftweb Boot.
+   * @version 1.0.6
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AngularJS106
+   * }}}
+   *
+   */
+  case object AngularJS106 extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AngularJS106
+  }
+
+  /**
+   * Enable usage of AngularUI-Bootstrap version 0_2_0 in your bootstrap liftweb Boot.
+   * @version 0.2.0
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AJSUIBootstrap020
+   * }}}
+   *
+   */
+  case object AJSUIBootstrap020 extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AJSUIBootstrap020
+  }   
+ 
+  /**
+   * Enable usage of NG-Grid version 2_0_4 in your bootstrap liftweb Boot.
+   * @version 2.0.4
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AJSNGGrid204
+   * }}}
+   *
+   */
+  case object AJSNGGrid204 extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AJSNGGrid204
+  }  
 
 /**
  * Enable usage of KnockOut version 2_2_1 in your bootstrap liftweb Boot.

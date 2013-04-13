@@ -10,7 +10,7 @@ object LiftModuleFoBoBuild extends Build {
   
   lazy val root = Project(id   = "FoBo", 
                              base = file(".")) 
-                             .dependsOn(jquery,bootstrap,fontAwesome,foundation,datatables,knockout,jquerymobile,prettify)                                                 
+                             .dependsOn(jquery,bootstrap,fontAwesome,foundation,datatables,knockout,angularjs,jquerymobile,prettify)                                                 
                              .settings(description := "FoBo", parallelExecution in Test := false)
                              
 //aggregate(fontAwesome,bootstrap)                             
@@ -29,6 +29,9 @@ object LiftModuleFoBoBuild extends Build {
                              
   lazy val knockout     = Project(id   = "FoBo-Knockout", 
                              base = file("Knockout")) 
+                   
+  lazy val angularjs    = Project(id   = "FoBo-AngularJS", 
+                             base = file("AngularJS"))  
                              
   lazy val jquery       = Project(id   = "FoBo-JQuery", 
                              base = file("JQuery"))  
