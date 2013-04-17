@@ -17,6 +17,25 @@ object FoBoSpec extends Specification  {
   //OBS! using 'test-only' instead of 'test' will fail some test as 'test-only' 
   //is treated as code is run in "devMode" while 'test' dose not assume this. 
   
+  //AngularJS
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS106 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/angular.js to fobo/angular-js/1.0.6/js/angular.min.js" in {
+      rewriteAngularJS106 must_== List("fobo", "angular-js", "1.0.6", "js", "angular.min.js")
+    }       
+  } 
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.AJSUIBootstrap020 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.2.0/js/ui-bootstrap-0.2.0.min.js" in {
+      rewriteAJSUIBootstrap020 must_== List("fobo", "angular-ui", "bootstrap", "0.2.0", "js", "ui-bootstrap-0.2.0.min.js")
+    }       
+  }   
+ 
+  "With FoBo.InitParam.ToolKit set to FoBo.AJSNGGrid204 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/ng-grid.js to fobo/angular-ui/0.2.0/js/ng-grid-2.0.4.min.js" in {
+      rewriteAJSNGGrid204 must_== List("fobo", "angular-ui","ng-grid", "2.0.4", "js", "ng-grid-2.0.4.min.js")
+    }       
+  } 
+  
   //Knockout
   "With FoBo.InitParam.ToolKit set to FoBo.Knockout200 the ResourceServer.pathRewriter" should {
     "rewrit fobo/knockout.js to fobo/knockout/2.0.0/js/knockout-2.0.0.js" in {
@@ -36,13 +55,11 @@ object FoBoSpec extends Specification  {
     }       
   }    
   
-  
-  
   //JQuery
   "With FoBo.InitParam.JQuery set to FoBo.JQuery182 the ResourceServer.pathRewriter" should {
     "rewrit fobo/jquery.js to jquery/1.8.2/js/jquery-min.js" in {
       rewriteJQuery182JS must_== List("jquery", "1.8.2", "js", "jquery-min.js")
-    }       
+    }                             
   } 
   
   "With FoBo.InitParam.JQuery set to FoBo.JQuery172 the ResourceServer.pathRewriter" should {
@@ -50,7 +67,6 @@ object FoBoSpec extends Specification  {
       rewriteJQuery172JS must_== List("jquery", "1.7.2", "js", "jquery-min.js")
     }       
   }   
-  
   
   
   //DataTables
@@ -104,9 +120,7 @@ object FoBoSpec extends Specification  {
     "rewrit fobo/jquery.mobile.js to fobo/jquery-mobile/1.1.0/js/jquery.mobile-1.1.0.js" in {
       rewriteJQueryMobile110JS must_== List("fobo", "jquery-mobile", "1.1.0", "js", "jquery.mobile-1.1.0.js")
     }       
-  }   
-  
-  
+  }    
   
   //Bootstrap
   "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap210 the ResourceServer.pathRewriter" should {
@@ -133,6 +147,22 @@ object FoBoSpec extends Specification  {
     }       
   } 
   
+  //AngularJS
+  //rewriteAngularJS106
+  def rewriteAngularJS106 = {
+    FoBo.InitParam.ToolKit=FoBo.AngularJS106
+    ResourceServer.pathRewriter("fobo"::"angular.js"::Nil)
+  }  
+  
+  def rewriteAJSUIBootstrap020 = {
+    FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap020
+    ResourceServer.pathRewriter("fobo"::"ui-bootstrap.js"::Nil)
+  }   
+  
+  def rewriteAJSNGGrid204 = {
+    FoBo.InitParam.ToolKit=FoBo.AJSNGGrid204
+    ResourceServer.pathRewriter("fobo"::"ng-grid.js"::Nil)
+  }    
   
     //Knockout
   def rewriteKnockout200JS = {

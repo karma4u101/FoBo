@@ -101,7 +101,6 @@ package object FoBoAJS {
         case "fobo" :: "ui-bootstrap.js" :: Nil => List("fobo", "angular-ui", "bootstrap", "0.2.0", "js", "ui-bootstrap-0.2.0.min.js")
         case "fobo" :: "ui-bootstrap-tpls.js" :: Nil if Props.devMode => List("fobo", "angular-ui", "bootstrap", "0.2.0", "js", "ui-bootstrap-tpls-0.2.0.js")
         case "fobo" :: "ui-bootstrap-tpls.js" :: Nil => List("fobo", "angular-ui", "bootstrap", "0.2.0", "js", "ui-bootstrap-tpls-0.2.0.min.js")
-
       }
     }
     
@@ -111,7 +110,6 @@ package object FoBoAJS {
         case "fobo" :: "ng-grid.js" :: Nil => List("fobo", "angular-ui", "ng-grid", "2.0.4", "js", "ng-grid-2.0.4.min.js")
         case "fobo" :: "ng-grid.css" :: Nil if Props.devMode => List("fobo", "angular-ui", "ng-grid", "2.0.4", "css", "ng-grid.css")
         case "fobo" :: "ng-grid.css" :: Nil => List("fobo", "angular-ui", "ng-grid", "2.0.4", "css", "ng-grid.css")
-
       }
     }    
     
