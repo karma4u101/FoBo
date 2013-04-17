@@ -1,4 +1,4 @@
-FoBo - A Generic Front-End Toolkit Module for Lift
+FoBo - A Generic Front-End Toolkit Module for Lift (https://secure.travis-ci.org/karma4u101/FoBo.png)](http://travis-ci.org/karma4u101/FoBo)
 ==================================================
 
 A **live demo** and introduction of this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/). 
