@@ -66,7 +66,7 @@ The FoBo module includes the following sub-modules and supports the following to
 - [FoBo-DataTables](https://github.com/karma4u101/FoBo/tree/master/DataTables) [v1.9.0] - [DataTables.net](http://datatables.net/)
 - [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2, v1.9.1] - [JQuery](http://jquery.com/)
 - [FoBo-Knockout](https://github.com/karma4u101/FoBo/tree/master/Knockout) [v2.0.0, v2.1.0, v2.2.1] - [KnockoutJS](http://knockoutjs.com/)
-- [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) [v1.0.6, (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) )] - [AngularJS](http://angularjs.org/) For information on included components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS)
+- [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) [v1.0.6, (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) )] - [AngularJS](http://angularjs.org/) 
 
 Module names that can bee used in boot corresponding to the toolkit version above is
 
@@ -276,7 +276,11 @@ Script files
 
 - knockout.js
 
-    
+###Angular JS
+
+See [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS#lift-fobo-template-hooks)    
+
+
 FoBo front-end toolkits documentation
 -------------------------------------
 
