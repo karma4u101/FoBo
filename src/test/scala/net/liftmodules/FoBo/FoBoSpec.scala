@@ -56,6 +56,12 @@ object FoBoSpec extends Specification  {
   }    
   
   //JQuery
+   "With FoBo.InitParam.JQuery set to FoBo.JQuery191 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/jquery.js to jquery/1.9.1/js/jquery-min.js" in {
+      rewriteJQuery191JS must_== List("jquery", "1.9.1", "js", "jquery-min.js")
+    }                             
+  }
+   
   "With FoBo.InitParam.JQuery set to FoBo.JQuery182 the ResourceServer.pathRewriter" should {
     "rewrit fobo/jquery.js to jquery/1.8.2/js/jquery-min.js" in {
       rewriteJQuery182JS must_== List("jquery", "1.8.2", "js", "jquery-min.js")
@@ -182,6 +188,11 @@ object FoBoSpec extends Specification  {
   
   
   //JQuery
+  def rewriteJQuery191JS = {
+    FoBo.InitParam.JQuery=FoBo.JQuery191
+    ResourceServer.pathRewriter("fobo"::"jquery.js"::Nil)
+  } 
+  
   def rewriteJQuery182JS = {
     FoBo.InitParam.JQuery=FoBo.JQuery182
     ResourceServer.pathRewriter("fobo"::"jquery.js"::Nil)

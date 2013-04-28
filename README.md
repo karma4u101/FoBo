@@ -35,98 +35,61 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Module Version:** 
+- **2013-04-28** -- 0.9.8-SNAPSHOT
 - **2013-04-13** -- 0.9.7-SNAPSHOT
-- **2013-04-06** -- 0.9.6-SNAPSHOT
-- **2013-03-29** -- 0.9.5-SNAPSHOT
-
 
 **Latest Updates:**
+- **2013-04-28** -- 0.9.8-SNAPSHOT Updated FoBo-JQuery with support for jquery v1.9.1
 - **2013-04-13** -- 0.9.7-SNAPSHOT Added AngularJS components as a FoBo module.
-- **2013-03-29** -- 0.9.6-SNAPSHOT FoBo-JQuery dependency update. 
-- **2013-03-29** -- 0.9.5-SNAPSHOT Google-Code-Prettify and JQuery is moved to sub FoBo modules
-
 
 **Latest Stable Releases:**
 - None
 
 **Latest Snapshot Release:**
+- **2013-04-28** -- 0.9.8-SNAPSHOT artifacts for Lift 2.5 and 3.0
 - **2013-04-13** -- 0.9.7-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
 - **2013-04-06** -- 0.9.6-SNAPSHOT artifacts for Lift 2.5
-- **2013-03-29** -- 0.9.5-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
+
 
 Toolkit:s and available versions
 --------------------------------
 
-Artifacts is available for: Lift 2.4, 2.5-M1 to M4, RC1 and 2.5, 3.0 SNAPSHOT
+Artifacts is available for: Lift 2.4, 2.5, 3.0-SNAPSHOT
 
 The FoBo module includes the following sub-modules and supports the following toolkit versions
 
 - [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.1.0, v2.2.0, v2.2.2, v2.3.0] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 - [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0] [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
 - [FoBo-Foundation](https://github.com/karma4u101/FoBo/tree/master/Foundation) [v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
-- [FoBo-DataTables](https://github.com/karma4u101/FoBo/tree/master/DataTables) [v1.9.0] - [DataTables.net](http://datatables.net/)
 - [FoBo-JQuery-Mobile](https://github.com/karma4u101/FoBo/tree/master/JQuery-Mobile) [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
-- [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2] - [JQuery](http://jquery.com/)
 - [FoBo-Google-Code-Prettify](https://github.com/karma4u101/FoBo/tree/master/Google-Code-Prettify) [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
+- [FoBo-DataTables](https://github.com/karma4u101/FoBo/tree/master/DataTables) [v1.9.0] - [DataTables.net](http://datatables.net/)
+- [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2, v1.9.1] - [JQuery](http://jquery.com/)
 - [FoBo-Knockout](https://github.com/karma4u101/FoBo/tree/master/Knockout) [v2.0.0, v2.1.0, v2.2.1] - [KnockoutJS](http://knockoutjs.com/)
-- [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) [v1.0.6, (and components components)] - [AngularJS](http://angularjs.org/) For information on included components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS)
+- [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) [v1.0.6, (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) )] - [AngularJS](http://angularjs.org/) For information on included components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS)
 
 Module names that can bee used in boot corresponding to the toolkit version above is
 
-- Bootstrap140, Bootstrap200, Bootstrap204, Bootstrap210, Bootstrap222 
-- FontAwesome200, FontAwesome200TB222 
-- Foundation214, Foundation215
-- DataTables190
-- JQueryMobile101 JQueryMobile101
-- JQuery164,JQuery171,JQuery172,JQuery182 
-- JQueryModule.JQuery182 
-- PrettifyJun2011
-- Knockout200, Knockout210, Knockout221
-- AngularJS106 with components (AJSUI040, AJSUIBootstrap020, AJSNGGrid204)
+- BootstrapXYZ 
+- FontAwesomeXYZ 
+- FoundationXYZ
+- DataTablesXYZ
+- JQueryMobileXYZ 
+- JQueryXYZ
+- PrettifyXYZ
+- KnockoutXYZ
+- AngularJSXYZ with components (AJSUIXYZ, AJSUIBootstrapXYZ, AJSNGGridXYZ)
 
+Where X is major, Y minor and Z incremental version numbers as seen in the Toolkits list above (for example BootstrapXYZ will be Bootstrap230 for Twitter Bootstrap v2.3.0)
 
 For more information on how to set this up see below.
-
-Deprecated
-----------
-
-**2012-11-18**
-As of v0.7.3-SNAPSHOT the following artifacts has been deprecated and will bee removed before v.1.0.0 release 
-
-- Bootstrap v1.4.0 to v2.0.4  -- Use v2.1.0 or newer (removed in 0.8.0-SNAPSHOT)
-- Foundation v2.1.4           -- Use v2.1.5 or newer
-- JQuery v1.6.4               -- Use v1.7.2 or newer
-- JQuery-Mobile v1.0.1        -- Use v1.1.0 
-- FoBo                        -- Use Bootstrap or Foundation (removed in 0.8.0-SNAPSHOT)
     
 Quick Start
 -----------
 The only prerequisites for this Lift module is that you have Git and Java installed and configured on the target 
 computer, a suitable Lift template project will also come in handy if you like you can use [Templating-With-Twitter-Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap) it comes with a FoBo setup. 
-You don't need to use it but this project also includes a Eclipse plug-in for browsing the code, see the Scala 
+You don't need to use it but this project also includes a Eclipse (and a IDEA) plug-in for browsing the code, see the Scala 
 IDE section below.   
-
-
-### Get the code
-
-	git clone git://github.com/karma4u101/FoBo.git
-	cd FoBo
-
-### Cmd-line update, package & publish-local (with optional override of liftVersion)  
-
-There is also a sbt*.bat for windows users.
-
-    ./sbt-publish-local
-     or 
-    ./sbt clean update compile package publish-local
-     or override default lift version (currently 2.4) like this
-    ./sbt "set liftVersion:=\"2.5-SNAPSHOT\"" clean update less compile package publish-local
-
-The module should now be in your local ivy repository and available for your local projects	
-
-If you like to **customize your FoBo bootstrap css files** you can tweak the overrides/variables.less file in the FoBo-Less project. 
-Just less compile it and copy the resulting files over to FoBo.
-
 
 Integration into your project 
 -------------------------------
@@ -175,8 +138,8 @@ Put the following into your lift Boot
     import net.liftmodules.FoBo
     
     //If using defaults FoBo init params can be omitted
-    FoBo.InitParam.JQuery=FoBo.[JQueryXX module option name]  
-    FoBo.InitParam.ToolKit=FoBo.[ToolkitXXX module option name]
+    FoBo.InitParam.JQuery=FoBo.[JQueryXYZ module option name]  
+    FoBo.InitParam.ToolKit=FoBo.[ToolkitXYZ module option name]
     FoBo.InitParam.ToolKit=FoBo.[ev. additional/extra toolkit module name]
        :
     FoBo.init()  
@@ -188,7 +151,7 @@ Put something like the following in your Lift templat(s) head section (see below
     <link rel="stylesheet" type='text/css' href='/classpath/fobo/[css file name]'> 	
     <link rel="stylesheet" type='text/css' href='[path/to/you/app/specific/css/file/in/the/webapp/dir]'>
     <script type="text/javascript" src="/classpath/fobo/[script file name]"></script>
-    
+
 Available CSS and JavaScript files 
 ----------------------------------
 
@@ -202,33 +165,14 @@ FoBo.InitParam.ToolKit=FoBo.BootstrapXXX
 Base css file
 
 - bootstrap.css (all versions)
-- bootstrap-no-icons.css (v2.2.2+ used by font-awesome to override default icons)
 
 Extra css files
 
-- bootstrap-responsive.css (all versions except v1.4.0)
+- bootstrap-responsive.css (all versions)
 
 All in one Script
 
 - bootstrap.js (all versions)
-
-Alternative separate script files (not supported in v2.0.4)
-
-- bootstrap-affix.js (v2.1.0+)
-- bootstrap-alerts.js (v1.4.0+)
-- bootstrap-buttons.js (v1.4.0+)
-- bootstrap-carousel.js (v2.0.0+)
-- bootstrap-collapse.js (v2.0.0+)
-- bootstrap-dropdown.js (v1.4.0+)
-- bootstrap-modal.js (v1.4.0+)
-- bootstrap-popover.js (v1.4.0+)
-- bootstrap-scrollspy.js (v1.4.0+)
-- bootstrap-tabs.js (v1.4.0+)
-- bootstrap-tab.js (v2.0.0+)
-- bootstrap-twipsy.js (v1.4.0+)
-- bootstrap-tooltip.js (v2.0.0+)
-- bootstrap-transition.js (v2.0.0+)
-- bootstrap-typeahead.js (v2.0.0+)
 
 ###Font Awesome
 
@@ -338,8 +282,7 @@ FoBo front-end toolkits documentation
 
 The [ZURB/Foundation](http://foundation.zurb.com/) and the [Twitter Bootstrap](http://twitter.github.com/bootstrap/) 
 and the [JQuery Mobile](http://jquerymobile.com/) links contains plenty of documentation so that will be your no.1 resources. 
-There is also a fobo lift demo [project](https://github.com/karma4u101/FoBo-Lift-Template) 
-containing bootstrap and foundation and jquery mobile documentation. 
+There is also a FoBo lift demo [project](https://github.com/karma4u101/FoBo-Lift-Template) containing some tookit documentation. 
 
 FoBo Bootstrap and Less
 -----------------------
@@ -363,10 +306,28 @@ Sbteclipse provides SBT command to create Eclipse project files
 	Select General ==> Existing Project into Workspace 
 	Use "Brows" to look up the project root ....
 
+Deprecated
+----------
+
+**2012-11-18**
+As of v0.7.3-SNAPSHOT the following artifacts has been deprecated and will bee removed before v.1.0.0 release 
+
+- Bootstrap v1.4.0 to v2.0.4  -- Use v2.1.0 or newer (removed in 0.8.0-SNAPSHOT)
+- Foundation v2.1.4           -- Use v2.1.5 or newer
+- JQuery v1.6.4               -- Use v1.7.2 or newer
+- JQuery-Mobile v1.0.1        -- Use v1.1.0 
+- FoBo                        -- Use Bootstrap or Foundation (removed in 0.8.0-SNAPSHOT)
+
+
 ### History log
 ----------------
 
+**Stable Release history:**
+- None
+
 **Module Version history:**
+- **2013-04-06** -- 0.9.6-SNAPSHOT
+- **2013-03-29** -- 0.9.5-SNAPSHOT
 - **2013-03-27** -- 0.9.4-SNAPSHOT
 - **2013-02-27** -- 0.9.3-SNAPSHOT
 - **2013-02-24** -- 0.9.2-SNAPSHOT
@@ -380,6 +341,8 @@ Sbteclipse provides SBT command to create Eclipse project files
 - **2012-12-29** -- 0.7.7-SNAPSHOT
 
 **Updates history:**
+- **2013-03-29** -- 0.9.6-SNAPSHOT FoBo-JQuery dependency update. 
+- **2013-03-29** -- 0.9.5-SNAPSHOT Google-Code-Prettify and JQuery is moved to sub FoBo modules
 - **2013-03-27** -- 0.9.4-SNAPSHOT New version schema see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) foundation is moved to sub module. 
 - **2013-02-27** -- 0.9.3-SNAPSHOT Adding knockout.js v2.2.1 and moving knockout to sub module/proj fobo-knockout. 
 - **2013-02-24** -- 0.9.2-SNAPSHOT Completed fobo-twitter-bootstrap and fobo-datatables module transaction.
@@ -399,10 +362,8 @@ Sbteclipse provides SBT command to create Eclipse project files
 - **2012-11-11** -- 0.7.2-SNAPSHOT Lift 2.5-SNAPSHOT artifacts (for the inpatient) published to oss.sonatype.org
 - **2012-11-10** -- 0.7.2-SNAPSHOT Lift 2.5-M3 released to oss.sonatype.org
 
-**Stable Release history:**
-- None
-
 **Snapshot Release history:**
+- **2013-03-29** -- 0.9.5-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
 - **2013-03-27** -- 0.9.4-SNAPSHOT artifacts for Lift 2.5 and 3.0 see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) for more information.
 - **2013-03-08** -- 0.9.3-SNAPSHOT artifacts for Lift 2.5-RC2 and Lift 3.0-SNAPSHOT
 - **2013-02-24** -- 0.9.2-SNAPSHOT artifacts for Lift 2.5-RC1 and 2.5-SNAPSHOT (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0 -SNAPSHOT (Scala 2.10)

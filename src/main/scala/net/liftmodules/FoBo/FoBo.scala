@@ -28,7 +28,7 @@ import common._
  *  - Great mobile scalablity with some mobile enabled toolkits.  
  *  - As more front-end toolkits and JQuery plugins will be available to you just a FoBo.Initparam away you will, 
  *    when needed, be able to quick and easy test out and use nifty features like the Google code Prettify kit, 
- *    DataTables and more.   
+ *    Angular JS, Angular UI Bootstrap, Knockout JS and more.   
  *  - FoBo uses Less to build (using the FoBo-Less project) the bootstrap css files so if you like you 
  *    can (if you fork the module source) easily tweak your bootstrap css (via variables.less) see bootstrap 
  *    documentation form more information.       
@@ -37,15 +37,17 @@ import common._
  * 
  * The following is a list of available toolkits and plugins 
  *  
- *  - JQuery  [v1.6.4, v1.7.1, v1.7.2] 
- *  - Bootstrap [v1.4.0, v2.0.0, v2.0.4, v2.1.0, v2.2.0, v2.2.2]
- *  - Foundation [v2.1.4, v2.1.5]
+ *  - JQuery  [v1.7.2, v1.8.2, v1.9.1] 
+ *  - Bootstrap [v2.1.0, v2.2.0, v2.2.2, v2.3.0]
+ *  - Foundation [v2.1.5]
  *  - DataTables [v1.9.0]
  *  - JQuery-mobile [v1.0.1, v1.1.0]
  *  - Google Code Prettify [vJun2011]
- *  - Knockout JS [v2.0.0, v2.1.0]
- *  - FoBo v0.2.0 (comprised of foundation v2.1.5,bootstrap v2.0.0,orbit v1.4.0)
- *  - FoBo v0.1.0 (comprised of foundation v2.1.4,bootstrap v1.4.0,orbit v1.3.0)
+ *  - Knockout JS [v2.0.0, v2.1.0, v]2.2.1]
+ *  - Angular JS [v1.0.6] (angular core)
+ *  - Angular UI [v0.4.0] (angular component)
+ *  - Angular UI Bootstrap [v0.2.0] (angular component)
+ *  - Angular NG-Grid [v2.0.4] (angular component)
  *  
  * ===Okey, okey I get it, now take me to the most interesting stuff===
  * From a user perspective, the most interesting stuff is probably in the snippet classes in [[net.liftmodules.FoBo.snippet.FoBo]].
@@ -86,11 +88,10 @@ import common._
  * 
  * ===Small heads up usage warning===
  * 
- * This API is very young (with only snapshot releases) so if you make direct usage of some FoBoHelpers in lib 
- * chances is that things change. 
+ * This API is very young so if you make direct usage of some FoBoHelpers in lib chances is that things change. 
  * If you want to stay a bit more on the safe side usage of FoBo snippets and init operations should be fairly safe. 
- * After a stable release (we are not there yet) changes to a API method will be announced as deprecated 
- * at least one release cycle before method signature changes or removal.  
+ * After a stable release changes to a API method will be announced as deprecated at least one release cycle before 
+ * method signature changes or removal.  
  *  
  * ===Help out!===
  * 
@@ -99,25 +100,25 @@ import common._
  *      
  * ===Setup===     
  * 
- *  - The module is known to work with Lift v2.4/v2.5-SNAPSHOT and Scala v2.9.2 but expect it to work with other versions as well.  
- *  - For a demonstration of this module see the live [[http://www.media4u101.se/fobo-lift-template-demo/ FoBo demo]] the 
- *    FoBo demo source is available [[https://github.com/karma4u101/FoBo-Lift-Template  here]] 
+ *  - The module is known to work with Lift v2.4/v2.5 and v3.0-SNAPSHOT and it's supported Scala versions.  
+ *  - For a demonstration of this module see the live [[http://www.media4u101.se/fobo-lift-template-demo/ FoBo demo]] 
  *
  * @example To initiate this module for usage in your Lift project 
- * set something like the following in the projects Lift bootstrap.liftweb.Boot  
+ * set something like the following in the projects Lift bootstrap.liftweb.Boot. For information on FoBoToolkitName see 
+ * respective toolkit below.
  * {{{
  *    import net.liftmodules.FoBo
  *     :
  *     :
  *    //If using defaults FoBo init params can be omitted
- *    FoBo.InitParam.JQuery=FoBo.JQueryXXX  //one jquery version
- *    FoBo.InitParam.ToolKit=FoBo.TheFirstToolkitXXX //one or more toolkits 
- *    FoBo.InitParam.ToolKit=FoBo.TheSecondToolkitYYY
+ *    FoBo.InitParam.JQuery=FoBo.JQueryXYZ  //one jquery version
+ *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ //one or more toolkits 
+ *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ
  *     : 
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version v0.7.6
+ * @version v0.9.8
  * @author Peter Petersson (Github karma4u101), The Lift community  
  * 
  */
@@ -206,8 +207,8 @@ object TBLocInfo {
  * '''Example:'''
  *  
  * {{{
- *   FoBo.InitParam.JQuery=FoBo.JQuery172
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap222
+ *   FoBo.InitParam.JQuery=FoBo.JQuery182
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap230
  *   FoBo.InitParam.Toolkit=FoBo.PrettifyJun2011
  * }}}
  * This example uses the Bootstrap v2.2.2 option and adds the Google code Prettify vJun2011 
@@ -334,6 +335,20 @@ case object Knockout200 extends FoBoToolkit {
  */
 case object PrettifyJun2011 extends FoBoToolkit {
    net.liftmodules.FoBoGCP.PrettifyJun2011
+}
+
+/**
+ * Enable usage of JQuery version 1_9_1 in your bootstrap liftweb Boot.
+ * @version 1.9.1
+ * 
+ * '''Example:'''
+ * 
+ * {{{
+ *   FoBo.InitParam.JQuery=FoBo.JQuery191
+ * }}}
+ */
+case object JQuery191 extends FoBoJQuery {
+  net.liftmodules.FoBoJQ.JQuery191
 }
 
 /**
@@ -519,12 +534,11 @@ case object Foundation215 extends FoBoToolkit {
 }
 
 
-
 /**
  * Object holding internally used FoBo resources. 
  */
 private object FoBoResources {
-   
+   //moved to respective sub-modules
 }
   
 }

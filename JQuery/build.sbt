@@ -2,7 +2,7 @@ name := "FoBo-JQuery"
 
 organization := "net.liftmodules"
 
-version := "0.2.0-SNAPSHOT"
+version := "0.3.0-SNAPSHOT"
 
 name <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
@@ -21,7 +21,7 @@ resolvers ++= Seq(
 libraryDependencies <++= (liftVersion,liftEdition) { (v,e) =>
     "net.liftweb"      %% "lift-webkit"                % v       % "provided" ::
     "net.liftweb"      %% "lift-testkit"               % v       % "provided" ::
-    "net.liftmodules"  %% ("lift-jquery-module"+"_"+e) % "2.3"   % "compile" :: 
+    "net.liftmodules"  %% ("lift-jquery-module"+"_"+e) % "2.4"   % "compile" :: 
     Nil
 }
 
