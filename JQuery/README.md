@@ -17,10 +17,12 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/Foundation#history-log) section
 
 **Latest Module Version:**
+- **2013-04-27** -- 0.3.0-SNAPSHOT
 - **2013-04-06** -- 0.2.0-SNAPSHOT
 - **2013-03-29** -- 0.1.0-SNAPSHOT 
 
 **Latest Update:**
+- **2013-04-27** -- 0.3.0-SNAPSHOT Adding jquery v1.9.1
 - **2013-04-06** -- 0.2.0-SNAPSHOT Using lift-query-module v2.3 for Lift v2.5 with new version schema.
 - **2013-03-29** -- 0.1.0-SNAPSHOT Making JQuery a FoBo sub-module/project.
 
@@ -79,8 +81,8 @@ The example will include a module built for lift 2.5. If you are using maven obs
     import net.liftmodules.FoBoJQ 
     :
     FoBoJQ.InitParam.ToolKit=FoBoJQ.JQueryXYZ
-    FoBoGCP.init()
-    (usage with FoBo is FoBo.InitParam.ToolKit=FoBo.JQueryXYZ)   
+    FoBoJQ.init()
+    (usage with FoBo is FoBo.InitParam.JQuery=FoBo.JQueryXYZ)   
 
 ### Lift FoBo Template hooks
 

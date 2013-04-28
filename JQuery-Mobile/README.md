@@ -93,7 +93,7 @@ Script files
     <link rel="stylesheet" type="text/css" href="/classpath/fobo/[css file name]"> 
     <script type="text/javascript" src="/classpath/fobo/[script file name]"></script>
 
-For more information on how to use Knockout see [Knockout.](http://knockoutjs.com/)
+For more information on how to use JQuery-Mobile see [JQuery-Mobile](http://jquerymobile.com/)
 
 
 ### History log
