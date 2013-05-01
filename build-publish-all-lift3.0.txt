@@ -1,0 +1,87 @@
+alias pub=publish-local
+set scalaVersion in ThisBuild:="2.10.0"
+set liftVersion in ThisBuild:="3.0-SNAPSHOT"
+
+project FoBo-Twitter-Bootstrap
+clean
+update
+compile
+test
+
+project FoBo-Knockout
+clean
+update
+compile
+test
+
+project FoBo-JQuery
+clean
+update
+compile
+test
+
+project FoBo-JQuery-Mobile
+clean
+update
+compile
+test
+
+project FoBo-Google-Code-Prettify
+clean
+update
+compile
+test
+
+project FoBo-Foundation
+clean
+update
+compile
+test
+
+project FoBo-Font-Awesome
+clean
+update
+compile
+test
+
+project FoBo-DataTables
+clean
+update
+compile
+test
+
+project FoBo-AngularJS
+clean
+update
+compile
+test
+
+project FoBo
+clean
+update
+compile
+test
+
+
+project FoBo-Twitter-Bootstrap
+pub
+
+project FoBo-Knockout
+pub
+project FoBo-JQuery
+pub
+project FoBo-JQuery-Mobile
+pub
+project FoBo-Google-Code-Prettify
+pub
+project FoBo-Foundation
+pub
+project FoBo-Font-Awesome
+pub
+project FoBo-DataTables
+pub
+project FoBo-AngularJS
+pub
+project FoBo
+pub
+

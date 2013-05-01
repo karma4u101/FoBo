@@ -17,9 +17,10 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome#history-log) section
 
 **Latest Module Version:**
-- **2013-02-24** -- 0.1.0-SNAPSHOT 
+- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) 
 
 **Latest Update:**
+- **2013-05-01** -- 0.9.9-SNAPSHOT ++ One version to rule them all, unified FoBo module and sub-module versions.
 - **2013-02-24** -- 0.1.0-SNAPSHOT Initial split of DataTables into this sub project
 
 **Latest Releases:**

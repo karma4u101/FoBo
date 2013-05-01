@@ -17,17 +17,16 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/Foundation#history-log) section
 
 **Latest Module Version:**
-- **2013-04-27** -- 0.3.0-SNAPSHOT
-- **2013-04-06** -- 0.2.0-SNAPSHOT
-- **2013-03-29** -- 0.1.0-SNAPSHOT 
+- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) 
 
 **Latest Update:**
+- **2013-05-01** -- 0.9.9-SNAPSHOT ++ One version to rule them all, unified FoBo module and sub-module versions.
 - **2013-04-27** -- 0.3.0-SNAPSHOT Adding jquery v1.9.1
 - **2013-04-06** -- 0.2.0-SNAPSHOT Using lift-query-module v2.3 for Lift v2.5 with new version schema.
 - **2013-03-29** -- 0.1.0-SNAPSHOT Making JQuery a FoBo sub-module/project.
 
 **Latest Releases:**
-- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for releas information.
+- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for release information.
 
 
 

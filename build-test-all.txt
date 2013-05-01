@@ -1,0 +1,247 @@
+set scalaVersion in ThisBuild:="2.10.0"
+
+project FoBo-Twitter-Bootstrap
+clean
+update
+compile
+test
+
+project FoBo-Knockout
+clean
+update
+compile
+test
+
+project FoBo-JQuery
+clean
+update
+compile
+test
+
+project FoBo-JQuery-Mobile
+clean
+update
+compile
+test
+
+project FoBo-Google-Code-Prettify
+clean
+update
+compile
+test
+
+project FoBo-Foundation
+clean
+update
+compile
+test
+
+project FoBo-Font-Awesome
+clean
+update
+compile
+test
+
+project FoBo-DataTables
+clean
+update
+compile
+test
+
+project FoBo-AngularJS
+clean
+update
+compile
+test
+
+project FoBo
+clean
+update
+compile
+test
+
+set scalaVersion in ThisBuild:="2.9.2"
+
+project FoBo-Twitter-Bootstrap
+clean
+update
+compile
+test
+
+project FoBo-Knockout
+clean
+update
+compile
+test
+
+project FoBo-JQuery
+clean
+update
+compile
+test
+
+project FoBo-JQuery-Mobile
+clean
+update
+compile
+test
+
+project FoBo-Google-Code-Prettify
+clean
+update
+compile
+test
+
+project FoBo-Foundation
+clean
+update
+compile
+test
+
+project FoBo-Font-Awesome
+clean
+update
+compile
+test
+
+project FoBo-DataTables
+clean
+update
+compile
+test
+
+project FoBo-AngularJS
+clean
+update
+compile
+test
+
+project FoBo
+clean
+update
+compile
+test
+
+set scalaVersion in ThisBuild:="2.9.1-1"
+
+project FoBo-Twitter-Bootstrap
+clean
+update
+compile
+test
+
+project FoBo-Knockout
+clean
+update
+compile
+test
+
+project FoBo-JQuery
+clean
+update
+compile
+test
+
+project FoBo-JQuery-Mobile
+clean
+update
+compile
+test
+
+project FoBo-Google-Code-Prettify
+clean
+update
+compile
+test
+
+project FoBo-Foundation
+clean
+update
+compile
+test
+
+project FoBo-Font-Awesome
+clean
+update
+compile
+test
+
+project FoBo-DataTables
+clean
+update
+compile
+test
+
+project FoBo-AngularJSclean
+update
+compile
+test
+
+project FoBo
+clean
+update
+compile
+test
+
+set scalaVersion in ThisBuild:="2.9.1"
+
+project FoBo-Twitter-Bootstrap
+clean
+update
+compile
+test
+
+project FoBo-Knockout
+clean
+update
+compile
+test
+
+project FoBo-JQuery
+clean
+update
+compile
+test
+
+project FoBo-JQuery-Mobile
+clean
+update
+compile
+test
+
+project FoBo-Google-Code-Prettify
+clean
+update
+compile
+test
+
+project FoBo-Foundation
+clean
+update
+compile
+test
+
+project FoBo-Font-Awesome
+clean
+update
+compile
+test
+
+project FoBo-DataTables
+clean
+update
+compile
+test
+
+project FoBo-AngularJS
+clean
+update
+compile
+test
+
+project FoBo
+clean
+update
+compile
+test
+

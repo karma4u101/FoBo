@@ -2,7 +2,7 @@ name := "FoBo"
 
 organization := "net.liftmodules"
 
-version := "0.9.8-SNAPSHOT"
+version in ThisBuild := "0.9.9-SNAPSHOT"
 
 liftVersion in ThisBuild <<= liftVersion ?? "2.5-RC5"
 
@@ -27,18 +27,18 @@ resolvers ++= Seq(
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
 )
 
-libraryDependencies <++= (liftVersion,liftEdition) { (v,e) =>
-    "net.liftweb"      %% "lift-webkit"                       % v                     % "provided" :: 
-    "net.liftweb"      %% "lift-testkit"                      % v                     % "provided" :: 
-    "net.liftmodules"  %% ("fobo-jquery"+"_"+e)               % "0.3.0-SNAPSHOT"      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-knockout"+"_"+e)             % "0.1.0-SNAPSHOT"      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-angularjs"+"_"+e)            % "0.1.0-SNAPSHOT"      % "compile" ::     
-    "net.liftmodules"  %% ("fobo-foundation"+"_"+e)           % "0.1.0-SNAPSHOT"      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-datatables"+"_"+e)           % "0.1.0-SNAPSHOT"      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-font-awesome"+"_"+e)         % "0.1.0-SNAPSHOT"      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-jquery-mobile"+"_"+e)        % "0.1.0-SNAPSHOT"      % "compile" ::
-    "net.liftmodules"  %% ("fobo-twitter-bootstrap"+"_"+e)    % "0.2.0-SNAPSHOT"      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-google-code-prettify"+"_"+e) % "0.1.0-SNAPSHOT"      % "compile" ::
+libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
+    "net.liftweb"      %% "lift-webkit"                       % v       % "provided" :: 
+    "net.liftweb"      %% "lift-testkit"                      % v       % "provided" :: 
+    "net.liftmodules"  %% ("fobo-jquery"+"_"+e)               % mv      % "compile" :: 
+    "net.liftmodules"  %% ("fobo-knockout"+"_"+e)             % mv      % "compile" :: 
+    "net.liftmodules"  %% ("fobo-angularjs"+"_"+e)            % mv      % "compile" ::     
+    "net.liftmodules"  %% ("fobo-foundation"+"_"+e)           % mv      % "compile" :: 
+    "net.liftmodules"  %% ("fobo-datatables"+"_"+e)           % mv      % "compile" :: 
+    "net.liftmodules"  %% ("fobo-font-awesome"+"_"+e)         % mv      % "compile" :: 
+    "net.liftmodules"  %% ("fobo-jquery-mobile"+"_"+e)        % mv      % "compile" ::
+    "net.liftmodules"  %% ("fobo-twitter-bootstrap"+"_"+e)    % mv      % "compile" :: 
+    "net.liftmodules"  %% ("fobo-google-code-prettify"+"_"+e) % mv      % "compile" ::
     Nil
 }
 
@@ -103,7 +103,7 @@ YuiCompressorKeys.minSuffix := "-min"
 //##  
 //## 
 //################################################################
-credentials += Credentials(Path.userHome / ".sbt" / "liftmodules" /".credentials" )
+credentials += Credentials(file(Path.userHome + "/.sbt/liftmodules/.credentials") )
 
 credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
 
