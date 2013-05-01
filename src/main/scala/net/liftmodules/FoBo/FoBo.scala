@@ -118,7 +118,7 @@ import common._
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version v0.9.8
+ * @version v0.9.9
  * @author Peter Petersson (Github karma4u101), The Lift community  
  * 
  */
