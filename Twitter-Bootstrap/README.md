@@ -17,15 +17,15 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap#history-log) section
 
 **Latest Module Version:** 
-- **2013-02-24** -- 0.2.0-SNAPSHOT 
-- **2013-01-22** -- 0.1.1-SNAPSHOT
+- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)
 
 **Latest Updates:**
+- **2013-05-01** -- 0.9.9-SNAPSHOT ++ One version to rule them all, unified FoBo module and sub-module versions.
 - **2013-02-24** -- 0.2.0-SNAPSHOT Completed module transaction. Now using FoBo.XXXX namespace for snippets.
 - **2013-01-22** -- 0.1.1-SNAPSHOT Fixing serving of minified bootstrap.js when not in development.
 
 **Latest Releases:**
-- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for releas information.
+- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for release information.
 
 
 

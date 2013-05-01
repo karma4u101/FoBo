@@ -35,10 +35,12 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Module Version:** 
+- **2013-05-01** -- 0.9.9-SNAPSHOT
 - **2013-04-28** -- 0.9.8-SNAPSHOT
 - **2013-04-13** -- 0.9.7-SNAPSHOT
 
 **Latest Updates:**
+- **2013-05-01** -- 0.9.9-SNAPSHOT One version to rule them all, unified FoBo module and sub-module versions.
 - **2013-04-28** -- 0.9.8-SNAPSHOT Updated FoBo-JQuery with support for jquery v1.9.1
 - **2013-04-13** -- 0.9.7-SNAPSHOT Added AngularJS components as a FoBo module.
 
@@ -46,6 +48,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - None
 
 **Latest Snapshot Release:**
+- **2013-05-01** -- 0.9.9-SNAPSHOT artifacts for Lift 2.5 and 3.0
 - **2013-04-28** -- 0.9.8-SNAPSHOT artifacts for Lift 2.5 and 3.0
 - **2013-04-13** -- 0.9.7-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
 - **2013-04-06** -- 0.9.6-SNAPSHOT artifacts for Lift 2.5

@@ -2,8 +2,6 @@ name := "FoBo-Twitter-Bootstrap"
 
 organization := "net.liftmodules"
 
-version := "0.2.0-SNAPSHOT"
-
 name <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
 crossScalaVersions := Seq("2.10.0", "2.9.2", "2.9.1-1", "2.9.1")
