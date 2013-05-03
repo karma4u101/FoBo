@@ -5,6 +5,14 @@ import util.{ Props }
 import http._
 import common._
 
+/**
+ * ==FoBo - Sub-module== 
+ * This package object is only of interest to you if you are using this module 
+ * as a stand alone artifact dependency in your project (without FoBo).
+ * This package object provides information on how to initiate and use this module 
+ * in your project. If you are using this module in FoBo see [[net.liftmodules.FoBo]] 
+ * for usage information. 
+ */
 package object FoBoJQ {
 
   def init() {
@@ -31,7 +39,7 @@ package object FoBoJQ {
  * '''Example:'''
  * 
  * {{{
- *   FoBo.InitParam.JQuery=FoBo.JQuery191
+ *   FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery191
  * }}}
  */
 case object JQuery191 extends FoBoJQ {
@@ -45,7 +53,7 @@ case object JQuery191 extends FoBoJQ {
  * '''Example:'''
  * 
  * {{{
- *   FoBo.InitParam.JQuery=FoBo.JQuery182
+ *   FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery182
  * }}}
  */
 case object JQuery182 extends FoBoJQ {
@@ -59,7 +67,7 @@ case object JQuery182 extends FoBoJQ {
  * '''Example:'''
  * 
  * {{{
- *   FoBo.InitParam.JQuery=FoBo.JQuery172
+ *   FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery172
  * }}}
  */
 case object JQuery172 extends FoBoJQ {

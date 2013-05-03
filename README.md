@@ -35,24 +35,16 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Module Version:** 
-- **2013-05-01** -- 0.9.9-SNAPSHOT
-- **2013-04-28** -- 0.9.8-SNAPSHOT
-- **2013-04-13** -- 0.9.7-SNAPSHOT
+- **2013-05-03** -- 0.1-SNAPSHOT
 
 **Latest Updates:**
-- **2013-05-01** -- 0.9.9-SNAPSHOT One version to rule them all, unified FoBo module and sub-module versions.
-- **2013-04-28** -- 0.9.8-SNAPSHOT Updated FoBo-JQuery with support for jquery v1.9.1
-- **2013-04-13** -- 0.9.7-SNAPSHOT Added AngularJS components as a FoBo module.
+- **2013-05-03** -- 0.1-SNAPSHOT Adding unified api documentation and improved the build system.
 
 **Latest Stable Releases:**
 - None
 
 **Latest Snapshot Release:**
-- **2013-05-01** -- 0.9.9-SNAPSHOT artifacts for Lift 2.5 and 3.0
-- **2013-04-28** -- 0.9.8-SNAPSHOT artifacts for Lift 2.5 and 3.0
-- **2013-04-13** -- 0.9.7-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
-- **2013-04-06** -- 0.9.6-SNAPSHOT artifacts for Lift 2.5
-
+- **2013-05-03** -- 0.1-SNAPSHOT artifacts for Lift 2.5
 
 Toolkit:s and available versions
 --------------------------------
@@ -333,6 +325,9 @@ As of v0.7.3-SNAPSHOT the following artifacts has been deprecated and will bee r
 - None
 
 **Module Version history:**
+- **2013-05-01** -- 0.9.9-SNAPSHOT
+- **2013-04-28** -- 0.9.8-SNAPSHOT
+- **2013-04-13** -- 0.9.7-SNAPSHOT
 - **2013-04-06** -- 0.9.6-SNAPSHOT
 - **2013-03-29** -- 0.9.5-SNAPSHOT
 - **2013-03-27** -- 0.9.4-SNAPSHOT
@@ -348,6 +343,9 @@ As of v0.7.3-SNAPSHOT the following artifacts has been deprecated and will bee r
 - **2012-12-29** -- 0.7.7-SNAPSHOT
 
 **Updates history:**
+- **2013-05-01** -- 0.9.9-SNAPSHOT One version to rule them all, unified FoBo module and sub-module versions.
+- **2013-04-28** -- 0.9.8-SNAPSHOT Updated FoBo-JQuery with support for jquery v1.9.1
+- **2013-04-13** -- 0.9.7-SNAPSHOT Added AngularJS components as a FoBo module.
 - **2013-03-29** -- 0.9.6-SNAPSHOT FoBo-JQuery dependency update. 
 - **2013-03-29** -- 0.9.5-SNAPSHOT Google-Code-Prettify and JQuery is moved to sub FoBo modules
 - **2013-03-27** -- 0.9.4-SNAPSHOT New version schema see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) foundation is moved to sub module. 
@@ -370,6 +368,10 @@ As of v0.7.3-SNAPSHOT the following artifacts has been deprecated and will bee r
 - **2012-11-10** -- 0.7.2-SNAPSHOT Lift 2.5-M3 released to oss.sonatype.org
 
 **Snapshot Release history:**
+- **2013-05-01** -- 0.9.9-SNAPSHOT artifacts for Lift 2.5 and 3.0
+- **2013-04-28** -- 0.9.8-SNAPSHOT artifacts for Lift 2.5 and 3.0
+- **2013-04-13** -- 0.9.7-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
+- **2013-04-06** -- 0.9.6-SNAPSHOT artifacts for Lift 2.5
 - **2013-03-29** -- 0.9.5-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
 - **2013-03-27** -- 0.9.4-SNAPSHOT artifacts for Lift 2.5 and 3.0 see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) for more information.
 - **2013-03-08** -- 0.9.3-SNAPSHOT artifacts for Lift 2.5-RC2 and Lift 3.0-SNAPSHOT

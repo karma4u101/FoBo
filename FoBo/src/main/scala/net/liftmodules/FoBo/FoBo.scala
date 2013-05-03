@@ -86,7 +86,7 @@ import common._
  *    
  * ------------------------
  * 
- * ===Small heads up usage warning===
+ * ===Heads up===
  * 
  * This API is very young so if you make direct usage of some FoBoHelpers in lib chances is that things change. 
  * If you want to stay a bit more on the safe side usage of FoBo snippets and init operations should be fairly safe. 
@@ -118,7 +118,7 @@ import common._
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version v0.9.9
+ * @version v1.0
  * @author Peter Petersson (Github karma4u101), The Lift community  
  * 
  */

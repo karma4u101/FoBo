@@ -2,7 +2,7 @@ name := "FoBo"
 
 organization := "net.liftmodules"
 
-version in ThisBuild := "0.9.9-SNAPSHOT"
+version in ThisBuild := "1.0-SNAPSHOT"
 
 liftVersion in ThisBuild <<= liftVersion ?? "2.5-RC5"
 
