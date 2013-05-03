@@ -5,6 +5,14 @@ import util.{ Props }
 import http._
 import common._
 
+/**
+ * ==FoBo - Sub-module== 
+ * This package object is only of interest to you if you are using this module 
+ * as a stand alone artifact dependency in your project (without FoBo).
+ * This package object provides information on how to initiate and use this module 
+ * in your project. If you are using this module in FoBo see [[net.liftmodules.FoBo]] 
+ * for usage information. 
+ */
 package object FoBoDT {
 
   def init() {
@@ -30,7 +38,7 @@ package object FoBoDT {
    *  '''Example:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.DataTables190
+   *   FoBoDT.InitParam.Toolkit=FoBoDT.DataTables190
    * }}}
    *
    */
