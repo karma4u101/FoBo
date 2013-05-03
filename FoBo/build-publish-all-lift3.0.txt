@@ -1,0 +1,13 @@
+alias pub=publish-local
+set scalaVersion in ThisBuild:="2.10.0"
+set liftVersion in ThisBuild:="3.0-SNAPSHOT"
+
+project FoBo
+clean
+update
+compile
+test
+
+project FoBo
+pub
+
