@@ -44,7 +44,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - None
 
 **Latest Snapshot Release:**
-- **2013-05-03** -- 0.1-SNAPSHOT artifacts for Lift 2.5
+- **2013-05-03** -- 0.1-SNAPSHOT artifacts for Lift 2.5 and 3.0
 
 Toolkit:s and available versions
 --------------------------------

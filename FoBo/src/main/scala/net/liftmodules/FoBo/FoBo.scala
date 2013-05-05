@@ -19,19 +19,17 @@ import common._
  * front-end toolkits with some carefully thought throw Scala/Lift inherit extra benefits. 
  * 
  * Among the benefits is:
- *  - due to a small footprint and uniform declaration and integration points across toolkit versions only a 
+ *  - Due to a small footprint and uniform declaration and integration points across toolkit versions only a 
  *    small amount of changes will bee needed for a up/down-grading of a used Toolkit, optimally, if the toolkit 
  *    has no breaking changes it will just be a version change of the FoBo.Initparam in Lift bootstrap.liftweb.Boot. 
- *  - the modules included lib Classes and Snippet helpers will ease you from writing some commonly used toolkit 
+ *  - The module provides debug-able js and css files in development and minimized files otherwise and simultaneously 
+ *    supporting several versions, makes development, maintenance, upgrade and fall-back quick and easy.      
+ *  - The modules included lib Classes and Snippet helpers will ease you from writing some commonly used toolkit 
  *    component integration scripts making it a simple snippet invocation. 
  *    At this writing the snippet helpers is few but expect the numbers to grow as the module matures. 
- *  - Great mobile scalablity with some mobile enabled toolkits.  
- *  - As more front-end toolkits and JQuery plugins will be available to you just a FoBo.Initparam away you will, 
- *    when needed, be able to quick and easy test out and use nifty features like the Google code Prettify kit, 
- *    Angular JS, Angular UI Bootstrap, Knockout JS and more.   
- *  - FoBo uses Less to build (using the FoBo-Less project) the bootstrap css files so if you like you 
- *    can (if you fork the module source) easily tweak your bootstrap css (via variables.less) see bootstrap 
- *    documentation form more information.       
+ *  - Great mobile scalability with some mobile enabled toolkits.  
+ *  - With FoBo great toolkits and toolsets for building the framework most suited to your application development
+ *    will be available to you just a FoBo.Initparam away.   
  *
  * ===FoBo supported toolkits and plugins=== 
  * 
@@ -50,9 +48,11 @@ import common._
  *  - Angular NG-Grid [v2.0.4] (angular component)
  *  
  * ===Okey, okey I get it, now take me to the most interesting stuff===
- * From a user perspective, the most interesting stuff is probably in the snippet classes in [[net.liftmodules.FoBo.snippet.FoBo]].
+ * Except from bringing you all the powers from the included toolkits and toolset, the most interesting stuff 
+ * is probably in the snippet classes in [[net.liftmodules.FoBo.snippet.FoBo]].
  * Great care has been taken to explain and illustrate how to use the snippet methods so that you can use them 
- * even if you are not a Lift expert, to show you what I am talking about '''here is a example showing one way to use the tooltip function:'''
+ * even if you are not a Lift expert, to show you what I am talking about '''as a example here is one way 
+ * to use the FoBo provided tooltip function:'''
  * 
  * ------------------------
  * def '''tooltip''' : CssSel
