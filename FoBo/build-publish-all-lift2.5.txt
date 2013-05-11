@@ -10,6 +10,7 @@ test
 project FoBo
 pub
 
+
 set scalaVersion in ThisBuild:="2.9.2"
 
 project FoBo

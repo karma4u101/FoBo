@@ -74,21 +74,6 @@ package object FoBoAJS {
    */
   case object AJSNGGrid204 extends AJSToolkit {
     AJSFoBoResources.nggrid204
-  }  
-  
-  /**
-   * Enable usage of Angular-UI version 0_4_0 in your bootstrap liftweb Boot.
-   * @version 0.4.0
-   *
-   *  '''Example:'''
-   *
-   * {{{
-   *   FoBoAJS.InitParam.Toolkit=FoBoAJS.AJSUI040
-   * }}}
-   *
-   */
-  case object AJSUI040 extends AJSToolkit {
-    AJSFoBoResources.ui040
   }   
   
   /**
@@ -119,16 +104,7 @@ package object FoBoAJS {
         case "fobo" :: "ng-grid.css" :: Nil if Props.devMode => List("fobo", "angular-ui", "ng-grid", "2.0.4", "css", "ng-grid.css")
         case "fobo" :: "ng-grid.css" :: Nil => List("fobo", "angular-ui", "ng-grid", "2.0.4", "css", "ng-grid.css")
       }
-    }    
-    
-    lazy val ui040 = {
-      ResourceServer.rewrite {
-        case "fobo" :: "angular-ui.js" :: Nil if Props.devMode => List("fobo", "angular-ui", "ui", "0.4.0", "js", "angular-ui.js")
-        case "fobo" :: "angular-ui.js" :: Nil => List("fobo", "angular-ui", "ui", "0.4.0", "js", "angular-ui.js")
-        case "fobo" :: "angular-ui-ieshiv.js" :: Nil if Props.devMode => List("fobo", "angular-ui", "ui", "0.4.0", "js", "angular-ui-ieshiv.js")
-        case "fobo" :: "angular-ui-ieshiv.js" :: Nil => List("fobo", "angular-ui", "ui", "0.4.0", "js", "angular-ui-ieshiv.min.js")
-      }
-    }      
+    }        
     
   }
 }

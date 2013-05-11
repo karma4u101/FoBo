@@ -263,22 +263,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   case object AJSNGGrid204 extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AJSNGGrid204
   }  
-  
-  /**
-   * Enable usage of Angular-UI version 0_4_0 in your bootstrap liftweb Boot.
-   * @version 0.4.0
-   *
-   *  '''Example:'''
-   *
-   * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AJSUI040
-   * }}}
-   *
-   */
-  case object AJSUI040 extends FoBoToolkit {
-    net.liftmodules.FoBoAJS.AJSUI040
-  }   
-
+   
 /**
  * Enable usage of KnockOut version 2_2_1 in your bootstrap liftweb Boot.
  * @version 2.2.1
@@ -501,6 +486,20 @@ case object Bootstrap222 extends FoBoToolkit {
  */
 case object Bootstrap230 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap230
+}
+
+/**
+ * Enable usage of Twitter Bootstrap version 2_3_1 in your bootstrap liftweb Boot.
+ * @version 2.3.1
+ * 
+ * '''Example'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap231
+ * }}}
+ */
+case object Bootstrap231 extends FoBoToolkit {
+  net.liftmodules.FoBoTB.Bootstrap231
 }
 
 /**
