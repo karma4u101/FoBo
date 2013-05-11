@@ -34,17 +34,14 @@ Update log
 
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
-**Latest Module Version:** 
-- **2013-05-03** -- 0.1-SNAPSHOT
-
 **Latest Updates:**
-- **2013-05-03** -- 0.1-SNAPSHOT Adding unified api documentation and improved the build system.
+- **2013-05-09** 
 
 **Latest Stable Releases:**
-- None
+- **2013-05-09** -- v1.0 
 
 **Latest Snapshot Release:**
-- **2013-05-03** -- 0.1-SNAPSHOT artifacts for Lift 2.5 and 3.0
+- See [Development branch](https://github.com/karma4u101/FoBo/blob/develop
 
 Toolkit:s and available versions
 --------------------------------
@@ -73,7 +70,7 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 - JQueryXYZ
 - PrettifyXYZ
 - KnockoutXYZ
-- AngularJSXYZ with components (AJSUIXYZ, AJSUIBootstrapXYZ, AJSNGGridXYZ)
+- AngularJSXYZ with components (AJSUIBootstrapXYZ, AJSNGGridXYZ)
 
 Where X is major, Y minor and Z incremental version numbers as seen in the Toolkits list above (for example BootstrapXYZ will be Bootstrap230 for Twitter Bootstrap v2.3.0)
 
@@ -115,7 +112,7 @@ For example:
     <dependency>
       <groupId>net.liftmodules</groupId>
       <artifactId>fobo_2.5_2.9.2</artifactId>
-      <version>0.1.0-SNAPSHOT</version>
+      <version>1.0</version>
     </dependency>
 
 The example will include a module built for lift 2.5. If you are using maven observe that the artifact id also needs the Scala version.
@@ -147,148 +144,12 @@ Put something like the following in your Lift templat(s) head section (see below
     <link rel="stylesheet" type='text/css' href='[path/to/you/app/specific/css/file/in/the/webapp/dir]'>
     <script type="text/javascript" src="/classpath/fobo/[script file name]"></script>
 
+For more information see readme in respective sub module.
+
 Available CSS and JavaScript files 
 ----------------------------------
 
-The following is a list of **css file** and **script file**-name:s available in each toolkit for used as 
-[script/css file name] -hooks in your Lift templates. 
-
-###Bootstrap Toolkit
-
-FoBo.InitParam.ToolKit=FoBo.BootstrapXXX
-
-Base css file
-
-- bootstrap.css (all versions)
-
-Extra css files
-
-- bootstrap-responsive.css (all versions)
-
-All in one Script
-
-- bootstrap.js (all versions)
-
-###Font Awesome
-
-FoBo.InitParam.ToolKit=FoBo.FontAwesomeXXX 
-
-Add the following to your template
-
-	<link rel="stylesheet" href="/classpath/fobo/font-awesome.css">
-
-###Foundation Toolkit
-
-FoBo.InitParam.ToolKit=FoBo.FoundationXXX
-
-Base css file
-
-- foundation.css
-
-Extra css files
-
-- foundation-ie.css 
-- orbit.css
-
-Script files
-
-- foundation.js
-- modernizr.foundation.js (only in 2.1.5)
-- orbit.js
-    
-###JQuery Mobile Toolkit
-
-FoBo.InitParam.ToolKit=FoBo.JQueryMobileXXX
-
-Css files
-
-- jquery.mobile.css
-- jquery.mobile.structure.css
-- jquery.mobile.theme.css (only in 1.1.0)
-
-Script files
-
-- jquery.mobile.js
-- jquery.mobile.themeswitcher.js 
-
-###DataTables JQuery-plugin
-
-FoBo.InitParam.ToolKit=FoBo.DataTablesXXX
-
-Css files
-
-- jquery.dataTables.css
-- jquery.dataTables_themeroller.css
-- AutoFill.css
-- ColReorder.css
-- ColVis.css
-- ColVisAlt.css
-- TableTools_JUI.css
-- TableTools.css
-
-Script files
-
-- jquery.dataTables.js
-- AutoFill.js
-- ColReorder.js
-- ColVis.js
-- FixedColumns.js
-- FixedHeader.js
-- KeyTable.js
-- Scroller.js
-- TableTools.js
-- ZeroClipboard.js
-
-Themes files
-
-- themes/smoothness.css 
-- themes/ui-lightness.css
-
-swf files
-
-- copy_cvs_xls_pdf.swf
-- copy_cvs_xls.swf
-    
-    
-### Google Code Prettify
-
-FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
-
-Css files
-
-- prettify.css
-
-Script files
-
-- prettify.js
-- lang-xxx.js where xxx=[apollo,clj,css,go,hs,listp,lua,ml,n,proto,scala,sql,tex,vb,vhdl,wiki,xq,yaml]
-
-###Knockout
-
-Fobo.InitParam.ToolKit=FoBo.KnockoutXXX
-
-Script files
-
-- knockout.js
-
-###Angular JS
-
-See [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS#lift-fobo-template-hooks)    
-
-
-FoBo front-end toolkits documentation
--------------------------------------
-
-The [ZURB/Foundation](http://foundation.zurb.com/) and the [Twitter Bootstrap](http://twitter.github.com/bootstrap/) 
-and the [JQuery Mobile](http://jquerymobile.com/) links contains plenty of documentation so that will be your no.1 resources. 
-There is also a FoBo lift demo [project](https://github.com/karma4u101/FoBo-Lift-Template) containing some tookit documentation. 
-
-FoBo Bootstrap and Less
------------------------
-
-The [FoBo-Less project](https://github.com/karma4u101/FoBo-Less) allows you to tweak your generated bootstrap.css this is available 
-for bootstrap >= v2.0.0 via variables.less, see bootstrap documentation for available tweaks. Put the file to tweek in the 
-bootstrap/version/orverrides library, tweaks is normally done in the overrides/variables.less file already available in the overrides lib.
+See the "Lift FoBo Template hooks" section in readme file for respective FoBo module listed above.
 
 Scala IDE for Eclipse
 ---------------------
@@ -305,18 +166,6 @@ Sbteclipse provides SBT command to create Eclipse project files
 	Select General ==> Existing Project into Workspace 
 	Use "Brows" to look up the project root ....
 
-Deprecated
-----------
-
-**2012-11-18**
-As of v0.7.3-SNAPSHOT the following artifacts has been deprecated and will bee removed before v.1.0.0 release 
-
-- Bootstrap v1.4.0 to v2.0.4  -- Use v2.1.0 or newer (removed in 0.8.0-SNAPSHOT)
-- Foundation v2.1.4           -- Use v2.1.5 or newer
-- JQuery v1.6.4               -- Use v1.7.2 or newer
-- JQuery-Mobile v1.0.1        -- Use v1.1.0 
-- FoBo                        -- Use Bootstrap or Foundation (removed in 0.8.0-SNAPSHOT)
-
 
 ### History log
 ----------------
@@ -324,25 +173,9 @@ As of v0.7.3-SNAPSHOT the following artifacts has been deprecated and will bee r
 **Stable Release history:**
 - None
 
-**Module Version history:**
-- **2013-05-01** -- 0.9.9-SNAPSHOT
-- **2013-04-28** -- 0.9.8-SNAPSHOT
-- **2013-04-13** -- 0.9.7-SNAPSHOT
-- **2013-04-06** -- 0.9.6-SNAPSHOT
-- **2013-03-29** -- 0.9.5-SNAPSHOT
-- **2013-03-27** -- 0.9.4-SNAPSHOT
-- **2013-02-27** -- 0.9.3-SNAPSHOT
-- **2013-02-24** -- 0.9.2-SNAPSHOT
-- **2013-02-22** -- 0.9.1-SNAPSHOT
-- **2013-01-17** -- 0.9.0-SNAPSHOT
-- **2013-01-13** -- 0.8.0-SNAPSHOT
-- **2013-01-10** -- 0.7.11-SNAPSHOT
-- **2013-01-04** -- 0.7.10-SNAPSHOT
-- **2013-01-02** -- 0.7.9-SNAPSHOT
-- **2012-12-30** -- 0.7.8-SNAPSHOT
-- **2012-12-29** -- 0.7.7-SNAPSHOT
-
 **Updates history:**
+- **2013-05-09** -- 1.0-SNAPSHOT Removing one of the newly added Angular component (Angular UI v0.4.0) as it has been broken up into sub modules by upstream.
+- **2013-05-03** -- 1.0-SNAPSHOT Adding unified api documentation and improved the build system.
 - **2013-05-01** -- 0.9.9-SNAPSHOT One version to rule them all, unified FoBo module and sub-module versions.
 - **2013-04-28** -- 0.9.8-SNAPSHOT Updated FoBo-JQuery with support for jquery v1.9.1
 - **2013-04-13** -- 0.9.7-SNAPSHOT Added AngularJS components as a FoBo module.
@@ -368,6 +201,7 @@ As of v0.7.3-SNAPSHOT the following artifacts has been deprecated and will bee r
 - **2012-11-10** -- 0.7.2-SNAPSHOT Lift 2.5-M3 released to oss.sonatype.org
 
 **Snapshot Release history:**
+- **2013-05-03** -- 0.1-SNAPSHOT artifacts for Lift 2.5 and 3.0
 - **2013-05-01** -- 0.9.9-SNAPSHOT artifacts for Lift 2.5 and 3.0
 - **2013-04-28** -- 0.9.8-SNAPSHOT artifacts for Lift 2.5 and 3.0
 - **2013-04-13** -- 0.9.7-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
@@ -396,8 +230,4 @@ After many years of Java EE development I started look at Scala/Lift in May 2011
 and if you find something you think could be done in a more Scala/Lift fashion please let me know.
 
 
-User powered Lift module 
-========================
-**(*)** This is a Lift user community powered Lift module which means it is a work based on the 
-sound foundation of Lift done by Lift user community developers too share it with others
 

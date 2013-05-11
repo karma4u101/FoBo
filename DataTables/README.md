@@ -32,12 +32,9 @@ Integration into your project
 
 This module is used by the FoBo module to, via [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md) provide [DataTables.net](http://datatables.net/). 
 
-However the FoBo-DataTables module can be used separatly the only difference from using it from within the FoBo meta module is the usage of a slightly different package object name in Lift boot. 
-
-The following describes how to set up the module in your project **as a separate module** (without using the [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md) meta module). For setup in FoBo see the FoBo documentation.
+However the FoBo-DataTables module can be used separately then apart from the dependency setting the only difference from using it from within the FoBo meta module is the usage of a slightly different package object name in Lift boot. 
 
 For more information on how to use DataTables see the [FoBo Demo](http://www.media4u101.se/fobo-lift-template-demo/) and [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md).  
-
 
 ### Dependancy settings
 
@@ -58,14 +55,14 @@ version number and x2.y2.[z2] is the module's major x2, minor y2 and
 eventual incremental numbers z2 followed by a eventual SNAPSHOT 
 release candidate (rcX) or milestone (mX) version part.
 
-For example:
+For example (when using this module as a separete stand alone module outside of FoBo):
 
-    "net.liftmodules" %% "fobo-datatables_2.5 % "0.1.0-SNAPSHOT"
+    "net.liftmodules" %% "fobo-datatables_2.5 % "1.0"
       :
     <dependency>
       <groupId>net.liftmodules</groupId>
       <artifactId>fobo-datatables_2.5_2.9.2</artifactId>
-      <version>0.1.0-SNAPSHOT</version>
+      <version>1.0</version>
     </dependency>
 
 The example will include a module built for lift 2.5. If you are using maven observe that the artifact id also needs the Scala version.
@@ -75,14 +72,21 @@ For older versions <= 0.9.2 put the following in your project build.sbt files li
 
     "net.liftmodules" %% "fobo-datatables" % (liftVersion+"-[module version]") 
 
-### Lift FoBo boot hooks
+### Lift FoBo boot hooks (when used in the FoBo module)
+
+    import net.liftmodules.FoBo
+    :
+    //Use this if you are planing to use the FoBo DataTables sub module without using the FoBo meta module. 
+    FoBo.InitParam.ToolKit=FoBo.DataTablesXYZ 
+    FoBo.init()
+
+### Lift FoBo boot hooks (when used as stand alone module)
 
     import net.liftmodules.FoBoDT
     :
     //Use this if you are planing to use the FoBo DataTables sub module without using the FoBo meta module. 
     FoBoDT.InitParam.ToolKit=FoBoDT.DataTablesXYZ 
-    FoBoDT.init()
-    (usage with FoBo is FoBo.InitParam.ToolKit=FoBo.DataTablesXYZ)   
+    FoBoDT.init()  
 
 ### Lift FoBo Template hooks
 
@@ -92,6 +96,39 @@ For older versions <= 0.9.2 put the following in your project build.sbt files li
 
 For more information on how to use datatables see [DataTables.net](http://datatables.net/)
 
+###Available Css files
+
+- jquery.dataTables.css
+- jquery.dataTables_themeroller.css
+- AutoFill.css
+- ColReorder.css
+- ColVis.css
+- ColVisAlt.css
+- TableTools_JUI.css
+- TableTools.css
+
+Script files
+
+- jquery.dataTables.js
+- AutoFill.js
+- ColReorder.js
+- ColVis.js
+- FixedColumns.js
+- FixedHeader.js
+- KeyTable.js
+- Scroller.js
+- TableTools.js
+- ZeroClipboard.js
+
+Themes files
+
+- themes/smoothness.css 
+- themes/ui-lightness.css
+
+swf files
+
+- copy_cvs_xls_pdf.swf
+- copy_cvs_xls.swf
 
 ### History log
 ----------------

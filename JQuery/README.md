@@ -28,8 +28,6 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 **Latest Releases:**
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for release information.
 
-
-
 Integration into your project 
 -------------------------------
 
@@ -39,50 +37,15 @@ However the FoBo-JQuery module can be used separatly (not recomended see next pa
 
 Although it is posible to use this module separatly it is, in that case, recomended to use the lift-jqurey-module as this module basicaly is a wrapper around that module to be able to provide jquery within the FoBo namespace. 
 
-The following describes how to set up the module in your project **as a separate module** (without using the [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md) meta module). For setup in FoBo see the FoBo documentation.
-
 For more information on how to use JQuery see the [FoBo Demo](http://www.media4u101.se/fobo-lift-template-demo/) and [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md).  
 
+### Lift FoBo boot hooks (when used in the FoBo module)
 
-### Dependancy
-
-For module versions >= 0.9.3 put the following in your project build.sbt files lift libraryDependencies section 
-
-    "net.liftmodules" %% "moduleName_x1.y1 % "x2.y2[.z2][-SNAPSHOT/rcx/mx]"
-
-or if you are using Maven
-
-    <dependency>
-      <groupId>net.liftmodules</groupId>
-      <artifactId>moduleName_x1.y1_a.b.c</artifactId>
-      <version>x2.y2[.z2][-SNAPSHOT/rcx/mx]</version>
-    </dependency>
-
-Where x1.y1 is Lift major and minor version numbers and a.b.c is Scala
-version number and x2.y2.[z2] is the module's major x2, minor y2 and
-eventual incremental numbers z2 followed by a eventual SNAPSHOT 
-release candidate (rcX) or milestone (mX) version part.
-
-For example:
-
-    "net.liftmodules" %% "fobo-jquery_2.5 % "0.1.0-SNAPSHOT"
-      :
-    <dependency>
-      <groupId>net.liftmodules</groupId>
-      <artifactId>fobo-jquery_2.5_2.9.2</artifactId>
-      <version>0.1.0-SNAPSHOT</version>
-    </dependency>
-
-The example will include a module built for lift 2.5. If you are using maven observe that the artifact id also needs the Scala version.
-
-### Lift FoBo boot hooks
-
-    import net.liftmodules.FoBoJQ 
+    import net.liftmodules.FoBo 
     :
-    FoBoJQ.InitParam.ToolKit=FoBoJQ.JQueryXYZ
-    FoBoJQ.init()
-    (usage with FoBo is FoBo.InitParam.JQuery=FoBo.JQueryXYZ)   
-
+    FoBo.InitParam.ToolKit=FoBo.JQueryXYZ
+    FoBo.init()
+    
 ### Lift FoBo Template hooks
 
     <script src="/classpath/fobo/jquery.js" type="text/javascript"></script>
@@ -90,7 +53,6 @@ The example will include a module built for lift 2.5. If you are using maven obs
 Note: This module is basicly a simple wrapper around the lift-jquery-module to be able to provide a path with the namespace fobo in it.
 
 For more information on how to use JQuery see [JQuery](http://jquery.com/)
-
 
 ### History log
 ----------------
