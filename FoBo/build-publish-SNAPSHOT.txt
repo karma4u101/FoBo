@@ -13,9 +13,8 @@ test
 
 project FoBo
 pub
-toistois1
 
-set liftVersion in ThisBuild:="2.6-SNAPSHOT"
+set liftVersion in ThisBuild:="2.5-RC6"
 set scalaVersion in ThisBuild:="2.10.0"
 
 project FoBo
