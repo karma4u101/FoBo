@@ -35,7 +35,7 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Updates:**
-- **2013-05-13** -- v0.1-SNAPSHOT artifacts release for Lift v2.6/v3.0 
+- **2013-05-09** 
 
 **Latest Stable Releases:**
 - **2013-05-09** -- v1.0 
