@@ -29,6 +29,18 @@ object FoBoTBSpec extends Specification  {
       rewriteBootstrap231RESPCSS must_== List("fobo", "bootstrap", "2.3.1", "css", "responsive-min.css")
     }      
   } 
+  
+ "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap230 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/2.3.0/js/bootstrap-all-min.js" in {
+      rewriteBootstrap230JS must_== List("fobo", "bootstrap", "2.3.0", "js", "bootstrap-all-min.js")
+    }
+     "rewrit fobo/bootstrap.css to fobo/bootstrap/2.3.0/css/bootstrap-min.css" in {
+      rewriteBootstrap230CSS must_== List("fobo", "bootstrap", "2.3.0", "css", "bootstrap-min.css")
+    } 
+     "rewrit fobo/bootstrap-responsive.css to fobo/bootstrap/2.3.0/css/responsive-min.css" in {
+      rewriteBootstrap230RESPCSS must_== List("fobo", "bootstrap", "2.3.0", "css", "responsive-min.css")
+    }      
+  }   
    
    def rewriteBootstrap231JS = {
     FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap231
@@ -44,6 +56,21 @@ object FoBoTBSpec extends Specification  {
     FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap231
     ResourceServer.pathRewriter("fobo"::"bootstrap-responsive.css"::Nil)
   }   
+   
+   def rewriteBootstrap230JS = {
+    FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap230
+    ResourceServer.pathRewriter("fobo"::"bootstrap.js"::Nil)
+  } 
+   
+   def rewriteBootstrap230CSS = {
+    FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap230
+    ResourceServer.pathRewriter("fobo"::"bootstrap.css"::Nil)
+  } 
+   
+   def rewriteBootstrap230RESPCSS = {
+    FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap230
+    ResourceServer.pathRewriter("fobo"::"bootstrap-responsive.css"::Nil)
+  }      
   
    
 }
