@@ -4,7 +4,7 @@ organization := "net.liftmodules"
 
 version in ThisBuild := "1.0-SNAPSHOT"
 
-liftVersion in ThisBuild <<= liftVersion ?? "2.6-SNAPSHOT"
+liftVersion in ThisBuild <<= liftVersion ?? "2.5-RC6"
 
 liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
@@ -21,6 +21,8 @@ scalacOptions ++= Seq("-deprecation")
 EclipseKeys.withSource := true
 
 EclipseKeys.skipParents in ThisBuild := false
+
+useGpgAgent := true
 
 resolvers ++= Seq(
   "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",

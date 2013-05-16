@@ -34,11 +34,11 @@ Update log
 
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
+**Latest Stable Releases:**
+- **2013-05-18** -- v1.0 
+
 **Latest Updates:**
 - **2013-05-13** -- v0.1-SNAPSHOT artifacts release for Lift v2.6/v3.0 
-
-**Latest Stable Releases:**
-- **2013-05-09** -- v1.0 
 
 **Latest Snapshot Release:**
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop
@@ -50,7 +50,7 @@ Artifacts is available for: Lift 2.4, 2.5, 3.0-SNAPSHOT
 
 The FoBo module includes the following sub-modules and supports the following toolkit versions
 
-- [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.1.0, v2.2.0, v2.2.2, v2.3.0] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+- [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 - [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0] [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
 - [FoBo-Foundation](https://github.com/karma4u101/FoBo/tree/master/Foundation) [v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
 - [FoBo-JQuery-Mobile](https://github.com/karma4u101/FoBo/tree/master/JQuery-Mobile) [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
