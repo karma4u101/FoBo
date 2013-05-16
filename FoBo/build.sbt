@@ -22,7 +22,7 @@ EclipseKeys.withSource := true
 
 EclipseKeys.skipParents in ThisBuild := false
 
-useGpgAgent := true
+//useGpgAgent := true
 
 resolvers ++= Seq(
   "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
