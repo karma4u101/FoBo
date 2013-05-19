@@ -35,13 +35,14 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Updates:**
-- **2013-05-13** -- v0.1-SNAPSHOT artifacts release for Lift v2.6/v3.0 
+- See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 **Latest Stable Releases:**
 - **2013-05-09** -- v1.0 
 
 **Latest Snapshot Release:**
-- See [Development branch](https://github.com/karma4u101/FoBo/blob/develop
+- See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
+
 
 Toolkit:s and available versions
 --------------------------------
@@ -174,6 +175,7 @@ Sbteclipse provides SBT command to create Eclipse project files
 - None
 
 **Updates history:**
+- **2013-05-13** -- 1.0-SNAPSHOT artifacts release for Lift v2.6/v3.0 
 - **2013-05-09** -- 1.0-SNAPSHOT Removing one of the newly added Angular component (Angular UI v0.4.0) as it has been broken up into sub modules by upstream.
 - **2013-05-03** -- 1.0-SNAPSHOT Adding unified api documentation and improved the build system.
 - **2013-05-01** -- 0.9.9-SNAPSHOT One version to rule them all, unified FoBo module and sub-module versions.
@@ -201,7 +203,8 @@ Sbteclipse provides SBT command to create Eclipse project files
 - **2012-11-10** -- 0.7.2-SNAPSHOT Lift 2.5-M3 released to oss.sonatype.org
 
 **Snapshot Release history:**
-- **2013-05-03** -- 0.1-SNAPSHOT artifacts for Lift 2.5 and 3.0
+- **2013-05-13** -- 1.0-SNAPSHOT artifacts release for Lift v2.6/v3.0 
+- **2013-05-03** -- 1.0-SNAPSHOT artifacts for Lift 2.5 and 3.0
 - **2013-05-01** -- 0.9.9-SNAPSHOT artifacts for Lift 2.5 and 3.0
 - **2013-04-28** -- 0.9.8-SNAPSHOT artifacts for Lift 2.5 and 3.0
 - **2013-04-13** -- 0.9.7-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
