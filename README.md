@@ -79,8 +79,6 @@ Where X is major, Y minor and Z incremental version numbers as seen in the Toolk
 =======
 
 Where X is major, Y minor and Z incremental version numbers as seen in the Toolkits list above (for example BootstrapXYZ will be Bootstrap230 for Twitter Bootstrap v2.3.0)
-
->>>>>>> 0c265d0dbc216764886e4aec8fbdee7a93b494a1
 For more information on how to set this up see below.
     
 Quick Start
