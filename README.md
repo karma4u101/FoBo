@@ -34,11 +34,11 @@ Update log
 
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
+**Latest Stable Releases:**
+- **2013-05-19** -- v1.0 
+
 **Latest Updates:**
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
-
-**Latest Stable Releases:**
-- **2013-05-09** -- v1.0 
 
 **Latest Snapshot Release:**
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
@@ -51,7 +51,11 @@ Artifacts is available for: Lift 2.4, 2.5, 3.0-SNAPSHOT
 
 The FoBo module includes the following sub-modules and supports the following toolkit versions
 
+<<<<<<< HEAD
 - [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.1.0, v2.2.0, v2.2.2, v2.3.0] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+=======
+- [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+>>>>>>> 0c265d0dbc216764886e4aec8fbdee7a93b494a1
 - [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0] [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
 - [FoBo-Foundation](https://github.com/karma4u101/FoBo/tree/master/Foundation) [v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
 - [FoBo-JQuery-Mobile](https://github.com/karma4u101/FoBo/tree/master/JQuery-Mobile) [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
@@ -72,9 +76,15 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 - PrettifyXYZ
 - KnockoutXYZ
 - AngularJSXYZ with components (AJSUIBootstrapXYZ, AJSNGGridXYZ)
+<<<<<<< HEAD
 
 Where X is major, Y minor and Z incremental version numbers as seen in the Toolkits list above (for example BootstrapXYZ will be Bootstrap230 for Twitter Bootstrap v2.3.0)
 
+=======
+
+Where X is major, Y minor and Z incremental version numbers as seen in the Toolkits list above (for example BootstrapXYZ will be Bootstrap230 for Twitter Bootstrap v2.3.0)
+
+>>>>>>> 0c265d0dbc216764886e4aec8fbdee7a93b494a1
 For more information on how to set this up see below.
     
 Quick Start
