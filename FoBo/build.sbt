@@ -2,9 +2,9 @@ name := "FoBo"
 
 organization := "net.liftmodules"
 
-version in ThisBuild := "1.0-SNAPSHOT"
+version in ThisBuild := "1.1-SNAPSHOT"
 
-liftVersion in ThisBuild <<= liftVersion ?? "2.5-RC6"
+liftVersion in ThisBuild <<= liftVersion ?? "3.0-SNAPSHOT"
 
 liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
@@ -12,7 +12,7 @@ name <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
 crossScalaVersions := Seq("2.10.0", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion in ThisBuild := "2.9.2"
+scalaVersion in ThisBuild := "2.10.0"
 
 logLevel in ThisBuild := Level.Info  //Level.Info.Debug
 
