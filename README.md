@@ -1,8 +1,7 @@
 FoBo - A Generic Front-End Toolkit Module for Lift [![Build Status](https://secure.travis-ci.org/karma4u101/FoBo.png)](http://travis-ci.org/karma4u101/FoBo)
 ==================================================
 
-A **live demo** and introduction of this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/). 
-A Lift basic template with FoBo setup for Twitter Bootstrap usage can be found here [Templating With Twitter Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap)  
+FoBo's main purpose is to provide a easy to use Lift module that includes front end toolkits for developers and designers to aid them in developing and designing mobile scalable reactive web applications. 
 
 With this Lift module you can chose among some of the industry leading web-centric open source front-end toolkits. 
 The module is simultaneously supporting several versions of the included toolkits, providing debug-able js and css files in development and minimized files otherwise, 
@@ -10,12 +9,15 @@ making development, maintenance, upgrade and fall-back quick and easy (typically
 Lift applications with the toolkit(s) of your choice. 
 
 Another benefit of using this module is the small but growing API that includes helper object:s and snippet:s (see API documents for usage) 
-that will take care of some common toolkit and component initiation, script generation and more. 
-At this writing the helpers are few but as the module mature it will provide plenty of useful help functions see the demo for a teaser and potential. 
-If you have ideas and suggestions let me know! contact me or add a issue and/or contribute a patch. 
+that will take care of some common toolkit and component usage and initiation, script generation and more. 
+At this writing the helpers are few but as the module mature it will provide plenty of useful ready to use components and help functions see the demo for a teaser and potential. 
+If you have ideas and suggestions let us know! 
 
 A third benefit of using this module is that you will get a clean separation of the toolkit files and your application specific resources as 
 the module dose not cluttering your applications web-app resources directory. 
+
+A **live demo** and introduction of this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/). 
+A Lift basic template with FoBo setup for Twitter Bootstrap usage can be found here [Templating With Twitter Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap)  
 
 The Github repository for the demo can be found [here](https://github.com/karma4u101/FoBo-Lift-Template).
 
@@ -24,10 +26,8 @@ See the [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/REA
 
 Contributions
 ------
-Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion to my priv. e-mail or on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
-
-best regards 
-Peter Petersson 
+Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion to the [Lift's mailing list](http://groups.google.com/group/liftweb/) 
+ 
 
 Update log
 ----------
