@@ -2,9 +2,9 @@ We love contributions and the best way to do it is via pull requests.
 
 Here's a quick guide:
 
-1. Fork the repo.
+1. Fork the repository switch to the develop branch and optionally make a feature branch on it (good practice).
 
-2. Verify that your contribution is working as expected, preferably, but not mandatory, with a writen test.
+2. Verify that your contribution is working as expected, preferably, but not mandatory, with a written test.
 
 3. Push to your fork and submit a pull request.
 

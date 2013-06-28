@@ -75,10 +75,6 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 - AngularJSXYZ with components (AJSUIBootstrapXYZ, AJSNGGridXYZ)
 
 Where X is major, Y minor and Z incremental version numbers as seen in the Toolkits list above (for example BootstrapXYZ will be Bootstrap230 for Twitter Bootstrap v2.3.0)
-
-=======
-
-Where X is major, Y minor and Z incremental version numbers as seen in the Toolkits list above (for example BootstrapXYZ will be Bootstrap230 for Twitter Bootstrap v2.3.0)
 For more information on how to set this up see below.
     
 Quick Start
