@@ -30,6 +30,21 @@ package object FoBoFA {
     object InitParam extends FAToolkit {
       var ToolKit: FAToolkit = null //FontAwesome200
     }
+
+     /**
+     * Enable usage of Font-Awesome version 3_2_1 in your bootstrap liftweb Boot.
+     * @version 3.2.1
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome321
+     * }}}
+     *
+     */
+    case object FontAwesome321 extends FAToolkit {
+      FAResources.fontAwesome321
+    }
     
     /**
      * Enable usage of Font-Awesome version 3_0_0 in your bootstrap liftweb Boot.
@@ -83,12 +98,15 @@ package object FoBoFA {
      */
     private object FAResources {
 
-      lazy val fontAwesome200 = {
+      lazy val fontAwesome321 = {
         ResourceServer.rewrite {
-          case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "2.0.0", "css", "font-awesome.css")
-          case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "2.0.0", "css", "font-awesome-min.css")
+          case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "3.2.1", "css", "font-awesome.css")
+          case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-min.css")
+          case "fobo" :: "font-awesome-ie7.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-ie7.css")
+          case "fobo" :: "font-awesome-ie7.css" :: Nil => List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-ie7.css")
+
         }
-      }
+      }  
       
       lazy val fontAwesome300 = {
         ResourceServer.rewrite {
@@ -99,6 +117,13 @@ package object FoBoFA {
 
         }
       }      
+
+      lazy val fontAwesome200 = {
+        ResourceServer.rewrite {
+          case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "2.0.0", "css", "font-awesome.css")
+          case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "2.0.0", "css", "font-awesome-min.css")
+        }
+      }
       
       lazy val fontAwesome200TB222 = {
         ResourceServer.rewrite {

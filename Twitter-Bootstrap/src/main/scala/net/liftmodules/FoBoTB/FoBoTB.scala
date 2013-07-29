@@ -96,16 +96,15 @@ object TBLocInfo {
 
 /**
  * Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot
- * 
+ *
  * '''Example:'''
  *  
  * {{{
  *   FoBoTB.InitParam.JQuery=FoBoTB.JQuery172
- *   FoBoTB.InitParam.Toolkit=FoBoTB.Bootstrap222
- *   FoBoTB.InitParam.Toolkit=FoBoTB.PrettifyJun2011
+ *   FoBoTB.InitParam.Toolkit=FoBoTB.Bootstrap232
  * }}}
- * This example uses the Bootstrap v2.2.2 option and adds the Google code Prettify vJun2011 
- * to the enabled toolkits.  
+ * This example uses the Bootstrap v2.3.2 option.  
+ *   
  */
 object InitParam extends FoBoToolkit with FoBoJQuery {
   var ToolKit: FoBoToolkit = null //Bootstrap222
@@ -168,13 +167,13 @@ case object Bootstrap230 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Twitter Bootstrap version 2_3_0 in your bootstrap liftweb Boot.
- * @version 2.3.0
+ * Enable usage of Twitter Bootstrap version 2_3_1 in your bootstrap liftweb Boot.
+ * @version 2.3.1
  * 
  * '''Example'''
  * 
  * {{{
- *   FoBoTB.InitParam.Toolkit=FoBoTB.Bootstrap230
+ *   FoBoTB.InitParam.Toolkit=FoBoTB.Bootstrap231
  * }}}
  */
 case object Bootstrap231 extends FoBoToolkit {
@@ -182,9 +181,35 @@ case object Bootstrap231 extends FoBoToolkit {
 }
 
 /**
+ * Enable usage of Twitter Bootstrap version 2_3_2 in your bootstrap liftweb Boot.
+ * @version 2.3.2
+ * 
+ * '''Example'''
+ * 
+ * {{{
+ *   FoBoTB.InitParam.Toolkit=FoBoTB.Bootstrap232
+ * }}}
+ */
+case object Bootstrap232 extends FoBoToolkit {
+  FoBoResources.bootstrap232
+}
+
+/**
  * Object holding internally used FoBo resources. 
  */
 private object FoBoResources { 
+
+  lazy val bootstrap232: Unit = {
+    ResourceServer.rewrite {
+      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.3.2", "css", "bootstrap.css")
+      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","2.3.2", "css", "bootstrap-min.css")
+      case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.3.2", "css", "responsive.css")
+      case "fobo" :: "bootstrap-responsive.css" :: Nil => List("fobo", "bootstrap","2.3.2","css", "responsive-min.css")
+      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","2.3.2", "js", "bootstrap.js")
+      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","2.3.2", "js", "bootstrap-min.js")   
+    }
+  }   
+    
   
   lazy val bootstrap231: Unit = {
     ResourceServer.rewrite {

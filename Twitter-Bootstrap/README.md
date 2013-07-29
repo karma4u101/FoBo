@@ -24,6 +24,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)
 
 **Latest Updates:**
+- **2013-07-29** -- 1.1-SNAPSHOT Added bootstrap v2.3.2 
 - **2013-05-11** -- 1.0-SNAPSHOT Added bootstrap v2.3.1
 - **2013-05-01** -- 0.9.9-SNAPSHOT ++ One version to rule them all, unified FoBo module and sub-module versions.
 - **2013-02-24** -- 0.2.0-SNAPSHOT Completed module transaction. Now using FoBo.XXXX namespace for snippets.

@@ -379,6 +379,22 @@ case object JQueryMobile110 extends FoBoToolkit {
   net.liftmodules.FoBoJQM.JQueryMobile110
 }
 
+
+/**
+ * Enable usage of Font-Awesome version 3_2_1 in your bootstrap liftweb Boot.
+ * @version 3.2.1
+ * 
+ *  '''Example:'''
+ *  
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.FontAwesome321
+ * }}}
+ *  
+ */
+case object FontAwesome321 extends FoBoToolkit {
+  net.liftmodules.FoBoFA.FontAwesome321
+}
+
 /**
  * Enable usage of Font-Awesome version 3_0_0 in your bootstrap liftweb Boot.
  * @version 3.0.0
@@ -500,6 +516,20 @@ case object Bootstrap230 extends FoBoToolkit {
  */
 case object Bootstrap231 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap231
+}
+
+/**
+ * Enable usage of Twitter Bootstrap version 2_3_2 in your bootstrap liftweb Boot.
+ * @version 2.3.2
+ * 
+ * '''Example'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap232
+ * }}}
+ */
+case object Bootstrap232 extends FoBoToolkit {
+  net.liftmodules.FoBoTB.Bootstrap232
 }
 
 /**

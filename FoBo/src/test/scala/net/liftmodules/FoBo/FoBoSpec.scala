@@ -102,6 +102,12 @@ object FoBoSpec extends Specification  {
     }       
   }
   
+  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome321 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/3.2.1/css/font-awesome.css" in {
+      rewriteFontAwesome321CSS must_== List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-min.css")
+    }       
+  }  
+  
   
   
   //Foundation
@@ -157,7 +163,13 @@ object FoBoSpec extends Specification  {
     "rewrit fobo/bootstrap.js to fobo/bootstrap/2.3.1/js/bootstrap-all-min.js" in {
       rewriteBootstrap231JS must_== List("fobo", "bootstrap", "2.3.1", "js", "bootstrap-all-min.js")
     }       
-  }   
+  }
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap232 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/2.3.2/js/bootstrap-min.js" in {
+      rewriteBootstrap232JS must_== List("fobo", "bootstrap", "2.3.2", "js", "bootstrap-min.js")
+    }       
+  }  
   
   //AngularJS
   //rewriteAngularJS106
@@ -233,6 +245,11 @@ object FoBoSpec extends Specification  {
     ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
   }
   
+  def rewriteFontAwesome321CSS = {
+    FoBo.InitParam.ToolKit=FoBo.FontAwesome321
+    ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
+  }  
+  
   
   
   //Foundation
@@ -282,6 +299,11 @@ object FoBoSpec extends Specification  {
    
    def rewriteBootstrap231JS = {
     FoBo.InitParam.ToolKit=FoBo.Bootstrap231
+    ResourceServer.pathRewriter("fobo"::"bootstrap.js"::Nil)
+  } 
+   
+   def rewriteBootstrap232JS = {
+    FoBo.InitParam.ToolKit=FoBo.Bootstrap232
     ResourceServer.pathRewriter("fobo"::"bootstrap.js"::Nil)
   }    
   
