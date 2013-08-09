@@ -46,6 +46,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 
 **Latest Snapshot Release:**
 - **2013-07-29** -- 1.1-SNAPSHOT artifacts release for Lift v2.5/2.6/v3.0
+- **2013-08-09** -- 1.1-SNAPSHOT artifacts release for Lift v2.5/2.6/v3.0
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 
