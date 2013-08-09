@@ -40,7 +40,7 @@ import xml._
  * '''Result:''' This will create a Navlist with menu entries associated with the LocGroup 'nl1'.
  * 
  */
-object TBNavlist extends FlexMenuBuilder with DispatchSnippet {
+trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
 
   def dispatch: DispatchIt = overridenDispatch orElse net.liftweb.builtin.snippet.Menu.dispatch
 
@@ -189,3 +189,4 @@ object TBNavlist extends FlexMenuBuilder with DispatchSnippet {
 
 }
 
+object TBNavlist extends TBNavlist

@@ -55,7 +55,7 @@ import xml._
  * two LocGroup's 'top' and 'top2' where the second one is pulled to the right.
  * 
  */
-object TBNavbar extends FlexMenuBuilder with DispatchSnippet {
+trait TBNavbar extends FlexMenuBuilder with DispatchSnippet {
 
   def dispatch: DispatchIt = overridenDispatch orElse net.liftweb.builtin.snippet.Menu.dispatch
 
@@ -198,4 +198,6 @@ object TBNavbar extends FlexMenuBuilder with DispatchSnippet {
   }
 
 }
+
+object TBNavbar extends TBNavbar
 
