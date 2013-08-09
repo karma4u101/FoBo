@@ -532,6 +532,21 @@ case object Bootstrap232 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap232
 }
 
+
+/**
+ * Enable usage of Twitter Bootstrap version 3_0_0-RC1 in your bootstrap liftweb Boot.
+ * @version 3.0.0
+ * 
+ * '''Example'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap232
+ * }}}
+ */
+case object Bootstrap300RC1 extends FoBoToolkit {
+  net.liftmodules.FoBoBs.Bootstrap300RC1
+}
+
 /**
  * Enable usage of DataTables version 1_9_0 in your bootstrap liftweb Boot.
  * @version 1.9.0

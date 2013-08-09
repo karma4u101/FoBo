@@ -29,19 +29,23 @@ object LiftModuleFoBoBuild extends Build {
                             base = file("FoBo"),
                             settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile),
-                             aggregate = Seq(jquery,bootstrap,fontAwesome,foundation,datatables,knockout,angularjs,jquerymobile,prettify)
-                                 ).dependsOn(angularjs,jquery,bootstrap,fontAwesome,foundation,datatables,knockout,jquerymobile,prettify)  
+                             aggregate = Seq(jquery,bootstrap,bootstrap3,fontAwesome,foundation,datatables,knockout,angularjs,jquerymobile,prettify)
+                                 ).dependsOn(angularjs,jquery,bootstrap,bootstrap3,fontAwesome,foundation,datatables,knockout,jquerymobile,prettify)  
                                  
    lazy val fontAwesome = Project(id   = "FoBo-Font-Awesome", 
                              base = file("Font-Awesome"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
-                                 fullClasspath in doc in Compile <<= fullClasspath in Compile)
-                                 )  
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))  
                              
   lazy val bootstrap    = Project(id   = "FoBo-Twitter-Bootstrap", 
                              base = file("Twitter-Bootstrap"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
+                          
+  lazy val bootstrap3   = Project(id   = "FoBo-TwBs-Bootstrap3", 
+                             base = file("TwBs-Bootstrap3"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                   
                              
   lazy val foundation   = Project(id   = "FoBo-Foundation", 
                              base = file("Foundation"),
@@ -81,9 +85,7 @@ object LiftModuleFoBoBuild extends Build {
   lazy val foboLess     = Project(id   = "FoBo-Less", 
                              base = file("FoBo-Less"))     
                              
-                             
-                       
-                             
+                                                   
 
   lazy val scaladocDiagramsEnabled = System.getProperty("scaladoc.diagrams", "false").toBoolean
   lazy val scaladocOptions = List() /*List("-implicits")*/ ::: (if (scaladocDiagramsEnabled) List("-diagrams") else Nil)

@@ -28,7 +28,8 @@ See the [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/REA
 Contributions
 ------
 Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion to the [Lift's mailing list](http://groups.google.com/group/liftweb/) 
- 
+
+> As the **main branch** is just updated for releases, see [Git branching model](http://nvie.com/posts/a-successful-git-branching-model/), make your pull requests against the [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 Update log
 ----------
