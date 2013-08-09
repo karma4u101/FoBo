@@ -29,7 +29,7 @@ Contributions
 ------
 Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion to the [Lift's mailing list](http://groups.google.com/group/liftweb/) 
 
-> As the **main branch** is just updated for releases, see [Git branching model](http://nvie.com/posts/a-successful-git-branching-model/), make your pull requests against the [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
+> As FoBo is using this [Git branching model](http://nvie.com/posts/a-successful-git-branching-model/) the **main branch** is just updated for releases so make your pull requests against the [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 Update log
 ----------
@@ -40,7 +40,8 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - **2013-05-19** -- 1.0 
 
 **Latest Updates:**
-- **2013-07-29** -- 1.1-SNAPSHOT Added bootstrap v2.3.2 and Font Awesome v3.2.1 
+- **2013-07-29** -- 1.1-SNAPSHOT Added bootstrap v2.3.2 and Font Awesome v3.2.1. 
+- **2013-08-09** -- 1.1-SNAPSHOT Added Bootstrap v3.0.0-RC1. Open up the TBNav* imp. for user extensions. 
 - See also [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 **Latest Snapshot Release:**
