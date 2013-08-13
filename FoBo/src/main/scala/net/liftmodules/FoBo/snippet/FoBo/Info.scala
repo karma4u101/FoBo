@@ -1,12 +1,13 @@
 package net.liftmodules.FoBo.snippet.FoBo
 
-import net.liftmodules.FoBo.lib.BuildInfo
+
 import net.liftweb._
 import util._
 import common._
 import http._
 import Helpers._
 import scala.xml.{NodeSeq,Text}
+import net.liftmodules.FoBo.lib.BuildInfo
 
 /**
  * ==Info Snippet==
@@ -20,6 +21,7 @@ import scala.xml.{NodeSeq,Text}
  * For more examples see the individual transform functions.
  */
 object Info extends StatefulSnippet with Loggable {
+  
   
   def dispatch = {
     case "buildInfo" => buildInfo

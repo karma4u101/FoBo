@@ -18,9 +18,11 @@ logLevel in ThisBuild := Level.Info  //Level.Info.Debug
 
 scalacOptions ++= Seq("-deprecation")
 
-EclipseKeys.withSource := true
+EclipseKeys.withSource in ThisBuild := true
 
 EclipseKeys.skipParents in ThisBuild := false
+
+EclipseKeys.createSrc in ThisBuild := EclipseCreateSrc.Default + EclipseCreateSrc.Managed
 
 //useGpgAgent := true
 
@@ -40,16 +42,16 @@ libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
 //############################################################
 //#### THE BUILDINFO BUILD
 //## https://github.com/sbt/sbt-buildinfo
-//## 
+//## Moved to LiftModuleBuild.scala
 //##
 //#############################################################
-seq(buildInfoSettings: _*)
+//seq(buildInfoSettings: _*)
 
-sourceGenerators in Compile <+= buildInfo
+//sourceGenerators in Compile <+= buildInfo
 
-buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
+//buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
 
-buildInfoPackage := "net.liftmodules.FoBo.lib"
+//buildInfoPackage := "net.liftmodules.FoBo.lib"
 
 //#########################################################################
 //#### THE LESS BUILD

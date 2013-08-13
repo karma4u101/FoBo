@@ -2,4 +2,4 @@
 Usage
 =====
 
-project-root-path$ sbt < project/autobuildscript/build-publish-SNAPSHOT.txt
+sbt < project/autobuildscript/build-publish-SNAPSHOT.txt > build.log | tail -f build.log

@@ -8,7 +8,7 @@ crossScalaVersions := Seq("2.10.0", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
 scalacOptions ++= Seq("-deprecation")
 
-EclipseKeys.withSource := true
+//EclipseKeys.withSource := true
 
 resolvers ++= Seq(
   "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
@@ -49,16 +49,17 @@ libraryDependencies <++= scalaVersion { sv =>
 //############################################################
 //#### THE BUILDINFO BUILD
 //## https://github.com/sbt/sbt-buildinfo
-//## 
+//## Moved to LiftModuleBuild.scala
 //##
 //#############################################################
-seq(buildInfoSettings: _*)
 
-sourceGenerators in Compile <+= buildInfo
+//buildInfoSettings
 
-buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
+//sourceGenerators in Compile <+= buildInfo
 
-buildInfoPackage := "net.liftmodules.FoBo.lib"
+//buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
+
+//buildInfoPackage := "net.liftmodules.FoBo.lib"
 
 //#########################################################################
 //#### THE LESS BUILD

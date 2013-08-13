@@ -3,6 +3,7 @@ import sbt.Keys._
 import java.lang.String
 import Unidoc.{ JavaDoc, javadocSettings, junidocSources, sunidoc, unidocExclude }
 import annotation.tailrec
+import sbtbuildinfo.Plugin._
 
 object LiftModuleFoBoBuild extends Build {
   
@@ -27,7 +28,7 @@ object LiftModuleFoBoBuild extends Build {
          
    lazy val fobo        = Project(id = "FoBo",
                             base = file("FoBo"),
-                            settings = defaultSettings ++ scaladocSettings ++ Seq(
+                            settings = defaultSettings ++ myBuildInfoSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile),
                              aggregate = Seq(jquery,bootstrap,bootstrap3,fontAwesome,foundation,datatables,knockout,angularjs,jquerymobile,prettify)
                                  ).dependsOn(angularjs,jquery,bootstrap,bootstrap3,fontAwesome,foundation,datatables,knockout,jquerymobile,prettify)  
@@ -140,7 +141,14 @@ object LiftModuleFoBoBuild extends Build {
     publishArtifact in Compile := false
   )
   
+  lazy val myBuildInfoSettings = buildInfoSettings ++ Seq(
+          sourceGenerators in Compile <+= buildInfo,
+          buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
+          buildInfoPackage := "net.liftmodules.FoBo.lib"
+      )
+  
   lazy val defaultSettings = baseSettings ++ Seq(description := "FoBo", parallelExecution in Test := false)  
+
   
 }
 
