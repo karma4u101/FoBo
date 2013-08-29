@@ -24,6 +24,8 @@ EclipseKeys.skipParents in ThisBuild := false
 
 EclipseKeys.createSrc in ThisBuild := EclipseCreateSrc.Default + EclipseCreateSrc.Managed
 
+net.virtualvoid.sbt.graph.Plugin.graphSettings
+
 //useGpgAgent := true
 
 resolvers ++= Seq(

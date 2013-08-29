@@ -24,3 +24,5 @@ addSbtPlugin("com.untyped" %% "sbt-js" % "0.5")
 
 //addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.1.0")
 
+addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.7.4")
+

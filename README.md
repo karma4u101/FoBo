@@ -40,11 +40,13 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - **2013-05-19** -- 1.0 
 
 **Latest Updates:**
-- **2013-07-29** -- 1.1-SNAPSHOT Added bootstrap v2.3.2 and Font Awesome v3.2.1. 
+- **2013-08-25** -- 1.1-SNAPSHOT Added Bootstrap v3.0.0 (new sub project). Imp TBLinkedListGroup (new), TBNavbar (TBNavlist is not yet imp.)
 - **2013-08-09** -- 1.1-SNAPSHOT Added Bootstrap v3.0.0-RC1. Open up the TBNav* imp. for user extensions. 
+- **2013-07-29** -- 1.1-SNAPSHOT Added bootstrap v2.3.2 and Font Awesome v3.2.1. 
 - See also [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 **Latest Snapshot Release:**
+- **2013-08-29** -- 1.1-SNAPSHOT artifacts release for Lift v2.5/2.6/v3.0
 - **2013-07-29** -- 1.1-SNAPSHOT artifacts release for Lift v2.5/2.6/v3.0
 - **2013-08-09** -- 1.1-SNAPSHOT artifacts release for Lift v2.5/2.6/v3.0
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)

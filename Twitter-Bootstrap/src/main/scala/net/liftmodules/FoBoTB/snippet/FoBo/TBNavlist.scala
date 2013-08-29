@@ -42,6 +42,9 @@ import xml._
  */
 trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
 
+  // a hack to use structural typing to get around the private[http] on Loc.buildItem
+  //type StructBuildItem = {def buildItem(kids: List[MenuItem], current: Boolean, path: Boolean): Box[MenuItem]}  
+  
   def dispatch: DispatchIt = overridenDispatch orElse net.liftweb.builtin.snippet.Menu.dispatch
 
   def overridenDispatch: DispatchIt = {
@@ -173,19 +176,7 @@ trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
       }
       
     }
-  }
-
-      
-//  override def renderItem(item: MenuItem, renderInner: Seq[MenuItem] => NodeSeq): Elem = {
-//    if (item.text.toString().startsWith("divider")){
-//       buildInnerTag(<xml:group><li class="divider"></li></xml:group>,item.path, item.current) 
-//    }else if (item.text.toString().startsWith("vertical-divider")){
-//       buildInnerTag(<xml:group><li class="vertical-divider"></li></xml:group>,item.path, item.current)
-//    }else{        
-//       buildInnerTag(<xml:group>{renderLink(item.uri, item.text, item.path,
-//        item.current)}{renderInner(item.kids)}</xml:group>, item.path, item.current)  
-//    }
-//  }       
+  }     
 
 }
 

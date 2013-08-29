@@ -134,6 +134,7 @@ package object FoBo {
    */
   def init() {
     LiftRules.addToPackages("net.liftmodules.FoBo")
+    LiftRules.addToPackages("net.liftmodules.FoBoBs")
     ResourceServer.allow {
       case "fobo" :: tail => true
     }
@@ -534,15 +535,30 @@ case object Bootstrap232 extends FoBoToolkit {
 
 
 /**
+ * Enable usage of Twitter Bootstrap version 3_0_0 in your bootstrap liftweb Boot.
+ * @version 3.0.0
+ * 
+ * '''Example'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap300
+ * }}}
+ */
+case object Bootstrap300 extends FoBoToolkit {
+  net.liftmodules.FoBoBs.Bootstrap300
+}
+
+/**
  * Enable usage of Twitter Bootstrap version 3_0_0-RC1 in your bootstrap liftweb Boot.
  * @version 3.0.0
  * 
  * '''Example'''
  * 
  * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap232
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap300RC1
  * }}}
  */
+@deprecated("Use Bootstrap300 or later","FoBo v1.1.0")
 case object Bootstrap300RC1 extends FoBoToolkit {
   net.liftmodules.FoBoBs.Bootstrap300RC1
 }

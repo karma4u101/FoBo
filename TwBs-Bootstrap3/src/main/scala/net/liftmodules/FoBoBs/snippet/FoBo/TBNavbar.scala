@@ -1,4 +1,4 @@
-package net.liftmodules.FoBo.snippet.FoBo
+package net.liftmodules.FoBoBs.snippet.FoBo
 
 import net.liftweb._
 import http._
@@ -38,12 +38,12 @@ import xml._
  * {{{<d i v class="navbar navbar-fixed-top">	
  *   <d i v class="navbar-inner">
  *	   <d i v class="container-fluid">
- *	     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+ *	     <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-collapse"> 
  *         <span class="icon-bar"></span> 
  *         <span class="icon-bar"></span> 
  *         <span class="icon-bar"></span> 
  *	     </a> <a class="brand" href="...">Project</a> 
- *	     <d i v class="nav-collapse"> 
+ *	     <d i v class="navbar-collapse"> 
  *         <span data-lift="FoBo.TBNavbar.builder?group=top"></span> 
  *         <span data-lift="FoBo.TBNavbar.builderPullRight?group=top2"></span> 	
  *	     </d i v>
@@ -82,11 +82,11 @@ trait TBNavbar extends FlexMenuBuilder with DispatchSnippet {
 
   override def renderOuterTag(inner: NodeSeq, top: Boolean): NodeSeq = {
     if (top && !pullRight) {
-      <ul class="nav">{ inner }</ul>
+      <ul class="nav navbar-nav">{ inner }</ul>
     }else if(top && pullRight){
-      <ul class="nav pull-right">{ inner }</ul>
+      <ul class="nav navbar-nav navbar-right">{ inner }</ul>
     } else {
-      <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">{ inner }</ul>
+      <ul class="dropdown-menu">{ inner }</ul>
     }
   }
 
@@ -106,7 +106,7 @@ trait TBNavbar extends FlexMenuBuilder with DispatchSnippet {
   //override def updateTBForCurrent(nodes: NodeSeq, current: Boolean): Elem = nodes  
 
   override def renderPlaceholder(item: MenuItem, renderInner: Seq[MenuItem] => NodeSeq): Elem =
-    buildTBInnerTag(<li class='dropdown'><a href='#' class='dropdown-toggle' data-toggle='dropdown' id='content-dropdown'><span>{ item.text }</span> <b class='caret'></b></a>{ renderInner(item.kids) }</li>,
+    buildTBInnerTag(<li class='dropdown'><a href='#' class='dropdown-toggle' data-toggle='dropdown'><span>{ item.text }</span> <b class='caret'></b></a>{ renderInner(item.kids) }</li>,
       item.path, item.current)          
 
   override def buildItemMenu[A](loc: Loc[A], currLoc: Box[Loc[_]], expandAll: Boolean): List[MenuItem] = {
@@ -202,5 +202,5 @@ trait TBNavbar extends FlexMenuBuilder with DispatchSnippet {
 
 }
 
-object TBNavbar extends TBNavbar
+object TBNavbar extends TBNavbar 
 
