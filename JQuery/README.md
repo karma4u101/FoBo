@@ -20,6 +20,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) 
 
 **Latest Update:**
+- **2013-08-21** -- Adding JQuery v1.10.2
 - **2013-05-01** -- 0.9.9-SNAPSHOT ++ One version to rule them all, unified FoBo module and sub-module versions.
 - **2013-04-27** -- 0.3.0-SNAPSHOT Adding jquery v1.9.1
 - **2013-04-06** -- 0.2.0-SNAPSHOT Using lift-query-module v2.3 for Lift v2.5 with new version schema.

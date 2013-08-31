@@ -324,6 +324,20 @@ case object PrettifyJun2011 extends FoBoToolkit {
 }
 
 /**
+ * Enable usage of JQuery version 1_10_2 in your bootstrap liftweb Boot.
+ * @version 1.10.2
+ * 
+ * '''Example:'''
+ * 
+ * {{{
+ *   FoBo.InitParam.JQuery=FoBo.JQuery1102
+ * }}}
+ */
+case object JQuery1102 extends FoBoJQuery {
+  net.liftmodules.FoBoJQ.JQuery1102
+}
+
+/**
  * Enable usage of JQuery version 1_9_1 in your bootstrap liftweb Boot.
  * @version 1.9.1
  * 
