@@ -37,6 +37,7 @@ resolvers ++= Seq(
 libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"      %% "lift-webkit"                       % v       % "provided" :: 
     "net.liftweb"      %% "lift-testkit"                      % v       % "provided" :: 
+    "net.liftweb"      %% "lift-mapper"                       % v       % "provided" ::
     Nil
 }
 

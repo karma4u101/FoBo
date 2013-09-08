@@ -6,7 +6,7 @@ For more information on how to use Twitter Bootstrap in the FoBo module see the 
 
 Components and available versions 
 ---------------------------------
-- Bootstrap [v3.0.0-RC1] - [Bootstrap 3.x](http://getbootstrap.com/)
+- Bootstrap [v3.0.0] - [Bootstrap 3.x](http://getbootstrap.com/)
 
 Contributions
 ------
@@ -24,6 +24,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)
 
 **Latest Updates:**
+- **2013-08-29** -- 1.1-SNAPSHOT Added bootstrap v3.0.0 deprecated v3.0-RC1
 - **2013-07-29** -- 1.1-SNAPSHOT Added bootstrap v3.0-RC1 
 
 **Latest Releases:**

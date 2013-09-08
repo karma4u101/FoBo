@@ -10,6 +10,8 @@ scalacOptions ++= Seq("-deprecation")
 
 //EclipseKeys.withSource := true
 
+//parallelExecution in Test := false
+
 resolvers ++= Seq(
   "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
@@ -18,6 +20,7 @@ resolvers ++= Seq(
 libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"      %% "lift-webkit"                       % v       % "provided" :: 
     "net.liftweb"      %% "lift-testkit"                      % v       % "provided" :: 
+    "net.liftweb"      %% "lift-mapper"                       % v       % "provided" ::
     "net.liftmodules"  %% ("fobo-jquery"+"_"+e)               % mv      % "compile" :: 
     "net.liftmodules"  %% ("fobo-knockout"+"_"+e)             % mv      % "compile" :: 
     "net.liftmodules"  %% ("fobo-angularjs"+"_"+e)            % mv      % "compile" ::     

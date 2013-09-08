@@ -1,24 +1,22 @@
 FoBo - A Generic Front-End Toolkit Module for Lift [![Build Status](https://secure.travis-ci.org/karma4u101/FoBo.png)](http://travis-ci.org/karma4u101/FoBo)
 ==================================================
 
-FoBo's main purpose is to provide a easy to use Lift module that includes front end toolkits for developers and designers to aid them in developing and designing 
-mobile scalable reactive web applications. 
+FoBo's main purpose is to provide a easy to use Lift module that includes front end toolkits for developers and designers to aid them in developing and designing mobile scalable reactive web applications. 
 
 With this Lift module you can chose among some of the industry leading web-centric open source front-end toolkits. 
-The module is simultaneously supporting several versions of the included toolkits, providing debug-able js and css files in development and minimized files otherwise, 
-making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot) and will ultimately jazz up your 
-Lift applications with the toolkit(s) of your choice. 
+The module is simultaneously supporting several versions of the included toolkits, providing debug-able js and css files in development and minimized files otherwise, making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot) and will ultimately jazz up your Lift applications with the toolkit(s) of your choice. 
 
 Another benefit of using this module is the small but growing API that includes helper object:s and snippet:s (see API documents for usage) 
 that will take care of some common toolkit and component usage and initiation, script generation and more. 
 At this writing the helpers are few but as the module mature it will provide plenty of useful ready to use components and help functions see the demo for a teaser and potential. 
+
 If you have ideas and suggestions let us know! 
 
-A third benefit of using this module is that you will get a clean separation of the toolkit files and your application specific resources as 
-the module dose not cluttering your applications web-app resources directory. 
+A third benefit of using this module is that you will get a clean separation of the toolkit files and your application specific resources as the module dose not cluttering your applications web-app resources directory. 
 
 A **live demo** and introduction of this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/). 
-A Lift basic template with FoBo setup for Twitter Bootstrap usage can be found here [Templating With Twitter Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap)  
+
+A Scala 2.10 Lift 2.6 basic starter template with FoBo setup using Bootstrap v3.x is currently available from here [Lift 2.6 starter template with Bootstrap 3](https://github.com/lift/lift_26_sbt/tree/migrated_2.5_to_2.6/scala_210) and another on using Twitter Bootstrap v2.x is available here [Templating With Twitter Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap)  
 
 The Github repository for the demo can be found [here](https://github.com/karma4u101/FoBo-Lift-Template).
 
@@ -60,6 +58,7 @@ Artifacts is available for: Lift 2.4, 2.5, 3.0-SNAPSHOT
 The FoBo module includes the following sub-modules and supports the following toolkit versions
 
 
+- [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap) [v3.0.0] - [Bootstrap 3.x](http://getbootstrap.com/)
 - [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 - [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0, v3.2.1] [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
 - [FoBo-Foundation](https://github.com/karma4u101/FoBo/tree/master/Foundation) [v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
@@ -88,9 +87,9 @@ For more information on how to set this up see below.
 Quick Start
 -----------
 The only prerequisites for this Lift module is that you have Git and Java installed and configured on the target 
-computer, a suitable Lift template project will also come in handy if you like you can use [Templating-With-Twitter-Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap) it comes with a FoBo setup. 
-You don't need to use it but this project also includes a Eclipse (and a IDEA) plug-in for browsing the code, see the Scala 
-IDE section below.   
+computer, a suitable Lift template project will also come in handy, you can use the [Lift 2.6 starter template](https://github.com/lift/lift_26_sbt/tree/migrated_2.5_to_2.6/scala_210) it comes with a FoBo setup using Bootstrap 3 or if you like to use Bootstrap 2.x you can use [Templating-With-Twitter-Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap).
+ 
+You don't need to use it but this project also includes a Eclipse (and a IDEA) plug-in for browsing the code, see the Scala IDE section below.   
 
 Integration into your project 
 -------------------------------
