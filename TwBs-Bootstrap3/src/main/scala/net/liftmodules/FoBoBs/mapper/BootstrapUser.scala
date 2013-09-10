@@ -1,10 +1,14 @@
 package net.liftmodules.FoBoBs.mapper
 
-import net.liftweb.util.Helpers._
-import net.liftweb.http.S
+import net.liftweb.http._
 import net.liftweb.common._
 import net.liftweb.proto.{ProtoUser => GenProtoUser}
 import net.liftweb.mapper._
+import net.liftweb.sitemap._
+import net.liftweb.sitemap.Loc._
+import net.liftweb.util._
+import net.liftweb.util.Helpers._
+import net.liftweb.util.Mailer._
 
 trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends KeyedMetaMapper[Long, ModelType] with GenProtoUser {
   self: ModelType =>
