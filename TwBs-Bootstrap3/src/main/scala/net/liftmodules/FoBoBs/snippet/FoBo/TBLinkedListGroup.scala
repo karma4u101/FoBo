@@ -13,10 +13,10 @@ import xml._
  * ==TBLinkedListGroup Snippet==
  * 
  * This snippet object transforms lift SiteMap menu items associated with a specified loc 
- * group name's into a collection of Bootsrap list group items.
+ * group name's into a collection of Bootstrap list group items.
  * 
- * <b>OBS!</b> The current implementation dose not support lift submenues as the TBNavbar dose nor dose it support 
- * menu labels or menu dividers as the Bootstrap v2 TBNavlist dose although you will most likely see it in the nere future.   
+ * <b>OBS!</b> The current implementation (1.1-SNAPSHOT 20131030) dose not support lift submenue's as the TBNavbar dose nor dose it yet support 
+ * menu labels or menu dividers as the Bootstrap v2 TBNavlist dose although you will most likely see it in the near future.   
  * 
  * '''Snippet Usage:'''
  * {{{<span data-lift="FoBo.TBLinkedListGroup.builder?group=[LocGroup name]"></span>}}}
