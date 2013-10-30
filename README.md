@@ -16,9 +16,9 @@ A third benefit of using this module is that you will get a clean separation of 
 
 A **live demo** and introduction of this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/). 
 
-A Scala 2.10 Lift 2.6 basic starter template with FoBo setup using Bootstrap v3.x is currently available from here [Lift 2.6 starter template with Bootstrap 3](https://github.com/lift/lift_26_sbt/tree/migrated_2.5_to_2.6/scala_210) and another on using Twitter Bootstrap v2.x is available here [Templating With Twitter Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap)  
+A Scala 2.10 Lift 2.6 basic starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) is currently available from here [Lift 2.6 adv. starter template with Bootstrap 3](https://github.com/lift/lift_26_sbt/tree/migrated_2.5_to_2.6/scala_210) and another on using Twitter Bootstrap v2.x is available here [Templating With Twitter Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap)  
 
-The Github repository for the demo can be found [here](https://github.com/karma4u101/FoBo-Lift-Template).
+The Github repository for the demo can be found [here](https://github.com/karma4u101/FoBo-Lift-Template-Demo).
 
 **OBS!** Note that as of Apr 2013 there is a new version schema for Lift modules and FoBo module version >= 0.9.3 
 See the [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) section for more information.
@@ -38,15 +38,18 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - **2013-05-19** -- 1.0 
 
 **Latest Updates:**
+- **2013-10-30** -- 1.1-SNAPSHOT release for lift v2.6/v3.0 Scala 2.10, lift v2.5 Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1 (Java 1.6)
+- **2013-10-26** -- 1.1-SNAPSHOT Added BootstrapMegaMetaProtoUser for mapper with Bootstrap3 styled views. 
 - **2013-08-25** -- 1.1-SNAPSHOT Added Bootstrap v3.0.0 (new sub project). Imp TBLinkedListGroup (new), TBNavbar (TBNavlist is not yet imp.)
 - **2013-08-09** -- 1.1-SNAPSHOT Added Bootstrap v3.0.0-RC1. Open up the TBNav* imp. for user extensions. 
 - **2013-07-29** -- 1.1-SNAPSHOT Added bootstrap v2.3.2 and Font Awesome v3.2.1. 
 - See also [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 **Latest Snapshot Release:**
-- **2013-08-29** -- 1.1-SNAPSHOT artifacts release for Lift v2.5/2.6/v3.0
-- **2013-07-29** -- 1.1-SNAPSHOT artifacts release for Lift v2.5/2.6/v3.0
-- **2013-08-09** -- 1.1-SNAPSHOT artifacts release for Lift v2.5/2.6/v3.0
+- **2013-10-30** -- 1.1-SNAPSHOT artifacts release for Lift v2.5/v2.6/v3.0 Java 1.6
+- **2013-08-29** -- 1.1-SNAPSHOT artifacts release for Lift v2.5/v2.6/v3.0
+- **2013-07-29** -- 1.1-SNAPSHOT artifacts release for Lift v2.5/v2.6/v3.0
+- **2013-08-09** -- 1.1-SNAPSHOT artifacts release for Lift v2.5/v2.6/v3.0
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 
@@ -87,7 +90,7 @@ For more information on how to set this up see below.
 Quick Start
 -----------
 The only prerequisites for this Lift module is that you have Git and Java installed and configured on the target 
-computer, a suitable Lift template project will also come in handy, you can use the [Lift 2.6 starter template](https://github.com/lift/lift_26_sbt/tree/migrated_2.5_to_2.6/scala_210) it comes with a FoBo setup using Bootstrap 3 or if you like to use Bootstrap 2.x you can use [Templating-With-Twitter-Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap).
+computer, a suitable Lift template project will also come in handy, you can use the [Lift 2.6 adv. starter template](https://github.com/lift/lift_26_sbt/tree/migrated_2.5_to_2.6/scala_210) it comes with a FoBo setup using Bootstrap 3 or if you like to use Bootstrap 2.x you can use [Templating-With-Twitter-Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap).
  
 You don't need to use it but this project also includes a Eclipse (and a IDEA) plug-in for browsing the code, see the Scala IDE section below.   
 

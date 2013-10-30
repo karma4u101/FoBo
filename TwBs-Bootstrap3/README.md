@@ -18,17 +18,18 @@ Peter Petersson
 Update log
 ----------
 
-For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/Bootstrap#history-log) section
+For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/Bootstrap#history-log) (master) section
 
 **Latest Module Version:** 
-- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)
+- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo/tree/master) (master)
 
 **Latest Updates:**
+- **2013-10-26** -- 1.1-SNAPSHOT Added BootstrapMegaMetaProtoUser for mapper with Bootstrap3 styled views. 
 - **2013-08-29** -- 1.1-SNAPSHOT Added bootstrap v3.0.0 deprecated v3.0-RC1
 - **2013-07-29** -- 1.1-SNAPSHOT Added bootstrap v3.0-RC1 
 
 **Latest Releases:**
-- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for release information.
+- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo/tree/master) (master) for release information.
 
 
 
