@@ -374,10 +374,6 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
   
   
   override def login = {
-   
-    //lazy val resMsgNoticeLogedIn: NodeSeq = S.loc("fobo.msg.notice.logged.in", scala.xml.Text(S.?("logged.in")))
-    //lazy val resMsgErrorAcountValidation: NodeSeq = S.loc("fobo.msg.error.account.validation", scala.xml.Text(S.?("account.validation.error")))
-    //val resMsgErrorInvalidCredetial: NodeSeq = S.loc("fobo.msg.error.invalid.credentials", scala.xml.Text(S.?("invalid.credentials")))
     if (S.post_?) {
       S.param("username").
         flatMap(username => findUserByUserName(username)) match {
@@ -411,11 +407,6 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
   }
 
   override def loginXhtml = {
-//    val resLegendLogin: NodeSeq = S.loc("fobo.legend.login", scala.xml.Text(S.?("log.in")))
-//    val resLabelLoginPassword: NodeSeq = S.loc("fobo.label.login.password", scala.xml.Text(S.?("password")))
-//    val resPlaceholderLoginPassword: NodeSeq = S.loc("fobo.placeholder.login.password", scala.xml.Text(S.?("password")))
-//    val resSubmitLogin: NodeSeq = S.loc("fobo.submit.log.in", scala.xml.Text(S.?("log.in")))
-//    val resLabelRecoverPassword: NodeSeq = S.loc("fobo.label.login.recover.password", scala.xml.Text(S.?("recover.password")))
     <form class="form-horizontal" role="form" action={ S.uri } method="post">
       <legend>{ resLoginLegendLogin }</legend>
       <div class="form-group">
@@ -469,10 +460,6 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
   }
 
   override def lostPasswordXhtml = {
-//    val resLegendEnterEmail: NodeSeq = S.loc("fobo.legend.enter.email", scala.xml.Text(S.?("enter.email")))
-//    val reslabelUserNameField: NodeSeq = S.loc("fobo.label.userNameFieldString", scala.xml.Text(userNameFieldString))
-//    val resPlaceholderUserNameField: NodeSeq = S.loc("fobo.placeholder.userNameFieldString", scala.xml.Text(userNameFieldString))
-//    val resSubmitSendIt: NodeSeq = S.loc("fobo.submit.send.it", scala.xml.Text(S.?("send.it")))
     (<form class="form-horizontal" role="form" action={ S.uri } method="post">
        <legend>{ resLostPasswordLegendEnterEmail }</legend>
        <div class="form-group">
@@ -496,8 +483,8 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
       if field.show_? && (!ignorePassword || !pointer.isPasswordField_?)
       form <- field.toForm.toList
     } yield {
-      //This is a bit of a hack, as I could not find a way to properly override the field's _toForm functions  
-      //especially I tried to override the _toForm for local and timezone with no luck.       
+      //This is a bit of a hack (relatively safe though), as I could not find a way to properly override the field's 
+      //_toForm functions especially I tried to override the _toForm for local and timezone with no luck.       
       if (!field.name.equals("password")) {
         val bsform = BindHelpers.addAttributes(form, "class" -> "form-control")
         <div class="form-group">
@@ -508,8 +495,6 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
         </div>
       } else {
         val (pwd, pwdr) = extractLocalFormPasswordField(form, field)
-//        val resLabelSignUpPassword = S.loc("fobo.label.singn.up.password", scala.xml.Text(S.?("password")))
-//        val resLabelSignUpRepeatPassword = S.loc("fobo.label.singn.up.repeat.password", scala.xml.Text(S.?("repeat.password")))
         <div class="form-group row">
           <label for={ field.name } class="control-label col-lg-3">{ resSignUpLabelPassword }</label>
           <div class="col-lg-3">
@@ -527,8 +512,6 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
   //This is a hack, as I could not find a way to properly override the signupFields _toForm functions   
   protected def extractLocalFormPasswordField(form: NodeSeq, field: BaseField): (NodeSeq, NodeSeq) = {
 
-//    val resSignUpPlaceholderPassword = S.loc("fobo.placeholder.singn.up.password", scala.xml.Text(S.?("password")))
-//    val resSignUpPlaceholderRepeatPassword = S.loc("fobo.placeholder.singn.up.repeat.password", scala.xml.Text(S.?("repeat.password")))
     val pwdAttr: scala.xml.MetaData = "class" -> "form-control"
 
     val pwInputElems = form \ "input"
@@ -549,7 +532,6 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
     val theUser: TheUserType = mutateUserOnSignup(createNewUserInstance())
     val theName = signUpPath.mkString("")
     val submitAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "btn btn-default")
-    //val resSignUpSubmit: NodeSeq = S.loc("fobo.submit.sign.up", scala.xml.Text(S.?("sign.up")))
     
     def testSignup() {
       validateSignup(theUser) match {
@@ -571,7 +553,6 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
   }
 
   override def signupXhtml(user: TheUserType) = {
-    //val resSignUpLegendSignUp: NodeSeq = S.loc("fobo.legend.sign.up", scala.xml.Text(S.?("sign.up")))
     (<form class="form-horizontal" role="form" action={ S.uri } method="post">
        <legend>{ resSignUpLegendSignUp }</legend>
        { localForm(user, false, signupFields) }
@@ -587,8 +568,7 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
     val theUser: TheUserType = mutateUserOnEdit(currentUser.openOrThrowException("we know we're logged in"))
     val theName = editPath.mkString("")
     val submitAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "btn btn-default")
-    //val resEditSubmitSave: NodeSeq = S.loc("fobo.submit.edit.save", scala.xml.Text(S.?("Save")))
-
+ 
     def testEdit() {
       theUser.validate match {
         case Nil =>
@@ -610,7 +590,6 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
   }
 
   override def editXhtml(user: TheUserType) = {
-    //val resEditLegendEdit = S.loc("fobo.legend.edit", scala.xml.Text(S.?("edit")))
     (<form class="form-horizontal" role="form" method="post" action={ S.uri }>
        <legend>{ resEditLegendEdit }</legend>
        { localForm(user, true, editFields) }
@@ -623,10 +602,6 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
   }
 
   override def changePasswordXhtml = {
-//    val resChangePasswordLegendChangePassword = S.loc("fobo.change.password.legend", scala.xml.Text(S.?("change.password")))
-//    val resChangePasswordLabelOldPassword = S.loc("fobo.old.password.label", scala.xml.Text(S.?("old.password")))
-//    val resChangePasswordLabelNewPassword = S.loc("fobo.new.password.label", scala.xml.Text(S.?("new.password")))
-//    val resChangePasswordLabelRepeatPassword = S.loc("fobo.repeat.password.legend", scala.xml.Text(S.?("repeat.password")))
     (<form class="form-horizontal" role="form" method="post" action={ S.uri }>
        <legend>{ resChangePasswordLegendChangePassword }</legend>
        <div class="form-group">
@@ -660,9 +635,6 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
     var oldPassword = ""
     var newPassword: List[String] = Nil
 
-//    val resChangePasswordPlaceholderNewPassword = S.loc("fobo.placeholder.new.password", scala.xml.Text(S.?("new.password"))).toString()
-//    val resChangePasswordPlaceholderOldPassword = S.loc("fobo.placeholder.old.password", scala.xml.Text(S.?("old.password"))).toString() //S.?("old.password")
-//    val resChangePasswordSubmitChange: NodeSeq = S.loc("fobo.submit.password.change", scala.xml.Text(S.?("change")))
     val oldPwAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "form-control", "placeholder" -> resChangePasswordPlaceholderOldPassword, "autofocus" -> "autofocus")
     val newPwAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "form-control", "placeholder" -> resChangePasswordPlaceholderNewPassword)
     val submitAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "btn btn-default")
