@@ -9,7 +9,7 @@ import Helpers._
 import net.liftmodules.FoBoBs.lib.{BootstrapSH=>sch}
 
 /**
- * ==TB3Comp Snippet==
+ * ==TB3Component's Snippet Bootstrap v3.x==
  * 
  * This snippet class contains a collection of functions for common transform operations useful when working 
  * with the Bootstrap toolkit components.

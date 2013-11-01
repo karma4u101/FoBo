@@ -12,7 +12,7 @@ import net.liftweb.http.js.JsCmd
 
 
 /**
- * ==Bootstrap Script Helper==
+ * ==Script Helper Bootstrap v2.x==
  * Bootstrap script helper is a helper class that implements some commonly 
  * used bootstrap component init/usage script functions. 
  * This convenience script functions is used in the [[net.liftmodules.FoBo.snippet.FoBo.Bootstrap]] 

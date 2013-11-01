@@ -10,7 +10,7 @@ import util.Helpers
 import xml._
 
 /**
- * ==TB3NavList Snippet==
+ * ==TB3NavList Snippet Bootstrap v3.x==
  * 
  * OBS! This menu builder snippet is NOT (yet) implemented for Bootstrap 3 usage.
  *  

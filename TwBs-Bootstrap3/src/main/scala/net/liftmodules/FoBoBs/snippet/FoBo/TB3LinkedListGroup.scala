@@ -10,7 +10,7 @@ import util.Helpers
 import xml._
 
 /**
- * ==TB3LinkedListGroup Snippet==
+ * ==TB3LinkedListGroup Snippet Bootstrap v3.x==
  * 
  * This snippet object transforms lift SiteMap menu items associated with a specified loc 
  * group name's into a collection of Bootstrap list group items.

@@ -9,10 +9,10 @@ import Helpers._
 import net.liftmodules.FoBoBs.lib.{ScriptHelper=>sch}
 
 /**
- * ==Script Helper Snippet==
+ * ==Script Helper Snippet Bootstrap v3.x==
  * 
  * This snippet class contains functions for common transform operations useful when working 
- * with the any toolkit.
+ * with the any toolkit, for convenience included as a Bootstrap v3.x snippet.
  * '''Example''' Most of the functions in this class can be invoked using the following pattern. 
  * {{{ data-lift="FoBo.TB3ScriptHelper.functionName?paramName=paramValue&...." }}} 
  * For more examples see the individual transform functions.
@@ -66,6 +66,4 @@ class TB3ScriptHelper extends StatefulSnippet with Loggable {
     " *" #> sch.registerLoadEventFactory()
   }
  
-
-  
 }

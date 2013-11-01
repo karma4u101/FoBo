@@ -10,7 +10,7 @@ import util.Helpers
 import xml._
 
 /**
- * ==TB3Navbar Snippet==
+ * ==TB3Navbar Snippet Bootstrap v3.x==
  * 
  * This snippet object transforms lift SiteMap menu items associated with specified loc 
  * group name's into Twitter Bootsrap Nav menu items including dropdown menu items from SiteMap submenu's.
