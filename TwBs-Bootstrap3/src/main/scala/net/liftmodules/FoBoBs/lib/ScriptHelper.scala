@@ -12,7 +12,7 @@ import net.liftweb.http.js.JsCmd
 
 
 /**
- * ==Script Helper==
+ * ==Script Helper Boostrap v3.x==
   * This script helper is a helper class that implements some commonly used script functions. 
  * This convenience script functions is used in the FoBo.ScriptHelper snippet but
  * can also be used as a convenience helper in your own customized snippets.

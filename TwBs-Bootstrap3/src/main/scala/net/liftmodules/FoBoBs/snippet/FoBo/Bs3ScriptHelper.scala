@@ -9,15 +9,15 @@ import Helpers._
 import net.liftmodules.FoBoBs.lib.{ScriptHelper=>sch}
 
 /**
- * ==Script Helper Snippet==
+ * ==Script Helper Snippet Bootstrap v3.x==
  * 
  * This snippet class contains functions for common transform operations useful when working 
- * with the any toolkit.
+ * with the any toolkit, for convenience included as a Bootstrap v3.x snippet.
  * '''Example''' Most of the functions in this class can be invoked using the following pattern. 
- * {{{ data-lift="FoBo.TB3ScriptHelper.functionName?paramName=paramValue&...." }}} 
+ * {{{ data-lift="FoBo.Bs3ScriptHelper.functionName?paramName=paramValue&...." }}} 
  * For more examples see the individual transform functions.
  */
-class TB3ScriptHelper extends StatefulSnippet with Loggable {
+class Bs3ScriptHelper extends StatefulSnippet with Loggable {
 
   private lazy val sch = new sch()
   
@@ -32,8 +32,8 @@ class TB3ScriptHelper extends StatefulSnippet with Loggable {
    * {{{ 
    *     <head>
    *       :
-   *       <script data-lift="FoBo.TB3Comp.activateDropdown?on=.dropdown-toggle"></script> 
-   *       <script data-lift="FoBo.TB3ScriptHelper.registerLoadEventFactory"></script>
+   *       <script data-lift="FoBo.Bs3Comp.activateDropdown?on=.dropdown-toggle"></script> 
+   *       <script data-lift="FoBo.Bs3ScriptHelper.registerLoadEventFactory"></script>
    *     </head>
    * }}}
    * This load event factory script has to be registered ones before any activation can be loaded. 
@@ -66,6 +66,4 @@ class TB3ScriptHelper extends StatefulSnippet with Loggable {
     " *" #> sch.registerLoadEventFactory()
   }
  
-
-  
 }

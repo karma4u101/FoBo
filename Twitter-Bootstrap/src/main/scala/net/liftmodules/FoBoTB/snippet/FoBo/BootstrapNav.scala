@@ -7,7 +7,7 @@ import net.liftweb.common.Logger
 import net.liftweb.util.IterableFunc
 
 /**
- * ==BootstrapNav Snippet==
+ * ==BootstrapNav v2.x Snippet==
  * 
  * This snippet object transforms lift sitemap menu with specified loc group name into Bootsrap nav menu items including dropdown menu items.
  * This work is originally contributed to the FoBo module by community member Damian Helme.

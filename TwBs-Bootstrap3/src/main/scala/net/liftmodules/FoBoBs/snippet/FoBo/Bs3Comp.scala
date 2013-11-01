@@ -9,15 +9,15 @@ import Helpers._
 import net.liftmodules.FoBoBs.lib.{BootstrapSH=>sch}
 
 /**
- * ==TB3Comp Snippet==
+ * ==Bs3Component's Snippet Bootstrap v3.x==
  * 
  * This snippet class contains a collection of functions for common transform operations useful when working 
  * with the Bootstrap toolkit components.
  * '''Example''' Invoke with 
- * {{{ data-lift="FoBo.TB3Comp.functionName?paramName=paramValue&...." }}} 
+ * {{{ data-lift="FoBo.Bs3Comp.functionName?paramName=paramValue&...." }}} 
  * For more examples see the individual transform functions.
  */
-class TB3Comp extends StatefulSnippet with Loggable {
+class Bs3Comp extends StatefulSnippet with Loggable {
 
   private lazy val sch = new sch()
   
@@ -37,7 +37,7 @@ class TB3Comp extends StatefulSnippet with Loggable {
    *  - '''Param''' ''options'' - The option string see bootstrap documentation for available options.
    * 
    * '''Example''' 
-   * {{{ <script data-lift="FoBo.TB3Comp.popover?id=#theId&options=placement:'left'"></script> }}}
+   * {{{ <script data-lift="FoBo.Bs3Comp.popover?id=#theId&options=placement:'left'"></script> }}}
    * 
    * '''Result:''' This example will result in the following being injected in place of the snippet invocation:
    * {{{
@@ -67,7 +67,7 @@ class TB3Comp extends StatefulSnippet with Loggable {
    *  <a id="aId" 
    *     title="The most powerful, most secure web framework available today. It simply rocks!" 
    *     href="http://liftweb.net/">Lift</a> 
-   *  <script data-lift="FoBo.TB3Comp.tooltip?id=#aId&options=placement:'bottom'"></script> 
+   *  <script data-lift="FoBo.Bs3Comp.tooltip?id=#aId&options=placement:'bottom'"></script> 
    * }}}
    * 
    * '''Result:''' The script tag with the snippet invocation will result in the following being injected in place of the snippet invocation:
@@ -93,7 +93,7 @@ class TB3Comp extends StatefulSnippet with Loggable {
    *  - '''Param''' ''on'' - The element id or something more general like the default value a[rel=popover]
    * 
    * '''Example''' 
-   * {{{ <script data-lift="FoBo.TB3Comp.popoverPreventDefault?on=#theId"></script> }}}
+   * {{{ <script data-lift="FoBo.Bs3Comp.popoverPreventDefault?on=#theId"></script> }}}
    * 
    * '''Result:''' This example will result in the following being injected in place of the snippet invocation:
    * {{{
@@ -120,8 +120,8 @@ class TB3Comp extends StatefulSnippet with Loggable {
    * {{{ 
    *     <head>
    *       :
-   *       <script data-lift="FoBo.TB3Comp.activateDropdown?on=.dropdown-toggle"></script> 
-   *       <script data-lift="FoBo.TB3ScriptHelper.registerLoadEventFactory"></script>
+   *       <script data-lift="FoBo.Bs3Comp.activateDropdown?on=.dropdown-toggle"></script> 
+   *       <script data-lift="FoBo.Bs3ScriptHelper.registerLoadEventFactory"></script>
    *     </head>
    * }}}
    * The load event factory has to be registered ones before any activation can be loaded. 

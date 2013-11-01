@@ -9,7 +9,7 @@ import Helpers._
 import net.liftmodules.FoBo.lib.{ScriptHelper=>sch}
 
 /**
- * ==Script Helper Snippet==
+ * ==Script Helper Snippet Bootstrap v2.x==
  * 
  * This snippet class contains functions for common transform operations useful when working 
  * with the any toolkit.

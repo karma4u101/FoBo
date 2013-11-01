@@ -10,7 +10,7 @@ import util.Helpers
 import xml._
 
 /**
- * ==TBNavList Snippet==
+ * ==TBNavList Snippet Bootstrap v2.x==
  * 
  * This snippet object transforms lift SiteMap menu items associated with specified loc 
  * group name's into Twitter Bootsrap Navlist items including nav-header label items and menu dividers from SiteMap entries.

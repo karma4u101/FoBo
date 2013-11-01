@@ -10,7 +10,7 @@ import util.Helpers
 import xml._
 
 /**
- * ==TB3LinkedListGroup Snippet==
+ * ==Bs3LinkedListGroup Snippet Bootstrap v3.x==
  * 
  * This snippet object transforms lift SiteMap menu items associated with a specified loc 
  * group name's into a collection of Bootstrap list group items.
@@ -19,7 +19,7 @@ import xml._
  * menu labels or menu dividers as the Bootstrap v2 TBNavlist dose although you will most likely see it in the near future.   
  * 
  * '''Snippet Usage:'''
- * {{{<span data-lift="FoBo.TB3LinkedListGroup.builder?group=[LocGroup name]"></span>}}}
+ * {{{<span data-lift="FoBo.Bs3LinkedListGroup.builder?group=[LocGroup name]"></span>}}}
  * 
  * 
  * '''Snippet Params:'''
@@ -36,18 +36,18 @@ import xml._
  * Lift menu locGroup content.
  * 
  * '''Example - Linked list group''' with several linked list (loc) groups combined and enclosed in a list group div. 
- * {{{<div class="list-group">	
-      <span data-lift="FoBo.TB3LinkedListGroup.builder?group=lg1"></span>
-      <span data-lift="FoBo.TB3LinkedListGroup.builder?group=user"></span>
-      <span data-lift="FoBo.TB3LinkedListGroup.builder?group=lg2"></span>
+ * {{{<d i v class="list-group">	
+      <span data-lift="FoBo.Bs3LinkedListGroup.builder?group=lg1"></span>
+      <span data-lift="FoBo.Bs3LinkedListGroup.builder?group=user"></span>
+      <span data-lift="FoBo.Bs3LinkedListGroup.builder?group=lg2"></span>
        :
- * </div>}}}
+ * </d i v>}}}
  * 
  * '''Result:''' This will create a list group of linked items associated with the specified 
  * LocGroup names 'lg1, user, lg2, ...'.
  * 
  */
-trait TB3LinkedListGroup extends FlexMenuBuilder with DispatchSnippet {
+trait Bs3LinkedListGroup extends FlexMenuBuilder with DispatchSnippet {
 
   def dispatch: DispatchIt = overridenDispatch orElse net.liftweb.builtin.snippet.Menu.dispatch
 
@@ -110,4 +110,4 @@ trait TB3LinkedListGroup extends FlexMenuBuilder with DispatchSnippet {
 
 }
 
-object TB3LinkedListGroup extends TB3LinkedListGroup 
+object Bs3LinkedListGroup extends Bs3LinkedListGroup 
