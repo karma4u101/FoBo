@@ -35,40 +35,33 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Stable Releases:**
-- **2013-05-19** -- 1.0 
+- **2013-05-19** -- v1.0 
 
 **Latest Updates:**
-- **2013-10-30** -- 1.1-SNAPSHOT release for lift v2.6/v3.0 Scala 2.10, lift v2.5 Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1 (Java 1.6)
-- **2013-10-26** -- 1.1-SNAPSHOT Added BootstrapMegaMetaProtoUser for mapper with Bootstrap3 styled views. 
-- **2013-08-25** -- 1.1-SNAPSHOT Added Bootstrap v3.0.0 (new sub project). Imp TBLinkedListGroup (new), TBNavbar (TBNavlist is not yet imp.)
-- **2013-08-09** -- 1.1-SNAPSHOT Added Bootstrap v3.0.0-RC1. Open up the TBNav* imp. for user extensions. 
-- **2013-07-29** -- 1.1-SNAPSHOT Added bootstrap v2.3.2 and Font Awesome v3.2.1. 
-- See also [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
+- **2013-11-01** - v1.1-SNAPSHOT renaming of Bootstrap v3.x Snippets. TB3 snippet names now start with "TB3*"
+- See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 **Latest Snapshot Release:**
-- **2013-10-30** -- 1.1-SNAPSHOT artifacts release for Lift v2.5/v2.6/v3.0 Java 1.6
-- **2013-08-29** -- 1.1-SNAPSHOT artifacts release for Lift v2.5/v2.6/v3.0
-- **2013-07-29** -- 1.1-SNAPSHOT artifacts release for Lift v2.5/v2.6/v3.0
-- **2013-08-09** -- 1.1-SNAPSHOT artifacts release for Lift v2.5/v2.6/v3.0
+- **2013-11-01** - v1.1-SNAPSHOT for lift 2.5, 2.6 and 3.0
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 
 Toolkit:s and available versions
 --------------------------------
 
-Artifacts is available for: Lift 2.4, 2.5, 3.0-SNAPSHOT
+Artifacts is available for: Lift 2.4, 2.5, 2.6 and 3.0-SNAPSHOT
 
 The FoBo module includes the following sub-modules and supports the following toolkit versions
 
 
-- [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap) [v3.0.0] - [Bootstrap 3.x](http://getbootstrap.com/)
+- [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) [v3.0.0] - [Bootstrap 3.x](http://getbootstrap.com/)
 - [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 - [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0, v3.2.1] [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
 - [FoBo-Foundation](https://github.com/karma4u101/FoBo/tree/master/Foundation) [v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
 - [FoBo-JQuery-Mobile](https://github.com/karma4u101/FoBo/tree/master/JQuery-Mobile) [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
 - [FoBo-Google-Code-Prettify](https://github.com/karma4u101/FoBo/tree/master/Google-Code-Prettify) [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
 - [FoBo-DataTables](https://github.com/karma4u101/FoBo/tree/master/DataTables) [v1.9.0] - [DataTables.net](http://datatables.net/)
-- [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2, v1.9.1] - [JQuery](http://jquery.com/)
+- [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2, v1.9.1, v1.10.2] - [JQuery](http://jquery.com/)
 - [FoBo-Knockout](https://github.com/karma4u101/FoBo/tree/master/Knockout) [v2.0.0, v2.1.0, v2.2.1] - [KnockoutJS](http://knockoutjs.com/)
 - [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) [v1.0.6, (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) )] - [AngularJS](http://angularjs.org/) 
 
@@ -90,7 +83,7 @@ For more information on how to set this up see below.
 Quick Start
 -----------
 The only prerequisites for this Lift module is that you have Git and Java installed and configured on the target 
-computer, a suitable Lift template project will also come in handy, you can use the [Lift 2.6 adv. starter template](https://github.com/lift/lift_26_sbt/tree/migrated_2.5_to_2.6/scala_210) it comes with a FoBo setup using Bootstrap 3 or if you like to use Bootstrap 2.x you can use [Templating-With-Twitter-Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap).
+computer, a suitable Lift template project will also come in handy, you can use the [Lift 2.6 adv. starter template](https://github.com/lift/lift_26_sbt/tree/login-bootstrap-style/scala_210) it comes with a FoBo setup using Bootstrap 3 or if you like to use Bootstrap 2.x you can use [Templating-With-Twitter-Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap).
  
 You don't need to use it but this project also includes a Eclipse (and a IDEA) plug-in for browsing the code, see the Scala IDE section below.   
 
@@ -185,53 +178,62 @@ Sbteclipse provides SBT command to create Eclipse project files
 - None
 
 **Updates history:**
-- **2013-05-13** -- 1.0-SNAPSHOT artifacts release for Lift v2.6/v3.0 
-- **2013-05-09** -- 1.0-SNAPSHOT Removing one of the newly added Angular component (Angular UI v0.4.0) as it has been broken up into sub modules by upstream.
-- **2013-05-03** -- 1.0-SNAPSHOT Adding unified api documentation and improved the build system.
-- **2013-05-01** -- 0.9.9-SNAPSHOT One version to rule them all, unified FoBo module and sub-module versions.
-- **2013-04-28** -- 0.9.8-SNAPSHOT Updated FoBo-JQuery with support for jquery v1.9.1
-- **2013-04-13** -- 0.9.7-SNAPSHOT Added AngularJS components as a FoBo module.
-- **2013-03-29** -- 0.9.6-SNAPSHOT FoBo-JQuery dependency update. 
-- **2013-03-29** -- 0.9.5-SNAPSHOT Google-Code-Prettify and JQuery is moved to sub FoBo modules
-- **2013-03-27** -- 0.9.4-SNAPSHOT New version schema see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) foundation is moved to sub module. 
-- **2013-02-27** -- 0.9.3-SNAPSHOT Adding knockout.js v2.2.1 and moving knockout to sub module/proj fobo-knockout. 
-- **2013-02-24** -- 0.9.2-SNAPSHOT Completed fobo-twitter-bootstrap and fobo-datatables module transaction.
-- **2013-02-22** -- 0.9.1-SNAPSHOT Using fobo-twitter-bootstrap v0.1.1 that fixes serving of minified bootstrap.js when not in development.
-- **2013-01-17** -- 0.9.0-SNAPSHOT Added support for Bootstrap v2.3.0 
-- **2013-01-17** -- 0.9.0-SNAPSHOT Added support for Bootstrap v2.3.0 
-- **2013-01-13** -- 0.8.0-SNAPSHOT Added support for Font-Awesome v3.0.0 in FoBo-Font-Awesome v0.1.0 included in this build. 
-- **2013-01-10** -- 0.7.11-SNAPSHOT Now internally using the FoBo-Twitter-Bootstrap module (v0.0.1) and added Scala version 2.10 build. 
-- **2013-01-04** -- 0.7.10-SNAPSHOT Decoupling the FoBo-Font-Awesome module future (v0.0.3)
-- **2013-01-92** -- 0.7.9-SNAPSHOT Updated dep. on FoBo-Font-Awesome to v0.0.2.
-- **2012-12-30** -- 0.7.8-SNAPSHOT Adding "Font Awesome" Bootstrap extras and a bootstrap-no-icons.css to TB v2.2.2.
-- **2012-12-29** -- 0.7.7-SNAPSHOT Added support for JQuery v1.8.2
-- **2012-12-26** -- 0.7.6-SNAPSHOT Extended the FoBo API with a new Bootstrap menu builder that transforms Lift SiteMap's LocGroup(s) to bootstrap navlist's.
-- **2012-12-15** -- 0.7.5-SNAPSHOT Added Bootstrap v2.2.2
-- **2012-12-13** -- 0.7.4-SNAPSHOT Extended the FoBo API with a new Bootstrap menu builder that transforms Lift SiteMap's LocGroup(s) to bootstrap navbar's. 
-- **2012-11-18** -- 0.7.3-SNAPSHOT Added Bootstrap v2.2.0 and released artifacts
-- **2012-11-11** -- 0.7.2-SNAPSHOT Lift 2.5-SNAPSHOT artifacts (for the inpatient) published to oss.sonatype.org
-- **2012-11-10** -- 0.7.2-SNAPSHOT Lift 2.5-M3 released to oss.sonatype.org
+- **2013-10-30** -- v1.1-SNAPSHOT release for lift v2.6/v3.0 Scala 2.10, lift v2.5 Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1 (Java 1.6)
+- **2013-10-26** -- v1.1-SNAPSHOT Added BootstrapMegaMetaProtoUser for mapper with Bootstrap3 styled views. 
+- **2013-08-25** -- v1.1-SNAPSHOT Added Bootstrap v3.0.0 (new sub project). Imp TBLinkedListGroup (new), TBNavbar (TBNavlist is not yet imp.)
+- **2013-08-09** -- v1.1-SNAPSHOT Added Bootstrap v3.0.0-RC1. Open up the TBNav* imp. for user extensions. 
+- **2013-07-29** -- v1.1-SNAPSHOT Added bootstrap v2.3.2 and Font Awesome v3.2.1. 
+- **2013-05-13** -- v1.0-SNAPSHOT artifacts release for Lift v2.6/v3.0 
+- **2013-05-09** -- v1.0-SNAPSHOT Removing one of the newly added Angular component (Angular UI v0.4.0) as it has been broken up into sub modules by upstream.
+- **2013-05-03** -- v1.0-SNAPSHOT Adding unified api documentation and improved the build system.
+- **2013-05-01** -- v0.9.9-SNAPSHOT One version to rule them all, unified FoBo module and sub-module versions.
+- **2013-04-28** -- v0.9.8-SNAPSHOT Updated FoBo-JQuery with support for jquery v1.9.1
+- **2013-04-13** -- v0.9.7-SNAPSHOT Added AngularJS components as a FoBo module.
+- **2013-03-29** -- v0.9.6-SNAPSHOT FoBo-JQuery dependency update. 
+- **2013-03-29** -- v0.9.5-SNAPSHOT Google-Code-Prettify and JQuery is moved to sub FoBo modules
+- **2013-03-27** -- v0.9.4-SNAPSHOT New version schema see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) foundation is moved to sub module. 
+- **2013-02-27** -- v0.9.3-SNAPSHOT Adding knockout.js v2.2.1 and moving knockout to sub module/proj fobo-knockout. 
+- **2013-02-24** -- v0.9.2-SNAPSHOT Completed fobo-twitter-bootstrap and fobo-datatables module transaction.
+- **2013-02-22** -- v0.9.1-SNAPSHOT Using fobo-twitter-bootstrap v0.1.1 that fixes serving of minified bootstrap.js when not in development.
+- **2013-01-17** -- v0.9.0-SNAPSHOT Added support for Bootstrap v2.3.0 
+- **2013-01-17** -- v0.9.0-SNAPSHOT Added support for Bootstrap v2.3.0 
+- **2013-01-13** -- v0.8.0-SNAPSHOT Added support for Font-Awesome v3.0.0 in FoBo-Font-Awesome v0.1.0 included in this build. 
+- **2013-01-10** -- v0.7.11-SNAPSHOT Now internally using the FoBo-Twitter-Bootstrap module (v0.0.1) and added Scala version 2.10 build. 
+- **2013-01-04** -- v0.7.10-SNAPSHOT Decoupling the FoBo-Font-Awesome module future (v0.0.3)
+- **2013-01-92** -- v0.7.9-SNAPSHOT Updated dep. on FoBo-Font-Awesome to v0.0.2.
+- **2012-12-30** -- v0.7.8-SNAPSHOT Adding "Font Awesome" Bootstrap extras and a bootstrap-no-icons.css to TB v2.2.2.
+- **2012-12-29** -- v0.7.7-SNAPSHOT Added support for JQuery v1.8.2
+- **2012-12-26** -- v0.7.6-SNAPSHOT Extended the FoBo API with a new Bootstrap menu builder that transforms Lift SiteMap's LocGroup(s) to bootstrap navlist's.
+- **2012-12-15** -- v0.7.5-SNAPSHOT Added Bootstrap v2.2.2
+- **2012-12-13** -- v0.7.4-SNAPSHOT Extended the FoBo API with a new Bootstrap menu builder that transforms Lift SiteMap's LocGroup(s) to bootstrap navbar's. 
+- **2012-11-18** -- v0.7.3-SNAPSHOT Added Bootstrap v2.2.0 and released artifacts
+- **2012-11-11** -- v0.7.2-SNAPSHOT Lift 2.5-SNAPSHOT artifacts (for the inpatient) published to oss.sonatype.org
+- **2012-11-10** -- v0.7.2-SNAPSHOT Lift 2.5-M3 released to oss.sonatype.org
 
 **Snapshot Release history:**
-- **2013-05-13** -- 1.0-SNAPSHOT artifacts release for Lift v2.6/v3.0 
-- **2013-05-03** -- 1.0-SNAPSHOT artifacts for Lift 2.5 and 3.0
-- **2013-05-01** -- 0.9.9-SNAPSHOT artifacts for Lift 2.5 and 3.0
-- **2013-04-28** -- 0.9.8-SNAPSHOT artifacts for Lift 2.5 and 3.0
-- **2013-04-13** -- 0.9.7-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
-- **2013-04-06** -- 0.9.6-SNAPSHOT artifacts for Lift 2.5
-- **2013-03-29** -- 0.9.5-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
-- **2013-03-27** -- 0.9.4-SNAPSHOT artifacts for Lift 2.5 and 3.0 see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) for more information.
-- **2013-03-08** -- 0.9.3-SNAPSHOT artifacts for Lift 2.5-RC2 and Lift 3.0-SNAPSHOT
-- **2013-02-24** -- 0.9.2-SNAPSHOT artifacts for Lift 2.5-RC1 and 2.5-SNAPSHOT (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0 -SNAPSHOT (Scala 2.10)
-- **2013-02-22** -- 0.9.1-SNAPSHOT artifacts for Lift 2.5-RC1 (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0-SNAPSHOT (Scala 2.10)
-- **2013-02-17** -- 0.9.0-SNAPSHOT artifacts for Lift 3.0-SNAPSHOT / Scala 2.10, Lift 2.5-SNAPSHOT 
-- **2013-02-15** -- 0.8.0-SNAPSHOT artifacts for Lift 3.0-SNAPSHOT / Scala 2.10
-- **2013-01-13** -- 0.8.0-SNAPSHOT artifacts for Lift 2.5-M4 and Lift 2.5-SNAPSHOT (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
-- **2013-01-10** -- 0.7.11-SNAPSHOT artifacts for Lift 2.5-SNAPSHOTS (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
-- **2013-01-04** -- 0.7.10-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
-- **2013-01-02** -- 0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
-- **2012-12-30** -- 0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
-- **2012-12-29** -- 0.7.7-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
+- **2013-10-30** -- v1.1-SNAPSHOT artifacts release for Lift v2.5/v2.6/v3.0 Java 1.6
+- **2013-08-29** -- v1.1-SNAPSHOT artifacts release for Lift v2.5/v2.6/v3.0
+- **2013-08-09** -- v1.1-SNAPSHOT artifacts release for Lift v2.5/v2.6/v3.0
+- **2013-07-29** -- v1.1-SNAPSHOT artifacts release for Lift v2.5/v2.6/v3.0
+- **2013-05-13** -- v1.0-SNAPSHOT artifacts release for Lift v2.6/v3.0 
+- **2013-05-03** -- v1.0-SNAPSHOT artifacts for Lift 2.5 and 3.0
+- **2013-05-01** -- v0.9.9-SNAPSHOT artifacts for Lift 2.5 and 3.0
+- **2013-04-28** -- v0.9.8-SNAPSHOT artifacts for Lift 2.5 and 3.0
+- **2013-04-13** -- v0.9.7-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
+- **2013-04-06** -- v0.9.6-SNAPSHOT artifacts for Lift 2.5
+- **2013-03-29** -- v0.9.5-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
+- **2013-03-27** -- v0.9.4-SNAPSHOT artifacts for Lift 2.5 and 3.0 see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) for more information.
+- **2013-03-08** -- v0.9.3-SNAPSHOT artifacts for Lift 2.5-RC2 and Lift 3.0-SNAPSHOT
+- **2013-02-24** -- v0.9.2-SNAPSHOT artifacts for Lift 2.5-RC1 and 2.5-SNAPSHOT (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0 -SNAPSHOT (Scala 2.10)
+- **2013-02-22** -- v0.9.1-SNAPSHOT artifacts for Lift 2.5-RC1 (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0-SNAPSHOT (Scala 2.10)
+- **2013-02-17** -- v0.9.0-SNAPSHOT artifacts for Lift 3.0-SNAPSHOT / Scala 2.10, Lift 2.5-SNAPSHOT 
+- **2013-02-15** -- v0.8.0-SNAPSHOT artifacts for Lift 3.0-SNAPSHOT / Scala 2.10
+- **2013-01-13** -- v0.8.0-SNAPSHOT artifacts for Lift 2.5-M4 and Lift 2.5-SNAPSHOT (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
+- **2013-01-10** -- v0.7.11-SNAPSHOT artifacts for Lift 2.5-SNAPSHOTS (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
+- **2013-01-04** -- v0.7.10-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
+- **2013-01-02** -- v0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
+- **2012-12-30** -- v0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
+- **2012-12-29** -- v0.7.7-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
 
   
 Authors

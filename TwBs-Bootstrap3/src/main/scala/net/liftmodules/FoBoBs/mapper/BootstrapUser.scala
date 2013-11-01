@@ -361,7 +361,7 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
    * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
    */
   def resChangePasswordPlaceholderOldPassword = S.loc("fobo.ProtoUser.ChangePassword.placeholder.old.password", scala.xml.Text(S.?("old.password"))).toString() //S.?("old.password")
-     /**
+    /**
    * FoBo internationalization resource key for overriding the Lift i18n key.</br> 
    * 
    * <b>FoBo resource key:</b> 'fobo.ProtoUser.ChangePassword.submit'<br/>

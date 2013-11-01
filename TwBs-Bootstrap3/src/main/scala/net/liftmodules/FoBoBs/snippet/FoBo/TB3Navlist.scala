@@ -10,15 +10,17 @@ import util.Helpers
 import xml._
 
 /**
- * ==TBNavList Snippet==
+ * ==TB3NavList Snippet==
  * 
+ * OBS! This menu builder snippet is NOT (yet) implemented for Bootstrap 3 usage.
+ *  
  * This snippet object transforms lift SiteMap menu items associated with specified loc 
  * group name's into Twitter Bootsrap Navlist items including nav-header label items and menu dividers from SiteMap entries.
  * 
  * See also the TBLocInfo object in [[net.liftmodules.FoBo]] for various, simple to use, SiteMap manipulation functions.  
  * 
  * '''Snippet Usage:'''
- * {{{<span data-lift="FoBo.TBNavlist.builder?group=[LocGroup name]"></span>}}}
+ * {{{<span data-lift="FoBo.TB3Navlist.builder?group=[LocGroup name]"></span>}}}
  * 
  * 
  * '''Snippet Params:'''
@@ -34,13 +36,13 @@ import xml._
  * 
  * '''Example - Navlist''' Invoke with something like this 
  * {{{<d i v class="well" style="max-width: 340px; padding: 8px 0;">	
-      <span data-lift="FoBo.TBNavlist.builder?group=nl1"></span>
+      <span data-lift="FoBo.TB3Navlist.builder?group=nl1"></span>
  * </d i v>}}}
  * 
  * '''Result:''' This will create a Navlist with menu entries associated with the LocGroup 'nl1'.
  * 
  */
-trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
+trait TB3Navlist extends FlexMenuBuilder with DispatchSnippet {
 
   // a hack to use structural typing to get around the private[http] on Loc.buildItem
   //type StructBuildItem = {def buildItem(kids: List[MenuItem], current: Boolean, path: Boolean): Box[MenuItem]}  
@@ -180,4 +182,4 @@ trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
 
 }
 
-object TBNavlist extends TBNavlist
+object TB3Navlist extends TB3Navlist

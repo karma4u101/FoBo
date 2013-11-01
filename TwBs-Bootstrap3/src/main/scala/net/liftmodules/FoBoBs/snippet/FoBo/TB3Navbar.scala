@@ -10,7 +10,7 @@ import util.Helpers
 import xml._
 
 /**
- * ==TBNavbar Snippet==
+ * ==TB3Navbar Snippet==
  * 
  * This snippet object transforms lift SiteMap menu items associated with specified loc 
  * group name's into Twitter Bootsrap Nav menu items including dropdown menu items from SiteMap submenu's.
@@ -18,9 +18,9 @@ import xml._
  * See also the TBLocInfo object in [[net.liftmodules.FoBo]] for various, simple to use, SiteMap manipulation functions (menu dividers, labels...).  
  * 
  * '''Snippet Usage:'''
- * {{{<span data-lift="FoBo.TBNavbar.builder?group=[LocGroup name]"></span>}}}
+ * {{{<span data-lift="FoBo.TB3Navbar.builder?group=[LocGroup name]"></span>}}}
  * and/or
- * {{{<span data-lift="FoBo.TBNavbar.builderPullRight?group=[LocGroup name]"></span>}}} 
+ * {{{<span data-lift="FoBo.TB3Navbar.builderPullRight?group=[LocGroup name]"></span>}}} 
  * 
  * '''Snippet Params:'''
  * 
@@ -55,7 +55,7 @@ import xml._
  * two LocGroup's 'top' and 'top2' where the second one is pulled to the right.
  * 
  */
-trait TBNavbar extends FlexMenuBuilder with DispatchSnippet {
+trait TB3Navbar extends FlexMenuBuilder with DispatchSnippet {
 
   // a hack to use structural typing to get around the private[http] on Loc.buildItem
   //type StructBuildItem = {def buildItem(kids: List[MenuItem], current: Boolean, path: Boolean): Box[MenuItem]}  
@@ -202,5 +202,5 @@ trait TBNavbar extends FlexMenuBuilder with DispatchSnippet {
 
 }
 
-object TBNavbar extends TBNavbar 
+object TB3Navbar extends TB3Navbar 
 

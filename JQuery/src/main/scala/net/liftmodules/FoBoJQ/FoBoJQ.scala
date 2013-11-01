@@ -33,13 +33,13 @@ package object FoBoJQ {
   }
 
 /**
- * Enable usage of JQuery version 1_9_1 in your bootstrap liftweb Boot.
- * @version 1.9.1
+ * Enable usage of JQuery version 1_1_0_2 in your bootstrap liftweb Boot.
+ * @version 1.10.2
  * 
  * '''Example:'''
  * 
  * {{{
- *   FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery191
+ *   FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery1102
  * }}}
  */
 case object JQuery1102 extends FoBoJQ {

@@ -10,7 +10,7 @@ import util.Helpers
 import xml._
 
 /**
- * ==TBLinkedListGroup Snippet==
+ * ==TB3LinkedListGroup Snippet==
  * 
  * This snippet object transforms lift SiteMap menu items associated with a specified loc 
  * group name's into a collection of Bootstrap list group items.
@@ -19,7 +19,7 @@ import xml._
  * menu labels or menu dividers as the Bootstrap v2 TBNavlist dose although you will most likely see it in the near future.   
  * 
  * '''Snippet Usage:'''
- * {{{<span data-lift="FoBo.TBLinkedListGroup.builder?group=[LocGroup name]"></span>}}}
+ * {{{<span data-lift="FoBo.TB3LinkedListGroup.builder?group=[LocGroup name]"></span>}}}
  * 
  * 
  * '''Snippet Params:'''
@@ -37,9 +37,9 @@ import xml._
  * 
  * '''Example - Linked list group''' with several linked list (loc) groups combined and enclosed in a list group div. 
  * {{{<div class="list-group">	
-      <span data-lift="FoBo.TBLinkedListGroup.builder?group=lg1"></span>
-      <span data-lift="FoBo.TBLinkedListGroup.builder?group=user"></span>
-      <span data-lift="FoBo.TBLinkedListGroup.builder?group=lg2"></span>
+      <span data-lift="FoBo.TB3LinkedListGroup.builder?group=lg1"></span>
+      <span data-lift="FoBo.TB3LinkedListGroup.builder?group=user"></span>
+      <span data-lift="FoBo.TB3LinkedListGroup.builder?group=lg2"></span>
        :
  * </div>}}}
  * 
@@ -47,7 +47,7 @@ import xml._
  * LocGroup names 'lg1, user, lg2, ...'.
  * 
  */
-trait TBLinkedListGroup extends FlexMenuBuilder with DispatchSnippet {
+trait TB3LinkedListGroup extends FlexMenuBuilder with DispatchSnippet {
 
   def dispatch: DispatchIt = overridenDispatch orElse net.liftweb.builtin.snippet.Menu.dispatch
 
@@ -110,4 +110,4 @@ trait TBLinkedListGroup extends FlexMenuBuilder with DispatchSnippet {
 
 }
 
-object TBLinkedListGroup extends TBLinkedListGroup 
+object TB3LinkedListGroup extends TB3LinkedListGroup 

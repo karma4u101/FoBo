@@ -6,7 +6,6 @@ import http._
 import common._
 
 
-
 /**
  * ==Welcome to FoBo - A generic Front-End Toolkit Lift Module== 
  * 
@@ -35,8 +34,10 @@ import common._
  * 
  * The following is a list of available toolkits and plugins 
  *  
- *  - JQuery  [v1.7.2, v1.8.2, v1.9.1] 
- *  - Bootstrap [v2.1.0, v2.2.0, v2.2.2, v2.3.0]
+ *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2] 
+ *  - Bootstrap v3.x serie [v3.0.0]
+ *  - Bootstrap v2.x serie [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2]
+ *  - Font Awesome [v2.0.0, v3.0.0, v3.2.1]
  *  - Foundation [v2.1.5]
  *  - DataTables [v1.9.0]
  *  - JQuery-mobile [v1.0.1, v1.1.0]
@@ -88,7 +89,7 @@ import common._
  * 
  * ===Heads up===
  * 
- * This API is very young so if you make direct usage of some FoBoHelpers in lib chances is that things change. 
+ * This API is young so if you make direct usage of some FoBoHelpers in lib chances is that things change. 
  * If you want to stay a bit more on the safe side usage of FoBo snippets and init operations should be fairly safe. 
  * After a stable release changes to a API method will be announced as deprecated at least one release cycle before 
  * method signature changes or removal.  
@@ -100,7 +101,7 @@ import common._
  *      
  * ===Setup===     
  * 
- *  - The module is known to work with Lift v2.4/v2.5 and v3.0-SNAPSHOT and it's supported Scala versions.  
+ *  - The module is known to work with Lift v2.4/v2.5/v2.6 and v3.0-SNAPSHOT and it's supported Scala versions.  
  *  - For a demonstration of this module see the live [[http://www.media4u101.se/fobo-lift-template-demo/ FoBo demo]] 
  *
  * @example To initiate this module for usage in your Lift project 
@@ -118,7 +119,7 @@ import common._
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version v1.0
+ * @version v1.1
  * @author Peter Petersson (Github karma4u101), The Lift community  
  * 
  */
