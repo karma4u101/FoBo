@@ -36,10 +36,11 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo/tree/master) (master)
 
 **Latest Updates:**
-- **2013-11-01** - v1.1-SNAPSHOT renaming of Bootstrap v3.x Snippets. TB3 snippet names now start with "TB3*"
-- **2013-10-26** -- 1.1-SNAPSHOT Added BootstrapMegaMetaProtoUser for mapper with Bootstrap3 styled views. 
-- **2013-08-29** -- 1.1-SNAPSHOT Added bootstrap v3.0.0 deprecated v3.0-RC1
-- **2013-07-29** -- 1.1-SNAPSHOT Added bootstrap v3.0-RC1 
+- **2013-11-03** -- v1.1-SNAPSHOT Adding bootstrap v3.0.1 
+- **2013-11-01** -- v1.1-SNAPSHOT renaming of Bootstrap v3.x Snippets. Snippet names now start with "Bs3*"
+- **2013-10-26** -- v1.1-SNAPSHOT Added BootstrapMegaMetaProtoUser for mapper with Bootstrap3 styled views. 
+- **2013-08-29** -- v1.1-SNAPSHOT Added bootstrap v3.0.0 deprecated v3.0-RC1
+- **2013-07-29** -- v1.1-SNAPSHOT Added bootstrap v3.0-RC1 
 
 **Latest Releases:**
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo/tree/master) (master) for release information.

@@ -38,6 +38,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - **2013-05-19** -- v1.0 
 
 **Latest Updates:**
+- **2013-11-03** - v1.1-SNAPSHOT adding Bootstrap v3.0.1 and Font Awesome v4.0.1 suitable for user with Bootstrap v3.x
 - **2013-11-02** - v1.1-SNAPSHOT renaming of Bootstrap v3.x Snippets. Bootstrap v3 snippet names now start with "Bs3*"
 - **2013-11-01** - v1.1-SNAPSHOT renaming of Bootstrap v3.x Snippets. TB3 snippet names now start with "TB3*"
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
