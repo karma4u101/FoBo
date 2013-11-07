@@ -15,7 +15,7 @@ import S._
 /**
  * The BootstrapMegaMetaProtoUser trait adds Bootstrap v3 styling to the ProtoUser form views.
  * In addition it also contains some related Lift i18n localization to nodeSeq resource overrides 
- * to make it easy for users of this trait to customize submit button label,field legend, field label, 
+ * to make it easy for users of this trait to customize submit button label, field legend, field label,  
  * field placeholder, lift messages and more. 
  */
 trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends KeyedMetaMapper[Long, ModelType] with GenProtoUser {

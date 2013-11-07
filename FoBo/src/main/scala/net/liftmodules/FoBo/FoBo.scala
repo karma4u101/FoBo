@@ -50,7 +50,7 @@ import common._
  *  
  * ===Okey, okey I get it, now take me to the most interesting stuff===
  * Except from bringing you all the powers from the included toolkits and toolset, the most interesting stuff 
- * is probably in the snippet classes in [[net.liftmodules.FoBo.snippet.FoBo]].
+ * is probably in the snippet classes in [[net.liftmodules.FoBo.snippet.FoBo]] and [[net.liftmodules.FoBoBs.snippet.FoBo]].
  * Great care has been taken to explain and illustrate how to use the snippet methods so that you can use them 
  * even if you are not a Lift expert, to show you what I am talking about '''as a example here is one way 
  * to use the FoBo provided tooltip function:'''

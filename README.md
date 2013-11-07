@@ -16,7 +16,7 @@ A third benefit of using this module is that you will get a clean separation of 
 
 A **live demo** and introduction of this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/). 
 
-A Scala 2.10 Lift 2.6 basic starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) is currently available from here [Lift 2.6 adv. starter template with Bootstrap 3](https://github.com/lift/lift_26_sbt/tree/login-bootstrap-style/scala_210) and another on using Twitter Bootstrap v2.x is available here [Templating With Twitter Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap)  
+A Scala v2.10 Lift v2.6 basic starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) is available from here [Lift v2.6 Template Applications](https://github.com/lift/lift_26_sbt/) and another one using Twitter Bootstrap v2.x is available here [Templating With Twitter Bootstrap](https://github.com/karma4u101/Templating-With-Twitter-Bootstrap)  
 
 The Github repository for the demo can be found [here](https://github.com/karma4u101/FoBo-Lift-Template-Demo).
 
@@ -44,6 +44,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 **Latest Snapshot Release:**
+- **2013-11-06** - v1.1-SNAPSHOT for lift 2.5, 2.6 and 3.0
 - **2013-11-02** - v1.1-SNAPSHOT for lift 2.5, 2.6 and 3.0
 - **2013-11-01** - v1.1-SNAPSHOT for lift 2.5, 2.6 and 3.0
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
@@ -57,9 +58,9 @@ Artifacts is available for: Lift 2.4, 2.5, 2.6 and 3.0-SNAPSHOT
 The FoBo module includes the following sub-modules and supports the following toolkit versions
 
 
-- [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) [v3.0.0] - [Bootstrap 3.x](http://getbootstrap.com/)
+- [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) [v3.0.0, v3.0.1] - [Bootstrap 3.x](http://getbootstrap.com/)
 - [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
-- [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0, v3.2.1] [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
+- [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0, v3.2.1, v4.0.1] [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
 - [FoBo-Foundation](https://github.com/karma4u101/FoBo/tree/master/Foundation) [v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
 - [FoBo-JQuery-Mobile](https://github.com/karma4u101/FoBo/tree/master/JQuery-Mobile) [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
 - [FoBo-Google-Code-Prettify](https://github.com/karma4u101/FoBo/tree/master/Google-Code-Prettify) [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
