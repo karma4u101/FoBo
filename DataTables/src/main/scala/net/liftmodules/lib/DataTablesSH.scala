@@ -1,4 +1,4 @@
-package net.liftmodules.FoBo.lib
+package net.liftmodules.FoBoDT.lib
 
 import _root_.net.liftweb._
 import util.{ Props }
@@ -15,10 +15,10 @@ import net.liftweb.http.js.JsCmd
  * ==DataTables Script Helper==
  * DataTables script helper is a helper class that implements some commonly used DataTables 
  * script functions. 
- * This convenience script functions is used in the [[net.liftmodules.FoBo.snippet.FoBo.DataTables]] snippet but
+ * This convenience script functions is used in the [[net.liftmodules.FoBoDT.snippet.FoBo.DataTables]] snippet but
  * can also be used as a convenience helper in your own customized snippets.
  *  
- * @example If you find that the [[net.liftmodules.FoBo.snippet.FoBo.DataTables]] snippet dose not fit you exact needs 
+ * @example If you find that the [[net.liftmodules.FoBoDT.snippet.FoBo.DataTables]] snippet dose not fit you exact needs 
  * your can still use the ScriptHelper class to customize your own project snippets.
  * {{{
  *   import net.liftmodules.FoBo.lib.{DataTablesSH=>sch}

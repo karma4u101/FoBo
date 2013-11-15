@@ -1,4 +1,4 @@
-package net.liftmodules.FoBo.lib
+package net.liftmodules.FoBoTB.lib
 
 import _root_.net.liftweb._
 import util.{ Props }
@@ -15,10 +15,10 @@ import net.liftweb.http.js.JsCmd
  * ==Script Helper Bootstrap v2.x==
  * Bootstrap script helper is a helper class that implements some commonly 
  * used bootstrap component init/usage script functions. 
- * This convenience script functions is used in the [[net.liftmodules.FoBo.snippet.FoBo.Bootstrap]] 
+ * This convenience script functions is used in the [[net.liftmodules.FoBoTB.snippet.FoBo.Bootstrap]] 
  * snippet but can also be used as a convenience helper in your own customized snippets.
  *  
- * @example If you find that the [[net.liftmodules.FoBo.snippet.FoBo.Bootstrap]] snippet dose not fit you exact needs 
+ * @example If you find that the [[net.liftmodules.FoBoTB.snippet.FoBo.Bootstrap]] snippet dose not fit you exact needs 
  * your can still use the BootstrapSH class to customize your own project snippets.
  * {{{
  *   import net.liftmodules.FoBo.lib.{BootstrapSH=>sch}

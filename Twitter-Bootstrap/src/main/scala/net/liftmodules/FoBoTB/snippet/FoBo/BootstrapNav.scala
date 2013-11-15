@@ -1,4 +1,4 @@
-package net.liftmodules.FoBo.snippet.FoBo
+package net.liftmodules.FoBoTB.snippet.FoBo
 
 import scala.xml._
 import net.liftweb.util.Helpers._

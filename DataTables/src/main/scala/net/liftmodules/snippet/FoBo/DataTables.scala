@@ -1,4 +1,4 @@
-package net.liftmodules.FoBo.snippet.FoBo
+package net.liftmodules.FoBoDT.snippet.FoBo
 
 import scala.xml.{ NodeSeq, Text }
 import net.liftweb.util._
@@ -6,7 +6,7 @@ import net.liftweb.common._
 import net.liftweb.http._
 import net.liftweb._
 import Helpers._
-import net.liftmodules.FoBo.lib.{DataTablesSH=>sch}
+import net.liftmodules.FoBoDT.lib.{DataTablesSH=>sch}
 
 /**
  * ==Bootstrap Snippet==

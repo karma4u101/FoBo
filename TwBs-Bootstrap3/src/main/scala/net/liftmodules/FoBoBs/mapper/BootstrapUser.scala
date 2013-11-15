@@ -13,7 +13,7 @@ import net.liftweb.util.Mailer._
 import S._
 
 /**
- * The BootstrapMegaMetaProtoUser trait adds Bootstrap v3 styling to the ProtoUser form views.
+ * The BootstrapMegaMetaProtoUser trait adds Bootstrap v3.x styling to the ProtoUser form views.
  * In addition it also contains some related Lift i18n localization to nodeSeq resource overrides 
  * to make it easy for users of this trait to customize submit button label, field legend, field label,  
  * field placeholder, lift messages and more. 

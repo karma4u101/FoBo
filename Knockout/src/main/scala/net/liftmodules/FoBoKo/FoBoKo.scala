@@ -13,10 +13,10 @@ import common._
  * in your project. If you are using this module in FoBo see [[net.liftmodules.FoBo]] 
  * for usage information. 
  */
-package object FoBoKO {
+package object FoBoKo {
 
   def init() {
-    LiftRules.addToPackages("net.liftmodules.FoBo")
+    LiftRules.addToPackages("net.liftmodules.FoBoKo")
     ResourceServer.allow {
       case "fobo" :: tail => true
     }
@@ -38,7 +38,7 @@ package object FoBoKO {
    *  '''Example:'''
    *
    * {{{
-   *   FoBoKO.InitParam.Toolkit=FoBoKO.KnockOut221
+   *   FoBoKo.InitParam.Toolkit=FoBoKo.KnockOut221
    * }}}
    *
    */
@@ -53,7 +53,7 @@ package object FoBoKO {
    *  '''Example:'''
    *
    * {{{
-   *   FoBoKO.InitParam.Toolkit=FoBoKO.KnockOut200
+   *   FoBoKo.InitParam.Toolkit=FoBoKo.KnockOut200
    * }}}
    *
    */
@@ -67,7 +67,7 @@ package object FoBoKO {
    *  '''Example:'''
    *
    * {{{
-   *   FoBoKO.InitParam.Toolkit=FoBoKO.KnockOut210
+   *   FoBoKo.InitParam.Toolkit=FoBoKo.KnockOut210
    * }}}
    *
    */

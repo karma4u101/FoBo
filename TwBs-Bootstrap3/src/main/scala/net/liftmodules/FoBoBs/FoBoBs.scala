@@ -53,7 +53,7 @@ abstract trait FoBoToolkit
  *   : 
  * }}} 
  */
-object BsLocInfo {
+object BSLocInfo {
   private val hd: Box[String] = Full("divider")
   private val vd: Box[String] = Full("divider-vertical")  
   private val nh: Box[String] = Full("nav-header") 
@@ -69,12 +69,12 @@ object BsLocInfo {
    * val navHeader1       = Menu.i("navHeader1") / "navHeader1" //Adds a header (label) to your FoBo.NavList
    * 
    * def sitemap = SiteMap(
-   *   navHeader1 >> LocGroup("nl1") >> FoBoTB.TBLocInfo.NavHeader,
+   *   navHeader1 >> LocGroup("nl1") >> FoBoBs.BSLocInfo.NavHeader,
    *   index >> LocGroup("top","nl1",...),
    *    :
    *   ddLabel >> LocGroup("top",...)  >> PlaceHolder submenus(
    *       about ,
-   *       divider2 >> FoBo.TBLocInfo.Divider,
+   *       divider2 >> FoBoBs.BSLocInfo.Divider,
    *       contact,
    *       feedback  
    *       )
@@ -100,10 +100,10 @@ object BsLocInfo {
  * '''Example:'''
  *  
  * {{{
- *   FoBoBs.InitParam.JQuery=FoBoBs.JQuery172
- *   FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap232
+ *   FoBoBs.InitParam.JQuery=FoBoBs.JQuery192
+ *   FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap301
  * }}}
- * This example uses the Bootstrap v2.3.2 option.  
+ * This example uses the Bootstrap v3.0.1 option.  
  *   
  */
 object InitParam extends FoBoToolkit with FoBoJQuery {

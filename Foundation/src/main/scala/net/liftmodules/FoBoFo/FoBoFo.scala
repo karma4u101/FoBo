@@ -16,7 +16,7 @@ import common._
 package object FoBoFo {
 
   def init() {
-    LiftRules.addToPackages("net.liftmodules.FoBo")
+    LiftRules.addToPackages("net.liftmodules.FoBoFo")
     ResourceServer.allow {
       case "fobo" :: tail => true
     }

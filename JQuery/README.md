@@ -6,10 +6,7 @@ For more information on how to use FoBo-JQuery in the FoBo module see the [FoBo 
 
 Contributions
 ------
-Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion to my priv. e-mail or on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
-
-best regards 
-Peter Petersson 
+Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
 
 Update log
 ----------
@@ -20,12 +17,12 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) 
 
 **Latest Update:**
-- **2013-10-21** -- Now using v2.5 of lift-jquery-module for all flavours of Lift.
-- **2013-08-21** -- Adding JQuery v1.10.2
-- **2013-05-01** -- 0.9.9-SNAPSHOT ++ One version to rule them all, unified FoBo module and sub-module versions.
-- **2013-04-27** -- 0.3.0-SNAPSHOT Adding jquery v1.9.1
-- **2013-04-06** -- 0.2.0-SNAPSHOT Using lift-query-module v2.3 for Lift v2.5 with new version schema.
-- **2013-03-29** -- 0.1.0-SNAPSHOT Making JQuery a FoBo sub-module/project.
+- **2013-10-21** -- Module v1.1-SNAPSHOT Now using v2.5 of lift-jquery-module for all flavours of Lift.
+- **2013-08-21** -- Module v1.1-SNAPSHOT Adding JQuery v1.10.2
+- **2013-05-01** -- Module v0.9.9-SNAPSHOT ++ One version to rule them all, unified FoBo module and sub-module versions.
+- **2013-04-27** -- Module v0.3.0-SNAPSHOT Adding jquery v1.9.1
+- **2013-04-06** -- Module v0.2.0-SNAPSHOT Using lift-query-module v2.3 for Lift v2.5 with new version schema.
+- **2013-03-29** -- Module v0.1.0-SNAPSHOT Making JQuery a FoBo sub-module/project.
 
 **Latest Releases:**
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for release information.

@@ -16,7 +16,7 @@ import common._
 package object FoBoJQM {
 
   def init() {
-    LiftRules.addToPackages("net.liftmodules.FoBo")
+    LiftRules.addToPackages("net.liftmodules.FoBoJQM")
     ResourceServer.allow {
       case "fobo" :: tail => true
     }

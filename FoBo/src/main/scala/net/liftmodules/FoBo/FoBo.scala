@@ -34,11 +34,11 @@ import common._
  * 
  * The following is a list of available toolkits and plugins 
  *  
- *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2] 
- *  - Bootstrap v3.x serie [v3.0.0, v3.0.1]
- *  - Bootstrap v2.x serie [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2]
- *  - Font Awesome [v2.0.0, v3.0.0, v3.2.1, v4.0.1]
- *  - Foundation [v2.1.5]
+ *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2] [[net.liftmodules.FoBoJQ]]
+ *  - Bootstrap v3.x serie [v3.0.0, v3.0.1] [[net.liftmodules.FoBoBs]]
+ *  - Bootstrap v2.x serie [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2] [[net.liftmodules.FoBoTB]]
+ *  - Font Awesome [v2.0.0, v3.0.0, v3.2.1, v4.0.1] [[net.liftmodules.FoBoFA]]
+ *  - Foundation [v2.1.5] 
  *  - DataTables [v1.9.0]
  *  - JQuery-mobile [v1.0.1, v1.1.0]
  *  - Google Code Prettify [vJun2011]
@@ -134,8 +134,20 @@ package object FoBo {
    * params so default Toolkit and JQuery values will be used. 
    */
   def init() {
+    //add package for module with snippets 
     LiftRules.addToPackages("net.liftmodules.FoBo")
+    //LiftRules.addToPackages("net.liftmodules.FoBoAJS")
+    LiftRules.addToPackages("net.liftmodules.FoBoDT")
+    //LiftRules.addToPackages("net.liftmodules.FoBoFA")
+    //LiftRules.addToPackages("net.liftmodules.FoBoFo")
+    //LiftRules.addToPackages("net.liftmodules.FoBoGCP")
+    //LiftRules.addToPackages("net.liftmodules.FoBoJQ")
+    //LiftRules.addToPackages("net.liftmodules.FoBoJQM")
+    //LiftRules.addToPackages("net.liftmodules.FoBoKo")
     LiftRules.addToPackages("net.liftmodules.FoBoBs")
+    LiftRules.addToPackages("net.liftmodules.FoBoTB")
+    
+    
     ResourceServer.allow {
       case "fobo" :: tail => true
     }
@@ -278,7 +290,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  *  
  */
 case object Knockout221 extends FoBoToolkit {
-  net.liftmodules.FoBoKO.Knockout221
+  net.liftmodules.FoBoKo.Knockout221
 }
 
 /**
@@ -293,7 +305,7 @@ case object Knockout221 extends FoBoToolkit {
  *  
  */
 case object Knockout210 extends FoBoToolkit {
-  net.liftmodules.FoBoKO.Knockout210
+  net.liftmodules.FoBoKo.Knockout210
 }
 /**
  * Enable usage of KnockOut version 2_1_0 in your bootstrap liftweb Boot.
@@ -307,7 +319,7 @@ case object Knockout210 extends FoBoToolkit {
  *  
  */
 case object Knockout200 extends FoBoToolkit {
-  net.liftmodules.FoBoKO.Knockout200
+  net.liftmodules.FoBoKo.Knockout200
 }
 
 /**

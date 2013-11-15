@@ -1,4 +1,4 @@
-package net.liftmodules.FoBo.snippet.FoBo
+package net.liftmodules.FoBoTB.snippet.FoBo
 
 import net.liftweb._
 import http._

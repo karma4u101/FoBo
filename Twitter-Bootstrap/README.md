@@ -1,19 +1,16 @@
 FoBo-Twitter-Bootstrap
 ======================
 
-This sub module provides Twitter Bootstrap to the Fobo Module, but can also be used as-is (see below for setup information).
+This sub module provides Twitter Bootstrap v2.x to the Fobo Module (there is a separate module for the Bootstrap v3.x serie), but can also be used as-is (see below for setup information).
 For more information on how to use Twitter Bootstrap in the FoBo module see the [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo).
 
 Components and available versions 
 ---------------------------------
-- Bootstrap [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1] - [Bootstrap](http://twitter.github.com/bootstrap/)
+- Bootstrap [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2] - [Bootstrap](http://twitter.github.com/bootstrap/)
 
 Contributions
-------
-Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion to my priv. e-mail or on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
-
-best regards 
-Peter Petersson 
+-------------
+Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
 
 Update log
 ----------
@@ -24,11 +21,11 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)
 
 **Latest Updates:**
-- **2013-07-29** -- 1.1-SNAPSHOT Added bootstrap v2.3.2 
-- **2013-05-11** -- 1.0-SNAPSHOT Added bootstrap v2.3.1
-- **2013-05-01** -- 0.9.9-SNAPSHOT ++ One version to rule them all, unified FoBo module and sub-module versions.
-- **2013-02-24** -- 0.2.0-SNAPSHOT Completed module transaction. Now using FoBo.XXXX namespace for snippets.
-- **2013-01-22** -- 0.1.1-SNAPSHOT Fixing serving of minified bootstrap.js when not in development.
+- **2013-07-29** -- Module v1.1-SNAPSHOT Added bootstrap v2.3.2 
+- **2013-05-11** -- Module v1.0-SNAPSHOT Added bootstrap v2.3.1
+- **2013-05-01** -- Module v0.9.9-SNAPSHOT ++ One version to rule them all, unified FoBo module and sub-module versions.
+- **2013-02-24** -- Module v0.2.0-SNAPSHOT Completed module transaction. Now using FoBo.XXXX namespace for snippets.
+- **2013-01-22** -- Module v0.1.1-SNAPSHOT Fixing serving of minified bootstrap.js when not in development.
 
 **Latest Releases:**
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for release information.

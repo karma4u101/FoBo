@@ -15,8 +15,10 @@ import xml._
  * This snippet object transforms lift SiteMap menu items associated with a specified loc 
  * group name's into a collection of Bootstrap list group items.
  * 
- * <b>OBS!</b> The current implementation (1.1-SNAPSHOT 20131030) dose not support lift submenue's as the TBNavbar dose nor dose it yet support 
- * menu labels or menu dividers as the Bootstrap v2 TBNavlist dose although you will most likely see it in the near future.   
+ * This is a simple but flexible list group item snippet that can be used when constructing list group menus.
+ * The current implementation is flat and dose not support transformation of Lift PlaceHolder's and submenu's as for example 
+ * the BsNavbar dose nor dose it support transformations into menu headers or menu dividers as the Bootstrap v2 TBNavlist 
+ * but you can of course add your own menu section header's between loc groups in the list group as shown in the example below.      
  * 
  * '''Snippet Usage:'''
  * {{{<span data-lift="FoBo.Bs3LinkedListGroup.builder?group=[LocGroup name]"></span>}}}
@@ -35,10 +37,12 @@ import xml._
  * This will be expand into a twitter bootstrap navlist's built from the named 
  * Lift menu locGroup content.
  * 
- * '''Example - Linked list group''' with several linked list (loc) groups combined and enclosed in a list group div. 
+ * '''Example - Linked list group''' with several linked list (loc) groups combined and enclosed in a list group div with a 
+ * application specific styled menu section header before the last group. 
  * {{{<d i v class="list-group">	
       <span data-lift="FoBo.Bs3LinkedListGroup.builder?group=lg1"></span>
       <span data-lift="FoBo.Bs3LinkedListGroup.builder?group=user"></span>
+      <span class="list-group-item mylgheader">Example menu section header</span>
       <span data-lift="FoBo.Bs3LinkedListGroup.builder?group=lg2"></span>
        :
  * </d i v>}}}

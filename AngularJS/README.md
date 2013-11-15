@@ -12,10 +12,7 @@ Components and available versions
 
 Contributions
 -------------
-Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion to my priv. e-mail or on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
-
-best regards 
-Peter Petersson 
+Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
 
 Update log
 ----------
@@ -26,9 +23,9 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)  
 
 **Latest Update:**
-- **2013-05-09** -- 1.0-SNAPSHOT Removing one of the newly added Angular component (Angular UI v0.4.0) as it has been broken up into sub modules by upstream. 
-- **2013-05-01** -- 0.9.9-SNAPSHOT One version to rule them all, unified FoBo module and sub-module versions.
-- **2013-04-13** -- 0.1.0-SNAPSHOT Making AngularJS a FoBo subproject.
+- **2013-05-09** -- Module v1.0-SNAPSHOT Removing one of the newly added Angular component (Angular UI v0.4.0) as it has been broken up into sub modules by upstream. 
+- **2013-05-01** -- Module v0.9.9-SNAPSHOT One version to rule them all, unified FoBo module and sub-module versions.
+- **2013-04-13** -- Module v0.1.0-SNAPSHOT Making AngularJS a FoBo subproject.
 
 **Latest Releases:**
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for releas information.
