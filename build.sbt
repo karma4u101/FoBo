@@ -2,9 +2,9 @@ name := "FoBo-Meta"
 
 organization := "net.liftmodules"
 
-version in ThisBuild := "1.1"
+version in ThisBuild := "1.2-SNAPSHOT"
 
-liftVersion in ThisBuild <<= liftVersion ?? "2.6-M2"
+liftVersion in ThisBuild <<= liftVersion ?? "2.6-SNAPSHOT"
 
 liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
