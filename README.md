@@ -43,7 +43,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 New features in FoBo v1.1
 ---------------------------
 
-FoBo v1.1 has the following new sub modules
+###FoBo v1.1 has the following new sub modules
 
 -   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) [v3.0.0, v3.0.1] - [Bootstrap 3.x](http://getbootstrap.com/)
     The Bootstrap v3.x series is a major leap forward. Bootstrap is now Mobile first and always responsive with improved customization adding the notion of theme's.
@@ -58,7 +58,9 @@ FoBo v1.1 has the following new sub modules
 
     The Bs3Navbar is the Bootstrap v3.x equivalent of the Boostrap v2.x TBNavbar used for horizontal top and/or bottom navigation bars. 
 
-FoBo v1.1 has updates to the following sub modules
+A live demo showing some of FoBo's Bootstrap v3.x snippet functions is referred to on the more general [FoBo Bootstrap demo](http://www.media4u101.se/fobo-lift-template-demo/libo) page.   
+
+###FoBo v1.1 has updates to the following sub modules
 
 -   [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) adding v2.3.2 - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
     v2.3.2 is the last version in the Bootstrap v2.x series
@@ -67,6 +69,8 @@ FoBo v1.1 has updates to the following sub modules
     Here v3.2.1 is the last version compatible with the Bootstrap v2.x series and v4.0.1 is the first with Bootstrap v3.x support
 
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) adding v1.10.2 - [JQuery](http://jquery.com/)
+
+A live demo showing some of FoBo's sub module features, including API documentation, can seen at the [FoBo demo](http://www.media4u101.se/fobo-lift-template-demo/)
 
 
 Toolkit:s and available versions

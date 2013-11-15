@@ -2,7 +2,7 @@ name := "FoBo-Meta"
 
 organization := "net.liftmodules"
 
-version in ThisBuild := "1.2-SNAPSHOT"
+version in ThisBuild := "1.1"
 
 liftVersion in ThisBuild <<= liftVersion ?? "2.6-M2"
 
