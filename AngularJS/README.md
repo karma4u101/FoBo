@@ -4,11 +4,15 @@ FoBo-AngularJS
 This sub module provides AngularJS components to the FoBo Module, but can also be used as-is (see below for setup information).
 For more information on how to use AngularJS in the FoBo module see the [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo).
 
-Components and available versions 
+Core modules 
 ---------------------------------
-- AngularJS core [v1.0.6]
+- AngularJS core [v1.0.6, v1.2.1]
+
+Components
+----------
 - Angular UI Bootstrap [v0.2.0]
 - Angular NG-Grid [v2.0.4]
+
 
 Contributions
 -------------
@@ -75,7 +79,8 @@ The example will include a module built for lift 2.5. If you are using maven obs
 
     import net.liftmodules.FoBo 
     :
-    FoBo.InitParam.ToolKit=FoBo.AngularJS106      //The core files 
+    FoBo.InitParam.ToolKit=FoBo.AngularJS121      //access to core files 
+    FoBo.InitParam.ToolKit=FoBo.AngularJS121i18n   //access to angular i18n files 
     FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap020 //Angular UI Bootstrap
     FoBo.InitParam.ToolKit=FoBo.AJSNGGrid204      //Angular NG-Grid
     FoBo.init()
@@ -91,8 +96,12 @@ The example will include a module built for lift 2.5. If you are using maven obs
 
 ### Lift FoBo Template hooks
 
+Note FoBo is taking care of serving minimized files and coresponing hocks to map files (in production) so you do not have to worry about it. 
+
     <!-- AngularJS core files-->
     <script type="text/javascript" src="/classpath/fobo/angular.js"></script>
+    <!-- localization file-->
+    <script type="text/javascript" src="/classpath/fobo/angular-locale_en-us.js"></script>
     <!-- ui-bootstrap with templats -->
     <script type="text/javascript" src="/classpath/fobo/ui-bootstrap-tpls.js"></script>
     <!-- ui-bootstrap barbones -->
@@ -100,6 +109,40 @@ The example will include a module built for lift 2.5. If you are using maven obs
     <!-- angular ng-grid -->
     <script type="text/javascript" src="/classpath/fobo/ng-grid.js"></script>
     <link rel="stylesheet" type='text/css' href='/classpath/fobo/ng-grid.css'>
+
+Core Css files
+
+- angular-csp.css [v1.2.1]
+
+Core Script files
+
+- angular.js [v1.0.6, v1.2.1]
+- angular-animate.js [v1.2.1]
+- angular-cookies.js [v1.2.1]
+- angular-loader.js [v1.2.1]
+- angular-mocks.js (for test, only available in development) [v1.2.1]
+- angular-resource.js [v1.2.1]
+- angular-route.js [v1.2.1]
+- angular-sanitize.js [v1.2.1]
+- angular-scenario.js (for test, only available in development) [v1.2.1] 
+- angular-touch.js [v1.2.1]
+
+Components Css files
+
+- ng-grid.css [v1.2.1]
+
+Components Script files
+
+- ui-bootstrap-tpls.js [v0.2.0]
+- ui-bootstrap.js [v0.2.0]
+- ng-grid.js [v2.0.4]
+ 
+i18n files
+
+- angular-locale_[Locale ID].js [v1.2.1]
+
+where Locale ID = {af,af-na,af-za,am,am-et,ar,ar-001,ar-ae,ar-bh,ar-dz,.........,zu-za}
+You will find more information about available locales at [Angular Guide i18n](http://docs.angularjs.org/guide/i18n)
 
 For more information on how to use AngularJS and included components:
 - AngularJS see [AngularJS](http://angularjs.org/)
