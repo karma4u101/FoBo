@@ -233,6 +233,37 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   var ToolKit: FoBoToolkit = null 
 }
 
+
+  /**
+   * Enable usage of AngularJS version 1_2_1 in your bootstrap liftweb Boot.
+   * @version 1.2.1
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AngularJS121
+   * }}}
+   *
+   */
+  case object AngularJS121 extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AngularJS121
+  }
+
+  /**
+   * Enable usage of AngularJS i18n files in your bootstrap liftweb Boot.
+   * @version 1.2.1
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AngularJS121i18n
+   * }}}
+   *
+   */
+  case object AngularJS121i18n extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AngularJS121i18n
+  }  
+
   /**
    * Enable usage of AngularJS version 1_0_6 in your bootstrap liftweb Boot.
    * @version 1.0.6
@@ -247,6 +278,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   case object AngularJS106 extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AngularJS106
   }
+  
 
   /**
    * Enable usage of AngularUI-Bootstrap version 0_2_0 in your bootstrap liftweb Boot.
