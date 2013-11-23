@@ -16,6 +16,7 @@ import net.liftweb.util.IterableFunc
  * {{{<span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true"> 
  *     <span data-lift="Menu.builder?top:class=nav pull-right;li_item:class=active;linkToSelf=true;expandAll=true;group=frontNav"></span>
  *	  </span>}}}
+ * @since v0.7
  */
 @deprecated("For Lift >= v2.5 use the newer TB***Menu snippets","FoBo v0.7.3")
 object BootstrapNav extends Logger {

@@ -17,6 +17,7 @@ import S._
  * In addition it also contains some related Lift i18n localization to nodeSeq resource overrides 
  * to make it easy for users of this trait to customize submit button label, field legend, field label,  
  * field placeholder, lift messages and more. 
+ * @since v1.1
  */
 trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends KeyedMetaMapper[Long, ModelType] with GenProtoUser {
   self: ModelType =>

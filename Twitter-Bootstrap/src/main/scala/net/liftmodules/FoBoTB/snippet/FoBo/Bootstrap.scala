@@ -16,6 +16,7 @@ import net.liftmodules.FoBoTB.lib.{BootstrapSH=>sch}
  * '''Example''' Invoke with 
  * {{{ data-lift="FoBo.Bootstrap.functionName?paramName=paramValue&...." }}} 
  * For more examples see the individual transform functions.
+ * @since v1.0
  */
 class Bootstrap extends StatefulSnippet with Loggable {
 

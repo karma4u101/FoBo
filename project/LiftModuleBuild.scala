@@ -30,8 +30,8 @@ object LiftModuleFoBoBuild extends Build {
                             base = file("FoBo"),
                             settings = defaultSettings ++ myBuildInfoSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile),
-                             aggregate = Seq(jquery,bootstrap,bootstrap3,fontAwesome,foundation,datatables,knockout,angularjs,jquerymobile,prettify)
-                                 ).dependsOn(angularjs,jquery,bootstrap,bootstrap3,fontAwesome,foundation,datatables,knockout,jquerymobile,prettify)  
+                             aggregate = Seq(pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,foundation,datatables,knockout,jquerymobile,prettify)
+                                 ).dependsOn(pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,foundation,datatables,knockout,jquerymobile,prettify)  
                                  
    lazy val fontAwesome = Project(id   = "FoBo-Font-Awesome", 
                              base = file("Font-Awesome"),
@@ -72,7 +72,13 @@ object LiftModuleFoBoBuild extends Build {
                              base = file("JQuery"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
-                             
+  
+  lazy val pace         = Project(id   = "FoBo-Pace", 
+                             base = file("Pace"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))  
+                                 
+                                 
   lazy val jquerymobile = Project(id   = "FoBo-JQuery-Mobile", 
                              base = file("JQuery-Mobile"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(

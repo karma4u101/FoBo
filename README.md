@@ -34,10 +34,12 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - **2013-10-11** -- Module v1.1
 
 **Latest Updates:**
+- **2013-11-20** -- Module v1.2-SNAPSHOT Added Pace v0.4.15
 - **2013-11-18** -- Module v1.2-SNAPSHOT Added AngularJS v1.2.1 core modules (ng, ngRoute, ngAnimate, ngResource, ngCookies, ngTouch, ngSanitize, ngMock) and i18n files.
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 **Latest Snapshot Release:**
+- **2013-11-23** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
 - **2013-11-18** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
@@ -92,7 +94,8 @@ The FoBo module includes the following sub-modules and supports the following to
 -   [FoBo-DataTables](https://github.com/karma4u101/FoBo/tree/master/DataTables) [v1.9.0] - [DataTables.net](http://datatables.net/)
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2, v1.9.1, v1.10.2] - [JQuery](http://jquery.com/)
 -   [FoBo-Knockout](https://github.com/karma4u101/FoBo/tree/master/Knockout) [v2.0.0, v2.1.0, v2.2.1] - [KnockoutJS](http://knockoutjs.com/)
--   [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) [v1.0.6, v1.2.1, (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) )] - [Angular](http://angularjs.org/) 
+-   [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) [v1.0.6, v1.2.1, (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) )] - [Angular](http://angularjs.org/)
+-   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) [v0.4.15] - [Pace](http://github.hubspot.com/pace/docs/welcome/) 
 
 Module names that can bee used in boot corresponding to the toolkit version above is
 

@@ -38,7 +38,7 @@ import xml._
  * </d i v>}}}
  * 
  * '''Result:''' This will create a Navlist with menu entries associated with the LocGroup 'nl1'.
- * 
+ * @since v1.0
  */
 trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
 
@@ -62,7 +62,7 @@ trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
     }
   }
   
-  //item.current may halp in setting <li class="active"> on it
+  //item.current may help in setting <li class="active"> on it
   override def renderSelfLinked(item: MenuItem, renderInner: Seq[MenuItem] => NodeSeq): Elem =
     buildInnerTag(<xml:group>{renderLink(item.uri, item.text, item.path,
         item.current)}{renderInner(item.kids)}</xml:group>, item.path, item.current)  
@@ -178,6 +178,10 @@ trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
     }
   }     
 
+  
+  
+  
+  
 }
 
 object TBNavlist extends TBNavlist

@@ -53,7 +53,7 @@ import xml._
  * 
  * '''Result:''' This will create a fluid bootstrap navbar fixed to top with menu entries associated with the 
  * two LocGroup's 'top' and 'top2' where the second one is pulled to the right.
- * 
+ * @since v1.0
  */
 trait TBNavbar extends FlexMenuBuilder with DispatchSnippet {
 

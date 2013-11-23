@@ -49,7 +49,7 @@ import xml._
  * 
  * '''Result:''' This will create a list group of linked items associated with the specified 
  * LocGroup names 'lg1, user, lg2, ...'.
- * 
+ * @since v1.1
  */
 trait Bs3LinkedListGroup extends FlexMenuBuilder with DispatchSnippet {
 

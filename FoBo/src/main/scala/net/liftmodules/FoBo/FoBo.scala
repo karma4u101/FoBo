@@ -43,7 +43,7 @@ import common._
  *  - JQuery-mobile [v1.0.1, v1.1.0]
  *  - Google Code Prettify [vJun2011]
  *  - Knockout JS [v2.0.0, v2.1.0, v]2.2.1]
- *  - Angular JS [v1.0.6] (angular core)
+ *  - Angular JS [v1.0.6, v1.2.1] (angular core)
  *  - Angular UI [v0.4.0] (angular component)
  *  - Angular UI Bootstrap [v0.2.0] (angular component)
  *  - Angular NG-Grid [v2.0.4] (angular component)
@@ -119,8 +119,8 @@ import common._
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version v1.1
- * @author Peter Petersson (Github karma4u101), The Lift community  
+ * @version v1.2
+ * @author Peter Petersson (Github karma4u101) and the Lift community  
  * 
  */
 package object FoBo {
@@ -138,12 +138,6 @@ package object FoBo {
     LiftRules.addToPackages("net.liftmodules.FoBo")
     //LiftRules.addToPackages("net.liftmodules.FoBoAJS")
     LiftRules.addToPackages("net.liftmodules.FoBoDT")
-    //LiftRules.addToPackages("net.liftmodules.FoBoFA")
-    //LiftRules.addToPackages("net.liftmodules.FoBoFo")
-    //LiftRules.addToPackages("net.liftmodules.FoBoGCP")
-    //LiftRules.addToPackages("net.liftmodules.FoBoJQ")
-    //LiftRules.addToPackages("net.liftmodules.FoBoJQM")
-    //LiftRules.addToPackages("net.liftmodules.FoBoKo")
     LiftRules.addToPackages("net.liftmodules.FoBoBs")
     LiftRules.addToPackages("net.liftmodules.FoBoTB")
     
@@ -173,6 +167,7 @@ abstract trait FoBoToolkit
  *  divider2 >> LocGroup(...) >> FoBo.TBLocInfo.DividerVertical,
  *   : 
  * }}} 
+ * @since v1.0
  */
 object TBLocInfo {
   private val hd: Box[String] = Full("divider")
@@ -201,16 +196,19 @@ object TBLocInfo {
    *       )
    * )      
    * }}} 
+   * @since v1.0
    */
   val Divider = new net.liftweb.sitemap.Loc.LocInfo[String]{def apply() = hd.map(x => () => x) }
   /**
    * Add a vertical divider in your bootstrap menu.
    * For a usage example see the Divider val above. 
+   * @since v1.0
    */
   val DividerVertical = new net.liftweb.sitemap.Loc.LocInfo[String]{def apply() = vd.map(x => () => x) }  
   /**
    * Add nav header(s) to your bootstrap nav list.
    * For a usage example see the NavHeader val above. 
+   * @since v1.0
    */
   val NavHeader = new net.liftweb.sitemap.Loc.LocInfo[String]{def apply() = nh.map(x => () => x) } 
 }
@@ -235,6 +233,21 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
 
 
   /**
+   * Enable usage of Pace version 0_4_15 in your bootstrap liftweb Boot.
+   * @version 0.4.15
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.Pace0415
+   * }}}
+   * @since v1.2
+   */
+  case object Pace0415 extends FoBoToolkit {
+    net.liftmodules.FoBoPa.Pace0415
+  }
+
+  /**
    * Enable usage of AngularJS version 1_2_1 in your bootstrap liftweb Boot.
    * @version 1.2.1
    *
@@ -243,7 +256,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * {{{
    *   FoBo.InitParam.Toolkit=FoBo.AngularJS121
    * }}}
-   *
+   * @since v1.2
    */
   case object AngularJS121 extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AngularJS121
@@ -258,7 +271,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * {{{
    *   FoBo.InitParam.Toolkit=FoBo.AngularJS121i18n
    * }}}
-   *
+   * @since v1.2
    */
   case object AngularJS121i18n extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AngularJS121i18n
@@ -273,7 +286,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * {{{
    *   FoBo.InitParam.Toolkit=FoBo.AngularJS106
    * }}}
-   *
+   * @since v1.0
    */
   case object AngularJS106 extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AngularJS106
@@ -289,7 +302,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * {{{
    *   FoBo.InitParam.Toolkit=FoBo.AJSUIBootstrap020
    * }}}
-   *
+   * @since v1.0
    */
   case object AJSUIBootstrap020 extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AJSUIBootstrap020
@@ -304,7 +317,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * {{{
    *   FoBo.InitParam.Toolkit=FoBo.AJSNGGrid204
    * }}}
-   *
+   * @since v1.0
    */
   case object AJSNGGrid204 extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AJSNGGrid204
@@ -319,7 +332,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.KnockOut221
  * }}}
- *  
+ * @since v1.0 
  */
 case object Knockout221 extends FoBoToolkit {
   net.liftmodules.FoBoKo.Knockout221
@@ -334,7 +347,7 @@ case object Knockout221 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.KnockOut200
  * }}}
- *  
+ * @since v1.0 
  */
 case object Knockout210 extends FoBoToolkit {
   net.liftmodules.FoBoKo.Knockout210
@@ -348,7 +361,7 @@ case object Knockout210 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.KnockOut210
  * }}}
- *  
+ * @since v0.7 
  */
 case object Knockout200 extends FoBoToolkit {
   net.liftmodules.FoBoKo.Knockout200
@@ -363,6 +376,7 @@ case object Knockout200 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.PrettifyJun2011
  * }}}
+ * @since v0.7
  */
 case object PrettifyJun2011 extends FoBoToolkit {
    net.liftmodules.FoBoGCP.PrettifyJun2011
@@ -377,6 +391,7 @@ case object PrettifyJun2011 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.JQuery=FoBo.JQuery1102
  * }}}
+ * @since v1.1
  */
 case object JQuery1102 extends FoBoJQuery {
   net.liftmodules.FoBoJQ.JQuery1102
@@ -391,6 +406,7 @@ case object JQuery1102 extends FoBoJQuery {
  * {{{
  *   FoBo.InitParam.JQuery=FoBo.JQuery191
  * }}}
+ * @since v1.0
  */
 case object JQuery191 extends FoBoJQuery {
   net.liftmodules.FoBoJQ.JQuery191
@@ -405,6 +421,7 @@ case object JQuery191 extends FoBoJQuery {
  * {{{
  *   FoBo.InitParam.JQuery=FoBo.JQuery182
  * }}}
+ * @since v0.7
  */
 case object JQuery182 extends FoBoJQuery {
   net.liftmodules.FoBoJQ.JQuery182
@@ -419,6 +436,7 @@ case object JQuery182 extends FoBoJQuery {
  * {{{
  *   FoBo.InitParam.JQuery=FoBo.JQuery172
  * }}}
+ * @since v0.7
  */
 case object JQuery172 extends FoBoJQuery {
   net.liftmodules.FoBoJQ.JQuery172
@@ -434,6 +452,7 @@ case object JQuery172 extends FoBoJQuery {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.JQueryMobile110
  * }}}
+ * @since v1.0
  */
 case object JQueryMobile110 extends FoBoToolkit {
   net.liftmodules.FoBoJQM.JQueryMobile110
@@ -450,7 +469,7 @@ case object JQueryMobile110 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.FontAwesome401
  * }}}
- *  
+ * @since v1.1 
  */
 case object FontAwesome401 extends FoBoToolkit {
   net.liftmodules.FoBoFA.FontAwesome401
@@ -465,7 +484,7 @@ case object FontAwesome401 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.FontAwesome321
  * }}}
- *  
+ * @since v1.0 
  */
 case object FontAwesome321 extends FoBoToolkit {
   net.liftmodules.FoBoFA.FontAwesome321
@@ -480,7 +499,7 @@ case object FontAwesome321 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.FontAwesome300
  * }}}
- *  
+ * @since v1.0 
  */
 case object FontAwesome300 extends FoBoToolkit {
   net.liftmodules.FoBoFA.FontAwesome300
@@ -495,7 +514,7 @@ case object FontAwesome300 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.FontAwesome200
  * }}}
- *  
+ * @since v1.0 
  */
 case object FontAwesome200 extends FoBoToolkit {
   net.liftmodules.FoBoFA.FontAwesome200
@@ -517,7 +536,7 @@ case object FontAwesome200 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.FontAwesome200TB222
  * }}}
- *  
+ * @since v1.0 
  */
 case object FontAwesome200TB222 extends FoBoToolkit {
   net.liftmodules.FoBoFA.FontAwesome200TB222
@@ -532,6 +551,7 @@ case object FontAwesome200TB222 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.Bootstrap210
  * }}}
+ * @since v1.0
  */
 case object Bootstrap210 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap210
@@ -546,6 +566,7 @@ case object Bootstrap210 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.Bootstrap220
  * }}}
+ * @since v1.0
  */
 case object Bootstrap220 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap220
@@ -561,6 +582,7 @@ case object Bootstrap220 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.Bootstrap222
  * }}}
+ * @since v1.0
  */
 case object Bootstrap222 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap222
@@ -575,6 +597,7 @@ case object Bootstrap222 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.Bootstrap230
  * }}}
+ * @since v1.0
  */
 case object Bootstrap230 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap230
@@ -589,6 +612,7 @@ case object Bootstrap230 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.Bootstrap231
  * }}}
+ * @since v1.0
  */
 case object Bootstrap231 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap231
@@ -603,6 +627,7 @@ case object Bootstrap231 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.Bootstrap232
  * }}}
+ * @since v1.1
  */
 case object Bootstrap232 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap232
@@ -618,6 +643,7 @@ case object Bootstrap232 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.Bootstrap300
  * }}}
+ * @since v1.1
  */
 case object Bootstrap300 extends FoBoToolkit {
   net.liftmodules.FoBoBs.Bootstrap300
@@ -632,6 +658,7 @@ case object Bootstrap300 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.Bootstrap301
  * }}}
+ * @since v1.1
  */
 case object Bootstrap301 extends FoBoToolkit {
   net.liftmodules.FoBoBs.Bootstrap301
@@ -646,6 +673,7 @@ case object Bootstrap301 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.Bootstrap300RC1
  * }}}
+ * @since v1.1
  */
 @deprecated("Use Bootstrap300 or later","FoBo v1.1.0")
 case object Bootstrap300RC1 extends FoBoToolkit {
@@ -661,7 +689,7 @@ case object Bootstrap300RC1 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.DataTables190
  * }}}
- *  
+ * @since v0.7 
  */
 case object DataTables190 extends FoBoToolkit {
   net.liftmodules.FoBoDT.DataTables190
@@ -677,6 +705,7 @@ case object DataTables190 extends FoBoToolkit {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.Foundation215
  * }}}
+ * @since v0.7
  */
 case object Foundation215 extends FoBoToolkit {
   net.liftmodules.FoBoFo.Foundation215
