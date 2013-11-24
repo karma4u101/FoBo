@@ -43,7 +43,7 @@ import common._
  *  - JQuery-mobile [v1.0.1, v1.1.0]
  *  - Google Code Prettify [vJun2011]
  *  - Knockout JS [v2.0.0, v2.1.0, v]2.2.1]
- *  - Angular JS [v1.0.6, v1.2.1] (angular core)
+ *  - Angular JS [v1.0.6, v1.2.1, v1.2.2] (angular core)
  *  - Angular UI [v0.4.0] (angular component)
  *  - Angular UI Bootstrap [v0.2.0] (angular component)
  *  - Angular NG-Grid [v2.0.4] (angular component)
@@ -247,6 +247,36 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
     net.liftmodules.FoBoPa.Pace0415
   }
 
+   /**
+   * Enable usage of AngularJS version 1_2_2 in your bootstrap liftweb Boot.
+   * @version 1.2.2
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AngularJS122
+   * }}}
+   * @since v1.2
+   */
+  case object AngularJS122 extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AngularJS122
+  }
+  
+   /**
+   * Enable usage of AngularJS i18n files in your bootstrap liftweb Boot.
+   * @version 1.2.2
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AngularJS122i18n
+   * }}}
+   * @since v1.2
+   */
+  case object AngularJS122i18n extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AngularJS122i18n
+  } 
+  
   /**
    * Enable usage of AngularJS version 1_2_1 in your bootstrap liftweb Boot.
    * @version 1.2.1
@@ -258,6 +288,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.2
    */
+  @deprecated("Use AngularJS122 or later","FoBo v1.2.0")
   case object AngularJS121 extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AngularJS121
   }
@@ -273,6 +304,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.2
    */
+  @deprecated("Use AngularJS122i18n or later","FoBo v1.2.0")
   case object AngularJS121i18n extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AngularJS121i18n
   }  
@@ -288,6 +320,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.0
    */
+  @deprecated("Use AngularJS122 or later","FoBo v1.2.0")
   case object AngularJS106 extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AngularJS106
   }
@@ -363,6 +396,7 @@ case object Knockout210 extends FoBoToolkit {
  * }}}
  * @since v0.7 
  */
+@deprecated("Use Knockout210 or later","FoBo v1.2.0")
 case object Knockout200 extends FoBoToolkit {
   net.liftmodules.FoBoKo.Knockout200
 }
@@ -501,6 +535,7 @@ case object FontAwesome321 extends FoBoToolkit {
  * }}}
  * @since v1.0 
  */
+@deprecated("Use FontAwesome321 or later","FoBo v1.2.0")
 case object FontAwesome300 extends FoBoToolkit {
   net.liftmodules.FoBoFA.FontAwesome300
 }
@@ -516,6 +551,7 @@ case object FontAwesome300 extends FoBoToolkit {
  * }}}
  * @since v1.0 
  */
+@deprecated("Use FontAwesome321 or later","FoBo v1.2.0")
 case object FontAwesome200 extends FoBoToolkit {
   net.liftmodules.FoBoFA.FontAwesome200
 }
@@ -538,6 +574,7 @@ case object FontAwesome200 extends FoBoToolkit {
  * }}}
  * @since v1.0 
  */
+@deprecated("Use FontAwesome321 or later","FoBo v1.2.0")
 case object FontAwesome200TB222 extends FoBoToolkit {
   net.liftmodules.FoBoFA.FontAwesome200TB222
 }
@@ -553,6 +590,7 @@ case object FontAwesome200TB222 extends FoBoToolkit {
  * }}}
  * @since v1.0
  */
+@deprecated("Use Bootstrap232 or later","FoBo v1.2.0")
 case object Bootstrap210 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap210
 }
@@ -568,6 +606,7 @@ case object Bootstrap210 extends FoBoToolkit {
  * }}}
  * @since v1.0
  */
+@deprecated("Use Bootstrap232 or later","FoBo v1.2.0")
 case object Bootstrap220 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap220
 }
@@ -584,6 +623,7 @@ case object Bootstrap220 extends FoBoToolkit {
  * }}}
  * @since v1.0
  */
+@deprecated("Use Bootstrap232 or later","FoBo v1.2.0")
 case object Bootstrap222 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap222
 }
@@ -599,6 +639,7 @@ case object Bootstrap222 extends FoBoToolkit {
  * }}}
  * @since v1.0
  */
+@deprecated("Use Bootstrap232 or later","FoBo v1.2.0")
 case object Bootstrap230 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap230
 }
@@ -614,6 +655,7 @@ case object Bootstrap230 extends FoBoToolkit {
  * }}}
  * @since v1.0
  */
+@deprecated("Use Bootstrap232 or later","FoBo v1.2.0")
 case object Bootstrap231 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap231
 }

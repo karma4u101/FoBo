@@ -6,7 +6,7 @@ For more information on how to use AngularJS in the FoBo module see the [FoBo - 
 
 Core modules 
 ---------------------------------
-- AngularJS core [v1.0.6, v1.2.1]
+- AngularJS core [v1.0.6, v1.2.1, v1.2.2]
 
 Components
 ----------
@@ -27,6 +27,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)  
 
 **Latest Update:**
+- **2013-11-24** -- Module v1.2-SNAPSHOT Adding AngularJS core v1.2.2
 - **2013-11-18** -- Module v1.2-SNAPSHOT Adding AngularJS core v1.2.1
 - **2013-05-09** -- Module v1.0-SNAPSHOT Removing one of the newly added Angular component (Angular UI v0.4.0) as it has been broken up into sub modules by upstream. 
 - **2013-05-01** -- Module v0.9.9-SNAPSHOT One version to rule them all, unified FoBo module and sub-module versions.
@@ -117,20 +118,20 @@ Core Css files
 
 Core Script files
 
-- angular.js [v1.0.6, v1.2.1]
-- angular-animate.js [v1.2.1]
-- angular-cookies.js [v1.2.1]
-- angular-loader.js [v1.2.1]
-- angular-mocks.js (for test, only available in development) [v1.2.1]
-- angular-resource.js [v1.2.1]
-- angular-route.js [v1.2.1]
-- angular-sanitize.js [v1.2.1]
-- angular-scenario.js (for test, only available in development) [v1.2.1] 
-- angular-touch.js [v1.2.1]
+- angular.js [v1.0.6, v1.2.1, v1.2.2]
+- angular-animate.js [v1.2.1, v1.2.2]
+- angular-cookies.js [v1.2.1, v1.2.2]
+- angular-loader.js [v1.2.1, v1.2.2]
+- angular-mocks.js (for test, only available in development) [v1.2.1, v1.2.2]
+- angular-resource.js [v1.2.1, v1.2.2]
+- angular-route.js [v1.2.1, v1.2.2]
+- angular-sanitize.js [v1.2.1, v1.2.2]
+- angular-scenario.js (for test, only available in development) [v1.2.1, v1.2.2] 
+- angular-touch.js [v1.2.1, v1.2.2]
 
 Components Css files
 
-- ng-grid.css [v1.2.1]
+- ng-grid.css [v1.2.1, v1.2.2]
 
 Components Script files
 
@@ -140,7 +141,7 @@ Components Script files
  
 i18n files
 
-- angular-locale_[Locale ID].js [v1.2.1]
+- angular-locale_[Locale ID].js [v1.2.1, v1.2.2]
 
 where Locale ID = {af,af-na,af-za,am,am-et,ar,ar-001,ar-ae,ar-bh,ar-dz,.........,zu-za}
 You will find more information about available locales at [Angular Guide i18n](http://docs.angularjs.org/guide/i18n)
