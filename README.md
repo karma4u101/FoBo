@@ -1,7 +1,7 @@
 FoBo - A Generic Front-End Toolkit Module for Lift [![Build Status](https://secure.travis-ci.org/karma4u101/FoBo.png)](http://travis-ci.org/karma4u101/FoBo)
 ==================================================
 
-FoBo's main purpose is to provide a easy to use Lift module that includes front end toolkits for developers and designers to aid them in developing and designing mobile scalable reactive web applications. 
+FoBo's main purpose is to provide a easy to use Lift module that includes front end toolkits for developers and designers to aid them in developing mobile scalable responsive web applications. 
 
 A **live demo** and introduction to using this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/). 
 
