@@ -10,7 +10,7 @@ Core modules
 
 Components
 ----------
-- Angular UI Bootstrap [v0.2.0]
+- Angular UI Bootstrap [v0.2.0, v0.7.0]
 - Angular NG-Grid [v2.0.4]
 
 
@@ -83,7 +83,7 @@ The example will include a module built for lift 2.5. If you are using maven obs
     :
     FoBo.InitParam.ToolKit=FoBo.AngularJS121      //access to core files 
     FoBo.InitParam.ToolKit=FoBo.AngularJS121i18n   //access to angular i18n files 
-    FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap020 //Angular UI Bootstrap
+    FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap070 //Angular UI Bootstrap
     FoBo.InitParam.ToolKit=FoBo.AJSNGGrid204      //Angular NG-Grid
     FoBo.init()
 
@@ -92,7 +92,7 @@ The example will include a module built for lift 2.5. If you are using maven obs
     import net.liftmodules.FoBoAJS 
     :
     FoBoAJS.InitParam.ToolKit=FoBoAJS.AngularJS106      //The core files 
-    FoBoAJS.InitParam.ToolKit=FoBoAJS.AJSUIBootstrap020 //Angular UI Bootstrap
+    FoBoAJS.InitParam.ToolKit=FoBoAJS.AJSUIBootstrap070 //Angular UI Bootstrap
     FoBoAJS.InitParam.ToolKit=FoBoAJS.AJSNGGrid204      //Angular NG-Grid
     FoBoAJS.init()
 
@@ -135,7 +135,7 @@ Components Css files
 
 Components Script files
 
-- ui-bootstrap-tpls.js [v0.2.0]
+- ui-bootstrap-tpls.js [v0.2.0, v0.7.0]
 - ui-bootstrap.js [v0.2.0]
 - ng-grid.js [v2.0.4]
  
