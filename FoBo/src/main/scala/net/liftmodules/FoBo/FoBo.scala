@@ -43,10 +43,10 @@ import common._
  *  - JQuery-mobile [v1.0.1, v1.1.0]
  *  - Google Code Prettify [vJun2011]
  *  - Knockout JS [v2.0.0, v2.1.0, v]2.2.1]
- *  - Angular JS [v1.0.6, v1.2.1, v1.2.2] (angular core)
+ *  - t JS [v1.0.6, v1.2.1, v1.2.2] (angular core)
  *  - Angular UI [v0.4.0] (angular component)
  *  - Angular UI Bootstrap [v0.2.0, v0.7.0] (angular component)
- *  - Angular NG-Grid [v2.0.4] (angular component)
+ *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component)
  *  
  * ===Okey, okey I get it, now take me to the most interesting stuff===
  * Except from bringing you all the powers from the included toolkits and toolset, the most interesting stuff 
@@ -355,6 +355,22 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
     net.liftmodules.FoBoAJS.AJSUIBootstrap020
   }   
  
+  
+  /**
+   * Enable usage of NG-Grid version 2_0_7 in your bootstrap liftweb Boot.
+   * @version 2.0.7
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AJSNGGrid207
+   * }}}
+   * @since v1.2
+   */
+  case object AJSNGGrid207 extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AJSNGGrid207
+  } 
+  
   /**
    * Enable usage of NG-Grid version 2_0_4 in your bootstrap liftweb Boot.
    * @version 2.0.4

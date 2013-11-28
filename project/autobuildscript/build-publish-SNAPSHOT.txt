@@ -29,6 +29,7 @@ pub
 
 set scalaVersion in ThisBuild:="2.9.2"
 
+
 project FoBo
 clean
 update
@@ -53,6 +54,7 @@ pub
 
 
 set scalaVersion in ThisBuild:="2.9.1"
+
 
 project FoBo
 clean

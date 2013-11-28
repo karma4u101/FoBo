@@ -11,7 +11,7 @@ Core modules
 Components
 ----------
 - Angular UI Bootstrap [v0.2.0, v0.7.0]
-- Angular NG-Grid [v2.0.4]
+- Angular NG-Grid [v2.0.4, v2.0.7]
 
 
 Contributions
@@ -27,6 +27,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)  
 
 **Latest Update:**
+- **2013-11-27** -- Module v1.2-SNAPSHOT Adding Angular UI Bootstrap v0.7.0 and Angular NG-Grid v2.0.7
 - **2013-11-24** -- Module v1.2-SNAPSHOT Adding AngularJS core v1.2.2
 - **2013-11-18** -- Module v1.2-SNAPSHOT Adding AngularJS core v1.2.1
 - **2013-05-09** -- Module v1.0-SNAPSHOT Removing one of the newly added Angular component (Angular UI v0.4.0) as it has been broken up into sub modules by upstream. 
@@ -84,7 +85,7 @@ The example will include a module built for lift 2.5. If you are using maven obs
     FoBo.InitParam.ToolKit=FoBo.AngularJS121      //access to core files 
     FoBo.InitParam.ToolKit=FoBo.AngularJS121i18n   //access to angular i18n files 
     FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap070 //Angular UI Bootstrap
-    FoBo.InitParam.ToolKit=FoBo.AJSNGGrid204      //Angular NG-Grid
+    FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207      //Angular NG-Grid
     FoBo.init()
 
 ### Lift FoBo boot hooks (when used as stand alone module)
@@ -93,7 +94,7 @@ The example will include a module built for lift 2.5. If you are using maven obs
     :
     FoBoAJS.InitParam.ToolKit=FoBoAJS.AngularJS106      //The core files 
     FoBoAJS.InitParam.ToolKit=FoBoAJS.AJSUIBootstrap070 //Angular UI Bootstrap
-    FoBoAJS.InitParam.ToolKit=FoBoAJS.AJSNGGrid204      //Angular NG-Grid
+    FoBoAJS.InitParam.ToolKit=FoBoAJS.AJSNGGrid207      //Angular NG-Grid
     FoBoAJS.init()
 
 ### Lift FoBo Template hooks
@@ -136,8 +137,8 @@ Components Css files
 Components Script files
 
 - ui-bootstrap-tpls.js [v0.2.0, v0.7.0]
-- ui-bootstrap.js [v0.2.0]
-- ng-grid.js [v2.0.4]
+- ui-bootstrap.js [v0.2.0, v0.7.0]
+- ng-grid.js [v2.0.4, v2.0.7]
  
 i18n files
 

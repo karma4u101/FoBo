@@ -140,6 +140,21 @@ package object FoBoAJS {
   }   
  
   /**
+   * Enable usage of NG-Grid version 2_0_7 in your bootstrap liftweb Boot.
+   * @version 2.0.7
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBoAJS.InitParam.Toolkit=FoBoAJS.AJSNGGrid207
+   * }}}
+   *
+   */
+  case object AJSNGGrid207 extends AJSToolkit {
+    AJSFoBoResources.nggrid207
+  }   
+  
+  /**
    * Enable usage of NG-Grid version 2_0_4 in your bootstrap liftweb Boot.
    * @version 2.0.4
    *
@@ -1274,6 +1289,15 @@ package object FoBoAJS {
         case "fobo" :: "ui-bootstrap-tpls.js" :: Nil => List("fobo", "angular-ui", "bootstrap", "0.2.0", "js", "ui-bootstrap-tpls-0.2.0.min.js")
       }
     }
+    
+    lazy val nggrid207 = {
+      ResourceServer.rewrite {
+        case "fobo" :: "ng-grid.js" :: Nil if Props.devMode => List("fobo", "angular-ui", "ng-grid", "2.0.7", "js", "ng-grid-2.0.7.debug.js")
+        case "fobo" :: "ng-grid.js" :: Nil => List("fobo", "angular-ui", "ng-grid", "2.0.7", "js", "ng-grid-2.0.7.min.js")
+        case "fobo" :: "ng-grid.css" :: Nil if Props.devMode => List("fobo", "angular-ui", "ng-grid", "2.0.7", "css", "ng-grid.css")
+        case "fobo" :: "ng-grid.css" :: Nil => List("fobo", "angular-ui", "ng-grid", "2.0.7", "css", "ng-grid.min.css")
+      }
+    }     
     
     lazy val nggrid204 = {
       ResourceServer.rewrite {

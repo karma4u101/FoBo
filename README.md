@@ -34,12 +34,14 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - **2013-10-11** -- Module v1.1
 
 **Latest Updates:**
+- **2013-11-27** -- Module v1.2-SNAPSHOT Adding Angular UI Bootstrap v0.7.0 and Angular NG-Grid v2.0.7
 - **2013-11-24** -- Module v1.2-SNAPSHOT Added AngularJS v1.2.2 core modules
 - **2013-11-20** -- Module v1.2-SNAPSHOT Added Pace v0.4.15
 - **2013-11-18** -- Module v1.2-SNAPSHOT Added AngularJS v1.2.1 core modules (ng, ngRoute, ngAnimate, ngResource, ngCookies, ngTouch, ngSanitize, ngMock) and i18n files.
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 **Latest Snapshot Release:**
+- **2013-11-28** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
 - **2013-11-24** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
 - **2013-11-23** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
 - **2013-11-18** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0

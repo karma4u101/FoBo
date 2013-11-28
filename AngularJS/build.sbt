@@ -10,6 +10,7 @@ scalacOptions ++= Seq("-deprecation")
 
 EclipseKeys.withSource := true
 
+//if(!liftEdition.equals("3.0")) excludeFilter in unmanagedSources := HiddenFileFilter || "net.liftweb.http.PageRoundTrips.scala"
 
 resolvers ++= Seq(
   "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
