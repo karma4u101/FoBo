@@ -75,6 +75,15 @@ trait Bs3LinkedListGroup extends FlexMenuBuilder with DispatchSnippet {
     }
   }
   
+  def renderLinkWithTarget(uri: NodeSeq, text: NodeSeq, path: Boolean, current: Boolean,f: Function0[_]): NodeSeq = {
+    val t:String = f().asInstanceOf[String] 
+    if(current){
+      <a class="list-group-item active" target={t} href={uri}>{text}</a>
+    }else{
+      <a class="list-group-item" target={t} href={uri}>{text}</a>
+    }    
+  }   
+  
   override def updateForPath(nodes: Elem, path: Boolean): Elem = nodes
   
   override def updateForCurrent(nodes: Elem, current: Boolean): Elem = nodes  
@@ -108,10 +117,67 @@ trait Bs3LinkedListGroup extends FlexMenuBuilder with DispatchSnippet {
         item.current)}{renderInner(item.kids)}</xml:group>, item.path, item.current)  
    
   override def renderItem(item: MenuItem, renderInner: Seq[MenuItem] => NodeSeq): Elem = {
-    renderLink(item.uri, item.text, item.path, item.current).asInstanceOf[Elem]
-    
+    renderItemWithInfo(item.info, renderInner, item) 
+    //renderLink(item.uri, item.text, item.path, item.current).asInstanceOf[Elem]
   }      
+  
+  def buildTBNavHeader(contents: NodeSeq, path: Boolean, current: Boolean): Elem = 
+    updateForCurrent(updateForPath(<li class="nav-header">{ contents }</li>, path), current)
 
+  def buildTBDivider(contents: NodeSeq, path: Boolean, current: Boolean): Elem = 
+    updateForCurrent(updateForPath(<li class="divider"></li>, path), current)      
+   
+
+  def renderItemWithInfo(info: List[net.liftweb.common.Box[Function0[_]]], renderInner: Seq[MenuItem] => NodeSeq, item: MenuItem): Elem = {
+    
+    def buildWithInfo(f: Function0[_], renderInner: Seq[MenuItem] => NodeSeq, item: MenuItem): Elem = {
+      if (f().equals("divider")) {
+        buildTBDivider(<xml:group></xml:group>, item.path, item.current)
+      } else if (f().equals("nav-header")) {
+        buildTBNavHeader(<xml:group>{ item.text }</xml:group>, item.path, item.current)
+      } else if (f().equals("_blank") || f().equals("_self") || f().equals("_parent") || f().equals("_top")  ){
+        renderLinkWithTarget(item.uri, item.text, item.path, item.current, f ).asInstanceOf[Elem]         
+      } else {
+        //Unknown function value do the default thingy
+        renderLink(item.uri, item.text, item.path, item.current).asInstanceOf[Elem]
+      }
+    }
+    //http://lift.la/scala-option-lift-box-and-how-to-make-your-co //should probably rewrite this using for comprehension 
+    info match {
+      case head :: Nil => {
+        head match {
+          case Full(f) => {
+            buildWithInfo(f, renderInner, item)
+          }
+          case Empty => {
+            //hmmm a empty list 
+            buildInnerTag(<xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>, item.path, item.current)
+          }
+          case Failure(message, _, _) => {
+            //something got wrong 
+            buildInnerTag(<xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>, item.path, item.current)
+          }
+        }
+      }
+        case head :: tail => {
+        head match {
+          case Full(f) => {
+            buildWithInfo(f, renderInner, item)
+          }
+          case Empty =>
+          case Failure(message, _, _) => ""
+        }
+        //info list has more elements
+        renderItemWithInfo(tail, renderInner, item)
+      }
+      case Nil => {
+        //there was no info
+        //var c = item.current
+        buildInnerTag(<xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>, item.path, item.current)
+      } 
+    }
+  }
+  
 }
 
 object Bs3LinkedListGroup extends Bs3LinkedListGroup 

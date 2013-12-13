@@ -69,6 +69,11 @@ trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
         
   override def renderLink(uri: NodeSeq, text: NodeSeq, path: Boolean, current: Boolean): NodeSeq =
     <a href={uri}>{text}</a>
+    
+  def renderLinkWithTarget(uri: NodeSeq, text: NodeSeq, path: Boolean, current: Boolean,f: Function0[_]): NodeSeq = {
+    val t:String = f().asInstanceOf[String] 
+    <a href={uri} target={t}>{text}</a>    
+  }
   
   override def updateForPath(nodes: Elem, path: Boolean): Elem = nodes
   
@@ -136,6 +141,8 @@ trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
         buildTBDivider(<xml:group></xml:group>, item.path, item.current)
       } else if (f().equals("nav-header")) {
         buildTBNavHeader(<xml:group>{ item.text }</xml:group>, item.path, item.current)
+      } else if (f().equals("_blank") || f().equals("_self") || f().equals("_parent") || f().equals("_top")  ){
+        buildInnerTag(<xml:group>{ renderLinkWithTarget(item.uri, item.text, item.path, item.current,f) }{ renderInner(item.kids) }</xml:group>, item.path, item.current)
       } else {
         //Unknown function value do the default thingy
         buildInnerTag(<xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>, item.path, item.current)

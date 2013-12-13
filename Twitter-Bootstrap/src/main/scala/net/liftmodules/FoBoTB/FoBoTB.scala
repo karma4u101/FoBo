@@ -57,6 +57,10 @@ object TBLocInfo {
   private val hd: Box[String] = Full("divider")
   private val vd: Box[String] = Full("divider-vertical")  
   private val nh: Box[String] = Full("nav-header") 
+  private val ltb: Box[String] = Full("_blank")
+  private val lts: Box[String] = Full("_self")
+  private val ltp: Box[String] = Full("_parent")
+  private val ltt: Box[String] = Full("_top")
   /**
    * Provides a way to specify a horizontal divider for your bootstrap menu in Lift's SiteMap.
    * 
@@ -92,6 +96,27 @@ object TBLocInfo {
    * For a usage example see the NavHeader val above. 
    */
   val NavHeader = new net.liftweb.sitemap.Loc.LocInfo[String]{def apply() = nh.map(x => () => x) } 
+  /**
+   * Adds target="_blank" to the link
+   * @since v1.2
+   */  
+  val LinkTargetBlank = new net.liftweb.sitemap.Loc.LocInfo[String]{def apply() = ltb.map(x => () => x) } 
+  /**
+   * Adds target="_self" to the link
+   * @since v1.2
+   */ 
+  val LinkTargetSelf = new net.liftweb.sitemap.Loc.LocInfo[String]{def apply() = lts.map(x => () => x) }
+  /**
+   * Adds target="_parent" to the link
+   * @since v1.2
+   */ 
+  val LinkTargetParent = new net.liftweb.sitemap.Loc.LocInfo[String]{def apply() = ltp.map(x => () => x) }
+  /**
+   * Adds target="_top" to the link
+   * @since v1.2
+   */
+  val LinkTargetTop = new net.liftweb.sitemap.Loc.LocInfo[String]{def apply() = ltt.map(x => () => x) }  
+  
 }
 
 /**
