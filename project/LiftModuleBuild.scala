@@ -15,7 +15,7 @@ object LiftModuleFoBoBuild extends Build {
                              base = file("."),
                              settings = parentSettings ++ Unidoc.settings ++ unidocScaladocSettings ++
                                         inConfig(JavaDoc)(Defaults.configSettings) ++ Seq(
-                                            unidocExclude := Seq(foboLess.id),
+                                            /*unidocExclude := Seq(foboLess.id),*/
                                             sources in JavaDoc <<= junidocSources,
                                             javacOptions in JavaDoc := Seq(),
                                             artifactName in packageDoc in JavaDoc := ((sv, mod, art) => "" + mod.name + "_" + sv.binary + "-" + mod.revision + "-javadoc.jar"),
@@ -88,10 +88,10 @@ object LiftModuleFoBoBuild extends Build {
                              base = file("Google-Code-Prettify"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))                               
-                             
+  /*                           
   lazy val foboLess     = Project(id   = "FoBo-Less", 
                              base = file("FoBo-Less"))     
-                             
+  */                           
                                                    
 
   lazy val scaladocDiagramsEnabled = System.getProperty("scaladoc.diagrams", "false").toBoolean
