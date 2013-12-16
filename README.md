@@ -1,20 +1,19 @@
 FoBo - A Generic Front-End Toolkit Module for Lift [![Build Status](https://secure.travis-ci.org/karma4u101/FoBo.png)](http://travis-ci.org/karma4u101/FoBo)
 ==================================================
 
-FoBo's main purpose is to provide a easy to use Lift module that includes front end toolkits for developers and designers to aid them in developing mobile scalable responsive web applications. 
+FoBo's main purpose is to provide a easy to use Lift module that includes front end toolkits for developers and designers to aid them in developing mobile scalable responsive web applications that will jazz up your Lift applications with the toolkit(s) of your choice.  
 
 A **live demo** and introduction to using this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/). 
 
 With this Lift module you can chose among some of the industry leading web-centric open source front-end toolkits. 
-The module is simultaneously supporting several versions of the included toolkits, providing debug-able js and css files in development and minimized files otherwise, making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot) and will ultimately jazz up your Lift applications with the toolkit(s) of your choice. 
+The module is simultaneously supporting several versions of the included toolkits, providing debug-able js and css files in development and minimized files otherwise, making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot).
 
-Another benefit of using this module is the small but growing API that includes helper object:s and snippet:s (see API documents for usage) 
-that will take care of some common toolkit and component usage and initiation, script generation and more. 
-At this writing the helpers are few but as the module mature it will provide plenty of useful ready to use components and help functions see the demo for a teaser and potential. If you have ideas and suggestions let us know! 
+The FoBo module also has a evolving API that includes helper object:s and snippet:s (see API documents for usage) that will take care of some common toolkit and component usage and initiation, bootstrap menu builders, script generation and more. 
+At this writing the helpers are few but as the module mature it will provide plenty of useful ready to use components and help functions, see the demo for a teaser and potential. If you have ideas and suggestions let us know! 
 
-A third benefit of using this module is that you will get a clean separation of the toolkit files and your application specific resources as the module dose not cluttering your applications web-app resources directory. 
+Using this module you will also get a clean separation of the toolkit files and your application specific resources as the module dose not clutter your applications web-app resources directory. 
 
-The Github repository for the demo can be found [here](https://github.com/karma4u101/FoBo-Lift-Template-Demo).
+A Lift v2.6 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) is available from here [Lift v2.6 Template Applications](https://github.com/lift/lift_26_sbt/)
 
 **OBS!** Note that as of Apr 2013 there is a new version schema for Lift modules and FoBo module version >= 0.9.3 
 See the [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) section for more information.
