@@ -137,10 +137,10 @@ trait Bs3NavLiList extends FlexMenuBuilder with DispatchSnippet {
       } else if (f().equals("nav-header")) {
         buildTBNavHeader(<xml:group>{ item.text }</xml:group>, item.path, item.current)
       } else if (f().equals("_blank") || f().equals("_self") || f().equals("_parent") || f().equals("_top")  ){
-        renderLinkWithTarget(item.uri, item.text, item.path, item.current, f ).asInstanceOf[Elem]
+        buildInnerTag(<xml:group>{ renderLinkWithTarget(item.uri, item.text, item.path, item.current, f ) }{ renderInner(item.kids) }</xml:group>, item.path, item.current)        
       } else {
         //Unknown function value do the default thingy
-        renderLink(item.uri, item.text, item.path, item.current).asInstanceOf[Elem]
+        buildInnerTag(<xml:group>{renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>, item.path, item.current)
       }
     }
     //http://lift.la/scala-option-lift-box-and-how-to-make-your-co //should probably rewrite this using for comprehension 
