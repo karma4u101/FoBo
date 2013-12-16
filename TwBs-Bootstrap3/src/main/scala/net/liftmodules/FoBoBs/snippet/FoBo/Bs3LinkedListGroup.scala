@@ -103,18 +103,18 @@ trait Bs3LinkedListGroup extends FlexMenuBuilder with DispatchSnippet {
   
   override def emptyPlaceholder: NodeSeq = NodeSeq.Empty
   
-  override def buildInnerTag(contents: NodeSeq, path: Boolean, current: Boolean): Elem = {
-      updateForCurrent(updateForPath( {contents}.asInstanceOf[Elem], path), current)
-  }
+  override def buildInnerTag(contents: NodeSeq, path: Boolean, current: Boolean): Elem = contents.asInstanceOf[Elem]
   
   override def renderSelf(item: MenuItem): NodeSeq = <span>{item.text}</span>        
   
   override def renderSelfNotLinked(item: MenuItem, renderInner: Seq[MenuItem] => NodeSeq): Elem =
-    buildInnerTag(<xml:group>{renderSelf(item)}{renderInner(item.kids)}</xml:group>, item.path, item.current)  
+    renderSelf(item).asInstanceOf[Elem]
+    //buildInnerTag(<xml:group>{renderSelf(item)}{renderInner(item.kids)}</xml:group>, item.path, item.current)  
   
   override def renderItemInPath(item: MenuItem, renderInner: Seq[MenuItem] => NodeSeq): Elem =
-    buildInnerTag(<xml:group>{renderLink(item.uri, item.text, item.path,
-        item.current)}{renderInner(item.kids)}</xml:group>, item.path, item.current)  
+    renderLink(item.uri, item.text, item.path, item.current).asInstanceOf[Elem]
+//    buildInnerTag(<xml:group>{renderLink(item.uri, item.text, item.path,
+//        item.current)}{renderInner(item.kids)}</xml:group>, item.path, item.current)  
    
   override def renderItem(item: MenuItem, renderInner: Seq[MenuItem] => NodeSeq): Elem = {
     renderItemWithInfo(item.info, renderInner, item) 
@@ -151,11 +151,11 @@ trait Bs3LinkedListGroup extends FlexMenuBuilder with DispatchSnippet {
           }
           case Empty => {
             //hmmm a empty list 
-            buildInnerTag(<xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>, item.path, item.current)
+            renderLink(item.uri, item.text, item.path, item.current).asInstanceOf[Elem] 
           }
           case Failure(message, _, _) => {
             //something got wrong 
-            buildInnerTag(<xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>, item.path, item.current)
+            renderLink(item.uri, item.text, item.path, item.current).asInstanceOf[Elem]
           }
         }
       }
@@ -173,7 +173,7 @@ trait Bs3LinkedListGroup extends FlexMenuBuilder with DispatchSnippet {
       case Nil => {
         //there was no info
         //var c = item.current
-        buildInnerTag(<xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>, item.path, item.current)
+        renderLink(item.uri, item.text, item.path, item.current).asInstanceOf[Elem]
       } 
     }
   }
