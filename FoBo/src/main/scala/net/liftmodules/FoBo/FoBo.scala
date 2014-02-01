@@ -43,8 +43,7 @@ import common._
  *  - JQuery-mobile [v1.0.1, v1.1.0]
  *  - Google Code Prettify [vJun2011]
  *  - Knockout JS [v2.0.0, v2.1.0, v]2.2.1]
- *  - t JS [v1.0.6, v1.2.1, v1.2.2] (angular core)
- *  - Angular UI [v0.4.0] (angular component)
+ *  - Angular JS [v1.0.6, v1.2.1, v1.2.2] (angular core)
  *  - Angular UI Bootstrap [v0.2.0, v0.7.0] (angular component)
  *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component)
  *  

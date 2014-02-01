@@ -6,7 +6,7 @@ FoBo's main purpose is to provide a easy to use Lift module that includes front 
 A **live demo** and introduction to using this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/). 
 
 With this Lift module you can chose among some of the industry leading web-centric open source front-end toolkits. 
-The FoBo module is making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot), by simultaneously supporting several versions of the included toolkits, providing debug-able js and css files in development and minimized files otherwise 
+The FoBo module is making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot), by simultaneously supporting several versions of the included toolkits, providing debug-able js and css files in development and minimized files otherwise. 
 
 The FoBo module also has a evolving API that includes snippet:s and helper object:s (see API documents for usage) that will take care of some common toolkit and component initiation and usage, like lift sitemap to bootstrap menu builders, script generation and more.  
 
