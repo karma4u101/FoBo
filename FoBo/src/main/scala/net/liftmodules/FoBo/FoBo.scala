@@ -43,7 +43,7 @@ import common._
  *  - JQuery-mobile [v1.0.1, v1.1.0]
  *  - Google Code Prettify [vJun2011]
  *  - Knockout JS [v2.0.0, v2.1.0, v]2.2.1]
- *  - Angular JS [v1.0.6, v1.2.1, v1.2.2] (angular core)
+ *  - Angular JS [v1.0.6, v1.2.1, v1.2.2, v1.2.11] (angular core modules)
  *  - Angular UI Bootstrap [v0.2.0, v0.7.0] (angular component)
  *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component)
  *  
@@ -271,6 +271,36 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
     net.liftmodules.FoBoPa.Pace0415
   }
 
+   /**
+   * Enable usage of AngularJS version 1_2_11 in your bootstrap liftweb Boot.
+   * @version 1.2.11
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AngularJS1211
+   * }}}
+   * @since v1.2
+   */
+  case object AngularJS1211 extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AngularJS1211
+  }
+  
+   /**
+   * Enable usage of AngularJS i18n files in your bootstrap liftweb Boot.
+   * @version 1.2.11
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AngularJS1211i18n
+   * }}}
+   * @since v1.2
+   */
+  case object AngularJS1211i18n extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AngularJS1211i18n
+  } 
+  
    /**
    * Enable usage of AngularJS version 1_2_2 in your bootstrap liftweb Boot.
    * @version 1.2.2
