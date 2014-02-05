@@ -10,7 +10,7 @@ Core modules
 
 Components
 ----------
-- Angular UI Bootstrap [v0.2.0, v0.7.0]
+- Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0]
 - Angular NG-Grid [v2.0.4, v2.0.7]
 
 
@@ -27,6 +27,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)  
 
 **Latest Update:**
+- **2014-02-05** -- Module v1.2-SNAPSHOT Adding Angular UI Bootstrap v0.10.0 (for use with bootstrap v3.x css)
 - **2014-02-04** -- Module v1.2-SNAPSHOT Adding AngularJS core v1.2.11
 - **2013-11-27** -- Module v1.2-SNAPSHOT Adding Angular UI Bootstrap v0.7.0 and Angular NG-Grid v2.0.7
 - **2013-11-24** -- Module v1.2-SNAPSHOT Adding AngularJS core v1.2.2

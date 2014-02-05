@@ -44,7 +44,7 @@ import common._
  *  - Google Code Prettify [vJun2011]
  *  - Knockout JS [v2.0.0, v2.1.0, v]2.2.1]
  *  - Angular JS [v1.0.6, v1.2.1, v1.2.2, v1.2.11] (angular core modules)
- *  - Angular UI Bootstrap [v0.2.0, v0.7.0] (angular component)
+ *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component)
  *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component)
  *  
  * ===Okey, okey I get it, now take me to the most interesting stuff===
@@ -378,6 +378,21 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   case object AngularJS106 extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AngularJS106
   }
+  
+  /**
+   * Enable usage of AngularUI-Bootstrap version 0_10_0 in your bootstrap liftweb Boot.
+   * @version 0.10.0
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AJSUIBootstrap0100
+   * }}}
+   * @since v1.2
+   */
+  case object AJSUIBootstrap0100 extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AJSUIBootstrap0100
+  }  
   
   /**
    * Enable usage of AngularUI-Bootstrap version 0_7_0 in your bootstrap liftweb Boot.

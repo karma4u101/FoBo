@@ -140,6 +140,21 @@ package object FoBoAJS {
   }
   
     /**
+   * Enable usage of AngularUI-Bootstrap version 0_10_0 in your bootstrap liftweb Boot.
+   * @version 0.10.0
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBoAJS.InitParam.Toolkit=FoBoAJS.AJSUIBootstrap0100
+   * }}}
+   *
+   */
+  case object AJSUIBootstrap0100 extends AJSToolkit {
+    AJSFoBoResources.uibootstrap0100
+  }   
+  
+  /**
    * Enable usage of AngularUI-Bootstrap version 0_7_0 in your bootstrap liftweb Boot.
    * @version 0.7.0
    *
@@ -1847,6 +1862,17 @@ package object FoBoAJS {
       }
     }
 
+    
+    lazy val uibootstrap0100 = {
+      ResourceServer.rewrite {
+        case "fobo" :: "ui-bootstrap.js" :: Nil if Props.devMode => List("fobo", "angular-ui", "bootstrap", "0.10.0", "js", "ui-bootstrap-0.10.0.js")
+        case "fobo" :: "ui-bootstrap.js" :: Nil => List("fobo", "angular-ui", "bootstrap", "0.10.0", "js", "ui-bootstrap-0.10.0.min.js")
+        case "fobo" :: "ui-bootstrap-tpls.js" :: Nil if Props.devMode => List("fobo", "angular-ui", "bootstrap", "0.10.0", "js", "ui-bootstrap-tpls-0.10.0.js")
+        case "fobo" :: "ui-bootstrap-tpls.js" :: Nil => List("fobo", "angular-ui", "bootstrap", "0.10.0", "js", "ui-bootstrap-tpls-0.10.0.min.js")
+      }
+    }
+    
+    
     lazy val uibootstrap070 = {
       ResourceServer.rewrite {
         case "fobo" :: "ui-bootstrap.js" :: Nil if Props.devMode => List("fobo", "angular-ui", "bootstrap", "0.7.0", "js", "ui-bootstrap-0.7.0.js")

@@ -31,6 +31,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - **2013-10-11** -- Module v1.1
 
 **Latest Updates:**
+- **2014-02-05** -- Module v1.2-SNAPSHOT Adding Angular UI Bootstrap v0.10.0 (for use with bootstrap v3.x css)
 - **2014-02-04** -- Module v1.2-SNAPSHOT Added AngularJS v1.2.11 core modules
 - **2013-12-16** -- Module v1.2-SNAPSHOT Fixing Bs3NavLiList target usage, fixing Bs3/TB LinkedListGroup
 - **2013-12-13** -- Module v1.2-SNAPSHOT Adding a new flexible bootstrap (2.x,3.x) nav li list snippet.
