@@ -11,14 +11,13 @@ Improvements, contributions and suggestions are welcome! Please see the [Contrib
 Update log
 ----------
 
-For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/Foundation#history-log) section
+For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/Pace#history-log) section
 
 **Latest Module Version:**
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)  
 
 **Latest Update:**
-- **2013-05-01** -- Module v0.9.9-SNAPSHOT ++ One version to rule them all, unified FoBo module and sub-module versions.
-- **2013-03-29** -- Module v0.1.0-SNAPSHOT Making Google-Code-Prettify a FoBo subproject.
+- **2013-11-20** -- Added Pace v0.4.15.
 
 **Latest Releases:**
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for releas information.
@@ -36,7 +35,7 @@ For more information on how to use Pace see the [FoBo Demo](http://www.media4u10
 
 ### Dependancy settings
 
-For module versions >= 0.9.3 put the following in your project build.sbt files lift libraryDependencies section 
+Put the following in your project build.sbt files lift libraryDependencies section 
 
     "net.liftmodules" %% "moduleName_x1.y1 % "x2.y2[.z2][-SNAPSHOT/rcx/mx]"
 

@@ -18,21 +18,21 @@ object FoBoSpec extends Specification  {
   //is treated as code is run in "devMode" while 'test' dose not assume this. 
   
   //AngularJS
-  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS106 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/angular.js to fobo/angular-js/1.0.6/js/angular.min.js" in {
-      rewriteAngularJS106 must_== List("fobo", "angular-js", "1.0.6", "js", "angular.min.js")
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS1211 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/angular.js to fobo/angular-js/1.2.11/js/angular.min.js" in {
+      rewriteAngularJS1211 must_== List("fobo", "angular-js", "1.2.11", "js", "angular.min.js")
     }       
   } 
   
-  "With FoBo.InitParam.ToolKit set to FoBo.AJSUIBootstrap020 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.2.0/js/ui-bootstrap-0.2.0.min.js" in {
-      rewriteAJSUIBootstrap020 must_== List("fobo", "angular-ui", "bootstrap", "0.2.0", "js", "ui-bootstrap-0.2.0.min.js")
+  "With FoBo.InitParam.ToolKit set to FoBo.AJSUIBootstrap0100 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.10.0/js/ui-bootstrap-0.10.0.min.js" in {
+      rewriteAJSUIBootstrap0100 must_== List("fobo", "angular-ui", "bootstrap", "0.10.0", "js", "ui-bootstrap-0.10.0.min.js")
     }       
   }   
  
-  "With FoBo.InitParam.ToolKit set to FoBo.AJSNGGrid204 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/ng-grid.js to fobo/angular-ui/0.2.0/js/ng-grid-2.0.4.min.js" in {
-      rewriteAJSNGGrid204 must_== List("fobo", "angular-ui","ng-grid", "2.0.4", "js", "ng-grid-2.0.4.min.js")
+  "With FoBo.InitParam.ToolKit set to FoBo.AJSNGGrid207 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/ng-grid.js to fobo/angular-ui/ng-grid/2.0.7/ng-grid-2.0.7.min.js" in {
+      rewriteAJSNGGrid207 must_== List("fobo", "angular-ui","ng-grid", "2.0.7", "js", "ng-grid-2.0.7.min.js")
     }       
   } 
   
@@ -185,18 +185,18 @@ object FoBoSpec extends Specification  {
   
   //AngularJS
   //rewriteAngularJS106
-  def rewriteAngularJS106 = {
-    FoBo.InitParam.ToolKit=FoBo.AngularJS106
+  def rewriteAngularJS1211 = {
+    FoBo.InitParam.ToolKit=FoBo.AngularJS1211
     ResourceServer.pathRewriter("fobo"::"angular.js"::Nil)
   }  
   
-  def rewriteAJSUIBootstrap020 = {
-    FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap020
+  def rewriteAJSUIBootstrap0100 = {
+    FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap0100
     ResourceServer.pathRewriter("fobo"::"ui-bootstrap.js"::Nil)
   }   
   
-  def rewriteAJSNGGrid204 = {
-    FoBo.InitParam.ToolKit=FoBo.AJSNGGrid204
+  def rewriteAJSNGGrid207 = {
+    FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207
     ResourceServer.pathRewriter("fobo"::"ng-grid.js"::Nil)
   }    
   

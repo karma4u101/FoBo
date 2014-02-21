@@ -5,7 +5,7 @@ FoBo's main purpose is to provide a easy to use Lift module that includes front 
 
 A **live demo** and introduction to using this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/). 
 
-With this Lift module you can chose among some of the industry leading web-centric open source front-end toolkits. 
+With this Lift module you will get a hassle free inclusion and smooth upgrades of some of the industry leading web-centric open source front-end toolkits you decide what toolkits and versions to enable.  
 The FoBo module is making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot), by simultaneously supporting several versions of the included toolkits, providing debug-able js and css files in development and minimized files otherwise. 
 
 The FoBo module also has a evolving API that includes snippet:s and helper object:s (see API documents for usage) that will take care of some common toolkit and component initiation and usage, like lift sitemap to bootstrap menu builders, script generation and more.  
@@ -31,6 +31,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - **2013-10-11** -- Module v1.1
 
 **Latest Updates:**
+- **2014-02-21** -- Module v1.2-SNAPSHOT Adding JQuery v1.11.0 Removing Angular v1.2.1 and v1.2.2 never release in FoBo and superseded by v1.2.11 
 - **2014-02-05** -- Module v1.2-SNAPSHOT Adding Angular UI Bootstrap v0.10.0 (for use with bootstrap v3.x css)
 - **2014-02-04** -- Module v1.2-SNAPSHOT Added AngularJS v1.2.11 core modules
 - **2013-12-16** -- Module v1.2-SNAPSHOT Fixing Bs3NavLiList target usage, fixing Bs3/TB LinkedListGroup
@@ -43,6 +44,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 **Latest Snapshot Release:**
+- **2014-02-21** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
 - **2014-02-06** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
 - **2013-12-16** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
 - **2013-12-13** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
@@ -52,6 +54,30 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - **2013-11-18** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
+New features in FoBo v1.2
+---------------------------
+
+###FoBo v1.2 has the following new sub modules
+-   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) [v0.4.15] - See [Pace](http://github.hubspot.com/pace/docs/welcome/) 
+    Automatic page load progress bar, you get a beautiful progress indicator for your page load and ajax navigation.    
+
+###FoBo v1.2 has updates to the following sub modules
+-   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds [v.1.2.11] - [AngularJS](http://angularjs.org/)
+    FoBo v1.2 adds AngularJS core v1.2.11 to it's Angular module.
+-   [FoBo-AngularUI Bootstrap](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds [v0.10.0, v0.7.0] - [AngularUI](http://angular-ui.github.io/)
+    FoBo v1.2 adds AngularUI Bootstrap v0.7.0 and v0.10.0 to it's Angular module. v0.10.0 is Bootstrap version 3.x compatible. 
+-   [FoBo-AngularUI NG-Grid](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds [v2.0.7] - [AngularUI](http://angular-ui.github.io/)
+    FoBo v1.2 adds AngularUI NG-Grid v2.0.7 to it's Angular module.
+-   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds [v1.11.0] 
+
+###FoBo v1.2 Other uppdates
+-   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) [v3.x] - [Bootstrap 3.x](http://getbootstrap.com/) and
+    [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.x]
+    FoBo v1.2 API has updates related to the Bootstrap included v2.x and v3.x series modules.
+    -    Extending FoBo LocInfo functionality with link target attributes.
+    -    Adding a new flexible bootstrap nav li list snippet. 
+
+-   [FoBo-Demo](https://github.com/karma4u101/FoBo-Demo) Most of the FoBo related demos have been moved into the top level project FoBo-Demo. 
 
 New features in FoBo v1.1
 ---------------------------
@@ -101,9 +127,9 @@ The FoBo module includes the following sub-modules and supports the following to
 -   [FoBo-JQuery-Mobile](https://github.com/karma4u101/FoBo/tree/master/JQuery-Mobile) [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
 -   [FoBo-Google-Code-Prettify](https://github.com/karma4u101/FoBo/tree/master/Google-Code-Prettify) [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
 -   [FoBo-DataTables](https://github.com/karma4u101/FoBo/tree/master/DataTables) [v1.9.0] - [DataTables.net](http://datatables.net/)
--   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2, v1.9.1, v1.10.2] - [JQuery](http://jquery.com/)
+-   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2, v1.9.1, v1.10.2, v1.11.0] - [JQuery](http://jquery.com/)
 -   [FoBo-Knockout](https://github.com/karma4u101/FoBo/tree/master/Knockout) [v2.0.0, v2.1.0, v2.2.1] - [KnockoutJS](http://knockoutjs.com/)
--   [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) [v1.0.6, v1.2.1, v1.2.2, (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) )] - [Angular](http://angularjs.org/)
+-   [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) [v1.0.6, v1.2.11 (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) )] - [Angular](http://angularjs.org/)
 -   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) [v0.4.15] - [Pace](http://github.hubspot.com/pace/docs/welcome/) 
 
 Module names that can bee used in boot corresponding to the toolkit version above is

@@ -6,7 +6,7 @@ For more information on how to use Twitter Bootstrap in the FoBo module see the 
 
 Components and available versions 
 ---------------------------------
-- Bootstrap [v3.0.0] - [Bootstrap 3.x](http://getbootstrap.com/)
+- Bootstrap [v3.0.0, v3.0.1] - [Bootstrap 3.x](http://getbootstrap.com/)
 
 Example Lift FoBo Template hooks
 ----------------------------------

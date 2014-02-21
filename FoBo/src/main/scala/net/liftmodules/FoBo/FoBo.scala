@@ -34,7 +34,7 @@ import common._
  * 
  * The following is a list of available toolkits and plugins 
  *  
- *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2] [[net.liftmodules.FoBoJQ]]
+ *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.0] [[net.liftmodules.FoBoJQ]]
  *  - Bootstrap v3.x serie [v3.0.0, v3.0.1] [[net.liftmodules.FoBoBs]]
  *  - Bootstrap v2.x serie [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2] [[net.liftmodules.FoBoTB]]
  *  - Font Awesome [v2.0.0, v3.0.0, v3.2.1, v4.0.1] [[net.liftmodules.FoBoFA]]
@@ -43,7 +43,7 @@ import common._
  *  - JQuery-mobile [v1.0.1, v1.1.0]
  *  - Google Code Prettify [vJun2011]
  *  - Knockout JS [v2.0.0, v2.1.0, v]2.2.1]
- *  - Angular JS [v1.0.6, v1.2.1, v1.2.2, v1.2.11] (angular core modules)
+ *  - Angular JS [v1.0.6, v1.2.11] (angular core modules)
  *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component)
  *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component)
  *  
@@ -300,68 +300,6 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   case object AngularJS1211i18n extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AngularJS1211i18n
   } 
-  
-   /**
-   * Enable usage of AngularJS version 1_2_2 in your bootstrap liftweb Boot.
-   * @version 1.2.2
-   *
-   *  '''Example:'''
-   *
-   * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS122
-   * }}}
-   * @since v1.2
-   */
-  case object AngularJS122 extends FoBoToolkit {
-    net.liftmodules.FoBoAJS.AngularJS122
-  }
-  
-   /**
-   * Enable usage of AngularJS i18n files in your bootstrap liftweb Boot.
-   * @version 1.2.2
-   *
-   *  '''Example:'''
-   *
-   * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS122i18n
-   * }}}
-   * @since v1.2
-   */
-  case object AngularJS122i18n extends FoBoToolkit {
-    net.liftmodules.FoBoAJS.AngularJS122i18n
-  } 
-  
-  /**
-   * Enable usage of AngularJS version 1_2_1 in your bootstrap liftweb Boot.
-   * @version 1.2.1
-   *
-   *  '''Example:'''
-   *
-   * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS121
-   * }}}
-   * @since v1.2
-   */
-  @deprecated("Use AngularJS122 or later","FoBo v1.2.0")
-  case object AngularJS121 extends FoBoToolkit {
-    net.liftmodules.FoBoAJS.AngularJS121
-  }
-
-  /**
-   * Enable usage of AngularJS i18n files in your bootstrap liftweb Boot.
-   * @version 1.2.1
-   *
-   *  '''Example:'''
-   *
-   * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS121i18n
-   * }}}
-   * @since v1.2
-   */
-  @deprecated("Use AngularJS122i18n or later","FoBo v1.2.0")
-  case object AngularJS121i18n extends FoBoToolkit {
-    net.liftmodules.FoBoAJS.AngularJS121i18n
-  }  
 
   /**
    * Enable usage of AngularJS version 1_0_6 in your bootstrap liftweb Boot.
@@ -513,6 +451,22 @@ case object Knockout200 extends FoBoToolkit {
  */
 case object PrettifyJun2011 extends FoBoToolkit {
    net.liftmodules.FoBoGCP.PrettifyJun2011
+}
+
+
+/**
+ * Enable usage of JQuery version 1_10_2 in your bootstrap liftweb Boot.
+ * @version 1.11.0
+ * 
+ * '''Example:'''
+ * 
+ * {{{
+ *   FoBo.InitParam.JQuery=FoBo.JQuery1110
+ * }}}
+ * @since v1.2
+ */
+case object JQuery1110 extends FoBoJQuery {
+  net.liftmodules.FoBoJQ.JQuery1110
 }
 
 /**

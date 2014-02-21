@@ -33,6 +33,20 @@ package object FoBoJQ {
   }
 
 /**
+ * Enable usage of JQuery version 1_1_1_0 in your bootstrap liftweb Boot.
+ * @version 1.11.0
+ * 
+ * '''Example:'''
+ * 
+ * {{{
+ *   FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery1110
+ * }}}
+ */
+case object JQuery1110 extends FoBoJQ {
+  JQFoBoResources.jquery1110
+}
+
+/**
  * Enable usage of JQuery version 1_1_0_2 in your bootstrap liftweb Boot.
  * @version 1.10.2
  * 
@@ -93,6 +107,13 @@ case object JQuery172 extends FoBoJQ {
    */
   private object JQFoBoResources {
 
+  lazy val jquery1110 = {
+    ResourceServer.rewrite {//fetched from the jquery module ("adding" fobo to the modules path)
+      case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "1.11.0", "js", "jquery.js")
+      case "fobo" :: "jquery.js" :: Nil => List("jquery", "1.11.0", "js", "jquery-min.js")
+    }
+  } 
+  
   lazy val jquery1102 = {
     ResourceServer.rewrite {//fetched from the jquery module ("adding" fobo to the modules path)
       case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "1.10.2", "js", "jquery.js")
