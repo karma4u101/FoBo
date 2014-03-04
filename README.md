@@ -31,27 +31,9 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - **2013-10-11** -- Module v1.1
 
 **Latest Updates:**
-- **2014-02-21** -- Module v1.2-SNAPSHOT Adding JQuery v1.11.0 Removing Angular v1.2.1 and v1.2.2 never release in FoBo and superseded by v1.2.11 
-- **2014-02-05** -- Module v1.2-SNAPSHOT Adding Angular UI Bootstrap v0.10.0 (for use with bootstrap v3.x css)
-- **2014-02-04** -- Module v1.2-SNAPSHOT Added AngularJS v1.2.11 core modules
-- **2013-12-16** -- Module v1.2-SNAPSHOT Fixing Bs3NavLiList target usage, fixing Bs3/TB LinkedListGroup
-- **2013-12-13** -- Module v1.2-SNAPSHOT Adding a new flexible bootstrap (2.x,3.x) nav li list snippet.
-- **2013-12-13** -- Module v1.2-SNAPSHOT Extending FoBo LocInfo functionality with link target attributes 
-- **2013-11-27** -- Module v1.2-SNAPSHOT Adding Angular UI Bootstrap v0.7.0 and Angular NG-Grid v2.0.7
-- **2013-11-24** -- Module v1.2-SNAPSHOT Added AngularJS v1.2.2 core modules
-- **2013-11-20** -- Module v1.2-SNAPSHOT Added Pace v0.4.15
-- **2013-11-18** -- Module v1.2-SNAPSHOT Added AngularJS v1.2.1 core modules (ng, ngRoute, ngAnimate, ngResource, ngCookies, ngTouch, ngSanitize, ngMock) and i18n files.
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 **Latest Snapshot Release:**
-- **2014-02-21** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
-- **2014-02-06** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
-- **2013-12-16** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
-- **2013-12-13** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
-- **2013-11-28** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
-- **2013-11-24** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
-- **2013-11-23** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
-- **2013-11-18** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
 - See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 New features in FoBo v1.2
@@ -62,15 +44,15 @@ New features in FoBo v1.2
     Automatic page load progress bar, you get a beautiful progress indicator for your page load and ajax navigation.    
 
 ###FoBo v1.2 has updates to the following sub modules
--   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds [v.1.2.11] - [AngularJS](http://angularjs.org/)
+-   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds [v.1.2.11] - [AngularJS](http://angularjs.org/).
     FoBo v1.2 adds AngularJS core v1.2.11 to it's Angular module.
--   [FoBo-AngularUI Bootstrap](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds [v0.10.0, v0.7.0] - [AngularUI](http://angular-ui.github.io/)
+-   [FoBo-AngularUI Bootstrap](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds [v0.10.0, v0.7.0] - [AngularUI](http://angular-ui.github.io/).
     FoBo v1.2 adds AngularUI Bootstrap v0.7.0 and v0.10.0 to it's Angular module. v0.10.0 is Bootstrap version 3.x compatible. 
--   [FoBo-AngularUI NG-Grid](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds [v2.0.7] - [AngularUI](http://angular-ui.github.io/)
+-   [FoBo-AngularUI NG-Grid](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds [v2.0.7] - [AngularUI](http://angular-ui.github.io/).
     FoBo v1.2 adds AngularUI NG-Grid v2.0.7 to it's Angular module.
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds [v1.11.0] 
 
-###FoBo v1.2 Other uppdates
+###FoBo v1.2 FoBo API and other uppdates
 -   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) [v3.x] - [Bootstrap 3.x](http://getbootstrap.com/) and
     [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.x]
     FoBo v1.2 API has updates related to the Bootstrap included v2.x and v3.x series modules.
@@ -246,6 +228,16 @@ Sbteclipse provides SBT command to create Eclipse project files
 - **2013-05-19** -- Module v1.0 
 
 **Updates history:**
+- **2014-02-21** -- Module v1.2-SNAPSHOT Adding JQuery v1.11.0 Removing Angular v1.2.1 and v1.2.2 never release in FoBo and superseded by v1.2.11 
+- **2014-02-05** -- Module v1.2-SNAPSHOT Adding Angular UI Bootstrap v0.10.0 (for use with bootstrap v3.x css)
+- **2014-02-04** -- Module v1.2-SNAPSHOT Added AngularJS v1.2.11 core modules
+- **2013-12-16** -- Module v1.2-SNAPSHOT Fixing Bs3NavLiList target usage, fixing Bs3/TB LinkedListGroup
+- **2013-12-13** -- Module v1.2-SNAPSHOT Adding a new flexible bootstrap (2.x,3.x) nav li list snippet.
+- **2013-12-13** -- Module v1.2-SNAPSHOT Extending FoBo LocInfo functionality with link target attributes 
+- **2013-11-27** -- Module v1.2-SNAPSHOT Adding Angular UI Bootstrap v0.7.0 and Angular NG-Grid v2.0.7
+- **2013-11-24** -- Module v1.2-SNAPSHOT Added AngularJS v1.2.2 core modules
+- **2013-11-20** -- Module v1.2-SNAPSHOT Added Pace v0.4.15
+- **2013-11-18** -- Module v1.2-SNAPSHOT Added AngularJS v1.2.1 core modules (ng, ngRoute, ngAnimate, ngResource, ngCookies, ngTouch, ngSanitize, ngMock) and i18n files.
 - **2013-11-03** -- Module v1.1-SNAPSHOT adding Bootstrap v3.0.1 and Font Awesome v4.0.1 suitable for user with Bootstrap v3.x
 - **2013-11-02** -- Module v1.1-SNAPSHOT renaming of Bootstrap v3.x Snippets. Bootstrap v3 snippet names now start with "Bs3*"
 - **2013-11-01** -- Module v1.1-SNAPSHOT renaming of Bootstrap v3.x Snippets. TB3 snippet names now start with "TB3*"
@@ -282,6 +274,14 @@ Sbteclipse provides SBT command to create Eclipse project files
 - **2012-11-10** -- Module v0.7.2-SNAPSHOT Lift 2.5-M3 released to oss.sonatype.org
 
 **Snapshot Release history:**
+- **2014-02-21** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
+- **2014-02-06** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
+- **2013-12-16** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
+- **2013-12-13** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
+- **2013-11-28** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
+- **2013-11-24** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
+- **2013-11-23** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
+- **2013-11-18** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
 - **2013-11-06** -- Module v1.1-SNAPSHOT for lift 2.5, 2.6 and 3.0
 - **2013-11-02** -- Module v1.1-SNAPSHOT for lift 2.5, 2.6 and 3.0
 - **2013-11-01** -- Module v1.1-SNAPSHOT for lift 2.5, 2.6 and 3.0
