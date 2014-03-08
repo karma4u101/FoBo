@@ -389,6 +389,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.0
    */
+  @deprecated("Use AJSNGGrid207 or later","FoBo v1.2.0")
   case object AJSNGGrid204 extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AJSNGGrid204
   }  
@@ -404,6 +405,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  * @since v1.0 
  */
+@deprecated("Use the FoBoKO.Knockout210 sub module outside of the FoBo module, see the Knockout sub module readme for more information.","FoBo v1.2.0")
 case object Knockout221 extends FoBoToolkit {
   net.liftmodules.FoBoKo.Knockout221
 }
@@ -419,6 +421,7 @@ case object Knockout221 extends FoBoToolkit {
  * }}}
  * @since v1.0 
  */
+@deprecated("Use Knockout221 or later","FoBo v1.2.0")
 case object Knockout210 extends FoBoToolkit {
   net.liftmodules.FoBoKo.Knockout210
 }
@@ -433,7 +436,7 @@ case object Knockout210 extends FoBoToolkit {
  * }}}
  * @since v0.7 
  */
-@deprecated("Use Knockout210 or later","FoBo v1.2.0")
+@deprecated("Use Knockout221 or later","FoBo v1.2.0")
 case object Knockout200 extends FoBoToolkit {
   net.liftmodules.FoBoKo.Knockout200
 }
@@ -541,6 +544,7 @@ case object JQuery172 extends FoBoJQuery {
  * }}}
  * @since v1.0
  */
+@deprecated("Use the FoBoJQM.JQueryMobile110 sub module outside of the FoBo module, see the JQuery-Mobile sub module readme for more information.","FoBo v1.2.0")
 case object JQueryMobile110 extends FoBoToolkit {
   net.liftmodules.FoBoJQM.JQueryMobile110
 }
@@ -740,6 +744,7 @@ case object Bootstrap232 extends FoBoToolkit {
  * }}}
  * @since v1.1
  */
+@deprecated("Use Bootstrap301 or later","FoBo v1.2.0")
 case object Bootstrap300 extends FoBoToolkit {
   net.liftmodules.FoBoBs.Bootstrap300
 }
@@ -770,7 +775,7 @@ case object Bootstrap301 extends FoBoToolkit {
  * }}}
  * @since v1.1
  */
-@deprecated("Use Bootstrap300 or later","FoBo v1.1.0")
+@deprecated("Use Bootstrap301 or later","FoBo v1.1.0")
 case object Bootstrap300RC1 extends FoBoToolkit {
   net.liftmodules.FoBoBs.Bootstrap300RC1
 }
@@ -786,6 +791,7 @@ case object Bootstrap300RC1 extends FoBoToolkit {
  * }}}
  * @since v0.7 
  */
+@deprecated("Use the FoBoDT.DataTables190 sub module outside of the FoBo module, see the DataTables sub module readme for more information.","FoBo v1.2.0")
 case object DataTables190 extends FoBoToolkit {
   net.liftmodules.FoBoDT.DataTables190
 }
@@ -802,6 +808,7 @@ case object DataTables190 extends FoBoToolkit {
  * }}}
  * @since v0.7
  */
+@deprecated("Use the FoBoFo.Foundation215 sub module outside of the FoBo module, see the Foundation sub module readme for more information.","FoBo v1.2.0")
 case object Foundation215 extends FoBoToolkit {
   net.liftmodules.FoBoFo.Foundation215
 }
