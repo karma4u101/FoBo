@@ -28,6 +28,7 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Stable Releases:**
+- **2014-03-09** -- Module v1.2
 - **2013-10-11** -- Module v1.1
 
 **Latest Updates:**
@@ -52,7 +53,7 @@ New features in FoBo v1.2
     FoBo v1.2 adds AngularUI NG-Grid v2.0.7 to it's Angular module.
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds [v1.11.0] 
 
-###FoBo v1.2 FoBo API and other uppdates
+###FoBo v1.2 FoBo API and other updates
 -   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) [v3.x] - [Bootstrap 3.x](http://getbootstrap.com/) and
     [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.x]
     FoBo v1.2 API has updates related to the Bootstrap included v2.x and v3.x series modules.
