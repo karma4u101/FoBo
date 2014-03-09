@@ -6,7 +6,7 @@ For more information on how to use Twitter Bootstrap in the FoBo module see the 
 
 Components and available versions 
 ---------------------------------
-- Bootstrap [v3.0.0, v3.0.1] - [Bootstrap 3.x](http://getbootstrap.com/)
+- Bootstrap [v3.0.0, v3.0.1, v3.1.1] - [Bootstrap 3.x](http://getbootstrap.com/)
 
 Example Lift FoBo Template hooks
 ----------------------------------
@@ -33,6 +33,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo/tree/master) (master)
 
 **Latest Updates:**
+- **2014-03-09** -- Module v1.2-SNAPSHOT Adding bootstrap v3.1.1
 - **2013-11-03** -- Module v1.1-SNAPSHOT Adding bootstrap v3.0.1 
 - **2013-11-01** -- Module v1.1-SNAPSHOT renaming of Bootstrap v3.x Snippets. Snippet names now start with "Bs3*"
 - **2013-10-26** -- Module v1.1-SNAPSHOT Added BootstrapMegaMetaProtoUser for mapper with Bootstrap3 styled views. 

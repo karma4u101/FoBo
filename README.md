@@ -28,7 +28,7 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Stable Releases:**
-- **2014-03-09** -- Module v1.2
+- **2014-03-xx** -- Module v1.2
 - **2013-10-11** -- Module v1.1
 
 **Latest Updates:**
@@ -52,15 +52,17 @@ New features in FoBo v1.2
 -   [FoBo-AngularUI NG-Grid](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds [v2.0.7] - [AngularUI](http://angular-ui.github.io/).
     FoBo v1.2 adds AngularUI NG-Grid v2.0.7 to it's Angular module.
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds [v1.11.0] 
+-   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) Adds [v3.1.1] - [Bootstrap 3.x](http://getbootstrap.com/)
+-   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds [v4.0.3] - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 
 ###FoBo v1.2 FoBo API and other updates
--   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) [v3.x] - [Bootstrap 3.x](http://getbootstrap.com/) and
-    [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.x]
-    FoBo v1.2 API has updates related to the Bootstrap included v2.x and v3.x series modules.
+-   FoBo v1.2 API has updates related to the Bootstrap included v2.x and v3.x series modules.
     -    Extending FoBo LocInfo functionality with link target attributes.
     -    Adding a new flexible bootstrap nav li list snippet. 
-
 -   [FoBo-Demo](https://github.com/karma4u101/FoBo-Demo) Most of the FoBo related demos have been moved into the top level project FoBo-Demo. 
+-   Deprecations -- FoBo v1.2 adds some sub module deprecations that can be categorized in two different sets
+    -    A "normal" deprecation that have one or more alternative sub module that could be uses in place of the deprecated module version without introducing any errors or bugs.
+    -    A (couple of) deprecations that is meant to signal that this sub modules is not actively used and there has not been any (pull) requests for/with updates by users of FoBo. If you are a user of such a module you can keep using it as a separate module (FoBoXX.init) or if you feel strongly that deprecation is wrong you can ping me and maybe help out with updates.
 
 New features in FoBo v1.1
 ---------------------------
@@ -128,7 +130,7 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 - AngularJSXYZ with components (AJSUIBootstrapXYZ, AJSNGGridXYZ)
 
 Where X is major, Y minor and Z incremental version numbers as seen in the Toolkits list above (for example BootstrapXYZ will be Bootstrap230 for Twitter Bootstrap v2.3.0)
-For more information on how to set this up see below.
+For more information on how to set this up see below. 
     
 Quick Start with Lift Template Applications
 -------------------------------------------
@@ -229,6 +231,7 @@ Sbteclipse provides SBT command to create Eclipse project files
 - **2013-05-19** -- Module v1.0 
 
 **Updates history:**
+- **2014-03-09** -- Module v1.2-SNAPSHOT Adding Bootstrap v3.1.1 and Font Awesome v4.0.3
 - **2014-02-21** -- Module v1.2-SNAPSHOT Adding JQuery v1.11.0 Removing Angular v1.2.1 and v1.2.2 never release in FoBo and superseded by v1.2.11 
 - **2014-02-05** -- Module v1.2-SNAPSHOT Adding Angular UI Bootstrap v0.10.0 (for use with bootstrap v3.x css)
 - **2014-02-04** -- Module v1.2-SNAPSHOT Added AngularJS v1.2.11 core modules
@@ -275,6 +278,7 @@ Sbteclipse provides SBT command to create Eclipse project files
 - **2012-11-10** -- Module v0.7.2-SNAPSHOT Lift 2.5-M3 released to oss.sonatype.org
 
 **Snapshot Release history:**
+- **2014-03-09** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
 - **2014-02-21** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
 - **2014-02-06** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
 - **2013-12-16** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
@@ -316,8 +320,8 @@ Authors
 This FoBo Lift module were written by [Peter Petersson](http://www.media4u101.se). The Lift Module conventions were 
 developed by the [Lift community](http://groups.google.com/group/liftweb/).
 
-After many years of Java EE development I started look at Scala/Lift in May 2011 so there may be some none "best practice" stuff in there 
-and if you find something you think could be done in a more Scala/Lift fashion please let me know.
+After many years of Java EE development I started look at Scala/Lift in May 2011. If you find some none "best practice" stuff in there 
+and if you find something you think could be done in a more Scala/Lift fashion please let me know. Improvements, contributions and suggestions are welcome!
 
 
 

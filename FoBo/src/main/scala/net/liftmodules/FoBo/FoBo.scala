@@ -35,9 +35,9 @@ import common._
  * The following is a list of available toolkits and plugins 
  *  
  *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.0] [[net.liftmodules.FoBoJQ]]
- *  - Bootstrap v3.x serie [v3.0.0, v3.0.1] [[net.liftmodules.FoBoBs]]
+ *  - Bootstrap v3.x serie [v3.0.0, v3.0.1, v3.1.1] [[net.liftmodules.FoBoBs]]
  *  - Bootstrap v2.x serie [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2] [[net.liftmodules.FoBoTB]]
- *  - Font Awesome [v2.0.0, v3.0.0, v3.2.1, v4.0.1] [[net.liftmodules.FoBoFA]]
+ *  - Font Awesome [v2.0.0, v3.0.0, v3.2.1, v4.0.1, v4.0.3] [[net.liftmodules.FoBoFA]]
  *  - Foundation [v2.1.5] 
  *  - DataTables [v1.9.0]
  *  - JQuery-mobile [v1.0.1, v1.1.0]
@@ -549,6 +549,20 @@ case object JQueryMobile110 extends FoBoToolkit {
   net.liftmodules.FoBoJQM.JQueryMobile110
 }
 
+/**
+ * Enable usage of Font-Awesome version 4_0_3 in your bootstrap liftweb Boot.
+ * @version 4.0.3
+ * 
+ *  '''Example:'''
+ *  
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.FontAwesome403
+ * }}}
+ * @since v1.2 
+ */
+case object FontAwesome403 extends FoBoToolkit {
+  net.liftmodules.FoBoFA.FontAwesome403
+}
 
 
 /**
@@ -765,19 +779,18 @@ case object Bootstrap301 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Twitter Bootstrap version 3_0_0-RC1 in your bootstrap liftweb Boot.
- * @version 3.0.0
+ * Enable usage of Twitter Bootstrap version 3_1_1 in your bootstrap liftweb Boot.
+ * @version 3.1.1
  * 
  * '''Example'''
  * 
  * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap300RC1
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap311
  * }}}
- * @since v1.1
+ * @since v1.2
  */
-@deprecated("Use Bootstrap301 or later","FoBo v1.1.0")
-case object Bootstrap300RC1 extends FoBoToolkit {
-  net.liftmodules.FoBoBs.Bootstrap300RC1
+case object Bootstrap311 extends FoBoToolkit {
+  net.liftmodules.FoBoBs.Bootstrap311
 }
 
 /**
