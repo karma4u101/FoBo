@@ -28,7 +28,7 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Stable Releases:**
-- **2014-03-xx** -- Module v1.2
+- **2014-03-15** -- Module v1.2
 - **2013-10-11** -- Module v1.1
 
 **Latest Updates:**
