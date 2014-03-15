@@ -1,12 +1,12 @@
 FoBo - A Generic Front-End Toolkit Module for Lift [![Build Status](https://secure.travis-ci.org/karma4u101/FoBo.png)](http://travis-ci.org/karma4u101/FoBo)
 ==================================================
 
-FoBo's main purpose is to provide a easy to use Lift module that includes front end toolkits for developers and designers to aid them in developing mobile scalable responsive web applications that will jazz up their Lift applications with the toolkit(s) of their choice.  
+FoBo is a [Lift module](http://liftweb.net/lift_modules) that includes industry leading open source front end toolkits for developing mobile scalable responsive web applications that will jazz up their Lift applications with the toolkit(s) of their choice.   
 
 A **live demo** and introduction to using this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/). 
 
-With this Lift module you will get a hassle free inclusion and smooth upgrades of some of the industry leading web-centric open source front-end toolkits you decide what toolkits and versions to enable.  
-The FoBo module is making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot), by simultaneously supporting several versions of the included toolkits, providing debug-able js and css files in development and minimized files otherwise. 
+With this Lift module you will get a hassle free inclusion and smooth upgrades, you decide what toolkits and versions to enable.  
+The FoBo module is making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot), by simultaneously supporting several versions of the included toolkits and, without code or reference changes, providing debug-able js and css files in development and minimized files otherwise. 
 
 The FoBo module also has a evolving API that includes snippet:s and helper object:s (see API documents for usage) that will take care of some common toolkit and component initiation and usage, like lift sitemap to bootstrap menu builders, script generation and more.  
 
