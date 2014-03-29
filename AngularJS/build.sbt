@@ -72,13 +72,14 @@ libraryDependencies <++= scalaVersion { sv =>
 //## for now the last filter string in exludeFilter for js 
 //## will exclude every .js file
 //################################################################
-seq(yuiSettings: _*)
+//##Turning of the yui compression as we now use upstreem minified files.
+//seq(yuiSettings: _*)
 
-excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" | "*.js"
+//excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" | "*.js"
 
-excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css"
+//excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css" | "*.min.css"
 
-YuiCompressorKeys.minSuffix := "-min" 
+//YuiCompressorKeys.minSuffix := "-min" 
 
 //################################################################
 //#### Publish to Media4u101
