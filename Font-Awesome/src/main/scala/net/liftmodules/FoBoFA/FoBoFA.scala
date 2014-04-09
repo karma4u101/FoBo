@@ -131,7 +131,7 @@ package object FoBoFA {
       lazy val fontAwesome403 = {
         ResourceServer.rewrite {
           case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "4.0.3", "css", "font-awesome.css")
-          case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "4.0.3", "css", "font-awesome-min.css")
+          case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "4.0.3", "css", "font-awesome.min.css")
         }
       } 
       
@@ -147,7 +147,7 @@ package object FoBoFA {
           case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "3.2.1", "css", "font-awesome.css")
           case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-min.css")
           case "fobo" :: "font-awesome-ie7.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-ie7.css")
-          case "fobo" :: "font-awesome-ie7.css" :: Nil => List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-ie7.css")
+          case "fobo" :: "font-awesome-ie7.css" :: Nil => List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-ie7-min.css")
 
         }
       }  
@@ -155,9 +155,9 @@ package object FoBoFA {
       lazy val fontAwesome300 = {
         ResourceServer.rewrite {
           case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "3.0.0", "css", "font-awesome.css")
-          case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "3.0.0", "css", "font-awesome-min.css")
-          case "fobo" :: "font-awesome-ie7.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "3.0.0", "css", "font-awesome-ie7.css")
-          case "fobo" :: "font-awesome-ie7.css" :: Nil => List("fobo", "font-awesome", "3.0.0", "css", "font-awesome-ie7.css")
+          case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "3.0.0", "css", "font-awesome.min.css")
+          case "fobo" :: "font-awesome-ie7.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "3.0.0", "css", "font-awesome-ie7.min.css")
+          case "fobo" :: "font-awesome-ie7.css" :: Nil => List("fobo", "font-awesome", "3.0.0", "css", "font-awesome-ie7.min.css")
 
         }
       }      

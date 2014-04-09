@@ -82,7 +82,7 @@ libraryDependencies <++= scalaVersion { sv =>
 //YuiCompressorKeys.minSuffix := "-min" 
 
 //################################################################
-//#### Publish to Media4u101
+//#### Publish to Sonatype
 //## 
 //##  
 //## 
@@ -90,15 +90,6 @@ libraryDependencies <++= scalaVersion { sv =>
 credentials += Credentials(Path.userHome / ".sbt" / "liftmodules" /".credentials" )
 
 credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
-
-//credentials += Credentials(Path.userHome / ".sbt" / ".credentials" )
-//publishTo <<= version { v: String =>
-//   val nexus = "http://www.media4u101.se:8081/nexus/"
-//   if (v.trim.endsWith("SNAPSHOT"))
-//	 Some("snapshots" at nexus + "content/repositories/snapshots")
-//   else
-//     Some("releases" at nexus + "content/repositories/releases")
-//   }
 
 publishTo <<= version { v: String =>
    val sonatype = "https://oss.sonatype.org/"
