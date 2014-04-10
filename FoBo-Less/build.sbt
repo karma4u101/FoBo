@@ -1,4 +1,4 @@
-name := "FoBo-Less"
+moduleName := "fobo-less"
 
 organization  := "net.liftmodules"
 

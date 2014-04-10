@@ -1,20 +1,20 @@
-name := "FoBo-Meta"
+moduleName := "fobo-meta"
 
 organization := "net.liftmodules"
 
 version in ThisBuild := "1.3-SNAPSHOT"
 
-liftVersion in ThisBuild <<= liftVersion ?? "2.6-SNAPSHOT"
+liftVersion in ThisBuild <<= liftVersion ?? "3.0-SNAPSHOT"
 
 liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
-name <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
+moduleName <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
 crossScalaVersions := Seq("2.10.0", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
 scalaVersion in ThisBuild := "2.10.0"
 
-logLevel in ThisBuild := Level.Info  //Level.Info.Debug
+logLevel in ThisBuild := Level.Info   //Level.Debug Level.Info
 
 scalacOptions ++= Seq("-deprecation")
 
@@ -74,13 +74,14 @@ libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
 //## for now the last filter string in exludeFilter for js 
 //## will exclude every .js file
 //################################################################
-seq(yuiSettings: _*)
+//yui compression no longer needed as all resource trees contains minified files.
+//seq(yuiSettings: _*)
 
-excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" | "*.js"
+//excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" | "*.js"
 
-excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css"
+//excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css"
 
-YuiCompressorKeys.minSuffix := "-min" 
+//YuiCompressorKeys.minSuffix := "-min" 
 
 //################################################################
 //#### Publish to Media4u101
