@@ -27,15 +27,15 @@ Update log
 
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
+**Latest Updates:**
+- **2014-04-18** -- Removing dependency on yui-compression and upgraded to use sbt-0.13 
+
+**Latest Snapshot Release:**
+- **2014-04-18** -- Module v1.3-SNAPSHOT
+
 **Latest Stable Releases:**
 - **2014-03-15** -- Module v1.2
 - **2013-10-11** -- Module v1.1
-
-**Latest Updates:**
-- See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
-
-**Latest Snapshot Release:**
-- See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 New features in FoBo v1.2
 ---------------------------
