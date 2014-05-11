@@ -97,25 +97,32 @@ A live demo showing some of FoBo's Bootstrap v3.x snippet functions is referred 
 A live demo showing some of FoBo's sub module features, including API documentation, can seen at the [FoBo demo](http://www.media4u101.se/fobo-lift-template-demo/)
 
 
-Toolkit:s and available versions
---------------------------------
+Sub-Modules -- Toolkit:s and available versions
+-----------------------------------------------
 
-Artifacts is available for: Lift 2.4, 2.5, 2.6 and 3.0-SNAPSHOT
+FoBo is built up of several sub module that also is available for use separately 
+ 
+FoBo artifacts is available for: Lift 2.4, 2.5, 2.6 and 3.0-SNAPSHOT
 
-The FoBo module includes the following sub-modules and supports the following toolkit versions
+The FoBo meta module includes the following sub-modules and supports the following toolkit versions
 
-
+-   [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) [v1.0.6, v1.2.11 (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) )] - [Angular](http://angularjs.org/)
 -   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) [v3.0.0, v3.0.1] - [Bootstrap 3.x](http://getbootstrap.com/)
 -   [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 -   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0, v3.2.1, v4.0.1] - [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
--   [FoBo-Foundation](https://github.com/karma4u101/FoBo/tree/master/Foundation) [v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
--   [FoBo-JQuery-Mobile](https://github.com/karma4u101/FoBo/tree/master/JQuery-Mobile) [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
--   [FoBo-Google-Code-Prettify](https://github.com/karma4u101/FoBo/tree/master/Google-Code-Prettify) [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
--   [FoBo-DataTables](https://github.com/karma4u101/FoBo/tree/master/DataTables) [v1.9.0] - [DataTables.net](http://datatables.net/)
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2, v1.9.1, v1.10.2, v1.11.0] - [JQuery](http://jquery.com/)
--   [FoBo-Knockout](https://github.com/karma4u101/FoBo/tree/master/Knockout) [v2.0.0, v2.1.0, v2.2.1] - [KnockoutJS](http://knockoutjs.com/)
--   [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) [v1.0.6, v1.2.11 (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) )] - [Angular](http://angularjs.org/)
+-   [FoBo-Google-Code-Prettify](https://github.com/karma4u101/FoBo/tree/master/Google-Code-Prettify) [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
 -   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) [v0.4.15] - [Pace](http://github.hubspot.com/pace/docs/welcome/) 
+
+Modules available but that will be split out of the FoBo meta module starting from FoBo v1.4. 
+The modules can still be used as stand alone modules, see respective modules readme for information on how to set them up. 
+
+-   [FoBo-JQuery-Mobile](https://github.com/karma4u101/FoBo/tree/master/JQuery-Mobile) [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
+-   [FoBo-DataTables](https://github.com/karma4u101/FoBo/tree/master/DataTables) [v1.9.0] - [DataTables.net](http://datatables.net/)
+-   [FoBo-Knockout](https://github.com/karma4u101/FoBo/tree/master/Knockout) [v2.0.0, v2.1.0, v2.2.1] - [KnockoutJS](http://knockoutjs.com/)
+-   [FoBo-Foundation](https://github.com/karma4u101/FoBo/tree/master/Foundation) [v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
+ 
+
 
 Module names that can bee used in boot corresponding to the toolkit version above is
 

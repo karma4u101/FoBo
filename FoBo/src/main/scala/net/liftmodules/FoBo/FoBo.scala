@@ -47,44 +47,6 @@ import common._
  *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component)
  *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component)
  *  
- * ===Okey, okey I get it, now take me to the most interesting stuff===
- * Except from bringing you all the powers from the included toolkits and toolset, the most interesting stuff 
- * is probably in the snippet classes in [[net.liftmodules.FoBo.snippet.FoBo]] and [[net.liftmodules.FoBoBs.snippet.FoBo]].
- * Great care has been taken to explain and illustrate how to use the snippet methods so that you can use them 
- * even if you are not a Lift expert, to show you what I am talking about '''as a example here is one way 
- * to use the FoBo provided tooltip function:'''
- * 
- * ------------------------
- * def '''tooltip''' : CssSel
- * 
-   * This function sets a tooltip action on a element.
-   *
-   * '''Snippet Params:'''
-   * 
-   *  - '''Param''' ''id'' - The element id 
-   *  - '''Param''' ''option'' - The option string see bootstrap documentation for available options.
-   * 
-   * '''Example''' Showing a example element using the tooltip and the actual snippet invocation  
-   * {{{
-   *  <a id="aId" 
-   *     title="The most powerful, most secure web framework available today. It simply rocks!" 
-   *     href="http://liftweb.net/">Lift</a> 
-   *  <script data-lift="FoBo.Bootstrap.tooltip?id=#aId&option=placement:'bottom'"></script> 
-   * }}}
-   * 
-   * '''Result:''' The script tag with the snippet invocation will result in the following being injected in place of the snippet invocation:
-   * {{{
-   *  <a id="aId" 
-   *     title="The most powerful, most secure web framework available today. It simply rocks!" 
-   *     href="http://liftweb.net/">Lift</a>  
-   *   <script type="text/javascript">
-   *     // <![CDATA[
-   *       $(function () { $('#aId').tooltip({placement:'bottom'}); }); ;
-   *     // ]]>
-   *   </script> 
-   * }}}
- *    
- * ------------------------
  * 
  * ===Heads up===
  * 
@@ -252,7 +214,7 @@ object TBLocInfo {
  */
 object InitParam extends FoBoToolkit with FoBoJQuery {
   var JQuery: FoBoJQuery = JQuery182
-  var ToolKit: FoBoToolkit = null 
+  var ToolKit: FoBoToolkit = _ 
 }
 
 
