@@ -135,7 +135,7 @@ package object FoBo {
   def init() {
     //add package for module with snippets 
     LiftRules.addToPackages("net.liftmodules.FoBo")
-    //LiftRules.addToPackages("net.liftmodules.FoBoAJS")
+    LiftRules.addToPackages("net.liftmodules.FoBoAJS")
     LiftRules.addToPackages("net.liftmodules.FoBoDT")
     LiftRules.addToPackages("net.liftmodules.FoBoBs")
     LiftRules.addToPackages("net.liftmodules.FoBoTB")
