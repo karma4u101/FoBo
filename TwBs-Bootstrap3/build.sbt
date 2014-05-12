@@ -1,8 +1,8 @@
-name := "FoBo-TwBs-Bootstrap3"
+moduleName := "fobo-twbs-bootstrap3"
 
 organization := "net.liftmodules"
 
-name <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
+moduleName <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
 crossScalaVersions := Seq("2.10.0", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
@@ -65,28 +65,9 @@ libraryDependencies <++= scalaVersion { sv =>
 //excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css"
  
 //YuiCompressorKeys.minSuffix := "-min" 
- 
-//################################################################
-//#### THE SBT-JS COMPRESSION BUILD
-//## The 
-//## 
-//################################################################
-//seq(jsSettings : _*)
- 
-//(includeFilter in (Compile, JsKeys.js)) := ("*.jsm": FileFilter)
- 
-//(excludeFilter in (Compile, JsKeys.js)) := ("*.js": FileFilter)
- 
-//(sourceDirectories in (Compile, JsKeys.js)) <<= (sourceDirectory in Compile) {
-//  srcDir =>
-//    Seq(
-//      srcDir / "resources" / "toserve" / "fobo" / "bootstrap" / "2.3.0" / "js"
-//    )
-//}
-
 
 //################################################################
-//#### Publish to Media4u101
+//#### Publish to Sonatype
 //## 
 //##  
 //## 
@@ -94,15 +75,6 @@ libraryDependencies <++= scalaVersion { sv =>
 credentials += Credentials(Path.userHome / ".sbt" / "liftmodules" /".credentials" )
 
 credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
-
-//credentials += Credentials(Path.userHome / ".sbt" / ".credentials" )
-//publishTo <<= version { v: String =>
-//   val nexus = "http://www.media4u101.se:8081/nexus/"
-//   if (v.trim.endsWith("SNAPSHOT"))
-//	 Some("snapshots" at nexus + "content/repositories/snapshots")
-//   else
-//     Some("releases" at nexus + "content/repositories/releases")
-//   }
 
 publishTo <<= version { v: String =>
    val sonatype = "https://oss.sonatype.org/"

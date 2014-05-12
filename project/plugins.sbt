@@ -12,15 +12,16 @@ resolvers += Classpaths.typesafeResolver
 
 //addSbtPlugin("com.untyped" %% "sbt-less" % "latest.integration")
 
-addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.0.0")
+addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.4.0")
 
-addSbtPlugin("com.github.mpeltonen" % "sbt-idea" % "1.2.0")
+addSbtPlugin("com.github.mpeltonen" % "sbt-idea" % "1.6.0")
 
 addSbtPlugin("com.eed3si9n" % "sbt-buildinfo" % "0.2.5")
 
-addSbtPlugin("in.drajit.sbt" % "sbt-yui-compressor" % "0.2.1")
+//turned of in 0.13 only works in 0.12 build but no longer needed. 
+//addSbtPlugin("in.drajit.sbt" % "sbt-yui-compressor" % "0.2.1")
 
-addSbtPlugin("com.untyped" %% "sbt-js" % "0.5")
+addSbtPlugin("com.untyped" %% "sbt-js" % "0.6")
 
 //addSbtPlugin("com.timushev.sbt" % "sbt-updates" % "0.1.0")
 

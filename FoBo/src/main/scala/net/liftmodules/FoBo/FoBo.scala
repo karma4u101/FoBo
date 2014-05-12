@@ -118,7 +118,7 @@ import common._
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version v1.2
+ * @version v1.3
  * @author Peter Petersson (Github karma4u101) and the Lift community  
  * 
  */
@@ -257,13 +257,14 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
 
 
   /**
-   * Enable usage of Pace version 0_4_15 in your bootstrap liftweb Boot.
+   * Enable usage of Pace version 0.4.15 in your bootstrap liftweb Boot.
    * @version 0.4.15
    *
-   *  '''Example:'''
+   *  '''Lift Boot:'''
    *
    * {{{
    *   FoBo.InitParam.Toolkit=FoBo.Pace0415
+   *   FoBo.init()
    * }}}
    * @since v1.2
    */
@@ -272,13 +273,15 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   }
 
    /**
-   * Enable usage of AngularJS version 1_2_11 in your bootstrap liftweb Boot.
+   * Enable usage of AngularJS version 1.2.11 in your bootstrap liftweb Boot.
+   *
    * @version 1.2.11
    *
-   *  '''Example:'''
+   *  '''Lift Boot:'''
    *
    * {{{
    *   FoBo.InitParam.Toolkit=FoBo.AngularJS1211
+   *   FoBo.init()
    * }}}
    * @since v1.2
    */

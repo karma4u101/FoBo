@@ -1,8 +1,8 @@
-name := "FoBo-AngularJS"
+moduleName := "fobo-angularjs"
 
 organization := "net.liftmodules"
 
-name <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
+moduleName <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
 crossScalaVersions := Seq("2.10.0", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
@@ -72,16 +72,17 @@ libraryDependencies <++= scalaVersion { sv =>
 //## for now the last filter string in exludeFilter for js 
 //## will exclude every .js file
 //################################################################
-seq(yuiSettings: _*)
+//##Turning of the yui compression as we now use upstreem minified files.
+//seq(yuiSettings: _*)
 
-excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" | "*.js"
+//excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" | "*.js"
 
-excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css"
+//excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css" | "*.min.css"
 
-YuiCompressorKeys.minSuffix := "-min" 
+//YuiCompressorKeys.minSuffix := "-min" 
 
 //################################################################
-//#### Publish to Media4u101
+//#### Publish to Sonatype
 //## 
 //##  
 //## 
@@ -89,15 +90,6 @@ YuiCompressorKeys.minSuffix := "-min"
 credentials += Credentials(Path.userHome / ".sbt" / "liftmodules" /".credentials" )
 
 credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
-
-//credentials += Credentials(Path.userHome / ".sbt" / ".credentials" )
-//publishTo <<= version { v: String =>
-//   val nexus = "http://www.media4u101.se:8081/nexus/"
-//   if (v.trim.endsWith("SNAPSHOT"))
-//	 Some("snapshots" at nexus + "content/repositories/snapshots")
-//   else
-//     Some("releases" at nexus + "content/repositories/releases")
-//   }
 
 publishTo <<= version { v: String =>
    val sonatype = "https://oss.sonatype.org/"

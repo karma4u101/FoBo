@@ -1,8 +1,8 @@
-name := "FoBo-Pace"
+moduleName := "fobo-pace"
 
 organization := "net.liftmodules"
 
-name <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
+moduleName <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
 crossScalaVersions := Seq("2.10.0", "2.9.3","2.9.2", "2.9.1-1", "2.9.1")
 
@@ -43,16 +43,17 @@ libraryDependencies <++= scalaVersion { sv =>
 //## for now the last filter string in exludeFilter for js 
 //## will exclude every .js file
 //################################################################
-seq(yuiSettings: _*)
+//##Turning of the yui compression as minified files is provide in resources tree.
+//seq(yuiSettings: _*)
 
-excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" | "*.js"
+//excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" | "*.js"
 
-excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css"
+//excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css" | "*.min.css"
 
-YuiCompressorKeys.minSuffix := "-min" 
+//YuiCompressorKeys.minSuffix := "-min" 
 
 //################################################################
-//#### Publish to oss.sonatype
+//#### Publish to Sonatype
 //## 
 //##  
 //## 

@@ -104,7 +104,7 @@ object FoBoSpec extends Specification  {
   
   "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome300 the ResourceServer.pathRewriter" should {
     "rewrit fobo/font-awesome.css to fobo/font-awesome/3.0.0/css/font-awesome.css" in {
-      rewriteFontAwesome300CSS must_== List("fobo", "font-awesome", "3.0.0", "css", "font-awesome-min.css")
+      rewriteFontAwesome300CSS must_== List("fobo", "font-awesome", "3.0.0", "css", "font-awesome.min.css")
     }       
   }
   

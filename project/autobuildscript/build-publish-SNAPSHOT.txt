@@ -5,64 +5,64 @@ set liftVersion  in ThisBuild:="3.0-SNAPSHOT"
 set scalaVersion in ThisBuild:="2.10.0"
 
 
-project FoBo
+project fobo
 clean
 update
 compile
 test
 
-project FoBo
+project fobo
 pub
 
 set liftVersion in ThisBuild:="2.6-SNAPSHOT"
 set scalaVersion in ThisBuild:="2.10.0"
 
-project FoBo
+project fobo
 clean
 update
 compile
 test
 
-project FoBo
+project fobo
 pub
 
 
 set scalaVersion in ThisBuild:="2.9.2"
 
 
-project FoBo
+project fobo
 clean
 update
 compile
 test
 
-project FoBo
+project fobo
 pub
 
 
 set scalaVersion in ThisBuild:="2.9.1-1"
 
 
-project FoBo
+project fobo
 clean
 update
 compile
 test
 
-project FoBo
+project fobo
 pub
 
 
 set scalaVersion in ThisBuild:="2.9.1"
 
 
-project FoBo
+project fobo
 clean
 update
 compile
 test
 
-project FoBo
+project fobo
 pub
 
 

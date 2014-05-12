@@ -11,7 +11,7 @@ object LiftModuleFoBoBuild extends Build {
   
   val liftEdition = SettingKey[String]("liftEdition", "Lift Edition (short version number to append to artifact name)")
   
-  lazy val root = Project(id   = "FoBo-Meta", 
+  lazy val root = Project(id   = "fobo-meta", 
                              base = file("."),
                              settings = parentSettings ++ Unidoc.settings ++ unidocScaladocSettings ++
                                         inConfig(JavaDoc)(Defaults.configSettings) ++ Seq(
@@ -26,65 +26,65 @@ object LiftModuleFoBoBuild extends Build {
                                  )
                             
          
-   lazy val fobo        = Project(id = "FoBo",
+   lazy val fobo        = Project(id = "fobo",
                             base = file("FoBo"),
                             settings = defaultSettings ++ myBuildInfoSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile),
                              aggregate = Seq(pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,foundation,datatables,knockout,jquerymobile,prettify)
                                  ).dependsOn(pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,foundation,datatables,knockout,jquerymobile,prettify)  
                                  
-   lazy val fontAwesome = Project(id   = "FoBo-Font-Awesome", 
+   lazy val fontAwesome = Project(id   = "fobo-font-awesome", 
                              base = file("Font-Awesome"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
                              
-  lazy val bootstrap    = Project(id   = "FoBo-Twitter-Bootstrap", 
+  lazy val bootstrap    = Project(id   = "fobo-twitter-bootstrap", 
                              base = file("Twitter-Bootstrap"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
                           
-  lazy val bootstrap3   = Project(id   = "FoBo-TwBs-Bootstrap3", 
+  lazy val bootstrap3   = Project(id   = "fobo-twbs-bootstrap3", 
                              base = file("TwBs-Bootstrap3"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))                                   
                              
-  lazy val foundation   = Project(id   = "FoBo-Foundation", 
+  lazy val foundation   = Project(id   = "fobo-foundation", 
                              base = file("Foundation"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))                                               
                              
-  lazy val datatables   = Project(id   = "FoBo-DataTables", 
+  lazy val datatables   = Project(id   = "fobo-datatables", 
                              base = file("DataTables"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))                  
                              
-  lazy val knockout     = Project(id   = "FoBo-Knockout", 
+  lazy val knockout     = Project(id   = "fobo-knockout", 
                              base = file("Knockout"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile)) 
                    
-  lazy val angularjs    = Project(id   = "FoBo-AngularJS", 
+  lazy val angularjs    = Project(id   = "fobo-angularjs", 
                              base = file("AngularJS"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
                              
-  lazy val jquery       = Project(id   = "FoBo-JQuery", 
+  lazy val jquery       = Project(id   = "fobo-jquery", 
                              base = file("JQuery"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
   
-  lazy val pace         = Project(id   = "FoBo-Pace", 
+  lazy val pace         = Project(id   = "fobo-pace", 
                              base = file("Pace"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
                                  
                                  
-  lazy val jquerymobile = Project(id   = "FoBo-JQuery-Mobile", 
+  lazy val jquerymobile = Project(id   = "fobo-jquery-mobile", 
                              base = file("JQuery-Mobile"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
                              
-  lazy val prettify     = Project(id   = "FoBo-Google-Code-Prettify", 
+  lazy val prettify     = Project(id   = "fobo-google-code-prettify", 
                              base = file("Google-Code-Prettify"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))                               
