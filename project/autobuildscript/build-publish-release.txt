@@ -1,4 +1,4 @@
-alias pub=publish-local
+alias pub=publish
 
 set version      in ThisBuild:="1.3-SNAPSHOT"
 set liftVersion  in ThisBuild:="2.5"

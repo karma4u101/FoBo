@@ -28,9 +28,11 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Updates:**
+- **2014-05-15** -- Adding Font Awesome 4.1.0 to v1.3-SNAPSHOT 
 - **2014-04-18** -- Removing dependency on yui-compression and upgraded to use sbt-0.13 
 
 **Latest Snapshot Release:**
+- **2014-05-15** -- Module v1.3-SNAPSHOT
 - **2014-04-18** -- Module v1.3-SNAPSHOT
 
 **Latest Stable Releases:**
