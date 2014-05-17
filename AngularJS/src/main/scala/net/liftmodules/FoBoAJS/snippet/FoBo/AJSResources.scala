@@ -1,0 +1,92 @@
+package net.liftmodules.FoBoAJS.snippet.FoBo
+
+import scala.xml.{ NodeSeq, Text }
+import net.liftweb.util._
+import net.liftweb.common._
+import net.liftweb.http._
+import net.liftweb._
+import Helpers._
+import net.liftmodules.FoBoAJS.lib.{ScriptHelper=>sch}
+
+/**
+ * ==AJSResources Snippet==
+ * 
+ * This snippet class lets you inject FoBo Angular resources into your templates.
+ * 
+ * '''Example''' Invoke with 
+ * {{{ data-lift="FoBo.AJSResources.functionName?paramName=paramValue&...." }}} 
+ * For more examples see the individual transform functions.
+ * @since v1.3
+ */
+class AJSResources extends StatefulSnippet {
+  
+  private lazy val sch = new sch()
+  
+  def dispatch = {
+    case "injectJS" => injectJS
+    case "injectCSS" => injectCSS
+  } 
+  
+ 
+   /**
+   * '''Snippet Params:'''
+   * 
+   *  - '''Param''' ''resources'' - A comma separated list of FoBo managed js resources.
+   *   
+   * '''Example''' 
+   * {{{ <script data-lift="FoBo.AJSResources.injectJS?resources=angular,angular-animate"></script> }}}
+   * or making angular.js implicit.
+   *  {{{ <script data-lift="FoBo.AJSResources.injectJS?resources=angular-animate"></script> }}}
+   *
+   * '''Result:''' This example will result in the following being injected in place of the snippet invocation:
+   * {{{
+   * <script src="/classpath/fobo/angular.js" type="text/javascript"></script>
+   * <script src="/classpath/fobo/angular-animate.js" type="text/javascript"></script> 
+   * }}}  
+   *  
+   * @since v1.3         
+   */   
+  def injectJS:net.liftweb.util.CssSel = {
+    val res = S.attr("resources").map(_.split(',').map(_.trim).toList).openOr(List())
+     " *" #> jsResources(res)
+  }
+  
+  /**
+   * '''Snippet Params:'''
+   * 
+   *  - '''Param''' ''resources'' - A comma separated list of FoBo managed Bootstrap3 css resources.
+   *   
+   * '''Example''' 
+   * {{{ <link data-lift="FoBo.AJSResources.injectCSS?resources=ng-grid"></link>  }}}
+   * 
+   * '''Result:''' This example will result in the following being injected in place of the snippet invocation:
+   * {{{
+   * <link href="/classpath/fobo/ng-grid.css" rel="stylesheet" type="text/css" />
+   * }}}   
+   * 
+   * @since v1.3         
+   */    
+  def injectCSS:net.liftweb.util.CssSel = {
+    val res = S.attr("resources").map(_.split(',').map(_.trim).toList).openOr(List())
+     " *" #> cssResources(res)
+  }  
+
+  /*
+   * <script data-lift="FoBo.Angular.injectJS?resources=angular-animate,ui-bootstrap-tpls,ng-grid"></script>
+   */
+  private def jsResources(res: List[String]): List[scala.xml.Elem] = {
+    val res2 = if(!res.contains("angular")) "angular" :: res else res
+    val result = (for {
+      r <- res2
+    } yield  <script type="text/javascript" src={ "/classpath/fobo/" + r + ".js" } ></script>  )
+    result    
+  }
+  
+  
+  private def cssResources(res: List[String]):List[scala.xml.Elem] = {
+    val result = (for {
+      r <- res
+    } yield  <link type="text/css" rel="stylesheet" href={ "/classpath/fobo/" + r + ".css" } />  )
+    result 
+  }  
+}
