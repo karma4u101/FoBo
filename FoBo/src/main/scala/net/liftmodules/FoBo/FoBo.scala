@@ -47,44 +47,6 @@ import common._
  *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component)
  *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component)
  *  
- * ===Okey, okey I get it, now take me to the most interesting stuff===
- * Except from bringing you all the powers from the included toolkits and toolset, the most interesting stuff 
- * is probably in the snippet classes in [[net.liftmodules.FoBo.snippet.FoBo]] and [[net.liftmodules.FoBoBs.snippet.FoBo]].
- * Great care has been taken to explain and illustrate how to use the snippet methods so that you can use them 
- * even if you are not a Lift expert, to show you what I am talking about '''as a example here is one way 
- * to use the FoBo provided tooltip function:'''
- * 
- * ------------------------
- * def '''tooltip''' : CssSel
- * 
-   * This function sets a tooltip action on a element.
-   *
-   * '''Snippet Params:'''
-   * 
-   *  - '''Param''' ''id'' - The element id 
-   *  - '''Param''' ''option'' - The option string see bootstrap documentation for available options.
-   * 
-   * '''Example''' Showing a example element using the tooltip and the actual snippet invocation  
-   * {{{
-   *  <a id="aId" 
-   *     title="The most powerful, most secure web framework available today. It simply rocks!" 
-   *     href="http://liftweb.net/">Lift</a> 
-   *  <script data-lift="FoBo.Bootstrap.tooltip?id=#aId&option=placement:'bottom'"></script> 
-   * }}}
-   * 
-   * '''Result:''' The script tag with the snippet invocation will result in the following being injected in place of the snippet invocation:
-   * {{{
-   *  <a id="aId" 
-   *     title="The most powerful, most secure web framework available today. It simply rocks!" 
-   *     href="http://liftweb.net/">Lift</a>  
-   *   <script type="text/javascript">
-   *     // <![CDATA[
-   *       $(function () { $('#aId').tooltip({placement:'bottom'}); }); ;
-   *     // ]]>
-   *   </script> 
-   * }}}
- *    
- * ------------------------
  * 
  * ===Heads up===
  * 
@@ -252,7 +214,7 @@ object TBLocInfo {
  */
 object InitParam extends FoBoToolkit with FoBoJQuery {
   var JQuery: FoBoJQuery = JQuery182
-  var ToolKit: FoBoToolkit = null 
+  var ToolKit: FoBoToolkit = _ 
 }
 
 
@@ -305,7 +267,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   } 
 
   /**
-   * Enable usage of AngularJS version 1_0_6 in your bootstrap liftweb Boot.
+   * Enable usage of AngularJS version 1.0.6 in your bootstrap liftweb Boot.
    * @version 1.0.6
    *
    *  '''Example:'''
@@ -321,7 +283,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   }
   
   /**
-   * Enable usage of AngularUI-Bootstrap version 0_10_0 in your bootstrap liftweb Boot.
+   * Enable usage of AngularUI-Bootstrap version 0.10.0 in your bootstrap liftweb Boot.
    * @version 0.10.0
    *
    *  '''Example:'''
@@ -336,7 +298,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   }  
   
   /**
-   * Enable usage of AngularUI-Bootstrap version 0_7_0 in your bootstrap liftweb Boot.
+   * Enable usage of AngularUI-Bootstrap version 0.7.0 in your bootstrap liftweb Boot.
    * @version 0.7.0
    *
    *  '''Example:'''
@@ -351,7 +313,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   }   
 
   /**
-   * Enable usage of AngularUI-Bootstrap version 0_2_0 in your bootstrap liftweb Boot.
+   * Enable usage of AngularUI-Bootstrap version 0.2.0 in your bootstrap liftweb Boot.
    * @version 0.2.0
    *
    *  '''Example:'''
@@ -367,7 +329,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  
   
   /**
-   * Enable usage of NG-Grid version 2_0_7 in your bootstrap liftweb Boot.
+   * Enable usage of NG-Grid version 2.0.7 in your bootstrap liftweb Boot.
    * @version 2.0.7
    *
    *  '''Example:'''
@@ -382,7 +344,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   } 
   
   /**
-   * Enable usage of NG-Grid version 2_0_4 in your bootstrap liftweb Boot.
+   * Enable usage of NG-Grid version 2.0.4 in your bootstrap liftweb Boot.
    * @version 2.0.4
    *
    *  '''Example:'''
@@ -398,7 +360,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   }  
    
 /**
- * Enable usage of KnockOut version 2_2_1 in your bootstrap liftweb Boot.
+ * Enable usage of KnockOut version 2.2.1 in your bootstrap liftweb Boot.
  * @version 2.2.1
  * 
  *  '''Example:'''
@@ -414,7 +376,7 @@ case object Knockout221 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of KnockOut version 2_0_0 in your bootstrap liftweb Boot.
+ * Enable usage of KnockOut version 2.0.0 in your bootstrap liftweb Boot.
  * @version 2.0.0
  * 
  *  '''Example:'''
@@ -429,7 +391,7 @@ case object Knockout210 extends FoBoToolkit {
   net.liftmodules.FoBoKo.Knockout210
 }
 /**
- * Enable usage of KnockOut version 2_1_0 in your bootstrap liftweb Boot.
+ * Enable usage of KnockOut version 2.1.0 in your bootstrap liftweb Boot.
  * @version 2.1.0
  * 
  *  '''Example:'''
@@ -461,7 +423,7 @@ case object PrettifyJun2011 extends FoBoToolkit {
 
 
 /**
- * Enable usage of JQuery version 1_10_2 in your bootstrap liftweb Boot.
+ * Enable usage of JQuery version 1.11.0 in your bootstrap liftweb Boot.
  * @version 1.11.0
  * 
  * '''Example:'''
@@ -476,7 +438,7 @@ case object JQuery1110 extends FoBoJQuery {
 }
 
 /**
- * Enable usage of JQuery version 1_10_2 in your bootstrap liftweb Boot.
+ * Enable usage of JQuery version 1.10.2 in your bootstrap liftweb Boot.
  * @version 1.10.2
  * 
  * '''Example:'''
@@ -491,7 +453,7 @@ case object JQuery1102 extends FoBoJQuery {
 }
 
 /**
- * Enable usage of JQuery version 1_9_1 in your bootstrap liftweb Boot.
+ * Enable usage of JQuery version 1.9.1 in your bootstrap liftweb Boot.
  * @version 1.9.1
  * 
  * '''Example:'''
@@ -506,7 +468,7 @@ case object JQuery191 extends FoBoJQuery {
 }
 
 /**
- * Enable usage of JQuery version 1_8_2 in your bootstrap liftweb Boot.
+ * Enable usage of JQuery version 1.8.2 in your bootstrap liftweb Boot.
  * @version 1.8.2
  * 
  * '''Example:'''
@@ -521,7 +483,7 @@ case object JQuery182 extends FoBoJQuery {
 }
 
 /**
- * Enable usage of JQuery version 1_7_2 in your bootstrap liftweb Boot.
+ * Enable usage of JQuery version 1.7.2 in your bootstrap liftweb Boot.
  * @version 1.7.2
  * 
  * '''Example:'''
@@ -536,7 +498,7 @@ case object JQuery172 extends FoBoJQuery {
 }
 
 /**
- * Enable usage of JQueryMobile version 1_1_0 in your liftweb Boot.
+ * Enable usage of JQueryMobile version 1.1.0 in your liftweb Boot.
  * 
  * @version 1.0.1
  * 
@@ -553,7 +515,22 @@ case object JQueryMobile110 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Font-Awesome version 4_0_3 in your bootstrap liftweb Boot.
+ * Enable usage of Font-Awesome version 4.1.0 in your bootstrap liftweb Boot.
+ * @version 4.1.0
+ * 
+ *  '''Example:'''
+ *  
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.FontAwesome410
+ * }}}
+ * @since v1.2 
+ */
+case object FontAwesome410 extends FoBoToolkit {
+  net.liftmodules.FoBoFA.FontAwesome410
+}
+
+/**
+ * Enable usage of Font-Awesome version 4.0.3 in your bootstrap liftweb Boot.
  * @version 4.0.3
  * 
  *  '''Example:'''
@@ -569,7 +546,7 @@ case object FontAwesome403 extends FoBoToolkit {
 
 
 /**
- * Enable usage of Font-Awesome version 4_0_1 in your bootstrap liftweb Boot.
+ * Enable usage of Font-Awesome version 4.0.1 in your bootstrap liftweb Boot.
  * @version 4.0.1
  * 
  *  '''Example:'''
@@ -579,12 +556,13 @@ case object FontAwesome403 extends FoBoToolkit {
  * }}}
  * @since v1.1 
  */
+@deprecated("Use FontAwesome403 or later","FoBo v1.3.0")
 case object FontAwesome401 extends FoBoToolkit {
   net.liftmodules.FoBoFA.FontAwesome401
 }
 
 /**
- * Enable usage of Font-Awesome version 3_2_1 in your bootstrap liftweb Boot.
+ * Enable usage of Font-Awesome version 3.2.1 in your bootstrap liftweb Boot.
  * @version 3.2.1
  * 
  *  '''Example:'''
@@ -599,7 +577,7 @@ case object FontAwesome321 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Font-Awesome version 3_0_0 in your bootstrap liftweb Boot.
+ * Enable usage of Font-Awesome version 3.0.0 in your bootstrap liftweb Boot.
  * @version 3.0.0
  * 
  *  '''Example:'''
@@ -615,7 +593,7 @@ case object FontAwesome300 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Font-Awesome version 2_0_0 in your bootstrap liftweb Boot.
+ * Enable usage of Font-Awesome version 2.0.0 in your bootstrap liftweb Boot.
  * @version 2.0.0
  * 
  *  '''Example:'''
@@ -631,7 +609,7 @@ case object FontAwesome200 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Font-Awesome version 2_0_0 in your bootstrap liftweb Boot.
+ * Enable usage of Font-Awesome version 2.0.0 in your bootstrap liftweb Boot.
  * 
  * This TB222 variant is optimized for use with FoBo.Bootstrap222. 
  * The effect of using this TB222 variant is that you can keep using the  
@@ -654,7 +632,7 @@ case object FontAwesome200TB222 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Twitter Bootstrap version 2_1_0 in your bootstrap liftweb Boot.
+ * Enable usage of Twitter Bootstrap version 2.1.0 in your bootstrap liftweb Boot.
  * @version 2.1.0
  * 
  * '''Example'''
@@ -670,7 +648,7 @@ case object Bootstrap210 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Twitter Bootstrap version 2_2_0 in your bootstrap liftweb Boot.
+ * Enable usage of Twitter Bootstrap version 2.2.0 in your bootstrap liftweb Boot.
  * @version 2.2.0
  * 
  * '''Example'''
@@ -687,7 +665,7 @@ case object Bootstrap220 extends FoBoToolkit {
 
 
 /**
- * Enable usage of Twitter Bootstrap version 2_2_2 in your bootstrap liftweb Boot.
+ * Enable usage of Twitter Bootstrap version 2.2.2 in your bootstrap liftweb Boot.
  * @version 2.2.2
  * 
  * '''Example'''
@@ -703,7 +681,7 @@ case object Bootstrap222 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Twitter Bootstrap version 2_3_0 in your bootstrap liftweb Boot.
+ * Enable usage of Twitter Bootstrap version 2.3.0 in your bootstrap liftweb Boot.
  * @version 2.3.0
  * 
  * '''Example'''
@@ -719,7 +697,7 @@ case object Bootstrap230 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Twitter Bootstrap version 2_3_1 in your bootstrap liftweb Boot.
+ * Enable usage of Twitter Bootstrap version 2.3.1 in your bootstrap liftweb Boot.
  * @version 2.3.1
  * 
  * '''Example'''
@@ -735,7 +713,7 @@ case object Bootstrap231 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Twitter Bootstrap version 2_3_2 in your bootstrap liftweb Boot.
+ * Enable usage of Twitter Bootstrap version 2.3.2 in your bootstrap liftweb Boot.
  * @version 2.3.2
  * 
  * '''Example'''
@@ -751,7 +729,7 @@ case object Bootstrap232 extends FoBoToolkit {
 
 
 /**
- * Enable usage of Twitter Bootstrap version 3_0_0 in your bootstrap liftweb Boot.
+ * Enable usage of Twitter Bootstrap version 3.0.0 in your bootstrap liftweb Boot.
  * @version 3.0.0
  * 
  * '''Example'''
@@ -767,7 +745,7 @@ case object Bootstrap300 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Twitter Bootstrap version 3_0_1 in your bootstrap liftweb Boot.
+ * Enable usage of Twitter Bootstrap version 3.0.1 in your bootstrap liftweb Boot.
  * @version 3.0.1
  * 
  * '''Example'''
@@ -782,7 +760,7 @@ case object Bootstrap301 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Twitter Bootstrap version 3_1_1 in your bootstrap liftweb Boot.
+ * Enable usage of Twitter Bootstrap version 3.1.1 in your bootstrap liftweb Boot.
  * @version 3.1.1
  * 
  * '''Example'''
@@ -797,7 +775,7 @@ case object Bootstrap311 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of DataTables version 1_9_0 in your bootstrap liftweb Boot.
+ * Enable usage of DataTables version 1.9.0 in your bootstrap liftweb Boot.
  * @version 1.9.0
  * 
  *  '''Example:'''
@@ -814,7 +792,7 @@ case object DataTables190 extends FoBoToolkit {
 
 
 /**
- * Enable usage of Foundation version 2_1_5 in your bootstrap liftweb Boot.
+ * Enable usage of Foundation version 2.1.5 in your bootstrap liftweb Boot.
  * @version 2.1.5
  * 
  * '''Example'''

@@ -31,8 +31,24 @@ package object FoBoFA {
       var ToolKit: FAToolkit = null //FontAwesome200
     }
 
+    
      /**
-     * Enable usage of Font-Awesome version 4_0_3 in your bootstrap liftweb Boot.
+     * Enable usage of Font-Awesome version 4.1.0 in your bootstrap liftweb Boot.
+     * @version 4.1.0
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome410
+     * }}}
+     * @since v1.3
+     */
+    case object FontAwesome410 extends FAToolkit {
+      FAResources.fontAwesome410
+    }     
+    
+     /**
+     * Enable usage of Font-Awesome version 4.0.3 in your bootstrap liftweb Boot.
      * @version 4.0.3
      *
      *  '''Example:'''
@@ -40,14 +56,14 @@ package object FoBoFA {
      * {{{
      *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome403
      * }}}
-     *
+     * @since v1.2
      */
     case object FontAwesome403 extends FAToolkit {
       FAResources.fontAwesome403
     } 
     
      /**
-     * Enable usage of Font-Awesome version 4_0_1 in your bootstrap liftweb Boot.
+     * Enable usage of Font-Awesome version 4.0.1 in your bootstrap liftweb Boot.
      * @version 4.0.1
      *
      *  '''Example:'''
@@ -57,12 +73,13 @@ package object FoBoFA {
      * }}}
      *
      */
+    @deprecated("Use FontAwesome403 or later","FoBo v1.3.0")
     case object FontAwesome401 extends FAToolkit {
       FAResources.fontAwesome401
     }    
     
      /**
-     * Enable usage of Font-Awesome version 3_2_1 in your bootstrap liftweb Boot.
+     * Enable usage of Font-Awesome version 3.2.1 in your bootstrap liftweb Boot.
      * @version 3.2.1
      *
      *  '''Example:'''
@@ -77,7 +94,7 @@ package object FoBoFA {
     }
     
     /**
-     * Enable usage of Font-Awesome version 3_0_0 in your bootstrap liftweb Boot.
+     * Enable usage of Font-Awesome version 3.0.0 in your bootstrap liftweb Boot.
      * @version 3.0.0
      *
      *  '''Example:'''
@@ -87,13 +104,14 @@ package object FoBoFA {
      * }}}
      *
      */
+    @deprecated("Use FontAwesome321 or later","FoBo v1.2.0")
     case object FontAwesome300 extends FAToolkit {
       FAResources.fontAwesome300
     }
         
 
     /**
-     * Enable usage of Font-Awesome version 2_0_0 in your bootstrap liftweb Boot.
+     * Enable usage of Font-Awesome version 2.0.0 in your bootstrap liftweb Boot.
      * @version 2.0.0
      *
      *  '''Example:'''
@@ -103,12 +121,13 @@ package object FoBoFA {
      * }}}
      *
      */
+    @deprecated("Use FontAwesome321 or later","FoBo v1.2.0")
     case object FontAwesome200 extends FAToolkit {
       FAResources.fontAwesome200
     }
     
     /**
-     * Enable usage of Font-Awesome version 2_0_0 in your bootstrap liftweb Boot.
+     * Enable usage of Font-Awesome version 2.0.0 in your bootstrap liftweb Boot.
      * 
      * @version 2.0.0
      *
@@ -119,6 +138,7 @@ package object FoBoFA {
      * }}}
      *
      */
+    @deprecated("Use FontAwesome321 or later","FoBo v1.2.0")
     case object FontAwesome200TB222 extends FAToolkit {
       FAResources.fontAwesome200TB222
     }    
@@ -128,6 +148,13 @@ package object FoBoFA {
      */
     private object FAResources {
 
+      lazy val fontAwesome410 = {
+        ResourceServer.rewrite {
+          case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "4.1.0", "css", "font-awesome.css")
+          case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "4.1.0", "css", "font-awesome.min.css")
+        }
+      } 
+      
       lazy val fontAwesome403 = {
         ResourceServer.rewrite {
           case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "4.0.3", "css", "font-awesome.css")

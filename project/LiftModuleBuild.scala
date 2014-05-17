@@ -11,6 +11,7 @@ object LiftModuleFoBoBuild extends Build {
   
   val liftEdition = SettingKey[String]("liftEdition", "Lift Edition (short version number to append to artifact name)")
   
+  //https://github.com/sbt/sbt-unidoc sbt 0.13 can simplify the unidoc stuff with a plugin 
   lazy val root = Project(id   = "fobo-meta", 
                              base = file("."),
                              settings = parentSettings ++ Unidoc.settings ++ unidocScaladocSettings ++
@@ -24,8 +25,7 @@ object LiftModuleFoBoBuild extends Build {
                              ),
                              aggregate = Seq(fobo)
                                  )
-                            
-         
+                                 
    lazy val fobo        = Project(id = "fobo",
                             base = file("FoBo"),
                             settings = defaultSettings ++ myBuildInfoSettings ++ scaladocSettings ++ Seq(
@@ -97,6 +97,15 @@ object LiftModuleFoBoBuild extends Build {
   lazy val scaladocDiagramsEnabled = System.getProperty("scaladoc.diagrams", "false").toBoolean
   lazy val scaladocOptions = List() /*List("-implicits")*/ ::: (if (scaladocDiagramsEnabled) List("-diagrams") else Nil)
 
+//  lazy val c1:Seq[ProjectReference] = Seq(prettify, pace)
+//  lazy val c2:Seq[ProjectReference] = Seq(prettify, pace, jquery)
+//  lazy val twoEleven:SettingKey[String] = SettingKey[String]("2.11.0","Special build")
+//  lazy val core2: Seq[ProjectReference] = if (scalaVersion.value == twoEleven.value ) c1 else c2  
+//  //
+//    //scalaVersion { case twoEleven => c1 case _ => c2 }
+//    //if (scalaVersion == xx ) c1 else c2 
+//    //scalaVersion { case "2.11.0" => c1 case _ => c2 }
+  
   lazy val scaladocSettings: Seq[sbt.Setting[_]]= {
     Seq(scalacOptions in (Compile, doc) ++= scaladocOptions) ++
       (if (scaladocDiagramsEnabled)

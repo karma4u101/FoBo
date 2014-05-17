@@ -118,7 +118,13 @@ object FoBoSpec extends Specification  {
     "rewrit fobo/font-awesome.css to fobo/font-awesome/4.0.1/css/font-awesome.css" in {
       rewriteFontAwesome401CSS must_== List("fobo", "font-awesome", "4.0.1", "css", "font-awesome-min.css")
     }       
-  }   
+  }
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome410 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome.css" in {
+      rewriteFontAwesome410CSS must_== List("fobo", "font-awesome", "4.1.0", "css", "font-awesome.min.css")
+    }       
+  }  
   
   
   
@@ -270,7 +276,12 @@ object FoBoSpec extends Specification  {
    def rewriteFontAwesome401CSS = {
     FoBo.InitParam.ToolKit=FoBo.FontAwesome401
     ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
-  }  
+  } 
+   
+   def rewriteFontAwesome410CSS = {
+    FoBo.InitParam.ToolKit=FoBo.FontAwesome410
+    ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
+  }    
   
   
   //Foundation
