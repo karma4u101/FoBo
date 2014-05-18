@@ -6,7 +6,6 @@ import net.liftweb.common._
 import net.liftweb.http._
 import net.liftweb._
 import Helpers._
-import net.liftmodules.FoBoAJS.lib.{ScriptHelper=>sch}
 
 /**
  * ==AJSResources Snippet==
@@ -20,7 +19,6 @@ import net.liftmodules.FoBoAJS.lib.{ScriptHelper=>sch}
  */
 class AJSResources extends StatefulSnippet {
   
-  private lazy val sch = new sch()
   
   def dispatch = {
     case "injectJS" => injectJS
