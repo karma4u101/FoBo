@@ -8,7 +8,7 @@ A **live demo** and introduction to using this module including API documentatio
 With this Lift module you will get a hassle free inclusion and smooth upgrades, you decide what toolkits and versions to enable.  
 The FoBo module is making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot), by simultaneously supporting several versions of the included toolkits and, without code or reference changes, providing debug-able js and css files in development and minimized files otherwise. 
 
-The FoBo module also has a evolving API that includes snippet:s and helper object:s (see API documents for usage) that will take care of some common toolkit and component initiation and usage, like lift sitemap to bootstrap menu builders, script generation and more.  
+The FoBo module also has a evolving API that includes snippet:s and helper object:s (see API documents for usage) that will take care of some common toolkit and component initiation and usage, like lift sitemap to bootstrap menu builders, resource injection, script generation and more.  
 
 Using this module you will also get a clean separation of the toolkit files and your application specific resources as the module dose not clutter your applications web-app resources directory. 
 
