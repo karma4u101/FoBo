@@ -16,6 +16,7 @@ object FoBoSpec extends Specification  {
   
   //OBS! using 'test-only' instead of 'test' will fail some test as 'test-only' 
   //is treated as code is run in "devMode" while 'test' dose not assume this. 
+ 
   
   //AngularJS
   "With FoBo.InitParam.ToolKit set to FoBo.AngularJS1211 the ResourceServer.pathRewriter" should {

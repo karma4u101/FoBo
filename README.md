@@ -28,11 +28,14 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Updates:**
+- **2014-05-24** -- Module v1.3-M1 artifact released for Lift 3.0-M1
+- **2014-05-24** -- Module v1.3-SNAPSHOT Adding JQuery v1.11.1 and v2.1.1
 - **2014-05-17** -- Module v1.3-SNAPSHOT Adding resource injection snippets to FoBo, Angular, Bootstrap 3.x and Bootstrap 2.x 
 - **2014-05-15** -- Module v1.3-SNAPSHOT Adding Font Awesome 4.1.0 to v1.3-SNAPSHOT 
-- **2014-04-18** -- Module v1.3-SNAPSHOT Removing dependency on yui-compression and upgraded to use sbt-0.13 
+- **2014-04-18** -- Module v1.3-SNAPSHOT Bumping sbt to v0.13.1. Removing dependency on yui-compression and upgraded to use sbt-0.13 
 
 **Latest Snapshot Release:**
+- **2014-05-24** -- Module v1.3-M1 artifact released for Lift 3.0-M1
 - **2014-05-15** -- Module v1.3-SNAPSHOT
 - **2014-04-18** -- Module v1.3-SNAPSHOT
 

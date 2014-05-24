@@ -421,6 +421,36 @@ case object PrettifyJun2011 extends FoBoToolkit {
    net.liftmodules.FoBoGCP.PrettifyJun2011
 }
 
+  /**
+   * Enable usage of JQuery version 2.1.1 in your bootstrap liftweb Boot.
+   * @version 2.1.1
+   * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery211
+   * }}}
+   * @since v1.3
+   */
+  case object JQuery211 extends FoBoJQuery {
+    net.liftmodules.FoBoJQ.JQuery211
+  }  
+
+/**
+ * Enable usage of JQuery version 1.11.1 in your bootstrap liftweb Boot.
+ * @version 1.11.1
+ * 
+ * '''Example:'''
+ * 
+ * {{{
+ *   FoBo.InitParam.JQuery=FoBo.JQuery1111
+ * }}}
+ * @since v1.3
+ */
+case object JQuery1111 extends FoBoJQuery {
+  net.liftmodules.FoBoJQ.JQuery1111
+}
 
 /**
  * Enable usage of JQuery version 1.11.0 in your bootstrap liftweb Boot.
@@ -433,6 +463,7 @@ case object PrettifyJun2011 extends FoBoToolkit {
  * }}}
  * @since v1.2
  */
+@deprecated("Use v1.11.1 or later","Sins v1.3") 
 case object JQuery1110 extends FoBoJQuery {
   net.liftmodules.FoBoJQ.JQuery1110
 }
