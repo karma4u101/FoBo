@@ -1,55 +1,39 @@
-alias pub=publish
+alias pub=publish-local-signed
 
-set version      in ThisBuild:="1.3-SNAPSHOT"
-set liftVersion in ThisBuild:="2.6-SNAPSHOT"
-set scalaVersion in ThisBuild:="2.10.0"
+set version       in ThisBuild:="1.3-SNAPSHOT"
+
+set scalacOptions in ThisBuild += "-target:jvm-1.6"
+set javacOptions  in ThisBuild ++= Seq("-source", "1.6", "-target", "1.6")
+
+set liftVersion   in ThisBuild:="2.6-SNAPSHOT"
+set scalaVersion  in ThisBuild:="2.10.0"
 
 project fobo
+set parallelExecution in Test := false
 clean
-update
-compile
-test
-
-project fobo
-pub
+; compile ; test ; pub
 
 
 set scalaVersion in ThisBuild:="2.9.2"
 
-
 project fobo
+set parallelExecution in Test := false
 clean
-update
-compile
-test
-
-project fobo
-pub
+; compile ; test ; pub
 
 
 set scalaVersion in ThisBuild:="2.9.1-1"
 
-
 project fobo
+set parallelExecution in Test := false
 clean
-update
-compile
-test
-
-project fobo
-pub
+; compile ; test ; pub
 
 
 set scalaVersion in ThisBuild:="2.9.1"
 
-
 project fobo
+set parallelExecution in Test := false
 clean
-update
-compile
-test
-
-project fobo
-pub
-
+; compile ; test ; pub
 

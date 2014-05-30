@@ -45,8 +45,16 @@ class AJSResources extends StatefulSnippet {
    * @since v1.3         
    */   
   def injectJS:net.liftweb.util.CssSel = {
+    def transform(res: List[String]): List[scala.xml.Elem] = {
+      val res2 = if(!res.contains("angular")) "angular" :: res else res
+      val result = (for {
+        r <- res2
+      } yield  <script type="text/javascript" src={ "/classpath/fobo/" + r + ".js" } ></script>  )
+      result    
+    }
     val res = S.attr("resources").map(_.split(',').map(_.trim).toList).openOr(List())
-     " *" #> jsResources(res)
+    //strToCssBindPromoter(" *").#>(transform(res))
+    " *" #> transform(res)
   }
   
   /**
@@ -65,26 +73,14 @@ class AJSResources extends StatefulSnippet {
    * @since v1.3         
    */    
   def injectCSS:net.liftweb.util.CssSel = {
+    def transform(res: List[String]):List[scala.xml.Elem] = {
+      val result = (for {
+        r <- res
+      } yield  <link type="text/css" rel="stylesheet" href={ "/classpath/fobo/" + r + ".css" } />  )
+      result 
+    }      
     val res = S.attr("resources").map(_.split(',').map(_.trim).toList).openOr(List())
-     " *" #> cssResources(res)
+     " *" #> transform(res)
   }  
-
-  /*
-   * <script data-lift="FoBo.Angular.injectJS?resources=angular-animate,ui-bootstrap-tpls,ng-grid"></script>
-   */
-  private def jsResources(res: List[String]): List[scala.xml.Elem] = {
-    val res2 = if(!res.contains("angular")) "angular" :: res else res
-    val result = (for {
-      r <- res2
-    } yield  <script type="text/javascript" src={ "/classpath/fobo/" + r + ".js" } ></script>  )
-    result    
-  }
-  
-  
-  private def cssResources(res: List[String]):List[scala.xml.Elem] = {
-    val result = (for {
-      r <- res
-    } yield  <link type="text/css" rel="stylesheet" href={ "/classpath/fobo/" + r + ".css" } />  )
-    result 
-  }  
+ 
 }
