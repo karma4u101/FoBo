@@ -90,4 +90,3 @@ if [ $LIFT_TARGET == "2.5" ]; then {
 } else 
 	echo -e "\a No target set! You need to specify a Lift version as target. Usage ./project/autobuildscript/publish.sh -t [2.5,2.6,3.0]";
 fi
-
