@@ -18,6 +18,8 @@ logLevel in ThisBuild := Level.Info   //Level.Debug Level.Info
 
 scalacOptions ++= Seq("-deprecation")
 
+parallelExecution in Test := false
+
 EclipseKeys.withSource in ThisBuild := true
 
 EclipseKeys.skipParents in ThisBuild := false

@@ -8,9 +8,9 @@ crossScalaVersions := Seq("2.10.0", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
 scalacOptions ++= Seq("-deprecation")
 
-//EclipseKeys.withSource := true
+EclipseKeys.withSource := true
 
-//parallelExecution in Test := false
+parallelExecution in Test := false
 
 resolvers ++= Seq(
   "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
