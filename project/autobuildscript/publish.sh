@@ -28,7 +28,7 @@ while getopts t: opts; do
   esac
 done
 
-#Something whent wrong, print some information and exit with errorcode 1.
+#Something went wrong, print some information and exit with error code 1.
 function die {
   echo $@
   exit 1
