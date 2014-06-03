@@ -43,7 +43,7 @@ function debug {
     fi
 }
 
-#Validate that the current java path is correkt.
+#Validation: Check if provided path is the current set java path.
 #This function only works on a ubuntu system.  
 function currentJavaPathIsSetTo() {
 	local lsalPart=$1
