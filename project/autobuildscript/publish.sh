@@ -114,7 +114,7 @@ function runMain {
   } elif [ $LIFT_TARGET == "3.0" ]; then { 
     do30Publish
   } else 
-    echo -e "\n No target set! You need to specify a Lift version as target.\nUsage ./project/autobuildscript/publish.sh -t [2.5,2.6,3.0]\n";
+    echo -e "\nNo target set! You need to specify a Lift version as target.\nUsage ./project/autobuildscript/publish.sh -t [2.5,2.6,3.0]\n";
   fi
 }
 
