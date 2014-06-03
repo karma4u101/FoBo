@@ -72,7 +72,7 @@ function requiredJavaIsSuccessfullySet() {
 
 #This function sets the JDK environment in a ubuntu system.
 function setJDKEnvironment() {
-  local $javaPath=$1
+  local javaPath=$1
   debug "Need to switching JDK version "
   sudo update-alternatives --set java $javaPath 
 } 
