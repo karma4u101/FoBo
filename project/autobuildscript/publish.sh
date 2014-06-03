@@ -23,99 +23,99 @@ JAVA_7_PATH=/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
 LOG_FILE=build.log
  
 while getopts t: opts; do
-   case ${opts} in
-    t) LIFT_TARGET=${OPTARG} ;;
-   esac
+  case ${opts} in
+  t) LIFT_TARGET=${OPTARG} ;;
+  esac
 done
 
 #Something whent wrong, print some information and exit with errorcode 1.
 function die {
-    echo $@
-    exit 1
+  echo $@
+  exit 1
 }
 
 #If $DO_DEBUG=0 then echo provided information
 function debug {
-	if [[ $DO_DEBUG == 0 ]]; then 
-         echo -e $@
-    else
-         echo -n ""
-    fi
+  if [[ $DO_DEBUG == 0 ]]; then 
+    echo -e $@
+  else
+    echo -n ""
+  fi
 }
 
 #Validation: Check if provided path is the current set java path.
 #This function only works on a ubuntu system.  
 function currentJavaPathIsSetTo() {
-	local lsalPart=$1
-	curr_java_path=$(ls -al /etc/alternatives/java)	
-if [[ $curr_java_path == *${lsalPart}* ]]; then 
-    	return 0 
-    else 
-        return 1 
-    fi	
+  local lsalPart=$1
+  curr_java_path=$(ls -al /etc/alternatives/java)	
+  if [[ $curr_java_path == *${lsalPart}* ]]; then 
+    return 0 
+  else 
+    return 1 
+  fi	
 }
 
 #This function has the effect of, if needed, trying to set the required java path 
 #The function will return 0 if the required java version is or has been successfully set.
 function requiredJavaIsSuccessfullySet() {
-	local javaPath=$1
-	if ! currentJavaPathIsSetTo $javaPath ; then 
-		debug "Need to switching JDK version "
-	 	sudo update-alternatives --set java $javaPath 		
-	fi
-	if currentJavaPathIsSetTo $javaPath ; then 
-		return 0
-	else
-		return 1
-	fi 	
+  local javaPath=$1
+  if ! currentJavaPathIsSetTo $javaPath ; then 
+    debug "Need to switching JDK version "
+    sudo update-alternatives --set java $javaPath 		
+  fi
+  if currentJavaPathIsSetTo $javaPath ; then 
+    return 0
+  else
+    return 1
+  fi 	
 }
 
 #Execute the nesessary steps for publising a Lift 2.5 module build
 function do25Publish {
-	debug "\nTarget is set to Lift v2.5, require java-6";
-	if ! requiredJavaIsSuccessfullySet $JAVA_6_PATH ; then 
-		die "java-6 dosen't seem to be present, cancelling release build!"
-	fi
-    debug "Current java environment is java-6" 
-	debug "\n***Start processing the sbt command file.***\n" 
-	sbt < $PUBLISH_25_SBT_COMMAND_FILE 2>&1|tee ${LOG_FILE}
-	debug "\n***...done processing the sbt command file***\n"  	
+  debug "\nTarget is set to Lift v2.5, require java-6";
+  if ! requiredJavaIsSuccessfullySet $JAVA_6_PATH ; then 
+    die "java-6 dosen't seem to be present, cancelling release build!"
+  fi
+  debug "Current java environment is java-6" 
+  debug "\n***Start processing the sbt command file.***\n" 
+  sbt < $PUBLISH_25_SBT_COMMAND_FILE 2>&1|tee ${LOG_FILE}
+  debug "\n***...done processing the sbt command file***\n"  	
 }
 
 #Execute the nesessary steps for publising a Lift 2.6 module build
 function do26Publish {
-	debug "\nTarget is set to Lift v2.6, require java-6";
-	if ! requiredJavaIsSuccessfullySet $JAVA_6_PATH ; then 
-		die "java-6 dosen't seem to be present, cancelling release build!"
-	fi			
-    debug "Current java environment is java-6" 
-	debug "\n***Start processing the sbt command file.***\n" 
-	sbt < $PUBLISH_26_SBT_COMMAND_FILE 2>&1|tee ${LOG_FILE}
-	debug "\n***...done processing the sbt command file***\n"  	
+  debug "\nTarget is set to Lift v2.6, require java-6";
+  if ! requiredJavaIsSuccessfullySet $JAVA_6_PATH ; then 
+    die "java-6 dosen't seem to be present, cancelling release build!"
+  fi			
+  debug "Current java environment is java-6" 
+  debug "\n***Start processing the sbt command file.***\n" 
+  sbt < $PUBLISH_26_SBT_COMMAND_FILE 2>&1|tee ${LOG_FILE}
+  debug "\n***...done processing the sbt command file***\n"  	
 }
 
 #Execute the nesessary steps for publising a Lift 3.0 module build
 function do30Publish {
-	debug "\nTarget is set to Lift v3.0, require java-7";
-	if ! requiredJavaIsSuccessfullySet $JAVA_7_PATH ; then 
-		die "java-7 dosen't seem to be present, cancelling release build!"
-	fi	  
-    debug "Current java environment is java-7\n" 
-	debug "\n***Start processing the sbt command file.***\n"  
-    sbt < $PUBLISH_30_SBT_COMMAND_FILE 2>&1|tee ${LOG_FILE} 
-	debug "\n***...done processing the sbt command file***\n"  	
+  debug "\nTarget is set to Lift v3.0, require java-7";
+  if ! requiredJavaIsSuccessfullySet $JAVA_7_PATH ; then 
+    die "java-7 dosen't seem to be present, cancelling release build!"
+  fi	  
+  debug "Current java environment is java-7\n" 
+  debug "\n***Start processing the sbt command file.***\n"  
+  sbt < $PUBLISH_30_SBT_COMMAND_FILE 2>&1|tee ${LOG_FILE} 
+  debug "\n***...done processing the sbt command file***\n"  	
 }
 
 function runMain {
-    if [ $LIFT_TARGET == "2.5" ]; then {
-	 	do25Publish
-    } elif [ $LIFT_TARGET == "2.6" ]; then { 
-         do26Publish 
-    } elif [ $LIFT_TARGET == "3.0" ]; then { 
-         do30Publish
-    } else 
-	 	echo -e "\a No target set! You need to specify a Lift version as target. Usage ./project/autobuildscript/publish.sh -t [2.5,2.6,3.0]";
-    fi
+  if [ $LIFT_TARGET == "2.5" ]; then {
+    do25Publish
+  } elif [ $LIFT_TARGET == "2.6" ]; then { 
+    do26Publish 
+  } elif [ $LIFT_TARGET == "3.0" ]; then { 
+    do30Publish
+  } else 
+    echo -e "\a No target set! You need to specify a Lift version as target. Usage ./project/autobuildscript/publish.sh -t [2.5,2.6,3.0]";
+  fi
 }
 
 runMain
