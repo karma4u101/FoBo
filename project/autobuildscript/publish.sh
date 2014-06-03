@@ -12,12 +12,13 @@
 #
 #####
 
-#echo "$# parameters"; echo "$@";
 DO_DEBUG=0
 LIFT_TARGET="empty"
+#sbt command files targeting different Lift versions, see respective files for more information.
 PUBLISH_25_SBT_COMMAND_FILE=${PWD}/project/autobuildscript/build-publish-release.txt
 PUBLISH_26_SBT_COMMAND_FILE=${PWD}/project/autobuildscript/build-publish-SNAPSHOT.txt
 PUBLISH_30_SBT_COMMAND_FILE=${PWD}/project/autobuildscript/build-publish-Lift3-SNAPSHOT.txt
+#default location's for java on a ubuntu system
 JAVA_6_PATH=/usr/lib/jvm/java-6-openjdk-amd64/jre/bin/java
 JAVA_7_PATH=/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
 LOG_FILE=build.log
@@ -60,8 +61,7 @@ function currentJavaPathIsSetTo() {
 function requiredJavaIsSuccessfullySet() {
   local javaPath=$1
   if ! currentJavaPathIsSetTo $javaPath ; then 
-    debug "Need to switching JDK version "
-    sudo update-alternatives --set java $javaPath 		
+    setJDKEnvironment $javaPath		
   fi
   if currentJavaPathIsSetTo $javaPath ; then 
     return 0
@@ -70,6 +70,14 @@ function requiredJavaIsSuccessfullySet() {
   fi 	
 }
 
+#This function sets the JDK environment in a ubuntu system.
+function setJDKEnvironment() {
+  local $javaPath=$1
+  debug "Need to switching JDK version "
+  sudo update-alternatives --set java $javaPath 
+} 
+
+    
 #Execute the necessary steps for publishing a Lift 2.5 module build
 function do25Publish {
   debug "\nTarget is set to Lift v2.5, require java-6";
