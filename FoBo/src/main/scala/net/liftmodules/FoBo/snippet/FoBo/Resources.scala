@@ -47,8 +47,14 @@ class Resources extends StatefulSnippet {
    * @since v1.3         
    */
   def injectJS:net.liftweb.util.CssSel = {
-    val res = S.attr("resources").map(_.split(',').map(_.trim).toList).openOr(List())
-     " *" #> jsResources(res)
+    def transform(res: List[String]): List[scala.xml.Elem] = {
+      val result = (for {
+        r <- res
+      } yield  <script type="text/javascript" src={ "/classpath/fobo/" + r + ".js" } ></script>  )
+      result    
+    }    
+    val res = S.attr("resources").map(_.split(',').map(_.trim).toSet).openOr(Set())
+     " *" #> transform(res.toList)
   }
   
 
@@ -72,21 +78,27 @@ class Resources extends StatefulSnippet {
    * @since v1.3         
    */  
   def injectCSS:net.liftweb.util.CssSel = {
-    val res = S.attr("resources").map(_.split(',').map(_.trim).toList).openOr(List())
-     " *" #> cssResources(res)
+    def transform(res: List[String]):List[scala.xml.Elem] = {
+      val result = (for {
+        r <- res
+      } yield  <link type="text/css" rel="stylesheet" href={ "/classpath/fobo/" + r + ".css" } />  )
+      result 
+    }     
+    val res = S.attr("resources").map(_.split(',').map(_.trim).toSet).openOr(Set())
+     " *" #> transform(res.toList)
   }
   
-  private def jsResources(res: List[String]): List[scala.xml.Elem] = {
-    val result = (for {
-      r <- res
-    } yield  <script type="text/javascript" src={ "/classpath/fobo/" + r + ".js" } ></script>  )
-    result    
-  }
-  
-  private def cssResources(res: List[String]):List[scala.xml.Elem] = {
-    val result = (for {
-      r <- res
-    } yield  <link type="text/css" rel="stylesheet" href={ "/classpath/fobo/" + r + ".css" } />  )
-    result 
-  }   
+//  private def jsResources(res: List[String]): List[scala.xml.Elem] = {
+//    val result = (for {
+//      r <- res
+//    } yield  <script type="text/javascript" src={ "/classpath/fobo/" + r + ".js" } ></script>  )
+//    result    
+//  }
+//  
+//  private def cssResources(res: List[String]):List[scala.xml.Elem] = {
+//    val result = (for {
+//      r <- res
+//    } yield  <link type="text/css" rel="stylesheet" href={ "/classpath/fobo/" + r + ".css" } />  )
+//    result 
+//  }   
 }
