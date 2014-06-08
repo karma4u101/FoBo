@@ -7,7 +7,7 @@ import common._
 
 import org.specs2.mutable.Specification
 
-@RunWith(classOf[JUnitRunner])
+//@RunWith(classOf[JUnitRunner])
 object FoBoAJSSpec extends Specification  {
   "FoBoAJSSpec Specification".title
   
