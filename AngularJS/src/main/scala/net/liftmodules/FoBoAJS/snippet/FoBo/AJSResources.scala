@@ -52,9 +52,9 @@ class AJSResources extends StatefulSnippet {
       } yield  <script type="text/javascript" src={ "/classpath/fobo/" + r + ".js" } ></script>  )
       result    
     }
-    val res = S.attr("resources").map(_.split(',').map(_.trim).toList).openOr(List())
+    val res = S.attr("resources").map(_.split(',').map(_.trim).toSet).openOr(Set())
     //strToCssBindPromoter(" *").#>(transform(res))
-    " *" #> transform(res)
+    " *" #> transform(res.toList)
   }
   
   /**
@@ -79,8 +79,8 @@ class AJSResources extends StatefulSnippet {
       } yield  <link type="text/css" rel="stylesheet" href={ "/classpath/fobo/" + r + ".css" } />  )
       result 
     }      
-    val res = S.attr("resources").map(_.split(',').map(_.trim).toList).openOr(List())
-     " *" #> transform(res)
+    val res = S.attr("resources").map(_.split(',').map(_.trim).toSet).openOr(Set())
+     " *" #> transform(res.toList)
   }  
  
 }
