@@ -1,2 +1,0 @@
-ZURB's Foundation Framework (MIT Open License) 
-See https://github.com/drewsymo/Foundation

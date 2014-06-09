@@ -28,6 +28,7 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Updates:**
+- **2014-06-09** -- Module v1.2-SNAPSHOT Added Kinetic v5.1.0
 - **2014-06-08** -- Module v1.3 Scala 2.11 artifact released for Lift v2.6
 - **2014-05-24** -- Module v1.3-M1 artifact released for Lift 3.0-M1
 - **2014-05-24** -- Module v1.3-SNAPSHOT Adding JQuery v1.11.1 and v2.1.1
@@ -121,6 +122,7 @@ The FoBo meta module includes the following sub-modules and supports the followi
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2, v1.9.1, v1.10.2, v1.11.0, v1.11.1, v2.1.1] - [JQuery](http://jquery.com/)
 -   [FoBo-Google-Code-Prettify](https://github.com/karma4u101/FoBo/tree/master/Google-Code-Prettify) [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
 -   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) [v0.4.15] - [Pace](http://github.hubspot.com/pace/docs/welcome/) 
+-   [FoBo-Kinetic](https://github.com/karma4u101/FoBo/tree/master/Kinetic) [v5.1.0] - [Kinetic](http://kineticjs.com/) 
 
 Modules available but that will be split out of the FoBo meta module starting from FoBo v1.4. 
 The modules can still be used as stand alone modules, see respective modules readme for information on how to set them up. 
@@ -142,6 +144,8 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 - JQueryXYZ
 - PrettifyXYZ
 - KnockoutXYZ
+- PaceXYZ
+- KineticXYZ
 - AngularJSXYZ with components (AJSUIBootstrapXYZ, AJSNGGridXYZ)
 
 Where X is major, Y minor and Z incremental version numbers as seen in the Toolkits list above (for example BootstrapXYZ will be Bootstrap230 for Twitter Bootstrap v2.3.0)

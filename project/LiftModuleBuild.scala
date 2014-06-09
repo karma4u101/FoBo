@@ -30,8 +30,8 @@ object LiftModuleFoBoBuild extends Build {
                             base = file("FoBo"),
                             settings = defaultSettings ++ myBuildInfoSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile),
-                             aggregate = Seq(pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,foundation,datatables,knockout,jquerymobile,prettify)
-                                 ).dependsOn(pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,foundation,datatables,knockout,jquerymobile,prettify)  
+                             aggregate = Seq(kinetic,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,foundation,datatables,knockout,jquerymobile,prettify)
+                                 ).dependsOn(kinetic,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,foundation,datatables,knockout,jquerymobile,prettify)  
                                  
    lazy val fontAwesome = Project(id   = "fobo-font-awesome", 
                              base = file("Font-Awesome"),
@@ -88,6 +88,12 @@ object LiftModuleFoBoBuild extends Build {
                              base = file("Google-Code-Prettify"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))                               
+ 
+  lazy val kinetic         = Project(id   = "fobo-kinetic", 
+                             base = file("Kinetic"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))  
+                                  
   /*                           
   lazy val foboLess     = Project(id   = "FoBo-Less", 
                              base = file("FoBo-Less"))     

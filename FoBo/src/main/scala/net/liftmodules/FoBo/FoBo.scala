@@ -101,7 +101,7 @@ package object FoBo {
     LiftRules.addToPackages("net.liftmodules.FoBoDT")
     LiftRules.addToPackages("net.liftmodules.FoBoBs")
     LiftRules.addToPackages("net.liftmodules.FoBoTB")
-    
+    //LiftRules.addToPackages("net.liftmodules.FoBoKi")
     
     ResourceServer.allow {
       case "fobo" :: tail => true
@@ -218,6 +218,22 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
 }
 
 
+  /**
+   * Enable usage of Kinetic version 5.1.0 in your bootstrap liftweb Boot.
+   * @version 5.1.0
+   *
+   *  '''Lift Boot:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.Kinetic510
+   *   FoBo.init()
+   * }}}
+   * @since v1.3
+   */
+  case object Kinetic510 extends FoBoToolkit {
+    net.liftmodules.FoBoKi.Kinetic510
+  }
+  
   /**
    * Enable usage of Pace version 0.4.15 in your bootstrap liftweb Boot.
    * @version 0.4.15
