@@ -18,14 +18,15 @@ resolvers ++= Seq(
 )
 
 libraryDependencies <++= liftVersion { v =>
-    "net.liftweb"      %% "lift-webkit"          % v          % "provided" ::
-    "net.liftweb"      %% "lift-testkit"         % v          % "provided" ::
+    "net.liftweb"      %% "lift-webkit"          % v          % "provided,test" ::
+    "net.liftweb"      %% "lift-testkit"         % v          % "provided,test" ::
     "net.liftweb"      %% "lift-mapper"          % v          % "provided" ::
     Nil
 }
 
 libraryDependencies <++= scalaVersion { sv =>
   "ch.qos.logback" % "logback-classic" % "1.0.0" % "provided" ::
+  "javax.servlet"            % "servlet-api"    % "2.5"                 % "provided,test" ::
   "log4j" % "log4j" % "1.2.16" % "provided" ::
   (sv match {
       case "2.11.1"  => "org.specs2" %% "specs2" % "2.3.12" % "test"

@@ -28,7 +28,7 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Updates:**
-- **2014-06-09** -- Module v1.2-SNAPSHOT Added Kinetic v5.1.0
+- **2014-06-09** -- Module v1.3-SNAPSHOT Added Kinetic v5.1.0
 - **2014-06-08** -- Module v1.3 Scala 2.11 artifact released for Lift v2.6
 - **2014-05-24** -- Module v1.3-M1 artifact released for Lift 3.0-M1
 - **2014-05-24** -- Module v1.3-SNAPSHOT Adding JQuery v1.11.1 and v2.1.1
