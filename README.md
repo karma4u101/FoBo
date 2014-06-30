@@ -28,7 +28,8 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Updates:**
-- **2014-06-09** -- Module v1.3-SNAPSHOT Added Kinetic v5.1.0
+- **2014-06-22** -- Module v1.3-SNAPSHOT Added JQuery-Migrate v1.2.1 
+- **2014-06-09** -- Module v1.3-SNAPSHOT Added KineticJS v5.1.0
 - **2014-06-08** -- Module v1.3 Scala 2.11 artifact released for Lift v2.6
 - **2014-05-24** -- Module v1.3-M1 artifact released for Lift 3.0-M1
 - **2014-05-24** -- Module v1.3-SNAPSHOT Adding JQuery v1.11.1 and v2.1.1
@@ -45,6 +46,24 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 **Latest Stable Releases:**
 - **2014-03-15** -- Module v1.2
 - **2013-10-11** -- Module v1.1
+
+
+New upcoming features in FoBo v1.3
+---------------------------
+
+###FoBo v1.3 has the following new sub modules
+-   [KineticJS](https://github.com/karma4u101/FoBo/tree/master/KineticJS) v5.1.0 - See [KineticJS](http://kineticjs.com/) 
+    KineticJS is an HTML5 Canvas JavaScript framework that enables high performance animations, transitions, node nesting, layering, filtering, caching, event handling for desktop and mobile applications, and much more. 
+
+###FoBo v1.3 has updates to the following sub modules
+-   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v1.11.1 - [JQuery](http://jquery.com/)
+-   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) also adds JQuery-Migrate v1.2.1 [JQuery-Migrate](https://github.com/jquery/jquery-migrate/) 
+    JQuery-Migrate is useful for migrating older jQuery code to jQuery 1.9+ it can be used for detecting and restoring APIs or features that have been deprecated in jQuery
+-   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.1.0 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
+
+###FoBo v1.3 FoBo API updates
+-   Added resource injection snippets to FoBo, AngularJS, Bootstrap 3.x and Bootstrap 2.x 
+
 
 New features in FoBo v1.2
 ---------------------------
@@ -73,37 +92,8 @@ New features in FoBo v1.2
     -    A "normal" deprecation that have one or more alternative sub module that could be uses in place of the deprecated module version without introducing any errors or bugs.
     -    A (couple of) deprecations that is meant to signal that this sub modules is not actively used and there has not been any (pull) requests for/with updates by users of FoBo. If you are a user of such a module you can keep using it as a separate module (FoBoXX.init) or if you feel strongly that deprecation is wrong you can ping me and maybe help out with updates.
 
-New features in FoBo v1.1
----------------------------
-
-###FoBo v1.1 has the following new sub modules
-
--   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) [v3.0.0, v3.0.1] - [Bootstrap 3.x](http://getbootstrap.com/)
-    The Bootstrap v3.x series is a major leap forward. Bootstrap is now Mobile first and always responsive with improved customization adding the notion of theme's.
-    The v3.x series is NOT compatible with the v2.x series of Bootstrap hence the use of a new sub module including new Lift snippets. 
-  
-    One of the new Bootstrap v3 snippets is the BootstrapMegaMetaProtoUser snippet for used with (mapper) ProtoUser form views to give them a reactive mobile 
-    scalable Bootstrap v3.x style.  
-
-    As Nav-lists have been dropped in Bootstrap v3.x and the nearest equivalent is list groups the "side" menu snippet TBNavList used in Bootstrap v2.x has been 
-    replaces in Bootstrap v3.x by a new snippet Bs3LinkedListGroup. Those snippets is not equivalent but can be used for the same purpose of mapping Lift's 
-    menu location groups into Bootstrap list's.   
-
-    The Bs3Navbar is the Bootstrap v3.x equivalent of the Boostrap v2.x TBNavbar used for horizontal top and/or bottom navigation bars. 
-
-A live demo showing some of FoBo's Bootstrap v3.x snippet functions is referred to on the more general [FoBo Bootstrap demo](http://www.media4u101.se/fobo-lift-template-demo/libo) page.   
-
-###FoBo v1.1 has updates to the following sub modules
-
--   [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) adding v2.3.2 - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
-    v2.3.2 is the last version in the Bootstrap v2.x series
- 
--   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) adding v3.2.1, v4.0.1 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
-    Here v3.2.1 is the last version compatible with the Bootstrap v2.x series and v4.0.1 is the first with Bootstrap v3.x support
-
--   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) adding v1.10.2 - [JQuery](http://jquery.com/)
-
-A live demo showing some of FoBo's sub module features, including API documentation, can seen at the [FoBo demo](http://www.media4u101.se/fobo-lift-template-demo/)
+For feature listings on older releases see 
+- [New features in FoBo v1.1](https://github.com/karma4u101/FoBo/blob/master/README.md#New-features-in-FoBo-v1.1) section
 
 
 Sub-Modules -- Toolkit:s and available versions
@@ -120,6 +110,7 @@ The FoBo meta module includes the following sub-modules and supports the followi
 -   [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 -   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0, v3.2.1, v4.0.1] - [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2, v1.9.1, v1.10.2, v1.11.0, v1.11.1, v2.1.1] - [JQuery](http://jquery.com/)
+-   FoBo-JQuery also includes JQuery Migrate [v1.2.1] - [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)
 -   [FoBo-Google-Code-Prettify](https://github.com/karma4u101/FoBo/tree/master/Google-Code-Prettify) [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
 -   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) [v0.4.15] - [Pace](http://github.hubspot.com/pace/docs/welcome/) 
 -   [FoBo-Kinetic](https://github.com/karma4u101/FoBo/tree/master/Kinetic) [v5.1.0] - [Kinetic](http://kineticjs.com/) 
@@ -142,10 +133,11 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 - DataTablesXYZ
 - JQueryMobileXYZ 
 - JQueryXYZ
+- JQueryMigrateXYZ
 - PrettifyXYZ
 - KnockoutXYZ
 - PaceXYZ
-- KineticXYZ
+- KineticJSXYZ
 - AngularJSXYZ with components (AJSUIBootstrapXYZ, AJSNGGridXYZ)
 
 Where X is major, Y minor and Z incremental version numbers as seen in the Toolkits list above (for example BootstrapXYZ will be Bootstrap230 for Twitter Bootstrap v2.3.0)
@@ -241,6 +233,39 @@ Sbteclipse provides SBT command to create Eclipse project files
 	File ==> Import...
 	Select General ==> Existing Project into Workspace 
 	Use "Brows" to look up the project root ....
+
+
+New features in FoBo v1.1
+---------------------------
+
+###FoBo v1.1 has the following new sub modules
+
+-   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) [v3.0.0, v3.0.1] - [Bootstrap 3.x](http://getbootstrap.com/)
+    The Bootstrap v3.x series is a major leap forward. Bootstrap is now Mobile first and always responsive with improved customization adding the notion of theme's.
+    The v3.x series is NOT compatible with the v2.x series of Bootstrap hence the use of a new sub module including new Lift snippets. 
+  
+    One of the new Bootstrap v3 snippets is the BootstrapMegaMetaProtoUser snippet for used with (mapper) ProtoUser form views to give them a reactive mobile 
+    scalable Bootstrap v3.x style.  
+
+    As Nav-lists have been dropped in Bootstrap v3.x and the nearest equivalent is list groups the "side" menu snippet TBNavList used in Bootstrap v2.x has been 
+    replaces in Bootstrap v3.x by a new snippet Bs3LinkedListGroup. Those snippets is not equivalent but can be used for the same purpose of mapping Lift's 
+    menu location groups into Bootstrap list's.   
+
+    The Bs3Navbar is the Bootstrap v3.x equivalent of the Boostrap v2.x TBNavbar used for horizontal top and/or bottom navigation bars. 
+
+A live demo showing some of FoBo's Bootstrap v3.x snippet functions is referred to on the more general [FoBo Bootstrap demo](http://www.media4u101.se/fobo-lift-template-demo/libo) page.   
+
+###FoBo v1.1 has updates to the following sub modules
+
+-   [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) adding v2.3.2 - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+    v2.3.2 is the last version in the Bootstrap v2.x series
+ 
+-   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) adding v3.2.1, v4.0.1 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
+    Here v3.2.1 is the last version compatible with the Bootstrap v2.x series and v4.0.1 is the first with Bootstrap v3.x support
+
+-   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) adding v1.10.2 - [JQuery](http://jquery.com/)
+
+A live demo showing some of FoBo's sub module features, including API documentation, can seen at the [FoBo demo](http://www.media4u101.se/fobo-lift-template-demo/)
 
 
 ### History log
