@@ -31,6 +31,22 @@ package object FoBoJQ {
   object InitParam extends FoBoJQ {
     var JQuery: FoBoJQ = null
   }
+ 
+  
+   /**
+   * Enable usage of JQuery-migrate version 1.2.1 in your bootstrap liftweb Boot.
+   * @version 1.2.1
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQueryMigrate121
+   * }}}
+   * @since v2.7
+   */
+  case object JQueryMigrate121 extends FoBoJQ {
+    JQFoBoResources.jqueryMigrate121
+  }  
   
   /**
    * Enable usage of JQuery version 2.1.1 in your bootstrap liftweb Boot.
@@ -140,6 +156,13 @@ case object JQuery172 extends FoBoJQ {
    */
   private object JQFoBoResources {
 
+  lazy val jqueryMigrate121 = {
+    ResourceServer.rewrite {
+      case "fobo" :: "jquery-migrate.js" :: Nil if Props.devMode => List("jquery-migrate", "1.2.1", "js", "jquery-migrate.js")
+      case "fobo" :: "jquery-migrate.js" :: Nil => List("jquery-migrate", "1.2.1", "js", "jquery-migrate-min.js")
+    }
+  }    
+    
   lazy val jquery211 = {
     ResourceServer.rewrite {//fetched from the jquery module ("adding" fobo to the modules path)
       case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "2.1.1", "js", "jquery.js")

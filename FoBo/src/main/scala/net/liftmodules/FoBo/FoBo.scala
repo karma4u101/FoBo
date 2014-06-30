@@ -219,19 +219,19 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
 
 
   /**
-   * Enable usage of Kinetic version 5.1.0 in your bootstrap liftweb Boot.
+   * Enable usage of KineticJS version 5.1.0 in your bootstrap liftweb Boot.
    * @version 5.1.0
    *
    *  '''Lift Boot:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.Kinetic510
+   *   FoBo.InitParam.Toolkit=FoBo.KineticJS510
    *   FoBo.init()
    * }}}
    * @since v1.3
    */
-  case object Kinetic510 extends FoBoToolkit {
-    net.liftmodules.FoBoKi.Kinetic510
+  case object KineticJS510 extends FoBoToolkit {
+    net.liftmodules.FoBoKi.KineticJS510
   }
   
   /**
@@ -436,6 +436,21 @@ case object Knockout200 extends FoBoToolkit {
 case object PrettifyJun2011 extends FoBoToolkit {
    net.liftmodules.FoBoGCP.PrettifyJun2011
 }
+
+   /**
+   * Enable usage of JQuery-migrate version 1.2.1 in your bootstrap liftweb Boot.
+   * @version 1.2.1
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQueryMigrate121
+   * }}}
+   * @since v2.7
+   */
+  case object JQueryMigrate121 extends FoBoJQuery {
+    net.liftmodules.FoBoJQ.JQueryMigrate121
+  }
 
   /**
    * Enable usage of JQuery version 2.1.1 in your bootstrap liftweb Boot.

@@ -10,6 +10,9 @@ import org.specs2.mutable.Specification
 object FoBoSpec extends Specification  {
   "FoBoSpec Specification".title
 
+  sequential
+  
+  
   //These tests in not meant to catch all errors but to making sure that the 
   //FoBo InitParam's has got initiated as expected, for instance to ensure that 
   //fobo sub modules is accessible. 
@@ -56,32 +59,8 @@ object FoBoSpec extends Specification  {
     }       
   }    
   
-  //JQuery
-     "With FoBo.InitParam.JQuery set to FoBo.JQuery1102 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/jquery.js to jquery/1.10.2/js/jquery-min.js" in {
-      rewriteJQuery1102JS must_== List("jquery", "1.10.2", "js", "jquery-min.js")
-    }                             
-  }
+  
     
-//   "With FoBo.InitParam.JQuery set to FoBo.JQuery191 the ResourceServer.pathRewriter" should {
-//    "rewrit fobo/jquery.js to jquery/1.9.1/js/jquery-min.js" in  {
-//      rewriteJQuery191JS must_== List("jquery", "1.9.1", "js", "jquery-min.js")
-//    }                             
-//  }
-    
-//  "With FoBo.InitParam.JQuery set to FoBo.JQuery182 the ResourceServer.pathRewriter" should {
-//    "rewrit fobo/jquery.js to jquery/1.8.2/js/jquery-min.js" in  {
-//      rewriteJQuery182JS must_== List("jquery", "1.8.2", "js", "jquery-min.js")
-//    }                             
-//  } 
-  
-//  "With FoBo.InitParam.JQuery set to FoBo.JQuery172 the ResourceServer.pathRewriter" should {
-//    "rewrit fobo/jquery.js to jquery/1.7.2/js/jquery-min.js" in  {
-//      rewriteJQuery172JS must_== List("jquery", "1.7.2", "js", "jquery-min.js")
-//    }       
-//  }   
-  
-  
   //DataTables
   "With FoBo.InitParam.ToolKit set to FoBo.DataTables190 the ResourceServer.pathRewriter" should {
     "rewrit fobo/jquery.dataTables.js to fobo/knockout/1.9.0/js/jquery.dataTables.js" in {
@@ -188,7 +167,44 @@ object FoBoSpec extends Specification  {
     "rewrit fobo/bootstrap.js to fobo/bootstrap/2.3.2/js/bootstrap-min.js" in {
       rewriteBootstrap232JS must_== List("fobo", "bootstrap", "2.3.2", "js", "bootstrap-min.js")
     }       
+  }
+  
+  /////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+  //JQuery and JQuery Migrate
+  "With FoBo.InitParam.JQuery the ResourceServer.pathRewriter" should {
+//    "having the initparam set to FoBo.JQuery172 rewrit fobo/jquery.js to jquery/1.7.2/js/jquery-min.js" in  {
+//      rewriteJQuery172JS must_== List("jquery", "1.7.2", "js", "jquery-min.js") 
+//    }
+//    "having the initparam set to FoBo.JQuery182 rewrit fobo/jquery.js to jquery/1.8.2/js/jquery-min.js" in  {
+//      rewriteJQuery182JS must_== List("jquery", "1.8.2", "js", "jquery-min.js") 
+//    }
+    "having the initparam set to FoBo.JQuery191 rewrit fobo/jquery.js to jquery/1.9.1/js/jquery-min.js" in  {
+      rewriteJQuery191JS must_== List("jquery", "1.9.1", "js", "jquery-min.js") 
+    }
+    "having the initparam's set to FoBo.JQuery191 and FoBo.JQueryMigrate121 rewrit fobo/jquery.js to jquery/1.9.1/js/jquery-min.js" in  {
+      rewriteJQuery191JSMigrate must_== List("jquery", "1.9.1", "js", "jquery-min.js") 
+    }    
+    "having the initparam's set to FoBo.JQuery191 and FoBo.JQueryMigrate121 rewrit fobo/jquery-migrate.js to jquery-migrate/1.2.1/js/jquery-migrate-min.js" in {
+      rewriteJQueryMigrate121JS must_== List("jquery-migrate", "1.2.1", "js", "jquery-migrate-min.js") 
+    }     
+    "having the initparam set to FoBo.JQuery1102 rewrit fobo/jquery.js to jquery/1.10.2/js/jquery-min.js" in {
+      rewriteJQuery1102JS must_== List("jquery", "1.10.2", "js", "jquery-min.js")
+    }     
   }  
+    
+//  "With FoBo.InitParam.JQuery set to FoBo.JQuery182 the ResourceServer.pathRewriter" should {
+//    "rewrit fobo/jquery.js to jquery/1.8.2/js/jquery-min.js" in  {
+//      rewriteJQuery182JS must_== List("jquery", "1.8.2", "js", "jquery-min.js")
+//    }                             
+//  } 
+//  
+//  "With FoBo.InitParam.JQuery set to FoBo.JQuery172 the ResourceServer.pathRewriter" should {
+//    "rewrit fobo/jquery.js to jquery/1.7.2/js/jquery-min.js" in  {
+//      rewriteJQuery172JS must_== List("jquery", "1.7.2", "js", "jquery-min.js")
+//    }       
+//  }   
+  
   
   //AngularJS
   //rewriteAngularJS106
@@ -224,20 +240,38 @@ object FoBoSpec extends Specification  {
   }  
   
   
+  //JQuery Migrate
+  def rewriteJQueryMigrate121JS = {
+     //FoBo.InitParam.JQuery=FoBo.JQuery191
+     FoBo.InitParam.JQuery=FoBo.JQueryMigrate121
+     ResourceServer.pathRewriter("fobo"::"jquery-migrate.js"::Nil)
+     
+  }  
+  
   //JQuery
-   def rewriteJQuery1102JS = {
+  def rewriteJQuery1102JS = {
     FoBo.InitParam.JQuery=FoBo.JQuery1102
     ResourceServer.pathRewriter("fobo"::"jquery.js"::Nil)
+    
   } 
    
+  def rewriteJQuery191JSMigrate =  {
+    FoBo.InitParam.JQuery=FoBo.JQuery191
+    FoBo.InitParam.JQuery=FoBo.JQueryMigrate121
+    ResourceServer.pathRewriter("fobo"::"jquery.js"::Nil)
+    
+  } 
+ 
   def rewriteJQuery191JS =  {
     FoBo.InitParam.JQuery=FoBo.JQuery191
     ResourceServer.pathRewriter("fobo"::"jquery.js"::Nil)
-  } 
+    
+  }   
   
   def rewriteJQuery182JS = {
     FoBo.InitParam.JQuery=FoBo.JQuery182
     ResourceServer.pathRewriter("fobo"::"jquery.js"::Nil)
+    
   } 
   
   def rewriteJQuery172JS =  {
