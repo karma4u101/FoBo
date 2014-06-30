@@ -33,18 +33,18 @@ package object FoBoKi {
 
   
 /**
- * Enable usage of Kinetic version 5.1.0 in your bootstrap liftweb Boot.
+ * Enable usage of KineticJS version 5.1.0 in your bootstrap liftweb Boot.
  * @version 5.1.0
  * 
  * '''Example:'''
  * 
  * {{{
- *   FoBoKi.InitParam.Toolkit=FoBoKi.Kinetic510
+ *   FoBoKi.InitParam.Toolkit=FoBoKi.KineticJS510
  * }}}
  * @since v1.3
  */
-case object Kinetic510 extends KiToolkit {
-   KiFoBoResources.Kinetic510
+case object KineticJS510 extends KiToolkit {
+   KiFoBoResources.KineticJS510
 }
 
 
@@ -54,7 +54,7 @@ case object Kinetic510 extends KiToolkit {
    */
   private object KiFoBoResources {
 
-  lazy val Kinetic510: Unit = {
+  lazy val KineticJS510: Unit = {
     ResourceServer.rewrite {
       case "fobo" :: "kinetic.js" :: Nil if Props.devMode => List("fobo", "kinetic", "5.1.0", "js", "kinetic.js")
       case "fobo" :: "kinetic.js" :: Nil => List("fobo", "kinetic", "5.1.0", "js", "kinetic.min.js")             

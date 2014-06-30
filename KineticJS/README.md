@@ -1,4 +1,4 @@
-FoBo-Kinetic
+FoBo-KineticJS
 =========================
 
 This sub module provides Kinetic to the Fobo Module, but can also be used as-is (see below for setup information).
@@ -11,13 +11,13 @@ Improvements, contributions and suggestions are welcome! Please see the [Contrib
 Update log
 ----------
 
-For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/Kinetic#history-log) section
+For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/KineticJS#history-log) section
 
 **Latest Module Version:**
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)  
 
 **Latest Update:**
-- **2014-06-09** -- Added Kinetic v5.1.0.
+- **2014-06-09** -- Added KineticJS v5.1.0.
 
 **Latest Releases:**
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for releas information.
@@ -54,11 +54,11 @@ release candidate (rcX) or milestone (mX) version part.
 
 For example (when using this module as a separete stand alone module outside of FoBo):
 
-    "net.liftmodules" %% "fobo-kinetic_2.6 % "1.3"
+    "net.liftmodules" %% "fobo-kineticjs_2.6 % "1.3"
       :
     <dependency>
       <groupId>net.liftmodules</groupId>
-      <artifactId>fobo-kinetic_2.6_2.10.4</artifactId>
+      <artifactId>fobo-kineticjs_2.6_2.10.4</artifactId>
       <version>1.3</version>
     </dependency>
 
@@ -68,14 +68,14 @@ The example will include a module built for lift 2.6. If you are using maven obs
 
     import net.liftmodules.FoBo 
     :
-    FoBo.InitParam.ToolKit=FoBo.KineticXYZ 
+    FoBo.InitParam.ToolKit=FoBo.KineticJSXYZ 
     FoBo.init() 
 
 ### Lift FoBo boot hooks (when used as stand alone module)
 
     import net.liftmodules.FoBoKi 
     :
-    FoBoKi.InitParam.ToolKit=FoBoKi.KineticXYZ 
+    FoBoKi.InitParam.ToolKit=FoBoKi.KineticJSXYZ 
     FoBoKi.init()   
 
 ### Lift FoBo Template hooks
@@ -90,7 +90,7 @@ Script files
 
 - kinetic.js [v5.1.0]
 
-For more information on how to use Kinetic see [Kinetic](http://kineticjs.com/)
+For more information on how to use KineticJS see [KineticJS](http://kineticjs.com/)
 
 ### History log
 ----------------
