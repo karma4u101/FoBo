@@ -519,7 +519,10 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
       //This is a bit of a hack (relatively safe though), as I could not find a way to properly override the field's 
       //_toForm functions especially I tried to override the _toForm for local and timezone with no luck.       
       if (!field.name.equals("password")) {
-        val bsform = BindHelpers.addAttributes(form, "class" -> "form-control")
+        val bindAttrToForm = 
+          "input [class]" #> "form-control" &
+          "select [class]" #> "form-control"
+        val bsform = bindAttrToForm(form)
         <div class="form-group">
           <label for={ field.name } class="col-lg-3 control-label">{ field.displayName }</label>
           <div class="col-lg-9">
@@ -542,22 +545,21 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
     }
   }
 
-  //This is a hack, as I could not find a way to properly override the signupFields _toForm functions   
+  //This is a hack, as I could not find a proper way to properly override the signupFields _toForm functions   
   protected def extractLocalFormPasswordField(form: NodeSeq, field: BaseField): (NodeSeq, NodeSeq) = {
-
-    val pwdAttr: scala.xml.MetaData = "class" -> "form-control"
-
     val pwInputElems = form \ "input"
-    val bsPwInputElems = BindHelpers.addAttributes(pwInputElems, pwdAttr)
-
+    val bindAttrToPwInputElems =  "input [class]" #> "form-control"
+    val bsPwInputElems = bindAttrToPwInputElems(pwInputElems)
     val pw1 = bsPwInputElems.head
-    val pw1a1 = BindHelpers.addAttributes(pw1, "placeholder" -> resSignUpPlaceholderPassword)
-    val pwd = BindHelpers.addAttributes(pw1a1, "value" -> "")
-
+    val bindAttrToPw1 = 
+      "input [placeholder]" #> resSignUpPlaceholderPassword & 
+            "input [value]" #> "" 
+    val pwd = bindAttrToPw1(pw1)
     val pw2 = bsPwInputElems.last
-    val pw2a1 = BindHelpers.addAttributes(pw2, "placeholder" -> resSignUpPlaceholderRepeatPassword)
-    val pwdr = BindHelpers.addAttributes(pw2a1, "value" -> "")
-
+    val bindAttrToPw2 = 
+      "input [placeholder]" #> resSignUpPlaceholderRepeatPassword & 
+            "input [value]" #> "" 
+    val pwdr = bindAttrToPw2(pw2)
     (pwd, pwdr)
   }
 
