@@ -22,6 +22,7 @@ import S._
 trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends KeyedMetaMapper[Long, ModelType] with GenProtoUser {
   self: ModelType =>
 
+  private val logger = Logger(classOf[BootstrapMegaMetaProtoUser[ModelType]])   
   //overriding lift-core i18 localization to add glyphicons to User menu entries (IF USER SETS fobo.xxx IN APP RESOURCE BUNDLE)  
   //with fallback back to the i18n lift-core localization properties 
   /**
@@ -615,8 +616,14 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
       }
     }
 
-    def innerEdit = bind("user", editXhtml(theUser),
-      "submit" -> editSubmitButton(resEditSubmitSave, testEdit _, submitAttr: _*))
+//replacing bind
+//    def innerEdit = bind("user", editXhtml(theUser),
+//      "submit" -> editSubmitButton(resEditSubmitSave, testEdit _, submitAttr: _*))
+ 
+    def innerEdit = {
+      ("type=submit" #> editSubmitButton(resEditSubmitSave, testEdit _, submitAttr: _*)) apply editXhtml(theUser)
+    }
+      
     innerEdit
   }
 
@@ -636,74 +643,99 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
      </form>)
   }
 
+  /*
+   * 
+  def changePasswordXhtml = {
+    (<form method="post" action={S.uri}>
+        <table><tr><td colspan="2">{S.?("change.password")}</td></tr>
+          <tr><td>{S.?("old.password")}</td><td><input type="password" class="old-password" /></td></tr>
+          <tr><td>{S.?("new.password")}</td><td><input type="password" class="new-password" /></td></tr>
+          <tr><td>{S.?("repeat.password")}</td><td><input type="password" class="new-password" /></td></tr>
+          <tr><td>&nbsp;</td><td><input type="submit" /></td></tr>
+        </table>
+     </form>)
+  }
+   */
+  
   override def changePasswordXhtml = {
     (<form class="form-horizontal" role="form" method="post" action={ S.uri }>
        <legend>{ resChangePasswordLegendChangePassword }</legend>
        <div class="form-group">
          <label for="oldpassword" class="col-lg-3 control-label">{ resChangePasswordLabelOldPassword }</label>
          <div class="col-lg-9">
-           <user:old_pwd/>
+           <input type="password" class="old-password form-control" placeholder={resChangePasswordPlaceholderOldPassword} />
          </div>
        </div>
        <div class="form-group">
          <label for="newpassword" class="col-lg-3 control-label">{ resChangePasswordLabelNewPassword }</label>
          <div class="col-lg-9">
-           <user:new_pwd/>
+           <input type="password" class="new-password form-control" placeholder={resChangePasswordPlaceholderNewPassword}/>
          </div>
        </div>
        <div class="form-group">
          <label for="repeatpassword" class="col-lg-3 control-label">{ resChangePasswordLabelRepeatPassword }</label>
          <div class="col-lg-9">
-           <user:new_pwd/>
+           <input type="password" class="comp-password form-control" placeholder={resChangePasswordPlaceholderNewPassword}/>
          </div>
        </div>
        <div class="form-group">
          <div class="col-lg-offset-3 col-lg-10">
-           <user:submit/>
+           <input type="submit" class="btn btn-default"/>
          </div>
        </div>
-     </form>)
+     </form>) 
   }
+  
+//  override def changePasswordXhtml = {
+/*    (<form method="post" action={S.uri}>
+        <table><tr><td colspan="2">{S.?("change.password")}</td></tr>
+          <tr><td>{S.?("old.password")}</td><td><input type="password" class="old-password" /></td></tr>
+          <tr><td>{S.?("new.password")}</td><td><input type="password" class="new-password" /></td></tr>
+          <tr><td>{S.?("repeat.password")}</td><td><input type="password" class="new-password" /></td></tr>
+          <tr><td>&nbsp;</td><td><input type="submit" /></td></tr>
+        </table>
+     </form>) */
+//  }
 
   override def changePassword = {
     val user = currentUser.openOrThrowException("we can do this because the logged in test has happened")
     var oldPassword = ""
     var newPassword: List[String] = Nil
 
-    val oldPwAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "form-control", "placeholder" -> resChangePasswordPlaceholderOldPassword, "autofocus" -> "autofocus")
-    val newPwAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "form-control", "placeholder" -> resChangePasswordPlaceholderNewPassword)
-    val submitAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "btn btn-default")
-    
+//    val oldPwAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "form-control", "placeholder" -> resChangePasswordPlaceholderOldPassword, "autofocus" -> "autofocus")
+//    val newPwAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "form-control", "placeholder" -> resChangePasswordPlaceholderNewPassword)
+//    val submitAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "btn btn-default")
+//    
 
     def testAndSet() {
+      logger.info("changePassword::testAndSet oldPassword="+oldPassword+" newPassword="+newPassword.toString)
       if (!user.testPassword(Full(oldPassword))) S.error(S.?("wrong.old.password"))
       else {
         user.setPasswordFromListString(newPassword)
         user.validate match {
-          case Nil =>
-            user.save; S.notice(S.?("password.changed")); S.redirectTo(homePage)
+          case Nil => user.save; S.notice(S.?("password.changed")); S.redirectTo(homePage)
           case xs => S.error(xs)
         }
       }
     }
-
-    bind("user", changePasswordXhtml,
-      "old_pwd" -> SHtml.password("", s => oldPassword = s, oldPwAttr: _*),
-      "new_pwd" -> SHtml.password_*("", LFuncHolder(s => newPassword = s), newPwAttr: _*),
-      "submit" -> changePasswordSubmitButton(resChangePasswordSubmitChange, testAndSet _, submitAttr: _*) /*"submit" -> transformInputSubmitToButton(changePasswordSubmitButton(i18nSubmitLabel, testAndSet _ ,submitAttr: _* ),resSubmitPasswordChange) */ )
+    
+    val bind = {
+      ".old-password" #> SHtml.password("", s => oldPassword = s) &
+      ".new-password" #> SHtml.password_*("", LFuncHolder(s => newPassword = s)) &
+      ".comp-password" #> SHtml.password_*("", LFuncHolder(s => newPassword = newPassword++s)) &
+      "type=submit" #> myChangePasswordSubmitButton(resChangePasswordSubmitChange, testAndSet _)  
+    } 
+    bind(changePasswordXhtml)
   }
   
-  /*
-  protected def transformInputSubmitToButton(in: NodeSeq, newChild: NodeSeq): NodeSeq = in match {
-    case elem @ Elem(_,"input", attribs, _, _*) => elem.asInstanceOf[Elem] copy (attributes = attribs.remove("value")) copy (label = "button") copy (child = newChild)
-    case other @ _ => other
-  }   
-  */
+//  protected def myChangePasswordSubmitButton(name: StringOrNodeSeq, func: () => Any, attrs: SHtml.ElemAttr*): NodeSeq = {
+//    inputSubmitButtonWithAttribs(name, func, attrs: _*)
+//  }
 
-  protected def changePasswordSubmitButton(name: StringOrNodeSeq, func: () => Any, attrs: SHtml.ElemAttr*): NodeSeq = {
-    inputSubmitButtonWithAttribs(name, func, attrs: _*)
+  def myChangePasswordSubmitButton(name: StringOrNodeSeq, func: () => Any = () => {}): NodeSeq = {
+    SHtml.button(name, func)
   }
-
+  
   protected def inputSubmitButtonWithAttribs(name: StringOrNodeSeq, func: () => Any, attrs: SHtml.ElemAttr*) = {
     SHtml.button(name, func, attrs: _*)
   }
