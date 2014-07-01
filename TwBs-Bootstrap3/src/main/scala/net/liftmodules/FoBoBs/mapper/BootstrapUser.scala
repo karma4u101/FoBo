@@ -685,30 +685,14 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
        </div>
      </form>) 
   }
-  
-//  override def changePasswordXhtml = {
-/*    (<form method="post" action={S.uri}>
-        <table><tr><td colspan="2">{S.?("change.password")}</td></tr>
-          <tr><td>{S.?("old.password")}</td><td><input type="password" class="old-password" /></td></tr>
-          <tr><td>{S.?("new.password")}</td><td><input type="password" class="new-password" /></td></tr>
-          <tr><td>{S.?("repeat.password")}</td><td><input type="password" class="new-password" /></td></tr>
-          <tr><td>&nbsp;</td><td><input type="submit" /></td></tr>
-        </table>
-     </form>) */
-//  }
 
   override def changePassword = {
     val user = currentUser.openOrThrowException("we can do this because the logged in test has happened")
     var oldPassword = ""
-    var newPassword: List[String] = Nil
-
-//    val oldPwAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "form-control", "placeholder" -> resChangePasswordPlaceholderOldPassword, "autofocus" -> "autofocus")
-//    val newPwAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "form-control", "placeholder" -> resChangePasswordPlaceholderNewPassword)
-//    val submitAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "btn btn-default")
-//    
+    var newPassword: List[String] = Nil   
 
     def testAndSet() {
-      logger.info("changePassword::testAndSet oldPassword="+oldPassword+" newPassword="+newPassword.toString)
+      //logger.info("changePassword::testAndSet oldPassword="+oldPassword+" newPassword="+newPassword.toString)
       if (!user.testPassword(Full(oldPassword))) S.error(S.?("wrong.old.password"))
       else {
         user.setPasswordFromListString(newPassword)
