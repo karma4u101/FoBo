@@ -35,9 +35,10 @@ import common._
  * The following is a list of available toolkits and plugins 
  *  
  *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.0] [[net.liftmodules.FoBoJQ]]
- *  - Bootstrap v3.x serie [v3.0.0, v3.0.1, v3.1.1] [[net.liftmodules.FoBoBs]]
+ *  - Bootstrap v3.x serie [v3.0.0, v3.0.1, v3.1.1, v3.2.0] [[net.liftmodules.FoBoBs]]
  *  - Bootstrap v2.x serie [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2] [[net.liftmodules.FoBoTB]]
  *  - Font Awesome [v2.0.0, v3.0.0, v3.2.1, v4.0.1, v4.0.3] [[net.liftmodules.FoBoFA]]
+ *  - Kinetic JS [v5.1.0]
  *  - Foundation [v2.1.5] 
  *  - DataTables [v1.9.0]
  *  - JQuery-mobile [v1.0.1, v1.1.0]
@@ -834,6 +835,21 @@ case object Bootstrap301 extends FoBoToolkit {
  */
 case object Bootstrap311 extends FoBoToolkit {
   net.liftmodules.FoBoBs.Bootstrap311
+}
+
+/**
+ * Enable usage of Twitter Bootstrap version 3.2.0 in your bootstrap liftweb Boot.
+ * @version 3.2.0
+ * 
+ * '''Example'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap320
+ * }}}
+ * @since v1.3
+ */
+case object Bootstrap320 extends FoBoToolkit {
+  net.liftmodules.FoBoBs.Bootstrap320
 }
 
 /**

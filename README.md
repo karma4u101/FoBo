@@ -28,6 +28,7 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Updates:**
+- **2014-07-02** -- Module v1.3-SNAPSHOT Adding bootstrap v3.2.0 
 - **2014-07-02** -- Module v1.3-SNAPSHOT Cleaning out usage of bind and BindHelper functions, replacing it with css selectors.
 - **2014-06-22** -- Module v1.3-SNAPSHOT Added JQuery-Migrate v1.2.1 
 - **2014-06-09** -- Module v1.3-SNAPSHOT Added KineticJS v5.1.0
@@ -39,7 +40,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - **2014-04-18** -- Module v1.3-SNAPSHOT Bumping sbt to v0.13.1. Removing dependency on yui-compression and upgraded to use sbt-0.13 
 
 **Latest Snapshot Release:**
-- **2014-07-02** -- Module v1.3-SNAPSHOT's released for Lift v2.6 (Scala 2.11.x, 2.10.x, 2.9.2, 2.9.1-1, 2.9.1)
+- **2014-07-02** -- Module v1.3-SNAPSHOT's released for Lift v2.6 (Scala 2.11.x, 2.10.x, 2.9.2, 2.9.1-1, 2.9.1) and Lift v3.0
 - **2014-06-08** -- Module v1.3 Scala 2.11 artifact released for Lift v2.6
 - **2014-05-24** -- Module v1.3-M1 artifact released for Lift 3.0-M1
 - **2014-05-15** -- Module v1.3-SNAPSHOT
