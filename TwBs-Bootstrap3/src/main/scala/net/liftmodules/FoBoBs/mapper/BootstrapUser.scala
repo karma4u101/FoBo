@@ -546,7 +546,7 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
     }
   }
 
-  //This is a hack, as I could not find a proper way to properly override the signupFields _toForm functions   
+  //This is a bit of a hack, as I could not find a proper way to properly override the signupFields _toForm functions   
   protected def extractLocalFormPasswordField(form: NodeSeq, field: BaseField): (NodeSeq, NodeSeq) = {
     val pwInputElems = form \ "input"
     val bindAttrToPwInputElems =  "input [class]" #> "form-control"
@@ -577,10 +577,10 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
         case xs => S.error(xs); signupFunc(Full(innerSignup _))
       }
     }
-
-    def innerSignup = bind("user",
-      signupXhtml(theUser),
-      "submit" -> signupSubmitButton(resSignUpSubmitSignUp, testSignup _, submitAttr: _*))
+    
+    def innerSignup = {
+      ("type=submit" #> signupSubmitButton(resSignUpSubmitSignUp, testSignup _, submitAttr: _*)) apply signupXhtml(theUser)
+    }      
     innerSignup
   }
 
@@ -594,7 +594,7 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
        { localForm(user, false, signupFields) }
        <div class="form-group">
          <div class="col-lg-offset-3 col-lg-10">
-           <user:submit/>
+           <input type="submit" />
          </div>
        </div>
      </form>)
@@ -615,10 +615,6 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
         case xs => S.error(xs); editFunc(Full(innerEdit _))
       }
     }
-
-//replacing bind
-//    def innerEdit = bind("user", editXhtml(theUser),
-//      "submit" -> editSubmitButton(resEditSubmitSave, testEdit _, submitAttr: _*))
  
     def innerEdit = {
       ("type=submit" #> editSubmitButton(resEditSubmitSave, testEdit _, submitAttr: _*)) apply editXhtml(theUser)
@@ -637,25 +633,11 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
        { localForm(user, true, editFields) }
        <div class="form-group">
          <div class="col-lg-offset-3 col-lg-10">
-           <user:submit/>
+           <input type="submit" />
          </div>
        </div>
      </form>)
   }
-
-  /*
-   * 
-  def changePasswordXhtml = {
-    (<form method="post" action={S.uri}>
-        <table><tr><td colspan="2">{S.?("change.password")}</td></tr>
-          <tr><td>{S.?("old.password")}</td><td><input type="password" class="old-password" /></td></tr>
-          <tr><td>{S.?("new.password")}</td><td><input type="password" class="new-password" /></td></tr>
-          <tr><td>{S.?("repeat.password")}</td><td><input type="password" class="new-password" /></td></tr>
-          <tr><td>&nbsp;</td><td><input type="submit" /></td></tr>
-        </table>
-     </form>)
-  }
-   */
   
   override def changePasswordXhtml = {
     (<form class="form-horizontal" role="form" method="post" action={ S.uri }>

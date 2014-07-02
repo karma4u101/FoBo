@@ -28,9 +28,10 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
 **Latest Updates:**
+- **2014-07-02** -- Module v1.3-SNAPSHOT Cleaning out usage of bind and BindHelper functions, replacing it with css selectors.
 - **2014-06-22** -- Module v1.3-SNAPSHOT Added JQuery-Migrate v1.2.1 
 - **2014-06-09** -- Module v1.3-SNAPSHOT Added KineticJS v5.1.0
-- **2014-06-08** -- Module v1.3 Scala 2.11 artifact released for Lift v2.6
+- **2014-06-08** -- Module v1.3-SNAPSHOT Scala 2.11 artifact released for Lift v2.6
 - **2014-05-24** -- Module v1.3-M1 artifact released for Lift 3.0-M1
 - **2014-05-24** -- Module v1.3-SNAPSHOT Adding JQuery v1.11.1 and v2.1.1
 - **2014-05-17** -- Module v1.3-SNAPSHOT Adding resource injection snippets to FoBo, Angular, Bootstrap 3.x and Bootstrap 2.x 
