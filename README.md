@@ -213,11 +213,26 @@ Put the following into your lift Boot
 
 Put something like the following in your Lift templat(s) head section (see below for available names)	
  	
-    <link rel="stylesheet" type='text/css' href='/classpath/fobo/[css file name]'> 	
+    <link rel="stylesheet" type='text/css' href='/classpath/fobo/[css file name]'>
+    <link rel="stylesheet" type='text/css' href='/classpath/fobo/[another css file name]'> 
+    <link rel="stylesheet" type='text/css' href='/classpath/fobo/[a third css file name]'>
+      :	
     <link rel="stylesheet" type='text/css' href='[path/to/you/app/specific/css/file/in/the/webapp/dir]'>
+      :
     <script type="text/javascript" src="/classpath/fobo/[script file name]"></script>
+    <script type="text/javascript" src="/classpath/fobo/[another script file name]"></script>
+    <script type="text/javascript" src="/classpath/fobo/[a third script file name]"></script>
+      :
 
 For more information see readme in respective sub module.
+You can now also use use FoBo's resource injection snippet to inject all your fobo css and js resources 
+
+    <link data-lift="FoBo.Resources.injectCSS?resources=file name,another file name,a third file name,..."></link>	
+    <link rel="stylesheet" type='text/css' href='[path/to/you/app/specific/css/file/in/the/webapp/dir]'>
+    <script data-lift="FoBo.Resources.injectJS?resources=file name,another file name,a third file name,..."></script>
+
+For more information see [FoBo API: Resources](http://www.media4u101.se/fobo-lift-template-demo/foboapi/index.html#net.liftmodules.FoBo.snippet.FoBo.Resources)
+
 
 Available CSS and JavaScript files 
 ----------------------------------
