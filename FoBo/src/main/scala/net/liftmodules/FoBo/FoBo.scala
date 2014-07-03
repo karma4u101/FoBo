@@ -128,6 +128,9 @@ abstract trait FoBoToolkit
  *  //add a vertical menu divider 
  *  divider2 >> LocGroup(...) >> FoBo.TBLocInfo.DividerVertical,
  *   : 
+ *  //open link in new tab 
+ *  ... FoBo.TBLocInfo.LinkTargetBlank
+ *   : 
  * }}} 
  * @since v1.0
  */
@@ -172,13 +175,22 @@ object TBLocInfo {
    */
   val DividerVertical = new net.liftweb.sitemap.Loc.LocInfo[String]{def apply() = vd.map(x => () => x) }  
   /**
-   * Add nav header(s) to your bootstrap nav list.
-   * For a usage example see the NavHeader val above. 
+   * Add nav header(s) to your bootstrap nav list. A NavHeader is a text label that can be used to label a navbar 
+   * or a section of the navbar. 
+   * For a usage example see the NavHeader val above.  
    * @since v1.0
    */
   val NavHeader = new net.liftweb.sitemap.Loc.LocInfo[String]{def apply() = nh.map(x => () => x) } 
   /**
    * Adds target="_blank" to the link
+   * 
+   * {{{
+   * val AngularJS       = Menu(Loc("AngularJS", 
+   *     ExtLink("http://angularjs.org/"), 
+   *     S.loc("AngularJS" , scala.xml.Text("AngularJS")),
+   *     LocGroup("lg2"),
+   *     FoBo.TBLocInfo.LinkTargetBlank  )) 
+   * }}}
    * @since v1.2
    */   
   val LinkTargetBlank = new net.liftweb.sitemap.Loc.LocInfo[String]{def apply() = ltb.map(x => () => x) } 

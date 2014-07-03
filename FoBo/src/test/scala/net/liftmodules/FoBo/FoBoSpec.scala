@@ -169,6 +169,12 @@ object FoBoSpec extends Specification  {
     }       
   }
   
+  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap320 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.2.0/js/bootstrap-min.js" in {
+      rewriteBootstrap320JS must_== List("fobo", "bootstrap", "3.2.0", "js", "bootstrap.min.js")
+    }       
+  }  
+  
   /////////////////////////////////////////////////////////////////////////////////////////////////////
  
   //JQuery and JQuery Migrate
@@ -371,6 +377,11 @@ object FoBoSpec extends Specification  {
    
    def rewriteBootstrap232JS = {
     FoBo.InitParam.ToolKit=FoBo.Bootstrap232
+    ResourceServer.pathRewriter("fobo"::"bootstrap.js"::Nil)
+  } 
+   
+   def rewriteBootstrap320JS = {
+    FoBo.InitParam.ToolKit=FoBo.Bootstrap320
     ResourceServer.pathRewriter("fobo"::"bootstrap.js"::Nil)
   }    
   

@@ -59,13 +59,15 @@ New upcoming features in FoBo v1.3
     KineticJS is an HTML5 Canvas JavaScript framework that enables high performance animations, transitions, node nesting, layering, filtering, caching, event handling for desktop and mobile applications, and much more. 
 
 ###FoBo v1.3 has updates to the following sub modules
+-   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) v3.2.0 - [Bootstrap 3.x](http://getbootstrap.com/)
+-   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.1.0 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v1.11.1 - [JQuery](http://jquery.com/)
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) also adds JQuery-Migrate v1.2.1 [JQuery-Migrate](https://github.com/jquery/jquery-migrate/) 
     JQuery-Migrate is useful for migrating older jQuery code to jQuery 1.9+ it can be used for detecting and restoring APIs or features that have been deprecated in jQuery
--   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.1.0 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
+
 
 ###FoBo v1.3 FoBo API updates
--   Added resource injection snippets to FoBo, AngularJS, Bootstrap 3.x and Bootstrap 2.x 
+-   Added resource injection snippets to FoBo, AngularJS, Bootstrap 3.x and Bootstrap 2.x see [FoBo API documentation](http://www.media4u101.se/fobo-lift-template-demo/foboapi/index.html#net.liftmodules.FoBo.package) for more information.
 
 
 New features in FoBo v1.2

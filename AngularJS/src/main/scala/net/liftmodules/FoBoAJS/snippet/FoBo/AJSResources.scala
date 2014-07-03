@@ -11,6 +11,7 @@ import Helpers._
  * ==AJSResources Snippet==
  * 
  * This snippet class lets you inject FoBo Angular resources into your templates.
+ * Instead of hand write the resource tags you can use this helper snippet to inject it for you.  
  * 
  * '''Example''' Invoke with 
  * {{{ data-lift="FoBo.AJSResources.functionName?paramName=paramValue&...." }}} 

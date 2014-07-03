@@ -11,6 +11,7 @@ import Helpers._
  * ==TBResources Snippet==
  * 
  * This snippet class lets you inject FoBo Bootstrap 2.x resources into your templates.
+ * Instead of hand write the resource tags you can use this helper snippet to inject it for you.   
  * 
  * '''Example''' Invoke with 
  * {{{ data-lift="FoBo.TBResources.functionName?paramName=paramValue&...." }}} 

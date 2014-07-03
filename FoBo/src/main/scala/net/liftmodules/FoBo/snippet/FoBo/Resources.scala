@@ -10,7 +10,8 @@ import Helpers._
 /**
  * ==Resources Snippet==
  * 
- * This snippet class lets you inject FoBo resources into your templates.
+ * This snippet class lets you inject FoBo resources into your templates. Instead of hand write the resource tags
+ * you can use this helper snippet to inject it for you.   
  * 
  * '''Example''' Invoke with 
  * {{{ data-lift="FoBo.Resources.functionName?paramName=paramValue&...." }}} 
@@ -36,7 +37,7 @@ class Resources extends StatefulSnippet {
    * {{{
    * <script src="/classpath/fobo/prettify.js" type="text/javascript"></script>
    * <script src="/classpath/fobo/lang-scala.js" type="text/javascript"></script>     
-   * <script src="/classpath/fobo/jquery.js" id="jquery" type="text/javascript"></script>
+   * <script src="/classpath/fobo/jquery.js" type="text/javascript"></script>
    * <script src="/classpath/fobo/bootstrap.js" type="text/javascript"></script>
    * <script src="/classpath/fobo/angular.js" type="text/javascript"></script>
    * <script src="/classpath/fobo/angular-animate.js" type="text/javascript"></script>
@@ -71,7 +72,7 @@ class Resources extends StatefulSnippet {
    * <link href="/classpath/fobo/bootstrap.css" rel="stylesheet" type="text/css" />
    * <link href="/classpath/fobo/bootstrap-theme.css" rel="stylesheet" type="text/css" />
    * <link href="/classpath/fobo/font-awesome.css" rel="stylesheet" type="text/css"/>
-   * <link href='/classpath/fobo/ng-grid.css' rel="stylesheet" type='text/css' />
+   * <link href="/classpath/fobo/ng-grid.css" rel="stylesheet" type="text/css" />
    * <link href="/classpath/fobo/prettify.css" rel="stylesheet" type="text/css" /> 
    * }}}   
    * 
