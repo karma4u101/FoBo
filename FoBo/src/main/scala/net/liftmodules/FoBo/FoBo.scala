@@ -232,7 +232,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
 
 
   /**
-   * Enable usage of KineticJS version 5.1.0 in your bootstrap liftweb Boot.
+   * Enable usage of KineticJS version 5&sdot;1&sdot;0 in your bootstrap liftweb Boot.
    * @version 5.1.0
    *
    *  '''Lift Boot:'''

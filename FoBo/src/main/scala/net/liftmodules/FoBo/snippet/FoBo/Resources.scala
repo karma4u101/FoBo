@@ -54,8 +54,9 @@ class Resources extends StatefulSnippet {
       } yield  <script type="text/javascript" src={ "/classpath/fobo/" + r + ".js" } ></script>  )
       result    
     }    
-    val res = S.attr("resources").map(_.split(',').map(_.trim).toSet).openOr(Set())
-     " *" #> transform(res.toList)
+    //we can't use set (it is not garantied to perserve order) so we use distinct on list instead.
+    val sres = S.attr("resources").map(x => x.split(',').map(x => x.trim).toList.distinct).openOr(List())
+     " *" #> transform(sres)
   }
   
 
@@ -85,8 +86,8 @@ class Resources extends StatefulSnippet {
       } yield  <link type="text/css" rel="stylesheet" href={ "/classpath/fobo/" + r + ".css" } />  )
       result 
     }     
-    val res = S.attr("resources").map(_.split(',').map(_.trim).toSet).openOr(Set())
-     " *" #> transform(res.toList)
+    val sres = S.attr("resources").map(x => x.split(',').map(x => x.trim).toList.distinct).openOr(List())
+     " *" #> transform(sres)
   }
   
 //  private def jsResources(res: List[String]): List[scala.xml.Elem] = {

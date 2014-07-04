@@ -44,7 +44,7 @@ class TBResources extends StatefulSnippet {
    * @since v1.3         
    */    
   def injectJS:net.liftweb.util.CssSel = {
-    val res = S.attr("resources").map(_.split(',').map(_.trim).toList).openOr(List())
+    val res = S.attr("resources").map(x => x.split(',').map(x => x.trim).toList.distinct).openOr(List())
      " *" #> jsResources(res)
   }
   
@@ -67,7 +67,7 @@ class TBResources extends StatefulSnippet {
    * @since v1.3         
    */    
   def injectCSS:net.liftweb.util.CssSel = {
-    val res = S.attr("resources").map(_.split(',').map(_.trim).toList).openOr(List())
+    val res = S.attr("resources").map(x => x.split(',').map(x => x.trim).toList.distinct).openOr(List())
      " *" #> cssResources(res)
   }
   
