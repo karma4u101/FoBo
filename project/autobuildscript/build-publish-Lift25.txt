@@ -1,9 +1,6 @@
-alias pub=publish-local-signed
+alias pub=publish-signed
 
 set version       in ThisBuild:="1.3-SNAPSHOT"
-
-set scalacOptions in ThisBuild ++= Seq("-target:jvm-1.5", "-encoding", "UTF-8")
-set javacOptions  in ThisBuild ++= Seq("-source", "1.5", "-target", "1.5")
 
 set liftVersion   in ThisBuild:="2.5"
 set scalaVersion  in ThisBuild:="2.10.0"
