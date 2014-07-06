@@ -38,7 +38,7 @@ abstract trait FoBoToolkit
 
 /**
  * Extends your Lift SiteMap with various common bootstrap menu manipulations such 
- * as horizontal and vertical menu dividers and menu labels (labels coming soon).
+ * as horizontal and vertical menu dividers and menu labels.
  *  
  * This object should be used in conjunction with the TB* menu builder objects in [[net.liftmodules.FoBo.snippet.FoBo]] snippet's.
  * 
@@ -120,7 +120,7 @@ object TBLocInfo {
 }
 
 /**
- * Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot
+ * Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot.
  *
  * '''Example:'''
  *  
@@ -136,7 +136,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
 }
 
 /**
- * Enable usage of Twitter Bootstrap version 2_1_0 in your bootstrap liftweb Boot.
+ * Enable usage of Twitter Bootstrap version 2&sdot;1&sdot;0 in your bootstrap liftweb Boot.
  * @version 2.1.0
  * 
  * '''Example'''
@@ -150,7 +150,7 @@ case object Bootstrap210 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Twitter Bootstrap version 2_2_0 in your bootstrap liftweb Boot.
+ * Enable usage of Twitter Bootstrap version 2&sdot;2&sdot;0 in your bootstrap liftweb Boot.
  * @version 2.2.0
  * 
  * '''Example'''
@@ -164,7 +164,7 @@ case object Bootstrap220 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Twitter Bootstrap version 2_2_2 in your bootstrap liftweb Boot.
+ * Enable usage of Twitter Bootstrap version 2&sdot;2&sdot;2 in your bootstrap liftweb Boot.
  * @version 2.2.2
  * 
  * '''Example'''
@@ -178,7 +178,7 @@ case object Bootstrap222 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Twitter Bootstrap version 2_3_0 in your bootstrap liftweb Boot.
+ * Enable usage of Twitter Bootstrap version 2&sdot;3&sdot;0 in your bootstrap liftweb Boot.
  * @version 2.3.0
  * 
  * '''Example'''
@@ -192,7 +192,7 @@ case object Bootstrap230 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Twitter Bootstrap version 2_3_1 in your bootstrap liftweb Boot.
+ * Enable usage of Twitter Bootstrap version 2&sdot;3&sdot;1 in your bootstrap liftweb Boot.
  * @version 2.3.1
  * 
  * '''Example'''
@@ -206,7 +206,7 @@ case object Bootstrap231 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Twitter Bootstrap version 2_3_2 in your bootstrap liftweb Boot.
+ * Enable usage of Twitter Bootstrap version 2&sdot;3&sdot;2 in your bootstrap liftweb Boot.
  * @version 2.3.2
  * 
  * '''Example'''

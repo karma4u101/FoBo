@@ -34,7 +34,7 @@ package object FoBoJQ {
  
   
    /**
-   * Enable usage of JQuery-migrate version 1.2.1 in your bootstrap liftweb Boot.
+   * Enable usage of JQuery-migrate version 1&sdot;2&sdot;1 in your bootstrap liftweb Boot.
    * @version 1.2.1
    *
    * '''Example:'''
@@ -49,7 +49,7 @@ package object FoBoJQ {
   }  
   
   /**
-   * Enable usage of JQuery version 2.1.1 in your bootstrap liftweb Boot.
+   * Enable usage of JQuery version 2&sdot;1&sdot;1 in your bootstrap liftweb Boot.
    * @version 2.1.1
    * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
    *
@@ -65,7 +65,7 @@ case object JQuery211 extends FoBoJQ {
 }  
 
 /**
- * Enable usage of JQuery version 1.11.1 in your bootstrap liftweb Boot.
+ * Enable usage of JQuery version 1&sdot;11&sdot;1 in your bootstrap liftweb Boot.
  * @version 1.11.1
  * 
  * '''Example:'''
@@ -80,7 +80,7 @@ case object JQuery1111 extends FoBoJQ {
 }
 
 /**
- * Enable usage of JQuery version 1.11.0 in your bootstrap liftweb Boot.
+ * Enable usage of JQuery version 1&sdot;11&sdot;0 in your bootstrap liftweb Boot.
  * @version 1.11.0
  * 
  * '''Example:'''
@@ -96,7 +96,7 @@ case object JQuery1110 extends FoBoJQ {
 }
 
 /**
- * Enable usage of JQuery version 1_1_0_2 in your bootstrap liftweb Boot.
+ * Enable usage of JQuery version 1&sdot;10&sdot;2 in your bootstrap liftweb Boot.
  * @version 1.10.2
  * 
  * '''Example:'''
@@ -110,7 +110,7 @@ case object JQuery1102 extends FoBoJQ {
 }
 
 /**
- * Enable usage of JQuery version 1_9_1 in your bootstrap liftweb Boot.
+ * Enable usage of JQuery version 1&sdot;9&sdot;1 in your bootstrap liftweb Boot.
  * @version 1.9.1
  * 
  * '''Example:'''
@@ -124,7 +124,7 @@ case object JQuery191 extends FoBoJQ {
 }  
   
 /**
- * Enable usage of JQuery version 1_8_2 in your bootstrap liftweb Boot.
+ * Enable usage of JQuery version 1&sdot;8&sdot;2 in your bootstrap liftweb Boot.
  * @version 1.8.2
  * 
  * '''Example:'''
@@ -138,7 +138,7 @@ case object JQuery182 extends FoBoJQ {
 }
 
 /**
- * Enable usage of JQuery version 1_7_2 in your bootstrap liftweb Boot.
+ * Enable usage of JQuery version 1&sdot;7&sdot;2 in your bootstrap liftweb Boot.
  * @version 1.7.2
  * 
  * '''Example:'''

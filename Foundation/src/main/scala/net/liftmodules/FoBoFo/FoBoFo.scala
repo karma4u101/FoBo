@@ -33,7 +33,7 @@ package object FoBoFo {
 
   
 /**
- * Enable usage of Foundation version 2_1_5 in your bootstrap liftweb Boot.
+ * Enable usage of Foundation version 2&sdot;1&sdot;5 in your bootstrap liftweb Boot.
  * @version 2.1.5
  * 
  * '''Example'''

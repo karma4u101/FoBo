@@ -33,7 +33,7 @@ package object FoBoFA {
 
     
      /**
-     * Enable usage of Font-Awesome version 4.1.0 in your bootstrap liftweb Boot.
+     * Enable usage of Font-Awesome version 4&sdot;1&sdot;0 in your bootstrap liftweb Boot.
      * @version 4.1.0
      *
      *  '''Example:'''
@@ -48,7 +48,7 @@ package object FoBoFA {
     }     
     
      /**
-     * Enable usage of Font-Awesome version 4.0.3 in your bootstrap liftweb Boot.
+     * Enable usage of Font-Awesome version 4&sdot;0&sdot;3 in your bootstrap liftweb Boot.
      * @version 4.0.3
      *
      *  '''Example:'''
@@ -63,7 +63,7 @@ package object FoBoFA {
     } 
     
      /**
-     * Enable usage of Font-Awesome version 4.0.1 in your bootstrap liftweb Boot.
+     * Enable usage of Font-Awesome version 4&sdot;0&sdot;1 in your bootstrap liftweb Boot.
      * @version 4.0.1
      *
      *  '''Example:'''
@@ -79,7 +79,7 @@ package object FoBoFA {
     }    
     
      /**
-     * Enable usage of Font-Awesome version 3.2.1 in your bootstrap liftweb Boot.
+     * Enable usage of Font-Awesome version 3&sdot;2&sdot;1 in your bootstrap liftweb Boot.
      * @version 3.2.1
      *
      *  '''Example:'''
@@ -94,7 +94,7 @@ package object FoBoFA {
     }
     
     /**
-     * Enable usage of Font-Awesome version 3.0.0 in your bootstrap liftweb Boot.
+     * Enable usage of Font-Awesome version 3&sdot;0&sdot;0 in your bootstrap liftweb Boot.
      * @version 3.0.0
      *
      *  '''Example:'''
@@ -111,7 +111,7 @@ package object FoBoFA {
         
 
     /**
-     * Enable usage of Font-Awesome version 2.0.0 in your bootstrap liftweb Boot.
+     * Enable usage of Font-Awesome version 2&sdot;0&sdot;0 in your bootstrap liftweb Boot.
      * @version 2.0.0
      *
      *  '''Example:'''
@@ -127,7 +127,7 @@ package object FoBoFA {
     }
     
     /**
-     * Enable usage of Font-Awesome version 2.0.0 in your bootstrap liftweb Boot.
+     * Enable usage of Font-Awesome version 2&sdot;0&sdot;0 in your bootstrap liftweb Boot.
      * 
      * @version 2.0.0
      *

@@ -89,18 +89,5 @@ class Resources extends StatefulSnippet {
     val sres = S.attr("resources").map(x => x.split(',').map(x => x.trim).toList.distinct).openOr(List())
      " *" #> transform(sres)
   }
-  
-//  private def jsResources(res: List[String]): List[scala.xml.Elem] = {
-//    val result = (for {
-//      r <- res
-//    } yield  <script type="text/javascript" src={ "/classpath/fobo/" + r + ".js" } ></script>  )
-//    result    
-//  }
-//  
-//  private def cssResources(res: List[String]):List[scala.xml.Elem] = {
-//    val result = (for {
-//      r <- res
-//    } yield  <link type="text/css" rel="stylesheet" href={ "/classpath/fobo/" + r + ".css" } />  )
-//    result 
-//  }   
+    
 }

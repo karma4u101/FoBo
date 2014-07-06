@@ -33,7 +33,7 @@ package object FoBoPa {
 
   
 /**
- * Enable usage of Pace version 0_4_15 in your bootstrap liftweb Boot.
+ * Enable usage of Pace version 0&sdot;4&sdot;15 in your bootstrap liftweb Boot.
  * @version 0.4.15
  * 
  * '''Example:'''
