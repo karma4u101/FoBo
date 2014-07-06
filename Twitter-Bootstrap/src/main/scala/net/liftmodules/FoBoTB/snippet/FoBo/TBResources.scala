@@ -44,8 +44,15 @@ class TBResources extends StatefulSnippet {
    * @since v1.3         
    */    
   def injectJS:net.liftweb.util.CssSel = {
+    def transform(res: List[String]): List[scala.xml.Elem] = {
+      val res2 = if(!res.contains("bootstrap")) "bootstrap" :: res else res
+      val result = (for {
+        r <- res2
+      } yield  <script type="text/javascript" src={ "/classpath/fobo/" + r + ".js" } ></script>  )
+      result    
+    }    
     val res = S.attr("resources").map(x => x.split(',').map(x => x.trim).toList.distinct).openOr(List())
-     " *" #> jsResources(res)
+     " *" #> transform(res)
   }
   
   /**
@@ -67,25 +74,16 @@ class TBResources extends StatefulSnippet {
    * @since v1.3         
    */    
   def injectCSS:net.liftweb.util.CssSel = {
+    def transform(res: List[String]):List[scala.xml.Elem] = {
+      val res2 = if(!res.contains("bootstrap")) "bootstrap" :: res else res
+      val res3 = if(!res.contains("bootstrap-responsive")) "bootstrap-responsive" :: res2 else res2
+      val result = (for {
+        r <- res3
+      } yield  <link type="text/css" rel="stylesheet" href={ "/classpath/fobo/" + r + ".css" } />  )
+      result 
+    }     
     val res = S.attr("resources").map(x => x.split(',').map(x => x.trim).toList.distinct).openOr(List())
-     " *" #> cssResources(res)
-  }
-  
-  private def jsResources(res: List[String]): List[scala.xml.Elem] = {
-    val res2 = if(!res.contains("bootstrap")) "bootstrap" :: res else res
-    val result = (for {
-      r <- res2
-    } yield  <script type="text/javascript" src={ "/classpath/fobo/" + r + ".js" } ></script>  )
-    result    
-  }
-  
-  private def cssResources(res: List[String]):List[scala.xml.Elem] = {
-    val res2 = if(!res.contains("bootstrap")) "bootstrap" :: res else res
-    val res3 = if(!res.contains("bootstrap-responsive")) "bootstrap-responsive" :: res2 else res2
-    val result = (for {
-      r <- res3
-    } yield  <link type="text/css" rel="stylesheet" href={ "/classpath/fobo/" + r + ".css" } />  )
-    result 
-  }     
+     " *" #> transform(res)
+  }   
 
 }
