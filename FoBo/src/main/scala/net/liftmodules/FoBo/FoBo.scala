@@ -264,6 +264,38 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   }
 
    /**
+   * Enable usage of AngularJS version 1&sdot;2&sdot;19 in your bootstrap liftweb Boot.
+   *
+   * @version 1.2.19
+   *
+   *  '''Lift Boot:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AngularJS1219
+   *   FoBo.init()
+   * }}}
+   * @since v1.3
+   */
+  case object AngularJS1219 extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AngularJS1219
+  }
+  
+   /**
+   * Enable usage of i18n files for AngularJS version 1&sdot;2&sdot;19 in your bootstrap liftweb Boot.
+   * @version 1.2.19
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AngularJS1219i18n
+   * }}}
+   * @since v1.3
+   */
+  case object AngularJS1219i18n extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AngularJS1219i18n
+  }   
+  
+   /**
    * Enable usage of AngularJS version 1&sdot;2&sdot;11 in your bootstrap liftweb Boot.
    *
    * @version 1.2.11
@@ -276,6 +308,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.2
    */
+  @deprecated("Use AngularJS1219 or later","FoBo v1.3.0")
   case object AngularJS1211 extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AngularJS1211
   }
@@ -291,6 +324,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.2
    */
+  @deprecated("Use AngularJS1219i18n or later","FoBo v1.3.0")
   case object AngularJS1211i18n extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AngularJS1211i18n
   } 

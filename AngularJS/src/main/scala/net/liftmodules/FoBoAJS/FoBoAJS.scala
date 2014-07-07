@@ -31,6 +31,39 @@ package object FoBoAJS {
     var ToolKit: AJSToolkit = null 
   }
  
+  
+  /**
+   * Enable usage of AngularJS version 1&sdot;2&sdot;19 in your bootstrap liftweb Boot.
+   * @version 1.2.19
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBoAJS.InitParam.Toolkit=FoBoAJS.AngularJS1219
+   * }}}
+   *
+   */
+  case object AngularJS1219 extends AJSToolkit {
+    AJSFoBoResources.angularjs1219
+  } 
+  
+   /**
+   * Enable usage of AngularJS i18n files in your bootstrap liftweb Boot.
+   * @version 1.2.19 i18n
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBoAJS.InitParam.Toolkit=FoBoAJS.AngularJS1219i18n
+   * }}}
+   *
+   */
+  case object AngularJS1219i18n extends AJSToolkit {
+    AJSFoBoResources.angularjs1219i18n
+    AJSFoBoResources.angularjs1219i18n2
+  } 
+  
+  
   /**
    * Enable usage of AngularJS version 1&sdot;2&sdot;11 in your bootstrap liftweb Boot.
    * @version 1.2.11
@@ -157,6 +190,345 @@ package object FoBoAJS {
    * Object holding internally used FoBo resources.
    */
   private object AJSFoBoResources {
+    
+    lazy val angularjs1219 = {
+      ResourceServer.rewrite {
+        case "fobo" :: "angular.js" :: Nil if Props.devMode => List("fobo", "angular-js", "1.2.19", "js", "angular.js")
+        case "fobo" :: "angular.js" :: Nil => List("fobo", "angular-js", "1.2.19", "js", "angular.min.js")
+        case "fobo" :: "angular.min.js.map" :: Nil => List("fobo", "angular-js", "1.2.19", "js", "angular.min.js.map")
+
+        case "fobo" :: "angular-animate.js" :: Nil if Props.devMode => List("fobo", "angular-js", "1.2.19", "js", "angular-animate.js")
+        case "fobo" :: "angular-animate.js" :: Nil => List("fobo", "angular-js", "1.2.19", "js", "angular-animate.min.js")
+        case "fobo" :: "angular-animate.min.js.map" :: Nil => List("fobo", "angular-js", "1.2.19", "js", "angular-animate.min.js.map")
+
+        case "fobo" :: "angular-cookies.js" :: Nil if Props.devMode => List("fobo", "angular-js", "1.2.19", "js", "angular-cookies.js")
+        case "fobo" :: "angular-cookies.js" :: Nil => List("fobo", "angular-js", "1.2.19", "js", "angular-cookies.min.js")
+        case "fobo" :: "angular-cookies.min.js.map" :: Nil => List("fobo", "angular-js", "1.2.19", "js", "angular-cookies.min.js.map")
+
+        case "fobo" :: "angular-loader.js" :: Nil if Props.devMode => List("fobo", "angular-js", "1.2.19", "js", "angular-loader.js")
+        case "fobo" :: "angular-loader.js" :: Nil => List("fobo", "angular-js", "1.2.19", "js", "angular-loader.min.js")
+        case "fobo" :: "angular-loader.min.js.map" :: Nil => List("fobo", "angular-js", "1.2.19", "js", "angular.min-loader.js.map")
+        //dev/test only
+        case "fobo" :: "angular-mocks.js" :: Nil if Props.devMode => List("fobo", "angular-js", "1.2.19", "js", "angular-mocks.js")
+
+        case "fobo" :: "angular-resource.js" :: Nil if Props.devMode => List("fobo", "angular-js", "1.2.19", "js", "angular-resource.js")
+        case "fobo" :: "angular-resource.js" :: Nil => List("fobo", "angular-js", "1.2.19", "js", "angular-resource.min.js")
+        case "fobo" :: "angular-resource.min.js.map" :: Nil => List("fobo", "angular-js", "1.2.19", "js", "angular-resource.min.js.map")
+ 
+        case "fobo" :: "angular-route.js" :: Nil if Props.devMode => List("fobo", "angular-js", "1.2.19", "js", "angular-route.js")
+        case "fobo" :: "angular-route.js" :: Nil => List("fobo", "angular-js", "1.2.19", "js", "angular-route.min.js")
+        case "fobo" :: "angular-route.min.js.map" :: Nil => List("fobo", "angular-js", "1.2.19", "js", "angular-route.min.js.map")
+ 
+        case "fobo" :: "angular-sanitize.js" :: Nil if Props.devMode => List("fobo", "angular-js", "1.2.19", "js", "angular-sanitize.js")
+        case "fobo" :: "angular-sanitize.js" :: Nil => List("fobo", "angular-js", "1.2.19", "js", "angular-sanitize.min.js")
+        case "fobo" :: "angular-sanitize.min.js.map" :: Nil => List("fobo", "angular-js", "1.2.19", "js", "angular-sanitize.min.js.map")
+        //dev/test only 
+        case "fobo" :: "angular-scenario.js" :: Nil if Props.devMode => List("fobo", "angular-js", "1.2.19", "js", "angular-scenario.js")
+ 
+        case "fobo" :: "angular-touch.js" :: Nil if Props.devMode => List("fobo", "angular-js", "1.2.19", "js", "angular-touch.js")
+        case "fobo" :: "angular-touch.js" :: Nil => List("fobo", "angular-js", "1.2.19", "js", "angular-touch.min.js")
+        case "fobo" :: "angular-touch.min.js.map" :: Nil => List("fobo", "angular-js", "1.2.19", "js", "angular-touch.min.js.map")
+        
+        
+        //CSS files
+        case "fobo" :: "angular-csp.css" :: Nil if Props.devMode => List("fobo", "angular-js", "1.2.19", "css", "angular-csp.css")
+        case "fobo" :: "angular-csp.css" :: Nil => List("fobo", "angular-js", "1.2.19", "css", "angular-csp.min.css")
+       
+      }
+    }
+    
+    lazy val angularjs1219i18n = {
+      ResourceServer.rewrite {
+        //i18n files
+        case "fobo" :: "angular-locale_nl-cw.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_nl-cw.js")
+        case "fobo" :: "angular-locale_en-bz.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-bz.js")
+        case "fobo" :: "angular-locale_en-pk.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-pk.js")
+        case "fobo" :: "angular-locale_he.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_he.js")
+        case "fobo" :: "angular-locale_sr-latn-ba.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sr-latn-ba.js")
+        case "fobo" :: "angular-locale_fr-rw.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-rw.js")
+        case "fobo" :: "angular-locale_de-ch.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_de-ch.js")
+        case "fobo" :: "angular-locale_ar-iq.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-iq.js")
+        case "fobo" :: "angular-locale_hu.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_hu.js")
+        case "fobo" :: "angular-locale_fr-cg.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-cg.js")
+        case "fobo" :: "angular-locale_en-ca.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-ca.js")
+        case "fobo" :: "angular-locale_fr-bl.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-bl.js")
+        case "fobo" :: "angular-locale_fa.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fa.js")
+        case "fobo" :: "angular-locale_mr-in.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_mr-in.js")
+        case "fobo" :: "angular-locale_sv-fi.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sv-fi.js")
+        case "fobo" :: "angular-locale_it.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_it.js")
+        case "fobo" :: "angular-locale_fr-cd.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-cd.js")
+        case "fobo" :: "angular-locale_fr-sn.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-sn.js")
+        case "fobo" :: "angular-locale_ar.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar.js")
+        case "fobo" :: "angular-locale_is.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_is.js")
+        case "fobo" :: "angular-locale_bg-bg.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_bg-bg.js")
+        case "fobo" :: "angular-locale_fi.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fi.js")
+        case "fobo" :: "angular-locale_bn-in.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_bn-in.js")
+        case "fobo" :: "angular-locale_en-sg.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-sg.js")
+        case "fobo" :: "angular-locale_zh-hant-tw.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_zh-hant-tw.js")
+        case "fobo" :: "angular-locale_fr-ch.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-ch.js")
+        case "fobo" :: "angular-locale_en-fm.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-fm.js")
+        case "fobo" :: "angular-locale_zh-tw.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_zh-tw.js")
+        case "fobo" :: "angular-locale_fr-ml.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-ml.js")
+        case "fobo" :: "angular-locale_en-gu.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-gu.js")
+        case "fobo" :: "angular-locale_sw-ke.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sw-ke.js")
+        case "fobo" :: "angular-locale_pt.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_pt.js")
+        case "fobo" :: "angular-locale_sk.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sk.js")
+        case "fobo" :: "angular-locale_gu.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_gu.js")
+        case "fobo" :: "angular-locale_ar-dz.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-dz.js")
+        case "fobo" :: "angular-locale_zh-hant-hk.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_zh-hant-hk.js")
+        case "fobo" :: "angular-locale_et.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_et.js")
+        case "fobo" :: "angular-locale_mt.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_mt.js")
+        case "fobo" :: "angular-locale_pt-mz.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_pt-mz.js")
+        case "fobo" :: "angular-locale_es-gq.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-gq.js")
+        case "fobo" :: "angular-locale_es-ve.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-ve.js")
+        case "fobo" :: "angular-locale_zh-hant.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_zh-hant.js")
+        case "fobo" :: "angular-locale_el-gr.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_el-gr.js")
+        case "fobo" :: "angular-locale_it-it.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_it-it.js")
+        case "fobo" :: "angular-locale_es-do.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-do.js")
+        case "fobo" :: "angular-locale_hi-in.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_hi-in.js")
+        case "fobo" :: "angular-locale_cs-cz.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_cs-cz.js")
+        case "fobo" :: "angular-locale_hr-hr.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_hr-hr.js")
+        case "fobo" :: "angular-locale_en-za.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-za.js")
+        case "fobo" :: "angular-locale_el-cy.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_el-cy.js")
+        case "fobo" :: "angular-locale_ur-in.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ur-in.js")
+        case "fobo" :: "angular-locale_bn.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_bn.js")
+        case "fobo" :: "angular-locale_zu-za.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_zu-za.js")
+        case "fobo" :: "angular-locale_ca.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ca.js")
+        case "fobo" :: "angular-locale_sw.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sw.js")
+        case "fobo" :: "angular-locale_en-ie.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-ie.js")
+        case "fobo" :: "angular-locale_es-hn.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-hn.js")
+        case "fobo" :: "angular-locale_es-cr.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-cr.js")
+        case "fobo" :: "angular-locale_ar-jo.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-jo.js")
+        case "fobo" :: "angular-locale_sr.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sr.js")
+        case "fobo" :: "angular-locale_fr-lu.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-lu.js")
+        case "fobo" :: "angular-locale_en-um.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-um.js")
+        case "fobo" :: "angular-locale_ro-md.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ro-md.js")
+        case "fobo" :: "angular-locale_zh-hans-hk.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_zh-hans-hk.js")
+        case "fobo" :: "angular-locale_fr-mg.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-mg.js")
+        case "fobo" :: "angular-locale_ro.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ro.js")
+        case "fobo" :: "angular-locale_es-ar.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-ar.js")
+        case "fobo" :: "angular-locale_fr.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr.js")
+        case "fobo" :: "angular-locale_it-sm.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_it-sm.js")
+        case "fobo" :: "angular-locale_uk-ua.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_uk-ua.js")
+        case "fobo" :: "angular-locale_pt-st.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_pt-st.js")
+        case "fobo" :: "angular-locale_kn.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_kn.js")
+        case "fobo" :: "angular-locale_sr-latn-me.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sr-latn-me.js")
+        case "fobo" :: "angular-locale_en-pr.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-pr.js")
+        case "fobo" :: "angular-locale_sl.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sl.js")
+        case "fobo" :: "angular-locale_fr-dj.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-dj.js")
+        case "fobo" :: "angular-locale_it-ch.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_it-ch.js")
+        case "fobo" :: "angular-locale_fr-km.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-km.js")
+        case "fobo" :: "angular-locale_sr-cyrl.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sr-cyrl.js")
+        case "fobo" :: "angular-locale_gu-in.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_gu-in.js")
+        case "fobo" :: "angular-locale_es-mx.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-mx.js")
+        case "fobo" :: "angular-locale_bn-bd.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_bn-bd.js")
+        case "fobo" :: "angular-locale_am-et.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_am-et.js")
+        case "fobo" :: "angular-locale_sr-latn-rs.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sr-latn-rs.js")
+        case "fobo" :: "angular-locale_sl-si.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sl-si.js")
+        case "fobo" :: "angular-locale_am.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_am.js")
+        case "fobo" :: "angular-locale_en-mt.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-mt.js")
+        case "fobo" :: "angular-locale_ar-ma.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-ma.js")
+        case "fobo" :: "angular-locale_te.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_te.js")
+        case "fobo" :: "angular-locale_zh.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_zh.js")
+        case "fobo" :: "angular-locale_es-pr.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-pr.js")
+        case "fobo" :: "angular-locale_ar-ye.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-ye.js")
+        case "fobo" :: "angular-locale_de-be.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_de-be.js")
+        case "fobo" :: "angular-locale_no.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_no.js")
+        case "fobo" :: "angular-locale_el.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_el.js")
+        case "fobo" :: "angular-locale_ca-ad.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ca-ad.js")
+        case "fobo" :: "angular-locale_en-tc.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-tc.js")
+        case "fobo" :: "angular-locale_es-ni.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-ni.js")
+        case "fobo" :: "angular-locale_zh-hans-mo.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_zh-hans-mo.js")
+        case "fobo" :: "angular-locale_fr-td.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-td.js")
+        case "fobo" :: "angular-locale_mt-mt.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_mt-mt.js")
+        case "fobo" :: "angular-locale_en-us.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-us.js")
+        case "fobo" :: "angular-locale_zh-hans-sg.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_zh-hans-sg.js")
+        case "fobo" :: "angular-locale_fr-be.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-be.js")
+        case "fobo" :: "angular-locale_hr.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_hr.js")
+        case "fobo" :: "angular-locale_fr-gn.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-gn.js")
+        case "fobo" :: "angular-locale_es-ec.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-ec.js")
+        case "fobo" :: "angular-locale_ta-lk.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ta-lk.js")
+        case "fobo" :: "angular-locale_en-au.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-au.js")
+        case "fobo" :: "angular-locale_id-id.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_id-id.js")
+        case "fobo" :: "angular-locale_sw-tz.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sw-tz.js")
+        case "fobo" :: "angular-locale_de-de.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_de-de.js")
+        case "fobo" :: "angular-locale_sr-cyrl-me.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sr-cyrl-me.js")
+        case "fobo" :: "angular-locale_ar-lb.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-lb.js")
+
+      }
+    }    
+    
+    lazy val angularjs1219i18n2 = {
+      ResourceServer.rewrite {
+        //i18n files
+        case "fobo" :: "angular-locale_ar-tn.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-tn.js")
+        case "fobo" :: "angular-locale_te-in.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_te-in.js")
+        case "fobo" :: "angular-locale_ta-in.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ta-in.js")
+        case "fobo" :: "angular-locale_es-cl.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-cl.js")
+        case "fobo" :: "angular-locale_hu-hu.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_hu-hu.js")
+        case "fobo" :: "angular-locale_ln-cg.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ln-cg.js")
+        case "fobo" :: "angular-locale_fr-ca.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-ca.js")
+        case "fobo" :: "angular-locale_he-il.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_he-il.js")
+        case "fobo" :: "angular-locale_es-gt.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-gt.js")
+        case "fobo" :: "angular-locale_id.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_id.js")
+        case "fobo" :: "angular-locale_en-gy.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-gy.js")
+        case "fobo" :: "angular-locale_ko-kr.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ko-kr.js")
+        case "fobo" :: "angular-locale_ar-ly.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-ly.js")
+        case "fobo" :: "angular-locale_ur-pk.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ur-pk.js")
+        case "fobo" :: "angular-locale_ar-sa.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-sa.js")
+        case "fobo" :: "angular-locale_en-mp.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-mp.js")
+        case "fobo" :: "angular-locale_es-pe.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-pe.js")
+        case "fobo" :: "angular-locale_fr-re.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-re.js")
+        case "fobo" :: "angular-locale_uk.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_uk.js")
+        case "fobo" :: "angular-locale_pt-ao.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_pt-ao.js")
+        case "fobo" :: "angular-locale_zh-hans-cn.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_zh-hans-cn.js")
+        case "fobo" :: "angular-locale_lt.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_lt.js")
+        case "fobo" :: "angular-locale_ta.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ta.js")
+        case "fobo" :: "angular-locale_iw.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_iw.js")
+        case "fobo" :: "angular-locale_fr-gq.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-gq.js")
+        case "fobo" :: "angular-locale_es-us.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-us.js")
+        case "fobo" :: "angular-locale_en-gb.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-gb.js")
+        case "fobo" :: "angular-locale_en-mu.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-mu.js")
+        case "fobo" :: "angular-locale_lv.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_lv.js")
+        case "fobo" :: "angular-locale_fr-tg.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-tg.js")
+        case "fobo" :: "angular-locale_pl-pl.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_pl-pl.js")
+        case "fobo" :: "angular-locale_en-be.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-be.js")
+        case "fobo" :: "angular-locale_gl.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_gl.js")
+        case "fobo" :: "angular-locale_es-ic.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-ic.js")
+        case "fobo" :: "angular-locale_en-pw.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-pw.js")
+        case "fobo" :: "angular-locale_en-bw.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-bw.js")
+        case "fobo" :: "angular-locale_gsw.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_gsw.js")
+        case "fobo" :: "angular-locale_en-jm.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-jm.js")
+        case "fobo" :: "angular-locale_ms-my.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ms-my.js")
+        case "fobo" :: "angular-locale_mr.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_mr.js")
+        case "fobo" :: "angular-locale_th.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_th.js")
+        case "fobo" :: "angular-locale_ar-001.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-001.js")
+        case "fobo" :: "angular-locale_es-co.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-co.js")
+        case "fobo" :: "angular-locale_ln.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ln.js")
+        case "fobo" :: "angular-locale_sk-sk.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sk-sk.js")
+        case "fobo" :: "angular-locale_af.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_af.js")
+        case "fobo" :: "angular-locale_de-li.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_de-li.js")
+        case "fobo" :: "angular-locale_gsw-ch.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_gsw-ch.js")
+        case "fobo" :: "angular-locale_nl-sx.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_nl-sx.js")
+        case "fobo" :: "angular-locale_da.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_da.js")
+        case "fobo" :: "angular-locale_sq-al.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sq-al.js")
+        case "fobo" :: "angular-locale_zh-cn.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_zh-cn.js")
+        case "fobo" :: "angular-locale_en-ph.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-ph.js")
+        case "fobo" :: "angular-locale_ru-md.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ru-md.js")
+        case "fobo" :: "angular-locale_tl.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_tl.js")
+        case "fobo" :: "angular-locale_zu.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_zu.js")
+        case "fobo" :: "angular-locale_et-ee.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_et-ee.js")
+        case "fobo" :: "angular-locale_ar-ae.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-ae.js")
+        case "fobo" :: "angular-locale_en-as.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-as.js")
+        case "fobo" :: "angular-locale_tr-tr.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_tr-tr.js")
+        case "fobo" :: "angular-locale_fr-mc.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-mc.js")
+        case "fobo" :: "angular-locale_fa-af.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fa-af.js")
+        case "fobo" :: "angular-locale_pl.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_pl.js")
+        case "fobo" :: "angular-locale_en-zw.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-zw.js")
+        case "fobo" :: "angular-locale_fil.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fil.js")
+        case "fobo" :: "angular-locale_is-is.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_is-is.js")
+        case "fobo" :: "angular-locale_es-pa.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-pa.js")
+        case "fobo" :: "angular-locale_sv.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sv.js")
+        case "fobo" :: "angular-locale_fr-yt.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-yt.js")
+        case "fobo" :: "angular-locale_de.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_de.js")
+        case "fobo" :: "angular-locale_th-th.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_th-th.js")
+        case "fobo" :: "angular-locale_en-bb.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-bb.js")
+        case "fobo" :: "angular-locale_es.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es.js")
+        case "fobo" :: "angular-locale_nl-be.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_nl-be.js")
+        case "fobo" :: "angular-locale_kn-in.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_kn-in.js")
+        case "fobo" :: "angular-locale_lv-lv.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_lv-lv.js")
+        case "fobo" :: "angular-locale_en-mh.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-mh.js")
+        case "fobo" :: "angular-locale_en-dsrt.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-dsrt.js")
+        case "fobo" :: "angular-locale_en-dsrt-us.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-dsrt-us.js")
+        case "fobo" :: "angular-locale_eu-es.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_eu-es.js")
+        case "fobo" :: "angular-locale_ar-eg.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-eg.js")
+        case "fobo" :: "angular-locale_es-sv.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-sv.js")
+        case "fobo" :: "angular-locale_ca-es.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ca-es.js")
+        case "fobo" :: "angular-locale_es-ea.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-ea.js")
+        case "fobo" :: "angular-locale_sr-latn.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sr-latn.js")
+        case "fobo" :: "angular-locale_fr-gf.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-gf.js")
+        case "fobo" :: "angular-locale_gl-es.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_gl-es.js")
+        case "fobo" :: "angular-locale_sq.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sq.js")
+        case "fobo" :: "angular-locale_fr-gp.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-gp.js")
+        case "fobo" :: "angular-locale_sr-cyrl-rs.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sr-cyrl-rs.js")
+        case "fobo" :: "angular-locale_or-in.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_or-in.js")
+        case "fobo" :: "angular-locale_ru.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ru.js")
+        case "fobo" :: "angular-locale_hi.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_hi.js")
+        case "fobo" :: "angular-locale_en-bm.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-bm.js")
+        case "fobo" :: "angular-locale_de-lu.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_de-lu.js")
+        case "fobo" :: "angular-locale_es-es.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-es.js")
+        case "fobo" :: "angular-locale_tr.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_tr.js")
+        case "fobo" :: "angular-locale_fr-bi.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-bi.js")
+        case "fobo" :: "angular-locale_pt-gw.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_pt-gw.js")
+        case "fobo" :: "angular-locale_af-na.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_af-na.js")
+        case "fobo" :: "angular-locale_ur.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ur.js")
+        case "fobo" :: "angular-locale_en-vi.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-vi.js")
+        case "fobo" :: "angular-locale_pt-br.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_pt-br.js")
+        case "fobo" :: "angular-locale_da-dk.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_da-dk.js")
+        case "fobo" :: "angular-locale_ar-sd.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-sd.js")
+        case "fobo" :: "angular-locale_fa-ir.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fa-ir.js")
+        case "fobo" :: "angular-locale_nl-nl.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_nl-nl.js")
+        case "fobo" :: "angular-locale_ms-bn.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ms-bn.js")
+        case "fobo" :: "angular-locale_fr-bj.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-bj.js")
+        case "fobo" :: "angular-locale_or.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_or.js")
+        case "fobo" :: "angular-locale_nl.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_nl.js")
+        case "fobo" :: "angular-locale_en-hk.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-hk.js")
+        case "fobo" :: "angular-locale_zh-hans.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_zh-hans.js")
+        case "fobo" :: "angular-locale_sv-se.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sv-se.js")
+        case "fobo" :: "angular-locale_ru-ua.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ru-ua.js")
+        case "fobo" :: "angular-locale_ar-sy.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-sy.js")
+        case "fobo" :: "angular-locale_fr-mq.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-mq.js")
+        case "fobo" :: "angular-locale_ro-ro.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ro-ro.js")
+        case "fobo" :: "angular-locale_ja-jp.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ja-jp.js")
+        case "fobo" :: "angular-locale_fr-cf.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-cf.js")
+        case "fobo" :: "angular-locale_ja.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ja.js")
+        case "fobo" :: "angular-locale_ko.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ko.js")
+        case "fobo" :: "angular-locale_fr-cm.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-cm.js")
+        case "fobo" :: "angular-locale_eu.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_eu.js")
+        case "fobo" :: "angular-locale_en-in.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-in.js")
+        case "fobo" :: "angular-locale_sr-cyrl-ba.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sr-cyrl-ba.js")
+        case "fobo" :: "angular-locale_en-nz.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-nz.js")
+        case "fobo" :: "angular-locale_de-at.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_de-at.js")
+        case "fobo" :: "angular-locale_cs.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_cs.js")
+        case "fobo" :: "angular-locale_vi.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_vi.js")
+        case "fobo" :: "angular-locale_fr-fr.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-fr.js")
+        case "fobo" :: "angular-locale_pt-pt.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_pt-pt.js")
+        case "fobo" :: "angular-locale_vi-vn.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_vi-vn.js")
+        case "fobo" :: "angular-locale_ar-kw.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-kw.js")
+        case "fobo" :: "angular-locale_es-uy.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-uy.js")
+        case "fobo" :: "angular-locale_bg.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_bg.js")
+        case "fobo" :: "angular-locale_nl-aw.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_nl-aw.js")
+        case "fobo" :: "angular-locale_en-na.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-na.js")
+        case "fobo" :: "angular-locale_af-za.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_af-za.js")
+        case "fobo" :: "angular-locale_lt-lt.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_lt-lt.js")
+        case "fobo" :: "angular-locale_zh-hk.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_zh-hk.js")
+        case "fobo" :: "angular-locale_fi-fi.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fi-fi.js")
+        case "fobo" :: "angular-locale_en-iso.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-iso.js")
+        case "fobo" :: "angular-locale_ar-om.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-om.js")
+        case "fobo" :: "angular-locale_zh-hant-mo.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_zh-hant-mo.js")
+        case "fobo" :: "angular-locale_ln-cd.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ln-cd.js")
+        case "fobo" :: "angular-locale_fr-ci.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-ci.js")
+        case "fobo" :: "angular-locale_ms.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ms.js")
+        case "fobo" :: "angular-locale_fr-mf.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-mf.js")
+        case "fobo" :: "angular-locale_ar-bh.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-bh.js")
+        case "fobo" :: "angular-locale_en-tt.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-tt.js")
+        case "fobo" :: "angular-locale_ml.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ml.js")
+        case "fobo" :: "angular-locale_ru-ru.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ru-ru.js")
+        case "fobo" :: "angular-locale_es-419.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-419.js")
+        case "fobo" :: "angular-locale_in.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_in.js")
+        case "fobo" :: "angular-locale_ml-in.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ml-in.js")
+        case "fobo" :: "angular-locale_fr-bf.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-bf.js")
+        case "fobo" :: "angular-locale_ar-qa.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_ar-qa.js")
+        case "fobo" :: "angular-locale_en.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en.js")
+        case "fobo" :: "angular-locale_fil-ph.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fil-ph.js")
+        case "fobo" :: "angular-locale_en-vg.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_en-vg.js")
+        case "fobo" :: "angular-locale_fr-ga.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-ga.js")
+        case "fobo" :: "angular-locale_es-py.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-py.js")
+        case "fobo" :: "angular-locale_fr-ne.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_fr-ne.js")
+        case "fobo" :: "angular-locale_es-bo.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-bo.js")        
+      }
+    }    
+    
     
     lazy val angularjs1211 = {
       ResourceServer.rewrite {
