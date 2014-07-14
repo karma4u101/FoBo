@@ -33,7 +33,7 @@ package object FoBoKi {
 
   
 /**
- * Enable usage of KineticJS version 5&sdot;1&sdot;0 in your bootstrap liftweb Boot.
+ * Enable usage of KineticJS version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.
  * @version 5.1.0
  * 
  * '''Example:'''

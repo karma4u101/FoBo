@@ -33,7 +33,7 @@ package object FoBoAJS {
  
   
   /**
-   * Enable usage of AngularJS version 1&sdot;2&sdot;19 in your bootstrap liftweb Boot.
+   * Enable usage of AngularJS version 1&#8228;2&#8228;19 in your bootstrap liftweb Boot.
    * @version 1.2.19
    *
    *  '''Example:'''
@@ -65,7 +65,7 @@ package object FoBoAJS {
   
   
   /**
-   * Enable usage of AngularJS version 1&sdot;2&sdot;11 in your bootstrap liftweb Boot.
+   * Enable usage of AngularJS version 1&#8228;2&#8228;11 in your bootstrap liftweb Boot.
    * @version 1.2.11
    *
    *  '''Example:'''
@@ -96,7 +96,7 @@ package object FoBoAJS {
   
   
   /**
-   * Enable usage of AngularJS version 1&sdot;0&sdot;6 in your bootstrap liftweb Boot.
+   * Enable usage of AngularJS version 1&#8228;0&#8228;6 in your bootstrap liftweb Boot.
    * @version 1.0.6
    *
    *  '''Example:'''
@@ -112,7 +112,7 @@ package object FoBoAJS {
   }
   
     /**
-   * Enable usage of AngularUI-Bootstrap version 0&sdot;10&sdot;0 in your bootstrap liftweb Boot.
+   * Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.
    * @version 0.10.0
    *
    *  '''Example:'''
@@ -127,7 +127,7 @@ package object FoBoAJS {
   }   
   
   /**
-   * Enable usage of AngularUI-Bootstrap version 0&sdot;7&sdot;0 in your bootstrap liftweb Boot.
+   * Enable usage of AngularUI-Bootstrap version 0&#8228;7&#8228;0 in your bootstrap liftweb Boot.
    * @version 0.7.0
    *
    *  '''Example:'''
@@ -142,7 +142,7 @@ package object FoBoAJS {
   }   
 
   /**
-   * Enable usage of AngularUI-Bootstrap version 0&sdot;2&sdot;0 in your bootstrap liftweb Boot.
+   * Enable usage of AngularUI-Bootstrap version 0&#8228;2&#8228;0 in your bootstrap liftweb Boot.
    * @version 0.2.0
    *
    *  '''Example:'''
@@ -157,7 +157,7 @@ package object FoBoAJS {
   }   
  
   /**
-   * Enable usage of NG-Grid version 2&sdot;0&sdot;7 in your bootstrap liftweb Boot.
+   * Enable usage of NG-Grid version 2&#8228;0&#8228;7 in your bootstrap liftweb Boot.
    * @version 2.0.7
    *
    *  '''Example:'''
@@ -172,7 +172,7 @@ package object FoBoAJS {
   }   
   
   /**
-   * Enable usage of NG-Grid version 2&sdot;0&sdot;4 in your bootstrap liftweb Boot.
+   * Enable usage of NG-Grid version 2&#8228;0&#8228;4 in your bootstrap liftweb Boot.
    * @version 2.0.4
    *
    *  '''Example:'''

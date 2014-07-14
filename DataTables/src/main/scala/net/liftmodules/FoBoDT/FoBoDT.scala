@@ -32,7 +32,7 @@ package object FoBoDT {
   }
 
   /**
-   * Enable usage of DataTables version 1&sdot;9&sdot;0 in your bootstrap liftweb Boot.
+   * Enable usage of DataTables version 1&#8228;9&#8228;0 in your bootstrap liftweb Boot.
    * @version 1.9.0
    *
    *  '''Example:'''

@@ -137,7 +137,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
 }
 
 /**
- * Enable usage of Bootstrap version 3&sdot;2&sdot;0 in your bootstrap liftweb Boot.
+ * Enable usage of Bootstrap version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.
  * @version 3.2.0
  * 
  * '''Example'''
@@ -151,7 +151,7 @@ case object Bootstrap320 extends FoBoToolkit {
 }
 
 /**
- * Enable usage of Bootstrap version 3&sdot;1&sdot;1 in your bootstrap liftweb Boot.
+ * Enable usage of Bootstrap version 3&#8228;1&#8228;1 in your bootstrap liftweb Boot.
  * @version 3.1.1
  * 
  * '''Example'''
@@ -166,7 +166,7 @@ case object Bootstrap311 extends FoBoToolkit {
 
 
 /**
- * Enable usage of Bootstrap version 3&sdot;0&sdot;1 in your bootstrap liftweb Boot.
+ * Enable usage of Bootstrap version 3&#8228;0&#8228;1 in your bootstrap liftweb Boot.
  * @version 3.0.1
  * 
  * '''Example'''
@@ -181,7 +181,7 @@ case object Bootstrap301 extends FoBoToolkit {
 
 
 /**
- * Enable usage of Bootstrap version 3&sdot;0&sdot;0 in your bootstrap liftweb Boot.
+ * Enable usage of Bootstrap version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
  * @version 3.0.0
  * 
  * '''Example'''

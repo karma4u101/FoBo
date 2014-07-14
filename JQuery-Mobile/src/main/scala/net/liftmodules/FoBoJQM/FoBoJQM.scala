@@ -33,7 +33,7 @@ package object FoBoJQM {
 
  
 /**
- * Enable usage of JQueryMobile version 1&sdot;1&sdot;0 in your liftweb Boot.
+ * Enable usage of JQueryMobile version 1&#8228;1&#8228;0 in your liftweb Boot.
  * 
  * @version 1.0.1
  * 

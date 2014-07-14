@@ -32,7 +32,7 @@ package object FoBoKo {
   }
 
   /**
-   * Enable usage of KnockOut version 2&sdot;2&sdot;1 in your bootstrap liftweb Boot.
+   * Enable usage of KnockOut version 2&#8228;2&#8228;1 in your bootstrap liftweb Boot.
    * @version 2.2.1
    *
    *  '''Example:'''
@@ -47,7 +47,7 @@ package object FoBoKo {
   }
 
   /**
-   * Enable usage of KnockOut version 2&sdot;0&sdot;0 in your bootstrap liftweb Boot.
+   * Enable usage of KnockOut version 2&#8228;0&#8228;0 in your bootstrap liftweb Boot.
    * @version 2.0.0
    *
    *  '''Example:'''
@@ -61,7 +61,7 @@ package object FoBoKo {
     KOFoBoResources.knockout210
   }
   /**
-   * Enable usage of KnockOut version 2&sdot;1&sdot;0 in your bootstrap liftweb Boot.
+   * Enable usage of KnockOut version 2&#8228;1&#8228;0 in your bootstrap liftweb Boot.
    * @version 2.1.0
    *
    *  '''Example:'''
