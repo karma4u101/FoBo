@@ -5,7 +5,7 @@ FoBo is a [Lift module](http://liftweb.net/lift_modules) that includes industry 
 
 A **live demo** and introduction to using this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/). 
 
-With this Lift module you will get a hassle free inclusion and smooth upgrades, you decide what toolkits and versions to enable.  
+With this Lift module you will get a hassle free inclusion and smooth upgrades of toolkits, you decide what toolkits and versions to enable.  
 The FoBo module is making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot), by simultaneously supporting several versions of the included toolkits and, without code or reference changes, providing debug-able js and css files in development and minimized files otherwise. 
 
 The FoBo module also has a evolving API that includes snippet:s and helper object:s (see API documents for usage) that will take care of some common toolkit and component initiation and usage, like lift sitemap to bootstrap menu builders, resource injection, script generation and more.  
@@ -27,35 +27,19 @@ Update log
 
 For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
 
-**Latest Updates:**
-- **2014-07-08** -- Module v1.3-SNAPSHOT Adding AngularJS v1.2.19
-- **2014-07-02** -- Module v1.3-SNAPSHOT Adding bootstrap v3.2.0 
-- **2014-07-02** -- Module v1.3-SNAPSHOT Cleaning out usage of bind and BindHelper functions, replacing it with css selectors.
-- **2014-06-22** -- Module v1.3-SNAPSHOT Added JQuery-Migrate v1.2.1 
-- **2014-06-09** -- Module v1.3-SNAPSHOT Added KineticJS v5.1.0
-- **2014-06-08** -- Module v1.3-SNAPSHOT Scala 2.11 artifact released for Lift v2.6
-- **2014-05-24** -- Module v1.3-M1 artifact released for Lift 3.0-M1
-- **2014-05-24** -- Module v1.3-SNAPSHOT Adding JQuery v1.11.1 and v2.1.1
-- **2014-05-17** -- Module v1.3-SNAPSHOT Adding resource injection snippets to FoBo, Angular, Bootstrap 3.x and Bootstrap 2.x 
-- **2014-05-15** -- Module v1.3-SNAPSHOT Adding Font Awesome 4.1.0 to v1.3-SNAPSHOT 
-- **2014-04-18** -- Module v1.3-SNAPSHOT Bumping sbt to v0.13.1. Removing dependency on yui-compression and upgraded to use sbt-0.13 
-
-**Latest Snapshot Release:**
-- **2014-07-08** -- Module v1.3-SNAPSHOT's released for Lift v2.5, v2.6 and v3.0
-- **2014-07-06** -- Module v1.3-SNAPSHOT's released for Lift v2.5, v2.6 and v3.0
-- **2014-07-04** -- Module v1.3-SNAPSHOT's released for Lift v2.5, v2.6 and v3.0
-- **2014-07-02** -- Module v1.3-SNAPSHOT's released for Lift v2.6 (Scala 2.11.x, 2.10.x, 2.9.2, 2.9.1-1, 2.9.1) and Lift v3.0
-- **2014-06-08** -- Module v1.3 Scala 2.11 artifact released for Lift v2.6
-- **2014-05-24** -- Module v1.3-M1 artifact released for Lift 3.0-M1
-- **2014-05-15** -- Module v1.3-SNAPSHOT
-- **2014-04-18** -- Module v1.3-SNAPSHOT
-
 **Latest Stable Releases:**
+- **2014-07-15** -- Module v1.3
 - **2014-03-15** -- Module v1.2
 - **2013-10-11** -- Module v1.1
 
+**Latest Updates:**
+See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
-New upcoming features in FoBo v1.3
+**Latest Snapshot Release:**
+See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
+
+
+New features in FoBo v1.3
 ---------------------------
 
 ###FoBo v1.3 has the following new sub modules
@@ -64,10 +48,10 @@ New upcoming features in FoBo v1.3
 
 ###FoBo v1.3 has updates to the following sub modules
 -   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.2.19 - [AngularJS](http://angularjs.org/).
--   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) v3.2.0 - [Bootstrap 3.x](http://getbootstrap.com/)
+-   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) Adds v3.2.0 - [Bootstrap 3.x](http://getbootstrap.com/)
 -   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.1.0 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v1.11.1 - [JQuery](http://jquery.com/)
--   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) also adds JQuery-Migrate v1.2.1 [JQuery-Migrate](https://github.com/jquery/jquery-migrate/) 
+-   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) also adds JQuery-Migrate v1.2.1 [JQuery-Migrate](https://github.com/jquery/jquery-migrate/). 
     JQuery-Migrate is useful for migrating older jQuery code to jQuery 1.9+ it can be used for detecting and restoring APIs or features that have been deprecated in jQuery
 
 
@@ -300,6 +284,17 @@ A live demo showing some of FoBo's sub module features, including API documentat
 - **2013-05-19** -- Module v1.0 
 
 **Updates history:**
+- **2014-07-08** -- Module v1.3-SNAPSHOT Adding AngularJS v1.2.19
+- **2014-07-02** -- Module v1.3-SNAPSHOT Adding bootstrap v3.2.0 
+- **2014-07-02** -- Module v1.3-SNAPSHOT Cleaning out usage of bind and BindHelper functions, replacing it with css selectors.
+- **2014-06-22** -- Module v1.3-SNAPSHOT Added JQuery-Migrate v1.2.1 
+- **2014-06-09** -- Module v1.3-SNAPSHOT Added KineticJS v5.1.0
+- **2014-06-08** -- Module v1.3-SNAPSHOT Scala 2.11 artifact released for Lift v2.6
+- **2014-05-24** -- Module v1.3-M1 artifact released for Lift 3.0-M1
+- **2014-05-24** -- Module v1.3-SNAPSHOT Adding JQuery v1.11.1 and v2.1.1
+- **2014-05-17** -- Module v1.3-SNAPSHOT Adding resource injection snippets to FoBo, Angular, Bootstrap 3.x and Bootstrap 2.x 
+- **2014-05-15** -- Module v1.3-SNAPSHOT Adding Font Awesome 4.1.0 to v1.3-SNAPSHOT 
+- **2014-04-18** -- Module v1.3-SNAPSHOT Bumping sbt to v0.13.1. Removing dependency on yui-compression and upgraded to use sbt-0.13 
 - **2014-03-09** -- Module v1.2-SNAPSHOT Adding Bootstrap v3.1.1 and Font Awesome v4.0.3
 - **2014-02-21** -- Module v1.2-SNAPSHOT Adding JQuery v1.11.0 Removing Angular v1.2.1 and v1.2.2 never release in FoBo and superseded by v1.2.11 
 - **2014-02-05** -- Module v1.2-SNAPSHOT Adding Angular UI Bootstrap v0.10.0 (for use with bootstrap v3.x css)
@@ -347,6 +342,14 @@ A live demo showing some of FoBo's sub module features, including API documentat
 - **2012-11-10** -- Module v0.7.2-SNAPSHOT Lift 2.5-M3 released to oss.sonatype.org
 
 **Snapshot Release history:**
+- **2014-07-08** -- Module v1.3-SNAPSHOT's released for Lift v2.5, v2.6 and v3.0
+- **2014-07-06** -- Module v1.3-SNAPSHOT's released for Lift v2.5, v2.6 and v3.0
+- **2014-07-04** -- Module v1.3-SNAPSHOT's released for Lift v2.5, v2.6 and v3.0
+- **2014-07-02** -- Module v1.3-SNAPSHOT's released for Lift v2.6 (Scala 2.11.x, 2.10.x, 2.9.2, 2.9.1-1, 2.9.1) and Lift v3.0
+- **2014-06-08** -- Module v1.3 Scala 2.11 artifact released for Lift v2.6
+- **2014-05-24** -- Module v1.3-M1 artifact released for Lift 3.0-M1
+- **2014-05-15** -- Module v1.3-SNAPSHOT
+- **2014-04-18** -- Module v1.3-SNAPSHOT
 - **2014-03-09** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
 - **2014-02-21** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
 - **2014-02-06** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
