@@ -657,7 +657,7 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
        <div class="form-group">
          <label for="repeatpassword" class="col-lg-3 control-label">{ resChangePasswordLabelRepeatPassword }</label>
          <div class="col-lg-9">
-           <input type="password" class="comp-password form-control" placeholder={resChangePasswordPlaceholderNewPassword}/>
+           <input type="password" class="new-password form-control" placeholder={resChangePasswordPlaceholderNewPassword}/>
          </div>
        </div>
        <div class="form-group">
@@ -686,9 +686,11 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
     }
     
     val bind = {
+      // Use the same password input for both new password fields.
+      val passwordInput = SHtml.password_*("", LFuncHolder(s => newPassword = s))      
+      
       ".old-password" #> SHtml.password("", s => oldPassword = s) &
-      ".new-password" #> SHtml.password_*("", LFuncHolder(s => newPassword = s)) &
-      ".comp-password" #> SHtml.password_*("", LFuncHolder(s => newPassword = newPassword++s)) &
+      ".new-password" #> passwordInput &
       "type=submit" #> myChangePasswordSubmitButton(resChangePasswordSubmitChange, testAndSet _)  
     } 
     bind(changePasswordXhtml)
