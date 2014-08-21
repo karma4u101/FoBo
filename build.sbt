@@ -2,17 +2,17 @@ moduleName := "fobo-meta"
 
 organization := "net.liftmodules"
 
-version in ThisBuild := "1.3"
+version in ThisBuild := "1.4-SNAPSHOT"
 
-liftVersion in ThisBuild <<= liftVersion ?? "2.6-SNAPSHOT"
+liftVersion in ThisBuild <<= liftVersion ?? "3.0-SNAPSHOT"
 
 liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
 moduleName <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
-crossScalaVersions := Seq("2.11.1", "2.10.4", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.11.2", "2.10.4", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion in ThisBuild := "2.11.1"
+scalaVersion in ThisBuild := "2.10.4"
 
 logLevel in ThisBuild := Level.Info   //Level.Debug Level.Info
 
