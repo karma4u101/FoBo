@@ -42,7 +42,7 @@ package object FoBoJQ {
    * {{{
    *   JQueryModule.InitParam.JQuery=JQueryModule.JQueryMigrate121
    * }}}
-   * @since v2.7
+   * @since v1.3
    */
   case object JQueryMigrate121 extends FoBoJQ {
     JQFoBoResources.jqueryMigrate121
