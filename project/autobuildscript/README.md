@@ -2,11 +2,13 @@
 Usage
 ===== 
 
-To publish use the publish.sh script
+To publish use the publish.sh script, to change to a local publish replace 'publish-signed' with 'publish-local-signed' in respective publish script.
+
+As of FoBo v1.4 builds against Lift 2.5 is no longer supported. 
 
 ./project/autobuildscript/publish.sh -t [2.5,2.6,3.0]
 
-The build script will make sure the correkt JDK is set and execute one of the folloiwng 
+The build script will make sure the correct JDK is set and execute one of the following 
 sbt command files depending on chosen input (target) parameter.
 
 Target Lift 2.5 (java6, Scala 2.9.1, 2.9.1-1, 2.9.2, 2.10)
