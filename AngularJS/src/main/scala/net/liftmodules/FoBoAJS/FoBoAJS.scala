@@ -60,6 +60,7 @@ package object FoBoAJS {
   case object AngularJS140i18n extends AJSToolkit {
     AJSFoBoResources.angularjs140i18n
     AJSFoBoResources.angularjs140i18n2
+    AJSFoBoResources.angularjs140i18n3
   }  
   
   /**
@@ -565,6 +566,11 @@ package object FoBoAJS {
         case "fobo" :: "angular-locale_fr-be.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_fr-be.js")
         case "fobo" :: "angular-locale_hr.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_hr.js")
         case "fobo" :: "angular-locale_agq-cm.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_agq-cm.js")
+      }
+      }
+    
+    lazy val angularjs140i18n2 = {
+      ResourceServer.rewrite {    
         case "fobo" :: "angular-locale_smn.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_smn.js")
         case "fobo" :: "angular-locale_kl.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_kl.js")
         case "fobo" :: "angular-locale_ak.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_ak.js")
@@ -789,7 +795,7 @@ package object FoBoAJS {
       }
     }
 
-    lazy val angularjs140i18n2 = {
+    lazy val angularjs140i18n3 = {
       ResourceServer.rewrite {
         case "fobo" :: "angular-locale_en-mh.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_en-mh.js")
         case "fobo" :: "angular-locale_en-cc.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_en-cc.js")
