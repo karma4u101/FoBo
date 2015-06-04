@@ -8,7 +8,9 @@ import http.{ S, LiftRules }
 import sitemap._
 import util.Helpers
 import xml._
-import scala.language.reflectiveCalls
+//cant use compiling with 2.9.1
+//import scala.language.reflectiveCalls
+
 
 /**
  * ==Bs3Navbar Snippet Bootstrap v3.x==

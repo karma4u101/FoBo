@@ -16,7 +16,7 @@ scalaVersion in ThisBuild := "2.11.6"
 
 logLevel in ThisBuild := Level.Info   //Level.Debug Level.Info
 
-scalacOptions ++= Seq("-deprecation","-feature")
+scalacOptions ++= Seq("-deprecation")//,"-feature" <==cant use as long as we build using 2.9.x
 
 parallelExecution in Test := false
 

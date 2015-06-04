@@ -6,7 +6,7 @@ moduleName <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
 crossScalaVersions := Seq("2.11.6", "2.10.4", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalacOptions ++= Seq("-deprecation","-feature")
+scalacOptions ++= Seq("-deprecation")//,"-feature" <==cant use as long as we build using 2.9.x
 
 parallelExecution in Test := false
 
