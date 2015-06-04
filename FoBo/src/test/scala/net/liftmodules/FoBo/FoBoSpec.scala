@@ -22,9 +22,15 @@ object FoBoSpec extends Specification  {
  
   
   //AngularJS
-  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS1211 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/angular.js to fobo/angular-js/1.2.11/js/angular.min.js" in {
-      rewriteAngularJS1211 must_== List("fobo", "angular-js", "1.2.11", "js", "angular.min.js")
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS140 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/angular.js to fobo/angular-js/1.4.0/js/angular.min.js" in {
+      rewriteAngularJS140 must_== List("fobo", "angular-js", "1.4.0", "js", "angular.min.js")
+    }       
+  } 
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS1315 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/angular.js to fobo/angular-js/1.3.15/js/angular.min.js" in {
+      rewriteAngularJS1315 must_== List("fobo", "angular-js", "1.3.15", "js", "angular.min.js")
     }       
   } 
   
@@ -41,32 +47,32 @@ object FoBoSpec extends Specification  {
   } 
   
   //Knockout
-  "With FoBo.InitParam.ToolKit set to FoBo.Knockout200 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/knockout.js to fobo/knockout/2.0.0/js/knockout-2.0.0.js" in {
-      rewriteKnockout200JS must_== List("fobo", "knockout", "2.0.0", "js", "knockout-2.0.0.js")
-    }       
-  } 
-  
-  "With FoBo.InitParam.ToolKit set to FoBo.Knockout210 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/knockout.js to fobo/knockout/2.1.0/js/knockout-2.1.0.js" in {
-      rewriteKnockout210JS must_== List("fobo", "knockout", "2.1.0", "js", "knockout-2.1.0.js")
-    }       
-  }  
-  
-  "With FoBo.InitParam.ToolKit set to FoBo.Knockout221 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/knockout.js to fobo/knockout/2.2.1/js/knockout-2.2.1.js" in {
-      rewriteKnockout221JS must_== List("fobo", "knockout", "2.2.1", "js", "knockout-2.2.1.js")
-    }       
-  }    
+//  "With FoBo.InitParam.ToolKit set to FoBo.Knockout200 the ResourceServer.pathRewriter" should {
+//    "rewrit fobo/knockout.js to fobo/knockout/2.0.0/js/knockout-2.0.0.js" in {
+//      rewriteKnockout200JS must_== List("fobo", "knockout", "2.0.0", "js", "knockout-2.0.0.js")
+//    }       
+//  } 
+//  
+//  "With FoBo.InitParam.ToolKit set to FoBo.Knockout210 the ResourceServer.pathRewriter" should {
+//    "rewrit fobo/knockout.js to fobo/knockout/2.1.0/js/knockout-2.1.0.js" in {
+//      rewriteKnockout210JS must_== List("fobo", "knockout", "2.1.0", "js", "knockout-2.1.0.js")
+//    }       
+//  }  
+//  
+//  "With FoBo.InitParam.ToolKit set to FoBo.Knockout221 the ResourceServer.pathRewriter" should {
+//    "rewrit fobo/knockout.js to fobo/knockout/2.2.1/js/knockout-2.2.1.js" in {
+//      rewriteKnockout221JS must_== List("fobo", "knockout", "2.2.1", "js", "knockout-2.2.1.js")
+//    }       
+//  }    
   
   
     
   //DataTables
-  "With FoBo.InitParam.ToolKit set to FoBo.DataTables190 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/jquery.dataTables.js to fobo/knockout/1.9.0/js/jquery.dataTables.js" in {
-      rewriteDataTables190JS must_== List("fobo", "datatables", "1.9.0", "js", "jquery.dataTables.js")
-    }       
-  }  
+//  "With FoBo.InitParam.ToolKit set to FoBo.DataTables190 the ResourceServer.pathRewriter" should {
+//    "rewrit fobo/jquery.dataTables.js to fobo/knockout/1.9.0/js/jquery.dataTables.js" in {
+//      rewriteDataTables190JS must_== List("fobo", "datatables", "1.9.0", "js", "jquery.dataTables.js")
+//    }       
+//  }  
   
   
   //FontAwesome
@@ -109,11 +115,11 @@ object FoBoSpec extends Specification  {
   
   
   //Foundation
-  "With FoBo.InitParam.ToolKit set to FoBo.Foundation215 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/foundation.js to fobo/foundation/2.1.5/js/foundation.js" in {
-      rewriteFoundation215JS must_== List("fobo", "foundation", "2.1.5", "js", "foundation.js")
-    }       
-  }   
+//  "With FoBo.InitParam.ToolKit set to FoBo.Foundation215 the ResourceServer.pathRewriter" should {
+//    "rewrit fobo/foundation.js to fobo/foundation/2.1.5/js/foundation.js" in {
+//      rewriteFoundation215JS must_== List("fobo", "foundation", "2.1.5", "js", "foundation.js")
+//    }       
+//  }   
   
   
   
@@ -126,11 +132,11 @@ object FoBoSpec extends Specification  {
   
   
   //JQuery-Mobile
-  "With FoBo.InitParam.ToolKit set to FoBo.JQueryMobile110 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/jquery.mobile.js to fobo/jquery-mobile/1.1.0/js/jquery.mobile-1.1.0.js" in {
-      rewriteJQueryMobile110JS must_== List("fobo", "jquery-mobile", "1.1.0", "js", "jquery.mobile-1.1.0.js")
-    }       
-  }    
+//  "With FoBo.InitParam.ToolKit set to FoBo.JQueryMobile110 the ResourceServer.pathRewriter" should {
+//    "rewrit fobo/jquery.mobile.js to fobo/jquery-mobile/1.1.0/js/jquery.mobile-1.1.0.js" in {
+//      rewriteJQueryMobile110JS must_== List("fobo", "jquery-mobile", "1.1.0", "js", "jquery.mobile-1.1.0.js")
+//    }       
+//  }    
   
   //Bootstrap
   "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap210 the ResourceServer.pathRewriter" should {
@@ -214,8 +220,13 @@ object FoBoSpec extends Specification  {
   
   //AngularJS
   //rewriteAngularJS106
-  def rewriteAngularJS1211 = {
-    FoBo.InitParam.ToolKit=FoBo.AngularJS1211
+  def rewriteAngularJS140 = {
+    FoBo.InitParam.ToolKit=FoBo.AngularJS140
+    ResourceServer.pathRewriter("fobo"::"angular.js"::Nil)
+  }  
+  
+  def rewriteAngularJS1315 = {
+    FoBo.InitParam.ToolKit=FoBo.AngularJS1315
     ResourceServer.pathRewriter("fobo"::"angular.js"::Nil)
   }  
   
@@ -230,20 +241,20 @@ object FoBoSpec extends Specification  {
   }    
   
     //Knockout
-  def rewriteKnockout200JS = {
-    FoBo.InitParam.ToolKit=FoBo.Knockout200
-    ResourceServer.pathRewriter("fobo"::"knockout.js"::Nil)
-  }
-  
-  def rewriteKnockout210JS = {
-    FoBo.InitParam.ToolKit=FoBo.Knockout210
-    ResourceServer.pathRewriter("fobo"::"knockout.js"::Nil)
-  } 
-  
-  def rewriteKnockout221JS = {
-    FoBo.InitParam.ToolKit=FoBo.Knockout221
-    ResourceServer.pathRewriter("fobo"::"knockout.js"::Nil)
-  }  
+//  def rewriteKnockout200JS = {
+//    FoBo.InitParam.ToolKit=FoBo.Knockout200
+//    ResourceServer.pathRewriter("fobo"::"knockout.js"::Nil)
+//  }
+//  
+//  def rewriteKnockout210JS = {
+//    FoBo.InitParam.ToolKit=FoBo.Knockout210
+//    ResourceServer.pathRewriter("fobo"::"knockout.js"::Nil)
+//  } 
+//  
+//  def rewriteKnockout221JS = {
+//    FoBo.InitParam.ToolKit=FoBo.Knockout221
+//    ResourceServer.pathRewriter("fobo"::"knockout.js"::Nil)
+//  }  
   
   
   //JQuery Migrate
@@ -287,10 +298,10 @@ object FoBoSpec extends Specification  {
   
   
   //Datatables
-  def rewriteDataTables190JS = {
-    FoBo.InitParam.ToolKit=FoBo.DataTables190
-    ResourceServer.pathRewriter("fobo"::"jquery.dataTables.js"::Nil)
-  }
+//  def rewriteDataTables190JS = {
+//    FoBo.InitParam.ToolKit=FoBo.DataTables190
+//    ResourceServer.pathRewriter("fobo"::"jquery.dataTables.js"::Nil)
+//  }
   
   
   ////FontAwesome
@@ -326,10 +337,10 @@ object FoBoSpec extends Specification  {
   
   
   //Foundation
-  def rewriteFoundation215JS = {
-    FoBo.InitParam.ToolKit=FoBo.Foundation215
-    ResourceServer.pathRewriter("fobo"::"foundation.js"::Nil)
-  }  
+//  def rewriteFoundation215JS = {
+//    FoBo.InitParam.ToolKit=FoBo.Foundation215
+//    ResourceServer.pathRewriter("fobo"::"foundation.js"::Nil)
+//  }  
   
   
   
@@ -342,10 +353,10 @@ object FoBoSpec extends Specification  {
   
   
   //JQueryMobile
-  def rewriteJQueryMobile110JS = {
-    FoBo.InitParam.ToolKit=FoBo.JQueryMobile110
-    ResourceServer.pathRewriter("fobo"::"jquery.mobile.js"::Nil)
-  }   
+//  def rewriteJQueryMobile110JS = {
+//    FoBo.InitParam.ToolKit=FoBo.JQueryMobile110
+//    ResourceServer.pathRewriter("fobo"::"jquery.mobile.js"::Nil)
+//  }   
   
   
   

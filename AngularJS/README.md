@@ -6,7 +6,7 @@ For more information on how to use AngularJS in the FoBo module see the [FoBo - 
 
 Core modules 
 ---------------------------------
-- AngularJS core [v1.0.6, v1.2.11]
+- AngularJS core [v1.0.6, v1.2.11, v.1.3.15, v.1.4.0]
 
 Components
 ----------
@@ -27,6 +27,8 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)  
 
 **Latest Update:**
+- **2015-06-04** -- Module v1.4-SNAPSHOT Adding AngularJS core v1.4.0
+- **2015-05-22** -- Module v1.4-SNAPSHOT Adding AngularJS core v1.3.15
 - **2014-02-21** -- Module v1.2-SNAPSHOT Removing FoBo unpublished AngularJS v.1.2.1 and v1.2.2 in favor for v1.2.11
 - **2014-02-05** -- Module v1.2-SNAPSHOT Adding Angular UI Bootstrap v0.10.0 (for use with bootstrap v3.x css)
 - **2014-02-04** -- Module v1.2-SNAPSHOT Adding AngularJS core v1.2.11
@@ -71,15 +73,15 @@ release candidate (rcX) or milestone (mX) version part.
 
 For example (when using this module as a separete stand alone module outside of FoBo):
 
-    "net.liftmodules" %% "fobo-angularjs_2.5 % "1.0"
+    "net.liftmodules" %% "fobo-angularjs_2.6 % "1.3"
       :
     <dependency>
       <groupId>net.liftmodules</groupId>
-      <artifactId>fobo-angularjs_2.5_2.9.2</artifactId>
-      <version>1.0</version>
+      <artifactId>fobo-angularjs_2.6_2.10.4</artifactId>
+      <version>1.3</version>
     </dependency>
 
-The example will include a module built for lift 2.5. If you are using maven observe that the artifact id also needs the Scala version.
+The example will include a module built for lift 2.6. If you are using maven observe that the artifact id also needs the Scala version.
 
 ### Lift FoBo boot hooks (when used in the FoBo module)
 
@@ -118,20 +120,23 @@ Note FoBo is taking care of serving minimized files and coresponing hocks to map
 
 Core Css files
 
-- angular-csp.css [v1.2.1]
+- angular-csp.css [v1.2.1, v1.3.15]
 
 Core Script files
 
-- angular.js [v1.0.6, v1.2.1, v1.2.2]
-- angular-animate.js [v1.2.1, v1.2.2]
-- angular-cookies.js [v1.2.1, v1.2.2]
-- angular-loader.js [v1.2.1, v1.2.2]
-- angular-mocks.js (for test, only available in development) [v1.2.1, v1.2.2]
-- angular-resource.js [v1.2.1, v1.2.2]
-- angular-route.js [v1.2.1, v1.2.2]
-- angular-sanitize.js [v1.2.1, v1.2.2]
-- angular-scenario.js (for test, only available in development) [v1.2.1, v1.2.2] 
-- angular-touch.js [v1.2.1, v1.2.2]
+- angular.js [v1.0.6, v1.2.1, v1.2.2, v1.3.15, v1.4.0]
+- angular-animate.js [v1.2.1, v1.2.2, v1.3.15, v1.4.0]
+- angular-aria.js [v1.3.15, v1.4.0]
+- angular-cookies.js [v1.2.1, v1.2.2, v1.3.15, v1.4.0]
+- angular-loader.js [v1.2.1, v1.2.2, v1.3.15, v1.4.0]
+- angular-message-format.js [v1.4.0]
+- angular-messages.js [v1.3.15, v1.4.0]
+- angular-mocks.js (for test, only available in development) [v1.2.1, v1.2.2, v1.3.15, v1.4.0]
+- angular-resource.js [v1.2.1, v1.2.2, v1.3.15, v1.4.0]
+- angular-route.js [v1.2.1, v1.2.2, v1.3.15, v1.4.0]
+- angular-sanitize.js [v1.2.1, v1.2.2, v1.3.15, v1.4.0]
+- angular-scenario.js (for test, only available in development) [v1.2.1, v1.2.2, v1.3.15, v1.4.0] 
+- angular-touch.js [v1.2.1, v1.2.2, v1.3.15, v1.4.0]
 
 Components Css files
 
@@ -145,7 +150,7 @@ Components Script files
  
 i18n files
 
-- angular-locale_[Locale ID].js [v1.2.1, v1.2.2]
+- angular-locale_[Locale ID].js [v1.2.1, v1.2.2, v1.3.15, v1.4.0]
 
 where Locale ID = {af,af-na,af-za,am,am-et,ar,ar-001,ar-ae,ar-bh,ar-dz,.........,zu-za}
 You will find more information about available locales at [Angular Guide i18n](http://docs.angularjs.org/guide/i18n)
