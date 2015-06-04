@@ -14,8 +14,8 @@ sbt command files depending on chosen input (target) parameter.
 Target Lift 2.5 (java6, Scala 2.9.1, 2.9.1-1, 2.9.2, 2.10)
 sbt < project/autobuildscript/build-publish-Lift25.txt > build.log | tail -f build.log
 
-Current target Lift 2.6 (java6 Scala 2.9.1, 2.9.1-1, 2.9.2, 2.10)
+Current target Lift 2.6 (java6 Scala 2.9.1, 2.9.1-1, 2.9.2, 2.10, 2.11)
 sbt < project/autobuildscript/build-publish-Lift26.txt > build.log | tail -f build.log
 
-Target Lift 3.x (OBS! use java7 Scala 2.10)
+Target Lift 3.x (OBS! use java7 Scala 2.11)
 sbt < project/autobuildscript/build-publish-Lift3.txt > build.log | tail -f build.log

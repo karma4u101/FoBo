@@ -4,11 +4,13 @@ organization := "net.liftmodules"
 
 moduleName <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
-crossScalaVersions := Seq("2.11.2", "2.10.4", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.11.6", "2.10.4", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalacOptions ++= Seq("-deprecation")
+scalacOptions ++= Seq("-deprecation","-feature")
 
 EclipseKeys.withSource := true
+
+EclipseKeys.createSrc := EclipseCreateSrc.Default + EclipseCreateSrc.Managed
 
 parallelExecution in Test := false
 
@@ -23,13 +25,13 @@ libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"      %% "lift-mapper"                       % v       % "provided" ::
     "net.liftmodules"  %% ("fobo-pace"+"_"+e)                 % mv      % "compile" ::       
     "net.liftmodules"  %% ("fobo-jquery"+"_"+e)               % mv      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-knockout"+"_"+e)             % mv      % "compile" :: 
+    /*"net.liftmodules"  %% ("fobo-knockout"+"_"+e)             % mv      % "compile" ::*/ 
     "net.liftmodules"  %% ("fobo-kineticjs"+"_"+e)            % mv      % "compile" ::      
     "net.liftmodules"  %% ("fobo-angularjs"+"_"+e)            % mv      % "compile" ::     
-    "net.liftmodules"  %% ("fobo-foundation"+"_"+e)           % mv      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-datatables"+"_"+e)           % mv      % "compile" :: 
+    /*"net.liftmodules"  %% ("fobo-foundation"+"_"+e)           % mv      % "compile" ::*/ 
+    /*"net.liftmodules"  %% ("fobo-datatables"+"_"+e)           % mv      % "compile" ::*/ 
     "net.liftmodules"  %% ("fobo-font-awesome"+"_"+e)         % mv      % "compile" :: 
-    "net.liftmodules"  %% ("fobo-jquery-mobile"+"_"+e)        % mv      % "compile" ::
+    /*"net.liftmodules"  %% ("fobo-jquery-mobile"+"_"+e)        % mv      % "compile" ::*/
     "net.liftmodules"  %% ("fobo-twbs-bootstrap3"+"_"+e)      % mv      % "compile" ::    
     "net.liftmodules"  %% ("fobo-twitter-bootstrap"+"_"+e)    % mv      % "compile" :: 
     "net.liftmodules"  %% ("fobo-google-code-prettify"+"_"+e) % mv      % "compile" ::

@@ -1,10 +1,10 @@
-alias pub=publish-signed
+alias pub=publish-local-signed
 
 set version       in ThisBuild:="1.4-SNAPSHOT"
 
-set liftVersion   in ThisBuild:="2.6-RC2"
+set liftVersion   in ThisBuild:="2.6.2"
 
-set scalaVersion  in ThisBuild:="2.11.2"
+set scalaVersion  in ThisBuild:="2.11.6"
 
 project fobo
 set parallelExecution in Test := false
