@@ -28,11 +28,11 @@ object FoBoSpec extends Specification  {
     }       
   } 
   
-  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS1315 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/angular.js to fobo/angular-js/1.3.15/js/angular.min.js" in {
-      rewriteAngularJS1315 must_== List("fobo", "angular-js", "1.3.15", "js", "angular.min.js")
-    }       
-  } 
+//  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS1315 the ResourceServer.pathRewriter" should {
+//    "rewrit fobo/angular.js to fobo/angular-js/1.3.15/js/angular.min.js" in {
+//      rewriteAngularJS1315 must_== List("fobo", "angular-js", "1.3.15", "js", "angular.min.js")
+//    }       
+//  } 
   
   "With FoBo.InitParam.ToolKit set to FoBo.AJSUIBootstrap0100 the ResourceServer.pathRewriter" should {
     "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.10.0/js/ui-bootstrap-0.10.0.min.js" in {
