@@ -48,13 +48,12 @@ class AJSResources extends StatefulSnippet {
   def injectJS:net.liftweb.util.CssSel = {
     def transform(res: List[String]): List[scala.xml.Elem] = {
       val res2 = if(!res.contains("angular")) "angular" :: res else res
-      val result = (for {
+      val result:List[scala.xml.Elem] = (for {
         r <- res2
       } yield  <script type="text/javascript" src={ "/classpath/fobo/" + r + ".js" } ></script>  )
       result    
     }
-    val res = S.attr("resources").map(x => x.split(',').map(x => x.trim).toList.distinct).openOr(List())
-    //strToCssBindPromoter(" *").#>(transform(res))
+    val res:List[String] = S.attr("resources").map(x => x.split(',').map(x => x.trim).toList.distinct).openOr(List())
     " *" #> transform(res.toList)
   }
   
@@ -75,12 +74,12 @@ class AJSResources extends StatefulSnippet {
    */    
   def injectCSS:net.liftweb.util.CssSel = {
     def transform(res: List[String]):List[scala.xml.Elem] = {
-      val result = (for {
+      val result:List[scala.xml.Elem] = (for {
         r <- res
       } yield  <link type="text/css" rel="stylesheet" href={ "/classpath/fobo/" + r + ".css" } />  )
       result 
     }      
-    val res = S.attr("resources").map(x => x.split(',').map(x => x.trim).toList.distinct).openOr(List())
+    val res:List[String] = S.attr("resources").map(x => x.split(',').map(x => x.trim).toList.distinct).openOr(List())
      " *" #> transform(res.toList)
   }  
  

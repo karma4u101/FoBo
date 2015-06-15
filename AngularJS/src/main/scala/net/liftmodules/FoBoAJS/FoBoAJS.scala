@@ -31,6 +31,7 @@ package object FoBoAJS {
     var ToolKit: AJSToolkit = null 
   }
  
+ 
  /**
    * Enable usage of AngularJS version 1&#8228;4&#8228;0 in your bootstrap liftweb Boot.
    * @version 1.4.0
@@ -61,7 +62,8 @@ package object FoBoAJS {
     AJSFoBoResources.angularjs140i18n
     AJSFoBoResources.angularjs140i18n2
     AJSFoBoResources.angularjs140i18n3
-  }  
+    AJSFoBoResources.angularjs140i18n4
+  } 
   
   /**
    * Enable usage of AngularJS version 1&#8228;3&#8228;15 in your bootstrap liftweb Boot.
@@ -92,6 +94,8 @@ package object FoBoAJS {
   case object AngularJS1315i18n extends AJSToolkit {
     AJSFoBoResources.angularjs1315i18n
     AJSFoBoResources.angularjs1315i18n2
+    AJSFoBoResources.angularjs1315i18n3
+    AJSFoBoResources.angularjs1315i18n4
   }   
   
   
@@ -124,10 +128,10 @@ package object FoBoAJS {
   case object AngularJS1219i18n extends AJSToolkit {
     AJSFoBoResources.angularjs1219i18n
     AJSFoBoResources.angularjs1219i18n2
+   
   } 
   
-  
-  /**
+    /**
    * Enable usage of AngularJS version 1&#8228;2&#8228;11 in your bootstrap liftweb Boot.
    * @version 1.2.11
    *
@@ -138,6 +142,7 @@ package object FoBoAJS {
    * }}}
    *
    */
+  @deprecated("Use AngularJS1219 or later","FoBo v1.3.0")
   case object AngularJS1211 extends AJSToolkit {
     AJSFoBoResources.angularjs1211
   } 
@@ -153,28 +158,12 @@ package object FoBoAJS {
    * }}}
    *
    */
+  @deprecated("Use AngularJS1219i18n or later","FoBo v1.3.0")
   case object AngularJS1211i18n extends AJSToolkit {
     AJSFoBoResources.angularjs1211i18n
-  }  
+  } 
   
-  
-  /**
-   * Enable usage of AngularJS version 1&#8228;0&#8228;6 in your bootstrap liftweb Boot.
-   * @version 1.0.6
-   *
-   *  '''Example:'''
-   *
-   * {{{
-   *   FoBoAJS.InitParam.Toolkit=FoBoAJS.AngularJS106
-   * }}}
-   *
-   */
-  @deprecated("Use AngularJS1211 or later","FoBo v1.2.0")
-  case object AngularJS106 extends AJSToolkit {
-    AJSFoBoResources.angularjs106
-  }
-  
-    /**
+   /**
    * Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.
    * @version 0.10.0
    *
@@ -253,7 +242,7 @@ package object FoBoAJS {
    * Object holding internally used FoBo resources.
    */
   private object AJSFoBoResources {
-    
+
     lazy val angularjs140 = {
       ResourceServer.rewrite {
         case "fobo" :: "angular.js" :: Nil if Props.devMode => List("fobo", "angular-js", "1.4.0", "js", "angular.js")
@@ -514,7 +503,12 @@ package object FoBoAJS {
         case "fobo" :: "angular-locale_en-ms.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_en-ms.js")
         case "fobo" :: "angular-locale_brx-in.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_brx-in.js")
         case "fobo" :: "angular-locale_sr-latn-rs.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_sr-latn-rs.js")
-        case "fobo" :: "angular-locale_sl-si.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_sl-si.js")
+        case "fobo" :: "angular-locale_sl-si.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_sl-si.js")       
+      }
+      }
+    
+    lazy val angularjs140i18n2 = {
+      ResourceServer.rewrite {    
         case "fobo" :: "angular-locale_mgo.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_mgo.js")
         case "fobo" :: "angular-locale_ha-latn.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_ha-latn.js")
         case "fobo" :: "angular-locale_tg.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_tg.js")
@@ -566,11 +560,6 @@ package object FoBoAJS {
         case "fobo" :: "angular-locale_fr-be.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_fr-be.js")
         case "fobo" :: "angular-locale_hr.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_hr.js")
         case "fobo" :: "angular-locale_agq-cm.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_agq-cm.js")
-      }
-      }
-    
-    lazy val angularjs140i18n2 = {
-      ResourceServer.rewrite {    
         case "fobo" :: "angular-locale_smn.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_smn.js")
         case "fobo" :: "angular-locale_kl.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_kl.js")
         case "fobo" :: "angular-locale_ak.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_ak.js")
@@ -720,6 +709,12 @@ package object FoBoAJS {
         case "fobo" :: "angular-locale_so-et.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_so-et.js")
         case "fobo" :: "angular-locale_ti-et.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_ti-et.js")
         case "fobo" :: "angular-locale_nyn-ug.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_nyn-ug.js")
+
+      }
+    }
+
+    lazy val angularjs140i18n3 = {
+      ResourceServer.rewrite {
         case "fobo" :: "angular-locale_gsw-ch.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_gsw-ch.js")
         case "fobo" :: "angular-locale_ckb-latn.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_ckb-latn.js")
         case "fobo" :: "angular-locale_nl-sx.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_nl-sx.js")
@@ -792,11 +787,6 @@ package object FoBoAJS {
         case "fobo" :: "angular-locale_mua.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_mua.js")
         case "fobo" :: "angular-locale_kab-dz.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_kab-dz.js")
         case "fobo" :: "angular-locale_lv-lv.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_lv-lv.js")
-      }
-    }
-
-    lazy val angularjs140i18n3 = {
-      ResourceServer.rewrite {
         case "fobo" :: "angular-locale_en-mh.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_en-mh.js")
         case "fobo" :: "angular-locale_en-cc.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_en-cc.js")
         case "fobo" :: "angular-locale_jmc-tz.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_jmc-tz.js")
@@ -914,6 +904,10 @@ package object FoBoAJS {
         case "fobo" :: "angular-locale_ko.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_ko.js")
         case "fobo" :: "angular-locale_fr-cm.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_fr-cm.js")
         case "fobo" :: "angular-locale_chr.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_chr.js")
+      }
+    }
+    lazy val angularjs140i18n4 = {
+      ResourceServer.rewrite {    
         case "fobo" :: "angular-locale_bs-cyrl.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_bs-cyrl.js")
         case "fobo" :: "angular-locale_en-ng.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_en-ng.js")
         case "fobo" :: "angular-locale_eu.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_eu.js")
@@ -1069,8 +1063,9 @@ package object FoBoAJS {
         case "fobo" :: "angular-locale_ia-fr.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_ia-fr.js")
         case "fobo" :: "angular-locale_es-bo.js" :: Nil => List("fobo", "angular-js", "1.4.0", "i18n", "angular-locale_es-bo.js")
       }
-    }
-
+    }    
+    
+    
     lazy val angularjs1315 = {
       ResourceServer.rewrite {
         case "fobo" :: "angular.js" :: Nil if Props.devMode => List("fobo", "angular-js", "1.3.15", "js", "angular.js")
@@ -1321,6 +1316,11 @@ package object FoBoAJS {
         case "fobo" :: "angular-locale_es-mx.js" :: Nil       => List("fobo", "angular-js", "1.3.15", "i18n", "angular-locale_es-mx.js")
         case "fobo" :: "angular-locale_bn-bd.js" :: Nil       => List("fobo", "angular-js", "1.3.15", "i18n", "angular-locale_bn-bd.js")
         case "fobo" :: "angular-locale_am-et.js" :: Nil       => List("fobo", "angular-js", "1.3.15", "i18n", "angular-locale_am-et.js")
+      }
+    }
+    
+    lazy val angularjs1315i18n2 = {
+      ResourceServer.rewrite {
         case "fobo" :: "angular-locale_mk-mk.js" :: Nil       => List("fobo", "angular-js", "1.3.15", "i18n", "angular-locale_mk-mk.js")
         case "fobo" :: "angular-locale_lag.js" :: Nil         => List("fobo", "angular-js", "1.3.15", "i18n", "angular-locale_lag.js")
         case "fobo" :: "angular-locale_en-ms.js" :: Nil       => List("fobo", "angular-js", "1.3.15", "i18n", "angular-locale_en-ms.js")
@@ -1501,7 +1501,7 @@ package object FoBoAJS {
       }
     }
 
-    lazy val angularjs1315i18n2 = {
+    lazy val angularjs1315i18n3 = {
       ResourceServer.rewrite {
         //i18n files    
         case "fobo" :: "angular-locale_en-jm.js" :: Nil          => List("fobo", "angular-js", "1.3.15", "i18n", "angular-locale_en-jm.js")
@@ -1704,6 +1704,12 @@ package object FoBoAJS {
         case "fobo" :: "angular-locale_ig.js" :: Nil             => List("fobo", "angular-js", "1.3.15", "i18n", "angular-locale_ig.js")
         case "fobo" :: "angular-locale_sv-se.js" :: Nil          => List("fobo", "angular-js", "1.3.15", "i18n", "angular-locale_sv-se.js")
         case "fobo" :: "angular-locale_wal.js" :: Nil            => List("fobo", "angular-js", "1.3.15", "i18n", "angular-locale_wal.js")
+      }
+    }
+    
+    
+    lazy val angularjs1315i18n4 = {
+      ResourceServer.rewrite {    
         case "fobo" :: "angular-locale_qu-pe.js" :: Nil          => List("fobo", "angular-js", "1.3.15", "i18n", "angular-locale_qu-pe.js")
         case "fobo" :: "angular-locale_pa-guru.js" :: Nil        => List("fobo", "angular-js", "1.3.15", "i18n", "angular-locale_pa-guru.js")
         case "fobo" :: "angular-locale_ru-ua.js" :: Nil          => List("fobo", "angular-js", "1.3.15", "i18n", "angular-locale_ru-ua.js")
@@ -2217,8 +2223,7 @@ package object FoBoAJS {
         case "fobo" :: "angular-locale_es-bo.js" :: Nil => List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_es-bo.js")        
       }
     }    
-    
-    
+
     lazy val angularjs1211 = {
       ResourceServer.rewrite {
         case "fobo" :: "angular.js" :: Nil if Props.devMode => List("fobo", "angular-js", "1.2.11", "js", "angular.js")
@@ -2761,16 +2766,7 @@ package object FoBoAJS {
         case "fobo" :: "angular-locale_zu-za.js" :: Nil => List("fobo", "angular-js", "1.2.11", "i18n", "angular-locale_zu-za.js")        
         
       }
-    }        
-    
-    
-    lazy val angularjs106 = {
-      ResourceServer.rewrite {
-        case "fobo" :: "angular.js" :: Nil if Props.devMode => List("fobo", "angular-js", "1.0.6", "js", "angular.js")
-        case "fobo" :: "angular.js" :: Nil => List("fobo", "angular-js", "1.0.6", "js", "angular.min.js")
-      }
-    }
-
+    }          
     
     lazy val uibootstrap0100 = {
       ResourceServer.rewrite {

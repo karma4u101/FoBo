@@ -405,10 +405,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.0
    */
-  @deprecated("Use AngularJS122 or later","FoBo v1.2.0")
-  case object AngularJS106 extends FoBoToolkit {
-    net.liftmodules.FoBoAJS.AngularJS106
-  }
+//  @deprecated("Use AngularJS122 or later","FoBo v1.2.0")
+//  case object AngularJS106 extends FoBoToolkit {
+//    net.liftmodules.FoBoAJS.AngularJS106
+//  }
   
   /**
    * Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.
