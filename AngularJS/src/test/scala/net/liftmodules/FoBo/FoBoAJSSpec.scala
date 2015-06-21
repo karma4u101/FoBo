@@ -15,9 +15,9 @@ object FoBoAJSSpec extends Specification  {
   //is treated as code is run in "devMode" while 'test' dose not assume this. 
   
   //AngularJS core
-  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AngularJS140 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/angular.js to fobo/angular-js/1.4.0/js/angular.min.js" in {
-      rewriteAngularJS140 must_== List("fobo", "angular-js", "1.4.0", "js", "angular.min.js")
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AngularJS141 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/angular.js to fobo/angular-js/1.4.1/js/angular.min.js" in {
+      rewriteAngularJS141 must_== List("fobo", "angular-js", "1.4.1", "js", "angular.min.js")
     }       
   } 
   
@@ -31,9 +31,9 @@ object FoBoAJSSpec extends Specification  {
     }    
   }   
   
-    //AngularJS
-  def rewriteAngularJS140 = {
-    FoBoAJS.InitParam.ToolKit=FoBoAJS.AngularJS140
+  //AngularJS
+  def rewriteAngularJS141 = {
+    FoBoAJS.InitParam.ToolKit=FoBoAJS.AngularJS141
     ResourceServer.pathRewriter("fobo"::"angular.js"::Nil)
   }
   
