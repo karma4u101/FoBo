@@ -47,6 +47,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 **Latest Snapshot Release:**
+- **2015-06-21**  -- Module v1.4-SNAPSHOT released for Lift v2.6 and v3.0
 - **2015-06-16**  -- Module v1.4-SNAPSHOT released for Lift v2.6 and v3.0
 
 See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
