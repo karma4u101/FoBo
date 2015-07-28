@@ -33,6 +33,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo/tree/master) (master)
 
 **Latest Updates:**
+- **2015-07-28** -- Module v1.4-SNAPSHOT Adding Font-Awesome v4.3.0
 - **2015-07-28** -- Module v1.4-SNAPSHOT Adding Bootstrap v3.3.5
 - **2014-07-02** -- Module v1.3-SNAPSHOT Adding bootstrap v3.2.0
 - **2014-03-09** -- Module v1.2-SNAPSHOT Adding bootstrap v3.1.1
