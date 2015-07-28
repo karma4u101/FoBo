@@ -1,6 +1,5 @@
-/.settings
+/.settings/
+/target/
 /.classpath
 /.project
-/target
 /README.md~
-/build.sbt~
