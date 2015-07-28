@@ -47,7 +47,24 @@ package object FoBoJQ {
   case object JQueryMigrate121 extends FoBoJQ {
     JQFoBoResources.jqueryMigrate121
   }  
+
   
+  /**
+   * Enable usage of JQuery version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.
+   * @version 2.1.4
+   * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery211
+   * }}}
+   * @since v1.3
+   */
+case object JQuery214 extends FoBoJQ {
+  JQFoBoResources.jquery214
+}
+
   /**
    * Enable usage of JQuery version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.
    * @version 2.1.1
@@ -163,6 +180,14 @@ case object JQuery172 extends FoBoJQ {
     }
   }    
     
+  
+  lazy val jquery214 = {
+    ResourceServer.rewrite {//fetched from the jquery module ("adding" fobo to the modules path)
+      case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "2.1.4", "js", "jquery.js")
+      case "fobo" :: "jquery.js" :: Nil => List("jquery", "2.1.4", "js", "jquery-min.js")
+    }
+  }
+  
   lazy val jquery211 = {
     ResourceServer.rewrite {//fetched from the jquery module ("adding" fobo to the modules path)
       case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "2.1.1", "js", "jquery.js")

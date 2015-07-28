@@ -183,7 +183,10 @@ object FoBoSpec extends Specification  {
     }     
     "having the initparam set to FoBo.JQuery1102 rewrit fobo/jquery.js to jquery/1.10.2/js/jquery-min.js" in {
       rewriteJQuery1102JS must_== List("jquery", "1.10.2", "js", "jquery-min.js")
-    }     
+    }
+    "having the initparam set to FoBo.JQuery214 rewrit fobo/jquery.js to jquery/2.1.4/js/jquery-min.js" in {
+      rewriteJQuery214JS must_== List("jquery", "2.1.4", "js", "jquery-min.js")
+    }    
   }  
     
 //  "With FoBo.InitParam.JQuery set to FoBo.JQuery182 the ResourceServer.pathRewriter" should {
@@ -246,6 +249,12 @@ object FoBoSpec extends Specification  {
   }  
   
   //JQuery
+  def rewriteJQuery214JS = {
+    FoBo.InitParam.JQuery=FoBo.JQuery214
+    ResourceServer.pathRewriter("fobo"::"jquery.js"::Nil)
+    
+  } 
+  
   def rewriteJQuery1102JS = {
     FoBo.InitParam.JQuery=FoBo.JQuery1102
     ResourceServer.pathRewriter("fobo"::"jquery.js"::Nil)

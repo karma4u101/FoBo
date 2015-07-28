@@ -34,7 +34,7 @@ import common._
  * 
  * The following is a list of available toolkits and plugins 
  *  
- *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.0] [[net.liftmodules.FoBoJQ]]
+ *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.0, v1.11.1, v.2.1.1, v.2.1.4] [[net.liftmodules.FoBoJQ]]
  *  - Bootstrap v3.x serie [v3.0.1, v3.1.1, v3.2.0, v3.3.5] [[net.liftmodules.FoBoBs]]
  *  - Bootstrap v2.x serie [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2] [[net.liftmodules.FoBoTB]]
  *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0] [[net.liftmodules.FoBoFA]]
@@ -576,6 +576,22 @@ case object PrettifyJun2011 extends FoBoToolkit {
     net.liftmodules.FoBoJQ.JQueryMigrate121
   }
 
+  /**
+   * Enable usage of JQuery version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.
+   * @version 2.1.4
+   * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
+   *
+   * '''Example:'''
+   *
+   * {{{
+   *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery214
+   * }}}
+   * @since v1.4
+   */
+  case object JQuery214 extends FoBoJQuery {
+    net.liftmodules.FoBoJQ.JQuery214
+  } 
+  
   /**
    * Enable usage of JQuery version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.
    * @version 2.1.1

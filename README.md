@@ -39,6 +39,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - **2013-10-11** -- Module v1.1
 
 **Latest Updates:**
+- **2015-07-28** -- Module v1.4-SNAPSHOT Adding JQuery v2.1.4
 - **2015-07-28** -- Module v1.4-SNAPSHOT Adding Font-Awesome v4.3.0
 - **2015-07-28** -- Module v1.4-SNAPSHOT Adding Bootstrap v3.3.5
 - **2015-07-28** -- Module v1.4-SNAPSHOT Adding Angular-Material design v0.10.0 Removed AngularJS core v1.4.0
@@ -67,6 +68,7 @@ New features in FoBo v1.4
 -   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.4.1 - [AngularJS](http://angularjs.org/).
 -   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.3.15 - [AngularJS](http://angularjs.org/).
 -   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.3.0 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
+-   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v2.1.4 - [JQuery](http://jquery.com/)
 
 
 ###FoBo v1.4 other updates
