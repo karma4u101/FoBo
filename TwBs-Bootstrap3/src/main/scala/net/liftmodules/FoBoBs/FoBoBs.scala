@@ -136,6 +136,21 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   var ToolKit: FoBoToolkit = null 
 }
 
+
+/**
+ * Enable usage of Bootstrap version 3&#8228;3&#8228;5 in your bootstrap liftweb Boot.
+ * @version 3.3.5
+ * 
+ * '''Example'''
+ * 
+ * {{{
+ *   FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap335
+ * }}}
+ */
+case object Bootstrap335 extends FoBoToolkit {
+  FoBoResources.bootstrap335
+}
+
 /**
  * Enable usage of Bootstrap version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.
  * @version 3.2.0
@@ -201,6 +216,19 @@ case object Bootstrap300 extends FoBoToolkit {
  */
 private object FoBoResources { 
 
+  lazy val bootstrap335: Unit = {
+    ResourceServer.rewrite {
+      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","3.3.5", "css", "bootstrap.css")
+      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","3.3.5", "css", "bootstrap.min.css")
+      case "fobo" :: "bootstrap.css.map" :: Nil => List("fobo", "bootstrap","3.3.5", "css", "bootstrap.css.map")
+      case "fobo" :: "bootstrap-theme.css" :: Nil if Props.devMode => List("fobo", "bootstrap","3.3.5", "css", "bootstrap-theme.css")
+      case "fobo" :: "bootstrap-theme.css" :: Nil => List("fobo", "bootstrap","3.3.5", "css", "bootstrap-theme.min.css")
+      case "fobo" :: "bootstrap-theme.css.map" :: Nil => List("fobo", "bootstrap","3.3.5", "css", "bootstrap-theme.css.map")
+      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","3.3.5", "js", "bootstrap.js")
+      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","3.3.5", "js", "bootstrap.min.js") 
+    }
+  }
+  
   lazy val bootstrap320: Unit = {
     ResourceServer.rewrite {
       case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","3.2.0", "css", "bootstrap.css")
