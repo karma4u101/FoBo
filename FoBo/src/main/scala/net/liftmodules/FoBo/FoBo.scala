@@ -35,18 +35,15 @@ import common._
  * The following is a list of available toolkits and plugins 
  *  
  *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.0] [[net.liftmodules.FoBoJQ]]
- *  - Bootstrap v3.x serie [v3.0.0, v3.0.1, v3.1.1, v3.2.0] [[net.liftmodules.FoBoBs]]
+ *  - Bootstrap v3.x serie [v3.0.1, v3.1.1, v3.2.0, v3.3.5] [[net.liftmodules.FoBoBs]]
  *  - Bootstrap v2.x serie [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2] [[net.liftmodules.FoBoTB]]
- *  - Font Awesome [v2.0.0, v3.0.0, v3.2.1, v4.0.1, v4.0.3] [[net.liftmodules.FoBoFA]]
+ *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0] [[net.liftmodules.FoBoFA]]
  *  - Kinetic JS [v5.1.0]
- *  - Foundation [v2.1.5] 
- *  - DataTables [v1.9.0]
- *  - JQuery-mobile [v1.0.1, v1.1.0]
  *  - Google Code Prettify [vJun2011]
- *  - Knockout JS [v2.0.0, v2.1.0, v]2.2.1]
  *  - Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15] (angular core modules)
  *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component)
  *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component)
+ *  - Angular Material design [v0.10.0] (angular component)
  *  
  * 
  * ===Heads up===
@@ -704,6 +701,22 @@ case object JQuery172 extends FoBoJQuery {
 //}
 
 /**
+ * Enable usage of Font-Awesome version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
+ * @version 4.3.0
+ * 
+ *  '''Example:'''
+ *  
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.FontAwesome430
+ * }}}
+ * @since v1.4 
+ */
+case object FontAwesome430 extends FoBoToolkit {
+  net.liftmodules.FoBoFA.FontAwesome430
+}
+
+
+/**
  * Enable usage of Font-Awesome version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.
  * @version 4.1.0
  * 
@@ -712,7 +725,7 @@ case object JQuery172 extends FoBoJQuery {
  * {{{
  *   FoBo.InitParam.Toolkit=FoBo.FontAwesome410
  * }}}
- * @since v1.2 
+ * @since v1.3 
  */
 case object FontAwesome410 extends FoBoToolkit {
   net.liftmodules.FoBoFA.FontAwesome410
@@ -735,22 +748,6 @@ case object FontAwesome403 extends FoBoToolkit {
 
 
 /**
- * Enable usage of Font-Awesome version 4&#8228;0&#8228;1 in your bootstrap liftweb Boot.
- * @version 4.0.1
- * 
- *  '''Example:'''
- *  
- * {{{
- *   FoBo.InitParam.Toolkit=FoBo.FontAwesome401
- * }}}
- * @since v1.1 
- */
-@deprecated("Use FontAwesome403 or later","FoBo v1.3.0")
-case object FontAwesome401 extends FoBoToolkit {
-  net.liftmodules.FoBoFA.FontAwesome401
-}
-
-/**
  * Enable usage of Font-Awesome version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.
  * @version 3.2.1
  * 
@@ -765,60 +762,6 @@ case object FontAwesome321 extends FoBoToolkit {
   net.liftmodules.FoBoFA.FontAwesome321
 }
 
-/**
- * Enable usage of Font-Awesome version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
- * @version 3.0.0
- * 
- *  '''Example:'''
- *  
- * {{{
- *   FoBo.InitParam.Toolkit=FoBo.FontAwesome300
- * }}}
- * @since v1.0 
- */
-@deprecated("Use FontAwesome321 or later","FoBo v1.2.0")
-case object FontAwesome300 extends FoBoToolkit {
-  net.liftmodules.FoBoFA.FontAwesome300
-}
-
-/**
- * Enable usage of Font-Awesome version 2&#8228;0&#8228;0 in your bootstrap liftweb Boot.
- * @version 2.0.0
- * 
- *  '''Example:'''
- *  
- * {{{
- *   FoBo.InitParam.Toolkit=FoBo.FontAwesome200
- * }}}
- * @since v1.0 
- */
-@deprecated("Use FontAwesome321 or later","FoBo v1.2.0")
-case object FontAwesome200 extends FoBoToolkit {
-  net.liftmodules.FoBoFA.FontAwesome200
-}
-
-/**
- * Enable usage of Font-Awesome version 2&#8228;0&#8228;0 in your bootstrap liftweb Boot.
- * 
- * This TB222 variant is optimized for use with FoBo.Bootstrap222. 
- * The effect of using this TB222 variant is that you can keep using the  
- * /classpath/fobo/bootstrap.css path in your template i.e there is 
- * no need to explicitly set the no icon css variant as  
- * /classpath/fobo/bootstrap-no-icons.css in your template FoBo will 
- * load a FontAwesome modified icon less bootstrap css for you. 
- * @version 2.0.0
- * 
- *  '''Example:'''
- *  
- * {{{
- *   FoBo.InitParam.Toolkit=FoBo.FontAwesome200TB222
- * }}}
- * @since v1.0 
- */
-@deprecated("Use FontAwesome321 or later","FoBo v1.2.0")
-case object FontAwesome200TB222 extends FoBoToolkit {
-  net.liftmodules.FoBoFA.FontAwesome200TB222
-}
 
 /**
  * Enable usage of Twitter Bootstrap version 2&#8228;1&#8228;0 in your bootstrap liftweb Boot.
@@ -916,22 +859,6 @@ case object Bootstrap232 extends FoBoToolkit {
   net.liftmodules.FoBoTB.Bootstrap232
 }
 
-
-/**
- * Enable usage of Twitter Bootstrap version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
- * @version 3.0.0
- * 
- * '''Example'''
- * 
- * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap300
- * }}}
- * @since v1.1
- */
-@deprecated("Use Bootstrap301 or later","FoBo v1.2.0")
-case object Bootstrap300 extends FoBoToolkit {
-  net.liftmodules.FoBoBs.Bootstrap300
-}
 
 /**
  * Enable usage of Twitter Bootstrap version 3&#8228;0&#8228;1 in your bootstrap liftweb Boot.
