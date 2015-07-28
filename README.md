@@ -71,8 +71,16 @@ New features in FoBo v1.4
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v2.1.4 - [JQuery](http://jquery.com/)
 
 
-###FoBo v1.4 other updates
+###FoBo v1.4 deprications
 -   Deprecations -- Some long time deprecations has been removed from the build.
+
+###Removed submodules
+Modules available but that have been split out of the FoBo meta module. 
+The modules can still be used as stand alone modules, see respective modules readme for information on how to set them up. 
+-   [FoBo-JQuery-Mobile](https://github.com/karma4u101/FoBo/tree/master/JQuery-Mobile) [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
+-   [FoBo-DataTables](https://github.com/karma4u101/FoBo/tree/master/DataTables) [v1.9.0] - [DataTables.net](http://datatables.net/)
+-   [FoBo-Knockout](https://github.com/karma4u101/FoBo/tree/master/Knockout) [v2.0.0, v2.1.0, v2.2.1] - [KnockoutJS](http://knockoutjs.com/)
+-   [FoBo-Foundation](https://github.com/karma4u101/FoBo/tree/master/Foundation) [v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
 
 New features in FoBo v1.3
 ---------------------------
