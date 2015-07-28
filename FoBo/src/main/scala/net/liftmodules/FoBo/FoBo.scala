@@ -40,7 +40,7 @@ import common._
  *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0] [[net.liftmodules.FoBoFA]]
  *  - Kinetic JS [v5.1.0]
  *  - Google Code Prettify [vJun2011]
- *  - Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15] (angular core modules)
+ *  - Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15, v1.4.1] (angular core modules)
  *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component)
  *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component)
  *  - Angular Material design [v0.10.0] (angular component)

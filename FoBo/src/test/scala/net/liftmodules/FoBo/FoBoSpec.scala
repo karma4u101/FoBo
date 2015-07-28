@@ -76,35 +76,11 @@ object FoBoSpec extends Specification  {
   
   
   //FontAwesome
-  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome200 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/font-awesome.css to fobo/font-awesome/2.0.0/css/font-awesome.css" in {
-      rewriteFontAwesome200CSS must_== List("fobo", "font-awesome", "2.0.0", "css", "font-awesome-min.css")
-    }       
-  }  
-  
-  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome200TB222 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/font-awesome.css to fobo/font-awesome/2.0.0/css/font-awesome.css" in {
-      rewriteFontAwesome200TB222CSS must_== List("fobo", "font-awesome", "2.0.0", "css", "font-awesome-min.css")
-    }       
-  }   
-  
-  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome300 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/font-awesome.css to fobo/font-awesome/3.0.0/css/font-awesome.css" in {
-      rewriteFontAwesome300CSS must_== List("fobo", "font-awesome", "3.0.0", "css", "font-awesome.min.css")
-    }       
-  }
-  
   "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome321 the ResourceServer.pathRewriter" should {
     "rewrit fobo/font-awesome.css to fobo/font-awesome/3.2.1/css/font-awesome.css" in {
       rewriteFontAwesome321CSS must_== List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-min.css")
     }       
   } 
-  
-  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome401 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.0.1/css/font-awesome.css" in {
-      rewriteFontAwesome401CSS must_== List("fobo", "font-awesome", "4.0.1", "css", "font-awesome-min.css")
-    }       
-  }
   
   "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome410 the ResourceServer.pathRewriter" should {
     "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome.css" in {
@@ -112,6 +88,11 @@ object FoBoSpec extends Specification  {
     }       
   }  
   
+  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome410 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome.css" in {
+      rewriteFontAwesome430CSS must_== List("fobo", "font-awesome", "4.3.0", "css", "font-awesome.min.css")
+    }       
+  }   
   
   
   //Foundation
@@ -304,36 +285,20 @@ object FoBoSpec extends Specification  {
   
   
   ////FontAwesome
-  def rewriteFontAwesome200CSS = {
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome200
-    ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
-  }
- 
-  def rewriteFontAwesome200TB222CSS = {
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome200TB222
-    ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
-  }  
-  
-  def rewriteFontAwesome300CSS = {
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome300
-    ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
-  }
-  
   def rewriteFontAwesome321CSS = {
     FoBo.InitParam.ToolKit=FoBo.FontAwesome321
     ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
   }  
-  
-   def rewriteFontAwesome401CSS = {
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome401
-    ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
-  } 
    
    def rewriteFontAwesome410CSS = {
     FoBo.InitParam.ToolKit=FoBo.FontAwesome410
     ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
   }    
-  
+
+   def rewriteFontAwesome430CSS = {
+    FoBo.InitParam.ToolKit=FoBo.FontAwesome430
+    ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
+  }   
   
   //Foundation
 //  def rewriteFoundation215JS = {
