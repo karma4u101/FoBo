@@ -294,40 +294,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   case object AngularJS141i18n extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AngularJS141i18n
   } 
-    
-  
-   /**
-   * Enable usage of AngularJS version 1&#8228;4&#8228;0 in your bootstrap liftweb Boot.
-   *
-   * @version 1.4.0
-   *
-   *  '''Lift Boot:'''
-   *
-   * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS140
-   *   FoBo.init()
-   * }}}
-   * @since v1.4
-   */
-  case object AngularJS140 extends FoBoToolkit {
-    net.liftmodules.FoBoAJS.AngularJS140
-  }
-  
-   /**
-   * Enable usage of i18n files for AngularJS version 1&#8228;4&#8228;0 in your bootstrap liftweb Boot.
-   * @version 1.4.0
-   *
-   *  '''Example:'''
-   *
-   * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS140i18n
-   * }}}
-   * @since v1.4
-   */
-  case object AngularJS140i18n extends FoBoToolkit {
-    net.liftmodules.FoBoAJS.AngularJS140i18n
-  } 
-  
+      
   
    /**
    * Enable usage of AngularJS version 1&#8228;3&#8228;15 in your bootstrap liftweb Boot.
@@ -442,6 +409,21 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
 //  case object AngularJS106 extends FoBoToolkit {
 //    net.liftmodules.FoBoAJS.AngularJS106
 //  }
+  
+  /**
+   * Enable usage of Angular-Material version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.
+   * @version 0.10.0
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AJMaterial0100
+   * }}}
+   * @since v1.4
+   */  
+  case object AJMaterial0100 extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AJMaterial0100
+  } 
   
   /**
    * Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.

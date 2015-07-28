@@ -27,6 +27,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)  
 
 **Latest Update:**
+- **2015-07-28** -- Module v1.4-SNAPSHOT Adding Angular-Material design v0.10.0
 - **2015-06-21** -- Module v1.4-SNAPSHOT Adding AngularJS core v1.4.1
 - **2015-06-04** -- Module v1.4-SNAPSHOT Adding AngularJS core v1.4.0
 - **2015-05-22** -- Module v1.4-SNAPSHOT Adding AngularJS core v1.3.15
