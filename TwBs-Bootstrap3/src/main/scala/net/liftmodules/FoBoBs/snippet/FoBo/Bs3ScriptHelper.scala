@@ -6,6 +6,8 @@ import net.liftweb.common._
 import net.liftweb.http._
 import net.liftweb._
 import Helpers._
+import net.liftweb.http.js._
+import net.liftweb.http.js.JsCmds._
 import net.liftmodules.FoBoBs.lib.{ScriptHelper=>sch}
 
 /**
@@ -24,6 +26,7 @@ class Bs3ScriptHelper extends StatefulSnippet with Loggable {
   
   def dispatch = {
     case "registerLoadEventFactory" => registerLoadEventFactory
+    case "registerLoadEventFactoryAppendGlobalJs" => registerLoadEventFactoryAppendGlobalJs
   }
   
   /**
@@ -63,8 +66,19 @@ class Bs3ScriptHelper extends StatefulSnippet with Loggable {
    * }}}
    * 
    */  
-  def registerLoadEventFactory = {
-    " *" #> sch.registerLoadEventFactory()
+  def registerLoadEventFactory:CssSel = {
+    " *" #> JsCmds.Script(sch.registerLoadEventFactoryScript()) 
   }
  
+  /**
+   * '''Lift 3 alternativ''' -- This function creates a register load event factory function and 
+   * appends it to lift's page-script global space.
+   * @since v1.4
+   */
+  def registerLoadEventFactoryAppendGlobalJs:CssSel = {
+    var js = sch.registerLoadEventFactoryScript()
+    S.appendGlobalJs(js) 
+    " *" #> ""
+  }   
+  
 }

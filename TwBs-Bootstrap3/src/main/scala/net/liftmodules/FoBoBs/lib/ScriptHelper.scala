@@ -20,7 +20,7 @@ import net.liftweb.http.js.JsCmd
  * @example If you find that the net.liftmodules.FoBo.snippet.FoBo.ScriptHelper snippet dose not fit you exact needs 
  * your can still use the ScriptHelper class to customize your own project snippets.
  * {{{
- *   import net.liftmodules.FoBo.lib.{ScriptHelper=>sch}
+ *   import net.liftmodules.FoBoBs.lib.{ScriptHelper=>sch}
  *    :
  *   class MySnippet {
  *     
@@ -38,10 +38,23 @@ import net.liftweb.http.js.JsCmd
 class ScriptHelper() {
   
   /**
-   * This function creates a register load event factory function.
+   * This function creates a register load event factory function and 
+   * injects it in place of the invocation.
+   * @note If you are using Lift 3 you should use the AppendGlobalJs alternative.
    */
-  def registerLoadEventFactory() = {
-    var sc = JsRaw(
+  @deprecated("Use the registerLoadEventFactoryScript function and wrap it in JsCmds.Script","FoBo v1.4.0")
+  def registerLoadEventFactory():scala.xml.Node = {
+    var sc = registerLoadEventFactoryScript()
+    JsCmds.Script(sc)      
+  }
+  
+   
+  /**
+   * This function creates a register load event factory script.
+   * @since v1.4
+   */  
+  def registerLoadEventFactoryScript():JsCmd = {
+    JsRaw(
       """function addLoadEvent(func) {
             var oldonload = window.onload;
             if (typeof window.onload != 'function') {
@@ -55,16 +68,28 @@ class ScriptHelper() {
                }
             }
          }""").cmd
-    JsCmds.Script(sc)      
   }
   
   /**
    * This function adds a specific load event to the load event factory function.
+   * 
    */
-  def addLoadEvent(event:String) :scala.xml.Node = {
-    var sc = JsRaw("""addLoadEvent(function() { %s });""".format(event)).cmd  
+  @deprecated("Use the loadEventScript function and wrap it in JsCmds.Script","FoBo v1.4.0")
+  def addLoadEvent(event:String):scala.xml.Node = {
+    //JsRaw("""addLoadEvent(function() { %s });""".format(event)).cmd  
+    var sc = loadEventScript(event) 
     JsCmds.Script(sc) 
   }
+  
+  /**
+   * This function creates a script that wraps a given event into the addLoadEvent function.
+   * @since v1.4
+   */  
+  def loadEventScript(event:String):JsCmd = {
+    JsRaw("""addLoadEvent(function() { %s });""".format(event)).cmd  
+  }  
+  
+  
 }
 
 
