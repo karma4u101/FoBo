@@ -69,7 +69,7 @@ New features in FoBo v1.4
 -   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.4.1 - [AngularJS](http://angularjs.org/).
 -   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.3.5 - [AngularJS](http://angularjs.org/).
 -   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.3.0 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
--   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v2.1.4 - [JQuery](http://jquery.com/)
+-   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v.1.11.3, v2.1.4 - [JQuery](http://jquery.com/)
 
 
 ###FoBo v1.4 deprications
