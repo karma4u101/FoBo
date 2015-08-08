@@ -15,26 +15,24 @@ import common._
  *===What FoBo will do for you===
  *
  * This module gives you quick and easy integration of some of the industry leading web-centric open source 
- * front-end toolkits with some carefully thought throw Scala/Lift inherit extra benefits. 
+ * front-end toolkits. 
  * 
  * Among the benefits is:
- *  - Due to a small footprint and uniform declaration and integration points across toolkit versions only a 
- *    small amount of changes will bee needed for a up/down-grading of a used Toolkit, optimally, if the toolkit 
- *    has no breaking changes it will just be a version change of the FoBo.Initparam in Lift bootstrap.liftweb.Boot. 
- *  - The module provides debug-able js and css files in development and minimized files otherwise and simultaneously 
- *    supporting several versions, makes development, maintenance, upgrade and fall-back quick and easy.      
- *  - The modules included lib Classes and Snippet helpers will ease you from writing some commonly used toolkit 
- *    component integration scripts making it a simple snippet invocation. 
- *    At this writing the snippet helpers is few but expect the numbers to grow as the module matures. 
- *  - Great mobile scalability with some mobile enabled toolkits.  
- *  - With FoBo great toolkits and toolsets for building the framework most suited to your application development
- *    will be available to you just a FoBo.Initparam away.   
+ *  - Due to uniform declaration and integration points across toolkit versions only a small amount of changes 
+ *    is needed for a up/down-grading of a used Toolkit, optimally, if the toolkit has no breaking changes 
+ *    it will just be a version change of the FoBo.Initparam in Lift bootstrap.liftweb.Boot. 
+ *  - The module provides debug-able js and css files in development and minimized files otherwise FoBo is 
+ *    simultaneously supporting several versions which makes development, maintenance, upgrade and fall-back 
+ *    quick and easy.      
+ *  - Some of the FoBo modules provides Snippet helpers and lib classes that will ease you from writing 
+ *    some commonly used toolkit component integration scripts making it a simple snippet invocation.  
+ *  - Great responsive/mobile scalability with responsive toolkits.   
  *
  * ===FoBo supported toolkits and plugins=== 
  * 
  * The following is a list of available toolkits and plugins 
  *  
- *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.0, v1.11.1, v.2.1.1, v.2.1.4] [[net.liftmodules.FoBoJQ]]
+ *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.0, v1.11.3, v.2.1.1, v.2.1.4] [[net.liftmodules.FoBoJQ]]
  *  - Bootstrap v3.x serie [v3.0.1, v3.1.1, v3.2.0, v3.3.5] [[net.liftmodules.FoBoBs]]
  *  - Bootstrap v2.x serie [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2] [[net.liftmodules.FoBoTB]]
  *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0] [[net.liftmodules.FoBoFA]]
@@ -608,6 +606,22 @@ case object PrettifyJun2011 extends FoBoToolkit {
     net.liftmodules.FoBoJQ.JQuery211
   }  
 
+  
+/**
+ * Enable usage of JQuery version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.
+ * @version 1.11.3
+ * 
+ * '''Example:'''
+ * 
+ * {{{
+ *   FoBo.InitParam.JQuery=FoBo.JQuery1113
+ * }}}
+ * @since v1.4
+ */
+case object JQuery1113 extends FoBoJQuery {
+  net.liftmodules.FoBoJQ.JQuery1113
+}
+
 /**
  * Enable usage of JQuery version 1&#8228;11&#8228;1 in your bootstrap liftweb Boot.
  * @version 1.11.1
@@ -619,6 +633,7 @@ case object PrettifyJun2011 extends FoBoToolkit {
  * }}}
  * @since v1.3
  */
+@deprecated("Use v1.11.3 or later","Sins v1.4") 
 case object JQuery1111 extends FoBoJQuery {
   net.liftmodules.FoBoJQ.JQuery1111
 }

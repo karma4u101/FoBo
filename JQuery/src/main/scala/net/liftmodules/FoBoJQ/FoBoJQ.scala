@@ -79,7 +79,23 @@ case object JQuery214 extends FoBoJQ {
    */
 case object JQuery211 extends FoBoJQ {
   JQFoBoResources.jquery211
-}  
+} 
+
+
+/**
+ * Enable usage of JQuery version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.
+ * @version 1.11.3
+ * 
+ * '''Example:'''
+ * 
+ * {{{
+ *   FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery1113
+ * }}}
+ * @since v1.4 
+ */
+case object JQuery1113 extends FoBoJQ {
+  JQFoBoResources.jquery1113
+}
 
 /**
  * Enable usage of JQuery version 1&#8228;11&#8228;1 in your bootstrap liftweb Boot.
@@ -92,6 +108,7 @@ case object JQuery211 extends FoBoJQ {
  * }}}
  * @since v1.3 
  */
+@deprecated("Use v1.11.3 or later","Sins v1.4") 
 case object JQuery1111 extends FoBoJQ {
   JQFoBoResources.jquery1111
 }
@@ -192,6 +209,13 @@ case object JQuery172 extends FoBoJQ {
     ResourceServer.rewrite {//fetched from the jquery module ("adding" fobo to the modules path)
       case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "2.1.1", "js", "jquery.js")
       case "fobo" :: "jquery.js" :: Nil => List("jquery", "2.1.1", "js", "jquery-min.js")
+    }
+  } 
+  
+  lazy val jquery1113 = {
+    ResourceServer.rewrite {//fetched from the jquery module ("adding" fobo to the modules path)
+      case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "1.11.3", "js", "jquery.js")
+      case "fobo" :: "jquery.js" :: Nil => List("jquery", "1.11.3", "js", "jquery-min.js")
     }
   } 
   
