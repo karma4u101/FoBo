@@ -21,7 +21,7 @@ resolvers ++= Seq(
 libraryDependencies <++= (liftVersion,liftEdition) { (v,e) =>
     "net.liftweb"      %% "lift-webkit"                % v       % "provided" ::
     "net.liftweb"      %% "lift-testkit"               % v       % "provided" ::
-    "net.liftmodules"  %% ("lift-jquery-module"+"_"+e) % "2.9-SNAPSHOT"   % "compile" :: 
+    "net.liftmodules"  %% ("lift-jquery-module"+"_"+e) % "2.9"   % "compile" :: 
     Nil
 }
 
