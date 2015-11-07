@@ -31,7 +31,7 @@ Improvements, contributions and suggestions are welcome! Please see the [Contrib
 Update log
 ----------
 
-For update history see the [History log](https://github.com/karma4u101/FoBo/blob/master/README.md#history-log) section
+For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/README.md#history-log) section
 
 **Latest Stable Releases:**
 - **2015-08-09** -- Module v1.4
@@ -40,10 +40,10 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/blob
 - **2013-10-11** -- Module v1.1
 
 **Latest Updates:**
-See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
+See [Development branch](https://github.com/karma4u101/FoBo/tree/develop)
 
 **Latest Snapshot Release:**
-See [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
+See [Development branch](https://github.com/karma4u101/FoBo/tree/develop)
 
 New features in FoBo v1.4
 ---------------------------
