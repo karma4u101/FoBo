@@ -6,7 +6,7 @@ For more information on how to use AngularJS in the FoBo module see the [FoBo - 
 
 Core modules 
 ---------------------------------
-- AngularJS core [v1.0.6, v1.2.11, v1.3.15, v1.4.8]
+- AngularJS core [v1.0.6, v1.2.11, v1.3.15, v1.4.1, v1.4.8]
 
 Components
 ----------
@@ -27,10 +27,10 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)  
 
 **Latest Update:**
-- **2015-11-22** -- Module v1.4-SNAPSHOT Adding AngularJS core v1.4.8 
+- **2015-11-22** -- Module v1.5-SNAPSHOT Adding AngularJS core v1.4.8 
 - **2015-07-28** -- Module v1.4-SNAPSHOT Adding Angular-Material design v0.10.0
-- **2015-06-21** -- Module v1.4-SNAPSHOT Adding AngularJS core v1.4.1 (removed)
-- **2015-06-04** -- Module v1.4-SNAPSHOT Adding AngularJS core v1.4.0 (removed)
+- **2015-06-21** -- Module v1.4-SNAPSHOT Adding AngularJS core v1.4.1
+- **2015-06-04** -- Module v1.4-SNAPSHOT Adding AngularJS core v1.4.0 
 - **2015-05-22** -- Module v1.4-SNAPSHOT Adding AngularJS core v1.3.15
 - **2014-02-21** -- Module v1.2-SNAPSHOT Removing FoBo unpublished AngularJS v.1.2.1 and v1.2.2 in favor for v1.2.11
 - **2014-02-05** -- Module v1.2-SNAPSHOT Adding Angular UI Bootstrap v0.10.0 (for use with bootstrap v3.x css)

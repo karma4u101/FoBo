@@ -40,9 +40,11 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2013-10-11** -- Module v1.1
 
 **Latest Updates:**
+- **2015-11-22** -- Module v1.4-SNAPSHOT Adding AngularJS core v1.4.8 
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop)
 
 **Latest Snapshot Release:**
+- **2015-11-22** -- Module v1.4-SNAPSHOT released for Lift v2.6 and v3.0
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop)
 
 New features in FoBo v1.4

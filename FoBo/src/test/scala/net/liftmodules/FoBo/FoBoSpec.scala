@@ -22,9 +22,9 @@ object FoBoSpec extends Specification  {
  
   
   //AngularJS
-  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS141 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/angular.js to fobo/angular-js/1.4.1/js/angular.min.js" in {
-      rewriteAngularJS141 must_== List("fobo", "angular-js", "1.4.1", "js", "angular.min.js")
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS148 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/angular.js to fobo/angular-js/1.4.8/js/angular.min.js" in {
+      rewriteAngularJS148 must_== List("fobo", "angular-js", "1.4.8", "js", "angular.min.js")
     }       
   } 
   
@@ -203,8 +203,8 @@ object FoBoSpec extends Specification  {
   
   
   //AngularJS
-  def rewriteAngularJS141 = {
-    FoBo.InitParam.ToolKit=FoBo.AngularJS141
+  def rewriteAngularJS148 = {
+    FoBo.InitParam.ToolKit=FoBo.AngularJS148
     ResourceServer.pathRewriter("fobo"::"angular.js"::Nil)
   }  
   
