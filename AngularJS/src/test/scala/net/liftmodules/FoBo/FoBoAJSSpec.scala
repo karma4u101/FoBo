@@ -21,6 +21,12 @@ object FoBoAJSSpec extends Specification  {
     }       
   } 
   
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AngularJS141 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/angular.js to fobo/angular-js/1.4.1/js/angular.min.js" in {
+      rewriteAngularJS141 must_== List("fobo", "angular-js", "1.4.1", "js", "angular.min.js")
+    }       
+  }   
+  
   //AngularJS UI Bootatrap
   "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AJSUIBootstrap020 the ResourceServer.pathRewriter" should {
     "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.2.0/js/ui-bootstrap-0.2.0.min.js" in {
@@ -32,6 +38,11 @@ object FoBoAJSSpec extends Specification  {
   }   
   
   //AngularJS
+  def rewriteAngularJS141 = {
+    FoBoAJS.InitParam.ToolKit=FoBoAJS.AngularJS141
+    ResourceServer.pathRewriter("fobo"::"angular.js"::Nil)
+  }
+  
   def rewriteAngularJS148 = {
     FoBoAJS.InitParam.ToolKit=FoBoAJS.AngularJS148
     ResourceServer.pathRewriter("fobo"::"angular.js"::Nil)
