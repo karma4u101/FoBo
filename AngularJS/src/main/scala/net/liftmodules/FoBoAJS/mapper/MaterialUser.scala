@@ -394,9 +394,7 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
 
             logUserIn(user, () => {
               S.notice(msh.mdToastWrapNSMsg(resLoginMsgNoticeLogedIn,theme="success-toast"))
-
               preLoginState()
-
               S.redirectTo(redir)
             })
           }
@@ -417,11 +415,11 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
           <h1 class="md-title">{ resLoginLegendLogin }</h1>
           <md-input-container>
             <md-icon md-font-icon="fa fa-envelope" class="email"></md-icon>
-            <input type="email" id="username" name="username" ng-model="user.email" placeholder={ userNameFieldString } ng-required="true"/>
+            <input type="email" id="username" name="username" placeholder={ userNameFieldString } ng-required="true"/>
           </md-input-container>
           <md-input-container>
             <md-icon md-font-icon="fa fa-key" class="password"></md-icon>
-            <input type="password" id="password" name="password" ng-model="user.password" placeholder={ resLoginPlaceholderPassword } ng-required="true"/>
+            <input type="password" id="password" name="password" placeholder={ resLoginPlaceholderPassword } ng-required="true"/>
           </md-input-container>
           <section layout="row" layout-sm="column" layout-align="left center" layout-wrap="">
             <md-button type="submit" class="md-raised md-primary">{ resLoginSubmit }</md-button>
@@ -455,18 +453,8 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
       </div>
     </form>
 */
-
-  
-//  def mdToastWrapMsg(msg:String, position:String="bottom left" ,theme:String=""):scala.xml.NodeSeq = {
-//    val initFunc = """showSimpleToast('%s','%s','%s');""".format(msg,position,theme)
-//    return <div ng-controller='LiftMsgToastCtrl' ng-init={initFunc}></div>
-//  }
-//
-//  def mdToastWrapNSMsg(msg:scala.xml.NodeSeq, position:String="bottom left" ,theme:String=""):scala.xml.NodeSeq = {
-//    val initFunc = """showSimpleToast('%s','%s','%s');""".format(msg,position,theme)
-//    return <div ng-controller='LiftMsgToastCtrl' ng-init={initFunc}></div>
-//  }  
-  
+ 
+    
   override def lostPassword = {
     ("type=email" #> SHtml.text("", sendPasswordReset _)).apply(lostPasswordXhtml)
   }
@@ -485,12 +473,12 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
             generateResetEmailBodies(user, resetLink) :::
             (bccEmail.toList.map(BCC(_)))): _*)
 
-        S.notice(msh.mdToastWrapMsg(S.?("password.reset.email.sent"),theme="success-notice"))
+        S.notice(msh.mdToastWrapMsg(S.?("password.reset.email.sent"),theme="success-toast"))
         S.redirectTo(homePage)
 
       case Full(user) =>
         sendValidationEmail(user)
-        S.notice(msh.mdToastWrapMsg(S.?("account.validation.resent"),theme="success-notice"))
+        S.notice(msh.mdToastWrapMsg(S.?("account.validation.resent"),theme="success-toast"))
         S.redirectTo(homePage)
 
       case _ => S.error(msh.mdToastWrapMsg(userNameNotFoundString,theme="error-toast"))
@@ -536,7 +524,7 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
          <h1 class="md-title">{ resLostPasswordLegendEnterEmail }</h1>
          <md-input-container>
            <md-icon md-font-icon="fa fa-envelope" class="email"></md-icon>
-           <input type="email" ng-model="user.name" id="username" name="username" placeholder={ resLostPasswordPlaceholderUserName } ng-required="true"/>
+           <input type="email" id="username" name="username" placeholder={ resLostPasswordPlaceholderUserName } ng-required="true"/>
          </md-input-container> 
          <section layout="row" layout-sm="column" layout-align="left center" layout-wrap="">
            <md-button type="submit" class="md-raised md-primary">{ resLostPasswordSubmit }</md-button>
@@ -572,8 +560,6 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
       if field.show_? && (!ignorePassword || !pointer.isPasswordField_?)
       form <- field.toForm.toList
     } yield {
-      logger.info("pointer="+pointer.toString())
-      logger.info("field.name="+field.name.toString())
 
       //This is a bit of a hack (relatively safe though), as I could not find a way to properly override the field's 
       //_toForm functions especially I tried to override the _toForm for local and timezone with no luck. 
@@ -582,7 +568,7 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
           "input [class]" #> "" &
           "select [class]" #> "signup" 
         val bsform = bindAttrToForm(form)
-        <md-input-container>
+        <md-input-container flex="">
           <label for={ field.name } >{ field.displayName }</label>
           { bsform }
         </md-input-container>
@@ -591,18 +577,20 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
           "input [class]" #> "" &
           "select [class]" #> "signup" 
         val bsform = bindAttrToForm(form)
-        <div>
-          <label for={ field.name } >{ field.displayName }</label>
+        <md-input-container flex="">
+          <div>
+          <label for={ field.fieldId.getOrElse("").toString() } >{ field.displayName }</label>
           <div>{ bsform }</div>
-        </div>
+          </div>
+        </md-input-container>
       } else {
         val (pwd, pwdr) = extractLocalFormPasswordField(form, field)    
         <div>
-        <md-input-container>
+        <md-input-container flex="">
           <label for={ field.name } class="">{ resSignUpLabelPassword }</label>
           { pwd }          
         </md-input-container>    
-        <md-input-container>
+        <md-input-container flex="">
           <label for={ field.name } class="">{ resSignUpLabelRepeatPassword }</label>
           { pwdr }
         </md-input-container> 
@@ -677,7 +665,7 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
         case Nil =>
           actionsAfterSignup(theUser, () => S.redirectTo(homePage))
 
-        case xs => S.error(xs); signupFunc(Full(innerSignup _))
+        case xs => S.error(msh.mdToastWrapFEMsg(xs,theme="error-toast")); signupFunc(Full(innerSignup _))
       }
     }
     
@@ -707,16 +695,16 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
   override def edit = {
     val theUser: TheUserType = mutateUserOnEdit(currentUser.openOrThrowException("we know we're logged in"))
     val theName = editPath.mkString("")
-    val submitAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "btn btn-default")
+    val submitAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "md-raised md-primary md-button md-default-theme")
  
     def testEdit() {
       theUser.validate match {
         case Nil =>
           theUser.save
-          S.notice(msh.mdToastWrapMsg(S.?("profile.updated"),theme="success-notice"))
+          S.notice(msh.mdToastWrapMsg(S.?("profile.updated"),theme="success-toast"))
           S.redirectTo(homePage)
 
-        case xs => S.error(xs); editFunc(Full(innerEdit _))
+        case xs => S.error(msh.mdToastWrapFEMsg(xs,theme="error-toast")); editFunc(Full(innerEdit _))
       }
     }
  
@@ -731,6 +719,84 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
     inputSubmitButtonWithAttribs(name, func, attrs: _*)
   }
 
+/*
+    (<md-content layout-padding="" class="autoScroll" >
+        <form role="form" action={ S.uri } method="post">
+       <h1 class="md-title">{ resSignUpLegendSignUp }</h1>
+       { localForm(user, false, signupFields) }
+        <section layout="row" layout-sm="column" layout-align="left center" layout-wrap="">
+        <md-button type="submit" ></md-button>
+        </section>
+     </form>
+    </md-content>
+    )  
+ */
+  
+  override def editXhtml(user: TheUserType) = {
+    
+    (<md-content layout-padding="">
+       <form role="form" action={ S.uri } method="post">
+       <h1 class="md-title">{ resEditLegendEdit }</h1>
+       { localForm(user, false, editFields) }
+        <section layout="row" layout-sm="column" layout-align="left center" layout-wrap="">
+          <md-button type="submit" ></md-button>
+        </section>       
+       </form>
+     </md-content>)
+  }
+  
+  override def changePasswordXhtml = {
+    
+    (<md-content layout-padding="">
+       <form role="form" method="post" action={ S.uri }>
+       <h1 class="md-title">{ resChangePasswordLegendChangePassword }</h1>
+       <md-input-container>
+         <md-icon md-font-icon="fa fa-key" class="password"></md-icon>
+         <input type="password" id="oldpassword" class="old-password" placeholder={resChangePasswordPlaceholderOldPassword} ng-required="true"/>
+       </md-input-container>
+       <md-input-container>
+         <md-icon md-font-icon="fa fa-key" class="password"></md-icon>
+         <input type="password" id="newpassword" class="new-password" placeholder={resChangePasswordPlaceholderNewPassword} ng-required="true"/>
+       </md-input-container> 
+       <md-input-container>
+         <md-icon md-font-icon="fa fa-key" class="password"></md-icon>
+         <input type="password" id="repeatpassword" class="new-password" placeholder={resChangePasswordPlaceholderNewPassword} ng-required="true"/>
+       </md-input-container> 
+       <section layout="row" layout-sm="column" layout-align="left center" layout-wrap="">
+          <md-button type="submit" ></md-button>
+       </section> 
+       </form>
+     </md-content>)
+    
+/*    (<form class="form-horizontal" role="form" method="post" action={ S.uri }>
+       <legend>{ resChangePasswordLegendChangePassword }</legend>
+       <div class="form-group">
+         <label for="oldpassword" class="col-lg-3 control-label">{ resChangePasswordLabelOldPassword }</label>
+         <div class="col-lg-9">
+           <input type="password" class="old-password form-control" placeholder={resChangePasswordPlaceholderOldPassword} />
+         </div>
+       </div>
+       <div class="form-group">
+         <label for="newpassword" class="col-lg-3 control-label">{ resChangePasswordLabelNewPassword }</label>
+         <div class="col-lg-9">
+           <input type="password" class="new-password form-control" placeholder={resChangePasswordPlaceholderNewPassword}/>
+         </div>
+       </div>
+       <div class="form-group">
+         <label for="repeatpassword" class="col-lg-3 control-label">{ resChangePasswordLabelRepeatPassword }</label>
+         <div class="col-lg-9">
+           <input type="password" class="new-password form-control" placeholder={resChangePasswordPlaceholderNewPassword}/>
+         </div>
+       </div>
+       <div class="form-group">
+         <div class="col-lg-offset-3 col-lg-10">
+           <input type="submit" class="btn btn-default"/>
+         </div>
+       </div>
+     </form>) */
+  }
+  
+/*
   override def editXhtml(user: TheUserType) = {
     (<form class="form-horizontal" role="form" method="post" action={ S.uri }>
        <legend>{ resEditLegendEdit }</legend>
@@ -743,7 +809,7 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
      </form>)
   }
   
-  override def changePasswordXhtml = {
+   override def changePasswordXhtml = {
     (<form class="form-horizontal" role="form" method="post" action={ S.uri }>
        <legend>{ resChangePasswordLegendChangePassword }</legend>
        <div class="form-group">
@@ -770,8 +836,11 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
          </div>
        </div>
      </form>) 
-  }
+  }  
+ */
 
+  
+  
   override def changePassword = {
     val user = currentUser.openOrThrowException("we can do this because the logged in test has happened")
     var oldPassword = ""
@@ -784,7 +853,7 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
         user.setPasswordFromListString(newPassword)
         user.validate match {
           case Nil => user.save; S.notice(msh.mdToastWrapMsg(S.?("password.changed"),theme="success-toast")); S.redirectTo(homePage)
-          case xs => S.error(xs)
+          case xs => S.error(msh.mdToastWrapFEMsg(xs,theme="error-toast"))
         }
       }
     }
@@ -792,20 +861,18 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
     val bind = {
       // Use the same password input for both new password fields.
       val passwordInput = SHtml.password_*("", LFuncHolder(s => newPassword = s))      
+      val submitAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "md-raised md-primary md-button md-default-theme")
       
       ".old-password" #> SHtml.password("", s => oldPassword = s) &
       ".new-password" #> passwordInput &
-      "type=submit" #> myChangePasswordSubmitButton(resChangePasswordSubmitChange, testAndSet _)  
+      "type=submit" #> myChangePasswordSubmitButton(resEditSubmitSave, testAndSet _, submitAttr: _*)
+      
     } 
     bind(changePasswordXhtml)
   }
   
-//  protected def myChangePasswordSubmitButton(name: StringOrNodeSeq, func: () => Any, attrs: SHtml.ElemAttr*): NodeSeq = {
-//    inputSubmitButtonWithAttribs(name, func, attrs: _*)
-//  }
-
-  def myChangePasswordSubmitButton(name: StringOrNodeSeq, func: () => Any = () => {}): NodeSeq = {
-    SHtml.button(name, func)
+  def myChangePasswordSubmitButton(name: StringOrNodeSeq, func: () => Any, attrs: SHtml.ElemAttr*): NodeSeq = {
+    inputSubmitButtonWithAttribs(name, func, attrs: _*)
   }
   
   protected def inputSubmitButtonWithAttribs(name: StringOrNodeSeq, func: () => Any, attrs: SHtml.ElemAttr*) = {
