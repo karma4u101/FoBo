@@ -12,6 +12,7 @@ Components
 ----------
 - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0]
 - Angular NG-Grid [v2.0.4, v2.0.7]
+- Angular Material Design [v0.10.0, v1.0.0]
 
 
 Contributions
@@ -144,15 +145,17 @@ Core Script files
 Components Css files
 
 - ng-grid.css [v1.2.1, v1.2.2]
-- angular-material.css 
-- angular-material.layouts.css
+- angular-material.css [v0.10.0,v1.0.0]
+- angular-material.layouts.css [v1.0.0]
+
 
 Components Script files
 
 - ui-bootstrap-tpls.js [v0.2.0, v0.7.0]
 - ui-bootstrap.js [v0.2.0, v0.7.0]
 - ng-grid.js [v2.0.4, v2.0.7]
-- angular-material.js
+- angular-material.js [v0.10.0,v1.0.0]
+- angular-material-mocks.js [v1.0.0]
  
 i18n files
 
