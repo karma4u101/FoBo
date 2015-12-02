@@ -19,3 +19,17 @@ sbt < project/autobuildscript/build-publish-Lift26.txt > build.log | tail -f bui
 
 Target Lift 3.x (OBS! use java7 Scala 2.11)
 sbt < project/autobuildscript/build-publish-Lift3.txt > build.log | tail -f build.log
+
+List of major Java major version numbers
+Java SE 8 = 52,
+Java SE 7 = 51,
+Java SE 6.0 = 50,
+Java SE 5.0 = 49,
+JDK 1.4 = 48,
+JDK 1.3 = 47,
+JDK 1.2 = 46,
+JDK 1.1 = 45
+
+
+Read more: http://javarevisited.blogspot.com/2015/05/fixing-unsupported-majorminor-version.html#ixzz3sp1dOCEf
+

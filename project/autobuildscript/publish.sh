@@ -21,6 +21,7 @@ PUBLISH_30_SBT_COMMAND_FILE=${PWD}/project/autobuildscript/build-publish-Lift3.t
 #default location's for java on a ubuntu system
 JAVA_6_PATH=/usr/lib/jvm/java-6-openjdk-amd64/jre/bin/java
 JAVA_7_PATH=/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+JAVA_8_PATH=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 LOG_FILE=build.log
  
 while getopts t: opts; do
@@ -104,11 +105,11 @@ function do26Publish {
 
 #Execute the necessary steps for publishing a Lift 3.0 module build
 function do30Publish {
-  debug "\nTarget is set to Lift v3.0, require java-7";
-  if ! requiredJavaIsSuccessfullySet $JAVA_7_PATH ; then 
-    die "java-7 dosen't seem to be present, cancelling release build!"
+  debug "\nTarget is set to Lift v3.0, require java-8";
+  if ! requiredJavaIsSuccessfullySet $JAVA_8_PATH ; then 
+    die "java-8 dosen't seem to be present, cancelling release build!"
   fi	  
-  debug "Current java environment is java-7\n" 
+  debug "Current java environment is java-8\n" 
   debug "\n***Start processing the sbt command file.***\n"  
   sbt < $PUBLISH_30_SBT_COMMAND_FILE 2>&1|tee ${LOG_FILE} 
   debug "\n***...done processing the sbt command file***\n"  	
