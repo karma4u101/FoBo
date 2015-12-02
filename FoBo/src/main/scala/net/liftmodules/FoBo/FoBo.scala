@@ -214,7 +214,7 @@ object TBLocInfo {
  *  
  * {{{
  *   FoBo.InitParam.JQuery=FoBo.JQuery182
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap230
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap336
  *   FoBo.InitParam.Toolkit=FoBo.PrettifyJun2011
  * }}}
  * This example uses the Bootstrap v2.3.0 option and adds the Google code Prettify vJun2011 
@@ -950,6 +950,7 @@ case object Bootstrap232 extends FoBoToolkit {
  * }}}
  * @since v1.1
  */
+@deprecated("Use Bootstrap311 or later","FoBo v1.5.0")
 case object Bootstrap301 extends FoBoToolkit {
   net.liftmodules.FoBoBs.Bootstrap301
 }
@@ -995,8 +996,24 @@ case object Bootstrap320 extends FoBoToolkit {
  * }}}
  * @since v1.4
  */
+@deprecated("Use Bootstrap336 or later","FoBo v1.5.0")
 case object Bootstrap335 extends FoBoToolkit {
   net.liftmodules.FoBoBs.Bootstrap335
+}
+
+/**
+ * Enable usage of Twitter Bootstrap version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.
+ * @version 3.3.6
+ * 
+ * '''Example'''
+ * 
+ * {{{
+ *   FoBo.InitParam.Toolkit=FoBo.Bootstrap335
+ * }}}
+ * @since v1.5
+ */
+case object Bootstrap336 extends FoBoToolkit {
+  net.liftmodules.FoBoBs.Bootstrap336
 }
 
 /**

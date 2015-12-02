@@ -6,13 +6,15 @@ For more information on how to use Twitter Bootstrap in the FoBo module see the 
 
 Components and available versions 
 ---------------------------------
-- Bootstrap [v3.0.0, v3.0.1, v3.1.1] - [Bootstrap 3.x](http://getbootstrap.com/)
+- Bootstrap [v3.0.0, v3.0.1, v3.1.1,v3.2.0,v3.3.5,v3.3.6] - [Bootstrap 3.x](http://getbootstrap.com/)
 
 Example Lift FoBo Template hooks
 ----------------------------------
 
     <link href="/classpath/fobo/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/classpath/fobo/bootstrap.css.map" rel="stylesheet" type="text/css" />
     <link href="/classpath/fobo/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+    <link href="/classpath/fobo/bootstrap-theme.css.map" rel="stylesheet" type="text/css" />
     <link href="/assets/css/app-bs-theme.css" rel="stylesheet" type="text/css" />
     <script src="/classpath/fobo/jquery.js" id="jquery" type="text/javascript"></script>
     <script src="/classpath/fobo/bootstrap.js" type="text/javascript"></script>
@@ -33,7 +35,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo/tree/master) (master)
 
 **Latest Updates:**
-- **2015-07-28** -- Module v1.4-SNAPSHOT Adding Font-Awesome v4.3.0
+- **2015-12-02** -- Module v1.5-SNAPSHOT Adding Bootstrap v3.3.6
 - **2015-07-28** -- Module v1.4-SNAPSHOT Adding Bootstrap v3.3.5
 - **2014-07-02** -- Module v1.3-SNAPSHOT Adding bootstrap v3.2.0
 - **2014-03-09** -- Module v1.2-SNAPSHOT Adding bootstrap v3.1.1
