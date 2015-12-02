@@ -438,6 +438,21 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
 //  }
   
   /**
+   * Enable usage of Angular-Material version 1&#8228;0&#8228;0-rc5 in your bootstrap liftweb Boot.
+   * @version 1.0.0-rc5
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AJMaterial100RC5
+   * }}}
+   * @since v1.5
+   */  
+  case object AJMaterial100RC5 extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AJMaterial100RC5
+  }
+  
+  /**
    * Enable usage of Angular-Material version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.
    * @version 0.10.0
    *
@@ -448,6 +463,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.4
    */  
+  @deprecated("Use AJMaterial100RC5 or later","FoBo v1.5.0")
   case object AJMaterial0100 extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AJMaterial0100
   } 
