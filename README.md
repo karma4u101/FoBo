@@ -18,7 +18,7 @@ Using this module you will also get a clean separation of the toolkit files and 
 The FoBo module also has a evolving API that includes snippet:s and helper object:s (see API documents for usage) that will take care of some common toolkit and component initiation and usage, like lift sitemap to bootstrap menu builders, resource injection, script generation and more.
 
 ####FoBo - Lift starter template
-A Lift v2.6 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) is available from here [Lift v2.6 Template Applications](https://github.com/lift/lift_26_sbt/)
+**Bootstrap** A Lift v2.6 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) is available from here [Lift v2.6 Template Applications](https://github.com/lift/lift_26_sbt/)
 
 If you have ideas and suggestions let us know!
 
@@ -40,6 +40,8 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2013-10-11** -- Module v1.1
 
 **Latest Updates:**
+- **2015-12-02** -- Module v1.5-SNAPSHOT Adding Bootstrap v3.3.6
+- **2015-12-02** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0-rc5
 - **2015-11-24** -- Module v1.5-SNAPSHOT Integrating angular material design tosts component with lift messages. 
 - **2015-11-22** -- Module v1.5-SNAPSHOT Adding AngularJS core v1.4.8 
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop)
