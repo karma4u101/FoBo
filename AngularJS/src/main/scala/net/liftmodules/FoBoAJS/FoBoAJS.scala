@@ -225,8 +225,8 @@ package object FoBoAJS {
    * }}}
    *
    */
-  case object AJMaterial100RC5 extends AJSToolkit {
-    AJSFoBoResources.AJMaterial100RC5
+  case object AJMaterial100RC extends AJSToolkit {
+    AJSFoBoResources.AJMaterial100RC
   }  
   
    /**
@@ -3713,14 +3713,14 @@ package object FoBoAJS {
       }
     } 
     
-    lazy val AJMaterial100RC5 = {
+    lazy val AJMaterial100RC = {
       ResourceServer.rewrite {
-        case "fobo" :: "angular-material.js" :: Nil if Props.devMode => List("fobo", "angular-material", "1.0.0-rc5", "js", "angular-material.js")
-        case "fobo" :: "angular-material.js" :: Nil => List("fobo", "angular-material", "1.0.0-rc5", "js", "angular-material.min.js")
-        case "fobo" :: "angular-material-mocks.js" :: Nil if Props.devMode => List("fobo", "angular-material", "1.0.0-rc5", "js", "angular-material-mocks.js")
-        case "fobo" :: "angular-material-mocks.js" :: Nil => List("fobo", "angular-material", "1.0.0-rc5", "js", "angular-material-mocks.js")
-        case "fobo" :: "angular-material.css" :: Nil if Props.devMode => List("fobo", "angular-material", "1.0.0-rc5", "css", "angular-material.css")
-        case "fobo" :: "angular-material.css" :: Nil => List("fobo", "angular-material", "1.0.0-rc5", "css", "angular-material.css")
+        case "fobo" :: "angular-material.js" :: Nil if Props.devMode => List("fobo", "angular-material", "1.0.0-rc", "js", "angular-material.js")
+        case "fobo" :: "angular-material.js" :: Nil => List("fobo", "angular-material", "1.0.0-rc", "js", "angular-material.min.js")
+        case "fobo" :: "angular-material-mocks.js" :: Nil if Props.devMode => List("fobo", "angular-material", "1.0.0-rc", "js", "angular-material-mocks.js")
+        case "fobo" :: "angular-material-mocks.js" :: Nil => List("fobo", "angular-material", "1.0.0-rc", "js", "angular-material-mocks.js")
+        case "fobo" :: "angular-material.css" :: Nil if Props.devMode => List("fobo", "angular-material", "1.0.0-rc", "css", "angular-material.css")
+        case "fobo" :: "angular-material.css" :: Nil => List("fobo", "angular-material", "1.0.0-rc", "css", "angular-material.css")
       }
     }    
     
