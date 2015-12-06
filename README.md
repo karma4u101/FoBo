@@ -70,22 +70,9 @@ New features in FoBo v1.4
 ###FoBo v1.4 deprications
 -   Deprecations -- Some long time deprecations has been removed from the build.
 
-###Removed submodules
-Modules available but that have been split out of the FoBo meta module. 
-The modules can still be used as stand alone modules, see respective modules readme for information on how to set them up. 
--   [FoBo-JQuery-Mobile](https://github.com/karma4u101/FoBo/tree/master/JQuery-Mobile) [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
--   [FoBo-DataTables](https://github.com/karma4u101/FoBo/tree/master/DataTables) [v1.9.0] - [DataTables.net](http://datatables.net/)
--   [FoBo-Knockout](https://github.com/karma4u101/FoBo/tree/master/Knockout) [v2.0.0, v2.1.0, v2.2.1] - [KnockoutJS](http://knockoutjs.com/)
--   [FoBo-Foundation](https://github.com/karma4u101/FoBo/tree/master/Foundation) [v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
-
- 
-For feature listings on older releases see 
-- [New features in FoBo v1.3](https://github.com/karma4u101/FoBo/blob/master/README.md#New-features-in-FoBo-v1.3) section
-- [New features in FoBo v1.2](https://github.com/karma4u101/FoBo/blob/master/README.md#New-features-in-FoBo-v1.2) section
-- [New features in FoBo v1.1](https://github.com/karma4u101/FoBo/blob/master/README.md#New-features-in-FoBo-v1.1) section
-
-
-Module names that can bee used in boot corresponding to the toolkit version above is
+###Module names 
+The following is a list of names that can be used in Lift Boot eather pulled in by the FoBo meta module or as stand alone (sub) modules. 
+For more information se respective sub modules readme. 
 
 - BootstrapXYZ 
 - FontAwesomeXYZ 
@@ -98,6 +85,24 @@ Module names that can bee used in boot corresponding to the toolkit version abov
 
 Where X is major, Y minor and Z incremental version numbers as seen in the Toolkits list above (for example BootstrapXYZ will be Bootstrap230 for Twitter Bootstrap v2.3.0)
 For more information on how to set this up see below. 
+
+###Old submodules
+Modules available as maven artifacts but that have been split out of the FoBo meta module. 
+The modules can still be used as stand alone modules. 
+-   Sonatype [FoBo-JQuery-Mobile](https://oss.sonatype.org/#nexus-search;quick~fobo-jquery-mobile) [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
+    Usage FoBoJQM.InitParam.ToolKit=FoBoJQM.JQueryMobile110
+-   Sonatype [FoBo-DataTables](https://oss.sonatype.org/#nexus-search;quick~fobo-datatables) [v1.9.0] - [DataTables.net](http://datatables.net/)
+    Usage FoBoDT.InitParam.ToolKit=FoBoDT.DataTables190
+-   Sonatype [FoBo-Knockout](https://oss.sonatype.org/#nexus-search;quick~fobo-knockout) [v2.0.0, v2.1.0, v2.2.1] - [KnockoutJS](http://knockoutjs.com/)
+    Usage FoBoKO.InitParam.ToolKit=FoBoKO.Knockout221
+-   Sonatype [FoBo-Foundation](https://oss.sonatype.org/#nexus-search;quick~fobo-foundation) [v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
+    Usage FoBoFo.InitParam.ToolKit=FoBoFo.Foundation215
+ 
+For feature listings on older releases see 
+- [New features in FoBo v1.3](https://github.com/karma4u101/FoBo/blob/master/README.md#New-features-in-FoBo-v1.3) section
+- [New features in FoBo v1.2](https://github.com/karma4u101/FoBo/blob/master/README.md#New-features-in-FoBo-v1.2) section
+- [New features in FoBo v1.1](https://github.com/karma4u101/FoBo/blob/master/README.md#New-features-in-FoBo-v1.1) section
+
     
 Quick Start with Lift Template Applications
 -------------------------------------------

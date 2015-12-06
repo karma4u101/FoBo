@@ -4,15 +4,15 @@ organization := "net.liftmodules"
 
 version in ThisBuild := "1.5-SNAPSHOT"
 
-liftVersion in ThisBuild <<= liftVersion ?? "2.6.2"
+liftVersion in ThisBuild <<= liftVersion ?? "3.0-SNAPSHOT" //"2.6.2"
 
 liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
 moduleName <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
-crossScalaVersions := Seq("2.11.6", "2.10.4", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.11.7", "2.10.4", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion in ThisBuild := "2.11.6"
+scalaVersion in ThisBuild := "2.11.7"
 
 logLevel in ThisBuild := Level.Info   //Level.Debug Level.Info
 
