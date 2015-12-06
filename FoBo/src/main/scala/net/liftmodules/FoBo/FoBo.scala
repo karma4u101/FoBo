@@ -21,27 +21,27 @@ import common._
  *  - Due to uniform declaration and integration points across toolkit versions only a small amount of changes 
  *    is needed for a up/down-grading of a used Toolkit, optimally, if the toolkit has no breaking changes 
  *    it will just be a version change of the FoBo.Initparam in Lift bootstrap.liftweb.Boot. 
- *  - The module provides debug-able js and css files in development and minimized files otherwise FoBo is 
- *    simultaneously supporting several versions which makes development, maintenance, upgrade and fall-back 
- *    quick and easy.      
- *  - Some of the FoBo modules provides Snippet helpers and lib classes that will ease you from writing 
+ *  - The module provides debug-able js and css files in development and minimized files otherwise.
+ *  - FoBo is simultaneously supporting several versions of each toolkit which makes development, maintenance, 
+ *    upgrade and fall-back quick and easy.      
+ *  - Most of the FoBo toolkit modules provides Snippet helpers and lib classes that will ease you from writing 
  *    some commonly used toolkit component integration scripts making it a simple snippet invocation.  
- *  - Great responsive/mobile scalability with responsive toolkits.   
+ *  - Great responsive scalability with responsive toolkits.   
  *
  * ===FoBo supported toolkits and plugins=== 
  * 
  * The following is a list of available toolkits and plugins 
  *  
- *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.0, v1.11.3, v.2.1.1, v.2.1.4] [[net.liftmodules.FoBoJQ]]
- *  - Bootstrap v3.x serie [v3.0.1, v3.1.1, v3.2.0, v3.3.5] [[net.liftmodules.FoBoBs]]
+ *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.1, v1.11.3, v.2.1.1, v.2.1.4] [[net.liftmodules.FoBoJQ]]
+ *  - Bootstrap v3.x serie [v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6] [[net.liftmodules.FoBoBs]]
  *  - Bootstrap v2.x serie [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2] [[net.liftmodules.FoBoTB]]
  *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0] [[net.liftmodules.FoBoFA]]
  *  - Kinetic JS [v5.1.0]
  *  - Google Code Prettify [vJun2011]
- *  - Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15, v1.4.1] (angular core modules)
+ *  - Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15, v1.4.1, v1.4.8] (angular core modules)
  *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component)
  *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component)
- *  - Angular Material design [v0.10.0] (angular component)
+ *  - Angular Material design [v0.10.0, v1.0.0] (angular component)
  *  
  * 
  * ===Heads up===
@@ -58,7 +58,7 @@ import common._
  *      
  * ===Setup===     
  * 
- *  - The module is known to work with Lift v2.4/v2.5/v2.6 and v3.0-SNAPSHOT and it's supported Scala versions.  
+ *  - The module is known to work with Lift v2.4/v2.5/v2.6 and v3.0 and it's supported Scala versions.  
  *  - For a demonstration of this module see the live [[http://www.media4u101.se/fobo-lift-template-demo/ FoBo demo]] 
  *
  * @example To initiate this module for usage in your Lift project 
@@ -76,7 +76,7 @@ import common._
  *    FoBo.init() //now do init
  * }}}
  * 
- * @version v1.4
+ * @version v1.5
  * @author Peter Petersson (Github karma4u101) and the Lift community  
  * 
  */
@@ -94,10 +94,8 @@ package object FoBo {
     //add package for module with snippets 
     LiftRules.addToPackages("net.liftmodules.FoBo")
     LiftRules.addToPackages("net.liftmodules.FoBoAJS")
-    //LiftRules.addToPackages("net.liftmodules.FoBoDT")
     LiftRules.addToPackages("net.liftmodules.FoBoBs")
     LiftRules.addToPackages("net.liftmodules.FoBoTB")
-    //LiftRules.addToPackages("net.liftmodules.FoBoKi")
     
     ResourceServer.allow {
       case "fobo" :: tail => true
