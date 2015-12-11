@@ -30,8 +30,8 @@ object LiftModuleFoBoBuild extends Build {
                             base = file("FoBo"),
                             settings = defaultSettings ++ myBuildInfoSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile),
-                             aggregate = Seq(kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,/*foundation,datatables,knockout,jquerymobile,*/prettify)
-                                 ).dependsOn(kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,/*foundation,datatables,knockout,jquerymobile,*/prettify)  
+                             aggregate = Seq(kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,prettify)
+                                 ).dependsOn(kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,prettify)  
                                  
    lazy val fontAwesome = Project(id   = "fobo-font-awesome", 
                              base = file("Font-Awesome"),
@@ -48,21 +48,6 @@ object LiftModuleFoBoBuild extends Build {
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))                                   
                              
-  lazy val foundation   = Project(id   = "fobo-foundation", 
-                             base = file("Foundation"),
-                             settings = defaultSettings ++ scaladocSettings ++ Seq(
-                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                               
-                             
-  lazy val datatables   = Project(id   = "fobo-datatables", 
-                             base = file("DataTables"),
-                             settings = defaultSettings ++ scaladocSettings ++ Seq(
-                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                  
-                             
-  lazy val knockout     = Project(id   = "fobo-knockout", 
-                             base = file("Knockout"),
-                             settings = defaultSettings ++ scaladocSettings ++ Seq(
-                                 fullClasspath in doc in Compile <<= fullClasspath in Compile)) 
-                   
   lazy val angularjs    = Project(id   = "fobo-angularjs", 
                              base = file("AngularJS"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
@@ -77,13 +62,7 @@ object LiftModuleFoBoBuild extends Build {
                              base = file("Pace"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
-                                 
-                                 
-  lazy val jquerymobile = Project(id   = "fobo-jquery-mobile", 
-                             base = file("JQuery-Mobile"),
-                             settings = defaultSettings ++ scaladocSettings ++ Seq(
-                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))  
-                             
+                                                  
   lazy val prettify     = Project(id   = "fobo-google-code-prettify", 
                              base = file("Google-Code-Prettify"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
@@ -93,24 +72,11 @@ object LiftModuleFoBoBuild extends Build {
                              base = file("KineticJS"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
-                                  
-  /*                           
-  lazy val foboLess     = Project(id   = "FoBo-Less", 
-                             base = file("FoBo-Less"))     
-  */                           
-                                                   
+                                                                            
 
   lazy val scaladocDiagramsEnabled = System.getProperty("scaladoc.diagrams", "false").toBoolean
   lazy val scaladocOptions = List() /*List("-implicits")*/ ::: (if (scaladocDiagramsEnabled) List("-diagrams") else Nil)
 
-//  lazy val c1:Seq[ProjectReference] = Seq(prettify, pace)
-//  lazy val c2:Seq[ProjectReference] = Seq(prettify, pace, jquery)
-//  lazy val twoEleven:SettingKey[String] = SettingKey[String]("2.11.0","Special build")
-//  lazy val core2: Seq[ProjectReference] = if (scalaVersion.value == twoEleven.value ) c1 else c2  
-//  //
-//    //scalaVersion { case twoEleven => c1 case _ => c2 }
-//    //if (scalaVersion == xx ) c1 else c2 
-//    //scalaVersion { case "2.11.0" => c1 case _ => c2 }
   
   lazy val scaladocSettings: Seq[sbt.Setting[_]]= {
     Seq(scalacOptions in (Compile, doc) ++= scaladocOptions) ++
