@@ -10,6 +10,8 @@ resolvers += Resolver.url("sbt-plugin-releases",
 
 resolvers += Classpaths.typesafeResolver
 
+//addSbtPlugin("com.eed3si9n" % "sbt-unidoc" % "0.3.3")
+
 addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.5.0")
 
 addSbtPlugin("com.github.mpeltonen" % "sbt-idea" % "1.6.0")

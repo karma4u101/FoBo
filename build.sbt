@@ -10,9 +10,9 @@ liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
 moduleName <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
-crossScalaVersions := Seq("2.11.7", "2.10.4", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.11.4", "2.10.4", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalaVersion in ThisBuild := "2.11.7"
+scalaVersion in ThisBuild := "2.11.4"
 
 logLevel in ThisBuild := Level.Info   //Level.Debug Level.Info
 

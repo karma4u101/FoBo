@@ -198,6 +198,7 @@ Sbteclipse provides SBT command to create Eclipse project files
 1) Usage
 
 	project$ ./sbt
+        > compile
 	> eclipse 
 
 2) In eclipse do: 
@@ -206,6 +207,7 @@ Sbteclipse provides SBT command to create Eclipse project files
 	Select General ==> Existing Project into Workspace 
 	Use "Brows" to look up the project root ....
 
+Note: The compile step prior to the eclipse command in (1) is needed for eclipse to recognize the generated BuildInfo.scala file that is part of FoBo's build system.
 
 New features in FoBo v1.3
 ---------------------------
