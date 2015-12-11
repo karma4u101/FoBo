@@ -2,6 +2,8 @@ package net.liftmodules.FoBoAJS.mapper
 
 import net.liftmodules.FoBoAJS.lib.{AJSMaterialSH => msh}
 import net.liftweb.http._
+import js._
+import JsCmds._
 import net.liftweb.common._
 import net.liftweb.proto.{ ProtoUser => GenProtoUser }
 import scala.xml.{ NodeSeq, Node, Text, Elem, Attribute, Null }
@@ -405,17 +407,19 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
           case _ => S.error(msh.mdToastWrapNSMsg(resLoginMsgErrorInvalidCredetial,theme="error-toast"))
         }
     }
+    
     loginXhtml
   }
 
   override def loginXhtml = {
-
+    val emailElemId:String = "username" //nextFuncName
+    S.appendJs(Focus(emailElemId))
       <md-content layout-padding="" class="autoScroll" >
         <form name="loginForm" role="form" action={ S.uri } method="post">
           <h1 class="md-title">{ resLoginLegendLogin }</h1>
           <md-input-container>
             <md-icon md-font-icon="fa fa-envelope" class="email"></md-icon>
-            <input type="email" id="username" name="username" placeholder={ userNameFieldString } ng-required="true"/>
+            <input type="email" id={ emailElemId } name="username" placeholder={ userNameFieldString } ng-required="true"/>
           </md-input-container>
           <md-input-container>
             <md-icon md-font-icon="fa fa-key" class="password"></md-icon>
