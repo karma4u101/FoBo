@@ -48,7 +48,7 @@ class BootstrapSH() extends ScriptHelper {
    * @return scala.xml.Node
    * 
    */
-  @deprecated("Use the modalScript function and wrap it in JsCmds.Script","FoBo v1.4.0")
+  @deprecated("Use the modalScript function and wrap it in JsCmds.Script","1.4.0")
   def modal(id:String,options:String=""):scala.xml.Node = {
     var sc = modalScript(id,options) 
     JsCmds.Script(sc)  
@@ -74,7 +74,7 @@ class BootstrapSH() extends ScriptHelper {
    * @return scala.xml.Node   
    * 
    */
-  @deprecated("Use the modalManualActionScript function and wrap it in JsCmds.Script","FoBo v1.4.0")
+  @deprecated("Use the modalManualActionScript function and wrap it in JsCmds.Script","1.4.0")
   def modalManualAction(id:String,action:String=""):scala.xml.Node = {
     var sc = modalManualActionScript(id,action) 
     JsCmds.Script(sc)  
@@ -99,7 +99,7 @@ class BootstrapSH() extends ScriptHelper {
    * @return scala.xml.Node
    * 
    */
-  @deprecated("Use the activateDropdownScript function and wrap it in JsCmds.Script","FoBo v1.4.0")
+  @deprecated("Use the activateDropdownScript function and wrap it in JsCmds.Script","1.4.0")
   def activateDropdown(on:String):scala.xml.Node = {
     var sc = this.loadEventScript(dropdownScript(on))
     JsCmds.Script(sc)
@@ -135,7 +135,7 @@ class BootstrapSH() extends ScriptHelper {
    * @return scala.xml.Node
    * 
    */
-  @deprecated("Use the scrollspyScript function and wrap it in JsCmds.Script","FoBo v1.4.0")
+  @deprecated("Use the scrollspyScript function and wrap it in JsCmds.Script","1.4.0")
   def scrollspy(id:String,options:String=""):scala.xml.Node = {
     var sc = scrollspyScript(id,options) 
     JsCmds.Script(sc)  
@@ -161,7 +161,7 @@ class BootstrapSH() extends ScriptHelper {
    * @return scala.xml.Node
    * 
    */
-  @deprecated("Use the tooltipScript function and wrap it in JsCmds.Script","FoBo v1.4.0")
+  @deprecated("Use the tooltipScript function and wrap it in JsCmds.Script","1.4.0")
   def tooltip(id:String,options:String=""):scala.xml.Node = {
     var sc = tooltipScript(id,options) 
     JsCmds.Script(sc)  
@@ -188,7 +188,7 @@ class BootstrapSH() extends ScriptHelper {
    * @return scala.xml.Node
    * 
    */
-  @deprecated("Use the tooltipManualActionScript function and wrap it in JsCmds.Script","FoBo v1.4.0")
+  @deprecated("Use the tooltipManualActionScript function and wrap it in JsCmds.Script","1.4.0")
   def tooltipManualAction(id:String,action:String=""):scala.xml.Node = {
     JsCmds.Script(tooltipManualActionScript(id,action))  
   }
@@ -215,7 +215,7 @@ class BootstrapSH() extends ScriptHelper {
    * @return scala.xml.Node
    * 
    */
-  @deprecated("Use the popoverScript function and wrap it in JsCmds.Script","FoBo v1.4.0")
+  @deprecated("Use the popoverScript function and wrap it in JsCmds.Script","1.4.0")
   def popover(id:String,options:String=""):scala.xml.Node = {
     var sc = popoverScript(id,options)
     JsCmds.Script(sc)  
@@ -242,7 +242,7 @@ class BootstrapSH() extends ScriptHelper {
    * @return scala.xml.Node
    * 
    */
-  @deprecated("Use the popoverManualActionScript function and wrap it in JsCmds.Script","FoBo v1.4.0")
+  @deprecated("Use the popoverManualActionScript function and wrap it in JsCmds.Script","1.4.0")
   def popoverManualAction(id:String,action:String=""):scala.xml.Node = {
     var sc = popoverManualActionScript(id,action) 
     JsCmds.Script(sc)  
@@ -266,7 +266,7 @@ class BootstrapSH() extends ScriptHelper {
    * @return scala.xml.Node
    * 
    */
-  @deprecated("Use the popoverPreventDefaultScript function and wrap it in JsCmds.Script","FoBo v1.4.0")
+  @deprecated("Use the popoverPreventDefaultScript function and wrap it in JsCmds.Script","1.4.0")
   def popoverPreventDefault(on:String="a[rel=popover]"):scala.xml.Node = {
       var sc = popoverPreventDefaultScript(on) 
       JsCmds.Script(sc)  
@@ -293,7 +293,7 @@ class BootstrapSH() extends ScriptHelper {
    * @return scala.xml.Node
    * 
    */
-  @deprecated("Use the collapseScript function and wrap it in JsCmds.Script","FoBo v1.4.0")
+  @deprecated("Use the collapseScript function and wrap it in JsCmds.Script","1.4.0")
   def collapse(id:String,options:String=""):scala.xml.Node = {
     var sc = JsRaw("""$(function () { $('%s').collapse({%s}); }); """.format(id,options)).cmd
     JsCmds.Script(sc)  
@@ -319,9 +319,9 @@ class BootstrapSH() extends ScriptHelper {
    * @return scala.xml.Node
    * 
    */
-  @deprecated("Use the collapseManualActionScript function and wrap it in JsCmds.Script","FoBo v1.4.0")
+  @deprecated("Use the collapseManualActionScript function and wrap it in JsCmds.Script","1.4.0")
   def collapseManualAction(id:String,action:String=""):scala.xml.Node = {
-    var sc = collapseManualActionScript(id,action) //JsRaw("""$(function () { $('%s').collapse('%s'); }); """.format(id,action)).cmd
+    var sc = collapseManualActionScript(id,action) 
     JsCmds.Script(sc)  
   } 
   
@@ -346,9 +346,9 @@ class BootstrapSH() extends ScriptHelper {
    * @return scala.xml.Node
    * 
    */
-  @deprecated("Use the carouselSript function and wrap it in JsCmds.Script","FoBo v1.4.0") 
+  @deprecated("Use the carouselSript function and wrap it in JsCmds.Script","1.4.0") 
   def carousel(id:String,options:String=""):scala.xml.Node = {
-    var sc = carouselSript(id,options) //JsRaw("""$(function () { $('%s').collapse({%s}); }); """.format(id,options)).cmd
+    var sc = carouselSript(id,options) 
     JsCmds.Script(sc)  
   } 
   
@@ -372,9 +372,9 @@ class BootstrapSH() extends ScriptHelper {
    * @return scala.xml.Node
    * 
    */
-  @deprecated("Use the carouselManualActionScript function and wrap it in JsCmds.Script","FoBo v1.4.0") 
+  @deprecated("Use the carouselManualActionScript function and wrap it in JsCmds.Script","1.4.0") 
   def carouselManualAction(id:String,action:String=""):scala.xml.Node = {
-    var sc = carouselManualActionScript(id,action) //JsRaw("""$(function () { $('%s').collapse('%s'); }); """.format(id,action)).cmd
+    var sc = carouselManualActionScript(id,action) 
     JsCmds.Script(sc)  
   } 
   

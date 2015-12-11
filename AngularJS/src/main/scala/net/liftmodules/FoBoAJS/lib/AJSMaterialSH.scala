@@ -3,7 +3,10 @@ package net.liftmodules.FoBoAJS.lib
 import net.liftweb.util._
 
 /**
- * @author peter
+ * ==Angular Material Design Script Helper==
+ * Angular Material Design script helper is a helper class that implements some commonly 
+ * used material design component script functions.
+ * 
  */
 class AJSMaterialSH extends ScriptHelper {
  

@@ -162,7 +162,7 @@ case object Bootstrap336 extends FoBoToolkit {
  * }}}
  * @since v1.4
  */
-@deprecated("Use Bootstrap336 or later","FoBo v1.5.0")
+@deprecated("Use Bootstrap336 or later","1.5.0")
 case object Bootstrap335 extends FoBoToolkit {
   FoBoResources.bootstrap335
 }

@@ -175,7 +175,7 @@ package object FoBoAJS {
    * }}}
    *
    */
-  @deprecated("Use AngularJS1219 or later","FoBo v1.3.0")
+  @deprecated("Use AngularJS1219 or later","1.3.0")
   case object AngularJS1211 extends AJSToolkit {
     AJSFoBoResources.angularjs1211
   } 
@@ -191,7 +191,7 @@ package object FoBoAJS {
    * }}}
    *
    */
-  @deprecated("Use AngularJS1219i18n or later","FoBo v1.3.0")
+  @deprecated("Use AngularJS1219i18n or later","1.3.0")
   case object AngularJS1211i18n extends AJSToolkit {
     AJSFoBoResources.angularjs1211i18n
   } 
@@ -208,7 +208,7 @@ package object FoBoAJS {
    * }}}
    *
    */
-  @deprecated("Use AJMaterial100RC5 or later","FoBo v1.5.0")
+  @deprecated("Use AJMaterial100RC5 or later","1.5.0")
   case object AJMaterial0100 extends AJSToolkit {
     AJSFoBoResources.AJMaterial0100
   }
@@ -300,6 +300,7 @@ package object FoBoAJS {
    * }}}
    *
    */
+  @deprecated("Use AJSNGGrid207 or later","1.2.0")
   case object AJSNGGrid204 extends AJSToolkit {
     AJSFoBoResources.nggrid204
   }   
@@ -3703,7 +3704,7 @@ package object FoBoAJS {
       }
     }   
     
-    @deprecated("Use AJMaterial100RC5 or later","FoBo v1.5.0")
+    @deprecated("Use AJMaterial100RC5 or later","1.5.0")
     lazy val AJMaterial0100 = {
       ResourceServer.rewrite {
         case "fobo" :: "angular-material.js" :: Nil if Props.devMode => List("fobo", "angular-material", "0.10.0", "js", "angular-material.js")

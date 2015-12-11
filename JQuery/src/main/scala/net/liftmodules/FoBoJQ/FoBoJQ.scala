@@ -108,7 +108,7 @@ case object JQuery1113 extends FoBoJQ {
  * }}}
  * @since v1.3 
  */
-@deprecated("Use v1.11.3 or later","Sins v1.4") 
+@deprecated("Use v1.11.3 or later","1.4") 
 case object JQuery1111 extends FoBoJQ {
   JQFoBoResources.jquery1111
 }
@@ -124,7 +124,7 @@ case object JQuery1111 extends FoBoJQ {
  * }}}
  * @since v1.2 
  */
-@deprecated("Use v1.11.1 or later","Sins v1.3")  
+@deprecated("Use v1.11.1 or later","1.3")  
 case object JQuery1110 extends FoBoJQ {
   JQFoBoResources.jquery1110
 }

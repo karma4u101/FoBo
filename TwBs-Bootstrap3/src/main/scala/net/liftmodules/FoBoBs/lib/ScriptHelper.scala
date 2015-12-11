@@ -42,7 +42,7 @@ class ScriptHelper() {
    * injects it in place of the invocation.
    * @note If you are using Lift 3 you should use the AppendGlobalJs alternative.
    */
-  @deprecated("Use the registerLoadEventFactoryScript function and wrap it in JsCmds.Script","FoBo v1.4.0")
+  @deprecated("Use the registerLoadEventFactoryScript function and wrap it in JsCmds.Script","1.4.0")
   def registerLoadEventFactory():scala.xml.Node = {
     var sc = registerLoadEventFactoryScript()
     JsCmds.Script(sc)      
@@ -74,9 +74,8 @@ class ScriptHelper() {
    * This function adds a specific load event to the load event factory function.
    * 
    */
-  @deprecated("Use the loadEventScript function and wrap it in JsCmds.Script","FoBo v1.4.0")
+  @deprecated("Use the loadEventScript function and wrap it in JsCmds.Script","1.4.0")
   def addLoadEvent(event:String):scala.xml.Node = {
-    //JsRaw("""addLoadEvent(function() { %s });""".format(event)).cmd  
     var sc = loadEventScript(event) 
     JsCmds.Script(sc) 
   }
