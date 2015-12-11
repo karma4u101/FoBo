@@ -17,11 +17,11 @@ class AJSMaterialSH extends ScriptHelper {
    * '''Example'''
    * In your "app js" file you you can set up the toast themes like this.
    * {{{
-   * app.config(function($mdThemingProvider) {
+   * app.config(function(\$mdThemingProvider) {
    *  :
-   *  $mdThemingProvider.theme('error-toast').primaryPalette('red').accentPalette('orange');
-   *  $mdThemingProvider.theme('warning-toast').primaryPalette('orange').accentPalette('deep-orange');
-   *  $mdThemingProvider.theme('success-toast').primaryPalette('green');
+   *  \$mdThemingProvider.theme('error-toast').primaryPalette('red').accentPalette('orange');
+   *  \$mdThemingProvider.theme('warning-toast').primaryPalette('orange').accentPalette('deep-orange');
+   *  \$mdThemingProvider.theme('success-toast').primaryPalette('green');
    * });
    * }}}
    * 
@@ -49,9 +49,9 @@ class AJSMaterialSH extends ScriptHelper {
    * }}}
    * 
    * 
-   * @param String msg - The message to display.
-   * @param String position - The position of the toast message. If not provided defaults to 'bottom left' 
-   * @param String theme - The color theme to use for the Toast component. If not provided some none 
+   * @param msg - The message to display.
+   * @param position - The position of the toast message. If not provided defaults to 'bottom left' 
+   * @param theme - The color theme to use for the Toast component. If not provided some none 
    *        theme specific color will be used.
    * @return scala.xml.NodeSeq   
    */
@@ -66,11 +66,11 @@ class AJSMaterialSH extends ScriptHelper {
    * '''Example'''
    * In your "app js" file you you can set up the toast themes like this.
    * {{{
-   * app.config(function($mdThemingProvider) {
+   * app.config(function(\$mdThemingProvider) {
    *  :
-   *  $mdThemingProvider.theme('error-toast').primaryPalette('red').accentPalette('orange');
-   *  $mdThemingProvider.theme('warning-toast').primaryPalette('orange').accentPalette('deep-orange');
-   *  $mdThemingProvider.theme('success-toast').primaryPalette('green');
+   *  \$mdThemingProvider.theme('error-toast').primaryPalette('red').accentPalette('orange');
+   *  \$mdThemingProvider.theme('warning-toast').primaryPalette('orange').accentPalette('deep-orange');
+   *  \$mdThemingProvider.theme('success-toast').primaryPalette('green');
    * });
    * }}}
    * 
@@ -98,9 +98,9 @@ class AJSMaterialSH extends ScriptHelper {
    * }}}
    * 
    * 
-   * @param scala.xml.NodeSeq msg - The message to display.
-   * @param String position - The position of the toast message. If not provided defaults to 'bottom left' 
-   * @param String theme - The color theme to use for the Toast component. If not provided some none 
+   * @param msg - The message to display.
+   * @param position - The position of the toast message. If not provided defaults to 'bottom left' 
+   * @param theme - The color theme to use for the Toast component. If not provided some none 
    *        theme specific color will be used.
    * @return scala.xml.NodeSeq   
    */  
@@ -115,11 +115,11 @@ class AJSMaterialSH extends ScriptHelper {
    * '''Example'''
    * In your "app js" file you you can set up the toast themes like this.
    * {{{
-   * app.config(function($mdThemingProvider) {
+   * app.config(function(\$mdThemingProvider) {
    *  :
-   *  $mdThemingProvider.theme('error-toast').primaryPalette('red').accentPalette('orange');
-   *  $mdThemingProvider.theme('warning-toast').primaryPalette('orange').accentPalette('deep-orange');
-   *  $mdThemingProvider.theme('success-toast').primaryPalette('green');
+   *  \$mdThemingProvider.theme('error-toast').primaryPalette('red').accentPalette('orange');
+   *  \$mdThemingProvider.theme('warning-toast').primaryPalette('orange').accentPalette('deep-orange');
+   *  \$mdThemingProvider.theme('success-toast').primaryPalette('green');
    * });
    * }}}
    * 
@@ -147,9 +147,9 @@ class AJSMaterialSH extends ScriptHelper {
    * }}}
    * 
    * 
-   * @param List[FieldError] vi - The message to display.
-   * @param String position - The position of the toast message. If not provided defaults to 'bottom left' 
-   * @param String theme - The color theme to use for the Toast component. If not provided some none 
+   * @param vi - The message to display.
+   * @param position - The position of the toast message. If not provided defaults to 'bottom left' 
+   * @param theme - The color theme to use for the Toast component. If not provided some none 
    *        theme specific color will be used.
    * @return scala.xml.NodeSeq   
    */   
