@@ -505,22 +505,6 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
     net.liftmodules.FoBoAJS.AJSNGGrid207
   } 
   
-  /**
-   * Enable usage of NG-Grid version 2&#8228;0&#8228;4 in your bootstrap liftweb Boot.
-   * @version 2.0.4
-   *
-   *  '''Example:'''
-   *
-   * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AJSNGGrid204
-   * }}}
-   * @since v1.0
-   */
-  @deprecated("Use AJSNGGrid207 or later","1.2.0")
-  case object AJSNGGrid204 extends FoBoToolkit {
-    net.liftmodules.FoBoAJS.AJSNGGrid204
-  }  
-   
 
 /**
  * Enable usage of Prettify version Jun2011 in your bootstrap liftweb Boot.
@@ -754,87 +738,6 @@ case object FontAwesome321 extends FoBoToolkit {
   net.liftmodules.FoBoFA.FontAwesome321
 }
 
-
-/**
- * Enable usage of Twitter Bootstrap version 2&#8228;1&#8228;0 in your bootstrap liftweb Boot.
- * @version 2.1.0
- * 
- * '''Example'''
- * 
- * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap210
- * }}}
- * @since v1.0
- */
-@deprecated("Use Bootstrap232 or later","1.2.0")
-case object Bootstrap210 extends FoBoToolkit {
-  net.liftmodules.FoBoTB.Bootstrap210
-}
-
-/**
- * Enable usage of Twitter Bootstrap version 2&#8228;2&#8228;0 in your bootstrap liftweb Boot.
- * @version 2.2.0
- * 
- * '''Example'''
- * 
- * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap220
- * }}}
- * @since v1.0
- */
-@deprecated("Use Bootstrap232 or later","1.2.0")
-case object Bootstrap220 extends FoBoToolkit {
-  net.liftmodules.FoBoTB.Bootstrap220
-}
-
-
-/**
- * Enable usage of Twitter Bootstrap version 2&#8228;2&#8228;2 in your bootstrap liftweb Boot.
- * @version 2.2.2
- * 
- * '''Example'''
- * 
- * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap222
- * }}}
- * @since v1.0
- */
-@deprecated("Use Bootstrap232 or later","1.2.0")
-case object Bootstrap222 extends FoBoToolkit {
-  net.liftmodules.FoBoTB.Bootstrap222
-}
-
-/**
- * Enable usage of Twitter Bootstrap version 2&#8228;3&#8228;0 in your bootstrap liftweb Boot.
- * @version 2.3.0
- * 
- * '''Example'''
- * 
- * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap230
- * }}}
- * @since v1.0
- */
-@deprecated("Use Bootstrap232 or later","1.2.0")
-case object Bootstrap230 extends FoBoToolkit {
-  net.liftmodules.FoBoTB.Bootstrap230
-}
-
-/**
- * Enable usage of Twitter Bootstrap version 2&#8228;3&#8228;1 in your bootstrap liftweb Boot.
- * @version 2.3.1
- * 
- * '''Example'''
- * 
- * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap231
- * }}}
- * @since v1.0
- */
-@deprecated("Use Bootstrap232 or later","1.2.0")
-case object Bootstrap231 extends FoBoToolkit {
-  net.liftmodules.FoBoTB.Bootstrap231
-}
 
 /**
  * Enable usage of Twitter Bootstrap version 2&#8228;3&#8228;2 in your bootstrap liftweb Boot.

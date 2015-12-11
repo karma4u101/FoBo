@@ -288,23 +288,7 @@ package object FoBoAJS {
   case object AJSNGGrid207 extends AJSToolkit {
     AJSFoBoResources.nggrid207
   }   
-  
-  /**
-   * Enable usage of NG-Grid version 2&#8228;0&#8228;4 in your bootstrap liftweb Boot.
-   * @version 2.0.4
-   *
-   *  '''Example:'''
-   *
-   * {{{
-   *   FoBoAJS.InitParam.Toolkit=FoBoAJS.AJSNGGrid204
-   * }}}
-   *
-   */
-  @deprecated("Use AJSNGGrid207 or later","1.2.0")
-  case object AJSNGGrid204 extends AJSToolkit {
-    AJSFoBoResources.nggrid204
-  }   
-  
+   
   /**
    * Object holding internally used FoBo resources.
    */
@@ -3694,17 +3678,9 @@ package object FoBoAJS {
         case "fobo" :: "ng-grid.css" :: Nil => List("fobo", "angular-ui", "ng-grid", "2.0.7", "css", "ng-grid.min.css")
       }
     }     
+     
     
-    lazy val nggrid204 = {
-      ResourceServer.rewrite {
-        case "fobo" :: "ng-grid.js" :: Nil if Props.devMode => List("fobo", "angular-ui", "ng-grid", "2.0.4", "js", "ng-grid-2.0.4.debug.js")
-        case "fobo" :: "ng-grid.js" :: Nil => List("fobo", "angular-ui", "ng-grid", "2.0.4", "js", "ng-grid-2.0.4.min.js")
-        case "fobo" :: "ng-grid.css" :: Nil if Props.devMode => List("fobo", "angular-ui", "ng-grid", "2.0.4", "css", "ng-grid.css")
-        case "fobo" :: "ng-grid.css" :: Nil => List("fobo", "angular-ui", "ng-grid", "2.0.4", "css", "ng-grid.min.css")
-      }
-    }   
-    
-    @deprecated("Use AJMaterial100RC5 or later","1.5.0")
+    @deprecated("Use AJMaterial100 or later","1.5.0")
     lazy val AJMaterial0100 = {
       ResourceServer.rewrite {
         case "fobo" :: "angular-material.js" :: Nil if Props.devMode => List("fobo", "angular-material", "0.10.0", "js", "angular-material.js")
