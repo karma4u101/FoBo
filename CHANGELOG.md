@@ -8,8 +8,10 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2014-07-15** -- Module v1.3
 - **2014-03-15** -- Module v1.2
 - **2013-10-11** -- Module v1.1
+- **2013-05-19** -- Module v1.0 
 
 **Latest Updates:**
+- **2015-12-13** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0-rc7
 - **2015-12-03** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0-rc6
 - **2015-12-02** -- Module v1.5-SNAPSHOT Adding Bootstrap v3.3.6
 - **2015-12-02** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0-rc5
@@ -132,7 +134,7 @@ A live demo showing some of FoBo's sub module features, including API documentat
 ----------------
 
 **Stable Release history:**
-- **2013-05-19** -- Module v1.0 
+
 
 **Updates history:**
 - **2015-07-28** -- Module v1.4-SNAPSHOT Adding JQuery v2.1.4

@@ -34,7 +34,7 @@ import common._
  *  
  *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.1, v1.11.3, v.2.1.1, v.2.1.4] [[net.liftmodules.FoBoJQ]]
  *  - Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6] [[net.liftmodules.FoBoBs]]
- *  - Bootstrap v2.x series [v2.1.0, v2.2.0, v2.2.2, v2.3.0, v2.3.1, v2.3.2] [[net.liftmodules.FoBoTB]]
+ *  - Bootstrap v2.x series [v2.3.2] [[net.liftmodules.FoBoTB]]
  *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0] [[net.liftmodules.FoBoFA]]
  *  - Kinetic JS [v5.1.0]
  *  - Google Code Prettify [vJun2011]
