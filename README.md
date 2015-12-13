@@ -28,6 +28,8 @@ Improvements, contributions and suggestions are welcome! Please see the [Contrib
 
 > As FoBo is using this [Git branching model](http://nvie.com/posts/a-successful-git-branching-model/) the **main branch** is just updated for releases so make your pull requests against the [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
+###Updates 
+For a comprehensive list of updates see [Changelog](https://github.com/karma4u101/FoBo/blob/develop/CHANGELOG.md)
 
 ###Module names 
 The following is a list of names that can be used in Lift Boot eather pulled in by the FoBo meta module or as stand alone (sub) modules. 
