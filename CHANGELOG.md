@@ -29,6 +29,14 @@ See [Development branch](https://github.com/karma4u101/FoBo/tree/develop)
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop)
 
 
+New features in FoBo v1.5-SNAPSHOT
+---------------------------
+###FoBo v1.5 has updates to the following sub modules
+-   [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.0.0 - [Angular Material](https://material.angularjs.org/).
+    FoBo adds API integration with the MaterialMegaMetaProtoUser trait that adds Material Design styling to the ProtoUser form views. 
+    FoBo also adds a integration of angular material design tosts component with lift messages.
+-   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) Adds v3.3.6 - [Bootstrap 3.x](http://getbootstrap.com/)
+-   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.4.8 - [AngularJS](http://angularjs.org/).
 
 New features in FoBo v1.4
 ---------------------------

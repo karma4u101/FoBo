@@ -28,22 +28,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)  
 
 **Latest Update:**
-- **2015-12-03** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0-rc6
-- **2015-12-02** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0-rc5
-- **2015-11-22** -- Module v1.5-SNAPSHOT Adding AngularJS core v1.4.8 
-- **2015-07-28** -- Module v1.4-SNAPSHOT Adding Angular Material design v0.10.0
-- **2015-06-21** -- Module v1.4-SNAPSHOT Adding AngularJS core v1.4.1
-- **2015-06-04** -- Module v1.4-SNAPSHOT Adding AngularJS core v1.4.0 
-- **2015-05-22** -- Module v1.4-SNAPSHOT Adding AngularJS core v1.3.15
-- **2014-02-21** -- Module v1.2-SNAPSHOT Removing FoBo unpublished AngularJS v.1.2.1 and v1.2.2 in favor for v1.2.11
-- **2014-02-05** -- Module v1.2-SNAPSHOT Adding Angular UI Bootstrap v0.10.0 (for use with bootstrap v3.x css)
-- **2014-02-04** -- Module v1.2-SNAPSHOT Adding AngularJS core v1.2.11
-- **2013-11-27** -- Module v1.2-SNAPSHOT Adding Angular UI Bootstrap v0.7.0 and Angular NG-Grid v2.0.7
-- **2013-11-24** -- Module v1.2-SNAPSHOT Adding AngularJS core v1.2.2
-- **2013-11-18** -- Module v1.2-SNAPSHOT Adding AngularJS core v1.2.1
-- **2013-05-09** -- Module v1.0-SNAPSHOT Removing one of the newly added Angular component (Angular UI v0.4.0) as it has been broken up into sub modules by upstream. 
-- **2013-05-01** -- Module v0.9.9-SNAPSHOT One version to rule them all, unified FoBo module and sub-module versions.
-- **2013-04-13** -- Module v0.1.0-SNAPSHOT Making AngularJS a FoBo subproject.
+see [Changelog](https://github.com/karma4u101/FoBo/blob/develop/CHANGELOG.md)
 
 **Latest Releases:**
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for releas information.

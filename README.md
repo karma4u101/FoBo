@@ -172,6 +172,8 @@ The FoBo meta module includes the following sub-modules and supports the followi
 -   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) [v0.4.15] - [Pace](http://github.hubspot.com/pace/docs/welcome/) 
 -   [FoBo-Kinetic](https://github.com/karma4u101/FoBo/tree/master/Kinetic) [v5.1.0] - [Kinetic](http://kineticjs.com/) 
 
+**Note:** Some of the listed toolkit versions may have been deprecated (and possible removed after having been deprecated in 2 releases).
+
 ###Old submodules
 Modules available as maven artifacts but that have been split out of the FoBo meta module. 
 The modules can still be used as stand alone modules. 
@@ -184,11 +186,8 @@ The modules can still be used as stand alone modules.
 -   Sonatype [FoBo-Foundation](https://oss.sonatype.org/#nexus-search;quick~fobo-foundation) [v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
     Usage FoBoFo.InitParam.ToolKit=FoBoFo.Foundation215
  
-For feature listings on older releases see 
-- [New features in FoBo v1.3](https://github.com/karma4u101/FoBo/blob/master/README.md#New-features-in-FoBo-v1.3) section
-- [New features in FoBo v1.2](https://github.com/karma4u101/FoBo/blob/master/README.md#New-features-in-FoBo-v1.2) section
-- [New features in FoBo v1.1](https://github.com/karma4u101/FoBo/blob/master/README.md#New-features-in-FoBo-v1.1) section
-
+For feature listings on all releases see 
+- [Changelog](https://github.com/karma4u101/FoBo/blob/develop/CHANGELOG.md)
 
 Authors
 -------
