@@ -27,6 +27,16 @@ object FoBoAJSSpec extends Specification  {
     }       
   }   
   
+  //Angular Material
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AJMaterial100 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.0/js/angular-material.min.js" in {
+      rewriteAJMaterial100JS must_== List("fobo", "angular-material", "1.0.0", "js", "angular-material.min.js")
+    }      
+    "rewrit fobo/angular-material.css to fobo/angular-material/1.0.0/js/angular-material.min.css" in {
+      rewriteAJMaterial100CSS must_== List("fobo", "angular-material", "1.0.0", "css", "angular-material.min.css")
+    }    
+  }  
+  
   //AngularJS UI Bootatrap
   "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AJSUIBootstrap020 the ResourceServer.pathRewriter" should {
     "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.2.0/js/ui-bootstrap-0.2.0.min.js" in {
@@ -36,6 +46,16 @@ object FoBoAJSSpec extends Specification  {
       rewriteAJSUIBootstrap020TPLS must_== List("fobo", "angular-ui", "bootstrap", "0.2.0", "js", "ui-bootstrap-tpls-0.2.0.min.js")
     }    
   }   
+  
+  //Angular Material 
+ def rewriteAJMaterial100JS = {
+    FoBoAJS.InitParam.ToolKit=FoBoAJS.AJMaterial100
+    ResourceServer.pathRewriter("fobo"::"angular-material.js"::Nil)
+  }
+ def rewriteAJMaterial100CSS = {
+    FoBoAJS.InitParam.ToolKit=FoBoAJS.AJMaterial100
+    ResourceServer.pathRewriter("fobo"::"angular-material.css"::Nil)
+  } 
   
   //AngularJS
   def rewriteAngularJS141 = {

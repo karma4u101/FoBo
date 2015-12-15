@@ -208,25 +208,25 @@ package object FoBoAJS {
    * }}}
    *
    */
-  @deprecated("Use AJMaterial100RC5 or later","1.5.0")
+  @deprecated("Use AJMaterial100 or later","1.5.0")
   case object AJMaterial0100 extends AJSToolkit {
     AJSFoBoResources.AJMaterial0100
   }
   
 
    /**
-   * Enable usage of Angular Material version 1&#8228;0&#8228;0-rc5 in your bootstrap liftweb Boot.
-   * @version 1.0.0-rc5
+   * Enable usage of Angular Material version 1&#8228;0&#8228;0 in your bootstrap liftweb Boot.
+   * @version 1.0.0
    *
    *  '''Example:'''
    *
    * {{{
-   *   FoBoAJS.InitParam.Toolkit=FoBoAJS.AJMaterial100RC5
+   *   FoBoAJS.InitParam.Toolkit=FoBoAJS.AJMaterial100R
    * }}}
    *
    */
-  case object AJMaterial100RC extends AJSToolkit {
-    AJSFoBoResources.AJMaterial100RC
+  case object AJMaterial100 extends AJSToolkit {
+    AJSFoBoResources.AJMaterial100
   }  
   
    /**
@@ -3690,14 +3690,17 @@ package object FoBoAJS {
       }
     } 
     
-    lazy val AJMaterial100RC = {
+    lazy val AJMaterial100 = {
       ResourceServer.rewrite {
-        case "fobo" :: "angular-material.js" :: Nil if Props.devMode => List("fobo", "angular-material", "1.0.0-rc", "js", "angular-material.js")
-        case "fobo" :: "angular-material.js" :: Nil => List("fobo", "angular-material", "1.0.0-rc", "js", "angular-material.min.js")
-        case "fobo" :: "angular-material-mocks.js" :: Nil if Props.devMode => List("fobo", "angular-material", "1.0.0-rc", "js", "angular-material-mocks.js")
-        case "fobo" :: "angular-material-mocks.js" :: Nil => List("fobo", "angular-material", "1.0.0-rc", "js", "angular-material-mocks.js")
-        case "fobo" :: "angular-material.css" :: Nil if Props.devMode => List("fobo", "angular-material", "1.0.0-rc", "css", "angular-material.css")
-        case "fobo" :: "angular-material.css" :: Nil => List("fobo", "angular-material", "1.0.0-rc", "css", "angular-material.css")
+        case "fobo" :: "angular-material.js" :: Nil if Props.devMode => List("fobo", "angular-material", "1.0.0", "js", "angular-material.js")
+        case "fobo" :: "angular-material.js" :: Nil => List("fobo", "angular-material", "1.0.0", "js", "angular-material.min.js")
+        case "fobo" :: "angular-material-mocks.js" :: Nil if Props.devMode => List("fobo", "angular-material", "1.0.0", "js", "angular-material-mocks.js")
+        case "fobo" :: "angular-material-mocks.js" :: Nil => List("fobo", "angular-material", "1.0.0", "js", "angular-material-mocks.js")
+        case "fobo" :: "angular-material.css" :: Nil if Props.devMode => List("fobo", "angular-material", "1.0.0", "css", "angular-material.css")
+        case "fobo" :: "angular-material.css" :: Nil => List("fobo", "angular-material", "1.0.0", "css", "angular-material.min.css")
+        case "fobo" :: "angular-material.layout.css" :: Nil if Props.devMode => List("fobo", "angular-material", "1.0.0", "css", "angular-material.layout.css")
+        case "fobo" :: "angular-material.layout.css" :: Nil => List("fobo", "angular-material", "1.0.0", "css", "angular-material.layout.min.css")
+
       }
     }    
     

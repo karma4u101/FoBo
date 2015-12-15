@@ -45,6 +45,16 @@ object FoBoSpec extends Specification  {
       rewriteAJSNGGrid207 must_== List("fobo", "angular-ui","ng-grid", "2.0.7", "js", "ng-grid-2.0.7.min.js")
     }       
   } 
+  
+  //Angular Material
+  "With FoBo.InitParam.ToolKit set to FoBo.AJMaterial100 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.0/js/angular-material.min.js" in {
+      rewriteAJMaterial100JS must_== List("fobo", "angular-material", "1.0.0", "js", "angular-material.min.js")
+    }      
+    "rewrit fobo/angular-material.css to fobo/angular-material/1.0.0/js/angular-material.min.css" in {
+      rewriteAJMaterial100CSS must_== List("fobo", "angular-material", "1.0.0", "css", "angular-material.min.css")
+    }    
+  }    
     
   //FontAwesome
   "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome321 the ResourceServer.pathRewriter" should {
@@ -117,6 +127,16 @@ object FoBoSpec extends Specification  {
   }   
   
   
+  //Angular Material 
+ def rewriteAJMaterial100JS = {
+    FoBo.InitParam.ToolKit=FoBo.AJMaterial100
+    ResourceServer.pathRewriter("fobo"::"angular-material.js"::Nil)
+  }
+ def rewriteAJMaterial100CSS = {
+    FoBo.InitParam.ToolKit=FoBo.AJMaterial100
+    ResourceServer.pathRewriter("fobo"::"angular-material.css"::Nil)
+  }
+ 
   //AngularJS
   def rewriteAngularJS148 = {
     FoBo.InitParam.ToolKit=FoBo.AngularJS148

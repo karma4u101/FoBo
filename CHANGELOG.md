@@ -11,6 +11,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2013-05-19** -- Module v1.0 
 
 **Latest Updates:**
+- **2015-12-15** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0 (removing rc's)
 - **2015-12-13** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0-rc7
 - **2015-12-03** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0-rc6
 - **2015-12-02** -- Module v1.5-SNAPSHOT Adding Bootstrap v3.3.6
@@ -20,6 +21,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop)
 
 **Latest Snapshot Release:**
+- **2015-12-15** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
 - **2015-12-13** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
 - **2015-12-03** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
 - **2015-12-02** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
