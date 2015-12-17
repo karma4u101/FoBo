@@ -569,10 +569,10 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
       //_toForm functions especially I tried to override the _toForm for local and timezone with no luck. 
       if (!field.name.equals("password") && !field.name.equals("locale") && !field.name.equals("timezone")) {
         val bindAttrToForm = 
-          "input [class]" #> "" &
-          "select [class]" #> "signup" 
+            "input [class]" #> "" &
+            "select [class]" #> "signup" 
         val bsform = bindAttrToForm(form)
-        <md-input-container flex="">
+        <md-input-container class="md-block" flex-gt-sm="">
           <label for={ field.name } >{ field.displayName }</label>
           { bsform }
         </md-input-container>
@@ -581,20 +581,18 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
           "input [class]" #> "" &
           "select [class]" #> "signup" 
         val bsform = bindAttrToForm(form)
-        <md-input-container flex="">
-          <div>
-          <label for={ field.fieldId.getOrElse("").toString() } >{ field.displayName }</label>
-          <div>{ bsform }</div>
-          </div>
+        <md-input-container class="md-block" flex-gt-sm="">
+          <div class="label" for={ field.fieldId.getOrElse("").toString() } >{ field.displayName }</div>
+          { bsform }
         </md-input-container>
       } else {
         val (pwd, pwdr) = extractLocalFormPasswordField(form, field)    
         <div>
-        <md-input-container flex="">
+        <md-input-container flex-gt-sm="">
           <label for={ field.name } class="">{ resSignUpLabelPassword }</label>
           { pwd }          
         </md-input-container>    
-        <md-input-container flex="">
+        <md-input-container flex-gt-sm="">
           <label for={ field.name } class="">{ resSignUpLabelRepeatPassword }</label>
           { pwdr }
         </md-input-container> 
