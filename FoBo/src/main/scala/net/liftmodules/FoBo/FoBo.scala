@@ -27,6 +27,9 @@ import common._
  *  - Most of the FoBo toolkit modules provides Snippet helpers and lib classes that will ease you from writing 
  *    some commonly used toolkit component integration scripts making it a simple snippet invocation.  
  *  - Great responsive scalability with responsive toolkits.   
+ *  - FoBo strives to be modular. FoBo is built up by independent sub-modules (artefacts) that can be used 
+ *    independant of the FoBo assembly module.  
+ *   
  *
  * ===FoBo supported toolkits and plugins=== 
  * 
@@ -505,6 +508,20 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
     net.liftmodules.FoBoAJS.AJSNGGrid207
   } 
   
+  /**
+   * Enable usage of UI-Grid version 3&#8228;0&#8228;7 in your bootstrap liftweb Boot.
+   * @version 3.0.7
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBo.InitParam.Toolkit=FoBo.AJSUIGrid307
+   * }}}
+   * @since v1.5
+   */
+  case object AJSUIGrid307 extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AJSUIGrid307
+  }   
 
 /**
  * Enable usage of Prettify version Jun2011 in your bootstrap liftweb Boot.

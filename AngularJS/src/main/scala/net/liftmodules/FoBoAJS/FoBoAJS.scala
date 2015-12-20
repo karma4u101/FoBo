@@ -287,7 +287,22 @@ package object FoBoAJS {
    */
   case object AJSNGGrid207 extends AJSToolkit {
     AJSFoBoResources.nggrid207
-  }   
+  }
+  
+  /**
+   * Enable usage of UI-Grid version 3&#8228;0&#8228;7 in your bootstrap liftweb Boot.
+   * @version 3.0.7
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBoAJS.InitParam.Toolkit=FoBoAJS.AJSUIGrid307
+   * }}}
+   *
+   */
+  case object AJSUIGrid307 extends AJSToolkit {
+    AJSFoBoResources.uigrid307
+  }  
    
   /**
    * Object holding internally used FoBo resources.
@@ -3676,6 +3691,15 @@ package object FoBoAJS {
         case "fobo" :: "ng-grid.js" :: Nil => List("fobo", "angular-ui", "ng-grid", "2.0.7", "js", "ng-grid-2.0.7.min.js")
         case "fobo" :: "ng-grid.css" :: Nil if Props.devMode => List("fobo", "angular-ui", "ng-grid", "2.0.7", "css", "ng-grid.css")
         case "fobo" :: "ng-grid.css" :: Nil => List("fobo", "angular-ui", "ng-grid", "2.0.7", "css", "ng-grid.min.css")
+      }
+    } 
+    
+    lazy val uigrid307 = {
+      ResourceServer.rewrite {
+        case "fobo" :: "ui-grid.js" :: Nil if Props.devMode => List("fobo", "angular-ui", "ui-grid", "3.0.7", "js", "ui-grid.js")
+        case "fobo" :: "ui-grid.js" :: Nil => List("fobo", "angular-ui", "ui-grid", "3.0.7", "js", "ui-grid.min.js")
+        case "fobo" :: "ui-grid.css" :: Nil if Props.devMode => List("fobo", "angular-ui", "ui-grid", "3.0.7", "css", "ui-grid.css")
+        case "fobo" :: "ui-grid.css" :: Nil => List("fobo", "angular-ui", "ui-grid", "3.0.7", "css", "ui-grid.min.css")
       }
     }     
      
