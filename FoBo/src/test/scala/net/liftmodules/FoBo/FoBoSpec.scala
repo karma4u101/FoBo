@@ -46,6 +46,16 @@ object FoBoSpec extends Specification  {
     }       
   } 
   
+  //Angular UI Grid
+  "With FoBo.InitParam.ToolKit set to FoBo.AJSUIGrid307 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/ui-grid.js to fobo/angular-ui/ui-grid/3.0.7/js/ui-grid.min.js" in {
+      rewriteAJSUIGrid307Js must_== List("fobo", "angular-ui", "ui-grid", "3.0.7", "js", "ui-grid.min.js")
+    }      
+    "rewrit fobo/ui-grid.css to fobo/angular-ui/ui-grid/3.0.7/css/ui-grid.min.css" in {
+      rewriteAJSUIGrid307Css must_== List("fobo", "angular-ui", "ui-grid", "3.0.7", "css", "ui-grid.min.css")
+    }    
+  }   
+  
   //Angular Material
   "With FoBo.InitParam.ToolKit set to FoBo.AJMaterial100 the ResourceServer.pathRewriter" should {
     "rewrit fobo/angular-material.js to fobo/angular-material/1.0.0/js/angular-material.min.js" in {
@@ -137,6 +147,17 @@ object FoBoSpec extends Specification  {
     ResourceServer.pathRewriter("fobo"::"angular-material.css"::Nil)
   }
  
+  //Angular UI Grid
+  def rewriteAJSUIGrid307Js = {
+    FoBo.InitParam.ToolKit=FoBo.AJSUIGrid307
+    ResourceServer.pathRewriter("fobo"::"ui-grid.js"::Nil)
+  }  
+   
+  def rewriteAJSUIGrid307Css = {
+    FoBo.InitParam.ToolKit=FoBo.AJSUIGrid307
+    ResourceServer.pathRewriter("fobo"::"ui-grid.css"::Nil)
+  } 
+  
   //AngularJS
   def rewriteAngularJS148 = {
     FoBo.InitParam.ToolKit=FoBo.AngularJS148
