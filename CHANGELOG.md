@@ -34,6 +34,9 @@ See [Development branch](https://github.com/karma4u101/FoBo/tree/develop)
 
 New features in FoBo v1.5-SNAPSHOT
 ---------------------------
+###FoBo v1.5 has the following new sub modules
+-   [FoBo-AngularJS UI Grid](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v3.0.7 - [Angular UI Grid](http://ui-grid.info/).
+
 ###FoBo v1.5 has updates to the following sub modules
 -   [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.0.0 - [Angular Material](https://material.angularjs.org/).
     FoBo adds API integration with the MaterialMegaMetaProtoUser trait that adds Material Design styling to the ProtoUser form views. 
