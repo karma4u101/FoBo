@@ -601,43 +601,6 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
     }
   }
   
-  /*
-  override protected def localForm(user: TheUserType, ignorePassword: Boolean, fields: List[FieldPointerType]): NodeSeq = {
-    for {
-      pointer <- fields
-      field <- computeFieldFromPointer(user, pointer).toList
-      if field.show_? && (!ignorePassword || !pointer.isPasswordField_?)
-      form <- field.toForm.toList
-    } yield {
-      //This is a bit of a hack (relatively safe though), as I could not find a way to properly override the field's 
-      //_toForm functions especially I tried to override the _toForm for local and timezone with no luck. 
-      if (!field.name.equals("password")) {
-        val bindAttrToForm = 
-          "input [class]" #> "form-control" &
-          "select [class]" #> "form-control"
-        val bsform = bindAttrToForm(form)
-        <div class="form-group">
-          <label for={ field.name } class="col-lg-3 control-label">{ field.displayName }</label>
-          <div class="col-lg-9">
-            { bsform }
-          </div>
-        </div>
-      } else {
-        val (pwd, pwdr) = extractLocalFormPasswordField(form, field)
-        <div class="form-group row">
-          <label for={ field.name } class="control-label col-lg-3">{ resSignUpLabelPassword }</label>
-          <div class="col-lg-3">
-            { pwd }
-          </div>
-          <label for={ field.name } class="control-label col-lg-3">{ resSignUpLabelRepeatPassword }</label>
-          <div class="col-lg-3">
-            { pwdr }
-          </div>
-        </div>
-      }
-    }
-  }  
-*/  
   
   //This is a bit of a hack, as I could not find a proper way to properly override the signupFields _toForm functions   
   protected def extractLocalFormPasswordField(form: NodeSeq, field: BaseField): (NodeSeq, NodeSeq) = {
@@ -721,18 +684,6 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
     inputSubmitButtonWithAttribs(name, func, attrs: _*)
   }
 
-/*
-    (<md-content layout-padding="" class="autoScroll" >
-        <form role="form" action={ S.uri } method="post">
-       <h1 class="md-title">{ resSignUpLegendSignUp }</h1>
-       { localForm(user, false, signupFields) }
-        <section layout="row" layout-sm="column" layout-align="left center" layout-wrap="">
-        <md-button type="submit" ></md-button>
-        </section>
-     </form>
-    </md-content>
-    )  
- */
   
   override def editXhtml(user: TheUserType) = {
     
@@ -770,77 +721,7 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
        </form>
      </md-content>)
     
-/*    (<form class="form-horizontal" role="form" method="post" action={ S.uri }>
-       <legend>{ resChangePasswordLegendChangePassword }</legend>
-       <div class="form-group">
-         <label for="oldpassword" class="col-lg-3 control-label">{ resChangePasswordLabelOldPassword }</label>
-         <div class="col-lg-9">
-           <input type="password" class="old-password form-control" placeholder={resChangePasswordPlaceholderOldPassword} />
-         </div>
-       </div>
-       <div class="form-group">
-         <label for="newpassword" class="col-lg-3 control-label">{ resChangePasswordLabelNewPassword }</label>
-         <div class="col-lg-9">
-           <input type="password" class="new-password form-control" placeholder={resChangePasswordPlaceholderNewPassword}/>
-         </div>
-       </div>
-       <div class="form-group">
-         <label for="repeatpassword" class="col-lg-3 control-label">{ resChangePasswordLabelRepeatPassword }</label>
-         <div class="col-lg-9">
-           <input type="password" class="new-password form-control" placeholder={resChangePasswordPlaceholderNewPassword}/>
-         </div>
-       </div>
-       <div class="form-group">
-         <div class="col-lg-offset-3 col-lg-10">
-           <input type="submit" class="btn btn-default"/>
-         </div>
-       </div>
-     </form>) */
   }
-  
-/*
-  override def editXhtml(user: TheUserType) = {
-    (<form class="form-horizontal" role="form" method="post" action={ S.uri }>
-       <legend>{ resEditLegendEdit }</legend>
-       { localForm(user, true, editFields) }
-       <div class="form-group">
-         <div class="col-lg-offset-3 col-lg-10">
-           <input type="submit" />
-         </div>
-       </div>
-     </form>)
-  }
-  
-   override def changePasswordXhtml = {
-    (<form class="form-horizontal" role="form" method="post" action={ S.uri }>
-       <legend>{ resChangePasswordLegendChangePassword }</legend>
-       <div class="form-group">
-         <label for="oldpassword" class="col-lg-3 control-label">{ resChangePasswordLabelOldPassword }</label>
-         <div class="col-lg-9">
-           <input type="password" class="old-password form-control" placeholder={resChangePasswordPlaceholderOldPassword} />
-         </div>
-       </div>
-       <div class="form-group">
-         <label for="newpassword" class="col-lg-3 control-label">{ resChangePasswordLabelNewPassword }</label>
-         <div class="col-lg-9">
-           <input type="password" class="new-password form-control" placeholder={resChangePasswordPlaceholderNewPassword}/>
-         </div>
-       </div>
-       <div class="form-group">
-         <label for="repeatpassword" class="col-lg-3 control-label">{ resChangePasswordLabelRepeatPassword }</label>
-         <div class="col-lg-9">
-           <input type="password" class="new-password form-control" placeholder={resChangePasswordPlaceholderNewPassword}/>
-         </div>
-       </div>
-       <div class="form-group">
-         <div class="col-lg-offset-3 col-lg-10">
-           <input type="submit" class="btn btn-default"/>
-         </div>
-       </div>
-     </form>) 
-  }  
- */
-
   
   
   override def changePassword = {
