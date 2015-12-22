@@ -147,16 +147,16 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
    * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
    */ 
   def resLoginLegendLogin: NodeSeq = S.loc("fobo.ProtoUser.Login.legend", scala.xml.Text(S.?("log.in")))
-   /**
-   * FoBo internationalization resource key for overriding the Lift i18n key.</br> 
-   * 
-   * <b>FoBo resource key:</b> 'fobo.ProtoUser.Login.label.password'<br/>
-   * <b>Corresponding Lift i18n key:</b> 'password' -- If the FoBo resource key is not set this Lift i18n key value will be used.
-   * 
-   * If the FoBo resource key is set for the desired locale(s) in a localization resource file it will 
-   * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
-   */ 
-  def resLoginLabelPassword: NodeSeq = S.loc("fobo.ProtoUser.Login.label.password", scala.xml.Text(S.?("password")))
+//   /**
+//   * FoBo internationalization resource key for overriding the Lift i18n key.</br> 
+//   * 
+//   * <b>FoBo resource key:</b> 'fobo.ProtoUser.Login.label.password'<br/>
+//   * <b>Corresponding Lift i18n key:</b> 'password' -- If the FoBo resource key is not set this Lift i18n key value will be used.
+//   * 
+//   * If the FoBo resource key is set for the desired locale(s) in a localization resource file it will 
+//   * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
+//   */ 
+//  def resLoginLabelPassword: NodeSeq = S.loc("fobo.ProtoUser.Login.label.password", scala.xml.Text(S.?("password")))
    /**
    * FoBo internationalization resource key for overriding the Lift i18n key.</br> 
    * 
@@ -197,16 +197,16 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
    * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
    */  
   def resLostPasswordLegendEnterEmail: NodeSeq = S.loc("fobo.ProtoUser.LostPassword.legend", scala.xml.Text(S.?("enter.email")))
-   /**
-   * FoBo internationalization resource key for overriding the Lift i18n key.</br> 
-   * 
-   * <b>FoBo resource key:</b> 'fobo.ProtoUser.LostPassword.label.userName'<br/>
-   * <b>Corresponding Lift i18n key:</b> see 'userNameFieldString' -- If the FoBo resource key is not set this Lift i18n key value will be used.
-   * 
-   * If the FoBo resource key is set for the desired locale(s) in a localization resource file it will 
-   * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
-   */ 
-  def resLostPasswordLabelUserName: NodeSeq = S.loc("fobo.ProtoUser.LostPassword.label.userName", scala.xml.Text(userNameFieldString))
+//   /**
+//   * FoBo internationalization resource key for overriding the Lift i18n key.</br> 
+//   * 
+//   * <b>FoBo resource key:</b> 'fobo.ProtoUser.LostPassword.label.userName'<br/>
+//   * <b>Corresponding Lift i18n key:</b> see 'userNameFieldString' -- If the FoBo resource key is not set this Lift i18n key value will be used.
+//   * 
+//   * If the FoBo resource key is set for the desired locale(s) in a localization resource file it will 
+//   * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
+//   */ 
+//  def resLostPasswordLabelUserName: NodeSeq = S.loc("fobo.ProtoUser.LostPassword.label.userName", scala.xml.Text(userNameFieldString))
    /**
    * FoBo internationalization resource key for overriding the Lift i18n key.</br> 
    * 
@@ -317,36 +317,36 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
    * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
    */ 
   def resChangePasswordLegendChangePassword = S.loc("fobo.ProtoUser.ChangePassword.legend", scala.xml.Text(S.?("change.password")))
-   /**
-   * FoBo internationalization resource key for overriding the Lift i18n key.</br> 
-   * 
-   * <b>FoBo resource key:</b> 'fobo.ProtoUser.ChangePassword.label.old.password'<br/>
-   * <b>Corresponding Lift i18n key:</b> 'old.password' -- If the FoBo resource key is not set this Lift i18n key value will be used.
-   * 
-   * If the FoBo resource key is set for the desired locale(s) in a localization resource file it will 
-   * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
-   */   
-  def resChangePasswordLabelOldPassword = S.loc("fobo.ProtoUser.ChangePassword.label.old.password", scala.xml.Text(S.?("old.password")))
-   /**
-   * FoBo internationalization resource key for overriding the Lift i18n key.</br> 
-   * 
-   * <b>FoBo resource key:</b> 'fobo.ProtoUser.ChangePassword.label.new.password'<br/>
-   * <b>Corresponding Lift i18n key:</b> 'new.password' -- If the FoBo resource key is not set this Lift i18n key value will be used.
-   * 
-   * If the FoBo resource key is set for the desired locale(s) in a localization resource file it will 
-   * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
-   */
-  def resChangePasswordLabelNewPassword = S.loc("fobo.ProtoUser.ChangePassword.label.new.password", scala.xml.Text(S.?("new.password")))
-    /**
-   * FoBo internationalization resource key for overriding the Lift i18n key.</br> 
-   * 
-   * <b>FoBo resource key:</b> 'fobo.ProtoUser.ChangePassword.label.repeat.password'<br/>
-   * <b>Corresponding Lift i18n key:</b> 'repeat.password' -- If the FoBo resource key is not set this Lift i18n key value will be used.
-   * 
-   * If the FoBo resource key is set for the desired locale(s) in a localization resource file it will 
-   * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
-   */ 
-  def resChangePasswordLabelRepeatPassword = S.loc("fobo.ProtoUser.ChangePassword.label.repeat.password", scala.xml.Text(S.?("repeat.password")))
+//   /**
+//   * FoBo internationalization resource key for overriding the Lift i18n key.</br> 
+//   * 
+//   * <b>FoBo resource key:</b> 'fobo.ProtoUser.ChangePassword.label.old.password'<br/>
+//   * <b>Corresponding Lift i18n key:</b> 'old.password' -- If the FoBo resource key is not set this Lift i18n key value will be used.
+//   * 
+//   * If the FoBo resource key is set for the desired locale(s) in a localization resource file it will 
+//   * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
+//   */   
+//  def resChangePasswordLabelOldPassword = S.loc("fobo.ProtoUser.ChangePassword.label.old.password", scala.xml.Text(S.?("old.password")))
+//   /**
+//   * FoBo internationalization resource key for overriding the Lift i18n key.</br> 
+//   * 
+//   * <b>FoBo resource key:</b> 'fobo.ProtoUser.ChangePassword.label.new.password'<br/>
+//   * <b>Corresponding Lift i18n key:</b> 'new.password' -- If the FoBo resource key is not set this Lift i18n key value will be used.
+//   * 
+//   * If the FoBo resource key is set for the desired locale(s) in a localization resource file it will 
+//   * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
+//   */
+//  def resChangePasswordLabelNewPassword = S.loc("fobo.ProtoUser.ChangePassword.label.new.password", scala.xml.Text(S.?("new.password")))
+//    /**
+//   * FoBo internationalization resource key for overriding the Lift i18n key.</br> 
+//   * 
+//   * <b>FoBo resource key:</b> 'fobo.ProtoUser.ChangePassword.label.repeat.password'<br/>
+//   * <b>Corresponding Lift i18n key:</b> 'repeat.password' -- If the FoBo resource key is not set this Lift i18n key value will be used.
+//   * 
+//   * If the FoBo resource key is set for the desired locale(s) in a localization resource file it will 
+//   * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
+//   */ 
+//  def resChangePasswordLabelRepeatPassword = S.loc("fobo.ProtoUser.ChangePassword.label.repeat.password", scala.xml.Text(S.?("repeat.password")))
     /**
    * FoBo internationalization resource key for overriding the Lift i18n key.</br> 
    * 
@@ -367,16 +367,16 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
    * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
    */
   def resChangePasswordPlaceholderOldPassword = S.loc("fobo.ProtoUser.ChangePassword.placeholder.old.password", scala.xml.Text(S.?("old.password"))).toString() //S.?("old.password")
-    /**
-   * FoBo internationalization resource key for overriding the Lift i18n key.</br> 
-   * 
-   * <b>FoBo resource key:</b> 'fobo.ProtoUser.ChangePassword.submit'<br/>
-   * <b>Corresponding Lift i18n key:</b> 'fobo.submit.password.change' -- If the FoBo resource key is not set this Lift i18n key value will be used.
-   * 
-   * If the FoBo resource key is set for the desired locale(s) in a localization resource file it will 
-   * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
-   */
-  def resChangePasswordSubmitChange: NodeSeq = S.loc("fobo.ProtoUser.ChangePassword.submit", scala.xml.Text(S.?("change")))
+//    /**
+//   * FoBo internationalization resource key for overriding the Lift i18n key.</br> 
+//   * 
+//   * <b>FoBo resource key:</b> 'fobo.ProtoUser.ChangePassword.submit'<br/>
+//   * <b>Corresponding Lift i18n key:</b> 'fobo.submit.password.change' -- If the FoBo resource key is not set this Lift i18n key value will be used.
+//   * 
+//   * If the FoBo resource key is set for the desired locale(s) in a localization resource file it will 
+//   * override lift's corresponding key value. If the key is present but the value is empty it will render empty.  
+//   */
+//  def resChangePasswordSubmitChange: NodeSeq = S.loc("fobo.ProtoUser.ChangePassword.submit", scala.xml.Text(S.?("change")))
   
   
   override def login = {
@@ -435,30 +435,7 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
 
   }
 
-/*
-    <form class="form-horizontal" role="form" action={ S.uri } method="post">
-      <legend>{ resLoginLegendLogin }</legend>
-      <div class="form-group">
-        <label for="username" class="col-lg-3 control-label">{ userNameFieldString }</label>
-        <div class="col-lg-9">
-          <input type="email" class="form-control" id="username" name="username" placeholder={ userNameFieldString } autofocus="autofocus"/>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="password" class="col-lg-3 control-label">{ resLoginLabelPassword }</label>
-        <div class="col-lg-9">
-          <input type="password" class="form-control" id="password" name="password" placeholder={ resLoginPlaceholderPassword }/>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="col-lg-offset-3 col-lg-10">
-          <button type="submit" class="btn btn-default">{ resLoginSubmit }</button><span> <a href={ lostPasswordPath.mkString("/", "/", "") }>{ resLoginLabelRecoverPassword }</a></span>
-        </div>
-      </div>
-    </form>
-*/
- 
-    
+
   override def lostPassword = {
     ("type=email" #> SHtml.text("", sendPasswordReset _)).apply(lostPasswordXhtml)
   }
@@ -536,23 +513,6 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
        </form>
      </md-content>
   }
-  
-  /*
-    (<form class="form-horizontal" role="form" action={ S.uri } method="post">
-       <legend>{ resLostPasswordLegendEnterEmail }</legend>
-       <div class="form-group">
-         <label for="username" class="col-lg-3 control-label">{ resLostPasswordLabelUserName }</label>
-         <div class="col-lg-9">
-           <input type="email" class="form-control" id="username" name="username" placeholder={ resLostPasswordPlaceholderUserName } autofocus="autofocus"/>
-         </div>
-       </div>
-       <div class="form-group">
-         <div class="col-lg-offset-3 col-lg-10">
-           <button type="submit" class="btn btn-default">{ resLostPasswordSubmit }</button>
-         </div>
-       </div>
-     </form>)
-   */
 
   
   //problem styling select https://www.google.se/search?client=ubuntu&channel=fs&q=select+and+md-select+angular+material&ie=utf-8&oe=utf-8&gfe_rd=cr&ei=hB_sVbq3L4yA8QeP1ZuYCQ
