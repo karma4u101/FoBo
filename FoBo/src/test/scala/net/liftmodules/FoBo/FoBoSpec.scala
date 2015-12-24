@@ -57,12 +57,12 @@ object FoBoSpec extends Specification  {
   }   
   
   //Angular Material
-  "With FoBo.InitParam.ToolKit set to FoBo.AJMaterial100 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.0/js/angular-material.min.js" in {
-      rewriteAJMaterial100JS must_== List("fobo", "angular-material", "1.0.0", "js", "angular-material.min.js")
+  "With FoBo.InitParam.ToolKit set to FoBo.AJMaterial101 the ResourceServer.pathRewriter" should {
+    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.1/js/angular-material.min.js" in {
+      rewriteAJMaterial101JS must_== List("fobo", "angular-material", "1.0.1", "js", "angular-material.min.js")
     }      
-    "rewrit fobo/angular-material.css to fobo/angular-material/1.0.0/js/angular-material.min.css" in {
-      rewriteAJMaterial100CSS must_== List("fobo", "angular-material", "1.0.0", "css", "angular-material.min.css")
+    "rewrit fobo/angular-material.css to fobo/angular-material/1.0.1/js/angular-material.min.css" in {
+      rewriteAJMaterial101CSS must_== List("fobo", "angular-material", "1.0.1", "css", "angular-material.min.css")
     }    
   }    
     
@@ -138,12 +138,12 @@ object FoBoSpec extends Specification  {
   
   
   //Angular Material 
- def rewriteAJMaterial100JS = {
-    FoBo.InitParam.ToolKit=FoBo.AJMaterial100
+ def rewriteAJMaterial101JS = {
+    FoBo.InitParam.ToolKit=FoBo.AJMaterial101
     ResourceServer.pathRewriter("fobo"::"angular-material.js"::Nil)
   }
- def rewriteAJMaterial100CSS = {
-    FoBo.InitParam.ToolKit=FoBo.AJMaterial100
+ def rewriteAJMaterial101CSS = {
+    FoBo.InitParam.ToolKit=FoBo.AJMaterial101
     ResourceServer.pathRewriter("fobo"::"angular-material.css"::Nil)
   }
  

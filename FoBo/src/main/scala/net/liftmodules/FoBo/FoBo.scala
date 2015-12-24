@@ -59,14 +59,13 @@ import common._
  *    Older versions of FoBo also supports Lift v2.4/v2.5  
  *  - For a demonstration of this module see the live [[http://www.media4u101.se/fobo-lift-template-demo/ FoBo demo]] 
  *
- * @example To initiate this module for usage in your Lift project 
- * set something like the following in the projects Lift bootstrap.liftweb.Boot. For information on FoBoToolkitName see 
- * respective toolkit below.
+ * @example To initiate this module for usage in your Lift project set something like the following in 
+ * your projects Lift bootstrap.liftweb.Boot boot method. Here the FoBoToolkitNameXYZ 
+ * represent one of FoBo's available FoBoTolkit objects listed below.
  * {{{
  *    import net.liftmodules.FoBo
  *     :
  *     :
- *    //If using defaults FoBo init params can be omitted
  *    FoBo.InitParam.JQuery=FoBo.JQueryXYZ  //one jquery version
  *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ //one or more toolkits 
  *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ
@@ -81,16 +80,23 @@ import common._
 package object FoBo {
   
   /**
-   * @example In bootstrap liftweb Boot set
+   * When your Lift application first starts up, it executes the code in Boot.scala
+   * By calling FoBo.init() in Boot.scala the FoBo API packages and toolkit resources 
+   * will be available in your Lift application.
+   * @example In method boot in the Boot class of package bootstrap.liftweb set
    * {{{
-   *   FoBo.init()
+   *    FoBo.InitParam.JQuery=FoBo.JQueryXYZ  //one jquery version
+   *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ //one or more toolkits 
+   *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ 
+   *     : 
+   *    FoBo.init()
    * }}}
-   * The above example just calls init without specifying fobo init 
-   * params so default Toolkit and JQuery values will be used. 
    */
   def init() {
-    //add package for module with snippets 
+    //add packages for modules with snippets 
     LiftRules.addToPackages("net.liftmodules.FoBo")
+    //the rest of the packages could probably 
+    //be moved into it's respective case objects.
     LiftRules.addToPackages("net.liftmodules.FoBoAJS")
     LiftRules.addToPackages("net.liftmodules.FoBoBs")
     LiftRules.addToPackages("net.liftmodules.FoBoTB")
@@ -108,7 +114,9 @@ abstract trait FoBoToolkit
  * Extends your Lift SiteMap with various common bootstrap menu manipulations such 
  * as horizontal and vertical menu dividers and menu labels (labels coming soon).
  *  
- * This object should be used in conjunction with the TB* menu builder objects in [[net.liftmodules.FoBo.snippet.FoBo]] snippet's.
+ * This object should be used in conjunction with the TB* or BS3* menu builder objects in 
+ * [[net.liftmodules.FoBoTB.snippet.FoBo]] or [[net.liftmodules.FoBoBS.snippet.FoBo]] snippet's.
+ * 
  * 
  * '''Example:'''
  * {{{ 
@@ -418,18 +426,18 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   } 
   
   /**
-   * Enable usage of Angular-Material version 1&#8228;0&#8228;0 in your bootstrap liftweb Boot.
-   * @version 1.0.0
+   * Enable usage of Angular-Material version 1&#8228;0&#8228;1 in your bootstrap liftweb Boot.
+   * @version 1.0.1
    *
    *  '''Example:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AJMaterial100
+   *   FoBo.InitParam.Toolkit=FoBo.AJMaterial101
    * }}}
    * @since v1.5
    */  
-  case object AJMaterial100 extends FoBoToolkit {
-    net.liftmodules.FoBoAJS.AJMaterial100
+  case object AJMaterial101 extends FoBoToolkit {
+    net.liftmodules.FoBoAJS.AJMaterial101
   }
   
   /**
@@ -443,7 +451,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.4
    */  
-  @deprecated("Use AJMaterial100 or later","1.5.0")
+  @deprecated("Use AJMaterial101 or later","1.5.0")
   case object AJMaterial0100 extends FoBoToolkit {
     net.liftmodules.FoBoAJS.AJMaterial0100
   } 
