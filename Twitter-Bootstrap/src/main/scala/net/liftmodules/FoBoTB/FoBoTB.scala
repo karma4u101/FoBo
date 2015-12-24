@@ -46,10 +46,10 @@ abstract trait FoBoToolkit
  * {{{ 
  *   : 
  *  //add a horizontal menu divider 
- *  divider1 >> LocGroup(...) >> FoBo.TBLocInfo.Divider,
+ *  divider1 >> LocGroup(...) >> FoBoTB.TBLocInfo.Divider,
  *   :
  *  //add a vertical menu divider 
- *  divider2 >> LocGroup(...) >> FoBo.TBLocInfo.DividerVertical,
+ *  divider2 >> LocGroup(...) >> FoBoTB.TBLocInfo.DividerVertical,
  *   : 
  * }}} 
  */
