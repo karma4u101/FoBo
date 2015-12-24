@@ -1,7 +1,7 @@
 Update log
 ----------
 
-For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/README.md#history-log) section
+For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/CHANGELOG.md#history-log) section
 
 **Latest Stable Releases:**
 - **2015-08-09** -- Module v1.4
@@ -11,38 +11,25 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2013-05-19** -- Module v1.0 
 
 **Latest Updates:**
-- **2015-12-20** -- Module v1.5-SNAPSHOT Adding Angular UI Grid v3.0.7
-- **2015-12-15** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0 (removing rc's)
-- **2015-12-13** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0-rc7
-- **2015-12-03** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0-rc6
-- **2015-12-02** -- Module v1.5-SNAPSHOT Adding Bootstrap v3.3.6
-- **2015-12-02** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0-rc5
-- **2015-11-24** -- Module v1.5-SNAPSHOT Integrating angular material design tosts component with lift messages. 
-- **2015-11-22** -- Module v1.5-SNAPSHOT Adding AngularJS core v1.4.8 
-See [Development branch](https://github.com/karma4u101/FoBo/tree/develop)
+See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
 
 **Latest Snapshot Release:**
-- **2015-12-20** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-12-17** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-12-15** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-12-13** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-12-03** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-12-02** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-11-24** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
-See [Development branch](https://github.com/karma4u101/FoBo/tree/develop)
+See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
 
 
-New features in FoBo v1.5-SNAPSHOT
+New features in FoBo v1.5
 ---------------------------
 ###FoBo v1.5 has the following new sub modules
 -   [FoBo-AngularJS UI Grid](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v3.0.7 - [Angular UI Grid](http://ui-grid.info/).
+    A data grid for AngularJS. Native AngularJS implementation, no jQuery. This is the successor of NG Grid (also available via FoBo) 
 
 ###FoBo v1.5 has updates to the following sub modules
--   [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.0.0 - [Angular Material](https://material.angularjs.org/).
+-   [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.0.1 - [Angular Material](https://material.angularjs.org/).
     FoBo adds API integration with the MaterialMegaMetaProtoUser trait that adds Material Design styling to the ProtoUser form views. 
     FoBo also adds a integration of angular material design tosts component with lift messages.
 -   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) Adds v3.3.6 - [Bootstrap 3.x](http://getbootstrap.com/)
 -   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.4.8 - [AngularJS](http://angularjs.org/).
+
 
 New features in FoBo v1.4
 ---------------------------
@@ -60,7 +47,6 @@ New features in FoBo v1.4
 
 ###FoBo v1.4 deprications
 -   Deprecations -- Some long time deprecations has been removed from the build.
-
 
 
 New features in FoBo v1.3
@@ -81,7 +67,6 @@ New features in FoBo v1.3
 
 ###FoBo v1.3 FoBo API updates
 -   Added resource injection snippets to FoBo, AngularJS, Bootstrap 3.x and Bootstrap 2.x see [FoBo API documentation](http://www.media4u101.se/fobo-lift-template-demo/foboapi/index.html#net.liftmodules.FoBo.package) for more information.
-
 
 
 New features in FoBo v1.2
@@ -110,7 +95,6 @@ New features in FoBo v1.2
 -   Deprecations -- FoBo v1.2 adds some sub module deprecations that can be categorized in two different sets
     -    A "normal" deprecation that have one or more alternative sub module that could be uses in place of the deprecated module version without introducing any errors or bugs.
     -    A (couple of) deprecations that is meant to signal that this sub modules is not actively used and there has not been any (pull) requests for/with updates by users of FoBo. If you are a user of such a module you can keep using it as a separate module (FoBoXX.init) or if you feel strongly that deprecation is wrong you can ping me and maybe help out with updates.
-
 
 
 New features in FoBo v1.1
@@ -146,7 +130,6 @@ A live demo showing some of FoBo's Bootstrap v3.x snippet functions is referred 
 A live demo showing some of FoBo's sub module features, including API documentation, can seen at the [FoBo demo](http://www.media4u101.se/fobo-lift-template-demo/)
 
 
-
 ### History log
 ----------------
 
@@ -154,6 +137,15 @@ A live demo showing some of FoBo's sub module features, including API documentat
 
 
 **Updates history:**
+- **2015-12-24** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.1 (removing unreleased v1.0.0)
+- **2015-12-20** -- Module v1.5-SNAPSHOT Adding Angular UI Grid v3.0.7
+- **2015-12-15** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0 (removing rc's)
+- **2015-12-13** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0-rc7
+- **2015-12-03** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0-rc6
+- **2015-12-02** -- Module v1.5-SNAPSHOT Adding Bootstrap v3.3.6
+- **2015-12-02** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0-rc5
+- **2015-11-24** -- Module v1.5-SNAPSHOT Integrating angular material design tosts component with lift messages. 
+- **2015-11-22** -- Module v1.5-SNAPSHOT Adding AngularJS core v1.4.8 
 - **2015-07-28** -- Module v1.4-SNAPSHOT Adding JQuery v2.1.4
 - **2015-07-28** -- Module v1.4-SNAPSHOT Adding Font-Awesome v4.3.0
 - **2015-07-28** -- Module v1.4-SNAPSHOT Adding Bootstrap v3.3.5
@@ -220,6 +212,14 @@ A live demo showing some of FoBo's sub module features, including API documentat
 - **2012-11-10** -- Module v0.7.2-SNAPSHOT Lift 2.5-M3 released to oss.sonatype.org
 
 **Snapshot Release history:**
+- **2015-12-24** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
+- **2015-12-20** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
+- **2015-12-17** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
+- **2015-12-15** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
+- **2015-12-13** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
+- **2015-12-03** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
+- **2015-12-02** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
+- **2015-11-24** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
 - **2015-08-04** -- Module v1.4-SNAPSHOT released for Lift v2.6 and v3.0
 - **2015-07-28** -- Module v1.4-SNAPSHOT released for Lift v2.6 and v3.0
 - **2015-06-21** -- Module v1.4-SNAPSHOT released for Lift v2.6 and v3.0

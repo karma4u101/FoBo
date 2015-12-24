@@ -13,7 +13,7 @@ Components
 - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0]
 - Angular NG-Grid [v2.0.4, v2.0.7]
 - Angular UI-Grid [v3.0.7]
-- Angular Material Design [v0.10.0, v1.0.0]
+- Angular Material Design [v0.10.0, v1.0.1]
 
 
 Contributions
@@ -82,6 +82,7 @@ The example will include a module built for lift 2.6. If you are using maven obs
     FoBo.InitParam.ToolKit=FoBo.AngularJS121      //access to core files 
     FoBo.InitParam.ToolKit=FoBo.AngularJS121i18n   //access to angular i18n files 
     FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap070 //Angular UI Bootstrap
+    FoBo.InitParam.ToolKit=FoBo.AJSMaterial101      //Angular Material
     FoBo.InitParam.ToolKit=FoBo.AJSUIGrid307      //Angular UI-Grid
     FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207      //Angular NG-Grid
     FoBo.init()
@@ -92,6 +93,7 @@ The example will include a module built for lift 2.6. If you are using maven obs
     :
     FoBoAJS.InitParam.ToolKit=FoBoAJS.AngularJS106      //The core files 
     FoBoAJS.InitParam.ToolKit=FoBoAJS.AJSUIBootstrap070 //Angular UI Bootstrap
+    FoBoAJS.InitParam.ToolKit=FoBoAJS.AJSMaterial101    //Angular Material
     FoBoAJS.InitParam.ToolKit=FoBoAJS.AJSUIGrid307      //Angular UI-Grid
     FoBoAJS.InitParam.ToolKit=FoBoAJS.AJSNGGrid207      //Angular NG-Grid
     FoBoAJS.init()
@@ -135,8 +137,9 @@ Core Script files
 Components Css files
 
 - ng-grid.css [v1.2.1, v1.2.2]
-- angular-material.css [v0.10.0,v1.0.0]
-- angular-material.layouts.css [v1.0.0]
+- angular-material.css [v0.10.0,v1.0.1]
+- angular-material.layouts.css [v1.0.1]
+- ui-grid.css [v3.0.7]
 
 
 Components Script files
@@ -144,8 +147,9 @@ Components Script files
 - ui-bootstrap-tpls.js [v0.2.0, v0.7.0]
 - ui-bootstrap.js [v0.2.0, v0.7.0]
 - ng-grid.js [v2.0.4, v2.0.7]
-- angular-material.js [v0.10.0,v1.0.0]
-- angular-material-mocks.js [v1.0.0]
+- ui-grid.js [v3.0.7]
+- angular-material.js [v0.10.0,v1.0.1]
+- angular-material-mocks.js [v1.0.1]
  
 i18n files
 

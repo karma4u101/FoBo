@@ -45,7 +45,7 @@ import common._
  *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component)
  *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component)
  *  - Angular UI-Grid [v3.0.7] (angular component)
- *  - Angular Material design [v0.10.0, v1.0.0] (angular component)
+ *  - Angular Material design [v0.10.0, v1.0.1] (angular component)
  *  
  *  
  * ===Help out!===

@@ -20,13 +20,16 @@ The FoBo module also has a evolving API that includes snippet:s and helper objec
 ####FoBo - Lift starter template
 **Bootstrap** A Lift v2.6 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) is available from here [Lift v2.6 Template Applications](https://github.com/lift/lift_26_sbt/)
 
+**Bootstrap** A Lift v3.0 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) is available from here [Lift v3.0 Template Applications](https://github.com/lift/lift_30_sbt/)
+
+
 If you have ideas and suggestions let us know!
 
 Contributions
 -------------
 Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion to the [Lift's mailing list](http://groups.google.com/group/liftweb/) 
 
-> As FoBo is using this [Git branching model](http://nvie.com/posts/a-successful-git-branching-model/) the **main branch** is just updated for releases so make your pull requests against the [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
+> As FoBo is using this [Git branching model](http://nvie.com/posts/a-successful-git-branching-model/) the **main branch** is just updated for releases so your pull requests will be against the [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 
 ###Updates 
 For a comprehensive list of updates see [Changelog](https://github.com/karma4u101/FoBo/blob/develop/CHANGELOG.md)
