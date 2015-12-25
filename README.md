@@ -7,7 +7,7 @@ FoBo - A Comprehensive Front-End Toolkit Module for Lift
 
 FoBo is a [Lift module](http://liftweb.net/lift_modules) that includes industry leading open source front end toolkits for developing mobile scalable responsive web applications that will jazz up your Lift applications with the toolkit(s) of your choice.
 
-A **live demo** and introduction to using this module including API documentation can be [seen here](http://www.media4u101.se/fobo-lift-template-demo/). 
+A **live demo** and introduction to using this module, including API documentation and links to running examples of starter templates and more, can be seen at the [FoBo Template Demo](http://www.media4u101.se/fobo-lift-template-demo/). 
 
 With this Lift module you will get a hassle free inclusion and smooth upgrades of toolkits, you decide what toolkits and versions to enable.
 The FoBo module is making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot), by simultaneously supporting several versions of the included toolkits and, without code or reference changes, providing debug-able js and css files in development and minimized files otherwise. 
@@ -21,6 +21,8 @@ The FoBo module also has a evolving API that includes snippet:s and helper objec
 **Bootstrap** A Lift v2.6 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) is available from here [Lift v2.6 Template Applications](https://github.com/lift/lift_26_sbt/)
 
 **Bootstrap** A Lift v3.0 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) is available from here [Lift v3.0 Template Applications](https://github.com/lift/lift_30_sbt/)
+
+**Material Design** A Lift v3.0 starter template with FoBo setup using Angular Material and FoBo's MaterialMegaMetaProtoUser (for mapper ProtoUser views) is available from here [FoBo-Demo](https://github.com/karma4u101/FoBo-Demo/)
 
 
 If you have ideas and suggestions let us know!
