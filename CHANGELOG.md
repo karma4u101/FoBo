@@ -25,11 +25,16 @@ New features in FoBo v1.5
 
 ###FoBo v1.5 has updates to the following sub modules
 -   [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.0.1 - [Angular Material](https://material.angularjs.org/).
-    FoBo adds API integration with the MaterialMegaMetaProtoUser trait that adds Material Design styling to the ProtoUser form views. 
-    FoBo also adds a integration of angular material design tosts component with lift messages.
 -   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) Adds v3.3.6 - [Bootstrap 3.x](http://getbootstrap.com/)
 -   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.4.8 - [AngularJS](http://angularjs.org/).
 
+###FoBo v1.5 API updates
+-   FoBo v1.5 adds API integration with the MaterialMegaMetaProtoUser trait that adds Material Design styling to the ProtoUser form views. 
+-   FoBo v1.5 adds a integration of angular material design tosts component with lift messages.
+-   For Lift 3.0 users FoBo has added complementary functions for handling script injection (bootstrap poppover,tooltip,...) and to avoid in-lining. 
+    To aid in supporting a strong CSP (Content Security Policy) with LiftRules.securityRules settings those complementary functions **avoids in-lining** 
+    of javascript by utilizing the Lift page script file's (new feature in Lift 3.0). FoBo API functions that utilize this mechanism has 
+    names that ends with AppendJs or AppendGlobalJs. 
 
 New features in FoBo v1.4
 ---------------------------

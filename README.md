@@ -15,7 +15,7 @@ The FoBo module is making development, maintenance, upgrade and fall-back quick 
 Using this module you will also get a clean separation of the toolkit files and your application specific resources as the module dose not clutter your applications web-app resources directory. 
 
 ####FoBo API
-The FoBo module also has a evolving API that includes snippet:s and helper object:s (see API documents for usage) that will take care of some common toolkit and component initiation and usage, like lift sitemap to bootstrap menu builders, resource injection, script generation and more.
+The FoBo module also has a evolving API that includes snippet:s and helper object:s (see API documents for usage) that will take care of some common toolkit and component initiation and usage, like lift site-map to bootstrap menu builders, resource injection, script generation and more.
 
 ####FoBo - Lift starter template
 **Bootstrap** A Lift v2.6 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) is available from here [Lift v2.6 Template Applications](https://github.com/lift/lift_26_sbt/)
@@ -37,7 +37,7 @@ Improvements, contributions and suggestions are welcome! Please see the [Contrib
 For a comprehensive list of updates see [Changelog](https://github.com/karma4u101/FoBo/blob/develop/CHANGELOG.md)
 
 ###Module names 
-The following is a list of names that can be used in Lift Boot eather pulled in by the FoBo meta module or as stand alone (sub) modules. 
+The following is a list of names that can be used in Lift Boot either pulled in by the FoBo meta module or as stand alone (sub) modules. 
 For more information se respective sub modules readme. 
 
 - BootstrapXYZ 
