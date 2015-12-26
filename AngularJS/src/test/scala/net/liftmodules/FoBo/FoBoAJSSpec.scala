@@ -21,11 +21,14 @@ object FoBoAJSSpec extends Specification  {
     }       
   } 
   
-  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AngularJS141 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/angular.js to fobo/angular-js/1.4.1/js/angular.min.js" in {
-      rewriteAngularJS141 must_== List("fobo", "angular-js", "1.4.1", "js", "angular.min.js")
-    }       
-  }   
+    //Testing two instances of the same toolkit could cause test errors as they are executed in parralell 
+    //Two instances of the same toolkit should never be used in code anyway so removing this test in favour 
+    //for the one above.
+//  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AngularJS141 the ResourceServer.pathRewriter" should {
+//    "rewrit fobo/angular.js to fobo/angular-js/1.4.1/js/angular.min.js" in {
+//      rewriteAngularJS141 must_== List("fobo", "angular-js", "1.4.1", "js", "angular.min.js")
+//    }       
+//  }   
   
   //Angular Material
   "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AJMaterial101 the ResourceServer.pathRewriter" should {
@@ -70,10 +73,10 @@ object FoBoAJSSpec extends Specification  {
   } 
   
   //AngularJS
-  def rewriteAngularJS141 = {
-    FoBoAJS.InitParam.ToolKit=FoBoAJS.AngularJS141
-    ResourceServer.pathRewriter("fobo"::"angular.js"::Nil)
-  }
+//  def rewriteAngularJS141 = {
+//    FoBoAJS.InitParam.ToolKit=FoBoAJS.AngularJS141
+//    ResourceServer.pathRewriter("fobo"::"angular.js"::Nil)
+//  }
   
   def rewriteAngularJS148 = {
     FoBoAJS.InitParam.ToolKit=FoBoAJS.AngularJS148
