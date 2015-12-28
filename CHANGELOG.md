@@ -4,6 +4,7 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/CHANGELOG.md#history-log) section
 
 **Latest Stable Releases:**
+- **2015-12-28** -- Module v1.5
 - **2015-08-09** -- Module v1.4
 - **2014-07-15** -- Module v1.3
 - **2014-03-15** -- Module v1.2
@@ -25,11 +26,15 @@ New features in FoBo v1.5
 
 ###FoBo v1.5 has updates to the following sub modules
 -   [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.0.1 - [Angular Material](https://material.angularjs.org/).
+
 -   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) Adds v3.3.6 - [Bootstrap 3.x](http://getbootstrap.com/)
 -   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.4.8 - [AngularJS](http://angularjs.org/).
+ 
+For a list of already available toolkit versions see respective sub modules README.
+You can see a running demo of a Lift Template application using Material Design [here](http://www.media4u101.se/lift-advanced-md/).
 
 ###FoBo v1.5 API updates
--   FoBo v1.5 adds API integration with the MaterialMegaMetaProtoUser trait that adds Material Design styling to the ProtoUser form views. 
+-   FoBo v1.5 adds API integration with the **MaterialMegaMetaProtoUser** trait that adds Material Design styling to the ProtoUser form views. 
 -   FoBo v1.5 adds a integration of angular material design tosts component with lift messages.
 -   For Lift 3.0 users FoBo has added complementary functions for handling script injection (bootstrap poppover,tooltip,...) and to avoid in-lining. 
     To aid in supporting a strong CSP (Content Security Policy) with LiftRules.securityRules settings those complementary functions **avoids in-lining** 
