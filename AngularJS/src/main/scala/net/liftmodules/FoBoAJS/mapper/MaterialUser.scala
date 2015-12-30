@@ -413,6 +413,7 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
 
   override def loginXhtml = {
     val emailElemId:String = "username" //nextFuncName
+    val lpwPath = if (S.contextPath != "") S.contextPath + lostPasswordPath.mkString("/", "/", "") else lostPasswordPath.mkString("/", "/", "")
     S.appendJs(Focus(emailElemId))
       <md-content layout-padding="" class="autoScroll" >
         <form name="loginForm" role="form" action={ S.uri } method="post">
@@ -427,7 +428,7 @@ trait MaterialMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends K
           </md-input-container>
           <section layout="row" layout-sm="column" layout-align="left center" layout-wrap="">
             <md-button type="submit" class="md-raised md-primary">{ resLoginSubmit }</md-button>
-            <md-button class="md-primary" href={ lostPasswordPath.mkString("/", "/", "") } >{ resLoginLabelRecoverPassword }</md-button>
+            <md-button class="md-primary" href={ lpwPath } >{ resLoginLabelRecoverPassword }</md-button>
           </section>
         </form>
         <div class="lift:Msgs?showAll=true"></div>
