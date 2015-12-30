@@ -4,6 +4,7 @@ Update log
 For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/CHANGELOG.md#history-log) section
 
 **Latest Stable Releases:**
+- **2015-12-30** -- Module v1.5.1
 - **2015-12-28** -- Module v1.5
 - **2015-08-09** -- Module v1.4
 - **2014-07-15** -- Module v1.3
@@ -17,9 +18,13 @@ See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGEL
 **Latest Snapshot Release:**
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
 
+FoBo v1.5.1
+-----------
+###Bug Fixes
+- Missing context in path for recover password link in login form (closes [#60](https://github.com/karma4u101/FoBo/issues/60))
 
-New features in FoBo v1.5
----------------------------
+FoBo v1.5
+---------
 ###FoBo v1.5 has the following new sub modules
 -   [FoBo-AngularJS UI Grid](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v3.0.7 - [Angular UI Grid](http://ui-grid.info/).
     A data grid for AngularJS. Native AngularJS implementation, no jQuery. This is the successor of NG Grid (also available via FoBo) 
@@ -41,8 +46,8 @@ You can see a running demo of a Lift Template application using Material Design 
     of javascript by utilizing the Lift page script file's (new feature in Lift 3.0). FoBo API functions that utilize this mechanism has 
     names that ends with AppendJs or AppendGlobalJs. 
 
-New features in FoBo v1.4
----------------------------
+FoBo v1.4
+---------
 ###FoBo v1.4 has the following new sub modules
 -   [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v0.10.0 - [Angular Material](https://material.angularjs.org/).
     The Angular Material project is an implementation of Material Design in Angular.js. This project provides a set of reusable, well-tested, and accessible UI components based on the Material Design system.
@@ -59,8 +64,8 @@ New features in FoBo v1.4
 -   Deprecations -- Some long time deprecations has been removed from the build.
 
 
-New features in FoBo v1.3
----------------------------
+FoBo v1.3
+---------
 
 ###FoBo v1.3 has the following new sub modules
 -   [KineticJS](https://github.com/karma4u101/FoBo/tree/master/KineticJS) v5.1.0 - See [KineticJS](http://kineticjs.com/) 
@@ -79,8 +84,8 @@ New features in FoBo v1.3
 -   Added resource injection snippets to FoBo, AngularJS, Bootstrap 3.x and Bootstrap 2.x see [FoBo API documentation](http://www.media4u101.se/fobo-lift-template-demo/foboapi/index.html#net.liftmodules.FoBo.package) for more information.
 
 
-New features in FoBo v1.2
----------------------------
+FoBo v1.2
+---------
 
 ###FoBo v1.2 has the following new sub modules
 -   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) [v0.4.15] - See [Pace](http://github.hubspot.com/pace/docs/welcome/) 
@@ -107,8 +112,8 @@ New features in FoBo v1.2
     -    A (couple of) deprecations that is meant to signal that this sub modules is not actively used and there has not been any (pull) requests for/with updates by users of FoBo. If you are a user of such a module you can keep using it as a separate module (FoBoXX.init) or if you feel strongly that deprecation is wrong you can ping me and maybe help out with updates.
 
 
-New features in FoBo v1.1
----------------------------
+FoBo v1.1
+---------
 
 ###FoBo v1.1 has the following new sub modules
 

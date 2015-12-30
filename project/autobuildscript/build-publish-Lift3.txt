@@ -1,6 +1,6 @@
 alias pub=publish-signed
 
-set version       in ThisBuild:="1.5"
+set version       in ThisBuild:="1.5.1"
 
 set liftVersion   in ThisBuild:="3.0-SNAPSHOT"
 set scalaVersion  in ThisBuild:="2.11.4"
