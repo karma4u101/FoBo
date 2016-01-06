@@ -15,20 +15,21 @@ import common._
  */
 package object FoBoAJS {
 
+  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoAJS.InitParam","1.6.0")
   def init() {
-    LiftRules.addToPackages("net.liftmodules.FoBoAJS")
-    ResourceServer.allow {
-      case "fobo" :: tail => true
-    }
+//    LiftRules.addToPackages("net.liftmodules.FoBoAJS")
+//    ResourceServer.allow {
+//      case "fobo" :: tail => true
+//    }
   }
 
-  abstract trait AJSToolkit
+  abstract sealed trait FoBoToolkit
 
   /**
    *
    */
-  object InitParam extends AJSToolkit {
-    var ToolKit: AJSToolkit = null 
+  object InitParam extends FoBoToolkit {
+    var ToolKit: FoBoToolkit = null 
   }
  
   /**
@@ -42,8 +43,10 @@ package object FoBoAJS {
    * }}}
    *
    */
-  case object AngularJS148 extends AJSToolkit {
-    AJSFoBoResources.angularjs148
+  case object AngularJS148 extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init    
+    FoBoResources.angularjs148
   } 
   
     /**
@@ -57,11 +60,13 @@ package object FoBoAJS {
    * }}}
    *
    */
-  case object AngularJS148i18n extends AJSToolkit {
-    AJSFoBoResources.angularjs148i18n
-    AJSFoBoResources.angularjs148i18n2
-    AJSFoBoResources.angularjs148i18n3
-    AJSFoBoResources.angularjs148i18n4
+  case object AngularJS148i18n extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init 
+    FoBoResources.angularjs148i18n
+    FoBoResources.angularjs148i18n2
+    FoBoResources.angularjs148i18n3
+    FoBoResources.angularjs148i18n4
   } 
   
   
@@ -76,8 +81,10 @@ package object FoBoAJS {
    * }}}
    *
    */
-  case object AngularJS141 extends AJSToolkit {
-    AJSFoBoResources.angularjs141
+  case object AngularJS141 extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init 
+    FoBoResources.angularjs141
   } 
   
     /**
@@ -91,11 +98,13 @@ package object FoBoAJS {
    * }}}
    *
    */
-  case object AngularJS141i18n extends AJSToolkit {
-    AJSFoBoResources.angularjs141i18n
-    AJSFoBoResources.angularjs141i18n2
-    AJSFoBoResources.angularjs141i18n3
-    AJSFoBoResources.angularjs141i18n4
+  case object AngularJS141i18n extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init     
+    FoBoResources.angularjs141i18n
+    FoBoResources.angularjs141i18n2
+    FoBoResources.angularjs141i18n3
+    FoBoResources.angularjs141i18n4
   } 
    
   /**
@@ -109,8 +118,10 @@ package object FoBoAJS {
    * }}}
    *
    */
-  case object AngularJS1315 extends AJSToolkit {
-    AJSFoBoResources.angularjs1315
+  case object AngularJS1315 extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init 
+    FoBoResources.angularjs1315
   } 
   
    /**
@@ -124,11 +135,13 @@ package object FoBoAJS {
    * }}}
    *
    */
-  case object AngularJS1315i18n extends AJSToolkit {
-    AJSFoBoResources.angularjs1315i18n
-    AJSFoBoResources.angularjs1315i18n2
-    AJSFoBoResources.angularjs1315i18n3
-    AJSFoBoResources.angularjs1315i18n4
+  case object AngularJS1315i18n extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init 
+    FoBoResources.angularjs1315i18n
+    FoBoResources.angularjs1315i18n2
+    FoBoResources.angularjs1315i18n3
+    FoBoResources.angularjs1315i18n4
   }   
   
   
@@ -143,8 +156,10 @@ package object FoBoAJS {
    * }}}
    *
    */
-  case object AngularJS1219 extends AJSToolkit {
-    AJSFoBoResources.angularjs1219
+  case object AngularJS1219 extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init 
+    FoBoResources.angularjs1219
   } 
   
    /**
@@ -158,9 +173,11 @@ package object FoBoAJS {
    * }}}
    *
    */
-  case object AngularJS1219i18n extends AJSToolkit {
-    AJSFoBoResources.angularjs1219i18n
-    AJSFoBoResources.angularjs1219i18n2
+  case object AngularJS1219i18n extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init 
+    FoBoResources.angularjs1219i18n
+    FoBoResources.angularjs1219i18n2
    
   } 
   
@@ -176,8 +193,10 @@ package object FoBoAJS {
    *
    */
   @deprecated("Use AngularJS1219 or later","1.3.0")
-  case object AngularJS1211 extends AJSToolkit {
-    AJSFoBoResources.angularjs1211
+  case object AngularJS1211 extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init 
+    FoBoResources.angularjs1211
   } 
   
    /**
@@ -192,8 +211,10 @@ package object FoBoAJS {
    *
    */
   @deprecated("Use AngularJS1219i18n or later","1.3.0")
-  case object AngularJS1211i18n extends AJSToolkit {
-    AJSFoBoResources.angularjs1211i18n
+  case object AngularJS1211i18n extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init 
+    FoBoResources.angularjs1211i18n
   } 
   
   
@@ -209,8 +230,10 @@ package object FoBoAJS {
    *
    */
   @deprecated("Use AJMaterial101 or later","1.5.0")
-  case object AJMaterial0100 extends AJSToolkit {
-    AJSFoBoResources.AJMaterial0100
+  case object AJMaterial0100 extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init 
+    FoBoResources.AJMaterial0100
   }
   
 
@@ -225,8 +248,10 @@ package object FoBoAJS {
    * }}}
    *
    */
-  case object AJMaterial101 extends AJSToolkit {
-    AJSFoBoResources.AJMaterial101
+  case object AJMaterial101 extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init 
+    FoBoResources.AJMaterial101
   }  
   
    /**
@@ -240,8 +265,10 @@ package object FoBoAJS {
    * }}}
    *
    */
-  case object AJSUIBootstrap0100 extends AJSToolkit {
-    AJSFoBoResources.uibootstrap0100
+  case object AJSUIBootstrap0100 extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init 
+    FoBoResources.uibootstrap0100
   }   
   
   /**
@@ -255,8 +282,10 @@ package object FoBoAJS {
    * }}}
    *
    */
-  case object AJSUIBootstrap070 extends AJSToolkit {
-    AJSFoBoResources.uibootstrap070
+  case object AJSUIBootstrap070 extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init 
+    FoBoResources.uibootstrap070
   }   
 
   /**
@@ -270,8 +299,10 @@ package object FoBoAJS {
    * }}}
    *
    */
-  case object AJSUIBootstrap020 extends AJSToolkit {
-    AJSFoBoResources.uibootstrap020
+  case object AJSUIBootstrap020 extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init     
+    FoBoResources.uibootstrap020
   }   
  
   /**
@@ -285,8 +316,10 @@ package object FoBoAJS {
    * }}}
    *
    */
-  case object AJSNGGrid207 extends AJSToolkit {
-    AJSFoBoResources.nggrid207
+  case object AJSNGGrid207 extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init     
+    FoBoResources.nggrid207
   }
   
   /**
@@ -300,15 +333,29 @@ package object FoBoAJS {
    * }}}
    *
    */
-  case object AJSUIGrid307 extends AJSToolkit {
-    AJSFoBoResources.uigrid307
+  case object AJSUIGrid307 extends FoBoToolkit {
+    FoBoAPI.init
+    FoBoResources.init     
+    FoBoResources.uigrid307
   }  
    
+  
+  private object FoBoAPI {
+    lazy val init: Unit = {
+      LiftRules.addToPackages("net.liftmodules.FoBoAJS")  
+    }
+  }   
   /**
    * Object holding internally used FoBo resources.
    */
-  private object AJSFoBoResources {
+  private object FoBoResources {
 
+    lazy val init: Unit = {
+      ResourceServer.allow {
+        case "fobo" :: tail => true
+      }
+    }
+      
     lazy val angularjs148 = {
       ResourceServer.rewrite {
         case "fobo" :: "angular.js" :: Nil if Props.devMode => List("fobo", "angular-js", "1.4.8", "js", "angular.js")

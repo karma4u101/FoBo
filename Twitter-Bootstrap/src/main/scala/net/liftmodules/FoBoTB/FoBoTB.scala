@@ -25,16 +25,17 @@ package object FoBoTB {
    * The above example just calls init without specifying fobo init 
    * params so default Toolkit and JQuery values will be used. 
    */
+  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoTB.InitParam","1.6.0")
   def init() {
-    LiftRules.addToPackages("net.liftmodules.FoBoTB")
-    ResourceServer.allow {
-      case "fobo" :: tail => true
-    }
+//    LiftRules.addToPackages("net.liftmodules.FoBoTB")
+//    ResourceServer.allow {
+//      case "fobo" :: tail => true
+//    }
   }
 
 
-abstract trait FoBoJQuery
-abstract trait FoBoToolkit
+//abstract trait FoBoJQuery
+abstract sealed trait FoBoToolkit
 
 /**
  * Extends your Lift SiteMap with various common bootstrap menu manipulations such 
@@ -131,7 +132,7 @@ object TBLocInfo {
  * This example uses the Bootstrap v2.3.2 option.  
  *   
  */
-object InitParam extends FoBoToolkit with FoBoJQuery {
+object InitParam extends FoBoToolkit /*with FoBoJQuery*/ {
   var ToolKit: FoBoToolkit = null //Bootstrap222
 }
 
@@ -146,14 +147,28 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  */
 case object Bootstrap232 extends FoBoToolkit {
+  FoBoAPI.init
+  FoBoResources.init   
   FoBoResources.bootstrap232
 }
+
+private object FoBoAPI {
+  lazy val init: Unit = {
+    LiftRules.addToPackages("net.liftmodules.FoBoAJS")  
+  }
+}  
 
 /**
  * Object holding internally used FoBo resources. 
  */
 private object FoBoResources { 
 
+  lazy val init: Unit = {
+    ResourceServer.allow {
+      case "fobo" :: tail => true
+    }
+  }
+    
   lazy val bootstrap232: Unit = {
     ResourceServer.rewrite {
       case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","2.3.2", "css", "bootstrap.css")

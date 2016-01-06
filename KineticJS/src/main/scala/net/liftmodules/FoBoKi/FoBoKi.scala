@@ -15,14 +15,15 @@ import common._
  */
 package object FoBoKi {
 
+  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoKi.InitParam","1.6.0")
   def init() {
-    LiftRules.addToPackages("net.liftmodules.FoBoKi")
-    ResourceServer.allow {
-      case "fobo" :: tail => true
-    }
+//    LiftRules.addToPackages("net.liftmodules.FoBoKi")
+//    ResourceServer.allow {
+//      case "fobo" :: tail => true
+//    }
   }
 
-  abstract trait KiToolkit
+  abstract sealed trait KiToolkit
 
   /**
    *
@@ -43,28 +44,41 @@ package object FoBoKi {
  * }}}
  * @since v1.3
  */
-case object KineticJS510 extends KiToolkit {
-   KiFoBoResources.KineticJS510
-}
+  case object KineticJS510 extends KiToolkit {
+    FoBoResources.init
+    FoBoResources.KineticJS510
+  }
 
 
-
-  /**
-   * Object holding internally used FoBo resources.
-   */
-  private object KiFoBoResources {
-
-  lazy val KineticJS510: Unit = {
-    ResourceServer.rewrite {
-      case "fobo" :: "kinetic.js" :: Nil if Props.devMode => List("fobo", "kinetic", "5.1.0", "js", "kinetic.js")
-      case "fobo" :: "kinetic.js" :: Nil => List("fobo", "kinetic", "5.1.0", "js", "kinetic.min.js")             
-      
-         
+/**
+ * Object for initiating FoBo API packages. 
+ */
+  private object FoBoAPI {
+    lazy val init: Unit = {
+      LiftRules.addToPackages("net.liftmodules.FoBoKi")  
     }
   }
   
+  /**
+   * Object holding internally used FoBo resources.
+   */
+  private object FoBoResources {
 
+    lazy val init: Unit = {
+      ResourceServer.allow {
+        case "fobo" :: tail => true
+      }
+    }
+  
+    lazy val KineticJS510: Unit = {
+      ResourceServer.rewrite {
+        case "fobo" :: "kinetic.js" :: Nil if Props.devMode => List("fobo", "kinetic", "5.1.0", "js", "kinetic.js")
+        case "fobo" :: "kinetic.js" :: Nil => List("fobo", "kinetic", "5.1.0", "js", "kinetic.min.js")                
+      }
+    }
+ 
   }
+  
 }
 
 

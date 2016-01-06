@@ -25,16 +25,18 @@ package object FoBoBs {
    * The above example just calls init without specifying fobo init 
    * params so default Toolkit and JQuery values will be used. 
    */
-  def init() {
-    LiftRules.addToPackages("net.liftmodules.FoBoBs")
-    ResourceServer.allow {
-      case "fobo" :: tail => true
-    }
+  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoBs.InitParam","1.6.0")
+  def init():Unit = {
+//    FoBoAPI.setup
+//    FoBoResources.setup
+//    ResourceServer.allow {
+//      case "fobo" :: tail => true
+//    }
   }
 
 
-abstract trait FoBoJQuery
-abstract trait FoBoToolkit
+//abstract trait FoBoJQuery
+abstract sealed trait FoBoToolkit
 
 /**
  * Extends your Lift SiteMap with various common bootstrap menu manipulations such 
@@ -132,7 +134,7 @@ object BSLocInfo {
  * This example uses the Bootstrap v3.0.1 option.  
  *   
  */
-object InitParam extends FoBoToolkit with FoBoJQuery {
+object InitParam extends FoBoToolkit /*with FoBoJQuery*/ {
   var ToolKit: FoBoToolkit = null 
 }
 
@@ -148,6 +150,8 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * @since v1.5
  */
 case object Bootstrap336 extends FoBoToolkit {
+  FoBoAPI.init
+  FoBoResources.init
   FoBoResources.bootstrap336
 }
 
@@ -164,6 +168,8 @@ case object Bootstrap336 extends FoBoToolkit {
  */
 @deprecated("Use Bootstrap336 or later","1.5.0")
 case object Bootstrap335 extends FoBoToolkit {
+  FoBoAPI.init
+  FoBoResources.init
   FoBoResources.bootstrap335
 }
 
@@ -178,6 +184,8 @@ case object Bootstrap335 extends FoBoToolkit {
  * }}}
  */
 case object Bootstrap320 extends FoBoToolkit {
+  FoBoAPI.init
+  FoBoResources.init
   FoBoResources.bootstrap320
 }
 
@@ -192,6 +200,8 @@ case object Bootstrap320 extends FoBoToolkit {
  * }}}
  */
 case object Bootstrap311 extends FoBoToolkit {
+  FoBoAPI.init
+  FoBoResources.init
   FoBoResources.bootstrap311
 }
 
@@ -207,16 +217,28 @@ case object Bootstrap311 extends FoBoToolkit {
  * }}}
  */
 case object Bootstrap301 extends FoBoToolkit {
+  FoBoAPI.init
+  FoBoResources.init  
   FoBoResources.bootstrap301
 }
 
 
+private object FoBoAPI {
+  lazy val init: Unit = {
+    LiftRules.addToPackages("net.liftmodules.FoBoBs")  
+  }
+}
 
 /**
  * Object holding internally used FoBo resources. 
  */
 private object FoBoResources { 
 
+  lazy val init: Unit = {
+    ResourceServer.allow {
+      case "fobo" :: tail => true
+    }
+  }
   
   lazy val bootstrap336: Unit = {
     ResourceServer.rewrite {

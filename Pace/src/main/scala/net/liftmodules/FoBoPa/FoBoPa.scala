@@ -15,14 +15,15 @@ import common._
  */
 package object FoBoPa {
 
+  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoPa.InitParam","1.6.0")
   def init() {
-    LiftRules.addToPackages("net.liftmodules.FoBoPa")
-    ResourceServer.allow {
-      case "fobo" :: tail => true
-    }
+//    LiftRules.addToPackages("net.liftmodules.FoBoPa")
+//    ResourceServer.allow {
+//      case "fobo" :: tail => true
+//    }
   }
 
-  abstract trait PaToolkit
+  abstract sealed trait PaToolkit
 
   /**
    *
@@ -30,31 +31,44 @@ package object FoBoPa {
   object InitParam extends PaToolkit {
     var ToolKit: PaToolkit = null 
   }
-
   
-/**
- * Enable usage of Pace version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
- * @version 0.4.15
- * 
- * '''Example:'''
- * 
- * {{{
- *   FoBoPa.InitParam.Toolkit=FoBoPa.Pace0415
- * }}}
- */
-case object Pace0415 extends PaToolkit {
-   PaFoBoResources.Pace0415
-}
+ /**
+  * Enable usage of Pace version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
+  * @version 0.4.15
+  * 
+  * '''Example:'''
+  * 
+  * {{{
+  *   FoBoPa.InitParam.Toolkit=FoBoPa.Pace0415
+  * }}}
+  */
+  case object Pace0415 extends PaToolkit {
+    FoBoResources.init
+    FoBoResources.Pace0415
+  }
 
-
+  /**
+   * Object for initiating FoBo API packages. 
+   */
+  private object FoBoAPI {
+    lazy val init: Unit = {
+      LiftRules.addToPackages("net.liftmodules.FoBoPa")  
+    }
+  }
 
   /**
    * Object holding internally used FoBo resources.
    */
-  private object PaFoBoResources {
+  private object FoBoResources {
 
-  lazy val Pace0415: Unit = {
-    ResourceServer.rewrite {
+    lazy val init: Unit = {
+      ResourceServer.allow {
+        case "fobo" :: tail => true
+      }
+    }
+    
+    lazy val Pace0415: Unit = {    
+      ResourceServer.rewrite {
 
       case "fobo" :: "pace.js" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "js", "pace.js")
       case "fobo" :: "pace.js" :: Nil => List("fobo", "pace", "0.4.15", "js", "pace.min.js")             
@@ -95,10 +109,9 @@ case object Pace0415 extends PaToolkit {
       case "fobo" :: "pace-theme-minimal-red.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-minimal-red.css")
       case "fobo" :: "pace-theme-minimal-red.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-minimal-red-min.css")
            
+      }
     }
-  }
   
-
   }
 }
 

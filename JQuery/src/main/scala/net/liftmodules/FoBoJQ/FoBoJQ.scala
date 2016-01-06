@@ -23,7 +23,7 @@ package object FoBoJQ {
   }
 
  
-  abstract trait FoBoJQ
+  abstract sealed trait FoBoJQ
 
   /**
    *
@@ -45,7 +45,8 @@ package object FoBoJQ {
    * @since v1.3
    */
   case object JQueryMigrate121 extends FoBoJQ {
-    JQFoBoResources.jqueryMigrate121
+    FoBoResources.init
+    FoBoResources.jqueryMigrate121
   }  
 
   
@@ -62,7 +63,8 @@ package object FoBoJQ {
    * @since v1.3
    */
 case object JQuery214 extends FoBoJQ {
-  JQFoBoResources.jquery214
+  FoBoResources.init
+  FoBoResources.jquery214
 }
 
   /**
@@ -78,7 +80,8 @@ case object JQuery214 extends FoBoJQ {
    * @since v1.3
    */
 case object JQuery211 extends FoBoJQ {
-  JQFoBoResources.jquery211
+  FoBoResources.init
+  FoBoResources.jquery211
 } 
 
 
@@ -94,7 +97,8 @@ case object JQuery211 extends FoBoJQ {
  * @since v1.4 
  */
 case object JQuery1113 extends FoBoJQ {
-  JQFoBoResources.jquery1113
+  FoBoResources.init
+  FoBoResources.jquery1113
 }
 
 /**
@@ -110,7 +114,8 @@ case object JQuery1113 extends FoBoJQ {
  */
 @deprecated("Use v1.11.3 or later","1.4") 
 case object JQuery1111 extends FoBoJQ {
-  JQFoBoResources.jquery1111
+  FoBoResources.init
+  FoBoResources.jquery1111
 }
 
 /**
@@ -126,7 +131,8 @@ case object JQuery1111 extends FoBoJQ {
  */
 @deprecated("Use v1.11.1 or later","1.3")  
 case object JQuery1110 extends FoBoJQ {
-  JQFoBoResources.jquery1110
+  FoBoResources.init
+  FoBoResources.jquery1110
 }
 
 /**
@@ -140,7 +146,8 @@ case object JQuery1110 extends FoBoJQ {
  * }}}
  */
 case object JQuery1102 extends FoBoJQ {
-  JQFoBoResources.jquery1102
+  FoBoResources.init
+  FoBoResources.jquery1102
 }
 
 /**
@@ -154,7 +161,8 @@ case object JQuery1102 extends FoBoJQ {
  * }}}
  */
 case object JQuery191 extends FoBoJQ {
-  JQFoBoResources.jquery191
+  FoBoResources.init
+  FoBoResources.jquery191
 }  
   
 /**
@@ -168,7 +176,8 @@ case object JQuery191 extends FoBoJQ {
  * }}}
  */
 case object JQuery182 extends FoBoJQ {
-  JQFoBoResources.jquery182
+  FoBoResources.init
+  FoBoResources.jquery182
 }
 
 /**
@@ -182,14 +191,22 @@ case object JQuery182 extends FoBoJQ {
  * }}}
  */
 case object JQuery172 extends FoBoJQ {
-  JQFoBoResources.jquery172
+  FoBoResources.init
+  FoBoResources.jquery172
 }
+
 
   /**
    * Object holding internally used FoBo resources.
    */
-  private object JQFoBoResources {
+private object FoBoResources {
 
+  lazy val init: Unit = {
+    ResourceServer.allow {
+      case "fobo" :: tail => true
+    }
+  }
+  
   lazy val jqueryMigrate121 = {
     ResourceServer.rewrite {
       case "fobo" :: "jquery-migrate.js" :: Nil if Props.devMode => List("jquery-migrate", "1.2.1", "js", "jquery-migrate.js")

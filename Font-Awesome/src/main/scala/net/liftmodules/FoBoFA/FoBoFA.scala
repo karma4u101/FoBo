@@ -15,20 +15,21 @@ import common._
  */
 package object FoBoFA {
 
+    @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoFA.InitParam","1.6.0")
     def init() {
-      LiftRules.addToPackages("net.liftmodules.FoBoFA")
-      ResourceServer.allow {
-        case "fobo" :: tail => true
-      }
+//      LiftRules.addToPackages("net.liftmodules.FoBoFA")
+//      ResourceServer.allow {
+//        case "fobo" :: tail => true
+//      }
     }
 
-    abstract trait FAToolkit
+    abstract sealed trait FAToolkit
 
     /**
      *
      */
     object InitParam extends FAToolkit {
-      var ToolKit: FAToolkit = null //FontAwesome200
+      var ToolKit: FAToolkit = null 
     }
 
     
@@ -44,7 +45,8 @@ package object FoBoFA {
      * @since v1.4
      */
     case object FontAwesome430 extends FAToolkit {
-      FAResources.fontAwesome430
+      FoBoResources.init
+      FoBoResources.fontAwesome430
     }    
     
      /**
@@ -59,7 +61,8 @@ package object FoBoFA {
      * @since v1.3
      */
     case object FontAwesome410 extends FAToolkit {
-      FAResources.fontAwesome410
+      FoBoResources.init
+      FoBoResources.fontAwesome410
     }     
     
      /**
@@ -74,7 +77,8 @@ package object FoBoFA {
      * @since v1.2
      */
     case object FontAwesome403 extends FAToolkit {
-      FAResources.fontAwesome403
+      FoBoResources.init
+      FoBoResources.fontAwesome403
     } 
       
     
@@ -90,15 +94,30 @@ package object FoBoFA {
      *
      */
     case object FontAwesome321 extends FAToolkit {
-      FAResources.fontAwesome321
+      FoBoResources.init
+      FoBoResources.fontAwesome321
     }
         
+    /**
+     * Object for initiating FoBo API packages. 
+     */
+    private object FoBoAPI {
+      lazy val init: Unit = {
+        LiftRules.addToPackages("net.liftmodules.FoBoFA")  
+      }
+    }    
     
     /**
      * Object holding internally used FoBo resources.
      */
-    private object FAResources {
+    private object FoBoResources {
 
+      lazy val init: Unit = {
+        ResourceServer.allow {
+          case "fobo" :: tail => true
+        }
+      }      
+      
       lazy val fontAwesome430 = {
         ResourceServer.rewrite {
           case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "4.3.0", "css", "font-awesome.css")

@@ -92,23 +92,24 @@ package object FoBo {
    *    FoBo.init()
    * }}}
    */
+  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBo.InitParam","1.6.0")
   def init() {
     //add packages for modules with snippets 
-    LiftRules.addToPackages("net.liftmodules.FoBo")
+    //LiftRules.addToPackages("net.liftmodules.FoBo")
     //the rest of the packages could probably 
     //be moved into it's respective case objects.
-    LiftRules.addToPackages("net.liftmodules.FoBoAJS")
-    LiftRules.addToPackages("net.liftmodules.FoBoBs")
-    LiftRules.addToPackages("net.liftmodules.FoBoTB")
+    //LiftRules.addToPackages("net.liftmodules.FoBoAJS")
+    //LiftRules.addToPackages("net.liftmodules.FoBoBs")
+    //LiftRules.addToPackages("net.liftmodules.FoBoTB")
     
-    ResourceServer.allow {
-      case "fobo" :: tail => true
-    }
+//    ResourceServer.allow {
+//      case "fobo" :: tail => true
+//    }
   }
 
 
-abstract trait FoBoJQuery
-abstract trait FoBoToolkit
+abstract sealed trait FoBoJQuery
+abstract sealed trait FoBoToolkit
 
 /**
  * Extends your Lift SiteMap with various common bootstrap menu manipulations such 
@@ -243,6 +244,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * @since v1.3
    */
   case object KineticJS510 extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoKi.KineticJS510
   }
   
@@ -259,6 +261,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * @since v1.2
    */
   case object Pace0415 extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoPa.Pace0415
   }
 
@@ -276,6 +279,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * @since v1.5
    */  
   case object AngularJS148 extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AngularJS148
   }  
   
@@ -291,6 +295,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * @since v1.5
    */
   case object AngularJS148i18n extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AngularJS148i18n
   } 
   
@@ -308,6 +313,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * @since v1.4
    */       
   case object AngularJS141 extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AngularJS141
   }
   
@@ -323,6 +329,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * @since v1.4
    */
   case object AngularJS141i18n extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AngularJS141i18n
   }
   
@@ -341,6 +348,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * @since v1.4
    */
   case object AngularJS1315 extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AngularJS1315
   }
   
@@ -356,6 +364,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * @since v1.4
    */
   case object AngularJS1315i18n extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AngularJS1315i18n
   }    
   
@@ -373,6 +382,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * @since v1.3
    */
   case object AngularJS1219 extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AngularJS1219
   }
   
@@ -388,6 +398,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * @since v1.3
    */
   case object AngularJS1219i18n extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AngularJS1219i18n
   }   
   
@@ -406,6 +417,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    */
   @deprecated("Use AngularJS1219 or later","1.3.0")
   case object AngularJS1211 extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AngularJS1211
   }
   
@@ -422,6 +434,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    */
   @deprecated("Use AngularJS1219i18n or later","1.3.0")
   case object AngularJS1211i18n extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AngularJS1211i18n
   } 
   
@@ -437,6 +450,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * @since v1.5
    */  
   case object AJMaterial101 extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AJMaterial101
   }
   
@@ -453,6 +467,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    */  
   @deprecated("Use AJMaterial101 or later","1.5.0")
   case object AJMaterial0100 extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AJMaterial0100
   } 
   
@@ -468,6 +483,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * @since v1.2
    */
   case object AJSUIBootstrap0100 extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AJSUIBootstrap0100
   }  
   
@@ -483,6 +499,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * @since v1.2
    */
   case object AJSUIBootstrap070 extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AJSUIBootstrap070
   }   
 
@@ -498,6 +515,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * @since v1.0
    */
   case object AJSUIBootstrap020 extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AJSUIBootstrap020
   }   
  
@@ -514,6 +532,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * @since v1.2
    */
   case object AJSNGGrid207 extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AJSNGGrid207
   } 
   
@@ -529,6 +548,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * @since v1.5
    */
   case object AJSUIGrid307 extends FoBoToolkit {
+    FoBoAPI.init
     net.liftmodules.FoBoAJS.AJSUIGrid307
   }   
 
@@ -543,9 +563,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  * @since v0.7
  */
-case object PrettifyJun2011 extends FoBoToolkit {
-   net.liftmodules.FoBoGCP.PrettifyJun2011
-}
+  case object PrettifyJun2011 extends FoBoToolkit {
+    FoBoAPI.init
+    net.liftmodules.FoBoGCP.PrettifyJun2011
+  }
 
    /**
    * Enable usage of JQuery-migrate version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
@@ -606,9 +627,9 @@ case object PrettifyJun2011 extends FoBoToolkit {
  * }}}
  * @since v1.4
  */
-case object JQuery1113 extends FoBoJQuery {
-  net.liftmodules.FoBoJQ.JQuery1113
-}
+  case object JQuery1113 extends FoBoJQuery {
+    net.liftmodules.FoBoJQ.JQuery1113
+  }
 
 /**
  * Enable usage of JQuery version 1&#8228;11&#8228;1 in your bootstrap liftweb Boot.
@@ -621,12 +642,12 @@ case object JQuery1113 extends FoBoJQuery {
  * }}}
  * @since v1.3
  */
-@deprecated("Use v1.11.3 or later","1.4") 
-case object JQuery1111 extends FoBoJQuery {
-  net.liftmodules.FoBoJQ.JQuery1111
-}
+  @deprecated("Use v1.11.3 or later","1.4") 
+  case object JQuery1111 extends FoBoJQuery {
+    net.liftmodules.FoBoJQ.JQuery1111
+  }
 
-/**
+ /**
  * Enable usage of JQuery version 1&#8228;11&#8228;0 in your bootstrap liftweb Boot.
  * @version 1.11.0
  * 
@@ -637,12 +658,12 @@ case object JQuery1111 extends FoBoJQuery {
  * }}}
  * @since v1.2
  */
-@deprecated("Use v1.11.1 or later","1.3") 
-case object JQuery1110 extends FoBoJQuery {
-  net.liftmodules.FoBoJQ.JQuery1110
-}
+  @deprecated("Use v1.11.1 or later","1.3") 
+  case object JQuery1110 extends FoBoJQuery {
+    net.liftmodules.FoBoJQ.JQuery1110
+  }
 
-/**
+ /**
  * Enable usage of JQuery version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.
  * @version 1.10.2
  * 
@@ -653,9 +674,9 @@ case object JQuery1110 extends FoBoJQuery {
  * }}}
  * @since v1.1
  */
-case object JQuery1102 extends FoBoJQuery {
-  net.liftmodules.FoBoJQ.JQuery1102
-}
+  case object JQuery1102 extends FoBoJQuery {
+    net.liftmodules.FoBoJQ.JQuery1102
+  }
 
 /**
  * Enable usage of JQuery version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.
@@ -668,9 +689,9 @@ case object JQuery1102 extends FoBoJQuery {
  * }}}
  * @since v1.0
  */
-case object JQuery191 extends FoBoJQuery {
-  net.liftmodules.FoBoJQ.JQuery191
-}
+  case object JQuery191 extends FoBoJQuery {
+    net.liftmodules.FoBoJQ.JQuery191 
+  }
 
 /**
  * Enable usage of JQuery version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.
@@ -683,9 +704,9 @@ case object JQuery191 extends FoBoJQuery {
  * }}}
  * @since v0.7
  */
-case object JQuery182 extends FoBoJQuery {
-  net.liftmodules.FoBoJQ.JQuery182
-}
+  case object JQuery182 extends FoBoJQuery {
+    net.liftmodules.FoBoJQ.JQuery182
+  }
 
 /**
  * Enable usage of JQuery version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.
@@ -698,9 +719,9 @@ case object JQuery182 extends FoBoJQuery {
  * }}}
  * @since v0.7
  */
-case object JQuery172 extends FoBoJQuery {
-  net.liftmodules.FoBoJQ.JQuery172
-}
+  case object JQuery172 extends FoBoJQuery {
+    net.liftmodules.FoBoJQ.JQuery172
+  }
 
 /**
  * Enable usage of Font-Awesome version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
@@ -713,9 +734,10 @@ case object JQuery172 extends FoBoJQuery {
  * }}}
  * @since v1.4 
  */
-case object FontAwesome430 extends FoBoToolkit {
-  net.liftmodules.FoBoFA.FontAwesome430
-}
+  case object FontAwesome430 extends FoBoToolkit {
+    FoBoAPI.init
+    net.liftmodules.FoBoFA.FontAwesome430
+  }
 
 
 /**
@@ -729,9 +751,10 @@ case object FontAwesome430 extends FoBoToolkit {
  * }}}
  * @since v1.3 
  */
-case object FontAwesome410 extends FoBoToolkit {
-  net.liftmodules.FoBoFA.FontAwesome410
-}
+  case object FontAwesome410 extends FoBoToolkit {
+    FoBoAPI.init
+    net.liftmodules.FoBoFA.FontAwesome410
+  }
 
 /**
  * Enable usage of Font-Awesome version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.
@@ -744,9 +767,10 @@ case object FontAwesome410 extends FoBoToolkit {
  * }}}
  * @since v1.2 
  */
-case object FontAwesome403 extends FoBoToolkit {
-  net.liftmodules.FoBoFA.FontAwesome403
-}
+  case object FontAwesome403 extends FoBoToolkit {
+    FoBoAPI.init
+    net.liftmodules.FoBoFA.FontAwesome403
+  }
 
 
 /**
@@ -760,9 +784,10 @@ case object FontAwesome403 extends FoBoToolkit {
  * }}}
  * @since v1.0 
  */
-case object FontAwesome321 extends FoBoToolkit {
-  net.liftmodules.FoBoFA.FontAwesome321
-}
+  case object FontAwesome321 extends FoBoToolkit {
+    FoBoAPI.init
+    net.liftmodules.FoBoFA.FontAwesome321
+  }
 
 
 /**
@@ -776,9 +801,10 @@ case object FontAwesome321 extends FoBoToolkit {
  * }}}
  * @since v1.1
  */
-case object Bootstrap232 extends FoBoToolkit {
-  net.liftmodules.FoBoTB.Bootstrap232
-}
+  case object Bootstrap232 extends FoBoToolkit {
+    FoBoAPI.init
+    net.liftmodules.FoBoTB.Bootstrap232
+  }
 
 
 /**
@@ -792,10 +818,11 @@ case object Bootstrap232 extends FoBoToolkit {
  * }}}
  * @since v1.1
  */
-@deprecated("Use Bootstrap311 or later","1.5.0")
-case object Bootstrap301 extends FoBoToolkit {
-  net.liftmodules.FoBoBs.Bootstrap301
-}
+  @deprecated("Use Bootstrap311 or later","1.5.0")
+  case object Bootstrap301 extends FoBoToolkit {
+    FoBoAPI.init
+    net.liftmodules.FoBoBs.Bootstrap301
+  }
 
 /**
  * Enable usage of Twitter Bootstrap version 3&#8228;1&#8228;1 in your bootstrap liftweb Boot.
@@ -808,9 +835,10 @@ case object Bootstrap301 extends FoBoToolkit {
  * }}}
  * @since v1.2
  */
-case object Bootstrap311 extends FoBoToolkit {
-  net.liftmodules.FoBoBs.Bootstrap311
-}
+  case object Bootstrap311 extends FoBoToolkit {
+    FoBoAPI.init
+    net.liftmodules.FoBoBs.Bootstrap311 
+  }
 
 /**
  * Enable usage of Twitter Bootstrap version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.
@@ -823,9 +851,10 @@ case object Bootstrap311 extends FoBoToolkit {
  * }}}
  * @since v1.3
  */
-case object Bootstrap320 extends FoBoToolkit {
-  net.liftmodules.FoBoBs.Bootstrap320
-}
+  case object Bootstrap320 extends FoBoToolkit {
+    FoBoAPI.init
+    net.liftmodules.FoBoBs.Bootstrap320
+  }
 
 /**
  * Enable usage of Twitter Bootstrap version 3&#8228;3&#8228;5 in your bootstrap liftweb Boot.
@@ -839,9 +868,10 @@ case object Bootstrap320 extends FoBoToolkit {
  * @since v1.4
  */
 @deprecated("Use Bootstrap336 or later","1.5.0")
-case object Bootstrap335 extends FoBoToolkit {
-  net.liftmodules.FoBoBs.Bootstrap335
-}
+  case object Bootstrap335 extends FoBoToolkit {
+    FoBoAPI.init
+    net.liftmodules.FoBoBs.Bootstrap335
+  }
 
 /**
  * Enable usage of Twitter Bootstrap version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.
@@ -854,17 +884,27 @@ case object Bootstrap335 extends FoBoToolkit {
  * }}}
  * @since v1.5
  */
-case object Bootstrap336 extends FoBoToolkit {
-  net.liftmodules.FoBoBs.Bootstrap336
-}
+  case object Bootstrap336 extends FoBoToolkit {
+    FoBoAPI.init
+    net.liftmodules.FoBoBs.Bootstrap336
+  }
 
-
+/**
+ * Object for initiating FoBo API packages. 
+ */
+  private object FoBoAPI {
+    lazy val init: Unit = {
+      LiftRules.addToPackages("net.liftmodules.FoBo")  
+    }
+  }
+  
 /**
  * Object holding internally used FoBo resources. 
  */
-private object FoBoResources {
-   //moved to respective sub-modules
-}
-  
+//private object FoBoResources {
+//  
+//   //resource settings moved to respective sub-module
+//}
+//  
 }
 

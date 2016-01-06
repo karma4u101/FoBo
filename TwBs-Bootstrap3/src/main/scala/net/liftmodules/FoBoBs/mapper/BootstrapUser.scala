@@ -409,7 +409,7 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
   }
 
   override def loginXhtml = {
-    val lpwPath = if (S.contextPath != "") S.contextPath + lostPasswordPath.mkString("/", "/", "") else lostPasswordPath.mkString("/", "/", "")
+    //val lpwPath = if (S.contextPath != "") S.contextPath + lostPasswordPath.mkString("/", "/", "") else lostPasswordPath.mkString("/", "/", "")
     <form class="form-horizontal" role="form" action={ S.uri } method="post">
       <legend>{ resLoginLegendLogin }</legend>
       <div class="form-group">
@@ -426,7 +426,7 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]] extends 
       </div>
       <div class="form-group">
         <div class="col-lg-offset-3 col-lg-10">
-          <button type="submit" class="btn btn-default">{ resLoginSubmit }</button><span> <a href={ lpwPath }>{ resLoginLabelRecoverPassword }</a></span>
+          <button type="submit" class="btn btn-default">{ resLoginSubmit }</button><span> <a href={ lostPasswordPath.mkString("/", "/", "") }>{ resLoginLabelRecoverPassword }</a></span>
         </div>
       </div>
     </form>
