@@ -43,6 +43,18 @@ libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     Nil
 }
 
+libraryDependencies <++= scalaVersion { sv => 
+  (sv match {
+      case "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
+      case "2.10.4" => "org.specs2" %% "specs2" % "1.13" % "test"
+      case _ => "org.specs2" %% "specs2" % "2.3.11" % "test"
+ }) ::
+    (sv match {
+      case "2.10.4" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+      case _ => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
+      }) ::
+  Nil
+}
 
 //############################################################
 //#### THE BUILDINFO BUILD
