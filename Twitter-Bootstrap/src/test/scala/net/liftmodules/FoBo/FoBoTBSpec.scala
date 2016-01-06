@@ -9,7 +9,7 @@ import org.specs2.mutable.Specification
 
 object FoBoTBSpec extends Specification  {
   "FoBoTBSpec Specification".title
-
+  
   //These tests in not meant to catch all errors but to making sure that the 
   //FoBo InitParam's has got initiated as expected, for instance to ensure that 
   //fobo sub modules is accessible. 
@@ -17,7 +17,10 @@ object FoBoTBSpec extends Specification  {
   //OBS! using 'test-only' instead of 'test' will fail some test as 'test-only' 
   //is treated as code is run in "devMode" while 'test' dose not assume this. 
   
-  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap232 the ResourceServer.pathRewriter" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap232 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowBootstrap232 must_== true 
+    } 
     "rewrit fobo/bootstrap.js to fobo/bootstrap/2.3.2/js/bootstrap-min.js" in {
       rewriteBootstrap232JS must_== List("fobo", "bootstrap", "2.3.2", "js", "bootstrap-min.js")
     }
@@ -29,17 +32,26 @@ object FoBoTBSpec extends Specification  {
     }      
   }   
      
-   def rewriteBootstrap232JS = {
+  def allowBootstrap232 = {
+    ResourceServer 
+    FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap232
+    ResourceServer.allowedPaths("fobo"::"bootstrap.js"::Nil)
+  }
+  
+  def rewriteBootstrap232JS = {
+    ResourceServer
     FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap232
     ResourceServer.pathRewriter("fobo"::"bootstrap.js"::Nil)
   } 
    
-   def rewriteBootstrap232CSS = {
+  def rewriteBootstrap232CSS = {
+    ResourceServer
     FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap232
     ResourceServer.pathRewriter("fobo"::"bootstrap.css"::Nil)
   } 
    
-   def rewriteBootstrap232RESPCSS = {
+  def rewriteBootstrap232RESPCSS = {
+    ResourceServer
     FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap232
     ResourceServer.pathRewriter("fobo"::"bootstrap-responsive.css"::Nil)
   }   

@@ -9,7 +9,7 @@ import net.liftweb.sitemap.Loc._
 //import net.liftmodules.FoBoBS.snippet.FoBo.Bs3LinkedListGroup
 
 object Bs3LinkedListGroupSpec extends WebSpec(Bs3LinkedListGroupSpecBoot.boot _) {
-  
+  "Bs3LinkedListGroupSpec Specification".title
   //val html1 = <div data-lift="FoBo.Bs3LinkedListGroup.builder?group=lg1"></div>;
   
   "Bs3LinkedListGroup" should {
