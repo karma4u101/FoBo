@@ -57,12 +57,19 @@ object LiftModuleFoBoBuild extends Build {
                              base = file("JQuery"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
-  
+                                 
   lazy val pace         = Project(id   = "fobo-pace", 
                              base = file("Pace"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile),
+                             aggregate = Seq(paceres)
+                                 ).dependsOn(paceres) 
+                                 
+  lazy val paceres      = Project(id = "fobo-pace-res",
+                             base = file("Pace-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
-                                                  
+                                                         
   lazy val prettify     = Project(id   = "fobo-google-code-prettify", 
                              base = file("Google-Code-Prettify"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(

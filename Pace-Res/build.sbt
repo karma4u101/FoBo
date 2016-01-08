@@ -1,4 +1,4 @@
-moduleName := "fobo-pace"
+moduleName := "fobo-pace-res"
 
 organization := "net.liftmodules"
 
@@ -18,10 +18,9 @@ resolvers ++= Seq(
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
 )
 
-libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
-    "net.liftweb"      %% "lift-webkit"             % v          % "provided" ::
-    "net.liftweb"      %% "lift-testkit"            % v          % "provided" ::
-    "net.liftmodules"  %% ("fobo-pace-res"+"_"+e)   % mv         % "compile" :: 
+libraryDependencies <++= liftVersion { v =>
+    "net.liftweb"      %% "lift-webkit"          % v          % "provided" ::
+    "net.liftweb"      %% "lift-testkit"         % v          % "provided" ::
     Nil
 }
 

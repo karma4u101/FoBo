@@ -14,7 +14,7 @@ import common._
  * for usage information. 
  */
 package object FoBoPa {
-
+  
   @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoPa.InitParam","1.6.0")
   def init() {
 //    LiftRules.addToPackages("net.liftmodules.FoBoPa")
@@ -23,14 +23,82 @@ package object FoBoPa {
 //    }
   }
 
+  
   abstract sealed trait PaToolkit
+  abstract sealed trait ToolKit
+  abstract sealed trait Resource
+  abstract sealed trait API
 
   /**
    *
    */
+  @deprecated("Use FoBoPa.ToolKit.Init=FoBoPa.ToolKit.[Toolkit case object name]","1.6.0")
   object InitParam extends PaToolkit {
     var ToolKit: PaToolkit = null 
   }
+  
+  object ToolKit extends ToolKit {
+    var Init: ToolKit = null 
+    
+   /**
+     * Enable usage of FoBo's Pace API and resources version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
+     * @version 0.4.15
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   FoBoPa.ToolKit.Init=FoBoPa.ToolKit.Pace0415
+     * }}}
+     */    
+     case object Pace0415 extends ToolKit {
+       //net.liftmodules.FoBoPaRes.Resource.Pace0415
+       Resource.Pace0415
+       API.Pace0415 //Nothing in the API 
+//       FoBoResources.init
+//       FoBoResources.Pace0415
+     }    
+  }
+
+  object Resource extends Resource {
+    var Init: Resource = null
+    
+    /**
+     * Enable usage of FoBo's Pace resources version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
+     * @version 0.4.15
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   FoBoPa.Resource.Init=FoBoPa.Resource.Pace0415
+     * }}}
+     */    
+     case object Pace0415 extends Resource {
+      //get from module fobo-pace-res in FoBoPaRes
+       net.liftmodules.FoBoPaRes.Resource.Pace0415
+//       FoBoResources.init
+//       FoBoResources.Pace0415
+     }      
+  }
+  
+  object API extends API {
+    var Init: API = null
+    
+    /**
+     * Enable usage of FoBo's Pace API version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
+     * @version 0.4.15
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   FoBoPa.API.Init=FoBoPa.API.Pace0415
+     * }}}
+     */    
+     case object Pace0415 extends API {
+       //get from module fobo-pace-api in PaceAPI
+       FoBoAPI.init
+     }         
+  }
+  
   
  /**
   * Enable usage of Pace version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
@@ -42,9 +110,10 @@ package object FoBoPa {
   *   FoBoPa.InitParam.Toolkit=FoBoPa.Pace0415
   * }}}
   */
+  @deprecated("Use FoBoPa.ToolKit.Init=FoBoPa.ToolKit.Pace0415","1.6.0")
   case object Pace0415 extends PaToolkit {
-    FoBoResources.init
-    FoBoResources.Pace0415
+    ToolKit.Pace0415
+    //API.Pace0415
   }
 
   /**
@@ -53,66 +122,67 @@ package object FoBoPa {
   private object FoBoAPI {
     lazy val init: Unit = {
       LiftRules.addToPackages("net.liftmodules.FoBoPa")  
+      
     }
   }
 
-  /**
-   * Object holding internally used FoBo resources.
-   */
-  private object FoBoResources {
-
-    lazy val init: Unit = {
-      ResourceServer.allow {
-        case "fobo" :: tail => true
-      }
-    }
-    
-    lazy val Pace0415: Unit = {    
-      ResourceServer.rewrite {
-
-      case "fobo" :: "pace.js" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "js", "pace.js")
-      case "fobo" :: "pace.js" :: Nil => List("fobo", "pace", "0.4.15", "js", "pace.min.js")             
-      
-      case "fobo" :: "pace-theme-barber-shop.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-barber-shop.css")
-      case "fobo" :: "pace-theme-barber-shop.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-barber-shop-min.css")
- 
-      case "fobo" :: "pace-theme-big-counter.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-big-counter.css")
-      case "fobo" :: "pace-theme-big-counter.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-big-counter-min.css")
-
-      case "fobo" :: "pace-theme-bounce.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-bounce.css")
-      case "fobo" :: "pace-theme-bounce.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-bounce-min.css")
-
-      case "fobo" :: "pace-theme-center-circle.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-center-circle.css")
-      case "fobo" :: "pace-theme-center-circle.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-center-circle-min.css")
-
-      case "fobo" :: "pace-theme-corner-indicator.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-corner-indicator.css")
-      case "fobo" :: "pace-theme-corner-indicator.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-corner-indicator-min.css")
-
-      case "fobo" :: "pace-theme-fill-left.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-fill-left.css")
-      case "fobo" :: "pace-theme-fill-left.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-fill-left-min.css")
-
-      case "fobo" :: "pace-theme-flash.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-flash.css")
-      case "fobo" :: "pace-theme-flash.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-flash-min.css")
-
-      case "fobo" :: "pace-theme-flash-red.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-flash-red.css")
-      case "fobo" :: "pace-theme-flash-red.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-flash-red-min.css")
-
-      case "fobo" :: "pace-theme-flat-top.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-flat-top.css")
-      case "fobo" :: "pace-theme-flat-top.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-flat-top-min.css")
-
-      case "fobo" :: "pace-theme-mac-osx.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-mac-osx.css")
-      case "fobo" :: "pace-theme-mac-osx.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-mac-osx-min.css")
-      
-      case "fobo" :: "pace-theme-minimal.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-minimal.css")
-      case "fobo" :: "pace-theme-minimal.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-minimal-min.css")
-
-      case "fobo" :: "pace-theme-minimal-red.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-minimal-red.css")
-      case "fobo" :: "pace-theme-minimal-red.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-minimal-red-min.css")
-           
-      }
-    }
-  
-  }
+//  /**
+//   * Object holding internally used FoBo resources.
+//   */
+//  private object FoBoResources {
+//
+//    lazy val init: Unit = {
+//      ResourceServer.allow {
+//        case "fobo" :: tail => true
+//      }
+//    }
+//    
+//    lazy val Pace0415: Unit = {    
+//      ResourceServer.rewrite {
+//
+//      case "fobo" :: "pace.js" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "js", "pace.js")
+//      case "fobo" :: "pace.js" :: Nil => List("fobo", "pace", "0.4.15", "js", "pace.min.js")             
+//      
+//      case "fobo" :: "pace-theme-barber-shop.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-barber-shop.css")
+//      case "fobo" :: "pace-theme-barber-shop.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-barber-shop-min.css")
+// 
+//      case "fobo" :: "pace-theme-big-counter.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-big-counter.css")
+//      case "fobo" :: "pace-theme-big-counter.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-big-counter-min.css")
+//
+//      case "fobo" :: "pace-theme-bounce.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-bounce.css")
+//      case "fobo" :: "pace-theme-bounce.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-bounce-min.css")
+//
+//      case "fobo" :: "pace-theme-center-circle.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-center-circle.css")
+//      case "fobo" :: "pace-theme-center-circle.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-center-circle-min.css")
+//
+//      case "fobo" :: "pace-theme-corner-indicator.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-corner-indicator.css")
+//      case "fobo" :: "pace-theme-corner-indicator.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-corner-indicator-min.css")
+//
+//      case "fobo" :: "pace-theme-fill-left.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-fill-left.css")
+//      case "fobo" :: "pace-theme-fill-left.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-fill-left-min.css")
+//
+//      case "fobo" :: "pace-theme-flash.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-flash.css")
+//      case "fobo" :: "pace-theme-flash.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-flash-min.css")
+//
+//      case "fobo" :: "pace-theme-flash-red.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-flash-red.css")
+//      case "fobo" :: "pace-theme-flash-red.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-flash-red-min.css")
+//
+//      case "fobo" :: "pace-theme-flat-top.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-flat-top.css")
+//      case "fobo" :: "pace-theme-flat-top.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-flat-top-min.css")
+//
+//      case "fobo" :: "pace-theme-mac-osx.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-mac-osx.css")
+//      case "fobo" :: "pace-theme-mac-osx.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-mac-osx-min.css")
+//      
+//      case "fobo" :: "pace-theme-minimal.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-minimal.css")
+//      case "fobo" :: "pace-theme-minimal.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-minimal-min.css")
+//
+//      case "fobo" :: "pace-theme-minimal-red.css" :: Nil if Props.devMode => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-minimal-red.css")
+//      case "fobo" :: "pace-theme-minimal-red.css" :: Nil => List("fobo", "pace", "0.4.15", "css", "themes", "pace-theme-minimal-red-min.css")
+//           
+//      }
+//    }
+//  
+//  }
 }
 
 
