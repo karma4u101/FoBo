@@ -30,7 +30,8 @@ If you have ideas and suggestions let us know!
 
 Contributions
 -------------
-Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion to the [Lift's mailing list](http://groups.google.com/group/liftweb/) 
+Improvements, contributions and suggestions are welcome! Clone the project and start working on a PR. You can also pick a issue marked as ready by the waffle badge above or just open a new one or just drop a question/suggestion to the [Lift's mailing list](http://groups.google.com/group/liftweb/). 
+Fore some contribution guidelines see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). 
 
 > As FoBo is using this [Git branching model](http://nvie.com/posts/a-successful-git-branching-model/) the **main branch** is just updated for releases so your pull requests will be against the [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
 

@@ -51,7 +51,19 @@ object LiftModuleFoBoBuild extends Build {
   lazy val angularjs    = Project(id   = "fobo-angularjs", 
                              base = file("AngularJS"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
-                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))  
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile),
+                             aggregate = Seq(angularjsres,angularjsapi)    
+                             ).dependsOn(angularjsres,angularjsapi)  
+                             
+  lazy val angularjsres      = Project(id = "fobo-angularjs-res",
+                             base = file("AngularJS-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))      
+                                 
+ lazy val angularjsapi      = Project(id = "fobo-angularjs-api",
+                             base = file("AngularJS-API"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                       
                              
   lazy val jquery       = Project(id   = "fobo-jquery", 
                              base = file("JQuery"),

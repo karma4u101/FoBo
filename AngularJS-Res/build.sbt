@@ -1,27 +1,28 @@
-moduleName := "fobo-pace"
+moduleName := "fobo-angularjs-res"
 
 organization := "net.liftmodules"
 
 moduleName <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
 
-crossScalaVersions := Seq("2.11.4", "2.10.4", "2.9.3","2.9.2", "2.9.1-1", "2.9.1")
+crossScalaVersions := Seq("2.11.4", "2.10.4", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
 
-scalacOptions ++= Seq("-deprecation")
+scalacOptions ++= Seq("-deprecation") //,"-feature" <==cant use as long as we build using 2.9.x
 
 parallelExecution in Test := false
 
 EclipseKeys.withSource := true
 
+//if(!liftEdition.equals("3.0")) excludeFilter in unmanagedSources := HiddenFileFilter || "net.liftweb.http.PageRoundTrips.scala"
 
 resolvers ++= Seq(
   "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
 )
 
-libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
-    "net.liftweb"      %% "lift-webkit"             % v          % "provided" ::
-    "net.liftweb"      %% "lift-testkit"            % v          % "provided" ::
-    "net.liftmodules"  %% ("fobo-pace-res"+"_"+e)   % mv         % "provided" :: 
+libraryDependencies <++= liftVersion { v =>
+    "net.liftweb"      %% "lift-webkit"          % v          % "provided" ::
+    "net.liftweb"      %% "lift-testkit"         % v          % "provided" ::
+    "net.liftweb"      %% "lift-mapper"          % v          % "provided" ::
     Nil
 }
 
@@ -44,6 +45,33 @@ libraryDependencies ++= {
   Nil
 }
 
+//############################################################
+//#### THE BUILDINFO BUILD
+//## https://github.com/sbt/sbt-buildinfo
+//## 
+//##
+//#############################################################
+
+//seq(buildInfoSettings: _*)
+
+//sourceGenerators in Compile <+= buildInfo
+
+//buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
+
+//buildInfoPackage := "net.liftmodules.FoBo.lib"
+
+
+//#########################################################################
+//#### THE LESS BUILD
+//## 
+//## To simplify, the less build has been moved to the FoBo-Less project. 
+//## Bootstrap css files, slightly modified to work in the FoBo environment,  
+//## is built in the FoBo-Less project and then copied (already present) to 
+//## there corresponding src/resources directories.
+//## 
+//#########################################################################
+
+//Take a look att FoBo-Less and read the above.
 
 //################################################################
 //#### THE YUI COMPRESSION BUILD
@@ -51,7 +79,7 @@ libraryDependencies ++= {
 //## for now the last filter string in exludeFilter for js 
 //## will exclude every .js file
 //################################################################
-//##Turning of the yui compression as minified files is provide in resources tree.
+//##Turning of the yui compression as we now use upstreem minified files.
 //seq(yuiSettings: _*)
 
 //excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" | "*.js"
