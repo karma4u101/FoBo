@@ -71,6 +71,7 @@ package object FoBoAJS {
   abstract sealed trait API
   
   
+  /*=== ToolKit ============================================*/
   object ToolKit extends ToolKit {
     var Init: ToolKit = null 
    
@@ -346,6 +347,8 @@ package object FoBoAJS {
     }        
   }
       
+  
+  /*=== Resource ============================================*/
   object Resource extends Resource {
     var Init: Resource = null
 
@@ -362,7 +365,7 @@ package object FoBoAJS {
      * }}}
      *
      */
-    case object AngularJS148 extends ToolKit {
+    case object AngularJS148 extends Resource {
       FoBoAJSRes.Resource.AngularJS148
     } 
     
@@ -379,7 +382,7 @@ package object FoBoAJS {
      * }}}
      *
      */
-    case object AngularJS148i18n extends ToolKit {
+    case object AngularJS148i18n extends Resource {
       FoBoAJSRes.Resource.AngularJS148i18n
     } 
   
@@ -396,7 +399,7 @@ package object FoBoAJS {
      * }}}
      *
      */
-    case object AngularJS141 extends ToolKit {
+    case object AngularJS141 extends Resource {
       FoBoAJSRes.Resource.AngularJS141
     }    
     
@@ -413,7 +416,7 @@ package object FoBoAJS {
      * }}}
      *
      */
-    case object AngularJS141i18n extends ToolKit {
+    case object AngularJS141i18n extends Resource {
       FoBoAJSRes.Resource.AngularJS141i18n
     }
     
@@ -430,7 +433,7 @@ package object FoBoAJS {
      * }}}
      *
      */
-    case object AngularJS1315 extends ToolKit {
+    case object AngularJS1315 extends Resource {
       FoBoAJSRes.Resource.AngularJS1315
     } 
 
@@ -447,7 +450,7 @@ package object FoBoAJS {
      * }}}
      *
      */
-    case object AngularJS1315i18n extends ToolKit {
+    case object AngularJS1315i18n extends Resource {
       FoBoAJSRes.Resource.AngularJS1315i18n
     }     
     
@@ -464,7 +467,7 @@ package object FoBoAJS {
      * }}}
      *
      */
-    case object AngularJS1219 extends ToolKit {
+    case object AngularJS1219 extends Resource {
       FoBoAJSRes.Resource.AngularJS1219
     }     
     
@@ -481,7 +484,7 @@ package object FoBoAJS {
      * }}}
      *
      */
-    case object AngularJS1219i18n extends ToolKit {
+    case object AngularJS1219i18n extends Resource {
       FoBoAJSRes.Resource.AngularJS1219i18n
     }
   
@@ -499,7 +502,7 @@ package object FoBoAJS {
      *
      */
     @deprecated("Use AJMaterial101 or later","1.5.0")
-    case object AJMaterial0100 extends ToolKit {
+    case object AJMaterial0100 extends Resource {
       FoBoAJSRes.Resource.AJMaterial0100
     }
 
@@ -516,7 +519,7 @@ package object FoBoAJS {
      * }}}
      *
      */
-    case object AJMaterial101 extends ToolKit {
+    case object AJMaterial101 extends Resource {
       FoBoAJSRes.Resource.AJMaterial101
     }     
     
@@ -533,7 +536,7 @@ package object FoBoAJS {
      * }}}
      *
      */
-    case object AJSUIBootstrap0100 extends ToolKit {
+    case object AJSUIBootstrap0100 extends Resource {
       FoBoAJSRes.Resource.AJSUIBootstrap0100
     }  
  
@@ -550,7 +553,7 @@ package object FoBoAJS {
      * }}}
      *
      */
-    case object AJSUIBootstrap070 extends ToolKit {
+    case object AJSUIBootstrap070 extends Resource {
       FoBoAJSRes.Resource.AJSUIBootstrap070
     }
 
@@ -567,7 +570,7 @@ package object FoBoAJS {
      * }}}
      *
      */
-    case object AJSUIBootstrap020 extends ToolKit {
+    case object AJSUIBootstrap020 extends Resource {
       FoBoAJSRes.Resource.AJSUIBootstrap020
     }    
     
@@ -584,7 +587,7 @@ package object FoBoAJS {
      * }}}
      *
      */
-    case object AJSNGGrid207 extends ToolKit {
+    case object AJSNGGrid207 extends Resource {
       FoBoAJSRes.Resource.AJSNGGrid207
     }
   
@@ -601,12 +604,14 @@ package object FoBoAJS {
      * }}}
      *
      */
-    case object AJSUIGrid307 extends ToolKit {
+    case object AJSUIGrid307 extends Resource {
       FoBoAJSRes.Resource.AJSUIGrid307
     }      
     
   }
 
+  /*=== API ============================================*/
+  
   object API extends API {
     var Init: API = null
     
@@ -628,6 +633,8 @@ package object FoBoAJS {
     }
   }
   
+  
+  /*=== InitParam (deprecated) ============================================*/
   /**
    *
    */
