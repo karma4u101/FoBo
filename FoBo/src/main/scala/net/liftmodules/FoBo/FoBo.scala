@@ -141,6 +141,7 @@ package object FoBo {
    * }}}
    */    
   abstract sealed trait Resource
+  
   /**
    * Initiate a toolkit's associated FoBo API in you bootstrap liftweb Boot.
    * You can use this if you want to use FoBo's API for the toolkit but
@@ -473,7 +474,7 @@ package object FoBo {
      * }}}
      *
      */
-    case object AngularJS148 extends ToolKit {
+    case object AngularJS148 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AngularJS148
     } 
     
@@ -490,7 +491,7 @@ package object FoBo {
      * }}}
      *
      */
-    case object AngularJS148i18n extends ToolKit {
+    case object AngularJS148i18n extends Resource {
       net.liftmodules.FoBoAJS.Resource.AngularJS148i18n
     } 
   
@@ -507,7 +508,7 @@ package object FoBo {
      * }}}
      *
      */
-    case object AngularJS141 extends ToolKit {
+    case object AngularJS141 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AngularJS141
     }    
     
@@ -524,7 +525,7 @@ package object FoBo {
      * }}}
      *
      */
-    case object AngularJS141i18n extends ToolKit {
+    case object AngularJS141i18n extends Resource {
       net.liftmodules.FoBoAJS.Resource.AngularJS141i18n
     }
     
@@ -541,7 +542,7 @@ package object FoBo {
      * }}}
      *
      */
-    case object AngularJS1315 extends ToolKit {
+    case object AngularJS1315 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AngularJS1315
     } 
 
@@ -558,7 +559,7 @@ package object FoBo {
      * }}}
      *
      */
-    case object AngularJS1315i18n extends ToolKit {
+    case object AngularJS1315i18n extends Resource {
       net.liftmodules.FoBoAJS.Resource.AngularJS1315i18n
     }     
     
@@ -575,7 +576,7 @@ package object FoBo {
      * }}}
      *
      */
-    case object AngularJS1219 extends ToolKit {
+    case object AngularJS1219 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AngularJS1219
     }     
     
@@ -592,7 +593,7 @@ package object FoBo {
      * }}}
      *
      */
-    case object AngularJS1219i18n extends ToolKit {
+    case object AngularJS1219i18n extends Resource {
       net.liftmodules.FoBoAJS.Resource.AngularJS1219i18n
     }
   
@@ -610,7 +611,7 @@ package object FoBo {
      *
      */
     @deprecated("Use AJMaterial101 or later","1.5.0")
-    case object AJMaterial0100 extends ToolKit {
+    case object AJMaterial0100 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AJMaterial0100
     }
 
@@ -627,7 +628,7 @@ package object FoBo {
      * }}}
      *
      */
-    case object AJMaterial101 extends ToolKit {
+    case object AJMaterial101 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AJMaterial101
     }     
     
@@ -644,7 +645,7 @@ package object FoBo {
      * }}}
      *
      */
-    case object AJSUIBootstrap0100 extends ToolKit {
+    case object AJSUIBootstrap0100 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AJSUIBootstrap0100
     }  
  
@@ -661,7 +662,7 @@ package object FoBo {
      * }}}
      *
      */
-    case object AJSUIBootstrap070 extends ToolKit {
+    case object AJSUIBootstrap070 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AJSUIBootstrap070
     }
 
@@ -678,7 +679,7 @@ package object FoBo {
      * }}}
      *
      */
-    case object AJSUIBootstrap020 extends ToolKit {
+    case object AJSUIBootstrap020 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AJSUIBootstrap020
     }    
     
@@ -695,7 +696,7 @@ package object FoBo {
      * }}}
      *
      */
-    case object AJSNGGrid207 extends ToolKit {
+    case object AJSNGGrid207 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AJSNGGrid207
     }
   
@@ -712,7 +713,7 @@ package object FoBo {
      * }}}
      *
      */
-    case object AJSUIGrid307 extends ToolKit {
+    case object AJSUIGrid307 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AJSUIGrid307
     }      
     
@@ -805,6 +806,7 @@ object TBLocInfo {
   private val lts: Box[String] = Full("_self")
   private val ltp: Box[String] = Full("_parent")
   private val ltt: Box[String] = Full("_top")
+  
   /**
    * Provides a way to specify a horizontal divider for your bootstrap menu in Lift's SiteMap.
    * 

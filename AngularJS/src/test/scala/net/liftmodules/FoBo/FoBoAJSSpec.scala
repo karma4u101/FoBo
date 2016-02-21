@@ -482,8 +482,6 @@ class FoBoAJSSpec extends mutable.Specification {
   } 
   
  
-// //===  ===============// 
- 
  //=== ToolKit.Init ==============//
   def allowToolKitInit(resource:FoBoAJS.ToolKit,path:List[String]) = {
     FoBoAJS.ToolKit.Init=resource 
