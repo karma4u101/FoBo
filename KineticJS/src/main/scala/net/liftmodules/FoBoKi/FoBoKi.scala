@@ -23,15 +23,90 @@ package object FoBoKi {
 //    }
   }
 
+  //@deprecated("","1.6.0")
   abstract sealed trait KiToolkit
+  abstract sealed trait ToolKit
+  abstract sealed trait Resource
+  abstract sealed trait API
+  
+  object ToolKit extends ToolKit {
+    var Init: ToolKit = null
+    
+    /**
+     * Enable usage FoBo's KineticJS API and resources version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.
+     * @version 5.1.0
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoKi => FoBo}
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.KineticJS510 
+     * }}}
+     *
+     */
+      case object KineticJS510 extends ToolKit {
+        //FoBoKiAPI.API.KineticJS5
+        FoBoKiRes.Resource.KineticJS510
+      }    
+    
+  }
+  
+  object Resource extends Resource {
+    var Init: Resource = null
+    
+    /**
+     * Enable usage FoBo's KineticJS resources version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.
+     * @version 5.1.0
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoKi => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.KineticJS510 
+     * }}}
+     *
+     */
+      case object KineticJS510 extends Resource {
+        FoBoKiRes.Resource.KineticJS510
+      }      
+    
+  }
 
+  /*=== API ============================================*/
+  
+  object API extends API {
+    var Init: API = null
+    
+    /**
+     * Enable usage of FoBo's KineticJs API version 5&#8228;X&#8228;X in your bootstrap liftweb Boot.
+     * @version 5.X.X
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoKi => FoBo}
+     *    :
+     *   FoBo.API.Init=FoBo.API.KineticJS0
+     * }}}
+     */    
+     case object KineticJS0 extends API {
+       //ToDo get from module fobo-kineticjs-api in KinetciJSAPI
+       //FoBoKiAPI.API.KineticJS0
+       FoBoAPI.init
+     }         
+  }  
+  
+   /*=== InitParam (deprecated) ============================================*/
   /**
    *
    */
+  @deprecated("Use FoBoKi.ToolKit.Init=FoBoKi.ToolKit.[Toolkit Object]","1.6.0")
   object InitParam extends KiToolkit {
     var ToolKit: KiToolkit = null 
   }
-
+  
   
 /**
  * Enable usage of KineticJS version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.
@@ -44,39 +119,22 @@ package object FoBoKi {
  * }}}
  * @since v1.3
  */
+  @deprecated("Use FoBoKi.ToolKit.Init=FoBoKi.ToolKit.KineticJS510","1.6.0")
   case object KineticJS510 extends KiToolkit {
-    FoBoResources.init
-    FoBoResources.KineticJS510
+    ToolKit.KineticJS510
+    //API.KineticJS510
   }
-
-
+   
+  
+//ToDo this should be fetched from KineticJSAPI
 /**
- * Object for initiating FoBo API packages. 
+ * Object for initiating FoBo API packages.
+ * 
  */
   private object FoBoAPI {
     lazy val init: Unit = {
       LiftRules.addToPackages("net.liftmodules.FoBoKi")  
     }
-  }
-  
-  /**
-   * Object holding internally used FoBo resources.
-   */
-  private object FoBoResources {
-
-    lazy val init: Unit = {
-      ResourceServer.allow {
-        case "fobo" :: tail => true
-      }
-    }
-  
-    lazy val KineticJS510: Unit = {
-      ResourceServer.rewrite {
-        case "fobo" :: "kinetic.js" :: Nil if Props.devMode => List("fobo", "kinetic", "5.1.0", "js", "kinetic.js")
-        case "fobo" :: "kinetic.js" :: Nil => List("fobo", "kinetic", "5.1.0", "js", "kinetic.min.js")                
-      }
-    }
- 
   }
   
 }

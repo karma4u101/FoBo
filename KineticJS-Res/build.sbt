@@ -1,4 +1,4 @@
-moduleName := "fobo-kineticjs"
+moduleName := "fobo-kineticjs-res"
 
 organization := "net.liftmodules"
 
@@ -18,10 +18,9 @@ resolvers ++= Seq(
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
 )
 
-libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
-    "net.liftweb"      %% "lift-webkit"                  % v          % "provided" ::
-    "net.liftweb"      %% "lift-testkit"                 % v          % "provided" ::
-    "net.liftmodules"  %% ("fobo-kineticjs-res"+"_"+e)   % mv         % "provided" ::
+libraryDependencies <++= liftVersion { v =>
+    "net.liftweb"      %% "lift-webkit"          % v          % "provided" ::
+    "net.liftweb"      %% "lift-testkit"         % v          % "provided" ::
     Nil
 }
 
