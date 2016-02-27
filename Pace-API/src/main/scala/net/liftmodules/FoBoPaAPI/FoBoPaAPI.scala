@@ -24,16 +24,18 @@ package object FoBoPaAPI {
   object API extends API {
     var Init: API = null
     /**
-     * Enable usage of FoBo's Pace API version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
-     * @version 0.4.15
+     * Enable usage of FoBo's Pace API version 0&#8228;X&#8228;X in your bootstrap liftweb Boot.
+     * @version 0.X.X
      * 
      * '''Example:'''
      * 
      * {{{
-     *   FoBoPaAPI.API.Init=FoBoPaAPI.API.Pace0415
+     *   import net.liftmodules.{FoBoPaAPI => FoBo}
+     *    :
+     *   FoBo.API.Init=FoBo.API.Pace0
      * }}}
      */    
-     case object Pace0415 extends API {
+     case object Pace0 extends API {
        FoBoAPI.init
      }         
   }

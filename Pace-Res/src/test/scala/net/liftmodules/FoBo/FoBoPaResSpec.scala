@@ -12,23 +12,26 @@ object FoBoPaResSpec extends Specification {
 
   sequential
   
-  
+  //Pace0415
   "With FoBoPaRes.Resource.Init set to FoBoPaRes.Resource.Pace0415 the ResourceServer" should {
     "allow  fobo/pace.js" in {
-      allowResourcePace0415 must_== true 
+      allowResource(FoBoPaRes.Resource.Pace0415,"fobo"::"pace.js"::Nil) must_== true 
     }     
     "rewrit fobo/pace.js to fobo/pace/0.4.15/js/pace.min.js" in {
-      rewriteResourcePace0415JS must_== List("fobo", "pace", "0.4.15", "js", "pace.min.js")
-    }       
+      rewriteResource(FoBoPaRes.Resource.Pace0415,"fobo"::"pace.js"::Nil) must_== 
+        List("fobo", "pace", "0.4.15", "js", "pace.min.js")
+    }        
   }   
   
-  def allowResourcePace0415 = {
-    ResourceServer 
-    FoBoPaRes.Resource.Init = FoBoPaRes.Resource.Pace0415
-    ResourceServer.allowedPaths("fobo"::"pace.js"::Nil)
+  //=== Resource.Init ===============//
+  def allowResource(resource:FoBoPaRes.Resource,path:List[String]) = {
+    FoBoPaRes.Resource.Init=resource 
+    ResourceServer.allowedPaths(path)
+  } 
+ 
+  def rewriteResource(resource:FoBoPaRes.Resource,path:List[String]) = {
+    FoBoPaRes.Resource.Init=resource 
+    ResourceServer.pathRewriter(path)
   }   
-  def rewriteResourcePace0415JS = {
-    FoBoPaRes.Resource.Init = FoBoPaRes.Resource.Pace0415
-    ResourceServer.pathRewriter("fobo"::"pace.js"::Nil)
-  }   
+  
 }

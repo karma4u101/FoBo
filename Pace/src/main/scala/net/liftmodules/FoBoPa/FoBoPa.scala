@@ -50,8 +50,8 @@ package object FoBoPa {
      * }}}
      */    
      case object Pace0415 extends ToolKit {
-       Resource.Pace0415
-       //API.Pace0415 //Nothing in the API 
+       FoBoPaRes.Resource.Pace0415
+       //FoBoPaAPI.API.Pace0
      }    
   }
 
@@ -71,31 +71,35 @@ package object FoBoPa {
      * }}}
      */    
      case object Pace0415 extends Resource {
-       net.liftmodules.FoBoPaRes.Resource.Pace0415
+       FoBoPaRes.Resource.Pace0415
      }      
   }
+  
+   /*=== API ============================================*/
   
   object API extends API {
     var Init: API = null
     
     /**
-     * Enable usage of FoBo's Pace API version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
-     * @version 0.4.15
+     * Enable usage of FoBo's Pace API version 0&#8228;X&#8228;X in your bootstrap liftweb Boot.
+     * @version 0.X.X
      * 
      * '''Example:'''
      * 
      * {{{
      *   import net.liftmodules.{FoBoPa => FoBo}
      *    :
-     *   FoBo.API.Init=FoBo.API.Pace0415
+     *   FoBo.API.Init=FoBo.API.Pace0
      * }}}
      */    
      case object Pace0 extends API {
-       //get from module fobo-pace-api in PaceAPI
+       //ToDo get from module fobo-pace-api in PaceAPI
+       //FoBoPaAPI.API.Pace0
        FoBoAPI.init
      }         
   }
   
+  /*=== InitParam (deprecated) ============================================*/
   
   /**
    *

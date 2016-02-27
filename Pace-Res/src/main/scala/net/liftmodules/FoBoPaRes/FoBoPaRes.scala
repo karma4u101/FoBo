@@ -30,15 +30,18 @@ package object FoBoPaRes {
      * '''Example:'''
      * 
      * {{{
-     *   FoBoPaRes.Resource.Init=FoBoPaRes.Resource.Pace0415
+     *   import net.liftmodules.{FoBoPaRes => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.Pace0415
      * }}}
      */    
      case object Pace0415 extends Resource {
       //get from module fobo-pace-resources in PaceResources
        FoBoResources.init
        FoBoResources.Pace0415
-     }      
-  }
+     }   
+    
+  } //end Resource object 
 
   /**
    * Object holding internally used FoBo resources.
