@@ -90,7 +90,14 @@ object LiftModuleFoBoBuild extends Build {
   lazy val kineticjs    = Project(id   = "fobo-kineticjs", 
                              base = file("KineticJS"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
-                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))  
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile),
+                              aggregate = Seq(kineticjsres)   
+                                 ).dependsOn(kineticjsres)  
+                                 
+  lazy val kineticjsres = Project(id   = "fobo-kineticjs-res", 
+                             base = file("KineticJS-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                   
                                                                             
 
   lazy val scaladocDiagramsEnabled = System.getProperty("scaladoc.diagrams", "false").toBoolean
