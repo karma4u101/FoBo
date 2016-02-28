@@ -36,7 +36,6 @@ package object FoBoPaRes {
      * }}}
      */    
      case object Pace0415 extends Resource {
-      //get from module fobo-pace-resources in PaceResources
        FoBoResources.init
        FoBoResources.Pace0415
      }   

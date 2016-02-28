@@ -21,10 +21,6 @@ package object FoBoPa {
   
   @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoPa.InitParam","1.6.0")
   def init() {
-//    LiftRules.addToPackages("net.liftmodules.FoBoPa")
-//    ResourceServer.allow {
-//      case "fobo" :: tail => true
-//    }
   }
 
   //@deprecated("","1.6.0")
@@ -33,6 +29,8 @@ package object FoBoPa {
   abstract sealed trait Resource
   abstract sealed trait API
 
+  
+  /*=== ToolKit ============================================*/
   
   object ToolKit extends ToolKit {
     var Init: ToolKit = null 
@@ -55,6 +53,8 @@ package object FoBoPa {
      }    
   }
 
+  /*=== Resource ============================================*/
+  
   object Resource extends Resource {
     var Init: Resource = null
     
@@ -75,7 +75,7 @@ package object FoBoPa {
      }      
   }
   
-   /*=== API ============================================*/
+  /*=== API ============================================*/
   
   object API extends API {
     var Init: API = null

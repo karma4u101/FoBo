@@ -12,60 +12,69 @@ object FoBoPaSpec extends Specification {
 
   sequential
   
+  //Pace0415
   "With FoBoPa.InitParam.ToolKit set to FoBoPa.Pace0415 the ResourceServer" should {
     "allow  fobo/pace.js" in {
-      allowPace0415 must_== true 
-    }     
-    "rewrit fobo/pace.js to fobo/pace/0.4.15/js/pace.min.js" in {
-      rewritePace0415JS must_== List("fobo", "pace", "0.4.15", "js", "pace.min.js")
+      allowInitParam(FoBoPa.Pace0415,"fobo"::"pace.js"::Nil) must_== true 
+    } 
+    "rewrit fobo/angular.js to fobo/pace/0.4.15/js/pace.min.js" in {
+      rewriteInitParam(FoBoPa.Pace0415,"fobo"::"pace.js"::Nil) must_== 
+        List("fobo", "pace", "0.4.15", "js", "pace.min.js")
     }       
   }
   
   "With FoBoPa.ToolKit.Init set to FoBoPa.ToolKit.Pace0415 the ResourceServer" should {
     "allow  fobo/pace.js" in {
-      allowToolKitPace0415 must_== true 
-    }     
-    "rewrit fobo/pace.js to fobo/pace/0.4.15/js/pace.min.js" in {
-      rewriteToolKitPace0415JS must_== List("fobo", "pace", "0.4.15", "js", "pace.min.js")
+      allowToolKitInit(FoBoPa.ToolKit.Pace0415,"fobo"::"pace.js"::Nil) must_== true 
+    } 
+    "rewrit fobo/angular.js to fobo/pace/0.4.15/js/pace.min.js" in {
+      rewriteToolKitInit(FoBoPa.ToolKit.Pace0415,"fobo"::"pace.js"::Nil) must_== 
+        List("fobo", "pace", "0.4.15", "js", "pace.min.js")
     }       
   } 
   
   "With FoBoPa.Resource.Init set to FoBoPa.Resource.Pace0415 the ResourceServer" should {
     "allow  fobo/pace.js" in {
-      allowResourcePace0415 must_== true 
-    }     
-    "rewrit fobo/pace.js to fobo/pace/0.4.15/js/pace.min.js" in {
-      rewriteResourcePace0415JS must_== List("fobo", "pace", "0.4.15", "js", "pace.min.js")
+      allowResource(FoBoPa.Resource.Pace0415,"fobo"::"pace.js"::Nil) must_== true 
+    } 
+    "rewrit fobo/angular.js to fobo/pace/0.4.15/js/pace.min.js" in {
+      rewriteResource(FoBoPa.Resource.Pace0415,"fobo"::"pace.js"::Nil) must_== 
+        List("fobo", "pace", "0.4.15", "js", "pace.min.js")
     }       
-  }   
+  }    
   
-  def allowPace0415 = {
-    ResourceServer 
-    FoBoPa.InitParam.ToolKit=FoBoPa.Pace0415
-    ResourceServer.allowedPaths("fobo"::"pace.js"::Nil)
-  }   
-  def rewritePace0415JS = {
-    FoBoPa.InitParam.ToolKit=FoBoPa.Pace0415
-    ResourceServer.pathRewriter("fobo"::"pace.js"::Nil)
+  
+ //=== ToolKit.Init ==============//
+  def allowToolKitInit(resource:FoBoPa.ToolKit,path:List[String]) = {
+    FoBoPa.ToolKit.Init=resource 
+    ResourceServer.allowedPaths(path)
   } 
+ 
+  def rewriteToolKitInit(resource:FoBoPa.ToolKit,path:List[String]) = {
+    FoBoPa.ToolKit.Init=resource 
+    ResourceServer.pathRewriter(path)
+  }  
   
-  def allowToolKitPace0415 = {
-    ResourceServer 
-    FoBoPa.ToolKit.Init = FoBoPa.ToolKit.Pace0415
-    ResourceServer.allowedPaths("fobo"::"pace.js"::Nil)
-  }   
-  def rewriteToolKitPace0415JS = {
-    FoBoPa.ToolKit.Init = FoBoPa.ToolKit.Pace0415
-    ResourceServer.pathRewriter("fobo"::"pace.js"::Nil)
+ //=== InitParam.ToolKit ===============// 
+  def allowInitParam(resource:FoBoPa.PaToolkit,path:List[String]) = {
+    FoBoPa.InitParam.ToolKit=resource 
+    ResourceServer.allowedPaths(path)
   } 
+ 
+  def rewriteInitParam(resource:FoBoPa.PaToolkit,path:List[String]) = {
+    FoBoPa.InitParam.ToolKit=resource 
+    ResourceServer.pathRewriter(path)
+  } 
+ 
+  //=== Resource.Init ===============//
+  def allowResource(resource:FoBoPa.Resource,path:List[String]) = {
+    FoBoPa.Resource.Init=resource 
+    ResourceServer.allowedPaths(path)
+  } 
+ 
+  def rewriteResource(resource:FoBoPa.Resource,path:List[String]) = {
+    FoBoPa.Resource.Init=resource 
+    ResourceServer.pathRewriter(path)
+  }    
   
-  def allowResourcePace0415 = {
-    ResourceServer 
-    FoBoPa.Resource.Init = FoBoPa.Resource.Pace0415
-    ResourceServer.allowedPaths("fobo"::"pace.js"::Nil)
-  }   
-  def rewriteResourcePace0415JS = {
-    FoBoPa.Resource.Init = FoBoPa.Resource.Pace0415
-    ResourceServer.pathRewriter("fobo"::"pace.js"::Nil)
-  }   
 }
