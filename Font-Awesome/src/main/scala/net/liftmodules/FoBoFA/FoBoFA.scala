@@ -15,142 +15,271 @@ import common._
  */
 package object FoBoFA {
 
-    @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoFA.InitParam","1.6.0")
-    def init() {
-//      LiftRules.addToPackages("net.liftmodules.FoBoFA")
-//      ResourceServer.allow {
-//        case "fobo" :: tail => true
-//      }
-    }
+  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoFA.InitParam","1.6.0")
+  def init() {
+  }
 
-    abstract sealed trait FAToolkit
-
-    /**
-     *
-     */
-    object InitParam extends FAToolkit {
-      var ToolKit: FAToolkit = null 
-    }
-
+  //@deprecated("","1.6.0")
+  abstract sealed trait FAToolkit
+  abstract sealed trait ToolKit
+  abstract sealed trait Resource
+  abstract sealed trait API
+  
+  
+  /*=== ToolKit ============================================*/
+  
+  object ToolKit extends ToolKit {
+    var Init: ToolKit = null 
     
-     /**
-     * Enable usage of Font-Awesome version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
+   /**
+     * Enable usage of FoBo's FontAwesome resources and API version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
      * @version 4.3.0
-     *
-     *  '''Example:'''
-     *
+     * 
+     * '''Example:'''
+     * 
      * {{{
-     *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome430
+     *   import net.liftmodules.{FoBoFA => FoBo}
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome430
      * }}}
-     * @since v1.4
-     */
-    case object FontAwesome430 extends FAToolkit {
-      FoBoResources.init
-      FoBoResources.fontAwesome430
-    }    
+     */    
+     case object FontAwesome430 extends ToolKit {
+       FoBoFARes.Resource.FontAwesome430
+       //FoBoFAAPI.API.FontAwesome4
+     }  
     
-     /**
-     * Enable usage of Font-Awesome version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.
+    /**
+     * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.
      * @version 4.1.0
-     *
-     *  '''Example:'''
-     *
+     * 
+     * '''Example:'''
+     * 
      * {{{
-     *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome410
+     *   import net.liftmodules.{FoBoFARes => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.FontAwesome410
      * }}}
-     * @since v1.3
-     */
-    case object FontAwesome410 extends FAToolkit {
-      FoBoResources.init
-      FoBoResources.fontAwesome410
-    }     
-    
-     /**
-     * Enable usage of Font-Awesome version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.
+     */    
+     case object FontAwesome410 extends ToolKit {
+       FoBoFARes.Resource.FontAwesome410
+       //FoBoFAAPI.API.FontAwesome4
+     }  
+     
+    /**
+     * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.
      * @version 4.0.3
-     *
-     *  '''Example:'''
-     *
+     * 
+     * '''Example:'''
+     * 
      * {{{
-     *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome403
+     *   import net.liftmodules.{FoBoFARes => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.FontAwesome403
      * }}}
-     * @since v1.2
-     */
-    case object FontAwesome403 extends FAToolkit {
-      FoBoResources.init
-      FoBoResources.fontAwesome403
-    } 
-      
-    
-     /**
-     * Enable usage of Font-Awesome version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.
+     */    
+     case object FontAwesome403 extends ToolKit {
+       FoBoFARes.Resource.FontAwesome403
+       //FoBoFAAPI.API.FontAwesome4
+     }   
+     
+    /**
+     * Enable usage of FoBo's FontAwesome resources and API version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.
      * @version 3.2.1
-     *
-     *  '''Example:'''
-     *
+     * 
+     * '''Example:'''
+     * 
      * {{{
-     *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome321
+     *   import net.liftmodules.{FoBoFARes => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.FontAwesome321
      * }}}
-     *
-     */
-    case object FontAwesome321 extends FAToolkit {
-      FoBoResources.init
-      FoBoResources.fontAwesome321
-    }
-        
-    /**
-     * Object for initiating FoBo API packages. 
-     */
-    private object FoBoAPI {
-      lazy val init: Unit = {
-        LiftRules.addToPackages("net.liftmodules.FoBoFA")  
-      }
-    }    
+     */    
+     case object FontAwesome321 extends ToolKit {
+       FoBoFARes.Resource.FontAwesome321
+       //FoBoFAAPI.API.FontAwesome4
+     }     
+    
+  }
+  
+
+  /*=== Resource ============================================*/
+  
+  object Resource extends Resource {
+    var Init: Resource = null
     
     /**
-     * Object holding internally used FoBo resources.
-     */
-    private object FoBoResources {
+     * Enable usage of FoBo's FontAwesome resources version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
+     * @version 4.3.0
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoFA => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.FontAwesome430
+     * }}}
+     */    
+     case object FontAwesome430 extends Resource {
+       FoBoFARes.Resource.FontAwesome430
+     } 
+    
+    /**
+     * Enable usage of FoBo's FontAwesome resources version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.
+     * @version 4.1.0
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoFA => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.FontAwesome410
+     * }}}
+     */    
+     case object FontAwesome410 extends Resource {
+       FoBoFARes.Resource.FontAwesome410
+     }  
+     
+    /**
+     * Enable usage of FoBo's FontAwesome resources version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.
+     * @version 4.0.3
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoFA => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.FontAwesome403
+     * }}}
+     */    
+     case object FontAwesome403 extends Resource {
+       FoBoFARes.Resource.FontAwesome403
+     }   
+     
+    /**
+     * Enable usage of FoBo's FontAwesome resources version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.
+     * @version 3.2.1
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoFA => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.FontAwesome321
+     * }}}
+     */    
+     case object FontAwesome321 extends Resource {
+       FoBoFARes.Resource.FontAwesome321
+     }       
+    
+  }
+  
+  /*=== API ============================================*/
+  
+  object API extends API {
+    var Init: API = null
+    
+    /**
+     * Enable usage of FoBo's FontAwesome API version 4&#8228;X&#8228;X in your bootstrap liftweb Boot.
+     * @version 4.X.X
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoFA => FoBo}
+     *    :
+     *   FoBo.API.Init=FoBo.API.FontAwesome4
+     * }}}
+     */    
+     case object FontAwesome4 extends API {
+       //ToDo get from module fobo-fontawesome-api in FoBoFAAPI
+       //FoBoFAAPI.API.FontAwesome4
+       FoBoAPI.init
+     }
+    
+  }
+  
+  /*=== InitParam (deprecated) ============================================*/
+  
+  /**
+   *
+   */
+  @deprecated("Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.[Toolkit Object]","1.6.0")
+  object InitParam extends FAToolkit {
+    var ToolKit: FAToolkit = null 
+  }
 
-      lazy val init: Unit = {
-        ResourceServer.allow {
-          case "fobo" :: tail => true
-        }
-      }      
+   /**
+   * Enable usage of Font-Awesome version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
+   * @version 4.3.0
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome430
+   * }}}
+   * @since v1.4
+   */
+  @deprecated("Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.FontAwesome430","1.6.0")
+  case object FontAwesome430 extends FAToolkit {
+    ToolKit.FontAwesome430
+  }    
+    
+   /**
+   * Enable usage of Font-Awesome version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.
+   * @version 4.1.0
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome410
+   * }}}
+   * @since v1.3
+   */
+  @deprecated("Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.FontAwesome410","1.6.0")
+  case object FontAwesome410 extends FAToolkit {
+    ToolKit.FontAwesome410
+  }     
+    
+   /**
+   * Enable usage of Font-Awesome version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.
+   * @version 4.0.3
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome403
+   * }}}
+   * @since v1.2
+   */
+  @deprecated("Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.FontAwesome403","1.6.0")
+  case object FontAwesome403 extends FAToolkit {
+    ToolKit.FontAwesome403
+  } 
       
-      lazy val fontAwesome430 = {
-        ResourceServer.rewrite {
-          case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "4.3.0", "css", "font-awesome.css")
-          case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "4.3.0", "css", "font-awesome.min.css")
-        }
-      } 
-      
-      lazy val fontAwesome410 = {
-        ResourceServer.rewrite {
-          case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "4.1.0", "css", "font-awesome.css")
-          case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "4.1.0", "css", "font-awesome.min.css")
-        }
-      } 
-      
-      lazy val fontAwesome403 = {
-        ResourceServer.rewrite {
-          case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "4.0.3", "css", "font-awesome.css")
-          case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "4.0.3", "css", "font-awesome.min.css")
-        }
-      }  
-      
-      lazy val fontAwesome321 = {
-        ResourceServer.rewrite {
-          case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "3.2.1", "css", "font-awesome.css")
-          case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-min.css")
-          case "fobo" :: "font-awesome-ie7.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-ie7.css")
-          case "fobo" :: "font-awesome-ie7.css" :: Nil => List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-ie7-min.css")
-
-        }
-      }  
-         
-      
+   /**
+   * Enable usage of Font-Awesome version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.
+   * @version 3.2.1
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome321
+   * }}}
+   *
+   */
+  @deprecated("Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.FontAwesome321","1.6.0")
+  case object FontAwesome321 extends FAToolkit {
+    ToolKit.FontAwesome321
+  }
+        
+  /**
+   * Object for initiating FoBo API packages. 
+   */
+  private object FoBoAPI {
+    lazy val init: Unit = {
+      LiftRules.addToPackages("net.liftmodules.FoBoFA")  
     }
+  }    
 
 }
 

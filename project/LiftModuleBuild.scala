@@ -36,7 +36,15 @@ object LiftModuleFoBoBuild extends Build {
    lazy val fontAwesome = Project(id   = "fobo-font-awesome", 
                              base = file("Font-Awesome"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile),
+                                 aggregate = Seq(fontAwesomeres)
+                                 ).dependsOn(fontAwesomeres)   
+                                 
+   lazy val fontAwesomeres = Project(id   = "fobo-font-awesome-res", 
+                             base = file("Font-Awesome-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
+                                 
                              
   lazy val bootstrap    = Project(id   = "fobo-twitter-bootstrap", 
                              base = file("Twitter-Bootstrap"),
