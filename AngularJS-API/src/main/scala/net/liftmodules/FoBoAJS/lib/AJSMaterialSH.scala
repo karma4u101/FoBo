@@ -1,4 +1,4 @@
-package net.liftmodules.FoBoAJSAPI.lib
+package net.liftmodules.FoBoAJS.lib
 
 import net.liftweb.util._
 

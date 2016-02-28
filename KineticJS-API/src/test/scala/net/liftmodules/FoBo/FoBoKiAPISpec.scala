@@ -7,7 +7,7 @@ import common._
 
 import org.specs2.mutable.Specification
 
-object FoBoKiSpec extends Specification {
+object FoBoKiAPISpec extends Specification {
   "FoBoKiSpec Specification".title
 
   sequential 

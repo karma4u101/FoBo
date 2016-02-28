@@ -1,4 +1,4 @@
-package net.liftmodules.FoBoAJSAPI.snippet.FoBo
+package net.liftmodules.FoBoAJS.snippet.FoBo
 
 import xml._
 import org.specs2.mutable.Specification

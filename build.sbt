@@ -104,7 +104,8 @@ libraryDependencies <++= scalaVersion { sv =>
 //## 
 //################################################################
 credentials += Credentials(file(Path.userHome + "/.sbt/liftmodules/.credentials") )
-//credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
+
+credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
 
 //credentials += Credentials(Path.userHome / ".sbt" / ".credentials" )
 //publishTo <<= version { v: String =>

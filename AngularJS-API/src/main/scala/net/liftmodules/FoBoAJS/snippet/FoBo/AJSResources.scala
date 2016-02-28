@@ -1,4 +1,4 @@
-package net.liftmodules.FoBoAJSAPI.snippet.FoBo
+package net.liftmodules.FoBoAJS.snippet.FoBo
 
 import scala.xml.{ NodeSeq, Text }
 import net.liftweb.util._

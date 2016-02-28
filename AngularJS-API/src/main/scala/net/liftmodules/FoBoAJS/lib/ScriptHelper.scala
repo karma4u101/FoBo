@@ -1,4 +1,4 @@
-package net.liftmodules.FoBoAJSAPI.lib
+package net.liftmodules.FoBoAJS.lib
 
 /**
  * @author peter

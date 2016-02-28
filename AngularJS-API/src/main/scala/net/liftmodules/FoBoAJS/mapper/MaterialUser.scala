@@ -1,6 +1,6 @@
-package net.liftmodules.FoBoAJSAPI.mapper
+package net.liftmodules.FoBoAJS.mapper
 
-import net.liftmodules.FoBoAJSAPI.lib.{AJSMaterialSH => msh}
+import net.liftmodules.FoBoAJS.lib.{AJSMaterialSH => msh}
 import net.liftweb.http._
 import js._
 import JsCmds._
