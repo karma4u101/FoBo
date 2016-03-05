@@ -8,7 +8,7 @@ import common._
 import org.specs2.mutable.Specification
 
 object FoBoFAAPISpec extends Specification {
-  "FoBoFASpec Specification".title
+  "FoBoFAAPISpec Specification".title
 
   sequential
   

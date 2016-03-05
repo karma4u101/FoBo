@@ -6,12 +6,16 @@ import http._
 import common._
 
 /**
- * ==FoBo - Sub-module== 
- * This package object is only of interest to you if you are using this module 
- * as a stand alone artifact dependency in your project (without FoBo).
- * This package object provides information on how to initiate and use this module 
- * in your project. If you are using this module in FoBo see [[net.liftmodules.FoBo]] 
- * for usage information. 
+ * ==FoBo API sub-module== 
+ * This package object provides module initiation in FoBo's most fine grain level. 
+ * 
+ * This is useful if you want to depend on a small subset of FoBo's functionality 
+ * by only pulling in some specific FoBo artifact(s) that provides toolkit resources
+ * or FoBo API functions.
+ * 
+ * This module provides API functions for the FontAwesome module.
+ *  
+ * For more information on how to set up and use the FoBo modules see the FoBo readme. 
  */
 package object FoBoFAAPI {
 
