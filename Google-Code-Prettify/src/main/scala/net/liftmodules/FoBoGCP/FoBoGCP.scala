@@ -6,28 +6,106 @@ import http._
 import common._
 
 /**
- * ==FoBo - Sub-module== 
+ * ==FoBo Toolkit sub-module== 
+ * This package object provides Google Code Prettify integration into your Lift/FoBo application.
+ * 
  * This package object is only of interest to you if you are using this module 
- * as a stand alone artifact dependency in your project (without FoBo).
- * This package object provides information on how to initiate and use this module 
- * in your project. If you are using this module in FoBo see [[net.liftmodules.FoBo]] 
- * for usage information. 
+ * as a stand alone artifact dependency in your project (without the FoBo meta artifact).
+ * This package object provides information on how to initiate and use it 
+ * in your project. 
+ * 
+ * If you are using this module via the FoBo meta artifact 
+ * see [[net.liftmodules.FoBo]] for usage information. 
  */
 package object FoBoGCP {
 
   @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoGCP.InitParam","1.6.0")
   def init() {
-//    LiftRules.addToPackages("net.liftmodules.FoBoGCP")
-//    ResourceServer.allow {
-//      case "fobo" :: tail => true
-//    }
   }
 
+  //@deprecated("","1.6.0")
   abstract sealed trait FoBoToolkit
-
+  abstract sealed trait ToolKit
+  abstract sealed trait Resource
+  abstract sealed trait API
+  
+  
+  /*=== ToolKit ============================================*/
+  
+  object ToolKit extends ToolKit {
+    var Init: ToolKit = null 
+    
+   /**
+     * Enable usage of FoBo's Google Code Prettify API and resources version Jun2011 in your bootstrap liftweb Boot.
+     * @version Jun2011
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoGCP => FoBo}
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.PrettifyJun2011
+     * }}}
+     */    
+     case object PrettifyJun2011 extends ToolKit {
+       FoBoGCPRes.Resource.PrettifyJun2011
+       //FoBoPaAPI.API.Prettify1
+     }    
+    
+  }
+  
+  /*=== Resource ============================================*/
+  
+  object Resource extends Resource {
+    var Init: Resource = null
+    
+   /**
+     * Enable usage of FoBo's Google Code Prettify resources version Jun2011 in your bootstrap liftweb Boot.
+     * @version Jun2011
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoGCP => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.PrettifyJun2011
+     * }}}
+     */    
+     case object PrettifyJun2011 extends Resource {
+       FoBoGCPRes.Resource.PrettifyJun2011
+     }       
+  }
+  
+  /*=== API ============================================*/
+  
+  object API extends API {
+    var Init: API = null
+    /**
+     * Enable usage of FoBo's Google Code Prettify API version 1&#8228;X&#8228;X in your bootstrap liftweb Boot.
+     * @version 1.X.X
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoGCP => FoBo}
+     *    :
+     *   FoBo.API.Init=FoBo.API.Prettify1
+     * }}}
+     */    
+     case object Prettify1 extends API {
+       //ToDo get from module fobo-google-code-prettify-api in FoBoGCPAPI
+       //FoBoGCPAPI.API.Prettify1
+       FoBoAPI.init
+     }
+    
+  }
+  
+  /*=== InitParam (deprecated) ============================================*/
+  
   /**
    *
    */
+  @deprecated("Use FoBoPa.ToolKit.Init=FoBoPa.ToolKit.[Toolkit Object]","1.6.0")
   object InitParam extends FoBoToolkit {
     var ToolKit: FoBoToolkit = null 
   }
@@ -43,100 +121,20 @@ package object FoBoGCP {
   *   FoBoGCP.InitParam.Toolkit=FoBoGCP.PrettifyJun2011
   * }}}
   */
+  @deprecated("Use FoBoGCP.ToolKit.Init=FoBoGCP.ToolKit.PrettifyJun2011","1.6.0")
   case object PrettifyJun2011 extends FoBoToolkit {
-    FoBoResources.init 
-    FoBoResources.googleCodePrettify
+    ToolKit.PrettifyJun2011
   }
 
-
+  /**
+   * Object for initiating FoBo API packages. 
+   */
   private object FoBoAPI {
     lazy val init: Unit = {
       LiftRules.addToPackages("net.liftmodules.FoBoGCP")  
     }
   }
 
-  /**
-   * Object holding internally used FoBo resources.
-   */
-  private object FoBoResources {
-
-    lazy val init: Unit = {
-      ResourceServer.allow {
-        case "fobo" :: tail => true
-      }
-    }
-  
-    lazy val googleCodePrettify: Unit = {
-      ResourceServer.rewrite {
-        /*Google code prettify*/
-        case "fobo" :: "prettify.css" :: Nil if Props.devMode => List("fobo", "google-code", "css", "prettify.css")
-        case "fobo" :: "prettify.css" :: Nil => List("fobo", "google-code", "css", "prettify-min.css")
- 
-        case "fobo" :: "desert.css" :: Nil if Props.devMode => List("fobo", "google-code", "css", "desert.css")
-        case "fobo" :: "desert.css" :: Nil => List("fobo", "google-code", "css", "desert-min.css")
-
-        case "fobo" :: "sunburst.css" :: Nil if Props.devMode => List("fobo", "google-code", "css", "sunburst.css")
-        case "fobo" :: "sunburst.css" :: Nil => List("fobo", "google-code", "css", "sunburst-min.css")
-      
-        /*google code prettify*/
-        case "fobo" :: "prettify.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "prettify.js")
-        case "fobo" :: "prettify.js" :: Nil => List("fobo", "google-code", "js", "prettify.js")
-      
-        case "fobo" :: "lang-scala.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-scala.js")
-        case "fobo" :: "lang-scala.js" :: Nil => List("fobo", "google-code", "js", "lang-scala.js")      
-      
-        case "fobo" :: "lang-apollo.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-apollo.js")
-        case "fobo" :: "lang-apollo.js" :: Nil => List("fobo", "google-code", "js", "lang-apollo.js")            
-
-        case "fobo" :: "lang-clj.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-clj.js")
-        case "fobo" :: "lang-clj.js" :: Nil => List("fobo", "google-code", "js", "lang-clj.js")     
-
-        case "fobo" :: "lang-css.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-css.js")
-        case "fobo" :: "lang-css.js" :: Nil => List("fobo", "google-code", "js", "lang-css.js")     
-
-        case "fobo" :: "lang-hs.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-hs.js")
-        case "fobo" :: "lang-hs.js" :: Nil => List("fobo", "google-code", "js", "lang-hs.js")     
-
-        case "fobo" :: "lang-lisp.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-lisp.js")
-        case "fobo" :: "lang-lisp.js" :: Nil => List("fobo", "google-code", "js", "lang-lisp.js")     
-
-        case "fobo" :: "lang-lua.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-lua.js")
-        case "fobo" :: "lang-lua.js" :: Nil => List("fobo", "google-code", "js", "lang-lua.js")     
-
-        case "fobo" :: "lang-ml.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-ml.js")
-        case "fobo" :: "lang-ml.js" :: Nil => List("fobo", "google-code", "js", "lang-ml.js")     
-
-        case "fobo" :: "lang-n.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-n.js")
-        case "fobo" :: "lang-n.js" :: Nil => List("fobo", "google-code", "js", "lang-n.js")     
-
-        case "fobo" :: "lang-proto.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-proto.js")
-        case "fobo" :: "lang-proto.js" :: Nil => List("fobo", "google-code", "js", "lang-proto.js")           
-
-        case "fobo" :: "lang-sql.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-sql.js")
-        case "fobo" :: "lang-sql.js" :: Nil => List("fobo", "google-code", "js", "lang-sql.js")     
-
-        case "fobo" :: "lang-tex.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-tex.js")
-        case "fobo" :: "lang-tex.js" :: Nil => List("fobo", "google-code", "js", "lang-tex.js")     
-
-        case "fobo" :: "lang-vb.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-vb.js")
-        case "fobo" :: "lang-vb.js" :: Nil => List("fobo", "google-code", "js", "lang-vb.js")     
-
-        case "fobo" :: "lang-vhdl.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-vhdl.js")
-        case "fobo" :: "lang-vhdl.js" :: Nil => List("fobo", "google-code", "js", "lang-vhdl.js")     
-
-        case "fobo" :: "lang-wiki.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-wiki.js")
-        case "fobo" :: "lang-wiki.js" :: Nil => List("fobo", "google-code", "js", "lang-wiki.js")     
-
-        case "fobo" :: "lang-xq.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-xq.js")
-        case "fobo" :: "lang-xq.js" :: Nil => List("fobo", "google-code", "js", "lang-xq.js")     
-
-        case "fobo" :: "lang-yaml.js" :: Nil if Props.devMode => List("fobo", "google-code", "js", "lang-yaml.js")
-        case "fobo" :: "lang-yaml.js" :: Nil => List("fobo", "google-code", "js", "lang-yaml.js")             
-                  
-      }
-    }
-  
-  }
 }
 
 

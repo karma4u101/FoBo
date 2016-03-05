@@ -93,7 +93,14 @@ object LiftModuleFoBoBuild extends Build {
   lazy val prettify     = Project(id   = "fobo-google-code-prettify", 
                              base = file("Google-Code-Prettify"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
-                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                               
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile),
+                                 aggregate = Seq(prettifyres)   
+                                 ).dependsOn(prettifyres)                                   
+                                 
+  lazy val prettifyres     = Project(id   = "fobo-google-code-prettify-res", 
+                             base = file("Google-Code-Prettify-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                    
  
   lazy val kineticjs    = Project(id   = "fobo-kineticjs", 
                              base = file("KineticJS"),
