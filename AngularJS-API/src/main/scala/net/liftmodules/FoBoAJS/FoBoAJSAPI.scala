@@ -13,7 +13,7 @@ import common._
  * by only pulling in some specific FoBo artifact(s) that provides toolkit resources
  * or FoBo API functions.
  * 
- * This module provides API functions for the Angular module.
+ * This module provides initiation of API functions for the Angular module.
  *  
  * For more information on how to set up and use the FoBo modules see the FoBo readme. 
  */
