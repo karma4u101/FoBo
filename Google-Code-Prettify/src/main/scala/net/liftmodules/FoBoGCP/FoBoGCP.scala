@@ -105,7 +105,7 @@ package object FoBoGCP {
   /**
    *
    */
-  @deprecated("Use FoBoPa.ToolKit.Init=FoBoPa.ToolKit.[Toolkit Object]","1.6.0")
+  @deprecated("Use FoBoGCP.ToolKit.Init=FoBoPa.ToolKit.[Toolkit Object]","1.6.0")
   object InitParam extends FoBoToolkit {
     var ToolKit: FoBoToolkit = null 
   }
