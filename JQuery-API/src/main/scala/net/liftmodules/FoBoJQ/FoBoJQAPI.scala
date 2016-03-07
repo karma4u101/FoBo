@@ -6,30 +6,79 @@ import http._
 import common._
 
 /**
- * ==FoBo - Sub-module== 
- * This package object is only of interest to you if you are using this module 
- * as a stand alone artifact dependency in your project (without FoBo).
- * This package object provides information on how to initiate and use this module 
- * in your project. If you are using this module in FoBo see [[net.liftmodules.FoBo]] 
- * for usage information. 
+ * ==FoBo API sub-module== 
+ * This package object provides module initiation in FoBo's most fine grain level. 
+ * 
+ * This is useful if you want to depend on a small subset of FoBo's functionality 
+ * by only pulling in some specific FoBo artifact(s) that provides toolkit resources
+ * or FoBo API functions.
+ * 
+ * This module provides initiation of API functions for the JQuery module.
+ *  
+ * For more information on how to set up and use the FoBo modules see the FoBo readme. 
+ */ usage information. 
  */
-package object FoBoJQ {
+package object FoBoJQAPI {
 
+  abstract sealed trait API
   
-  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoJQ.InitParam","1.6.0")  
+  object API extends API {
+    var Init: API = null
+    /**
+     * Enable usage of FoBo's JQuery API version 1 in your bootstrap liftweb Boot.
+     * @version 1.X.X
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoJQAPI => FoBo}
+     *    :
+     *   FoBo.API.Init=FoBo.API.JQuery1
+     * }}}
+     */    
+     case object JQuery1 extends API {
+       FoBoAPI.init
+     } 
+    
+    /**
+     * Enable usage of FoBo's JQuery API version 1 in your bootstrap liftweb Boot.
+     * @version 2.X.X
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoJQAPI => FoBo}
+     *    :
+     *   FoBo.API.Init=FoBo.API.JQuery2
+     * }}}
+     */    
+     case object JQuery2 extends API {
+       FoBoAPI.init
+     }     
+    
+    
+  }
+
+  /**
+   * Object for initiating FoBo API packages. 
+   */
+  private object FoBoAPI {
+    lazy val init: Unit = {
+      LiftRules.addToPackages("net.liftmodules.FoBoJQ")      
+    }
+  }   
+  
+//old stuff  
+  
   def init() {
-//    LiftRules.addToPackages("net.liftmodules.FoBoJQ")
-//    ResourceServer.allow {
-//      case "fobo" :: tail => true
-//    }
+    LiftRules.addToPackages("net.liftmodules.FoBoJQ")
+    ResourceServer.allow {
+      case "fobo" :: tail => true
+    }
   }
 
  
-  //@deprecated("","1.6.0")
   abstract sealed trait FoBoJQ
-  abstract sealed trait ToolKit
-  abstract sealed trait Resource
-  abstract sealed trait API  
 
   /**
    *
