@@ -13,7 +13,7 @@ import common._
  * by only pulling in some specific FoBo artifact(s) that provides toolkit resources
  * or FoBo API functions.
  * 
- * This module provides toolkit resources for the Google-Code-Prettify module.
+ * This module provides initation of toolkit resources for the Google-Code-Prettify module.
  * 
  * For more information on how to set up and use the FoBo modules see the FoBo readme.
  */
