@@ -1243,38 +1243,6 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
     net.liftmodules.FoBoJQ.JQuery1113
   }
 
-/**
- * Enable usage of JQuery version 1&#8228;11&#8228;1 in your bootstrap liftweb Boot.
- * @version 1.11.1
- * 
- * '''Example:'''
- * 
- * {{{
- *   FoBo.InitParam.JQuery=FoBo.JQuery1111
- * }}}
- * @since v1.3
- */
-  @deprecated("Use v1.11.3 or later","1.4") 
-  case object JQuery1111 extends FoBoJQuery {
-    net.liftmodules.FoBoJQ.JQuery1111
-  }
-
- /**
- * Enable usage of JQuery version 1&#8228;11&#8228;0 in your bootstrap liftweb Boot.
- * @version 1.11.0
- * 
- * '''Example:'''
- * 
- * {{{
- *   FoBo.InitParam.JQuery=FoBo.JQuery1110
- * }}}
- * @since v1.2
- */
-  @deprecated("Use v1.11.1 or later","1.3") 
-  case object JQuery1110 extends FoBoJQuery {
-    net.liftmodules.FoBoJQ.JQuery1110
-  }
-
  /**
  * Enable usage of JQuery version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.
  * @version 1.10.2
