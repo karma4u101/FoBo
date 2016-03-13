@@ -17,10 +17,6 @@ package object FoBoKi {
 
   @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoKi.InitParam","1.6.0")
   def init() {
-//    LiftRules.addToPackages("net.liftmodules.FoBoKi")
-//    ResourceServer.allow {
-//      case "fobo" :: tail => true
-//    }
   }
 
   //@deprecated("","1.6.0")

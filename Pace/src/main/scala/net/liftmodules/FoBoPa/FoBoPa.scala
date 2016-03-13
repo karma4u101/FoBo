@@ -19,17 +19,10 @@ import common._
  */
 package object FoBoPa {
   
-  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoPa.InitParam","1.6.0")
-  def init() {
-  }
-
-  //@deprecated("","1.6.0")
-  abstract sealed trait PaToolkit
   abstract sealed trait ToolKit
   abstract sealed trait Resource
   abstract sealed trait API
 
-  
   /*=== ToolKit ============================================*/
   
   object ToolKit extends ToolKit {
@@ -100,6 +93,13 @@ package object FoBoPa {
   }
   
   /*=== InitParam (deprecated) ============================================*/
+
+  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoPa.InitParam","1.6.0")
+  def init() {
+  }
+
+  @deprecated("Use ToolKit or Resouce","1.6.0")
+  abstract sealed trait PaToolkit
   
   /**
    *

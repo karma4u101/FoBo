@@ -78,41 +78,7 @@ import common._
  * 
  */
 package object FoBo {
-  
-  /**
-   * When your Lift application first starts up, it executes the code in Boot.scala
-   * By calling FoBo.init() in Boot.scala the FoBo API packages and toolkit resources 
-   * will be available in your Lift application.
-   * @example In method boot in the Boot class of package bootstrap.liftweb set
-   * {{{
-   *    FoBo.InitParam.JQuery=FoBo.JQueryXYZ  //one jquery version
-   *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ //one or more toolkits 
-   *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ 
-   *     : 
-   *    FoBo.init()
-   * }}}
-   */
-  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBo.InitParam","1.6.0")
-  def init() {
-    //add packages for modules with snippets 
-    //LiftRules.addToPackages("net.liftmodules.FoBo")
-    //the rest of the packages could probably 
-    //be moved into it's respective case objects.
-    //LiftRules.addToPackages("net.liftmodules.FoBoAJS")
-    //LiftRules.addToPackages("net.liftmodules.FoBoBs")
-    //LiftRules.addToPackages("net.liftmodules.FoBoTB")
     
-//    ResourceServer.allow {
-//      case "fobo" :: tail => true
-//    }
-  }
-
-
-  //@deprecated("","1.6.0")
-  abstract sealed trait FoBoJQuery
-  //@deprecated("","1.6.0")
-  abstract sealed trait FoBoToolkit
-  
   /**
    * Initiate FoBo's ToolKit(s) in you bootstrap liftweb Boot.
    * Using the ToolKit initiation you will bring in both the 
@@ -156,7 +122,8 @@ package object FoBo {
    */   
   abstract sealed trait API
   
-  /* */
+  /*=== ToolKit ============================================*/
+  
   object ToolKit extends ToolKit {
     var Init: ToolKit = null 
     
@@ -456,6 +423,7 @@ package object FoBo {
      
   }//end ToolKit
   
+  /*=== Resource ============================================*/
   
   object Resource extends Resource {
     var Init: Resource = null
@@ -741,6 +709,8 @@ package object FoBo {
      }      
   }  
 
+  /*=== API ============================================*/
+  
   object API extends API {
     var Init: API = null
     
@@ -774,6 +744,32 @@ package object FoBo {
     
   }
 
+  
+  /*=============InitParam (deprecated)=====================*/
+  
+  /**
+   * When your Lift application first starts up, it executes the code in Boot.scala
+   * By calling FoBo.init() in Boot.scala the FoBo API packages and toolkit resources 
+   * will be available in your Lift application.
+   * @example In method boot in the Boot class of package bootstrap.liftweb set
+   * {{{
+   *    FoBo.InitParam.JQuery=FoBo.JQueryXYZ  //one jquery version
+   *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ //one or more toolkits 
+   *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ 
+   *     : 
+   *    FoBo.init()
+   * }}}
+   */
+  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBo.InitParam","1.6.0")
+  def init() {
+  }
+
+
+  //@deprecated("","1.6.0")
+  abstract sealed trait FoBoJQuery
+  //@deprecated("","1.6.0")
+  abstract sealed trait FoBoToolkit
+  
 /**
  * Extends your Lift SiteMap with various common bootstrap menu manipulations such 
  * as horizontal and vertical menu dividers and menu labels (labels coming soon).
