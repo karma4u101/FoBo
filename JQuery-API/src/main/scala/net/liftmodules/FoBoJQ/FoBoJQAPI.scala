@@ -16,8 +16,7 @@ import common._
  * This module provides initiation of API functions for the JQuery module.
  *  
  * For more information on how to set up and use the FoBo modules see the FoBo readme. 
- */ usage information. 
- */
+ */ 
 package object FoBoJQAPI {
 
   abstract sealed trait API

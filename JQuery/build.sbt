@@ -18,10 +18,10 @@ resolvers ++= Seq(
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
 )
 
-libraryDependencies <++= (liftVersion,liftEdition) { (v,e) =>
+libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"      %% "lift-webkit"                % v       % "provided" ::
     "net.liftweb"      %% "lift-testkit"               % v       % "provided" ::
-    "net.liftmodules"  %% ("lift-jquery-module"+"_"+e) % "2.9"   % "compile" :: 
+    "net.liftmodules"  %% ("fobo-jquery-res"+"_"+e)    % mv      % "provided" ::
     Nil
 }
 
