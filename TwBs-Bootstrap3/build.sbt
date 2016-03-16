@@ -12,6 +12,8 @@ parallelExecution in Test := false
 
 EclipseKeys.withSource := true
 
+//scalacOptions += "-Ylog-classpath"
+
 resolvers ++= Seq(
   "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
@@ -38,6 +40,7 @@ libraryDependencies <++= scalaVersion { sv =>
 }
 
 libraryDependencies ++= { 
+  "javax.servlet"     %   "javax.servlet-api" % "3.1.0"       % "provided,test" ::
   "ch.qos.logback" % "logback-classic" % "1.0.0" % "provided" ::
   "log4j" % "log4j" % "1.2.16" % "provided" ::
   Nil
