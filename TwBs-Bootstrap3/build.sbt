@@ -38,7 +38,6 @@ libraryDependencies <++= scalaVersion { sv =>
 }
 
 libraryDependencies ++= { 
-  "javax.servlet"            % "servlet-api"    % "2.5" ::
   "ch.qos.logback" % "logback-classic" % "1.0.0" % "provided" ::
   "log4j" % "log4j" % "1.2.16" % "provided" ::
   Nil

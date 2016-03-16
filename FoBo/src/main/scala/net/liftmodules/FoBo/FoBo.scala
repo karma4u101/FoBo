@@ -398,15 +398,81 @@ package object FoBo {
       net.liftmodules.FoBoAJS.API.Angular1
       net.liftmodules.FoBoAJS.Resource.AJSUIGrid307
     }         
-    /*===Bootstrap ToolKit===============================================================*/
     
     /*===Font Awesome ToolKit===============================================================*/
     
+   /**
+     * Enable usage of FoBo's FontAwesome resources and API version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
+     * @version 4.3.0
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome430
+     * }}}
+     */    
+     case object FontAwesome430 extends ToolKit {
+       FoBoFA.ToolKit.FontAwesome430
+     }  
+    
+    /**
+     * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.
+     * @version 4.1.0
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome410
+     * }}}
+     */    
+     case object FontAwesome410 extends ToolKit {
+       FoBoFA.ToolKit.FontAwesome410
+     }  
+     
+    /**
+     * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.
+     * @version 4.0.3
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome403
+     * }}}
+     */    
+     case object FontAwesome403 extends ToolKit {
+       FoBoFA.ToolKit.FontAwesome403
+     }   
+     
+    /**
+     * Enable usage of FoBo's FontAwesome resources and API version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.
+     * @version 3.2.1
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome321
+     * }}}
+     */    
+     case object FontAwesome321 extends ToolKit {
+       FoBoFA.ToolKit.FontAwesome321
+     }         
+    
     /*===Google Code Prettify ToolKit===============================================================*/
     
+    /*===JQuery ToolKit===============================================================*/
+   
     /*===Kinetic ToolKit===============================================================*/
     
     /*===Pace ToolKit===============================================================*/
+    
    /**
      * Enable usage of FoBo's Pace API and resources version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
      * @version 0.4.15
@@ -421,7 +487,13 @@ package object FoBo {
       net.liftmodules.FoBoPa.ToolKit.Pace0415
      }    
      
+     /*===Bootstrap3 ToolKit===============================================================*/     
+     
+     /*===Bootstrap3 ToolKit===============================================================*/    
+     
   }//end ToolKit
+  
+  
   
   /*=== Resource ============================================*/
   
@@ -685,11 +757,75 @@ package object FoBo {
       net.liftmodules.FoBoAJS.Resource.AJSUIGrid307
     }      
     
-    /*===Bootstrap Resource===============================================================*/
-    
     /*===Font Awesome Resource===============================================================*/
     
+    /**
+     * Enable usage of FoBo's FontAwesome resources version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
+     * @version 4.3.0
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.FontAwesome430
+     * }}}
+     */    
+     case object FontAwesome430 extends Resource {
+       FoBoFA.Resource.FontAwesome430
+     } 
+    
+    /**
+     * Enable usage of FoBo's FontAwesome resources version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.
+     * @version 4.1.0
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.FontAwesome410
+     * }}}
+     */    
+     case object FontAwesome410 extends Resource {
+       FoBoFA.Resource.FontAwesome410
+     }  
+     
+    /**
+     * Enable usage of FoBo's FontAwesome resources version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.
+     * @version 4.0.3
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.FontAwesome403
+     * }}}
+     */    
+     case object FontAwesome403 extends Resource {
+       FoBoFA.Resource.FontAwesome403
+     }   
+     
+    /**
+     * Enable usage of FoBo's FontAwesome resources version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.
+     * @version 3.2.1
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.FontAwesome321
+     * }}}
+     */    
+     case object FontAwesome321 extends Resource {
+       FoBoFA.Resource.FontAwesome321
+     }  
+     
     /*===Google Code Prettify Resource===============================================================*/
+    
+    /*===JQuery Resource===============================================================*/
     
     /*===Kinetic Resource===============================================================*/
     
@@ -706,9 +842,16 @@ package object FoBo {
      */    
      case object Pace0415 extends Resource {
        net.liftmodules.FoBoPa.Resource.Pace0415
-     }      
+     }
+     
+     /*===Bootstrap3 Resource===============================================================*/
+     
+     /*===Bootstrap2 Resource===============================================================*/
+     
   }  
 
+  
+  
   /*=== API ============================================*/
   
   object API extends API {
