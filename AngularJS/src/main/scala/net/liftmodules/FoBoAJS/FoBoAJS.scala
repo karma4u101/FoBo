@@ -4,7 +4,6 @@ import _root_.net.liftweb._
 import util.{ Props }
 import http._
 import common._
-
 /**
  * ==FoBo Toolkit sub-module== 
  * This package object provides Angular integration into your Lift/FoBo application.
@@ -21,10 +20,6 @@ package object FoBoAJS {
 
   @deprecated("Init is no longer nessesary as it is now automaticaly done for respective FoBoAJS.InitParam","1.6.0")
   def init() {
-//    LiftRules.addToPackages("net.liftmodules.FoBoAJS")
-//    ResourceServer.allow {
-//      case "fobo" :: tail => true
-//    }
   }
 
   

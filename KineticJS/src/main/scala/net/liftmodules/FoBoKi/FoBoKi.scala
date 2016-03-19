@@ -6,12 +6,16 @@ import http._
 import common._
 
 /**
- * ==FoBo - Sub-module== 
+ * ==FoBo Toolkit sub-module== 
+ * This package object provides KineticJs integration into your Lift/FoBo application.
+ * 
  * This package object is only of interest to you if you are using this module 
- * as a stand alone artifact dependency in your project (without FoBo).
- * This package object provides information on how to initiate and use this module 
- * in your project. If you are using this module in FoBo see [[net.liftmodules.FoBo]] 
- * for usage information. 
+ * as a stand alone artifact dependency in your project (without the FoBo meta artifact).
+ * This package object provides information on how to initiate and use it 
+ * in your project. 
+ * 
+ * If you are using this module via the FoBo meta artifact 
+ * see [[net.liftmodules.FoBo]] for usage information. 
  */
 package object FoBoKi {
 
@@ -24,6 +28,8 @@ package object FoBoKi {
   abstract sealed trait ToolKit
   abstract sealed trait Resource
   abstract sealed trait API
+  
+  /*===Kinetic ToolKit===============================================================*/
   
   object ToolKit extends ToolKit {
     var Init: ToolKit = null
@@ -42,11 +48,12 @@ package object FoBoKi {
      *
      */
       case object KineticJS510 extends ToolKit {
-        //FoBoKiAPI.API.KineticJS5
         FoBoKiRes.Resource.KineticJS510
       }    
     
   }
+  
+  /*===Kinetic Resource===============================================================*/
   
   object Resource extends Resource {
     var Init: Resource = null
