@@ -21,6 +21,8 @@ object FoBoSpec extends Specification  {
   //is treated as code is run in "devMode" while 'test' dose not assume this. 
  
   
+  /*=================Angular ====================================*/
+  
   //AngularJS148
   "With FoBo.InitParam.ToolKit set to FoBo.AngularJS148 the ResourceServer" should {
     "allow  fobo/angular.js" in {
@@ -488,110 +490,131 @@ object FoBoSpec extends Specification  {
   } 
     
   
-  //AngularJS
-//  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS148 the ResourceServer" should {
-//    "allow  fobo/angular.js" in {
-//      allowAngularJS148 must_== true 
-//    }   
-//    "rewrit fobo/angular.js to fobo/angular-js/1.4.8/js/angular.min.js" in {
-//      rewriteAngularJS148 must_== List("fobo", "angular-js", "1.4.8", "js", "angular.min.js")
-//    }       
-//  }
-  
-//  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS141 the ResourceServer" should {
-//    "allow  fobo/angular.js" in {
-//      allowAngularJS141 must_== true 
-//    }     
-//    "rewrit fobo/angular.js to fobo/angular-js/1.4.1/js/angular.min.js" in {
-//      rewriteAngularJS141 must_== List("fobo", "angular-js", "1.4.1", "js", "angular.min.js")
-//    }       
-//  }  
-  
-//  "With FoBo.InitParam.ToolKit set to FoBo.AJSUIBootstrap0100 the ResourceServer" should {
-//    "allow  fobo/angular.js" in {
-//      allowAJSUIBootstrap0100 must_== true 
-//    }     
-//    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.10.0/js/ui-bootstrap-0.10.0.min.js" in {
-//      rewriteAJSUIBootstrap0100 must_== List("fobo", "angular-ui", "bootstrap", "0.10.0", "js", "ui-bootstrap-0.10.0.min.js")
-//    }       
-//  }   
- 
-//  "With FoBo.InitParam.ToolKit set to FoBo.AJSNGGrid207 the ResourceServer" should {
-//    "allow  fobo/angular.js" in {
-//      allowAJSNGGrid207 must_== true 
+
+  /*=================FontAwesome ====================================*/
+  //FontAwesome321
+//  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome321 the ResourceServer" should {
+//    "allow  fobo/font-awesome.css" in {
+//      allowFontAwesome321 must_== true 
 //    }    
-//    "rewrit fobo/ng-grid.js to fobo/angular-ui/ng-grid/2.0.7/ng-grid-2.0.7.min.js" in {
-//      rewriteAJSNGGrid207 must_== List("fobo", "angular-ui","ng-grid", "2.0.7", "js", "ng-grid-2.0.7.min.js")
+//    "rewrit fobo/font-awesome.css to fobo/font-awesome/3.2.1/css/font-awesome.css" in {
+//      rewriteFontAwesome321CSS must_== List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-min.css")
 //    }       
 //  } 
   
-  //Angular UI Grid
-//  "With FoBo.InitParam.ToolKit set to FoBo.AJSUIGrid307 the ResourceServer" should {
-//    "allow  fobo/angular.js" in {
-//      allowAJSUIGrid307 must_== true 
-//    }    
-//    "rewrit fobo/ui-grid.js to fobo/angular-ui/ui-grid/3.0.7/js/ui-grid.min.js" in {
-//      rewriteAJSUIGrid307Js must_== List("fobo", "angular-ui", "ui-grid", "3.0.7", "js", "ui-grid.min.js")
-//    }      
-//    "rewrit fobo/ui-grid.css to fobo/angular-ui/ui-grid/3.0.7/css/ui-grid.min.css" in {
-//      rewriteAJSUIGrid307Css must_== List("fobo", "angular-ui", "ui-grid", "3.0.7", "css", "ui-grid.min.css")
-//    }    
-//  }   
-  
-  //Angular Material
-//  "With FoBo.InitParam.ToolKit set to FoBo.AJMaterial101 the ResourceServer" should {
-//    "allow  fobo/angular-material.js" in {
-//      allowAJMaterial101 must_== true 
-//    }     
-//    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.1/js/angular-material.min.js" in {
-//      rewriteAJMaterial101JS must_== List("fobo", "angular-material", "1.0.1", "js", "angular-material.min.js")
-//    }      
-//    "rewrit fobo/angular-material.css to fobo/angular-material/1.0.1/js/angular-material.min.css" in {
-//      rewriteAJMaterial101CSS must_== List("fobo", "angular-material", "1.0.1", "css", "angular-material.min.css")
-//    }    
-//  }    
-    
-//  "With FoBo.InitParam.ToolKit set to FoBo.AJMaterial0100 the ResourceServer" should {
-//    "allow  fobo/angular-material.js" in {
-//      allowAJMaterial0100 must_== true 
-//    }     
-//    "rewrit fobo/angular-material.js to fobo/angular-material/0.10.0/js/angular-material.min.js" in {
-//      rewriteAJMaterial0100JS must_== List("fobo", "angular-material", "0.10.0", "js", "angular-material.min.js")
-//    }      
-//    "rewrit fobo/angular-material.css to fobo/angular-material/0.10.0/js/angular-material.css" in {
-//      rewriteAJMaterial0100CSS must_== List("fobo", "angular-material", "0.10.0", "css", "angular-material.css")
-//    }    
-//  } 
-  
-  //FontAwesome
   "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome321 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
-      allowFontAwesome321 must_== true 
-    }    
-    "rewrit fobo/font-awesome.css to fobo/font-awesome/3.2.1/css/font-awesome.css" in {
-      rewriteFontAwesome321CSS must_== List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-min.css")
+      allowInitParam(FoBo.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== true       
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/3.2.1/css/font-awesome-min.css" in  {
+      rewriteInitParam(FoBo.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-min.css")      
     }       
   } 
   
-  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome410 the ResourceServer" should {
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.FontAwesome321 the ResourceServer" should {    
     "allow  fobo/font-awesome.css" in {
-      allowFontAwesome410 must_== true 
+      allowToolKitInit(FoBo.ToolKit.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== true       
     }     
-    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome.css" in {
-      rewriteFontAwesome410CSS must_== List("fobo", "font-awesome", "4.1.0", "css", "font-awesome.min.css")
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/3.2.1/css/font-awesome-min.css" in {
+      rewriteToolKitInit(FoBo.ToolKit.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-min.css")      
     }       
-  }  
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.FontAwesome321 the ResourceServer" should { 
+    "allow  fobo/font-awesome.css" in  {
+      allowResource(FoBo.Resource.FontAwesome321,"fobo"::"font-awesome.css"::Nil)  must_== true 
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/3.2.1/css/font-awesome-min.css" in  {
+     rewriteResource(FoBo.Resource.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-min.css")      
+    }       
+  } 
+  
+  //FontAwesome410
+//  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome410 the ResourceServer" should {
+//    "allow  fobo/font-awesome.css" in {
+//      allowFontAwesome410 must_== true 
+//    }     
+//    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome.css" in {
+//      rewriteFontAwesome410CSS must_== List("fobo", "font-awesome", "4.1.0", "css", "font-awesome.min.css")
+//    }       
+//  }  
   
   "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome410 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
-      allowFontAwesome430 must_== true 
+      allowInitParam(FoBo.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== true       
     }     
-    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome.css" in {
-      rewriteFontAwesome430CSS must_== List("fobo", "font-awesome", "4.3.0", "css", "font-awesome.min.css")
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome-min.css" in  {
+      rewriteInitParam(FoBo.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.1.0", "css", "font-awesome.min.css")      
     }       
-  }   
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.FontAwesome410 the ResourceServer" should {    
+    "allow  fobo/font-awesome.css" in {
+      allowToolKitInit(FoBo.ToolKit.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== true       
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome.min.css" in {
+      rewriteToolKitInit(FoBo.ToolKit.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.1.0", "css", "font-awesome.min.css")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.FontAwesome410 the ResourceServer" should { 
+    "allow  fobo/font-awesome.css" in  {
+      allowResource(FoBo.Resource.FontAwesome410,"fobo"::"font-awesome.css"::Nil)  must_== true 
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome.min.css" in  {
+     rewriteResource(FoBo.Resource.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.1.0", "css", "font-awesome.min.css")      
+    }       
+  }  
+  
+  //FontAwesome430
+//  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome430 the ResourceServer" should {
+//    "allow  fobo/font-awesome.css" in {
+//      allowFontAwesome430 must_== true 
+//    }     
+//    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome.css" in {
+//      rewriteFontAwesome430CSS must_== List("fobo", "font-awesome", "4.3.0", "css", "font-awesome.min.css")
+//    }       
+//  }   
    
-  //google-code-prettify
+  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome430 the ResourceServer" should {
+    "allow  fobo/font-awesome.css" in {
+      allowInitParam(FoBo.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== true       
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.3.0/css/font-awesome.min.css" in  {
+      rewriteInitParam(FoBo.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.3.0", "css", "font-awesome.min.css")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.FontAwesome430 the ResourceServer" should {    
+    "allow  fobo/font-awesome.css" in {
+      allowToolKitInit(FoBo.ToolKit.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== true       
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.3.0/css/font-awesome.min.css" in {
+      rewriteToolKitInit(FoBo.ToolKit.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.3.0", "css", "font-awesome.min.css")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.FontAwesome430 the ResourceServer" should { 
+    "allow  fobo/font-awesome.css" in  {
+      allowResource(FoBo.Resource.FontAwesome430,"fobo"::"font-awesome.css"::Nil)  must_== true 
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.3.0/css/font-awesome.min.css" in  {
+     rewriteResource(FoBo.Resource.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.3.0", "css", "font-awesome.min.css")      
+    }       
+  }    
+  
+  /*=================Google-Code-Prettify ====================================*/
+  
+  //PrettifyJun2011
   "With FoBo.InitParam.ToolKit set to FoBo.PrettifyJun2011 the ResourceServer" should {
     "allow  fobo/prettify.js" in {
       allowPrettifyJun2011 must_== true 
@@ -601,7 +624,9 @@ object FoBoSpec extends Specification  {
     }       
   }  
     
-  //Pace
+  /*=================Google-Code-Prettify ====================================*/
+  
+  //Pace0415
   "With FoBo.InitParam.ToolKit set to FoBo.Pace0415 the ResourceServer" should {
     "allow  fobo/pace.js" in {
       allowPace0415 must_== true 
@@ -611,7 +636,9 @@ object FoBoSpec extends Specification  {
     }       
   }  
   
-  //Bootstrap
+  /*=================Bootstrap ====================================*/
+  
+  //Bootstrap232
   "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap232 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowBootstrap232 must_== true 
@@ -621,6 +648,7 @@ object FoBoSpec extends Specification  {
     }       
   }
   
+  //Bootstrap320
   "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap320 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowBootstrap320 must_== true 
@@ -630,6 +658,7 @@ object FoBoSpec extends Specification  {
     }       
   }
   
+  //Bootstrap336
   "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap336 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowBootstrap336 must_== true 
@@ -639,9 +668,9 @@ object FoBoSpec extends Specification  {
     }       
   }  
   
-  /////////////////////////////////////////////////////////////////////////////////////////////////////
+  /*=================JQuery and JQuery Migrate ====================================*/
  
-  //JQuery and JQuery Migrate
+  //JQuery191
   "With FoBo.InitParam.JQuery set to FoBo.JQuery191 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowJQuery191 must_== true 
@@ -651,6 +680,7 @@ object FoBoSpec extends Specification  {
     } 
   } 
   
+  //JQueryMigrate121
   "With FoBo.InitParam.JQuery set to FoBo.JQueryMigrate121 the ResourceServer" should {
     "allow  fobo/jquery-migrate.js" in {
       allowJQueryMigrate121 must_== true 
@@ -660,6 +690,7 @@ object FoBoSpec extends Specification  {
     }        
   }
   
+  //JQuery1102
   "With FoBo.InitParam.JQuery set to FoBo.JQuery1102 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowJQuery1102 must_== true 
@@ -669,6 +700,7 @@ object FoBoSpec extends Specification  {
     }  
   }  
   
+  //JQuery214
   "With FoBo.InitParam.JQuery set to FoBo.JQuery214 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowJQuery214 must_== true 
@@ -678,7 +710,9 @@ object FoBoSpec extends Specification  {
     }    
   }   
   
-  //Kinetic
+  /*=================JQuery and JQuery Migrate ====================================*/
+  
+  //KineticJS510
   "With FoBo.InitParam.ToolKit set to FoBo.KineticJS510 the ResourceServer" should {
     "allow  fobo/kinetic.js" in {
       allowKineticJS510 must_== true 
@@ -700,17 +734,6 @@ object FoBoSpec extends Specification  {
     ResourceServer.pathRewriter(path)
   }  
   
- //=== InitParam.ToolKit ===============// 
-  def allowInitParam(resource:FoBo.FoBoToolkit,path:List[String]) = {
-    FoBo.InitParam.ToolKit=resource 
-    ResourceServer.allowedPaths(path)
-  } 
- 
-  def rewriteInitParam(resource:FoBo.FoBoToolkit,path:List[String]) = {
-    FoBo.InitParam.ToolKit=resource 
-    ResourceServer.pathRewriter(path)
-  } 
- 
   //=== Resource.Init ===============//
   def allowResource(resource:FoBo.Resource,path:List[String]) = {
     FoBo.Resource.Init=resource 
@@ -722,7 +745,18 @@ object FoBoSpec extends Specification  {
     ResourceServer.pathRewriter(path)
   } 
   
-  //=========================================//
+ //=== InitParam.ToolKit (deprecated in v1.6) ===============// 
+  def allowInitParam(resource:FoBo.FoBoToolkit,path:List[String]) = {
+    FoBo.InitParam.ToolKit=resource 
+    ResourceServer.allowedPaths(path)
+  } 
+ 
+  def rewriteInitParam(resource:FoBo.FoBoToolkit,path:List[String]) = {
+    FoBo.InitParam.ToolKit=resource 
+    ResourceServer.pathRewriter(path)
+  } 
+  
+  //==========OLD tests helpers that should be migrated to use the above methods and removed ==============//
   
   //Angular Material 
   def allowAJMaterial101 = {
