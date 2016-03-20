@@ -25,6 +25,23 @@ package object FoBoFARes {
     var Init: Resource = null 
     
     /**
+     * Enable usage of FoBo's FontAwesome resources version 4&#8228;5&#8228;0 in your bootstrap liftweb Boot.
+     * @version 4.5.0
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoFARes => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.FontAwesome450
+     * }}}
+     */    
+     case object FontAwesome450 extends Resource {
+       FoBoResources.init
+       FoBoResources.fontAwesome450
+     } 
+    
+    /**
      * Enable usage of FoBo's FontAwesome resources version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
      * @version 4.3.0
      * 
@@ -104,6 +121,13 @@ package object FoBoFARes {
           case "fobo" :: tail => true
         }
       }      
+      
+      lazy val fontAwesome450 = {
+        ResourceServer.rewrite {
+          case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "4.5.0", "css", "font-awesome.css")
+          case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "4.5.0", "css", "font-awesome.min.css")
+        }
+      }
       
       lazy val fontAwesome430 = {
         ResourceServer.rewrite {

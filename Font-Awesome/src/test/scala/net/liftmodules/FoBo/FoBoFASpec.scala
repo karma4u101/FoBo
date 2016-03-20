@@ -12,6 +12,27 @@ object FoBoFASpec extends Specification {
 
   sequential
   
+  //FontAwesome450 
+  "With FoBoFA.ToolKit.Init set to FoBoFA.ToolKit.FontAwesome450 the ResourceServer" should {
+    "allow  fobo/font-awesome.css" in {
+      allowToolKitInit(FoBoFA.ToolKit.FontAwesome450,"fobo"::"font-awesome.css"::Nil) must_== true 
+    } 
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.5.0/css/font-awesome.css" in {
+      rewriteToolKitInit(FoBoFA.ToolKit.FontAwesome450,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.5.0", "css", "font-awesome.min.css")
+    }       
+  }   
+  
+  "With FoBoFA.Resource.Init set to FoBoFA.Resource.FontAwesome450 the ResourceServer" should {
+    "allow  fobo/font-awesome.css" in {
+      allowResource(FoBoFA.Resource.FontAwesome450,"fobo"::"font-awesome.css"::Nil) must_== true 
+    } 
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.5.0/css/font-awesome.css" in {
+      rewriteResource(FoBoFA.Resource.FontAwesome450,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.5.0", "css", "font-awesome.min.css")
+    }       
+  }    
+  
   //FontAwesome430
   "With FoBoFA.InitParam.ToolKit set to FoBoFA.FontAwesome430 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {

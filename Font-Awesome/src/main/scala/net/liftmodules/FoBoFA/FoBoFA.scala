@@ -32,7 +32,25 @@ package object FoBoFA {
     var Init: ToolKit = null 
     
    /**
-     * Enable usage of FoBo's FontAwesome resources and API version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
+     * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;5&#8228;0 in your bootstrap liftweb Boot.
+     * @version 4.5.0
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoFA => FoBo}
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome450
+     * }}}
+     */    
+     case object FontAwesome450 extends ToolKit {
+       FoBoFARes.Resource.FontAwesome450
+       //FoBoFAAPI.API.FontAwesome4
+     } 
+    
+    
+    /**
+     * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
      * @version 4.3.0
      * 
      * '''Example:'''
@@ -106,6 +124,22 @@ package object FoBoFA {
   
   object Resource extends Resource {
     var Init: Resource = null
+    
+    /**
+     * Enable usage of FoBo's FontAwesome resources version 4&#8228;5&#8228;0 in your bootstrap liftweb Boot.
+     * @version 4.5.0
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoFA => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.FontAwesome450
+     * }}}
+     */    
+     case object FontAwesome450 extends Resource {
+       FoBoFARes.Resource.FontAwesome450
+     }     
     
     /**
      * Enable usage of FoBo's FontAwesome resources version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
