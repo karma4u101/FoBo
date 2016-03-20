@@ -54,7 +54,20 @@ object LiftModuleFoBoBuild extends Build {
   lazy val bootstrap3   = Project(id   = "fobo-twbs-bootstrap3", 
                              base = file("TwBs-Bootstrap3"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
-                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                   
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile),
+                             aggregate = Seq(bootstrap3res,bootstrap3api)    
+                             ).dependsOn(bootstrap3res,bootstrap3api) 
+                                 
+  lazy val bootstrap3res   = Project(id   = "fobo-twbs-bootstrap3-res", 
+                             base = file("TwBs-Bootstrap3-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                  
+                                 
+  lazy val bootstrap3api   = Project(id   = "fobo-twbs-bootstrap3-api", 
+                             base = file("TwBs-Bootstrap3-API"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                             
+                                 
                              
   lazy val angularjs    = Project(id   = "fobo-angularjs", 
                              base = file("AngularJS"),

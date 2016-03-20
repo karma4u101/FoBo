@@ -19,10 +19,12 @@ resolvers ++= Seq(
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
 )
 
-libraryDependencies <++= liftVersion { v =>
+libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"      %% "lift-webkit"          % v          % "provided,test" ::
     "net.liftweb"      %% "lift-testkit"         % v          % "provided,test" ::
     "net.liftweb"      %% "lift-mapper"          % v          % "provided" ::
+    "net.liftmodules"  %% ("fobo-twbs-bootstrap3-res"+"_"+e)   % mv         % "provided" :: 
+    "net.liftmodules"  %% ("fobo-twbs-bootstrap3-api"+"_"+e)   % mv         % "provided" ::     
     Nil
 }
 

@@ -38,12 +38,12 @@ package object FoBoAJSAPI {
     *
     */
     case object Angular1 extends API {
-      FoBoAngular1API.init
+      FoBoAPI.init
     } 
   
   }
     
-  private object FoBoAngular1API {
+  private object FoBoAPI {
     lazy val init: Unit = {
       LiftRules.addToPackages("net.liftmodules.FoBoAJS")  
     }

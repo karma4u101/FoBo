@@ -4,6 +4,7 @@ import _root_.net.liftweb._
 import util.{ Props }
 import http._
 import common._
+
 /**
  * ==FoBo Toolkit sub-module== 
  * This package object provides Angular integration into your Lift/FoBo application.
@@ -17,14 +18,6 @@ import common._
  * see [[net.liftmodules.FoBo]] for usage information. 
  */
 package object FoBoAJS {
-
-  @deprecated("Init is no longer nessesary as it is now automaticaly done for respective FoBoAJS.InitParam","1.6.0")
-  def init() {
-  }
-
-  
-  @deprecated("Use FoBoAJS.ToolKit or FoBoAJS.Resource and FoBoAJS.API","1.6.0")
-  abstract sealed trait FoBoToolkit
   
   /**
    * Initiate FoBo's Angular ToolKit(s) in you bootstrap liftweb Boot.
@@ -612,7 +605,7 @@ package object FoBoAJS {
     
     /**
      * Enable usage of FoBo's AngularJS API 1&#8228;x&#8228;x in your bootstrap liftweb Boot.
-     * @version 1.4.8
+     * @version 1.x.x
      *
      *  '''Example:'''
      *
@@ -630,6 +623,15 @@ package object FoBoAJS {
   
   
   /*=== InitParam (deprecated) ============================================*/
+
+  @deprecated("Init is no longer nessesary as it is now automaticaly done for respective FoBoAJS.InitParam","1.6.0")
+  def init() {
+  }
+
+  
+  @deprecated("Use FoBoAJS.ToolKit or FoBoAJS.Resource and FoBoAJS.API","1.6.0")
+  abstract sealed trait FoBoToolkit
+  
   /**
    *
    */
@@ -651,7 +653,6 @@ package object FoBoAJS {
    * }}}
    * @since v1.5
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS148","1.6.0")
   case object AngularJS148 extends FoBoToolkit {
     ToolKit.AngularJS148
   } 
@@ -669,7 +670,6 @@ package object FoBoAJS {
    * }}}
    * @since v1.5
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS148i18n","1.6.0")
   case object AngularJS148i18n extends FoBoToolkit {
     ToolKit.AngularJS148i18n
   } 
@@ -688,7 +688,6 @@ package object FoBoAJS {
    * }}}
    * @since v1.4
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS141","1.6.0")
   case object AngularJS141 extends FoBoToolkit {
     ToolKit.AngularJS141
   } 
@@ -706,7 +705,6 @@ package object FoBoAJS {
    * }}}
    * @since v1.4
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS141i18n","1.6.0")
   case object AngularJS141i18n extends FoBoToolkit {
     ToolKit.AngularJS141i18n
   } 
@@ -724,7 +722,6 @@ package object FoBoAJS {
    * }}}
    * @since v1.4
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS1315","1.6.0")
   case object AngularJS1315 extends FoBoToolkit {
     ToolKit.AngularJS1315
   } 
@@ -742,7 +739,6 @@ package object FoBoAJS {
    * }}}
    * @since v1.4
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS1315i18n","1.6.0")
   case object AngularJS1315i18n extends FoBoToolkit {
     ToolKit.AngularJS1315i18n
   }   
@@ -761,7 +757,6 @@ package object FoBoAJS {
    * }}}
    * @since v1.3
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS1219","1.6.0")
   case object AngularJS1219 extends FoBoToolkit {
     ToolKit.AngularJS1219
   } 
@@ -779,7 +774,6 @@ package object FoBoAJS {
    * }}}
    * @since v1.3
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS1219i18n","1.6.0")
   case object AngularJS1219i18n extends FoBoToolkit {
     ToolKit.AngularJS1219i18n
   } 
@@ -816,7 +810,6 @@ package object FoBoAJS {
    * }}}
    * @since v1.5
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJMaterial101","1.6.0")
   case object AJMaterial101 extends FoBoToolkit {
     ToolKit.AJMaterial101
   }  
@@ -834,7 +827,6 @@ package object FoBoAJS {
    * }}}
    * @since v1.2
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJSUIBootstrap0100","1.6.0")
   case object AJSUIBootstrap0100 extends FoBoToolkit {
     ToolKit.AJSUIBootstrap0100
   }   
@@ -852,7 +844,6 @@ package object FoBoAJS {
    * }}}
    * @since v1.2
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJSUIBootstrap070","1.6.0")
   case object AJSUIBootstrap070 extends FoBoToolkit {
     ToolKit.AJSUIBootstrap070
   }   
@@ -870,7 +861,6 @@ package object FoBoAJS {
    * }}}
    * @since v1.0
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJSUIBootstrap020","1.6.0")
   case object AJSUIBootstrap020 extends FoBoToolkit {
     ToolKit.AJSUIBootstrap020
   }   
@@ -889,7 +879,6 @@ package object FoBoAJS {
    * }}}
    * @since v1.2
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJSNGGrid207","1.6.0")
   case object AJSNGGrid207 extends FoBoToolkit {
     ToolKit.AJSNGGrid207
   }
@@ -907,7 +896,6 @@ package object FoBoAJS {
    * }}}
    * @since v1.5
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJSUIGrid307","1.6.0")
   case object AJSUIGrid307 extends FoBoToolkit {
     ToolKit.AJSUIGrid307
   }  

@@ -639,6 +639,91 @@ package object FoBo {
      
      /*===Bootstrap3 ToolKit===============================================================*/     
      
+    /**
+     * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;6 resource files in your bootstrap liftweb Boot.
+     * @version 3.3.6
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap336
+     * }}}
+     *
+     */
+    case object Bootstrap336 extends ToolKit {
+      net.liftmodules.FoBoBs.ToolKit.Bootstrap336
+    }    
+    
+    /**
+     * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;5 resource files in your bootstrap liftweb Boot.
+     * @version 3.3.5
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap335
+     * }}}
+     *
+     */
+    case object Bootstrap335 extends ToolKit {
+      net.liftmodules.FoBoBs.ToolKit.Bootstrap335
+    }    
+    
+    /**
+     * Enable usage of Bootstrap API and resources version 3&#8228;2&#8228;0 resource files in your bootstrap liftweb Boot.
+     * @version 3.2.0
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap320
+     * }}}
+     *
+     */
+    case object Bootstrap320 extends ToolKit {
+      net.liftmodules.FoBoBs.ToolKit.Bootstrap320
+    } 
+    
+    /**
+     * Enable usage of Bootstrap API and resources version 3&#8228;1&#8228;1 resource files in your bootstrap liftweb Boot.
+     * @version 3.1.1
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap311
+     * }}}
+     *
+     */
+    case object Bootstrap311 extends ToolKit {
+      net.liftmodules.FoBoBs.ToolKit.Bootstrap311
+    } 
+    
+    /**
+     * Enable usage of Bootstrap API and resources version 3&#8228;0&#8228;1 resource files in your bootstrap liftweb Boot.
+     * @version 3.0.1
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap301
+     * }}}
+     *
+     */
+    case object Bootstrap301 extends ToolKit {
+      net.liftmodules.FoBoBs.ToolKit.Bootstrap301
+    }          
+     
      /*===Bootstrap3 ToolKit===============================================================*/    
      
   }//end ToolKit
@@ -1159,6 +1244,91 @@ package object FoBo {
      
      /*===Bootstrap3 Resource===============================================================*/
      
+    /**
+     * Enable usage of Bootstrap version 3&#8228;3&#8228;6 resource files in your bootstrap liftweb Boot.
+     * @version 3.3.6
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.Bootstrap336
+     * }}}
+     *
+     */
+    case object Bootstrap336 extends Resource {
+      net.liftmodules.FoBoBs.Resource.Bootstrap336
+    }    
+    
+    /**
+     * Enable usage of Bootstrap version 3&#8228;3&#8228;5 resource files in your bootstrap liftweb Boot.
+     * @version 3.3.5
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.Bootstrap335
+     * }}}
+     *
+     */
+    case object Bootstrap335 extends Resource {
+      net.liftmodules.FoBoBs.Resource.Bootstrap335
+    }    
+    
+    /**
+     * Enable usage of Bootstrap version 3&#8228;2&#8228;0 resource files in your bootstrap liftweb Boot.
+     * @version 3.2.0
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.Bootstrap320
+     * }}}
+     *
+     */
+    case object Bootstrap320 extends Resource {
+      net.liftmodules.FoBoBs.Resource.Bootstrap320
+    } 
+    
+    /**
+     * Enable usage of Bootstrap version 3&#8228;1&#8228;1 resource files in your bootstrap liftweb Boot.
+     * @version 3.1.1
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.Bootstrap311
+     * }}}
+     *
+     */
+    case object Bootstrap311 extends Resource {
+      net.liftmodules.FoBoBs.Resource.Bootstrap311
+    } 
+    
+    /**
+     * Enable usage of Bootstrap version 3&#8228;0&#8228;1 resource files in your bootstrap liftweb Boot.
+     * @version 3.0.1
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.Bootstrap301
+     * }}}
+     *
+     */
+    case object Bootstrap301 extends Resource {
+      net.liftmodules.FoBoBs.Resource.Bootstrap301
+    }        
+     
      /*===Bootstrap2 Resource===============================================================*/
      
   }  
@@ -1249,7 +1419,7 @@ package object FoBo {
  * }}} 
  * @since v1.0
  */
-@deprecated("Use the TBLocInfo provided by FoBoBs or FoBoTB","1.6.0")
+@deprecated("Use BSLocInfo or TBLocInfo provided by FoBoBs or FoBoTB ","1.6.0")
 object TBLocInfo {
   private val hd: Box[String] = Full("divider")
   private val vd: Box[String] = Full("divider-vertical")  

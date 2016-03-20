@@ -488,20 +488,10 @@ object FoBoSpec extends Specification  {
         List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sv-se.js")      
     }       
   } 
-    
-  
 
   /*=================FontAwesome ====================================*/
-  //FontAwesome321
-//  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome321 the ResourceServer" should {
-//    "allow  fobo/font-awesome.css" in {
-//      allowFontAwesome321 must_== true 
-//    }    
-//    "rewrit fobo/font-awesome.css to fobo/font-awesome/3.2.1/css/font-awesome.css" in {
-//      rewriteFontAwesome321CSS must_== List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-min.css")
-//    }       
-//  } 
   
+  //FontAwesome321
   "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome321 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
       allowInitParam(FoBo.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== true       
@@ -532,16 +522,7 @@ object FoBoSpec extends Specification  {
     }       
   } 
   
-  //FontAwesome410
-//  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome410 the ResourceServer" should {
-//    "allow  fobo/font-awesome.css" in {
-//      allowFontAwesome410 must_== true 
-//    }     
-//    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome.css" in {
-//      rewriteFontAwesome410CSS must_== List("fobo", "font-awesome", "4.1.0", "css", "font-awesome.min.css")
-//    }       
-//  }  
-  
+  //FontAwesome410  
   "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome410 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
       allowInitParam(FoBo.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== true       
@@ -573,15 +554,6 @@ object FoBoSpec extends Specification  {
   }  
   
   //FontAwesome430
-//  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome430 the ResourceServer" should {
-//    "allow  fobo/font-awesome.css" in {
-//      allowFontAwesome430 must_== true 
-//    }     
-//    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome.css" in {
-//      rewriteFontAwesome430CSS must_== List("fobo", "font-awesome", "4.3.0", "css", "font-awesome.min.css")
-//    }       
-//  }   
-   
   "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome430 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
       allowInitParam(FoBo.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== true       
@@ -615,26 +587,86 @@ object FoBoSpec extends Specification  {
   /*=================Google-Code-Prettify ====================================*/
   
   //PrettifyJun2011
+//  "With FoBo.InitParam.ToolKit set to FoBo.PrettifyJun2011 the ResourceServer" should {
+//    "allow  fobo/prettify.js" in {
+//      allowPrettifyJun2011 must_== true 
+//    }     
+//    "rewrit fobo/prettify.js to fobo/google-code/js/prettify.js" in {
+//      rewritePrettifyJun2011JS must_== List("fobo", "google-code", "js", "prettify.js")
+//    }       
+//  }
+  
   "With FoBo.InitParam.ToolKit set to FoBo.PrettifyJun2011 the ResourceServer" should {
     "allow  fobo/prettify.js" in {
-      allowPrettifyJun2011 must_== true 
+      allowInitParam(FoBo.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/prettify.js to fobo/google-code/js/prettify.js" in  {
+      rewriteInitParam(FoBo.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== 
+        List("fobo", "google-code", "js", "prettify.js")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.PrettifyJun2011 the ResourceServer" should {    
+    "allow  fobo/prettify.js" in {
+      allowToolKitInit(FoBo.ToolKit.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== true       
     }     
     "rewrit fobo/prettify.js to fobo/google-code/js/prettify.js" in {
-      rewritePrettifyJun2011JS must_== List("fobo", "google-code", "js", "prettify.js")
+      rewriteToolKitInit(FoBo.ToolKit.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== 
+        List("fobo", "google-code", "js", "prettify.js")      
     }       
-  }  
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.PrettifyJun2011 the ResourceServer" should { 
+    "allow  fobo/prettify.js" in  {
+      allowResource(FoBo.Resource.PrettifyJun2011,"fobo"::"prettify.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/prettify.js to fobo/google-code/js/prettify.js" in  {
+     rewriteResource(FoBo.Resource.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== 
+        List("fobo", "google-code", "js", "prettify.js")      
+    }       
+  }     
     
   /*=================Google-Code-Prettify ====================================*/
   
   //Pace0415
+//  "With FoBo.InitParam.ToolKit set to FoBo.Pace0415 the ResourceServer" should {
+//    "allow  fobo/pace.js" in {
+//      allowPace0415 must_== true 
+//    }     
+//    "rewrit fobo/pace.js to fobo/pace/0.4.15/js/pace.min.js" in {
+//      rewritePace0415JS must_== List("fobo", "pace", "0.4.15", "js", "pace.min.js")
+//    }       
+//  } 
+  
   "With FoBo.InitParam.ToolKit set to FoBo.Pace0415 the ResourceServer" should {
     "allow  fobo/pace.js" in {
-      allowPace0415 must_== true 
+      allowInitParam(FoBo.Pace0415,"fobo"::"pace.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/pace.js to fobo/pace/0.4.15/js/pace.min.js" in  {
+      rewriteInitParam(FoBo.Pace0415,"fobo"::"pace.js"::Nil) must_== 
+        List("fobo", "pace", "0.4.15", "js", "pace.min.js")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.Pace0415 the ResourceServer" should {    
+    "allow  fobo/pace.js" in {
+      allowToolKitInit(FoBo.ToolKit.Pace0415,"fobo"::"pace.js"::Nil) must_== true       
     }     
     "rewrit fobo/pace.js to fobo/pace/0.4.15/js/pace.min.js" in {
-      rewritePace0415JS must_== List("fobo", "pace", "0.4.15", "js", "pace.min.js")
+      rewriteToolKitInit(FoBo.ToolKit.Pace0415,"fobo"::"pace.js"::Nil) must_== 
+        List("fobo", "pace", "0.4.15", "js", "pace.min.js")      
     }       
-  }  
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.Pace0415 the ResourceServer" should { 
+    "allow  fobo/pace.js" in  {
+      allowResource(FoBo.Resource.Pace0415,"fobo"::"pace.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/pace.js to fobo/pace/0.4.15/js/pace.min.js" in  {
+     rewriteResource(FoBo.Resource.Pace0415,"fobo"::"pace.js"::Nil) must_== 
+        List("fobo", "pace", "0.4.15", "js", "pace.min.js")      
+    }       
+  }   
   
   /*=================Bootstrap ====================================*/
   
