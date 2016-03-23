@@ -23,8 +23,6 @@ package object FoBoKi {
   def init() {
   }
 
-  //@deprecated("","1.6.0")
-  abstract sealed trait KiToolkit
   abstract sealed trait ToolKit
   abstract sealed trait Resource
   abstract sealed trait API
@@ -102,12 +100,16 @@ package object FoBoKi {
   }  
   
    /*=== InitParam (deprecated) ============================================*/
+ 
+  //@deprecated("","1.6.0")
+  abstract sealed trait FoBoToolkit
+  
   /**
    *
    */
   @deprecated("Use FoBoKi.ToolKit.Init=FoBoKi.ToolKit.[Toolkit Object]","1.6.0")
-  object InitParam extends KiToolkit {
-    var ToolKit: KiToolkit = null 
+  object InitParam extends FoBoToolkit {
+    var ToolKit: FoBoToolkit = null 
   }
   
   
@@ -123,7 +125,7 @@ package object FoBoKi {
  * @since v1.3
  */
   @deprecated("Use FoBoKi.ToolKit.Init=FoBoKi.ToolKit.KineticJS510","1.6.0")
-  case object KineticJS510 extends KiToolkit {
+  case object KineticJS510 extends FoBoToolkit {
     ToolKit.KineticJS510
     //API.KineticJS510
   }
