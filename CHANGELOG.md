@@ -13,10 +13,23 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2013-05-19** -- Module v1.0 
 
 **Latest Updates:**
+- **2016-03-25** -- [PR #61](https://github.com/karma4u101/FoBo/pull/61) Re-factoring modules  
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
 
 **Latest Snapshot Release:**
+- **2016-03-25** -- 1.6-SNAPSHOT release for Lift v3.0 and v2.6.2
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
+
+FoBo v1.6
+---------
+###New Features
+Splitting modules into Toolkit modules composed of a Resource module and a API module. 
+Making it possible to, in your project depend on (and initiate and use) everything from 
+a single FoBo provided resource module, or one or more API or resource modules, or as 
+before one or more Toolkit modules or all it's Toolkit modules.   
+
+###Updated modules
+[FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.5.0 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 
 FoBo v1.5.1
 -----------
