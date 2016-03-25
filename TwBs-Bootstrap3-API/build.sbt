@@ -19,14 +19,29 @@ resolvers ++= Seq(
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
 )
 
-libraryDependencies <++= liftVersion { v =>
-    "net.liftweb"      %% "lift-webkit"          % v          % "provided,test" ::
-    "net.liftweb"      %% "lift-testkit"         % v          % "provided,test" ::
-    "net.liftweb"      %% "lift-mapper"          % v          % "provided" ::
+libraryDependencies <++= liftVersion { lv =>
+    "net.liftweb"      %% "lift-webkit"          % lv          % "provided,test" ::
+    "net.liftweb"      %% "lift-testkit"         % lv          % "provided,test" ::
+    "net.liftweb"      %% "lift-mapper"          % lv          % "provided" ::
     Nil
 }
 
-libraryDependencies <++= scalaVersion { sv => 
+libraryDependencies <++= (scalaVersion,liftVersion) { (sv,lv) => 
+  ((sv,lv) match {
+      case ("2.9.2",_) | ("2.9.1",_) | ("2.9.1-1",_) => "org.specs2" %% "specs2" % "1.12.3" % "test"
+      case ("2.10.4",_) => "org.specs2" %% "specs2" % "1.13" % "test"
+      case (_,"2.6.2") => "org.specs2" %% "specs2" % "2.3.11" % "test"
+      case (_,_) => "org.specs2" %% "specs2" % "3.7" % "test"
+ }) ::
+    ((sv,lv) match {
+      case ("2.10.4",_) | ("2.9.2",_) | ("2.9.1",_) | ("2.9.1-1",_) => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+      case (_,"2.6.2") => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
+      case (_,_) => "org.specs2" %% "specs2-scalacheck" % "3.7" % "test"
+      }) ::
+  Nil
+}
+
+/*libraryDependencies <++= scalaVersion { sv => 
   (sv match {
       case "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
       case "2.10.4" => "org.specs2" %% "specs2" % "1.13" % "test"
@@ -37,10 +52,17 @@ libraryDependencies <++= scalaVersion { sv =>
       case _ => "org.specs2" %% "specs2-scalacheck" % "3.7" % "test"
       }) ::
   Nil
+}*/
+
+libraryDependencies <++= liftVersion { lv =>
+( lv match {
+  case "2.6.2" => "javax.servlet" % "servlet-api" % "2.5" % "provided,test"  
+  case _ => "javax.servlet"     %   "javax.servlet-api" % "3.1.0"       % "provided,test"
+}) ::
+  Nil
 }
 
 libraryDependencies ++= { 
-  "javax.servlet"     %   "javax.servlet-api" % "3.1.0"       % "provided,test" ::
   "ch.qos.logback" % "logback-classic" % "1.0.0" % "provided" ::
   "log4j" % "log4j" % "1.2.16" % "provided" ::
   Nil
