@@ -2,9 +2,9 @@ moduleName := "fobo-meta"
 
 organization := "net.liftmodules"
 
-version in ThisBuild := "1.5"
+version in ThisBuild := "1.6-SNAPSHOT"
 
-liftVersion in ThisBuild <<= liftVersion ?? "3.0-SNAPSHOT" //"2.6.2"
+liftVersion in ThisBuild <<= liftVersion ?? "3.0-RC1" //"2.6.2" //
 
 liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
 
@@ -43,6 +43,18 @@ libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     Nil
 }
 
+libraryDependencies <++= scalaVersion { sv => 
+  (sv match {
+      case "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
+      case "2.10.4" => "org.specs2" %% "specs2" % "1.13" % "test"
+      case _ => "org.specs2" %% "specs2" % "3.7" % "test"
+ }) ::
+    (sv match {
+      case "2.10.4" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+      case _ => "org.specs2" %% "specs2-scalacheck" % "3.7" % "test"
+      }) ::
+  Nil
+}
 
 //############################################################
 //#### THE BUILDINFO BUILD

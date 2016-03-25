@@ -19,10 +19,12 @@ resolvers ++= Seq(
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
 )
 
-libraryDependencies <++= liftVersion { v =>
-    "net.liftweb"      %% "lift-webkit"          % v          % "provided" ::
-    "net.liftweb"      %% "lift-testkit"         % v          % "provided" ::
-    "net.liftweb"      %% "lift-mapper"          % v          % "provided" ::
+libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
+    "net.liftweb"      %% "lift-webkit"                  % v          % "provided" ::
+    "net.liftweb"      %% "lift-testkit"                 % v          % "provided" ::
+    "net.liftweb"      %% "lift-mapper"                  % v          % "provided" ::
+    "net.liftmodules"  %% ("fobo-angularjs-res"+"_"+e)   % mv         % "provided" :: 
+    "net.liftmodules"  %% ("fobo-angularjs-api"+"_"+e)   % mv         % "provided" :: 
     Nil
 }
 
@@ -30,11 +32,11 @@ libraryDependencies <++= scalaVersion { sv =>
   (sv match {
       case "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
       case "2.10.4" => "org.specs2" %% "specs2" % "1.13" % "test"
-      case _ => "org.specs2" %% "specs2" % "2.3.11" % "test"
+      case _ => "org.specs2" %% "specs2" % "3.7" % "test"
  }) ::
     (sv match {
       case "2.10.4" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
-      case _ => "org.scalacheck" %% "scalacheck" % "1.11.4" % "test"
+      case _ => "org.specs2" %% "specs2-scalacheck" % "3.7" % "test"
       }) ::
   Nil
 }

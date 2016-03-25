@@ -21,247 +21,1172 @@ object FoBoSpec extends Specification  {
   //is treated as code is run in "devMode" while 'test' dose not assume this. 
  
   
-  //AngularJS
-  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS148 the ResourceServer.pathRewriter" should {
+  /*=================Angular ====================================*/
+  
+  //AngularJS148
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS148 the ResourceServer" should {
+    "allow  fobo/angular.js" in {
+      allowInitParam(FoBo.AngularJS148,"fobo"::"angular.js"::Nil) must_== true 
+    } 
     "rewrit fobo/angular.js to fobo/angular-js/1.4.8/js/angular.min.js" in {
-      rewriteAngularJS148 must_== List("fobo", "angular-js", "1.4.8", "js", "angular.min.js")
-    }       
-  }
-  
-  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS141 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/angular.js to fobo/angular-js/1.4.1/js/angular.min.js" in {
-      rewriteAngularJS141 must_== List("fobo", "angular-js", "1.4.1", "js", "angular.min.js")
-    }       
-  }  
-  
-  "With FoBo.InitParam.ToolKit set to FoBo.AJSUIBootstrap0100 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.10.0/js/ui-bootstrap-0.10.0.min.js" in {
-      rewriteAJSUIBootstrap0100 must_== List("fobo", "angular-ui", "bootstrap", "0.10.0", "js", "ui-bootstrap-0.10.0.min.js")
-    }       
-  }   
- 
-  "With FoBo.InitParam.ToolKit set to FoBo.AJSNGGrid207 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/ng-grid.js to fobo/angular-ui/ng-grid/2.0.7/ng-grid-2.0.7.min.js" in {
-      rewriteAJSNGGrid207 must_== List("fobo", "angular-ui","ng-grid", "2.0.7", "js", "ng-grid-2.0.7.min.js")
+      rewriteInitParam(FoBo.AngularJS148,"fobo"::"angular.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.4.8", "js", "angular.min.js")
     }       
   } 
   
-  //Angular UI Grid
-  "With FoBo.InitParam.ToolKit set to FoBo.AJSUIGrid307 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/ui-grid.js to fobo/angular-ui/ui-grid/3.0.7/js/ui-grid.min.js" in {
-      rewriteAJSUIGrid307Js must_== List("fobo", "angular-ui", "ui-grid", "3.0.7", "js", "ui-grid.min.js")
-    }      
-    "rewrit fobo/ui-grid.css to fobo/angular-ui/ui-grid/3.0.7/css/ui-grid.min.css" in {
-      rewriteAJSUIGrid307Css must_== List("fobo", "angular-ui", "ui-grid", "3.0.7", "css", "ui-grid.min.css")
-    }    
-  }   
-  
-  //Angular Material
-  "With FoBo.InitParam.ToolKit set to FoBo.AJMaterial101 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.1/js/angular-material.min.js" in {
-      rewriteAJMaterial101JS must_== List("fobo", "angular-material", "1.0.1", "js", "angular-material.min.js")
-    }      
-    "rewrit fobo/angular-material.css to fobo/angular-material/1.0.1/js/angular-material.min.css" in {
-      rewriteAJMaterial101CSS must_== List("fobo", "angular-material", "1.0.1", "css", "angular-material.min.css")
-    }    
-  }    
-    
-  //FontAwesome
-  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome321 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/font-awesome.css to fobo/font-awesome/3.2.1/css/font-awesome.css" in {
-      rewriteFontAwesome321CSS must_== List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-min.css")
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AngularJS148 the ResourceServer" should {
+    "allow  fobo/angular.js" in {
+      allowToolKitInit(FoBo.ToolKit.AngularJS148,"fobo"::"angular.js"::Nil) must_== true 
+    } 
+    "rewrit fobo/angular.js to fobo/angular-js/1.4.8/js/angular.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AngularJS148,"fobo"::"angular.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.4.8", "js", "angular.min.js")
     }       
   } 
-  
-  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome410 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome.css" in {
-      rewriteFontAwesome410CSS must_== List("fobo", "font-awesome", "4.1.0", "css", "font-awesome.min.css")
-    }       
-  }  
-  
-  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome410 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome.css" in {
-      rewriteFontAwesome430CSS must_== List("fobo", "font-awesome", "4.3.0", "css", "font-awesome.min.css")
-    }       
-  }   
-   
-  //google-code-prettify
-  "With FoBo.InitParam.ToolKit set to FoBo.PrettifyJun2011 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/prettify.js to fobo/google-code/js/prettify.js" in {
-      rewritePrettifyJun2011JS must_== List("fobo", "google-code", "js", "prettify.js")
-    }       
-  }  
     
-  
-  //Bootstrap
-  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap232 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/bootstrap.js to fobo/bootstrap/2.3.2/js/bootstrap-min.js" in {
-      rewriteBootstrap232JS must_== List("fobo", "bootstrap", "2.3.2", "js", "bootstrap-min.js")
-    }       
-  }
-  
-  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap320 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.2.0/js/bootstrap-min.js" in {
-      rewriteBootstrap320JS must_== List("fobo", "bootstrap", "3.2.0", "js", "bootstrap.min.js")
-    }       
-  }
-  
-  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap336 the ResourceServer.pathRewriter" should {
-    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.3.6/js/bootstrap-min.js" in {
-      rewriteBootstrap336JS must_== List("fobo", "bootstrap", "3.3.6", "js", "bootstrap.min.js")
+  "With FoBo.Resource.Init set to FoBo.Resource.AngularJS148 the ResourceServer" should {    
+    "allow  fobo/angular.js" in {
+      allowResource(FoBo.Resource.AngularJS148,"fobo"::"angular.js"::Nil)  must_== true 
+    } 
+    "rewrit fobo/angular.js to fobo/angular-js/1.4.8/js/angular.min.js" in {
+      rewriteResource(FoBo.Resource.AngularJS148,"fobo"::"angular.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.4.8", "js", "angular.min.js")
     }       
   }  
   
-  //Bootstrap336
-  
-  /////////////////////////////////////////////////////////////////////////////////////////////////////
- 
-  //JQuery and JQuery Migrate
-  "With FoBo.InitParam.JQuery the ResourceServer.pathRewriter" should {
-
-    "having the initparam set to FoBo.JQuery191 rewrit fobo/jquery.js to jquery/1.9.1/js/jquery-min.js" in  {
-      rewriteJQuery191JS must_== List("jquery", "1.9.1", "js", "jquery-min.js") 
-    }
-    "having the initparam's set to FoBo.JQuery191 and FoBo.JQueryMigrate121 rewrit fobo/jquery.js to jquery/1.9.1/js/jquery-min.js" in  {
-      rewriteJQuery191JSMigrate must_== List("jquery", "1.9.1", "js", "jquery-min.js") 
-    }    
-    "having the initparam's set to FoBo.JQuery191 and FoBo.JQueryMigrate121 rewrit fobo/jquery-migrate.js to jquery-migrate/1.2.1/js/jquery-migrate-min.js" in {
-      rewriteJQueryMigrate121JS must_== List("jquery-migrate", "1.2.1", "js", "jquery-migrate-min.js") 
+  //AngularJS141
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS141 the ResourceServer" should {
+    "allow  fobo/angular.js" in {
+      allowInitParam(FoBo.AngularJS141,"fobo"::"angular.js"::Nil) must_== true       
     }     
-    "having the initparam set to FoBo.JQuery1102 rewrit fobo/jquery.js to jquery/1.10.2/js/jquery-min.js" in {
-      rewriteJQuery1102JS must_== List("jquery", "1.10.2", "js", "jquery-min.js")
-    }
-    "having the initparam set to FoBo.JQuery214 rewrit fobo/jquery.js to jquery/2.1.4/js/jquery-min.js" in {
-      rewriteJQuery214JS must_== List("jquery", "2.1.4", "js", "jquery-min.js")
-    }    
+    "rewrit fobo/angular.js to fobo/angular-js/1.4.1/js/angular.min.js" in  {
+      rewriteInitParam(FoBo.AngularJS141,"fobo"::"angular.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.4.1", "js", "angular.min.js")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AngularJS141 the ResourceServer" should {    
+    "allow  fobo/angular.js" in {
+      allowToolKitInit(FoBo.ToolKit.AngularJS141,"fobo"::"angular.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular.js to fobo/angular-js/1.4.1/js/angular.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AngularJS141,"fobo"::"angular.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.4.1", "js", "angular.min.js")      
+    }       
   }   
   
+  "With FoBo.Resource.Init set to FoBoAJS.Resource.AngularJS141 the ResourceServer" should { 
+    "allow  fobo/angular.js" in  {
+      allowResource(FoBo.Resource.AngularJS141,"fobo"::"angular.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/angular.js to fobo/angular-js/1.4.1/js/angular.min.js" in  {
+     rewriteResource(FoBo.Resource.AngularJS141,"fobo"::"angular.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.4.1", "js", "angular.min.js")      
+    }       
+  } 
   
-  //Angular Material 
- def rewriteAJMaterial101JS = {
-    FoBo.InitParam.ToolKit=FoBo.AJMaterial101
-    ResourceServer.pathRewriter("fobo"::"angular-material.js"::Nil)
+  //AngularJS1315
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS1315 the ResourceServer" should {
+    "allow  fobo/angular.js" in {
+      allowInitParam(FoBo.AngularJS1315,"fobo"::"angular.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular.js to fobo/angular-js/1.3.15/js/angular.min.js" in  {
+      rewriteInitParam(FoBo.AngularJS1315,"fobo"::"angular.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.3.15", "js", "angular.min.js")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AngularJS1315 the ResourceServer" should {    
+    "allow  fobo/angular.js" in {
+      allowToolKitInit(FoBo.ToolKit.AngularJS1315,"fobo"::"angular.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular.js to fobo/angular-js/1.3.15/js/angular.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AngularJS1315,"fobo"::"angular.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.3.15", "js", "angular.min.js")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.AngularJS1315 the ResourceServer" should { 
+    "allow  fobo/angular.js" in  {
+      allowResource(FoBo.Resource.AngularJS1315,"fobo"::"angular.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/angular.js to fobo/angular-js/1.3.15/js/angular.min.js" in  {
+     rewriteResource(FoBo.Resource.AngularJS1315,"fobo"::"angular.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.3.15", "js", "angular.min.js")      
+    }       
   }
- def rewriteAJMaterial101CSS = {
-    FoBo.InitParam.ToolKit=FoBo.AJMaterial101
-    ResourceServer.pathRewriter("fobo"::"angular-material.css"::Nil)
+    
+  //AngularJS1219
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS1219 the ResourceServer" should {
+    "allow  fobo/angular.js" in {
+      allowInitParam(FoBo.AngularJS1219,"fobo"::"angular.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular.js to fobo/angular-js/1.2.19/js/angular.min.js" in  {
+      rewriteInitParam(FoBo.AngularJS1219,"fobo"::"angular.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.2.19", "js", "angular.min.js")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AngularJS1219 the ResourceServer" should {    
+    "allow  fobo/angular.js" in {
+      allowToolKitInit(FoBo.ToolKit.AngularJS1219,"fobo"::"angular.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular.js to fobo/angular-js/1.2.19/js/angular.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AngularJS1219,"fobo"::"angular.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.2.19", "js", "angular.min.js")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.AngularJS1219 the ResourceServer" should { 
+    "allow  fobo/angular.js" in  {
+      allowResource(FoBo.Resource.AngularJS1219,"fobo"::"angular.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/angular.js to fobo/angular-js/1.2.19/js/angular.min.js" in  {
+     rewriteResource(FoBo.Resource.AngularJS1219,"fobo"::"angular.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.2.19", "js", "angular.min.js")      
+    }       
+  }   
+  
+  //AJMaterial101
+  "With FoBo.InitParam.ToolKit set to FoBo.AJMaterial101 the ResourceServer" should {
+    "allow  fobo/angular-material.js" in {
+      allowInitParam(FoBo.AJMaterial101,"fobo"::"angular-material.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.1/js/angular-material.min.js" in  {
+      rewriteInitParam(FoBo.AJMaterial101,"fobo"::"angular-material.js"::Nil) must_== 
+        List("fobo", "angular-material", "1.0.1", "js", "angular-material.min.js")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AJMaterial101 the ResourceServer" should {    
+    "allow  fobo/angular-material.js" in {
+      allowToolKitInit(FoBo.ToolKit.AJMaterial101,"fobo"::"angular-material.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.1/js/angular-material.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AJMaterial101,"fobo"::"angular-material.js"::Nil) must_== 
+        List("fobo", "angular-material", "1.0.1", "js", "angular-material.min.js")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.AJMaterial101 the ResourceServer" should { 
+    "allow  fobo/angular-material.js" in  {
+      allowResource(FoBo.Resource.AJMaterial101,"fobo"::"angular-material.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.1/js/angular-material.min.js" in  {
+     rewriteResource(FoBo.Resource.AJMaterial101,"fobo"::"angular-material.js"::Nil) must_== 
+        List("fobo", "angular-material", "1.0.1", "js", "angular-material.min.js")      
+    }       
   }
- 
-  //Angular UI Grid
-  def rewriteAJSUIGrid307Js = {
-    FoBo.InitParam.ToolKit=FoBo.AJSUIGrid307
-    ResourceServer.pathRewriter("fobo"::"ui-grid.js"::Nil)
-  }  
-   
-  def rewriteAJSUIGrid307Css = {
-    FoBo.InitParam.ToolKit=FoBo.AJSUIGrid307
-    ResourceServer.pathRewriter("fobo"::"ui-grid.css"::Nil)
+  
+  //AJMaterial0100
+  "With FoBo.InitParam.ToolKit set to FoBo.AJMaterial0100 the ResourceServer" should {
+    "allow  fobo/angular-material.js" in {
+      allowInitParam(FoBo.AJMaterial0100,"fobo"::"angular-material.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular-material.js to fobo/angular-material/0.10.0/js/angular-material.min.js" in  {
+      rewriteInitParam(FoBo.AJMaterial0100,"fobo"::"angular-material.js"::Nil) must_== 
+        List("fobo", "angular-material", "0.10.0", "js", "angular-material.min.js")      
+    }       
   } 
   
-  //AngularJS
-  def rewriteAngularJS148 = {
-    FoBo.InitParam.ToolKit=FoBo.AngularJS148
-    ResourceServer.pathRewriter("fobo"::"angular.js"::Nil)
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AJMaterial0100 the ResourceServer" should {    
+    "allow  fobo/angular-material.js" in {
+      allowToolKitInit(FoBo.ToolKit.AJMaterial0100,"fobo"::"angular-material.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular-material.js to fobo/angular-material/0.10.0/js/angular-material.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AJMaterial0100,"fobo"::"angular-material.js"::Nil) must_== 
+        List("fobo", "angular-material", "0.10.0", "js", "angular-material.min.js")      
+    }       
   } 
   
-  def rewriteAngularJS141 = {
-    FoBo.InitParam.ToolKit=FoBo.AngularJS141
-    ResourceServer.pathRewriter("fobo"::"angular.js"::Nil)
-  }   
-  
-  def rewriteAngularJS1315 = {
-    FoBo.InitParam.ToolKit=FoBo.AngularJS1315
-    ResourceServer.pathRewriter("fobo"::"angular.js"::Nil)
-  }  
-  
-  def rewriteAJSUIBootstrap0100 = {
-    FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap0100
-    ResourceServer.pathRewriter("fobo"::"ui-bootstrap.js"::Nil)
-  }   
-  
-  def rewriteAJSNGGrid207 = {
-    FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207
-    ResourceServer.pathRewriter("fobo"::"ng-grid.js"::Nil)
+  "With FoBo.Resource.Init set to FoBo.Resource.AJMaterial0100 the ResourceServer" should { 
+    "allow  fobo/angular-material.js" in  {
+      allowResource(FoBo.Resource.AJMaterial0100,"fobo"::"angular-material.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/angular-material.js to fobo/angular-material/0.10.0/js/angular-material.min.js" in  {
+     rewriteResource(FoBo.Resource.AJMaterial0100,"fobo"::"angular-material.js"::Nil) must_== 
+        List("fobo", "angular-material", "0.10.0", "js", "angular-material.min.js")      
+    }       
   }    
-   
-  //JQuery Migrate
-  def rewriteJQueryMigrate121JS = {
-     //FoBo.InitParam.JQuery=FoBo.JQuery191
-     FoBo.InitParam.JQuery=FoBo.JQueryMigrate121
-     ResourceServer.pathRewriter("fobo"::"jquery-migrate.js"::Nil)  
+  
+  //AJSUIBootstrap020
+  "With FoBo.InitParam.ToolKit set to FoBo.AJSUIBootstrap020 the ResourceServer" should {
+    "allow  fobo/ui-bootstrap.js" in {
+      allowInitParam(FoBo.AJSUIBootstrap020,"fobo"::"ui-bootstrap.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.2.0/js/ui-bootstrap-0.2.0.min.js" in  {
+      rewriteInitParam(FoBo.AJSUIBootstrap020,"fobo"::"ui-bootstrap.js"::Nil) must_== 
+        List("fobo", "angular-ui", "bootstrap", "0.2.0", "js", "ui-bootstrap-0.2.0.min.js")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AJSUIBootstrap020 the ResourceServer" should {    
+    "allow  fobo/ui-bootstrap.js" in {
+      allowToolKitInit(FoBo.ToolKit.AJSUIBootstrap020,"fobo"::"ui-bootstrap.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.2.0/js/ui-bootstrap-0.2.0.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AJSUIBootstrap020,"fobo"::"ui-bootstrap.js"::Nil) must_== 
+        List("fobo", "angular-ui", "bootstrap", "0.2.0", "js", "ui-bootstrap-0.2.0.min.js")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.AJSUIBootstrap020 the ResourceServer" should { 
+    "allow  fobo/ui-bootstrap.js" in  {
+      allowResource(FoBo.Resource.AJSUIBootstrap020,"fobo"::"ui-bootstrap.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.2.0/js/ui-bootstrap-0.2.0.min.js" in  {
+     rewriteResource(FoBo.Resource.AJSUIBootstrap020,"fobo"::"ui-bootstrap.js"::Nil) must_== 
+        List("fobo", "angular-ui", "bootstrap", "0.2.0", "js", "ui-bootstrap-0.2.0.min.js")      
+    }       
+  }    
+  
+  //AJSUIBootstrap070
+  "With FoBo.InitParam.ToolKit set to FoBo.AJSUIBootstrap070 the ResourceServer" should {
+    "allow  fobo/ui-bootstrap.js" in {
+      allowInitParam(FoBo.AJSUIBootstrap070,"fobo"::"ui-bootstrap.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.7.0/js/ui-bootstrap-0.7.0.min.js" in  {
+      rewriteInitParam(FoBo.AJSUIBootstrap070,"fobo"::"ui-bootstrap.js"::Nil) must_== 
+        List("fobo", "angular-ui", "bootstrap", "0.7.0", "js", "ui-bootstrap-0.7.0.min.js")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AJSUIBootstrap070 the ResourceServer" should {    
+    "allow  fobo/ui-bootstrap.js" in {
+      allowToolKitInit(FoBo.ToolKit.AJSUIBootstrap070,"fobo"::"ui-bootstrap.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.7.0/js/ui-bootstrap-0.7.0.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AJSUIBootstrap070,"fobo"::"ui-bootstrap.js"::Nil) must_== 
+        List("fobo", "angular-ui", "bootstrap", "0.7.0", "js", "ui-bootstrap-0.7.0.min.js")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.AJSUIBootstrap070 the ResourceServer" should { 
+    "allow  fobo/ui-bootstrap.js" in  {
+      allowResource(FoBo.Resource.AJSUIBootstrap070,"fobo"::"ui-bootstrap.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.7.0/js/ui-bootstrap-0.7.0.min.js" in  {
+     rewriteResource(FoBo.Resource.AJSUIBootstrap070,"fobo"::"ui-bootstrap.js"::Nil) must_== 
+        List("fobo", "angular-ui", "bootstrap", "0.7.0", "js", "ui-bootstrap-0.7.0.min.js")      
+    }       
+  } 
+  
+  //AJSUIBootstrap0100
+  "With FoBo.InitParam.ToolKit set to FoBo.AJSUIBootstrap0100 the ResourceServer" should {
+    "allow  fobo/ui-bootstrap.js" in {
+      allowInitParam(FoBo.AJSUIBootstrap0100,"fobo"::"ui-bootstrap.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.10.0/js/ui-bootstrap-0.10.0.min.js" in  {
+      rewriteInitParam(FoBo.AJSUIBootstrap0100,"fobo"::"ui-bootstrap.js"::Nil) must_== 
+        List("fobo", "angular-ui", "bootstrap", "0.10.0", "js", "ui-bootstrap-0.10.0.min.js")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AJSUIBootstrap0100 the ResourceServer" should {    
+    "allow  fobo/ui-bootstrap.js" in {
+      allowToolKitInit(FoBo.ToolKit.AJSUIBootstrap0100,"fobo"::"ui-bootstrap.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.10.0/js/ui-bootstrap-0.10.0.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AJSUIBootstrap0100,"fobo"::"ui-bootstrap.js"::Nil) must_== 
+        List("fobo", "angular-ui", "bootstrap", "0.10.0", "js", "ui-bootstrap-0.10.0.min.js")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.AJSUIBootstrap0100 the ResourceServer" should { 
+    "allow  fobo/ui-bootstrap.js" in  {
+      allowResource(FoBo.Resource.AJSUIBootstrap0100,"fobo"::"ui-bootstrap.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.10.0/js/ui-bootstrap-0.10.0.min.js" in  {
+     rewriteResource(FoBo.Resource.AJSUIBootstrap0100,"fobo"::"ui-bootstrap.js"::Nil) must_== 
+        List("fobo", "angular-ui", "bootstrap", "0.10.0", "js", "ui-bootstrap-0.10.0.min.js")      
+    }       
+  } 
+  
+  //AJSNGGrid207
+  "With FoBo.InitParam.ToolKit set to FoBo.AJSNGGrid207 the ResourceServer" should {
+    "allow  fobo/ng-grid.js" in {
+      allowInitParam(FoBo.AJSNGGrid207,"fobo"::"ng-grid.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/ng-grid.js to fobo/angular-ui/ng-grid/2.0.7/js/ng-grid.min.js" in  {
+      rewriteInitParam(FoBo.AJSNGGrid207,"fobo"::"ng-grid.js"::Nil) must_== 
+        List("fobo", "angular-ui", "ng-grid", "2.0.7", "js", "ng-grid-2.0.7.min.js")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AJSNGGrid207 the ResourceServer" should {    
+    "allow  fobo/ng-grid.js" in {
+      allowToolKitInit(FoBo.ToolKit.AJSNGGrid207,"fobo"::"ng-grid.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/ng-grid.js to fobo/angular-ui/ng-grid/2.0.7/js/ng-grid.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AJSNGGrid207,"fobo"::"ng-grid.js"::Nil) must_== 
+        List("fobo", "angular-ui", "ng-grid", "2.0.7", "js", "ng-grid-2.0.7.min.js")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.AJSNGGrid207 the ResourceServer" should { 
+    "allow  fobo/ng-grid.js" in  {
+      allowResource(FoBo.Resource.AJSNGGrid207,"fobo"::"ng-grid.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/ng-grid.js to fobo/angular-ui/ng-grid/2.0.7/js/ng-grid.min.js" in  {
+     rewriteResource(FoBo.Resource.AJSNGGrid207,"fobo"::"ng-grid.js"::Nil) must_== 
+        List("fobo", "angular-ui", "ng-grid", "2.0.7", "js", "ng-grid-2.0.7.min.js")      
+    }       
+  } 
+  
+  //AJSUIGrid307
+    "With FoBo.InitParam.ToolKit set to FoBo.AJSUIGrid307 the ResourceServer" should {
+    "allow  fobo/ui-grid.js" in {
+      allowInitParam(FoBo.AJSUIGrid307,"fobo"::"ui-grid.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/ui-grid.js to fobo/angular-ui/ui-grid/3.0.7/js/ui-grid.min.js" in  {
+      rewriteInitParam(FoBo.AJSUIGrid307,"fobo"::"ui-grid.js"::Nil) must_== 
+        List("fobo", "angular-ui", "ui-grid", "3.0.7", "js", "ui-grid.min.js")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AJSUIGrid307 the ResourceServer" should {    
+    "allow  fobo/ui-grid.js" in {
+      allowToolKitInit(FoBo.ToolKit.AJSUIGrid307,"fobo"::"ui-grid.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/ui-grid.js to fobo/angular-ui/ui-grid/3.0.7/js/ui-grid.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AJSUIGrid307,"fobo"::"ui-grid.js"::Nil) must_== 
+        List("fobo", "angular-ui", "ui-grid", "3.0.7", "js", "ui-grid.min.js")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.AJSUIGrid307 the ResourceServer" should { 
+    "allow  fobo/ui-grid.js" in  {
+      allowResource(FoBo.Resource.AJSUIGrid307,"fobo"::"ui-grid.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/ui-grid.js to fobo/angular-ui/ui-grid/3.0.7/js/ui-grid.min.js" in  {
+     rewriteResource(FoBo.Resource.AJSUIGrid307,"fobo"::"ui-grid.js"::Nil) must_== 
+        List("fobo", "angular-ui", "ui-grid", "3.0.7", "js", "ui-grid.min.js")      
+    }       
   }  
   
-  //JQuery
-  def rewriteJQuery214JS = {
-    FoBo.InitParam.JQuery=FoBo.JQuery214
-    ResourceServer.pathRewriter("fobo"::"jquery.js"::Nil)
+  //AngularJS148i18n
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS148i18n the ResourceServer" should {
+    "allow  fobo/angular-locale_sv-se.js" in {
+      allowInitParam(FoBo.AngularJS148i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular-locale_sv-se.js to fobo/angular-js/1.4.8/i18n/angular-locale_sv-se.js" in  {
+      rewriteInitParam(FoBo.AngularJS148i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.4.8", "i18n", "angular-locale_sv-se.js")      
+    }       
   } 
   
-  def rewriteJQuery1102JS = {
-    FoBo.InitParam.JQuery=FoBo.JQuery1102
-    ResourceServer.pathRewriter("fobo"::"jquery.js"::Nil)
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AngularJS148i18n the ResourceServer" should {    
+    "allow  fobo/angular-locale_sv-se.js" in {
+      allowToolKitInit(FoBo.ToolKit.AngularJS148i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular-locale_sv-se.js to fobo/angular-js/1.4.8/i18n/angular-locale_sv-se.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AngularJS148i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.4.8", "i18n", "angular-locale_sv-se.js")      
+    }       
   } 
-   
-  def rewriteJQuery191JSMigrate =  {
-    FoBo.InitParam.JQuery=FoBo.JQuery191
-    FoBo.InitParam.JQuery=FoBo.JQueryMigrate121
-    ResourceServer.pathRewriter("fobo"::"jquery.js"::Nil)
-  } 
- 
-  def rewriteJQuery191JS =  {
-    FoBo.InitParam.JQuery=FoBo.JQuery191
-    ResourceServer.pathRewriter("fobo"::"jquery.js"::Nil)
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.AngularJS148i18n the ResourceServer" should { 
+    "allow  fobo/angular-locale_sv-se.js" in  {
+      allowResource(FoBo.Resource.AngularJS148i18n,"fobo"::"angular-locale_sv-se.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/angular-locale_sv-se.js to fobo/angular-js/1.4.8/i18n/angular-locale_sv-se.js" in  {
+     rewriteResource(FoBo.Resource.AngularJS148i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.4.8", "i18n", "angular-locale_sv-se.js")      
+    }       
   }   
   
-  def rewriteJQuery182JS = {
-    FoBo.InitParam.JQuery=FoBo.JQuery182
-    ResourceServer.pathRewriter("fobo"::"jquery.js"::Nil)
+  //AngularJS141i18n
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS141i18n the ResourceServer" should {
+    "allow  fobo/angular-locale_sv-se.js" in {
+      allowInitParam(FoBo.AngularJS141i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular-locale_sv-se.js to fobo/angular-js/1.4.1/i18n/angular-locale_sv-se.js" in  {
+      rewriteInitParam(FoBo.AngularJS141i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.4.1", "i18n", "angular-locale_sv-se.js")      
+    }       
   } 
   
-  def rewriteJQuery172JS =  {
-    FoBo.InitParam.JQuery=FoBo.JQuery172
-    ResourceServer.pathRewriter("fobo"::"jquery.js"::Nil)
-  }  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AngularJS141i18n the ResourceServer" should {    
+    "allow  fobo/angular-locale_sv-se.js" in {
+      allowToolKitInit(FoBo.ToolKit.AngularJS141i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular-locale_sv-se.js to fobo/angular-js/1.4.1/i18n/angular-locale_sv-se.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AngularJS141i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.4.1", "i18n", "angular-locale_sv-se.js")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.AngularJS141i18n the ResourceServer" should { 
+    "allow  fobo/angular-locale_sv-se.js" in  {
+      allowResource(FoBo.Resource.AngularJS141i18n,"fobo"::"angular-locale_sv-se.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/angular-locale_sv-se.js to fobo/angular-js/1.4.1/i18n/angular-locale_sv-se.js" in  {
+     rewriteResource(FoBo.Resource.AngularJS141i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.4.1", "i18n", "angular-locale_sv-se.js")      
+    }       
+  }   
   
   
-  ////FontAwesome
-  def rewriteFontAwesome321CSS = {
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome321
-    ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
-  }  
-   
-   def rewriteFontAwesome410CSS = {
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome410
-    ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
-  }    
+  //AngularJS1315i18n
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS1315i18n the ResourceServer" should {
+    "allow  fobo/angular-locale_sv-se.js" in {
+      allowInitParam(FoBo.AngularJS1315i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular-locale_sv-se.js to fobo/angular-js/1.3.15/i18n/angular-locale_sv-se.js" in  {
+      rewriteInitParam(FoBo.AngularJS1315i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.3.15", "i18n", "angular-locale_sv-se.js")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AngularJS1315i18n the ResourceServer" should {    
+    "allow  fobo/angular-locale_sv-se.js" in {
+      allowToolKitInit(FoBo.ToolKit.AngularJS1315i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular-locale_sv-se.js to fobo/angular-js/1.3.15/i18n/angular-locale_sv-se.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AngularJS1315i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.3.15", "i18n", "angular-locale_sv-se.js")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.AngularJS1315i18n the ResourceServer" should { 
+    "allow  fobo/angular-locale_sv-se.js" in  {
+      allowResource(FoBo.Resource.AngularJS1315i18n,"fobo"::"angular-locale_sv-se.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/angular-locale_sv-se.js to fobo/angular-js/1.3.15/i18n/angular-locale_sv-se.js" in  {
+     rewriteResource(FoBo.Resource.AngularJS1315i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.3.15", "i18n", "angular-locale_sv-se.js")      
+    }       
+  }   
+  
+  //AngularJS1219i18n
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS1219i18n the ResourceServer" should {
+    "allow  fobo/angular-locale_sv-se.js" in {
+      allowInitParam(FoBo.AngularJS1219i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular-locale_sv-se.js to fobo/angular-js/1.2.19/i18n/angular-locale_sv-se.js" in  {
+      rewriteInitParam(FoBo.AngularJS1219i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sv-se.js")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AngularJS1219i18n the ResourceServer" should {    
+    "allow  fobo/angular-locale_sv-se.js" in {
+      allowToolKitInit(FoBo.ToolKit.AngularJS1219i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular-locale_sv-se.js to fobo/angular-js/1.2.19/i18n/angular-locale_sv-se.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AngularJS1219i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sv-se.js")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.AngularJS1219i18n the ResourceServer" should { 
+    "allow  fobo/angular-locale_sv-se.js" in  {
+      allowResource(FoBo.Resource.AngularJS1219i18n,"fobo"::"angular-locale_sv-se.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/angular-locale_sv-se.js to fobo/angular-js/1.2.19/i18n/angular-locale_sv-se.js" in  {
+     rewriteResource(FoBo.Resource.AngularJS1219i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.2.19", "i18n", "angular-locale_sv-se.js")      
+    }       
+  } 
 
-   def rewriteFontAwesome430CSS = {
-    FoBo.InitParam.ToolKit=FoBo.FontAwesome430
-    ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
-  }   
+  /*=================FontAwesome ====================================*/
+  
+  //FontAwesome321
+  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome321 the ResourceServer" should {
+    "allow  fobo/font-awesome.css" in {
+      allowInitParam(FoBo.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== true       
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/3.2.1/css/font-awesome-min.css" in  {
+      rewriteInitParam(FoBo.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-min.css")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.FontAwesome321 the ResourceServer" should {    
+    "allow  fobo/font-awesome.css" in {
+      allowToolKitInit(FoBo.ToolKit.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== true       
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/3.2.1/css/font-awesome-min.css" in {
+      rewriteToolKitInit(FoBo.ToolKit.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-min.css")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.FontAwesome321 the ResourceServer" should { 
+    "allow  fobo/font-awesome.css" in  {
+      allowResource(FoBo.Resource.FontAwesome321,"fobo"::"font-awesome.css"::Nil)  must_== true 
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/3.2.1/css/font-awesome-min.css" in  {
+     rewriteResource(FoBo.Resource.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-min.css")      
+    }       
+  } 
+  
+  //FontAwesome410  
+  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome410 the ResourceServer" should {
+    "allow  fobo/font-awesome.css" in {
+      allowInitParam(FoBo.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== true       
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome-min.css" in  {
+      rewriteInitParam(FoBo.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.1.0", "css", "font-awesome.min.css")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.FontAwesome410 the ResourceServer" should {    
+    "allow  fobo/font-awesome.css" in {
+      allowToolKitInit(FoBo.ToolKit.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== true       
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome.min.css" in {
+      rewriteToolKitInit(FoBo.ToolKit.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.1.0", "css", "font-awesome.min.css")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.FontAwesome410 the ResourceServer" should { 
+    "allow  fobo/font-awesome.css" in  {
+      allowResource(FoBo.Resource.FontAwesome410,"fobo"::"font-awesome.css"::Nil)  must_== true 
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome.min.css" in  {
+     rewriteResource(FoBo.Resource.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.1.0", "css", "font-awesome.min.css")      
+    }       
+  }  
+  
+  //FontAwesome430
+  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome430 the ResourceServer" should {
+    "allow  fobo/font-awesome.css" in {
+      allowInitParam(FoBo.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== true       
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.3.0/css/font-awesome.min.css" in  {
+      rewriteInitParam(FoBo.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.3.0", "css", "font-awesome.min.css")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.FontAwesome430 the ResourceServer" should {    
+    "allow  fobo/font-awesome.css" in {
+      allowToolKitInit(FoBo.ToolKit.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== true       
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.3.0/css/font-awesome.min.css" in {
+      rewriteToolKitInit(FoBo.ToolKit.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.3.0", "css", "font-awesome.min.css")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.FontAwesome430 the ResourceServer" should { 
+    "allow  fobo/font-awesome.css" in  {
+      allowResource(FoBo.Resource.FontAwesome430,"fobo"::"font-awesome.css"::Nil)  must_== true 
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.3.0/css/font-awesome.min.css" in  {
+     rewriteResource(FoBo.Resource.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.3.0", "css", "font-awesome.min.css")      
+    }       
+  }  
+  
+  //FontAwesome450
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.FontAwesome450 the ResourceServer" should {    
+    "allow  fobo/font-awesome.css" in {
+      allowToolKitInit(FoBo.ToolKit.FontAwesome450,"fobo"::"font-awesome.css"::Nil) must_== true       
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.5.0/css/font-awesome.min.css" in {
+      rewriteToolKitInit(FoBo.ToolKit.FontAwesome450,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.5.0", "css", "font-awesome.min.css")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.FontAwesome450 the ResourceServer" should { 
+    "allow  fobo/font-awesome.css" in  {
+      allowResource(FoBo.Resource.FontAwesome450,"fobo"::"font-awesome.css"::Nil)  must_== true 
+    }     
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.5.0/css/font-awesome.min.css" in  {
+     rewriteResource(FoBo.Resource.FontAwesome450,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.5.0", "css", "font-awesome.min.css")      
+    }       
+  }    
+  
+  /*=================Google-Code-Prettify ====================================*/
   
   //PrettifyJun2011
-  def rewritePrettifyJun2011JS = {
-    FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
-    ResourceServer.pathRewriter("fobo"::"prettify.js"::Nil)
+  "With FoBo.InitParam.ToolKit set to FoBo.PrettifyJun2011 the ResourceServer" should {
+    "allow  fobo/prettify.js" in {
+      allowInitParam(FoBo.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/prettify.js to fobo/google-code/js/prettify.js" in  {
+      rewriteInitParam(FoBo.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== 
+        List("fobo", "google-code", "js", "prettify.js")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.PrettifyJun2011 the ResourceServer" should {    
+    "allow  fobo/prettify.js" in {
+      allowToolKitInit(FoBo.ToolKit.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/prettify.js to fobo/google-code/js/prettify.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== 
+        List("fobo", "google-code", "js", "prettify.js")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.PrettifyJun2011 the ResourceServer" should { 
+    "allow  fobo/prettify.js" in  {
+      allowResource(FoBo.Resource.PrettifyJun2011,"fobo"::"prettify.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/prettify.js to fobo/google-code/js/prettify.js" in  {
+     rewriteResource(FoBo.Resource.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== 
+        List("fobo", "google-code", "js", "prettify.js")      
+    }       
+  }     
+    
+  /*=================Google-Code-Prettify ====================================*/
+  
+  //Pace0415
+  "With FoBo.InitParam.ToolKit set to FoBo.Pace0415 the ResourceServer" should {
+    "allow  fobo/pace.js" in {
+      allowInitParam(FoBo.Pace0415,"fobo"::"pace.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/pace.js to fobo/pace/0.4.15/js/pace.min.js" in  {
+      rewriteInitParam(FoBo.Pace0415,"fobo"::"pace.js"::Nil) must_== 
+        List("fobo", "pace", "0.4.15", "js", "pace.min.js")      
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.Pace0415 the ResourceServer" should {    
+    "allow  fobo/pace.js" in {
+      allowToolKitInit(FoBo.ToolKit.Pace0415,"fobo"::"pace.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/pace.js to fobo/pace/0.4.15/js/pace.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.Pace0415,"fobo"::"pace.js"::Nil) must_== 
+        List("fobo", "pace", "0.4.15", "js", "pace.min.js")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.Pace0415 the ResourceServer" should { 
+    "allow  fobo/pace.js" in  {
+      allowResource(FoBo.Resource.Pace0415,"fobo"::"pace.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/pace.js to fobo/pace/0.4.15/js/pace.min.js" in  {
+     rewriteResource(FoBo.Resource.Pace0415,"fobo"::"pace.js"::Nil) must_== 
+        List("fobo", "pace", "0.4.15", "js", "pace.min.js")      
+    }       
   }   
   
-  //Bootstrap   
-   def rewriteBootstrap232JS = {
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap232
-    ResourceServer.pathRewriter("fobo"::"bootstrap.js"::Nil)
+  /*=================Bootstrap ====================================*/
+  
+  //Bootstrap336
+  "With FoBo.Resource.Init set to FoBo.Resource.Bootstrap336 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowResource(FoBo.Resource.Bootstrap336,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.3.6/js/bootstrap-min.js" in {
+      rewriteResource(FoBo.Resource.Bootstrap336,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.3.6", "js", "bootstrap.min.js")
+    }       
+  }
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.Bootstrap336 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowToolKitInit(FoBo.ToolKit.Bootstrap336,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.3.6/js/bootstrap-min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.Bootstrap336,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.3.6", "js", "bootstrap.min.js")
+    }       
+  }
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap336 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowInitParam(FoBo.Bootstrap336,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.3.6/js/bootstrap-min.js" in {
+      rewriteInitParam(FoBo.Bootstrap336,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.3.6", "js", "bootstrap.min.js")
+    }       
   } 
-   
-   def rewriteBootstrap320JS = {
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap320
-    ResourceServer.pathRewriter("fobo"::"bootstrap.js"::Nil)
+  
+  //Bootstrap335
+  "With FoBo.Resource.Init set to FoBo.Resource.Bootstrap335 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowResource(FoBo.Resource.Bootstrap335,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.3.5/js/bootstrap-min.js" in {
+      rewriteResource(FoBo.Resource.Bootstrap335,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.3.5", "js", "bootstrap.min.js")
+    }       
+  }
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.Bootstrap335 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowToolKitInit(FoBo.ToolKit.Bootstrap335,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.3.5/js/bootstrap-min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.Bootstrap335,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.3.5", "js", "bootstrap.min.js")
+    }       
+  }
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap335 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowInitParam(FoBo.Bootstrap335,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.3.5/js/bootstrap-min.js" in {
+      rewriteInitParam(FoBo.Bootstrap335,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.3.5", "js", "bootstrap.min.js")
+    }       
+  }
+  
+  //Bootstrap320
+  "With FoBo.Resource.Init set to FoBo.Resource.Bootstrap320 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowResource(FoBo.Resource.Bootstrap320,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.2.0/js/bootstrap-min.js" in {
+      rewriteResource(FoBo.Resource.Bootstrap320,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.2.0", "js", "bootstrap.min.js")
+    }       
+  }
+  
+  "With FoBo.ToolKit.Init set to FoBoBs.ToolKit.Bootstrap320 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowToolKitInit(FoBo.ToolKit.Bootstrap320,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.2.0/js/bootstrap-min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.Bootstrap320,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.2.0", "js", "bootstrap.min.js")
+    }       
+  }
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap320 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowInitParam(FoBo.Bootstrap320,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.2.0/js/bootstrap-min.js" in {
+      rewriteInitParam(FoBo.Bootstrap320,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.2.0", "js", "bootstrap.min.js")
+    }       
+  }  
+  
+  //Bootstrap311
+  "With FoBo.Resource.Init set to FoBo.Resource.Bootstrap311 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowResource(FoBo.Resource.Bootstrap311,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.1.1/js/bootstrap-min.js" in {
+      rewriteResource(FoBo.Resource.Bootstrap311,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.1.1", "js", "bootstrap.min.js")
+    }       
+  }
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.Bootstrap311 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowToolKitInit(FoBo.ToolKit.Bootstrap311,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.1.1/js/bootstrap-min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.Bootstrap311,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.1.1", "js", "bootstrap.min.js")
+    }       
+  }
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap311 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowInitParam(FoBo.Bootstrap311,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.1.1/js/bootstrap-min.js" in {
+      rewriteInitParam(FoBo.Bootstrap311,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.1.1", "js", "bootstrap.min.js")
+    }       
   }    
   
-   def rewriteBootstrap336JS = {
-    FoBo.InitParam.ToolKit=FoBo.Bootstrap336
-    ResourceServer.pathRewriter("fobo"::"bootstrap.js"::Nil)
+  //Bootstrap301
+  "With FoBo.Resource.Init set to FoBo.Resource.Bootstrap301 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowResource(FoBo.Resource.Bootstrap301,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.0.1/js/bootstrap-min.js" in {
+      rewriteResource(FoBo.Resource.Bootstrap301,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.0.1", "js", "bootstrap.min.js")
+    }       
+  }
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.Bootstrap301 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowToolKitInit(FoBo.ToolKit.Bootstrap301,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.0.1/js/bootstrap-min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.Bootstrap301,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.0.1", "js", "bootstrap.min.js")
+    }       
+  }
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap301 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowInitParam(FoBo.Bootstrap301,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.0.1/js/bootstrap-min.js" in {
+      rewriteInitParam(FoBo.Bootstrap301,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.0.1", "js", "bootstrap.min.js")
+    }       
+  } 
+  
+  //Bootstrap232
+  "With FoBo.Resource.Init set to FoBo.Resource.Bootstrap232 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowResource(FoBo.Resource.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/2.3.2/js/bootstrap-min.js" in {
+      rewriteResource(FoBo.Resource.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "2.3.2", "js", "bootstrap-min.js")
+    }       
+  }
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.Bootstrap232 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowToolKitInit(FoBo.ToolKit.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/2.3.2/js/bootstrap-min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "2.3.2", "js", "bootstrap-min.js")
+    }       
+  }
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap232 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowInitParam(FoBo.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/2.3.2/js/bootstrap-min.js" in {
+      rewriteInitParam(FoBo.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "2.3.2", "js", "bootstrap-min.js")
+    }       
+  } 
+  
+  /*=================JQuery and JQuery Migrate ====================================*/
+ 
+  //JQueryMigrate121
+  "With FoBo.Resource.Init set to FoBo.Resource.JQueryMigrate121 the ResourceServer" should {
+    "allow  fobo/jquery-migrate.js" in {
+      allowResource(FoBo.Resource.JQueryMigrate121,"fobo"::"jquery-migrate.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery-migrate.js to jquery-migrate/1.2.1/js/jquery-migrate-min.js" in {
+      rewriteResource(FoBo.Resource.JQueryMigrate121,"fobo"::"jquery-migrate.js"::Nil) must_== 
+        List("jquery-migrate", "1.2.1", "js", "jquery-migrate-min.js")
+    }        
+  }
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.JQueryMigrate121 the ResourceServer" should {
+    "allow  fobo/jquery-migrate.js" in {
+      allowToolKitInit(FoBo.ToolKit.JQueryMigrate121,"fobo"::"jquery-migrate.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery-migrate.js to jquery-migrate/1.2.1/js/jquery-migrate-min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.JQueryMigrate121,"fobo"::"jquery-migrate.js"::Nil) must_== 
+        List("jquery-migrate", "1.2.1", "js", "jquery-migrate-min.js")
+    }        
+  }  
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.JQueryMigrate121 the ResourceServer" should {
+    "allow  fobo/jquery-migrate.js" in {
+      allowJQInitParam(FoBo.JQueryMigrate121,"fobo"::"jquery-migrate.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery-migrate.js to jquery-migrate/1.2.1/js/jquery-migrate-min.js" in {
+      rewriteJQInitParam(FoBo.JQueryMigrate121,"fobo"::"jquery-migrate.js"::Nil) must_== 
+        List("jquery-migrate", "1.2.1", "js", "jquery-migrate-min.js")
+    }        
+  }  
+  
+  //JQuery214
+  "With FoBo.Resource.Init set to FoBo.Resource.JQuery214 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowResource(FoBo.Resource.JQuery214,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/2.1.4/js/jquery-min.js" in {
+      rewriteResource(FoBo.Resource.JQuery214,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "2.1.4", "js", "jquery-min.js")
+    }        
+  }   
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.JQuery214 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowToolKitInit(FoBo.ToolKit.JQuery214,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/2.1.4/js/jquery-min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.JQuery214,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "2.1.4", "js", "jquery-min.js")
+    }        
+  }  
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.JQuery214 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowJQInitParam(FoBo.JQuery214,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/2.1.4/js/jquery-min.js" in {
+      rewriteJQInitParam(FoBo.JQuery214,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "2.1.4", "js", "jquery-min.js")
+    }        
+  }   
+  
+  //JQuery211
+  "With FoBo.Resource.Init set to FoBo.Resource.JQuery211 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowResource(FoBo.Resource.JQuery211,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/2.1.1/js/jquery-min.js" in {
+      rewriteResource(FoBo.Resource.JQuery211,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "2.1.1", "js", "jquery-min.js")
+    }        
+  }  
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.JQuery211 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowToolKitInit(FoBo.ToolKit.JQuery211,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/2.1.1/js/jquery-min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.JQuery211,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "2.1.1", "js", "jquery-min.js")
+    }        
+  }  
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.JQuery211 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowJQInitParam(FoBo.JQuery211,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/2.1.1/js/jquery-min.js" in {
+      rewriteJQInitParam(FoBo.JQuery211,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "2.1.1", "js", "jquery-min.js")
+    }        
   }    
-     
+  
+  //JQuery1113
+  "With FoBo.Resource.Init set to FoBo.Resource.JQuery1113 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowResource(FoBo.Resource.JQuery1113,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/1.11.3/js/jquery-min.js" in {
+      rewriteResource(FoBo.Resource.JQuery1113,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "1.11.3", "js", "jquery-min.js")
+    }        
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.JQuery1113 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowToolKitInit(FoBo.ToolKit.JQuery1113,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/1.11.3/js/jquery-min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.JQuery1113,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "1.11.3", "js", "jquery-min.js")
+    }        
+  }  
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.JQuery1113 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowJQInitParam(FoBo.JQuery1113,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/1.11.3/js/jquery-min.js" in {
+      rewriteJQInitParam(FoBo.JQuery1113,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "1.11.3", "js", "jquery-min.js")
+    }        
+  }   
+  
+  //JQuery1102
+  "With FoBo.Resource.Init set to FoBo.Resource.JQuery1102 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowResource(FoBo.Resource.JQuery1102,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/1.10.2/js/jquery-min.js" in {
+      rewriteResource(FoBo.Resource.JQuery1102,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "1.10.2", "js", "jquery-min.js")
+    }        
+  }  
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.JQuery1102 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowToolKitInit(FoBo.ToolKit.JQuery1102,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/1.10.2/js/jquery-min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.JQuery1102,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "1.10.2", "js", "jquery-min.js")
+    }        
+  }  
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.JQuery1102 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowJQInitParam(FoBo.JQuery1102,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/1.10.2/js/jquery-min.js" in {
+      rewriteJQInitParam(FoBo.JQuery1102,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "1.10.2", "js", "jquery-min.js")
+    }        
+  }   
+
+//  //Something fishy is going on with v1.8.2   
+//  //JQuery182
+//  "With FoBo.Resource.Init set to FoBo.Resource.JQuery182 the ResourceServer" should {
+//    "allow  fobo/jquery.js" in {
+//      allowResource(FoBo.Resource.JQuery182,"fobo"::"jquery.js"::Nil) must_== true 
+//    }     
+//    "rewrit fobo/jquery.js to jquery/1.8.2/js/jquery-min.js" in {
+//      rewriteResource(FoBo.Resource.JQuery182,"fobo"::"jquery.js"::Nil) must_== 
+//        List("jquery", "1.8.2", "js", "jquery-min.js")
+//    }        
+//  }  
+//  
+//  "With FoBo.ToolKit.Init set to FoBo.ToolKit.JQuery182 the ResourceServer" should {
+//    "allow  fobo/jquery.js" in {
+//      allowToolKitInit(FoBo.ToolKit.JQuery182,"fobo"::"jquery.js"::Nil) must_== true 
+//    }     
+//    "rewrit fobo/jquery.js to jquery/1.8.2/js/jquery-min.js" in {
+//      rewriteToolKitInit(FoBo.ToolKit.JQuery182,"fobo"::"jquery.js"::Nil) must_== 
+//        List("jquery", "1.8.2", "js", "jquery-min.js")
+//    }        
+//  }  
+//  
+//  "With FoBo.InitParam.ToolKit set to FoBo.JQuery182 the ResourceServer" should {
+//    "allow  fobo/jquery.js" in {
+//      allowJQInitParam(FoBo.JQuery182,"fobo"::"jquery.js"::Nil) must_== true 
+//    }     
+//    "rewrit fobo/jquery.js to jquery/1.8.2/js/jquery-min.js" in {
+//      rewriteJQInitParam(FoBo.JQuery182,"fobo"::"jquery.js"::Nil) must_== 
+//        List("jquery", "1.8.2", "js", "jquery-min.js")
+//    }        
+//  }   
+  
+  //JQuery191
+  "With FoBo.Resource.Init set to FoBo.Resource.JQuery191 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowResource(FoBo.Resource.JQuery191,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/1.9.1/js/jquery-min.js" in {
+      rewriteResource(FoBo.Resource.JQuery191,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "1.9.1", "js", "jquery-min.js")
+    }        
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.JQuery191 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowToolKitInit(FoBo.ToolKit.JQuery191,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/1.9.1/js/jquery-min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.JQuery191,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "1.9.1", "js", "jquery-min.js")
+    }        
+  }  
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.JQuery191 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowJQInitParam(FoBo.JQuery191,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/1.9.1/js/jquery-min.js" in {
+      rewriteJQInitParam(FoBo.JQuery191,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "1.9.1", "js", "jquery-min.js")
+    }        
+  }  
+  
+  //JQuery172
+  "With FoBo.Resource.Init set to FoBo.Resource.JQuery172 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowResource(FoBo.Resource.JQuery172,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/1.7.2/js/jquery-min.js" in {
+      rewriteResource(FoBo.Resource.JQuery172,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "1.7.2", "js", "jquery-min.js")
+    }        
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.JQuery172 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowToolKitInit(FoBo.ToolKit.JQuery172,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/1.7.2/js/jquery-min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.JQuery172,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "1.7.2", "js", "jquery-min.js")
+    }        
+  }  
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.JQuery172 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowJQInitParam(FoBo.JQuery172,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/1.7.2/js/jquery-min.js" in {
+      rewriteJQInitParam(FoBo.JQuery172,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "1.7.2", "js", "jquery-min.js")
+    }        
+  }     
+  
+  /*================= KineticJS ====================================*/
+  
+ //KineticJS510
+  "With FoBo.InitParam.ToolKit set to FoBo.KineticJS510 the ResourceServer" should {
+    "allow  fobo/kinetic.js" in {
+      allowInitParam(FoBo.KineticJS510,"fobo"::"kinetic.js"::Nil) must_== true 
+    } 
+    "rewrit fobo/kinetic.js to fobo/kinetic/5.1.0/js/kineti.min.js" in {
+      rewriteInitParam(FoBo.KineticJS510,"fobo"::"kinetic.js"::Nil) must_== 
+        List("fobo", "kinetic", "5.1.0", "js", "kinetic.min.js")
+    }       
+  } 
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.KineticJS510 the ResourceServer" should {
+    "allow  fobo/kinetic.js" in {
+      allowToolKitInit(FoBo.ToolKit.KineticJS510,"fobo"::"kinetic.js"::Nil) must_== true 
+    } 
+    "rewrit fobo/kinetic.js to fobo/kinetic/5.1.0/js/kineti.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.KineticJS510,"fobo"::"kinetic.js"::Nil) must_== 
+        List("fobo", "kinetic", "5.1.0", "js", "kinetic.min.js")
+    }       
+  }
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.KineticJS510 the ResourceServer" should {
+    "allow  fobo/kinetic.js" in {
+      allowResource(FoBo.Resource.KineticJS510,"fobo"::"kinetic.js"::Nil) must_== true 
+    } 
+    "rewrit fobo/kinetic.js to fobo/kinetic/5.1.0/js/kineti.min.js" in {
+      rewriteResource(FoBo.Resource.KineticJS510,"fobo"::"kinetic.js"::Nil) must_== 
+        List("fobo", "kinetic", "5.1.0", "js", "kinetic.min.js")
+    }       
+  }     
+  
+  
+ //=== ToolKit.Init ==============//
+  def allowToolKitInit(resource:FoBo.ToolKit,path:List[String]) = {
+    FoBo.ToolKit.Init=resource 
+    ResourceServer.allowedPaths(path)
+  } 
+ 
+  def rewriteToolKitInit(resource:FoBo.ToolKit,path:List[String]) = {
+    FoBo.ToolKit.Init=resource 
+    ResourceServer.pathRewriter(path)
+  }  
+  
+  //=== Resource.Init ===============//
+  def allowResource(resource:FoBo.Resource,path:List[String]) = {
+    FoBo.Resource.Init=resource 
+    ResourceServer.allowedPaths(path)
+  } 
+ 
+  def rewriteResource(resource:FoBo.Resource,path:List[String]) = {
+    FoBo.Resource.Init=resource 
+    ResourceServer.pathRewriter(path)
+  } 
+  
+ //=== InitParam.ToolKit (deprecated in v1.6) ===============// 
+  def allowInitParam(resource:FoBo.FoBoToolkit,path:List[String]) = {
+    FoBo.InitParam.ToolKit=resource 
+    ResourceServer.allowedPaths(path)
+  } 
+ 
+  def rewriteInitParam(resource:FoBo.FoBoToolkit,path:List[String]) = {
+    FoBo.InitParam.ToolKit=resource 
+    ResourceServer.pathRewriter(path)
+  } 
+  
+  def allowJQInitParam(resource:FoBo.FoBoJQuery,path:List[String]) = {
+    FoBo.InitParam.JQuery=resource 
+    ResourceServer.allowedPaths(path)
+  } 
+ 
+  def rewriteJQInitParam(resource:FoBo.FoBoJQuery,path:List[String]) = {
+    FoBo.InitParam.JQuery=resource 
+    ResourceServer.pathRewriter(path)
+  }   
+  
    
 }
 

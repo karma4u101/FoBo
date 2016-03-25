@@ -1,7 +1,9 @@
-FoBo-AngularJS
-=================
+# FoBo AngularJS Module
 
-This sub module provides AngularJS components to the FoBo Module, but can also be used as-is (see below for setup information).
+This FoBo toolkit module provides AngularJS API and Resource components to the FoBo Module, but can also be used as-is (see below for setup information).
+For more information on the AngularJS Resouces module see [FoBo AngularJSRes](https://github.com/karma4u101/AngularJSRes).
+For more information on the AngularJS API module see [FoBo AngularJSAPI](https://github.com/karma4u101/AngularJSAPI).
+
 For more information on how to use AngularJS in the FoBo module see the [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo).
 
 Core modules 
@@ -14,25 +16,6 @@ Components
 - Angular NG-Grid [v2.0.4, v2.0.7]
 - Angular UI-Grid [v3.0.7]
 - Angular Material Design [v0.10.0, v1.0.1]
-
-
-Contributions
--------------
-Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
-
-Update log
-----------
-
-For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/AngularJS#history-log) section
-
-**Latest Module Version:**
-- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)  
-
-**Latest Update:**
-see [Changelog](https://github.com/karma4u101/FoBo/blob/develop/CHANGELOG.md)
-
-**Latest Releases:**
-- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for releas information.
 
 
 Integration into your project 
@@ -163,11 +146,22 @@ For more information on how to use AngularJS and included components:
 - Angular UI Bootstrap see [Angular UI Bootstrap](http://angular-ui.github.io/bootstrap/)
 - Angular Angular NG-Grid see [Angular NG-Grid](http://angular-ui.github.io/ng-grid/)
 
-### History log
-----------------
+Update log
+----------
 
-**Updates history:**
-- 
+For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/CHANGELOG.md#history-log) section
+
+**Latest Module Version:**
+- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)  
+
+**Latest Update:**
+see [Changelog](https://github.com/karma4u101/FoBo/blob/develop/CHANGELOG.md)
+
+**Latest Releases:**
+- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for releas information.
+
+## Contributions
+Improvements, contributions and suggestions are welcome! Clone the project and start working on a PR. You can also leave a issue report or drop a question/suggestion to the [Lift's mailing list](http://groups.google.com/group/liftweb/) 
 
  
 

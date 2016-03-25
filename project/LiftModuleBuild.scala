@@ -36,42 +36,115 @@ object LiftModuleFoBoBuild extends Build {
    lazy val fontAwesome = Project(id   = "fobo-font-awesome", 
                              base = file("Font-Awesome"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile),
+                                 aggregate = Seq(fontAwesomeres)
+                                 ).dependsOn(fontAwesomeres)   
+                                 
+   lazy val fontAwesomeres = Project(id   = "fobo-font-awesome-res", 
+                             base = file("Font-Awesome-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
+                                 
                              
   lazy val bootstrap    = Project(id   = "fobo-twitter-bootstrap", 
                              base = file("Twitter-Bootstrap"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile),
+                             aggregate = Seq(bootstrapres,bootstrapapi)    
+                             ).dependsOn(bootstrapres,bootstrapapi) 
+                                 
+  lazy val bootstrapres = Project(id   = "fobo-twitter-bootstrap-res", 
+                             base = file("Twitter-Bootstrap-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
+                                 
+  lazy val bootstrapapi = Project(id   = "fobo-twitter-bootstrap-api", 
+                             base = file("Twitter-Bootstrap-API"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                   
                           
   lazy val bootstrap3   = Project(id   = "fobo-twbs-bootstrap3", 
                              base = file("TwBs-Bootstrap3"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
-                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                   
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile),
+                             aggregate = Seq(bootstrap3res,bootstrap3api)    
+                             ).dependsOn(bootstrap3res,bootstrap3api) 
+                                 
+  lazy val bootstrap3res   = Project(id   = "fobo-twbs-bootstrap3-res", 
+                             base = file("TwBs-Bootstrap3-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                  
+                                 
+  lazy val bootstrap3api   = Project(id   = "fobo-twbs-bootstrap3-api", 
+                             base = file("TwBs-Bootstrap3-API"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                             
+                                 
                              
   lazy val angularjs    = Project(id   = "fobo-angularjs", 
                              base = file("AngularJS"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
-                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))  
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile),
+                             aggregate = Seq(angularjsres,angularjsapi)    
+                             ).dependsOn(angularjsres,angularjsapi)  
+                             
+  lazy val angularjsres      = Project(id = "fobo-angularjs-res",
+                             base = file("AngularJS-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))      
+                                 
+ lazy val angularjsapi      = Project(id = "fobo-angularjs-api",
+                             base = file("AngularJS-API"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                       
                              
   lazy val jquery       = Project(id   = "fobo-jquery", 
                              base = file("JQuery"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
-                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))  
-  
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile),
+                             aggregate = Seq(jqueryres) 
+                                 ).dependsOn(jqueryres)   
+                                 
+  lazy val jqueryres     = Project(id   = "fobo-jquery-res", 
+                             base = file("JQuery-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                   
+                                 
   lazy val pace         = Project(id   = "fobo-pace", 
                              base = file("Pace"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile),
+                             aggregate = Seq(paceres)
+                                 ).dependsOn(paceres) 
+                                 
+  lazy val paceres      = Project(id = "fobo-pace-res",
+                             base = file("Pace-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
-                                                  
+                                                         
   lazy val prettify     = Project(id   = "fobo-google-code-prettify", 
                              base = file("Google-Code-Prettify"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
-                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                               
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile),
+                                 aggregate = Seq(prettifyres)   
+                                 ).dependsOn(prettifyres)                                   
+                                 
+  lazy val prettifyres     = Project(id   = "fobo-google-code-prettify-res", 
+                             base = file("Google-Code-Prettify-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                    
  
   lazy val kineticjs    = Project(id   = "fobo-kineticjs", 
                              base = file("KineticJS"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
-                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))  
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile),
+                              aggregate = Seq(kineticjsres)   
+                                 ).dependsOn(kineticjsres)  
+                                 
+  lazy val kineticjsres = Project(id   = "fobo-kineticjs-res", 
+                             base = file("KineticJS-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                   
                                                                             
 
   lazy val scaladocDiagramsEnabled = System.getProperty("scaladoc.diagrams", "false").toBoolean
