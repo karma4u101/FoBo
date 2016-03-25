@@ -742,6 +742,23 @@ package object FoBo {
      
     /*===Bootstrap2 ToolKit===============================================================*/     
      
+    /**
+     * Enable usage of Bootstrap API and resources version 2&#8228;3&#8228;2 resource files in your bootstrap liftweb Boot.
+     * @version 2.3.2
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap232
+     * }}}
+     *
+     */
+    case object Bootstrap232 extends ToolKit {
+      net.liftmodules.FoBoTB.ToolKit.Bootstrap232
+    }  
+    
   }//end ToolKit
   
   
@@ -1363,6 +1380,23 @@ package object FoBo {
      
      /*===Bootstrap2 Resource===============================================================*/
      
+    /**
+     * Enable usage of Bootstrap version 3&#8228;0&#8228;1 resource files in your bootstrap liftweb Boot.
+     * @version 2.3.2
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.Bootstrap232
+     * }}}
+     *
+     */
+    case object Bootstrap232 extends Resource {
+      net.liftmodules.FoBoTB.Resource.Bootstrap232
+    }       
+    
   }  
 
   
@@ -1380,7 +1414,7 @@ package object FoBo {
      *  '''Example:'''
      *
      * {{{
-     *   import net.liftmodules.{FoBoAJS => FoBo}
+     *   import net.liftmodules.FoBo
      *    :
      *   FoBo.API.Init=FoBo.API.Angular1
      * }}}
@@ -1391,6 +1425,40 @@ package object FoBo {
     }
     
     /*===Bootstrap API===============================================================*/
+    
+    /**
+     * Enable usage of FoBo's Bootstrap API 3&#8228;x&#8228;x in your bootstrap liftweb Boot.
+     * @version 3.x.x
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.API.Init=FoBo.API.Bootstrap3
+     * }}}
+     *
+     */    
+    case object Bootstrap3 extends API {
+      net.liftmodules.FoBoBs.API.Bootstrap3
+    } 
+    
+    /**
+     * Enable usage of FoBo's Bootstrap API 2&#8228;x&#8228;x in your bootstrap liftweb Boot.
+     * @version 2.x.x
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.API.Init=FoBo.API.Bootstrap2
+     * }}}
+     *
+     */    
+    case object Bootstrap2 extends API {
+      net.liftmodules.FoBoTB.API.Bootstrap2
+    }     
     
     /*===Font Awesome API===============================================================*/
     

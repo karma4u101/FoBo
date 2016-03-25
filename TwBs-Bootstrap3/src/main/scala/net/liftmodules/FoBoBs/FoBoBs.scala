@@ -372,11 +372,7 @@ object BSLocInfo {
    */
   @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoBs.InitParam","1.6.0")
   def init():Unit = {
-//    FoBoAPI.setup
-//    FoBoResources.setup
-//    ResourceServer.allow {
-//      case "fobo" :: tail => true
-//    }
+
   }
 
 
@@ -436,9 +432,6 @@ case object Bootstrap336 extends FoBoToolkit {
 case object Bootstrap335 extends FoBoToolkit {
   net.liftmodules.FoBoBsRes.Resource.Bootstrap335
   net.liftmodules.FoBoBsAPI.API.Bootstrap3  
-//  FoBoAPI.init
-//  FoBoResources.init
-//  FoBoResources.bootstrap335
 }
 
 /**
@@ -454,9 +447,6 @@ case object Bootstrap335 extends FoBoToolkit {
 case object Bootstrap320 extends FoBoToolkit {
   net.liftmodules.FoBoBsRes.Resource.Bootstrap320
   net.liftmodules.FoBoBsAPI.API.Bootstrap3    
-//  FoBoAPI.init
-//  FoBoResources.init
-//  FoBoResources.bootstrap320
 }
 
 /**
@@ -472,9 +462,6 @@ case object Bootstrap320 extends FoBoToolkit {
 case object Bootstrap311 extends FoBoToolkit {
   net.liftmodules.FoBoBsRes.Resource.Bootstrap311
   net.liftmodules.FoBoBsAPI.API.Bootstrap3   
-//  FoBoAPI.init
-//  FoBoResources.init
-//  FoBoResources.bootstrap311
 }
 
 
@@ -491,96 +478,8 @@ case object Bootstrap311 extends FoBoToolkit {
 case object Bootstrap301 extends FoBoToolkit {
   net.liftmodules.FoBoBsRes.Resource.Bootstrap301
   net.liftmodules.FoBoBsAPI.API.Bootstrap3     
-//  FoBoAPI.init
-//  FoBoResources.init  
-//  FoBoResources.bootstrap301
 }
 
-
-//private object FoBoAPI {
-//  lazy val init: Unit = {
-//    LiftRules.addToPackages("net.liftmodules.FoBoBs")  
-//  }
-//}
-//
-///**
-// * Object holding internally used FoBo resources. 
-// */
-//private object FoBoResources { 
-//
-//  lazy val init: Unit = {
-//    ResourceServer.allow {
-//      case "fobo" :: tail => true
-//    }
-//  }
-//  
-//  lazy val bootstrap336: Unit = {
-//    ResourceServer.rewrite {
-//      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap", "3.3.6", "css", "bootstrap.css")
-//      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap", "3.3.6", "css", "bootstrap.min.css")
-//      case "fobo" :: "bootstrap.css.map" :: Nil if Props.devMode => List("fobo", "bootstrap", "3.3.6", "css", "bootstrap.css.map")
-//      case "fobo" :: "bootstrap.css.map" :: Nil => List("fobo", "bootstrap", "3.3.6", "css", "bootstrap.min.css.map")
-//      case "fobo" :: "bootstrap-theme.css" :: Nil if Props.devMode => List("fobo", "bootstrap", "3.3.6", "css", "bootstrap-theme.css")
-//      case "fobo" :: "bootstrap-theme.css" :: Nil => List("fobo", "bootstrap", "3.3.6", "css", "bootstrap-theme.min.css")
-//      case "fobo" :: "bootstrap-theme.css.map" :: Nil if Props.devMode => List("fobo", "bootstrap", "3.3.6", "css", "bootstrap-theme.css.map")
-//      case "fobo" :: "bootstrap-theme.css.map" :: Nil => List("fobo", "bootstrap", "3.3.6", "css", "bootstrap-theme.min.css.map")
-//      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo", "bootstrap", "3.3.6", "js", "bootstrap.js")
-//      case "fobo" :: "bootstrap.js" :: Nil => List("fobo", "bootstrap", "3.3.6", "js", "bootstrap.min.js") 
-//    }
-//  }
-//  
-//  lazy val bootstrap335: Unit = {
-//    ResourceServer.rewrite {
-//      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","3.3.5", "css", "bootstrap.css")
-//      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","3.3.5", "css", "bootstrap.min.css")
-//      case "fobo" :: "bootstrap.css.map" :: Nil => List("fobo", "bootstrap","3.3.5", "css", "bootstrap.css.map")
-//      case "fobo" :: "bootstrap-theme.css" :: Nil if Props.devMode => List("fobo", "bootstrap","3.3.5", "css", "bootstrap-theme.css")
-//      case "fobo" :: "bootstrap-theme.css" :: Nil => List("fobo", "bootstrap","3.3.5", "css", "bootstrap-theme.min.css")
-//      case "fobo" :: "bootstrap-theme.css.map" :: Nil => List("fobo", "bootstrap","3.3.5", "css", "bootstrap-theme.css.map")
-//      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","3.3.5", "js", "bootstrap.js")
-//      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","3.3.5", "js", "bootstrap.min.js") 
-//    }
-//  }
-//  
-//  lazy val bootstrap320: Unit = {
-//    ResourceServer.rewrite {
-//      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","3.2.0", "css", "bootstrap.css")
-//      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","3.2.0", "css", "bootstrap.min.css")
-//      case "fobo" :: "bootstrap.css.map" :: Nil => List("fobo", "bootstrap","3.2.0", "css", "bootstrap.css.map")
-//      case "fobo" :: "bootstrap-theme.css" :: Nil if Props.devMode => List("fobo", "bootstrap","3.2.0", "css", "bootstrap-theme.css")
-//      case "fobo" :: "bootstrap-theme.css" :: Nil => List("fobo", "bootstrap","3.2.0", "css", "bootstrap-theme.min.css")
-//      case "fobo" :: "bootstrap-theme.css.map" :: Nil => List("fobo", "bootstrap","3.2.0", "css", "bootstrap-theme.css.map")
-//      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","3.2.0", "js", "bootstrap.js")
-//      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","3.2.0", "js", "bootstrap.min.js") 
-//    }
-//  }
-//  
-//  lazy val bootstrap311: Unit = {
-//    ResourceServer.rewrite {
-//      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","3.1.1", "css", "bootstrap.css")
-//      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","3.1.1", "css", "bootstrap.min.css")
-//      case "fobo" :: "bootstrap.css.map" :: Nil => List("fobo", "bootstrap","3.1.1", "css", "bootstrap.css.map")
-//      case "fobo" :: "bootstrap-theme.css" :: Nil if Props.devMode => List("fobo", "bootstrap","3.1.1", "css", "bootstrap-theme.css")
-//      case "fobo" :: "bootstrap-theme.css" :: Nil => List("fobo", "bootstrap","3.1.1", "css", "bootstrap-theme.min.css")
-//      case "fobo" :: "bootstrap-theme.css.map" :: Nil => List("fobo", "bootstrap","3.1.1", "css", "bootstrap-theme.css.map")
-//      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","3.1.1", "js", "bootstrap.js")
-//      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","3.1.1", "js", "bootstrap.min.js") 
-//    }
-//  }
-//  
-//  lazy val bootstrap301: Unit = {
-//    ResourceServer.rewrite {
-//      case "fobo" :: "bootstrap.css" :: Nil if Props.devMode => List("fobo", "bootstrap","3.0.1", "css", "bootstrap.css")
-//      case "fobo" :: "bootstrap.css" :: Nil => List("fobo", "bootstrap","3.0.1", "css", "bootstrap.min.css")
-//      case "fobo" :: "bootstrap-theme.css" :: Nil if Props.devMode => List("fobo", "bootstrap","3.0.1", "css", "bootstrap-theme.css")
-//      case "fobo" :: "bootstrap-theme.css" :: Nil => List("fobo", "bootstrap","3.0.1", "css", "bootstrap-theme.min.css")
-//      case "fobo" :: "bootstrap.js" :: Nil if Props.devMode => List("fobo",  "bootstrap","3.0.1", "js", "bootstrap.js")
-//      case "fobo" :: "bootstrap.js" :: Nil => List("fobo",  "bootstrap","3.0.1", "js", "bootstrap.min.js")   
-//    }
-//  }
-//    
-//
-//}
   
 }
 

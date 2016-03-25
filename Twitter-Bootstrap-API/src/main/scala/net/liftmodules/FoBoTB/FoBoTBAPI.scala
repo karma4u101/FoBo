@@ -13,11 +13,11 @@ import common._
  * by only pulling in some specific FoBo artifact(s) that provides toolkit resources
  * or FoBo API functions.
  *
- * This module provides initiation of API functions for the Bootstrap3 module.
+ * This module provides initiation of API functions for the Bootstrap2 module.
  *
  * For more information on how to set up and use the FoBo modules see the FoBo readme.
  */
-package object FoBoBsAPI {
+package object FoBoTBAPI {
 
   abstract sealed trait API
 
@@ -25,19 +25,19 @@ package object FoBoBsAPI {
     var Init: API = null
 
     /**
-     * Enable usage of FoBo's Angular API for Bootstrap version 3&#8228;X&#8228;X in your bootstrap liftweb Boot.
-     * @version 3.X.X
+     * Enable usage of FoBo's Angular API for Bootstrap version 2&#8228;X&#8228;X in your bootstrap liftweb Boot.
+     * @version 2.X.X
      *
      *  '''Example:'''
      *
      * {{{
-     *   import net.liftmodules.{FoBoBsAPI => FoBo}
+     *   import net.liftmodules.{FoBoTBAPI => FoBo}
      *    :
-     *   FoBo.API.Init=FoBo.API.Bootstrap3
+     *   FoBo.API.Init=FoBo.API.Bootstrap2
      * }}}
      *
      */
-    case object Bootstrap3 extends API {
+    case object Bootstrap2 extends API {
       FoBoAPI.init
     }
 
@@ -45,14 +45,13 @@ package object FoBoBsAPI {
 
   private object FoBoAPI {
     lazy val init: Unit = {
-      LiftRules.addToPackages("net.liftmodules.FoBoBs")
+      LiftRules.addToPackages("net.liftmodules.FoBoTB")
     }
   }
 
-
   /**
    * Extends your Lift SiteMap with various common bootstrap menu manipulations such
-   * as horizontal and vertical menu dividers and menu labels (labels coming soon).
+   * as horizontal and vertical menu dividers and menu labels.
    *
    * This object should be used in conjunction with the TB* menu builder objects in [[net.liftmodules.FoBo.snippet.FoBo]] snippet's.
    *
@@ -60,18 +59,17 @@ package object FoBoBsAPI {
    * {{{
    *   :
    *  //add a horizontal menu divider
-   *  divider1 >> LocGroup(...) >> FoBoBs.BsLocInfo.Divider,
+   *  divider1 >> LocGroup(...) >> FoBoTB.TBLocInfo.Divider,
    *   :
    *  //add a vertical menu divider
-   *  divider2 >> LocGroup(...) >> FoBoBs.BsLocInfo.DividerVertical,
+   *  divider2 >> LocGroup(...) >> FoBoTB.TBLocInfo.DividerVertical,
    *   :
    * }}}
    */
-  object BSLocInfo {
+  object TBLocInfo {
     private val hd: Box[String] = Full("divider")
     private val vd: Box[String] = Full("divider-vertical")
     private val nh: Box[String] = Full("nav-header")
-
     private val ltb: Box[String] = Full("_blank")
     private val lts: Box[String] = Full("_self")
     private val ltp: Box[String] = Full("_parent")
@@ -88,12 +86,12 @@ package object FoBoBsAPI {
      * val navHeader1       = Menu.i("navHeader1") / "navHeader1" //Adds a header (label) to your FoBo.NavList
      *
      * def sitemap = SiteMap(
-     *   navHeader1 >> LocGroup("nl1") >> FoBoBs.BSLocInfo.NavHeader,
+     *   navHeader1 >> LocGroup("nl1") >> FoBoTB.TBLocInfo.NavHeader,
      *   index >> LocGroup("top","nl1",...),
      *    :
      *   ddLabel >> LocGroup("top",...)  >> PlaceHolder submenus(
      *       about ,
-     *       divider2 >> FoBoBs.BSLocInfo.Divider,
+     *       divider2 >> FoBo.TBLocInfo.Divider,
      *       contact,
      *       feedback
      *       )
@@ -111,7 +109,6 @@ package object FoBoBsAPI {
      * For a usage example see the NavHeader val above.
      */
     val NavHeader = new net.liftweb.sitemap.Loc.LocInfo[String] { def apply() = nh.map(x => () => x) }
-
     /**
      * Adds target="_blank" to the link
      * @since v1.2
@@ -132,6 +129,7 @@ package object FoBoBsAPI {
      * @since v1.2
      */
     val LinkTargetTop = new net.liftweb.sitemap.Loc.LocInfo[String] { def apply() = ltt.map(x => () => x) }
+
   }
 
 }

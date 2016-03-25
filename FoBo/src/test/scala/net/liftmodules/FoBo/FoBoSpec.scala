@@ -826,7 +826,38 @@ object FoBoSpec extends Specification  {
       rewriteInitParam(FoBo.Bootstrap301,"fobo"::"bootstrap.js"::Nil) must_== 
         List("fobo", "bootstrap", "3.0.1", "js", "bootstrap.min.js")
     }       
-  }     
+  } 
+  
+  //Bootstrap232
+  "With FoBo.Resource.Init set to FoBo.Resource.Bootstrap232 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowResource(FoBo.Resource.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/2.3.2/js/bootstrap-min.js" in {
+      rewriteResource(FoBo.Resource.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "2.3.2", "js", "bootstrap-min.js")
+    }       
+  }
+  
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.Bootstrap232 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowToolKitInit(FoBo.ToolKit.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/2.3.2/js/bootstrap-min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "2.3.2", "js", "bootstrap-min.js")
+    }       
+  }
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap232 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowInitParam(FoBo.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/2.3.2/js/bootstrap-min.js" in {
+      rewriteInitParam(FoBo.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "2.3.2", "js", "bootstrap-min.js")
+    }       
+  } 
   
   /*=================JQuery and JQuery Migrate ====================================*/
  

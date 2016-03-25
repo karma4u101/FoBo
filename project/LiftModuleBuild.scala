@@ -49,7 +49,19 @@ object LiftModuleFoBoBuild extends Build {
   lazy val bootstrap    = Project(id   = "fobo-twitter-bootstrap", 
                              base = file("Twitter-Bootstrap"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile),
+                             aggregate = Seq(bootstrapres,bootstrapapi)    
+                             ).dependsOn(bootstrapres,bootstrapapi) 
+                                 
+  lazy val bootstrapres = Project(id   = "fobo-twitter-bootstrap-res", 
+                             base = file("Twitter-Bootstrap-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
+                                 
+  lazy val bootstrapapi = Project(id   = "fobo-twitter-bootstrap-api", 
+                             base = file("Twitter-Bootstrap-API"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                   
                           
   lazy val bootstrap3   = Project(id   = "fobo-twbs-bootstrap3", 
                              base = file("TwBs-Bootstrap3"),

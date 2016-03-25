@@ -1,4 +1,4 @@
-moduleName := "fobo-twitter-bootstrap"
+moduleName := "fobo-twitter-bootstrap-api"
 
 organization := "net.liftmodules"
 
@@ -17,11 +17,9 @@ resolvers ++= Seq(
   "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
 )
 
-libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
+libraryDependencies <++= liftVersion { v =>
     "net.liftweb"      %% "lift-webkit"          % v          % "provided" ::
     "net.liftweb"      %% "lift-testkit"         % v          % "provided" ::
-    "net.liftmodules"  %% ("fobo-twitter-bootstrap-res"+"_"+e)   % mv         % "provided" :: 
-    "net.liftmodules"  %% ("fobo-twitter-bootstrap-api"+"_"+e)   % mv         % "provided" ::      
     Nil
 }
 
