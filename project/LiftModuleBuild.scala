@@ -135,14 +135,14 @@ object LiftModuleFoBoBuild extends Build {
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))                                    
  
   lazy val kineticjs    = Project(id   = "fobo-kineticjs", 
-                             base = file("KineticJS"),
+                             base = file("Kinetic/KineticJS"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile),
                               aggregate = Seq(kineticjsres)   
                                  ).dependsOn(kineticjsres)  
                                  
   lazy val kineticjsres = Project(id   = "fobo-kineticjs-res", 
-                             base = file("KineticJS-Res"),
+                             base = file("Kinetic/KineticJS-Res"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))                                   
                                                                             
