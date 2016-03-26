@@ -70,35 +70,8 @@ libraryDependencies <++= scalaVersion { sv =>
 
 //buildInfoPackage := "net.liftmodules.FoBo.lib"
 
-//#########################################################################
-//#### THE LESS BUILD
-//## 
-//## To simplify, the less build has been moved to the FoBo-Less project. 
-//## Bootstrap css files, slightly modified to work in the FoBo environment,  
-//## is built in the FoBo-Less project and then copied (already present) to 
-//## there corresponding src/resources directories.
-//## 
-//#########################################################################
-
-//Take a look att FoBo-Less and read the above.
-
 //################################################################
-//#### THE YUI COMPRESSION BUILD
-//## The yui js compression stuff dose currently not work so 
-//## for now the last filter string in exludeFilter for js 
-//## will exclude every .js file
-//################################################################
-//yui compression no longer needed as all resource trees contains minified files.
-//seq(yuiSettings: _*)
-
-//excludeFilter in (Compile, YuiCompressorKeys.jsResources) := "*-debug.js" | "*-min.js" | "*.js"
-
-//excludeFilter in (Compile, YuiCompressorKeys.cssResources) := "*-debug.css" | "*-min.css"
-
-//YuiCompressorKeys.minSuffix := "-min" 
-
-//################################################################
-//#### Publish to Media4u101
+//#### Publish to Sonatype
 //## 
 //##  
 //## 
