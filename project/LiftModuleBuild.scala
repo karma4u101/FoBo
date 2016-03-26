@@ -47,36 +47,36 @@ object LiftModuleFoBoBuild extends Build {
                                  
                              
   lazy val bootstrap    = Project(id   = "fobo-twitter-bootstrap", 
-                             base = file("Twitter-Bootstrap"),
+                             base = file("Bootstrap/Bootstrap2/Twitter-Bootstrap"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile),
                              aggregate = Seq(bootstrapres,bootstrapapi)    
                              ).dependsOn(bootstrapres,bootstrapapi) 
                                  
   lazy val bootstrapres = Project(id   = "fobo-twitter-bootstrap-res", 
-                             base = file("Twitter-Bootstrap-Res"),
+                             base = file("Bootstrap/Bootstrap2/Twitter-Bootstrap-Res"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
                                  
   lazy val bootstrapapi = Project(id   = "fobo-twitter-bootstrap-api", 
-                             base = file("Twitter-Bootstrap-API"),
+                             base = file("Bootstrap/Bootstrap2/Twitter-Bootstrap-API"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))                                   
                           
   lazy val bootstrap3   = Project(id   = "fobo-twbs-bootstrap3", 
-                             base = file("TwBs-Bootstrap3"),
+                             base = file("Bootstrap/Bootstrap3/TwBs-Bootstrap3"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile),
                              aggregate = Seq(bootstrap3res,bootstrap3api)    
                              ).dependsOn(bootstrap3res,bootstrap3api) 
                                  
   lazy val bootstrap3res   = Project(id   = "fobo-twbs-bootstrap3-res", 
-                             base = file("TwBs-Bootstrap3-Res"),
+                             base = file("Bootstrap/Bootstrap3/TwBs-Bootstrap3-Res"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))                                  
                                  
   lazy val bootstrap3api   = Project(id   = "fobo-twbs-bootstrap3-api", 
-                             base = file("TwBs-Bootstrap3-API"),
+                             base = file("Bootstrap/Bootstrap3/TwBs-Bootstrap3-API"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))                                             
                                  
