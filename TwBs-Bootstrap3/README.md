@@ -20,7 +20,7 @@ Example Lift FoBo Template hooks
     <script src="/classpath/fobo/bootstrap.js" type="text/javascript"></script>
 
 Here the resources starting with /classpath/fobo/ is the ones provided by the FoBo module. 
-The FoBo js and css files will, without anny name change, be served debug-able in development and minimized otherwise. 
+The FoBo js and css files will, without any name change, be served debug-able in development and minimized otherwise. 
 
 Contributions
 ---------------
