@@ -34,14 +34,14 @@ object LiftModuleFoBoBuild extends Build {
                                  ).dependsOn(kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,prettify)  
                                  
    lazy val fontAwesome = Project(id   = "fobo-font-awesome", 
-                             base = file("Font-Awesome"),
+                             base = file("Font-Awesome/Font-Awesome"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile),
                                  aggregate = Seq(fontAwesomeres)
                                  ).dependsOn(fontAwesomeres)   
                                  
    lazy val fontAwesomeres = Project(id   = "fobo-font-awesome-res", 
-                             base = file("Font-Awesome-Res"),
+                             base = file("Font-Awesome/Font-Awesome-Res"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))  
                                  
