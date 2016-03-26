@@ -1,4 +1,4 @@
-# FoBo AngularJS Module
+# FoBo AngularJS Toolkit Module
 
 This FoBo toolkit module provides AngularJS API and Resource components to the FoBo Module, but can also be used as-is (see below for setup information).
 For more information on the AngularJS Resouces module see [FoBo AngularJSRes](https://github.com/karma4u101/AngularJSRes).
