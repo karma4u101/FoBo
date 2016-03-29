@@ -24,9 +24,9 @@ FoBo v1.6
 ---------
 ###New Features
 Splitting modules into Toolkit modules composed of a Resource module and a API module. 
-Making it possible to, in your project depend on (and initiate and use) everything from 
-a single FoBo provided resource module, or one or more API or resource modules, or as 
-before one or more Toolkit modules or all it's Toolkit modules.   
+Making it possible to, in your project depend on everything from a single FoBo provided 
+resource module, or one or more API or resource modules, or as before one or more Toolkit 
+modules or all it's Toolkit modules.   
 
 ###Updated modules
 [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.5.0 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)

@@ -14,43 +14,47 @@ import common._
  *
  *===What FoBo will do for you===
  *
- * This module gives you quick and easy integration of some of the industry leading web-centric open source 
- * front-end toolkits. 
+ * The FoBo/FoBo module gives you quick and easy integration of some of the industry leading web-centric open source 
+ * front-end toolkits. All FoBo toolkit modules are built up of a resource module and possibly a FoBo/Lift API module.
+ * You can depend on the FoBo/FoBo module to get access to all FoBo's toolkit/resource/api modules or you can pick the
+ * module(s) you need, for example, just the bootstrap API module where you provide your own resources or you may chose 
+ * any combination of modules.  
  * 
- * Among the benefits is:
+ * Usage benefits:
  *  - Due to uniform declaration and integration points across toolkit versions only a small amount of changes 
- *    is needed for a up/down-grading of a used Toolkit, optimally, if the toolkit has no breaking changes 
+ *    is needed for a up/down-grading of a used Toolkit/resource, optimally, if the toolkit has no breaking changes 
  *    it will just be a version change of the FoBo.Initparam in Lift bootstrap.liftweb.Boot. 
  *  - The module provides debug-able js and css files in development and minimized files otherwise.
  *  - FoBo is simultaneously supporting several versions of each toolkit which makes development, maintenance, 
  *    upgrade and fall-back quick and easy.      
- *  - Most of the FoBo toolkit modules provides Snippet helpers and lib classes that will ease you from writing 
- *    some commonly used toolkit component integration scripts making it a simple snippet invocation.  
+ *  - Most of the FoBo toolkit modules provides a API sub-module with Snippet helpers and lib classes that will 
+ *    ease you from writing some commonly used toolkit component integration scripts making it a simple snippet invocation.  
  *  - Great responsive scalability with responsive toolkits.   
- *  - FoBo strives to be modular. FoBo is built up by independent sub-modules (artefacts) that can be used 
- *    independant of the FoBo assembly module.  
+ *  - FoBo strives to be modular. FoBo is built up by independent toolkit/resource/api sub-modules (artefacts) that can be 
+ *    used independent of the FoBo/FoBo assembly module.  
  *   
  *
- * ===FoBo supported toolkits and plugins=== 
+ * ===FoBo supported toolkits/resources=== 
  * 
- * The following is a list of available toolkits and plugins 
+ * The following is a list of available toolkits resources 
  *  
- *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.1, v1.11.3, v.2.1.1, v.2.1.4] [[net.liftmodules.FoBoJQ]]
+ *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.3, v.2.1.1, v.2.1.4] [[net.liftmodules.FoBoJQ]]
+ *  - JQueryMigrate [v1.2.1] [[net.liftmodules.FoBoJQ]]
  *  - Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6] [[net.liftmodules.FoBoBs]]
  *  - Bootstrap v2.x series [v2.3.2] [[net.liftmodules.FoBoTB]]
- *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0] [[net.liftmodules.FoBoFA]]
- *  - Kinetic JS [v5.1.0]
- *  - Google Code Prettify [vJun2011]
- *  - Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15, v1.4.1, v1.4.8] (angular core modules)
- *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component)
- *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component)
- *  - Angular UI-Grid [v3.0.7] (angular component)
- *  - Angular Material design [v0.10.0, v1.0.1] (angular component)
+ *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] [[net.liftmodules.FoBoFA]]
+ *  - Kinetic JS [v5.1.0] [[net.liftmodules.FoBoKi]]
+ *  - Google Code Prettify [vJun2011] [[net.liftmodules.FoBoGCP]]
+ *  - Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15, v1.4.1, v1.4.8] (angular core modules) [[net.liftmodules.FoBoAJS]]
+ *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component) [[net.liftmodules.FoBoAJS]]
+ *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component) [[net.liftmodules.FoBoAJS]]
+ *  - Angular UI-Grid [v3.0.7] (angular component) [[net.liftmodules.FoBoAJS]]
+ *  - Angular Material design [v0.10.0, v1.0.1] (angular component) [[net.liftmodules.FoBoAJS]]
  *  
  *  
  * ===Help out!===
  * 
- * There is a lot more that can be done within the boundaries of this API and the FoBo module as a hole so  
+ * There is a lot more that can be done within the boundaries of the FoBo API modules and the FoBo modules as a hole so  
  * your help, suggestions, encouragement, engagement, patches (pull requests) bug-fixes/reports are highly appreciated.     
  *      
  * ===Setup===     
@@ -60,20 +64,22 @@ import common._
  *  - For a demonstration of this module see the live [[http://www.media4u101.se/fobo-lift-template-demo/ FoBo demo]] 
  *
  * @example To initiate this module for usage in your Lift project set something like the following in 
- * your projects Lift bootstrap.liftweb.Boot boot method. Here the FoBoToolkitNameXYZ 
- * represent one of FoBo's available FoBoTolkit objects listed below.
+ * your projects Lift bootstrap.liftweb.Boot boot method. Here the FoBo ToolkitObjectNameXYZ 
+ * represent one of FoBo's available FoBo ToolKit objects.
  * {{{
  *    import net.liftmodules.FoBo
  *     :
  *     :
- *    FoBo.InitParam.JQuery=FoBo.JQueryXYZ  //one jquery version
- *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ //one or more toolkits 
- *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ
- *     : 
- *    FoBo.init() 
+ *    FoBo.ToolKit.Init=FoBo.ToolKit.JQueryXYZ  //the fobo jquery module, version xyz
+ *    FoBo.ToolKit.Init=FoBo.ToolKit.ToolkitObjectNameXYZ //one or more fobo toolkits 
+ *    FoBo.ToolKit.Init=FoBo.ToolKit.ToolkitObjectNameXYZ
  * }}}
  * 
- * @version v1.5
+ * You may substitute ToolKit for Resource or API and if you wish also adjust the artifact dependencies 
+ * accordingly to include just the FoBo modules you use, but if size is not a issue using the FoBo/FoBo 
+ * module is convenient and gives you a lot to pick from.
+ * 
+ * @version v1.6
  * @author Peter Petersson (Github karma4u101) and the Lift community  
  * 
  */
@@ -89,8 +95,9 @@ package object FoBo {
    * {{{
    *   import net.liftmodules.FoBo
    *    :
-   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Object]
+   *   FoBo.ToolKit.Init=FoBo.ToolKit.[Companion ToolKit Object]
    * }}}
+   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
    */
   abstract sealed trait ToolKit
   
@@ -103,8 +110,9 @@ package object FoBo {
    * {{{
    *   import net.liftmodules.FoBo
    *    :
-   *   FoBo.Resource.Init=FoBo.Resource.[Resource Object]
+   *   FoBo.Resource.Init=FoBo.Resource.[Companion Resource Object]
    * }}}
+   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
    */    
   abstract sealed trait Resource
   
@@ -117,8 +125,9 @@ package object FoBo {
    * {{{
    *   import net.liftmodules.FoBo
    *    :
-   *   FoBo.API.Init=FoBo.API.[API Object]
+   *   FoBo.API.Init=FoBo.API.[Companion API Object]
    * }}}
+   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
    */   
   abstract sealed trait API
   
@@ -1491,9 +1500,9 @@ package object FoBo {
   }
 
 
-  //@deprecated("","1.6.0")
+  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.JQueryXXX","1.6.0")
   abstract sealed trait FoBoJQuery
-  //@deprecated("","1.6.0")
+  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.[Toolkit case object name]","1.6.0")
   abstract sealed trait FoBoToolkit
   
 /**

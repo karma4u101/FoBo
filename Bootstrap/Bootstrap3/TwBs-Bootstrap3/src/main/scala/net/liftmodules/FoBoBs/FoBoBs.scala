@@ -10,13 +10,20 @@ import common._
  * ==FoBo Toolkit sub-module== 
  * This package object provides Bootstrap 3 integration into your Lift/FoBo application.
  * 
- * This package object is only of interest to you if you are using this module 
- * as a stand alone artifact dependency in your project (without the FoBo meta artifact).
- * This package object provides information on how to initiate and use it 
- * in your project. 
  * 
  * If you are using this module via the FoBo meta artifact 
  * see [[net.liftmodules.FoBo]] for usage information. 
+ *
+ * @example To initiate this module for usage in your Lift project set something like the following in 
+ * your projects Lift bootstrap.liftweb.Boot boot method. 
+ * {{{
+ *    import net.liftmodules.{FoBoBs => FoBo}
+ *     :
+ *     :
+ *    FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap336 //or any other companion toolkit object
+ * }}}
+ * You may substitute ToolKit for Resource or API and if you wish also adjust the artifact dependencies 
+ * accordingly to include just the FoBo modules you use. 
  */
 package object FoBoBs {
 
@@ -24,15 +31,16 @@ package object FoBoBs {
   /**
    * Initiate FoBo's Bootstrap 3 ToolKit(s) in you bootstrap liftweb Boot.
    * Using the ToolKit initiation you will bring in both the 
-   * toolkit's resources and if present the FoBo API associated 
+   * toolkit's resources and FoBo/Lift API associated 
    * with the toolkit.  
    * 
    *  '''Example:'''
    * {{{
    *   import net.liftmodules.{FoBoBs => FoBo}
    *    :
-   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Object]
+   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Companion Object]
    * }}}
+   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
    */
   abstract sealed trait ToolKit
   
@@ -43,8 +51,9 @@ package object FoBoBs {
    * {{{
    *   import net.liftmodules.{FoBoBs => FoBo}
    *    :
-   *   FoBo.Resource.Init=FoBo.Resource.[Resource Object]
+   *   FoBo.Resource.Init=FoBo.Resource.[Resource Companion Object]
    * }}}
+   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
    */  
   abstract sealed trait Resource
   
@@ -55,8 +64,9 @@ package object FoBoBs {
    * {{{
    *   import net.liftmodules.{FoBoBs => FoBo}
    *    :
-   *   FoBo.API.Init=FoBo.API.[API Object]
+   *   FoBo.API.Init=FoBo.API.[API Companion Object]
    * }}}
+   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
    */    
   abstract sealed trait API
   
