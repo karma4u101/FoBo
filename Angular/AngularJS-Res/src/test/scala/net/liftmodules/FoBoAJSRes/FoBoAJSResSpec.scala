@@ -16,8 +16,19 @@ object FoBoAJSResSpec extends Specification  {
   //OBS! using 'test-only' instead of 'test' will fail some test as 'test-only' 
   //is treated as code is run in "devMode" while 'test' dose not assume this. 
   //var list148JS = List("fobo", "angular-js", "1.4.8", "js", "angular.min.js")
+
+  //AngularJS153
+  "With FoBoAJSRes.Resource.Init set to FoBoAJSRes.Resource.AngularJS153 the ResourceServer" should {
+    "allow  fobo/angular.js" in {
+      allowResource(FoBoAJSRes.Resource.AngularJS153,"fobo"::"angular.js"::Nil) must_== true 
+    } 
+    "rewrit fobo/angular.js to fobo/angular-js/1.5.3/js/angular.min.js" in {
+      rewriteResource(FoBoAJSRes.Resource.AngularJS153,"fobo"::"angular.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.5.3", "js", "angular.min.js")
+    }       
+  }   
   
-  //AngularJS core
+  //AngularJS148
   "With FoBoAJSRes.Resource.Init set to FoBoAJSRes.Resource.AngularJS148 the ResourceServer" should {
     "allow  fobo/angular.js" in {
       allowResource(FoBoAJSRes.Resource.AngularJS148,"fobo"::"angular.js"::Nil) must_== true 
@@ -31,22 +42,18 @@ object FoBoAJSResSpec extends Specification  {
   "With FoBoAJSRes.Resource.Init set to FoBoAJSRes.Resource.AngularJS141 the ResourceServer" should {
     "allow  fobo/angular.js" in {
       allowResource(FoBoAJSRes.Resource.AngularJS141,"fobo"::"angular.js"::Nil) must_== true 
-     // allowAngularJS141 must_== true 
     }     
     "rewrit fobo/angular.js to fobo/angular-js/1.4.1/js/angular.min.js" in {
-      //rewriteAngularJS141 
       rewriteResource(FoBoAJSRes.Resource.AngularJS141,"fobo"::"angular.js"::Nil) must_== 
         List("fobo", "angular-js", "1.4.1", "js", "angular.min.js")
     }       
   }  
   
   "With FoBoAJSRes.Resource.Init set to FoBoAJSRes.Resource.AngularJS1315 the ResourceServer" should {
-    "allow  fobo/angular.js" in {
-      //allowAngularJS1315 
+    "allow  fobo/angular.js" in { 
       allowResource(FoBoAJSRes.Resource.AngularJS1315,"fobo"::"angular.js"::Nil) must_== true 
     }     
     "rewrit fobo/angular.js to fobo/angular-js/1.3.15/js/angular.min.js" in {
-      //rewriteAngularJS1315 
       rewriteResource(FoBoAJSRes.Resource.AngularJS1315,"fobo"::"angular.js"::Nil) must_== 
         List("fobo", "angular-js", "1.3.15", "js", "angular.min.js")
     }       
@@ -54,11 +61,9 @@ object FoBoAJSResSpec extends Specification  {
   
   "With FoBoAJSRes.Resource.Init set to FoBoAJSRes.Resource.AngularJS1219 the ResourceServer" should {
     "allow  fobo/angular.js" in {
-      //allowAngularJS1219
       allowResource(FoBoAJSRes.Resource.AngularJS1219,"fobo"::"angular.js"::Nil) must_== true 
     }     
     "rewrit fobo/angular.js to fobo/angular-js/1.2.19/js/angular.min.js" in {
-      //rewriteAngularJS1219 
       rewriteResource(FoBoAJSRes.Resource.AngularJS1219,"fobo"::"angular.js"::Nil) must_== 
         List("fobo", "angular-js", "1.2.19", "js", "angular.min.js")
     }       
@@ -68,16 +73,13 @@ object FoBoAJSResSpec extends Specification  {
   //AJMaterial101
   "With FoBoAJSRes.Resource.Init set to FoBoAJSRes.Resource.AJMaterial101 the ResourceServer" should {
     "allow  fobo/angular-material.js" in {
-      //allowAJMaterial101 
       allowResource(FoBoAJSRes.Resource.AJMaterial101,"fobo"::"angular-material.js"::Nil) must_== true 
     }     
     "rewrit fobo/angular-material.js to fobo/angular-material/1.0.1/js/angular-material.min.js" in {
-      //rewriteAJMaterial101JS 
       rewriteResource(FoBoAJSRes.Resource.AJMaterial101,"fobo"::"angular-material.js"::Nil) must_== 
         List("fobo", "angular-material", "1.0.1", "js", "angular-material.min.js")
     }      
     "rewrit fobo/angular-material.css to fobo/angular-material/1.0.1/js/angular-material.min.css" in {
-      //rewriteAJMaterial101CSS 
       rewriteResource(FoBoAJSRes.Resource.AJMaterial101,"fobo"::"angular-material.css"::Nil) must_== 
         List("fobo", "angular-material", "1.0.1", "css", "angular-material.min.css")
     }    
@@ -173,6 +175,18 @@ object FoBoAJSResSpec extends Specification  {
     }    
   }   
    
+  
+  //AngularJS153i18n
+  "With FoBoAJSRes.Resource.Init set to FoBoAJSRes.Resource.AngularJS153i18n the ResourceServer" should {
+    "allow  fobo/angular-locale_sv-se.js" in {
+      allowResource(FoBoAJSRes.Resource.AngularJS153i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/angular-locale_sv-se.js to fobo/angular-js/1.5.3/i18n/angular-locale_sv-se.js" in {
+      rewriteResource(FoBoAJSRes.Resource.AngularJS153i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.5.3", "i18n", "angular-locale_sv-se.js")
+    }        
+  } 
+  
   //AngularJS148i18n
   "With FoBoAJSRes.Resource.Init set to FoBoAJSRes.Resource.AngularJS148i18n the ResourceServer" should {
     "allow  fobo/angular-locale_sv-se.js" in {

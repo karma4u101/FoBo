@@ -29,7 +29,8 @@ resource module, or one or more API or resource modules, or as before one or mor
 modules or all it's Toolkit modules.   
 
 ###Updated modules
-[FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.5.0 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
+-   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.5.0 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
+-   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.5.3 - [AngularJS](http://angularjs.org/).
 
 FoBo v1.5.1
 -----------

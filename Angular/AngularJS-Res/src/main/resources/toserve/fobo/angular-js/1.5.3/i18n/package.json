@@ -1,0 +1,87 @@
+{
+  "_args": [
+    [
+      "angular-i18n",
+      "/usr/local/proj/private"
+    ]
+  ],
+  "_from": "angular-i18n@latest",
+  "_id": "angular-i18n@1.5.3",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/angular-i18n",
+  "_nodeVersion": "4.4.1",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/angular-i18n-1.5.3.tgz_1458938184651_0.39918790967203677"
+  },
+  "_npmUser": {
+    "email": "angular-core+npm@google.com",
+    "name": "angularcore"
+  },
+  "_npmVersion": "2.14.20",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "angular-i18n",
+    "raw": "angular-i18n",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/angular-i18n/-/angular-i18n-1.5.3.tgz",
+  "_shasum": "6bf12aca6b0bdd13f7aa32179dd9a492aab72656",
+  "_shrinkwrap": null,
+  "_spec": "angular-i18n",
+  "_where": "/usr/local/proj/private",
+  "author": {
+    "email": "angular-core+npm@google.com",
+    "name": "Angular Core Team"
+  },
+  "bugs": {
+    "url": "https://github.com/angular/angular.js/issues"
+  },
+  "dependencies": {},
+  "description": "AngularJS module for internationalization",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "6bf12aca6b0bdd13f7aa32179dd9a492aab72656",
+    "tarball": "http://registry.npmjs.org/angular-i18n/-/angular-i18n-1.5.3.tgz"
+  },
+  "gitHead": "d2f69b7878facf8d7966c2529987045f0db38f42",
+  "homepage": "http://angularjs.org",
+  "keywords": [
+    "angular",
+    "framework",
+    "browser",
+    "internationalization",
+    "i18n",
+    "client-side"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "email": "angular-core+npm@google.com",
+      "name": "angularcore"
+    },
+    {
+      "email": "pete@bacondarwin.com",
+      "name": "petebd"
+    }
+  ],
+  "name": "angular-i18n",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/angular.js.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.5.3"
+}

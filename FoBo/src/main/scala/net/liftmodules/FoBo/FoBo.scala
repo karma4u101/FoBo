@@ -45,7 +45,7 @@ import common._
  *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] [[net.liftmodules.FoBoFA]]
  *  - Kinetic JS [v5.1.0] [[net.liftmodules.FoBoKi]]
  *  - Google Code Prettify [vJun2011] [[net.liftmodules.FoBoGCP]]
- *  - Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15, v1.4.1, v1.4.8] (angular core modules) [[net.liftmodules.FoBoAJS]]
+ *  - Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15, v1.4.1, v1.4.8, v1.5.3] (angular core modules) [[net.liftmodules.FoBoAJS]]
  *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component) [[net.liftmodules.FoBoAJS]]
  *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component) [[net.liftmodules.FoBoAJS]]
  *  - Angular UI-Grid [v3.0.7] (angular component) [[net.liftmodules.FoBoAJS]]
@@ -137,6 +137,42 @@ package object FoBo {
     var Init: ToolKit = null 
     
     /*===Angular ToolKit===============================================================*/
+    
+    /**
+     * Enable usage of FoBo's AngularJS API and resources version 1&#8228;5&#8228;3 in your bootstrap liftweb Boot.
+     * @version 1.5.3
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS153
+     * }}}
+     * @since v1.6
+     */
+    case object AngularJS153 extends ToolKit {
+      net.liftmodules.FoBoAJS.ToolKit.AngularJS153
+    }  
+    
+    /**
+     * Enable usage of AngularJS i18n resources files in your bootstrap liftweb Boot.
+     * @version 1.5.3 i18n
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS153i18n
+     * }}}
+     *
+     */
+    case object AngularJS153i18n extends ToolKit {
+      net.liftmodules.FoBoAJS.ToolKit.AngularJS153i18n
+    }     
+    
+    
     /**
      * Enable usage of FoBo's AngularJS API and resources version 1&#8228;4&#8228;8 in your bootstrap liftweb Boot.
      * @version 1.4.8
@@ -778,6 +814,41 @@ package object FoBo {
     var Init: Resource = null
     
     /*===Angular Resource===============================================================*/
+    
+    /**
+     * Enable usage of FoBo's AngularJS version 1&#8228;5&#8228;3 resources files in your bootstrap liftweb Boot.
+     * @version 1.5.3
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.AngularJS153
+     * }}}
+     *
+     */
+    case object AngularJS153 extends Resource {
+      net.liftmodules.FoBoAJS.Resource.AngularJS153
+    } 
+    
+    /**
+     * Enable usage of AngularJS i18n resources files in your bootstrap liftweb Boot.
+     * @version 1.5.3 i18n
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.AngularJS153i18n
+     * }}}
+     *
+     */
+    case object AngularJS153i18n extends Resource {
+      net.liftmodules.FoBoAJS.Resource.AngularJS153i18n
+    }     
+    
     /**
      * Enable usage of FoBo's AngularJS version 1&#8228;4&#8228;8 resources files in your bootstrap liftweb Boot.
      * @version 1.4.8

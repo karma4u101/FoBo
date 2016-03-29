@@ -23,6 +23,27 @@ object FoBoSpec extends Specification  {
   
   /*=================Angular ====================================*/
   
+  //AngularJS153
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AngularJS153 the ResourceServer" should {
+    "allow  fobo/angular.js" in {
+      allowToolKitInit(FoBo.ToolKit.AngularJS153,"fobo"::"angular.js"::Nil) must_== true 
+    } 
+    "rewrit fobo/angular.js to fobo/angular-js/1.5.3/js/angular.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AngularJS153,"fobo"::"angular.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.5.3", "js", "angular.min.js")
+    }       
+  } 
+    
+  "With FoBo.Resource.Init set to FoBo.Resource.AngularJS153 the ResourceServer" should {    
+    "allow  fobo/angular.js" in {
+      allowResource(FoBo.Resource.AngularJS153,"fobo"::"angular.js"::Nil)  must_== true 
+    } 
+    "rewrit fobo/angular.js to fobo/angular-js/1.5.3/js/angular.min.js" in {
+      rewriteResource(FoBo.Resource.AngularJS153,"fobo"::"angular.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.5.3", "js", "angular.min.js")
+    }       
+  }   
+  
   //AngularJS148
   "With FoBo.InitParam.ToolKit set to FoBo.AngularJS148 the ResourceServer" should {
     "allow  fobo/angular.js" in {
@@ -363,6 +384,27 @@ object FoBoSpec extends Specification  {
         List("fobo", "angular-ui", "ui-grid", "3.0.7", "js", "ui-grid.min.js")      
     }       
   }  
+  
+  //AngularJS153i18n
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AngularJS153i18n the ResourceServer" should {    
+    "allow  fobo/angular-locale_sv-se.js" in {
+      allowToolKitInit(FoBo.ToolKit.AngularJS153i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular-locale_sv-se.js to fobo/angular-js/1.5.3/i18n/angular-locale_sv-se.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AngularJS153i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.5.3", "i18n", "angular-locale_sv-se.js")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.AngularJS153i18n the ResourceServer" should { 
+    "allow  fobo/angular-locale_sv-se.js" in  {
+      allowResource(FoBo.Resource.AngularJS153i18n,"fobo"::"angular-locale_sv-se.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/angular-locale_sv-se.js to fobo/angular-js/1.5.3/i18n/angular-locale_sv-se.js" in  {
+     rewriteResource(FoBo.Resource.AngularJS153i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== 
+        List("fobo", "angular-js", "1.5.3", "i18n", "angular-locale_sv-se.js")      
+    }       
+  }   
   
   //AngularJS148i18n
   "With FoBo.InitParam.ToolKit set to FoBo.AngularJS148i18n the ResourceServer" should {

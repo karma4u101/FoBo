@@ -63,6 +63,43 @@ package object FoBoAJS {
   object ToolKit extends ToolKit {
     var Init: ToolKit = null 
    
+    
+    /**
+     * Enable usage of FoBo's AngularJS API and resources version 1&#8228;5&#8228;3 in your bootstrap liftweb Boot.
+     * @version 1.5.3
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.{FoBoAJS => FoBo}
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS153
+     * }}}
+     *
+     */
+    case object AngularJS153 extends ToolKit {
+      FoBoAJSAPI.API.Angular1
+      FoBoAJSRes.Resource.AngularJS153
+    } 
+    
+    /**
+     * Enable usage of AngularJS i18n resources files in your bootstrap liftweb Boot.
+     * @version 1.5.3 i18n
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.{FoBoAJS => FoBo}
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS153i18n
+     * }}}
+     *
+     */
+    case object AngularJS153i18n extends ToolKit {
+      FoBoAJSAPI.API.Angular1
+      FoBoAJSRes.Resource.AngularJS153i18n
+    }     
+    
     /**
      * Enable usage of FoBo's AngularJS API and resources version 1&#8228;4&#8228;8 in your bootstrap liftweb Boot.
      * @version 1.4.8
@@ -340,6 +377,43 @@ package object FoBoAJS {
   object Resource extends Resource {
     var Init: Resource = null
 
+    
+    /**
+     * Enable usage of FoBo's AngularJS version 1&#8228;5&#8228;3 resources files in your bootstrap liftweb Boot.
+     * @version 1.5.3
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.{FoBoAJS => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.AngularJS153
+     * }}}
+     *
+     */
+    case object AngularJS153 extends Resource {
+      FoBoAJSRes.Resource.AngularJS153
+    }
+    
+    
+    /**
+     * Enable usage of AngularJS i18n resources files in your bootstrap liftweb Boot.
+     * @version 1.5.3 i18n
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.{FoBoAJS => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.AngularJS153i18n
+     * }}}
+     *
+     */
+    case object AngularJS153i18n extends Resource {
+      FoBoAJSRes.Resource.AngularJS153i18n
+    }     
+    
+    
     /**
      * Enable usage of FoBo's AngularJS version 1&#8228;4&#8228;8 resources files in your bootstrap liftweb Boot.
      * @version 1.4.8
