@@ -19,20 +19,22 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
 
 **Latest Snapshot Release:**
+- **2016-03-30** -- 1.6-SNAPSHOT release for Lift v3.0 and v2.6.2
 - **2016-03-25** -- 1.6-SNAPSHOT release for Lift v3.0 and v2.6.2
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
 
 FoBo v1.6
 ---------
 ###New Features
-Splitting modules into Toolkit modules composed of a Resource module and a API module. 
-Making it possible to, in your project depend on everything from a single FoBo provided 
-resource module, or one or more API or resource modules, or as before one or more Toolkit 
-modules or all it's Toolkit modules.   
+Splitting modules into **Toolkit modules** composed of a **Resource module** and a **API module**. 
+Making it possible to, in your project depend on artifacts including everything from a single FoBo 
+provided resource module, or one or more API or resource module(s), or as before one or more Toolkit 
+modules or via the FoBo/FoBo module get access to all it's Toolkit, Resource and API modules.   
 
 ###Updated modules
+-   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) Adds v1.0.2 - [Pace](http://github.hubspot.com/pace/docs/welcome/)
 -   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.5.0 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
--   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.5.3 - [AngularJS](http://angularjs.org/).
+-   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.5.3 - [AngularJS](http://angularjs.org/)
 
 FoBo v1.5.1
 -----------
