@@ -13,6 +13,8 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2013-05-19** -- Module v1.0 
 
 **Latest Updates:**
+- **2016-03-30** -- [Issue #70](https://github.com/karma4u101/FoBo/issues/70) Add Pace v1.0.2
+- **2016-03-29** -- [Issue #69](https://github.com/karma4u101/FoBo/issues/69) Add AngularJS v1.5.3
 - **2016-03-25** -- [PR #61](https://github.com/karma4u101/FoBo/pull/61) Re-factoring modules  
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
 

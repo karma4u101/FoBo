@@ -683,6 +683,22 @@ package object FoBo {
     /*===Pace ToolKit===============================================================*/
     
    /**
+     * Enable usage of FoBo's Pace API and resources version 1&#8228;0&#8228;2 in your bootstrap liftweb Boot.
+     * @version 1.0.2
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.Pace102
+     * }}}
+     */    
+     case object Pace102 extends ToolKit {
+       net.liftmodules.FoBoPa.ToolKit.Pace102
+     } 
+     
+   /**
      * Enable usage of FoBo's Pace API and resources version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
      * @version 0.4.15
      * 
@@ -1356,7 +1372,21 @@ package object FoBo {
         net.liftmodules.FoBoKi.Resource.KineticJS510
       }      
      
-    /*===Pace Resource===============================================================*/    
+    /*===Pace Resource===============================================================*/  
+    /**
+     * Enable usage of FoBo's Pace resources version 1&#8228;0&#8228;2 in your bootstrap liftweb Boot.
+     * @version 1.0.2
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   FoBo.Resource.Init=FoBo.Resource.Pace102
+     * }}}
+     */    
+     case object Pace102 extends Resource {
+       net.liftmodules.FoBoPa.Resource.Pace102
+     }
+     
     /**
      * Enable usage of FoBo's Pace resources version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
      * @version 0.4.15

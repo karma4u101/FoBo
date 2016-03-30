@@ -12,6 +12,36 @@ object FoBoPaSpec extends Specification {
 
   sequential
   
+  //Pace102
+  "With FoBoPa.ToolKit.Init set to FoBoPa.ToolKit.Pace102 the ResourceServer" should {
+    "allow  fobo/pace.js" in {
+      allowToolKitInit(FoBoPa.ToolKit.Pace102,"fobo"::"pace.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/pace.js to fobo/pace/1.0.2/js/pace.min.js" in {
+      rewriteToolKitInit(FoBoPa.ToolKit.Pace102,"fobo"::"pace.js"::Nil) must_== 
+        List("fobo", "pace", "1.0.2", "js", "pace.min.js")
+    }   
+    "rewrit fobo/black/pace-theme-minimal.css to fobo/pace/1.0.2/css/themes/black/pace-theme-minimal.css" in {
+      rewriteToolKitInit(FoBoPa.ToolKit.Pace102,"fobo"::"black"::"pace-theme-minimal.css"::Nil) must_== 
+        List("fobo", "pace", "1.0.2", "css", "themes", "black", "pace-theme-minimal.css")
+    }       
+  }  
+  
+  "With FoBoPa.Resource.Init set to FoBoPa.Resource.Pace102 the ResourceServer" should {
+    "allow  fobo/pace.js" in {
+      allowResource(FoBoPa.Resource.Pace102,"fobo"::"pace.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/pace.js to fobo/pace/1.0.2/js/pace.min.js" in {
+      rewriteResource(FoBoPa.Resource.Pace102,"fobo"::"pace.js"::Nil) must_== 
+        List("fobo", "pace", "1.0.2", "js", "pace.min.js")
+    }   
+    "rewrit fobo/black/pace-theme-minimal.css to fobo/pace/1.0.2/css/themes/black/pace-theme-minimal.css" in {
+      rewriteResource(FoBoPa.Resource.Pace102,"fobo"::"black"::"pace-theme-minimal.css"::Nil) must_== 
+        List("fobo", "pace", "1.0.2", "css", "themes", "black", "pace-theme-minimal.css")
+    }       
+  }  
+  
+  
   //Pace0415
   "With FoBoPa.InitParam.ToolKit set to FoBoPa.Pace0415 the ResourceServer" should {
     "allow  fobo/pace.js" in {

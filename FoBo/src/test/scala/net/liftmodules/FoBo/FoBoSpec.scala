@@ -679,8 +679,37 @@ object FoBoSpec extends Specification  {
         List("fobo", "google-code", "js", "prettify.js")      
     }       
   }     
-    
-  /*=================Google-Code-Prettify ====================================*/
+  
+  /*================= Pace ====================================*/
+  
+  //Pace102
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.Pace102 the ResourceServer" should {
+    "allow  fobo/pace.js" in {
+      allowToolKitInit(FoBo.ToolKit.Pace102,"fobo"::"pace.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/pace.js to fobo/pace/1.0.2/js/pace.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.Pace102,"fobo"::"pace.js"::Nil) must_== 
+        List("fobo", "pace", "1.0.2", "js", "pace.min.js")
+    }   
+    "rewrit fobo/black/pace-theme-minimal.css to fobo/pace/1.0.2/css/themes/black/pace-theme-minimal.css" in {
+      rewriteToolKitInit(FoBo.ToolKit.Pace102,"fobo"::"black"::"pace-theme-minimal.css"::Nil) must_== 
+        List("fobo", "pace", "1.0.2", "css", "themes", "black", "pace-theme-minimal.css")
+    }       
+  }  
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.Pace102 the ResourceServer" should {
+    "allow  fobo/pace.js" in {
+      allowResource(FoBo.Resource.Pace102,"fobo"::"pace.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/pace.js to fobo/pace/1.0.2/js/pace.min.js" in {
+      rewriteResource(FoBo.Resource.Pace102,"fobo"::"pace.js"::Nil) must_== 
+        List("fobo", "pace", "1.0.2", "js", "pace.min.js")
+    }   
+    "rewrit fobo/black/pace-theme-minimal.css to fobo/pace/1.0.2/css/themes/black/pace-theme-minimal.css" in {
+      rewriteResource(FoBo.Resource.Pace102,"fobo"::"black"::"pace-theme-minimal.css"::Nil) must_== 
+        List("fobo", "pace", "1.0.2", "css", "themes", "black", "pace-theme-minimal.css")
+    }       
+  } 
   
   //Pace0415
   "With FoBo.InitParam.ToolKit set to FoBo.Pace0415 the ResourceServer" should {

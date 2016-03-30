@@ -27,6 +27,23 @@ package object FoBoPa {
   
   object ToolKit extends ToolKit {
     var Init: ToolKit = null 
+
+   /**
+     * Enable usage of FoBo's Pace API and resources version 1&#8228;0&#8228;2 in your bootstrap liftweb Boot.
+     * @version 1.0.2
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoPa => FoBo}
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.Pace102
+     * }}}
+     */    
+     case object Pace102 extends ToolKit {
+       FoBoPaRes.Resource.Pace102
+       //FoBoPaAPI.API.Pace0
+     }
     
    /**
      * Enable usage of FoBo's Pace API and resources version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
@@ -50,6 +67,22 @@ package object FoBoPa {
   
   object Resource extends Resource {
     var Init: Resource = null
+    
+    /**
+     * Enable usage of FoBo's Pace resources version 1&#8228;0&#8228;2 in your bootstrap liftweb Boot.
+     * @version 1.0.2
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoPa => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.Pace102
+     * }}}
+     */    
+     case object Pace102 extends Resource {
+       FoBoPaRes.Resource.Pace102
+     }  
     
     /**
      * Enable usage of FoBo's Pace resources version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
