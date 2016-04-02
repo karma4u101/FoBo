@@ -322,7 +322,7 @@ package object FoBo {
      * }}}
      *
      */
-    @deprecated("Use AJMaterial101 or later","1.5.0")
+    @deprecated("Use AJMaterial107 or later","1.5.0")
     case object AJMaterial0100 extends ToolKit {
       net.liftmodules.FoBoAJS.ToolKit.AJMaterial0100
     }
@@ -340,9 +340,27 @@ package object FoBo {
      * }}}
      *
      */
+    @deprecated("Use AJMaterial107 or later","1.6.0")
     case object AJMaterial101 extends ToolKit {
       net.liftmodules.FoBoAJS.ToolKit.AJMaterial101
     }     
+    
+     /**
+     * Enable usage of FoBo's Angular Material API and resources version 1&#8228;0&#8228;7 in your bootstrap liftweb Boot.
+     * @version 1.0.7
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial107
+     * }}}
+     *
+     */
+    case object AJMaterial107 extends ToolKit {
+      net.liftmodules.FoBoAJS.ToolKit.AJMaterial107
+    }        
     
      /**
      * Enable usage of FoBo's Angular API and AngularUI-Bootstrap resources version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.
@@ -1014,7 +1032,7 @@ package object FoBo {
      * }}}
      *
      */
-    @deprecated("Use AJMaterial101 or later","1.5.0")
+    @deprecated("Use AJMaterial107 or later","1.5.0")
     case object AJMaterial0100 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AJMaterial0100
     }
@@ -1032,9 +1050,27 @@ package object FoBo {
      * }}}
      *
      */
+     @deprecated("Use AJMaterial107 or later","1.6.0")
     case object AJMaterial101 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AJMaterial101
-    }     
+    } 
+    
+     /**
+     * Enable usage of Angular Material version 1&#8228;0&#8228;7 resource files in your bootstrap liftweb Boot.
+     * @version 1.0.7
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.AJMaterial107
+     * }}}
+     *
+     */
+    case object AJMaterial107 extends Resource {
+      net.liftmodules.FoBoAJS.Resource.AJMaterial107
+    }    
     
      /**
      * Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 resource files in your bootstrap liftweb Boot.

@@ -8,7 +8,7 @@ For more information on how to use AngularJS in the FoBo module see the [FoBo - 
 
 Core modules 
 ---------------------------------
-- AngularJS core [v1.0.6, v1.2.11, v1.3.15, v1.4.1, v1.4.8]
+- AngularJS core [v1.0.6, v1.2.11, v1.3.15, v1.4.1, v1.4.8, v1.5.3]
 
 Components
 ----------
@@ -46,9 +46,10 @@ version number and x2.y2.[z2] is the module's major x2, minor y2 and
 eventual incremental numbers z2 followed by a eventual SNAPSHOT 
 release candidate (rcX) or milestone (mX) version part.
 
-For example (when using this module as a separete stand alone module outside of FoBo):
+For example when using this module as a stand alone module i.e without using the FoBo/FoBo module:
 
-    "net.liftmodules" %% "fobo-angularjs_2.6 % "1.3"
+    "net.liftmodules" %% "fobo-angularjs_2.6 % "1.6"
+      :
       :
     <dependency>
       <groupId>net.liftmodules</groupId>
@@ -62,28 +63,27 @@ The example will include a module built for lift 2.6. If you are using maven obs
 
     import net.liftmodules.FoBo 
     :
-    FoBo.InitParam.ToolKit=FoBo.AngularJS121      //access to core files 
-    FoBo.InitParam.ToolKit=FoBo.AngularJS121i18n   //access to angular i18n files 
-    FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap070 //Angular UI Bootstrap
-    FoBo.InitParam.ToolKit=FoBo.AJSMaterial101      //Angular Material
-    FoBo.InitParam.ToolKit=FoBo.AJSUIGrid307      //Angular UI-Grid
-    FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207      //Angular NG-Grid
-    FoBo.init()
+    FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS121      //access to core files 
+    FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS121i18n   //access to angular i18n files 
+    FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap070 //Angular UI Bootstrap
+    FoBo.ToolKit.Init=FoBo.ToolKit.AJSMaterial101      //Angular Material
+    FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIGrid307      //Angular UI-Grid
+    FoBo.ToolKit.Init=FoBo.ToolKit.AJSNGGrid207      //Angular NG-Grid
 
 ### Lift FoBo boot hooks (when used as stand alone module)
 
     import net.liftmodules.FoBoAJS 
     :
-    FoBoAJS.InitParam.ToolKit=FoBoAJS.AngularJS106      //The core files 
-    FoBoAJS.InitParam.ToolKit=FoBoAJS.AJSUIBootstrap070 //Angular UI Bootstrap
-    FoBoAJS.InitParam.ToolKit=FoBoAJS.AJSMaterial101    //Angular Material
-    FoBoAJS.InitParam.ToolKit=FoBoAJS.AJSUIGrid307      //Angular UI-Grid
-    FoBoAJS.InitParam.ToolKit=FoBoAJS.AJSNGGrid207      //Angular NG-Grid
-    FoBoAJS.init()
+    FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS106      //The core files 
+    FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJSUIBootstrap070 //Angular UI Bootstrap
+    FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJSMaterial101    //Angular Material
+    FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJSUIGrid307      //Angular UI-Grid
+    FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJSNGGrid207      //Angular NG-Grid
 
 ### Lift FoBo Template hooks
 
-Note FoBo is taking care of serving minimized files and coresponing hocks to map files (in production) so you do not have to worry about it. 
+Note FoBo is taking care of serving minimized files and corresponding hooks to map files (in production) so you 
+do not have to worry about it. 
 
     <!-- AngularJS core files-->
     <script type="text/javascript" src="/classpath/fobo/angular.js"></script>
@@ -103,24 +103,27 @@ Core Css files
 
 Core Script files
 
-- angular.js [v1.0.6, v1.2.1, v1.2.2, v1.3.15, v1.4.8]
-- angular-animate.js [v1.2.1, v1.2.2, v1.3.15, v1.4.8]
-- angular-aria.js [v1.3.15, v1.4.0, v1.4.8]
-- angular-cookies.js [v1.2.1, v1.2.2, v1.3.15, v1.4.8]
-- angular-loader.js [v1.2.1, v1.2.2, v1.3.15, v1.4.8]
-- angular-message-format.js [v1.4.0, v1.4.8]
-- angular-messages.js [v1.3.15, v1.4.8]
-- angular-mocks.js (for test, only available in development) [v1.2.1, v1.2.2, v1.3.15, v1.4.8]
-- angular-resource.js [v1.2.1, v1.2.2, v1.3.15, v1.4.8]
-- angular-route.js [v1.2.1, v1.2.2, v1.3.15, v1.4.8]
-- angular-sanitize.js [v1.2.1, v1.2.2, v1.3.15, v1.4.8]
+- angular.js [v1.0.6, v1.2.1, v1.2.2, v1.3.15, v1.4.8, v1.5.3]
+- angular-animate.js [v1.2.1, v1.2.2, v1.3.15, v1.4.8, v1.5.3]
+- angular-aria.js [v1.3.15, v1.4.0, v1.4.8, v1.5.3]
+- angular-cookies.js [v1.2.1, v1.2.2, v1.3.15, v1.4.8, v1.5.3]
+- angular-loader.js [v1.2.1, v1.2.2, v1.3.15, v1.4.8, v1.5.3]
+- angular-message-format.js [v1.4.0, v1.4.8, v1.5.3]
+- angular-messages.js [v1.3.15, v1.4.8, v1.5.3]
+- angular-mocks.js (for test, only available in development) [v1.2.1, v1.2.2, v1.3.15, v1.4.8, v1.5.3]
+- angular-resource.js [v1.2.1, v1.2.2, v1.3.15, v1.4.8, v1.5.3]
+- angular-route.js [v1.2.1, v1.2.2, v1.3.15, v1.4.8, v1.5.3]
+- angular-sanitize.js [v1.2.1, v1.2.2, v1.3.15, v1.4.8, v1.5.3]
 - angular-scenario.js (for test, only available in development) [v1.2.1, v1.2.2, v1.3.15, v1.4.8] 
-- angular-touch.js [v1.2.1, v1.2.2, v1.3.15, v1.4.8]
+- angular-touch.js [v1.2.1, v1.2.2, v1.3.15, v1.4.8, v1.5.3]
+- ngAnimateMock.js [v1.5.3]
+- ngMock.js [v1.5.3]
+- ngMockE2E [v1.5.3]
 
 Components Css files
 
 - ng-grid.css [v1.2.1, v1.2.2]
-- angular-material.css [v0.10.0,v1.0.1]
+- angular-material.css [v0.10.0,v1.0.1,v1.0.7]
 - angular-material.layouts.css [v1.0.1]
 - ui-grid.css [v3.0.7]
 
@@ -131,8 +134,8 @@ Components Script files
 - ui-bootstrap.js [v0.2.0, v0.7.0]
 - ng-grid.js [v2.0.4, v2.0.7]
 - ui-grid.js [v3.0.7]
-- angular-material.js [v0.10.0,v1.0.1]
-- angular-material-mocks.js [v1.0.1]
+- angular-material.js [v0.10.0,v1.0.1,v1.0.7]
+- angular-material-mocks.js [v1.0.1,v1.0.7]
  
 i18n files
 

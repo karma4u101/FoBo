@@ -166,7 +166,28 @@ object FoBoSpec extends Specification  {
      rewriteResource(FoBo.Resource.AngularJS1219,"fobo"::"angular.js"::Nil) must_== 
         List("fobo", "angular-js", "1.2.19", "js", "angular.min.js")      
     }       
-  }   
+  }  
+  
+   //AJMaterial107
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AJMaterial107 the ResourceServer" should {    
+    "allow  fobo/angular-material.js" in {
+      allowToolKitInit(FoBo.ToolKit.AJMaterial107,"fobo"::"angular-material.js"::Nil) must_== true       
+    }     
+    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.7/js/angular-material.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AJMaterial107,"fobo"::"angular-material.js"::Nil) must_== 
+        List("fobo", "angular-material", "1.0.7", "js", "angular-material.min.js")      
+    }       
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.AJMaterial107 the ResourceServer" should { 
+    "allow  fobo/angular-material.js" in  {
+      allowResource(FoBo.Resource.AJMaterial107,"fobo"::"angular-material.js"::Nil)  must_== true 
+    }     
+    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.7/js/angular-material.min.js" in  {
+     rewriteResource(FoBo.Resource.AJMaterial107,"fobo"::"angular-material.js"::Nil) must_== 
+        List("fobo", "angular-material", "1.0.7", "js", "angular-material.min.js")      
+    }       
+  } 
   
   //AJMaterial101
   "With FoBo.InitParam.ToolKit set to FoBo.AJMaterial101 the ResourceServer" should {

@@ -64,13 +64,13 @@ You don't need to use it but this project's also includes a Eclipse (and a IDEA)
 Integration into your project 
 -------------------------------
 
-### Dependency settings
-	
-For module versions >= 0.9.3 put the following in your project build.sbt files lift libraryDependencies section 
+### Dependency settings (General)
+
+**SBT:** Add this to your project build.sbt files libraryDependencies section 
 
     "net.liftmodules" %% "moduleName_x1.y1 % "x2.y2[.z2][-SNAPSHOT/rcx/mx]"
 
-or if you are using Maven
+**Maven:**
 
     <dependency>
       <groupId>net.liftmodules</groupId>
@@ -83,33 +83,83 @@ version number and x2.y2.[z2] is the module's major x2, minor y2 and
 eventual incremental numbers z2 followed by a eventual SNAPSHOT 
 release candidate (rcX) or milestone (mX) version part.
 
-For example:
+### Dependency settings (FoBo)
 
-    "net.liftmodules" %% "fobo_2.6 % "1.5.0-SNAPSHOT"
+To get access to all FoBo's toolkit, resource and api modules you can use FoBo's FoBo module as shown bellow 
+	
+For example (sbt/maven):
+
+    "net.liftmodules" %% "fobo_2.6 % "1.6"
       :
     <dependency>
       <groupId>net.liftmodules</groupId>
       <artifactId>fobo_2.6_2.11.6</artifactId>
-      <version>1.5.0-SNAPSHOT</version>
+      <version>1.6</version>
     </dependency>
 
-The example will include a module built for lift 2.6.x. If you are using maven observe that the artifact id also needs the Scala version.
+The example will include the FoBo/FoBo module built for lift 2.6.x. 
+If you are using maven observe that the artifact id also needs the Scala version.
 	
-now do a sbt clean update .....
+### Dependency setting (Toolkit/api/resource)
+
+To get access to one or more of FoBo's (but not all) toolkit, resource and/or api modules you can use the following 
+
+For example (sbt/maven):
+
+    "net.liftmodules" %% "fobo-twbs-bootstrap3-api_2.6 % "1.6"
+      :
+    <dependency>
+      <groupId>net.liftmodules</groupId>
+      <artifactId>fobo-twbs-bootstrap3-api_2.6_2.11.6</artifactId>
+      <version>1.6</version>
+    </dependency>
+
+The example will include the FoBo Bootstrap3 API module built for lift 2.6.x. 
+If you are using maven observe that the artifact id also needs the Scala version. 
+	
+
 	
 ### Lift FoBo boot hooks 
 
-Put the following into your lift Boot
+Alternative: Using the FoBo/FoBo module to get access to all FoBo's toolkit, resource and api modules, use 
+the following into your lift Boot
 
     import net.liftmodules.FoBo
     
-    //If using defaults FoBo init params can be omitted
-    FoBo.InitParam.JQuery=FoBo.[JQueryXYZ module option name]
-    FoBo.InitParam.ToolKit=FoBo.[ToolkitXYZ module option name]
-    FoBo.InitParam.ToolKit=FoBo.[ev. additional/extra toolkit module name]
-       :
-    FoBo.init()
+    FoBo.ToolKit.Init=FoBo.ToolKit.[ToolkitObjectXYZ]
+    FoBo.ToolKit.Init=FoBo.ToolKit.[additional toolkit object name]
+    //you can also use one or more resources modules (excluding ev. Lift/FoBo API)
+    FoBo.Resource.Init=FoBo.Resource.[ResouceObjectXYZ]
+    FoBo.Resource.Init=FoBo.Resource.[additional resource object name]
+    //you can also use one or more API modules (providing the corresponding resource yourself)
+    FoBo.API.Init=FoBo.API.[APIObjectXYZ]
+    FoBo.API.Init=FoBo.API.[additional api object name]
+   
+Alternative: Using a single FoBo toolkit, resource and/or api module
 
+    import net.liftmodules.{FoBoXY => FoBo}
+      :
+    //as above if toolkit
+    FoBo.ToolKit.Init=FoBo.ToolKit.[ToolkitObjectXYZ]
+    //as above if resource
+    FoBo.Resource.Init=FoBo.Resource.[ResouceObjectXYZ]
+    //as above if api
+    FoBo.API.Init=FoBo.API.[APIObjectXYZ]
+    
+Alternative: Using several independently added FoBo modules (but not all)
+       
+    import net.liftmodules.{FoBoXY1,FoBoXY2}
+      :
+    //toolkits
+    FoBoXY1.ToolKit.Init=FoBoXY1.ToolKit.[ToolkitObjectXYZ]
+    FoBoXY2.ToolKit.Init=FoBoXY2.ToolKit.[ToolkitObjectXYZ]
+    //resource
+    FoBoXY1.Resource.Init=FoBoXY1.Resource.[ResouceObjectXYZ]
+    FoBoXY2.Resource.Init=FoBoXY2.Resource.[ResouceObjectXYZ]      
+    //api
+    FoBoXY1.API.Init=FoBoXY1.API.[APIObjectXYZ]
+    FoBoXY2.API.Init=FoBoXY2.API.[APIObjectXYZ]
+   
 ### Lift FoBo Template hooks
 
 Put something like the following in your Lift templat(s) head section (see below for available names)	

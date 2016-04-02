@@ -13,6 +13,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2013-05-19** -- Module v1.0 
 
 **Latest Updates:**
+- **2016-04-02** -- [Issue #72](https://github.com/karma4u101/FoBo/issues/72) Add Angular Material v1.0.7
 - **2016-03-30** -- [Issue #70](https://github.com/karma4u101/FoBo/issues/70) Add Pace v1.0.2
 - **2016-03-29** -- [Issue #69](https://github.com/karma4u101/FoBo/issues/69) Add AngularJS v1.5.3
 - **2016-03-25** -- [PR #61](https://github.com/karma4u101/FoBo/pull/61) Re-factoring modules  
@@ -35,6 +36,7 @@ modules or via the FoBo/FoBo module get access to all it's Toolkit, Resource and
 -   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) Adds v1.0.2 - [Pace](http://github.hubspot.com/pace/docs/welcome/)
 -   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.5.0 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 -   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.5.3 - [AngularJS](http://angularjs.org/)
+-   [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.0.7 - [Angular Material](https://material.angularjs.org/)
 
 FoBo v1.5.1
 -----------
@@ -44,17 +46,17 @@ FoBo v1.5.1
 FoBo v1.5
 ---------
 ###FoBo v1.5 has the following new sub modules
--   [FoBo-AngularJS UI Grid](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v3.0.7 - [Angular UI Grid](http://ui-grid.info/).
+-   [FoBo-AngularJS UI Grid](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v3.0.7 - [Angular UI Grid](http://ui-grid.info/)
     A data grid for AngularJS. Native AngularJS implementation, no jQuery. This is the successor of NG Grid (also available via FoBo) 
 
 ###FoBo v1.5 has updates to the following sub modules
--   [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.0.1 - [Angular Material](https://material.angularjs.org/).
+-   [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.0.1 - [Angular Material](https://material.angularjs.org/)
 
 -   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) Adds v3.3.6 - [Bootstrap 3.x](http://getbootstrap.com/)
--   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.4.8 - [AngularJS](http://angularjs.org/).
+-   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.4.8 - [AngularJS](http://angularjs.org/)
  
 For a list of already available toolkit versions see respective sub modules README.
-You can see a running demo of a Lift Template application using Material Design [here](http://www.media4u101.se/lift-advanced-md/).
+You can see a running demo of a Lift Template application using Material Design [here](http://www.media4u101.se/lift-advanced-md/)
 
 ###FoBo v1.5 API updates
 -   FoBo v1.5 adds API integration with the **MaterialMegaMetaProtoUser** trait that adds Material Design styling to the ProtoUser form views. 
@@ -67,13 +69,13 @@ You can see a running demo of a Lift Template application using Material Design 
 FoBo v1.4
 ---------
 ###FoBo v1.4 has the following new sub modules
--   [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v0.10.0 - [Angular Material](https://material.angularjs.org/).
+-   [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v0.10.0 - [Angular Material](https://material.angularjs.org/)
     The Angular Material project is an implementation of Material Design in Angular.js. This project provides a set of reusable, well-tested, and accessible UI components based on the Material Design system.
 
 ###FoBo v1.4 has updates to the following sub modules
 -   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) Adds v3.3.5 - [Bootstrap 3.x](http://getbootstrap.com/)
--   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.4.1 - [AngularJS](http://angularjs.org/).
--   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.3.5 - [AngularJS](http://angularjs.org/).
+-   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.4.1 - [AngularJS](http://angularjs.org/)
+-   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.3.5 - [AngularJS](http://angularjs.org/)
 -   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.3.0 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v.1.11.3, v2.1.4 - [JQuery](http://jquery.com/)
 
@@ -90,11 +92,11 @@ FoBo v1.3
     KineticJS is an HTML5 Canvas JavaScript framework that enables high performance animations, transitions, node nesting, layering, filtering, caching, event handling for desktop and mobile applications, and much more. 
 
 ###FoBo v1.3 has updates to the following sub modules
--   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.2.19 - [AngularJS](http://angularjs.org/).
+-   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.2.19 - [AngularJS](http://angularjs.org/)
 -   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) Adds v3.2.0 - [Bootstrap 3.x](http://getbootstrap.com/)
 -   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.1.0 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v1.11.1 - [JQuery](http://jquery.com/)
--   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) also adds JQuery-Migrate v1.2.1 [JQuery-Migrate](https://github.com/jquery/jquery-migrate/). 
+-   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) also adds JQuery-Migrate v1.2.1 [JQuery-Migrate](https://github.com/jquery/jquery-migrate/) 
     JQuery-Migrate is useful for migrating older jQuery code to jQuery 1.9+ it can be used for detecting and restoring APIs or features that have been deprecated in jQuery
 
 
@@ -110,11 +112,11 @@ FoBo v1.2
     Automatic page load progress bar, you get a beautiful progress indicator for your page load and ajax navigation.    
 
 ###FoBo v1.2 has updates to the following sub modules
--   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds [v1.2.11] - [AngularJS](http://angularjs.org/).
+-   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds [v1.2.11] - [AngularJS](http://angularjs.org/)
     FoBo v1.2 adds AngularJS core v1.2.11 to it's Angular module.
--   [FoBo-AngularUI Bootstrap](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds [v0.10.0, v0.7.0] - [AngularUI](http://angular-ui.github.io/).
+-   [FoBo-AngularUI Bootstrap](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds [v0.10.0, v0.7.0] - [AngularUI](http://angular-ui.github.io/)
     FoBo v1.2 adds AngularUI Bootstrap v0.7.0 and v0.10.0 to it's Angular module. v0.10.0 is Bootstrap version 3.x compatible. 
--   [FoBo-AngularUI NG-Grid](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds [v2.0.7] - [AngularUI](http://angular-ui.github.io/).
+-   [FoBo-AngularUI NG-Grid](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds [v2.0.7] - [AngularUI](http://angular-ui.github.io/)
     FoBo v1.2 adds AngularUI NG-Grid v2.0.7 to it's Angular module.
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds [v1.11.0] 
 -   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) Adds [v3.1.1] - [Bootstrap 3.x](http://getbootstrap.com/)

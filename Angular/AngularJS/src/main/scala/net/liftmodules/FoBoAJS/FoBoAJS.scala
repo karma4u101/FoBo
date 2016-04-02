@@ -279,6 +279,24 @@ package object FoBoAJS {
     case object AJMaterial101 extends ToolKit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AJMaterial101
+    }
+    
+     /**
+     * Enable usage of FoBo's Angular Material API and resources version 1&#8228;0&#8228;7 in your bootstrap liftweb Boot.
+     * @version 1.0.7
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.{FoBoAJS => FoBo}
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial107
+     * }}}
+     *
+     */
+    case object AJMaterial107 extends ToolKit {
+      FoBoAJSAPI.API.Angular1
+      FoBoAJSRes.Resource.AJMaterial107
     }     
     
      /**
@@ -563,7 +581,7 @@ package object FoBoAJS {
      * }}}
      *
      */
-    @deprecated("Use AJMaterial101 or later","1.5.0")
+    @deprecated("Use AJMaterial107 or later","1.5.0")
     case object AJMaterial0100 extends Resource {
       FoBoAJSRes.Resource.AJMaterial0100
     }
@@ -581,9 +599,27 @@ package object FoBoAJS {
      * }}}
      *
      */
+    @deprecated("Use AJMaterial107 or later","1.6.0")
     case object AJMaterial101 extends Resource {
       FoBoAJSRes.Resource.AJMaterial101
     }     
+    
+     /**
+     * Enable usage of Angular Material version 1&#8228;0&#8228;7 resource files in your bootstrap liftweb Boot.
+     * @version 1.0.7
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.{FoBoAJS => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.AJMaterial107
+     * }}}
+     *
+     */
+    case object AJMaterial107 extends Resource {
+      FoBoAJSRes.Resource.AJMaterial107
+    }       
     
      /**
      * Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 resource files in your bootstrap liftweb Boot.
@@ -887,6 +923,23 @@ package object FoBoAJS {
   case object AJMaterial101 extends FoBoToolkit {
     ToolKit.AJMaterial101
   }  
+  
+   /**
+   * Enable usage of Angular Material version 1&#8228;0&#8228;7 in your bootstrap liftweb Boot.
+   * @version 1.0.7
+   *
+   *  '''Example:'''
+   *
+   * {{{
+   *   import net.liftmodules.{FoBoAJS => FoBo}
+   *    :
+   *   FoBo.InitParam.Toolkit=FoBo.AJMaterial107
+   * }}}
+   * @since v1.6
+   */
+  case object AJMaterial107 extends FoBoToolkit {
+    ToolKit.AJMaterial107
+  }   
   
    /**
    * Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.
