@@ -67,17 +67,17 @@ Integration into your project
 ### Dependency settings (General)
 
 **SBT:** Add this to your project build.sbt files libraryDependencies section 
-
-    "net.liftmodules" %% "moduleName_x1.y1 % "x2.y2[.z2][-SNAPSHOT/rcx/mx]"
-
+```scala
+"net.liftmodules" %% "moduleName_x1.y1 % "x2.y2[.z2][-SNAPSHOT/rcx/mx]"
+```
 **Maven:** Add this in the dependency section of your pom file.
-
-    <dependency>
-      <groupId>net.liftmodules</groupId>
-      <artifactId>moduleName_x1.y1_a.b.c</artifactId>
-      <version>x2.y2[.z2][-SNAPSHOT/rcx/mx]</version>
-    </dependency>
-
+```xml
+<dependency>
+  <groupId>net.liftmodules</groupId>
+  <artifactId>moduleName_x1.y1_a.b.c</artifactId>
+  <version>x2.y2[.z2][-SNAPSHOT/rcx/mx]</version>
+</dependency>
+```
 Where x1.y1 is Lift major and minor version numbers and a.b.c is Scala
 version number and x2.y2.[z2] is the module's major x2, minor y2 and
 eventual incremental numbers z2 followed by a eventual SNAPSHOT 
@@ -91,17 +91,17 @@ module as shown bellow. This is the simplest and probably most common way to use
 Setup example:
 
 **SBT:**
-
-    "net.liftmodules" %% "fobo_2.6 % "1.6"
-      
+```scala
+"net.liftmodules" %% "fobo_2.6 % "1.6"
+```      
 **Maven:**      
-
-    <dependency>
-      <groupId>net.liftmodules</groupId>
-      <artifactId>fobo_2.6_2.11.6</artifactId>
-      <version>1.6</version>
-    </dependency>
-
+```xml
+<dependency>
+  <groupId>net.liftmodules</groupId>
+  <artifactId>fobo_2.6_2.11.6</artifactId>
+  <version>1.6</version>
+</dependency>
+```
 The example shows how to include the FoBo/FoBo module built for lift 2.6.x. 
 If you are using maven observe that the artifact id also needs the Scala version.
 	
@@ -113,17 +113,17 @@ to use in your project you can use something like the following
 Setup example:
 
 **SBT:**
-
-    "net.liftmodules" %% "fobo-twbs-bootstrap3-api_2.6 % "1.6"
-      
+```scala
+"net.liftmodules" %% "fobo-twbs-bootstrap3-api_2.6 % "1.6"
+```      
 **Maven:**
-      
-    <dependency>
-      <groupId>net.liftmodules</groupId>
-      <artifactId>fobo-twbs-bootstrap3-api_2.6_2.11.6</artifactId>
-      <version>1.6</version>
-    </dependency>
-
+```xml      
+<dependency>
+  <groupId>net.liftmodules</groupId>
+  <artifactId>fobo-twbs-bootstrap3-api_2.6_2.11.6</artifactId>
+  <version>1.6</version>
+</dependency>
+```
 The example shows how to include the FoBo Bootstrap3 API module built for lift 2.6.x. 
 If you are using maven observe that the artifact id also needs the Scala version. 
 	
@@ -131,67 +131,69 @@ If you are using maven observe that the artifact id also needs the Scala version
 
 **Alternative:** Using the FoBo/FoBo module to get access to all FoBo's toolkit, resource and api modules, use 
 the following into your lift Boot
-
-    import net.liftmodules.FoBo
-    
-    FoBo.ToolKit.Init=FoBo.ToolKit.[ToolkitObjectXYZ]
-    FoBo.ToolKit.Init=FoBo.ToolKit.[additional toolkit object name]
-    //you can also use one or more resources modules (excluding ev. Lift/FoBo API)
-    FoBo.Resource.Init=FoBo.Resource.[ResouceObjectXYZ]
-    FoBo.Resource.Init=FoBo.Resource.[additional resource object name]
-    //you can also use one or more API modules (providing the corresponding resource yourself)
-    FoBo.API.Init=FoBo.API.[APIObjectXYZ]
-    FoBo.API.Init=FoBo.API.[additional api object name]
+```scala
+import net.liftmodules.FoBo
+  :    
+FoBo.ToolKit.Init=FoBo.ToolKit.[ToolkitObjectXYZ]
+FoBo.ToolKit.Init=FoBo.ToolKit.[additional toolkit object name]
+//you can also use one or more resources modules (excluding ev. Lift/FoBo API)
+FoBo.Resource.Init=FoBo.Resource.[ResouceObjectXYZ]
+FoBo.Resource.Init=FoBo.Resource.[additional resource object name]
+//you can also use one or more API modules (providing the corresponding resource yourself)
+FoBo.API.Init=FoBo.API.[APIObjectXYZ]
+FoBo.API.Init=FoBo.API.[additional api object name]
+``` 
    
 **Alternative:** Using one of FoBo's Toolkit, Resource and/or API modules
 
 ```scala
-    import net.liftmodules.{FoBoXY => FoBo}
-      :
-    //as above if toolkit
-    FoBo.ToolKit.Init=FoBo.ToolKit.[ToolkitObjectXYZ]
-    //as above if resource
-    FoBo.Resource.Init=FoBo.Resource.[ResouceObjectXYZ]
-    //as above if api
-    FoBo.API.Init=FoBo.API.[APIObjectXYZ]
+import net.liftmodules.{FoBoXY => FoBo}
+  :
+//as above if toolkit
+FoBo.ToolKit.Init=FoBo.ToolKit.[ToolkitObjectXYZ]
+//as above if resource
+FoBo.Resource.Init=FoBo.Resource.[ResouceObjectXYZ]
+//as above if api
+FoBo.API.Init=FoBo.API.[APIObjectXYZ]
 ```  
     
 **Alternative:** Using several independently added FoBo modules (but not all)
-       
-    import net.liftmodules.{FoBoXY1,FoBoXY2}
-      :
-    //toolkits
-    FoBoXY1.ToolKit.Init=FoBoXY1.ToolKit.[ToolkitObjectXYZ]
-    FoBoXY2.ToolKit.Init=FoBoXY2.ToolKit.[ToolkitObjectXYZ]
-    //resource
-    FoBoXY1.Resource.Init=FoBoXY1.Resource.[ResouceObjectXYZ]
-    FoBoXY2.Resource.Init=FoBoXY2.Resource.[ResouceObjectXYZ]      
-    //api
-    FoBoXY1.API.Init=FoBoXY1.API.[APIObjectXYZ]
-    FoBoXY2.API.Init=FoBoXY2.API.[APIObjectXYZ]
-   
+```scala       
+import net.liftmodules.{FoBoXY1,FoBoXY2}
+  :
+//toolkits
+FoBoXY1.ToolKit.Init=FoBoXY1.ToolKit.[ToolkitObjectXYZ]
+FoBoXY2.ToolKit.Init=FoBoXY2.ToolKit.[ToolkitObjectXYZ]
+//resource
+FoBoXY1.Resource.Init=FoBoXY1.Resource.[ResouceObjectXYZ]
+FoBoXY2.Resource.Init=FoBoXY2.Resource.[ResouceObjectXYZ]      
+//api
+FoBoXY1.API.Init=FoBoXY1.API.[APIObjectXYZ]
+FoBoXY2.API.Init=FoBoXY2.API.[APIObjectXYZ]
+```   
 ### Lift FoBo Template hooks
 
 Put something like the following in your Lift templat(s) head section (see below for available names)	
- 	
-    <link rel="stylesheet" type='text/css' href='/classpath/fobo/[css file name]'>
-    <link rel="stylesheet" type='text/css' href='/classpath/fobo/[another css file name]'> 
-    <link rel="stylesheet" type='text/css' href='/classpath/fobo/[a third css file name]'>
-      :	
-    <link rel="stylesheet" type='text/css' href='[path/to/you/app/specific/css/file/in/the/webapp/dir]'>
-      :
-    <script type="text/javascript" src="/classpath/fobo/[script file name]"></script>
-    <script type="text/javascript" src="/classpath/fobo/[another script file name]"></script>
-    <script type="text/javascript" src="/classpath/fobo/[a third script file name]"></script>
-      :
 
+```html 	
+<link rel="stylesheet" type='text/css' href='/classpath/fobo/[css file name]'>
+<link rel="stylesheet" type='text/css' href='/classpath/fobo/[another css file name]'> 
+<link rel="stylesheet" type='text/css' href='/classpath/fobo/[a third css file name]'>
+  :	
+<link rel="stylesheet" type='text/css' href='[path/to/you/app/specific/css/file/in/the/webapp/dir]'>
+  :
+<script type="text/javascript" src="/classpath/fobo/[script file name]"></script>
+<script type="text/javascript" src="/classpath/fobo/[another script file name]"></script>
+<script type="text/javascript" src="/classpath/fobo/[a third script file name]"></script>
+  :
+``` 
 For more information see readme in respective sub module.
 You can now also use use FoBo's resource injection snippet to inject all your fobo css and js resources 
-
-    <link data-lift="FoBo.Resources.injectCSS?resources=file name,another file name,a third file name,..."></link>	
-    <link rel="stylesheet" type='text/css' href='[path/to/you/app/specific/css/file/in/the/webapp/dir]'>
-    <script data-lift="FoBo.Resources.injectJS?resources=file name,another file name,a third file name,..."></script>
-
+```html
+<link data-lift="FoBo.Resources.injectCSS?resources=file name,another file name,a third file name,..."></link>	
+<link rel="stylesheet" type='text/css' href='[path/to/you/app/specific/css/file/in/the/webapp/dir]'>
+<script data-lift="FoBo.Resources.injectJS?resources=file name,another file name,a third file name,..."></script>
+``` 
 For more information see [FoBo API: Resources](http://www.media4u101.se/fobo-lift-template-demo/foboapi/index.html#net.liftmodules.FoBo.snippet.FoBo.Resources)
 
 
