@@ -70,7 +70,7 @@ Integration into your project
 
     "net.liftmodules" %% "moduleName_x1.y1 % "x2.y2[.z2][-SNAPSHOT/rcx/mx]"
 
-**Maven:**
+**Maven:** Add this in the dependency section of your pom file.
 
     <dependency>
       <groupId>net.liftmodules</groupId>
@@ -85,43 +85,51 @@ release candidate (rcX) or milestone (mX) version part.
 
 ### Dependency settings (FoBo)
 
-To get access to all FoBo's toolkit, resource and api modules you can use FoBo's FoBo module as shown bellow 
+To get access to **all** FoBo's toolkit, resource and api modules you can use FoBo's FoBo 
+module as shown bellow. This is the simplest and probably most common way to use FoBo.
 	
-For example (sbt/maven):
+Setup example:
+
+**SBT:**
 
     "net.liftmodules" %% "fobo_2.6 % "1.6"
-      :
+      
+**Maven:**      
+
     <dependency>
       <groupId>net.liftmodules</groupId>
       <artifactId>fobo_2.6_2.11.6</artifactId>
       <version>1.6</version>
     </dependency>
 
-The example will include the FoBo/FoBo module built for lift 2.6.x. 
+The example shows how to include the FoBo/FoBo module built for lift 2.6.x. 
 If you are using maven observe that the artifact id also needs the Scala version.
 	
-### Dependency setting (Toolkit/api/resource)
+### Dependency setting (Toolkit / API / Resource)
 
-To get access to one or more of FoBo's (but not all) toolkit, resource and/or api modules you can use the following 
+To get access to exactly the FoBo's toolkit, resource and/or api module(s) you expect
+to use in your project you can use something like the following 
 
-For example (sbt/maven):
+Setup example:
+
+**SBT:**
 
     "net.liftmodules" %% "fobo-twbs-bootstrap3-api_2.6 % "1.6"
-      :
+      
+**Maven:**
+      
     <dependency>
       <groupId>net.liftmodules</groupId>
       <artifactId>fobo-twbs-bootstrap3-api_2.6_2.11.6</artifactId>
       <version>1.6</version>
     </dependency>
 
-The example will include the FoBo Bootstrap3 API module built for lift 2.6.x. 
+The example shows how to include the FoBo Bootstrap3 API module built for lift 2.6.x. 
 If you are using maven observe that the artifact id also needs the Scala version. 
-	
-
 	
 ### Lift FoBo boot hooks 
 
-Alternative: Using the FoBo/FoBo module to get access to all FoBo's toolkit, resource and api modules, use 
+**Alternative:** Using the FoBo/FoBo module to get access to all FoBo's toolkit, resource and api modules, use 
 the following into your lift Boot
 
     import net.liftmodules.FoBo
@@ -135,8 +143,9 @@ the following into your lift Boot
     FoBo.API.Init=FoBo.API.[APIObjectXYZ]
     FoBo.API.Init=FoBo.API.[additional api object name]
    
-Alternative: Using a single FoBo toolkit, resource and/or api module
+**Alternative:** Using one of FoBo's Toolkit, Resource and/or API modules
 
+```scala
     import net.liftmodules.{FoBoXY => FoBo}
       :
     //as above if toolkit
@@ -145,8 +154,9 @@ Alternative: Using a single FoBo toolkit, resource and/or api module
     FoBo.Resource.Init=FoBo.Resource.[ResouceObjectXYZ]
     //as above if api
     FoBo.API.Init=FoBo.API.[APIObjectXYZ]
+```  
     
-Alternative: Using several independently added FoBo modules (but not all)
+**Alternative:** Using several independently added FoBo modules (but not all)
        
     import net.liftmodules.{FoBoXY1,FoBoXY2}
       :
