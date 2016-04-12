@@ -7,7 +7,7 @@ import common._
 import http._
 import Helpers._
 import scala.xml.{NodeSeq,Text}
-import net.liftmodules.FoBo.lib.BuildInfo
+import net.liftmodules.FoBo.lib.BuildInfo //generated code
 
 /**
  * ==Info Snippet==

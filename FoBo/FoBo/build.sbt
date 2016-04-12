@@ -23,6 +23,7 @@ libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"      %% "lift-webkit"                       % v       % "provided" :: 
     "net.liftweb"      %% "lift-testkit"                      % v       % "provided" :: 
     "net.liftweb"      %% "lift-mapper"                       % v       % "provided" ::
+    "net.liftmodules"  %% ("fobo-api"+"_"+e)                 % mv      % "compile" ::   
     "net.liftmodules"  %% ("fobo-pace"+"_"+e)                 % mv      % "compile" ::       
     "net.liftmodules"  %% ("fobo-jquery"+"_"+e)               % mv      % "compile" :: 
     /*"net.liftmodules"  %% ("fobo-knockout"+"_"+e)             % mv      % "compile" ::*/ 

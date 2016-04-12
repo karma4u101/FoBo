@@ -27,11 +27,16 @@ object LiftModuleFoBoBuild extends Build {
                                  )
                                  
    lazy val fobo        = Project(id = "fobo",
-                            base = file("FoBo"),
-                            settings = defaultSettings ++ myBuildInfoSettings ++ scaladocSettings ++ Seq(
+                            base = file("FoBo/FoBo"),
+                            settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile),
-                             aggregate = Seq(kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,prettify)
-                                 ).dependsOn(kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,prettify)  
+                             aggregate = Seq(foboapi,kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,prettify)
+                                 ).dependsOn(foboapi,kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,prettify)  
+               
+   lazy val foboapi = Project(id   = "fobo-api", 
+                             base = file("FoBo/FoBo-API"),
+                             settings = defaultSettings ++ myBuildInfoSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))      
                                  
    lazy val fontAwesome = Project(id   = "fobo-font-awesome", 
                              base = file("Font-Awesome/Font-Awesome"),
