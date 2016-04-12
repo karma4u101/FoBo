@@ -21,6 +21,7 @@ resolvers ++= Seq(
 libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
     "net.liftweb"      %% "lift-webkit"                % v       % "provided" ::
     "net.liftweb"      %% "lift-testkit"               % v       % "provided" ::
+    "net.liftmodules"  %% ("fobo-jquery-api"+"_"+e)    % mv      % "provided" ::
     "net.liftmodules"  %% ("fobo-jquery-res"+"_"+e)    % mv      % "provided" ::
     Nil
 }

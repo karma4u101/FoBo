@@ -320,9 +320,8 @@ package object FoBoJQ {
      * }}}
      */    
      case object JQuery1 extends API {
-       //ToDo get from module fobo-jquery-api in JQueryAPI
-       //FoBoJQAPI.API.JQuery1
-       FoBoAPI.init
+       FoBoJQAPI.API.JQuery1
+       //FoBoAPI.init
      } 
     
     /**
@@ -338,9 +337,8 @@ package object FoBoJQ {
      * }}}
      */    
      case object JQuery2 extends API {
-       //ToDo get from module fobo-jquery-api in JQueryAPI
-       //FoBoJQAPI.API.JQuery2
-       FoBoAPI.init
+       FoBoJQAPI.API.JQuery2
+       //FoBoAPI.init
      }     
 
   }
@@ -348,12 +346,12 @@ package object FoBoJQ {
   /**
    * Object for initiating FoBo API packages. 
    */
-  private object FoBoAPI {
-    lazy val init: Unit = {
-      LiftRules.addToPackages("net.liftmodules.FoBoJQ")  
-      
-    }
-  }  
+//  private object FoBoAPI {
+//    lazy val init: Unit = {
+//      LiftRules.addToPackages("net.liftmodules.FoBoJQ")  
+//      
+//    }
+//  }  
   
   /*=== InitParam (deprecated) ============================================*/  
 

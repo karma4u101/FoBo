@@ -107,8 +107,13 @@ object LiftModuleFoBoBuild extends Build {
                              base = file("JQuery/JQuery"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile),
-                             aggregate = Seq(jqueryres) 
-                                 ).dependsOn(jqueryres)   
+                             aggregate = Seq(jqueryapi,jqueryres) 
+                                 ).dependsOn(jqueryapi,jqueryres)   
+  
+  lazy val jqueryapi       = Project(id   = "fobo-jquery-api", 
+                             base = file("JQuery/JQuery-API"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile)) 
                                  
   lazy val jqueryres     = Project(id   = "fobo-jquery-res", 
                              base = file("JQuery/JQuery-Res"),
