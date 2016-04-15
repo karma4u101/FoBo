@@ -1,70 +1,57 @@
-FoBo - A Comprehensive Front-End Toolkit Module for Lift 
-==================================================
+# FoBo - A Comprehensive Front-End Toolkit Module for Lift 
 
 [![Build Status](https://secure.travis-ci.org/karma4u101/FoBo.png)](http://travis-ci.org/karma4u101/FoBo)
 [![Stories in Ready](https://badge.waffle.io/karma4u101/FoBo.svg?label=ready&title=Ready)](http://waffle.io/karma4u101/FoBo) 
 [![Stories in Progress](https://badge.waffle.io/karma4u101/FoBo.svg?label=In Progress&title=In Progress)](http://waffle.io/karma4u101/FoBo) 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/karma4u101/FoBo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-FoBo is a [Lift module](http://liftweb.net/lift_modules) that includes industry leading open source front end toolkits for developing mobile scalable responsive web applications that will jazz up your Lift applications with the toolkit(s) of your choice.
+FoBo is a [Lift module](http://liftweb.net/lift_modules), composed of several Toolkit, Resource and API modules, that includes industry leading open source 
+front end toolkits for developing mobile scalable responsive web applications that will jazz up your Lift applications with the toolkit(s) of your choice.
 
-A **live demo** and introduction to using the Lift module(s), including API documentation and links to running examples of starter templates and more, can be seen at the [FoBo Template Demo](http://www.media4u101.se/fobo-lift-template-demo/). 
+A **live demo** and introduction to using the Lift module(s), including API documentation and links to running examples of starter templates and more, 
+can be seen at the [FoBo Template Demo](http://www.media4u101.se/fobo-lift-template-demo/). 
 
 With this Lift module you will get a hassle free inclusion and smooth upgrades of toolkits, you decide what toolkits and versions to enable.
-The FoBo module is making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot), by simultaneously supporting several versions of the included toolkits and, without code or reference changes, providing debug-able js and css files in development and minimized files otherwise. 
+The FoBo module is making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot), by 
+simultaneously supporting several versions of the included toolkits and, without code or reference changes, providing debug-able js and css 
+files in development and minimized files otherwise. 
 
-Using this module you will also get a clean separation of the toolkit files and your application specific resources as the module dose not clutter your applications web-app resources directory. 
+Using this module you will also get a clean separation of the toolkit files and your application specific resources as the module dose not 
+clutter your applications web-app resources directory. 
 
-####FoBo API
-The FoBo module also has a evolving API that includes snippet:s and helper object:s (see API documents for usage) that will take care of some common toolkit and component initiation and usage, like lift site-map to bootstrap menu builders, resource injection, script generation and more.
+#### FoBo API
+Some of the FoBo modules also has a evolving FoBo/Lift API that includes snippet:s and helper object:s (see API documents for usage) that will take 
+care of some common toolkit and component initiation and usage, like lift site-map to bootstrap or Angular Material menu builders, resource injection, 
+script generation and more.
 
-####FoBo - Lift starter template
-**Bootstrap** A Lift v2.6 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) is available from here [Lift v2.6 Template Applications](https://github.com/lift/lift_26_sbt/)
+#### FoBo - Lift starter template
+**Bootstrap** A Lift v2.6 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) 
+is available from here [Lift v2.6 Template Applications](https://github.com/lift/lift_26_sbt/)
 
-**Bootstrap** A Lift v3.0 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) is available from here [Lift v3.0 Template Applications](https://github.com/lift/lift_30_sbt/)
+**Bootstrap** A Lift v3.0 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) 
+is available from here [Lift v3.0 Template Applications](https://github.com/lift/lift_30_sbt/)
 
-**Material Design** A Lift v3.0 starter template with FoBo setup using Angular Material and FoBo's MaterialMegaMetaProtoUser (for mapper ProtoUser views) is available from here [FoBo-Demo](https://github.com/karma4u101/FoBo-Demo/)
+**Material Design** A Lift v3.0 starter template with FoBo setup using Angular Material and FoBo's MaterialMegaMetaProtoUser (for mapper ProtoUser 
+views) is available from here [FoBo-Demo](https://github.com/karma4u101/FoBo-Demo/)
 
+For more information on how to get started with FoBo's starter templates see [Quick Start with Lift Template Applications](#Quick Start with Lift Template Applications)
 
 If you have ideas and suggestions let us know!
 
-Contributions
--------------
-Improvements, contributions and suggestions are welcome! Pick a issue marked as ready by the waffle badge above or open a new issue and start working on a PR. Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion to the [Lift's mailing list](http://groups.google.com/group/liftweb/) 
+## Contributions
 
-> As FoBo is using this [Git branching model](http://nvie.com/posts/a-successful-git-branching-model/) the **main branch** is just updated for releases so your pull requests will be against the [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
+Improvements, contributions and suggestions are welcome! Pick a issue marked as ready by the waffle badge above or open a new issue and start working 
+on a PR. Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report 
+or drop a question/suggestion to the [Lift's mailing list](http://groups.google.com/group/liftweb/) 
 
-###Updates 
-For a comprehensive list of updates see [Changelog](https://github.com/karma4u101/FoBo/blob/develop/CHANGELOG.md)
-
-###Module names 
-The following is a list of names that can be used in Lift Boot either pulled in by the FoBo meta module or as stand alone (sub) modules. 
-For more information se respective sub modules readme. 
-
-- BootstrapXYZ 
-- FontAwesomeXYZ 
-- JQueryXYZ
-- JQueryMigrateXYZ
-- PrettifyXYZ
-- PaceXYZ
-- KineticJSXYZ
-- AngularJSXYZ with components (AJSUIBootstrapXYZ, AJSUIGridXYZ, AJSNGGridXYZ, AJMaterialXYZ)
-
-Where X is major, Y minor and Z incremental version numbers as seen in the Toolkits list above (for example BootstrapXYZ will be Bootstrap230 for Twitter Bootstrap v2.3.0)
-For more information on how to set this up see below. 
-    
-Quick Start with Lift Template Applications
--------------------------------------------
-
-The only prerequisites for using this Lift module is that you have Git and Java installed and configured on the target computer but a suitable Lift template project will also come in handy.
-A Scala v2.11 Lift v2.6.x starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) is available from here [Lift v2.6 Template Applications](https://github.com/lift/lift_26_sbt/).
-
-You don't need to use it but this project's also includes a Eclipse (and a IDEA) plug-in for browsing the code, see the Scala IDE section below.   
- 
-Integration into your project 
--------------------------------
+> As FoBo is using this [Git branching model](http://nvie.com/posts/a-successful-git-branching-model/) the **main branch** is just updated for releases 
+> so your pull requests will be against the [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
+     
+## Integration into your project 
 
 ### Dependency settings (General)
+
+This section describes the general naming pattern for using any of FoBo's modules.
 
 **SBT:** Add this to your project build.sbt files libraryDependencies section 
 ```scala
@@ -83,7 +70,7 @@ version number and x2.y2.[z2] is the module's major x2, minor y2 and
 eventual incremental numbers z2 followed by a eventual SNAPSHOT 
 release candidate (rcX) or milestone (mX) version part.
 
-### Dependency settings (FoBo)
+### Dependency settings (FoBo's FoBo module)
 
 To get access to **all** FoBo's toolkit, resource and api modules you can use FoBo's FoBo 
 module as shown bellow. This is the simplest and probably most common way to use FoBo.
@@ -92,39 +79,40 @@ Setup example:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo_2.6 % "1.6"
+"net.liftmodules" %% "fobo_3.0 % "1.6"
 ```      
 **Maven:**      
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo_2.6_2.11.6</artifactId>
+  <artifactId>fobo_3.0_2.11.6</artifactId>
   <version>1.6</version>
 </dependency>
 ```
-The example shows how to include the FoBo/FoBo module built for lift 2.6.x. 
+The example shows how to include the FoBo/FoBo module built for lift 3.0.x. 
 If you are using maven observe that the artifact id also needs the Scala version.
 	
 ### Dependency setting (Toolkit / API / Resource)
 
-To get access to exactly the FoBo's toolkit, resource and/or api module(s) you expect
-to use in your project you can use something like the following 
+To get access to exactly the FoBo toolkit, resource and/or api module(s) you expect
+to use in your project you can use something like the following. 
+For more information see respective Toolkit, API or Resource modules readme.  
 
-Setup example:
+Setup example using the FoBo/Lift Bootstrap3 API module:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-twbs-bootstrap3-api_2.6 % "1.6"
+"net.liftmodules" %% "fobo-twbs-bootstrap3-api_3.0 % "1.6"
 ```      
 **Maven:**
 ```xml      
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-twbs-bootstrap3-api_2.6_2.11.6</artifactId>
+  <artifactId>fobo-twbs-bootstrap3-api_3.0_2.11.6</artifactId>
   <version>1.6</version>
 </dependency>
 ```
-The example shows how to include the FoBo Bootstrap3 API module built for lift 2.6.x. 
+The example shows how to include the FoBo Bootstrap3 API module built for lift 3.0.x. 
 If you are using maven observe that the artifact id also needs the Scala version. 
 	
 ### Lift FoBo boot hooks 
@@ -173,7 +161,7 @@ FoBoXY2.API.Init=FoBoXY2.API.[APIObjectXYZ]
 ```   
 ### Lift FoBo Template hooks
 
-Put something like the following in your Lift templat(s) head section (see below for available names)	
+Put something like the following in your Lift template(s) head section (see below for available names)	
 
 ```html 	
 <link rel="stylesheet" type='text/css' href='/classpath/fobo/[css file name]'>
@@ -187,8 +175,8 @@ Put something like the following in your Lift templat(s) head section (see below
 <script type="text/javascript" src="/classpath/fobo/[a third script file name]"></script>
   :
 ``` 
-For more information see readme in respective sub module.
-You can now also use use FoBo's resource injection snippet to inject all your fobo css and js resources 
+For more information see readme in respective toolkit module.
+You can now also use use FoBo's resource injection snippet to inject all your FoBo css and js resources 
 ```html
 <link data-lift="FoBo.Resources.injectCSS?resources=file name,another file name,a third file name,..."></link>	
 <link rel="stylesheet" type='text/css' href='[path/to/you/app/specific/css/file/in/the/webapp/dir]'>
@@ -196,14 +184,58 @@ You can now also use use FoBo's resource injection snippet to inject all your fo
 ``` 
 For more information see [FoBo API: Resources](http://www.media4u101.se/fobo-lift-template-demo/foboapi/index.html#net.liftmodules.FoBo.snippet.FoBo.Resources)
 
+## Module names 
+The following is a list of names that can be used in Lift Boot either pulled in by the FoBo meta module or as stand alone (sub) modules. 
+For more information se respective sub modules readme. 
 
-Available CSS and JavaScript files 
-----------------------------------
+- BootstrapXYZ 
+- FontAwesomeXYZ 
+- JQueryXYZ
+- JQueryMigrateXYZ
+- PrettifyXYZ
+- PaceXYZ
+- KineticJSXYZ
+- AngularJSXYZ with components (AJSUIBootstrapXYZ, AJSUIGridXYZ, AJSNGGridXYZ, AJMaterialXYZ)
 
-See the "Lift FoBo Template hooks" section in readme file for respective FoBo module listed above.
+Where X is major, Y minor and Z incremental version numbers as seen in the Toolkits list above (for example BootstrapXYZ will be Bootstrap230 for 
+Twitter Bootstrap v2.3.0) For more information on how to set this up see below. 
 
-Scala IDE for Eclipse
----------------------
+## FoBo Modules -- Toolkit:s and available versions
+
+FoBo artifacts is available for: Lift 2.4, 2.5, 2.6.x and 3.0.x
+
+- [FoBo](https://github.com/karma4u101/FoBo/tree/master/FoBo) This module conatins all the bellow listed submodules. 
+
+FoBo is built up of several sub module that appart from beeing used in the FoBo / FoBo module also is available for use separately 
+ 
+The FoBo / FoBo module includes the following sub-modules and supports the following toolkit versions
+
+-   [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) [v1.0.6, v1.2.11, v1.3.15, v1.4.1, v1.4.8, v1.5.3] (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) )] - [Angular](http://angularjs.org/)
+-   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) [v3.0.0, v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6] - [Bootstrap 3.x](http://getbootstrap.com/)
+-   [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.3.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+-   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0, v3.2.1, v4.0.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] - [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
+-   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2, v1.9.1, v1.10.2, v1.11.0, v1.11.1, v1.11.3, v2.1.1, v2.1.4] - [JQuery](http://jquery.com/)
+-   FoBo-JQuery also includes JQuery Migrate [v1.2.1] - [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)
+-   [FoBo-Google-Code-Prettify](https://github.com/karma4u101/FoBo/tree/master/Google-Code-Prettify) [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
+-   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) [v0.4.15, v1.0.2] - [Pace](http://github.hubspot.com/pace/docs/welcome/) 
+-   [FoBo-Kinetic](https://github.com/karma4u101/FoBo/tree/master/Kinetic) [v5.1.0] - [Kinetic](http://kineticjs.com/) 
+
+**Note:** Some of the listed toolkit versions may have been deprecated (and possible removed after having been deprecated in 2 releases).
+
+## Available CSS and JavaScript files 
+
+See the "Lift FoBo Template hooks" section in readme file for respective FoBo toolkit module listed above.
+
+## Quick Start with Lift Template Applications
+
+The only prerequisites for using this Lift module is that you have Git and Java installed and configured on the target computer but a suitable Lift 
+template project will also come in handy. A Scala v2.11 Lift v2.6.x starter template with FoBo setup using Bootstrap v3.x and FoBo's 
+BootstrapMegaMetaProtoUser (for mapper ProtoUser views) is available from here [Lift v2.6 Template Applications](https://github.com/lift/lift_26_sbt/).
+
+You don't need to use it but this project's also includes a Eclipse (and a IDEA) plug-in for browsing the code, see the Scala IDE section below.   
+
+## Scala IDE for Eclipse
+
 Sbteclipse provides SBT command to create Eclipse project files
 
 1) Usage
@@ -220,31 +252,12 @@ Sbteclipse provides SBT command to create Eclipse project files
 
 Note: The compile step prior to the eclipse command in (1) is needed for eclipse to recognize the generated BuildInfo.scala file that is part of FoBo's build system.
 
+## Updates 
+For a comprehensive list of updates see [Changelog](https://github.com/karma4u101/FoBo/blob/develop/CHANGELOG.md)
 
-Sub-Modules -- Toolkit:s and available versions
------------------------------------------------
-
-FoBo is built up of several sub module that also is available for use separately 
- 
-FoBo artifacts is available for: Lift 2.4, 2.5, 2.6 and 3.0-SNAPSHOT
-
-The FoBo meta module includes the following sub-modules and supports the following toolkit versions
-
--   [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) [v1.0.6, v1.2.11, v1.3.15, v1.4.1, v1.4.8, v1.5.3 (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) )] - [Angular](http://angularjs.org/)
--   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) [v3.0.0, v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6] - [Bootstrap 3.x](http://getbootstrap.com/)
--   [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.3.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
--   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0, v3.2.1, v4.0.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] - [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
--   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2, v1.9.1, v1.10.2, v1.11.0, v1.11.1, v1.11.3, v2.1.1, v2.1.4] - [JQuery](http://jquery.com/)
--   FoBo-JQuery also includes JQuery Migrate [v1.2.1] - [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)
--   [FoBo-Google-Code-Prettify](https://github.com/karma4u101/FoBo/tree/master/Google-Code-Prettify) [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
--   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) [v0.4.15, v1.0.2] - [Pace](http://github.hubspot.com/pace/docs/welcome/) 
--   [FoBo-Kinetic](https://github.com/karma4u101/FoBo/tree/master/Kinetic) [v5.1.0] - [Kinetic](http://kineticjs.com/) 
-
-**Note:** Some of the listed toolkit versions may have been deprecated (and possible removed after having been deprecated in 2 releases).
-
-###Old submodules
-Modules available as maven artifacts but that have been split out of the FoBo meta module. 
-The modules can still be used as stand alone modules. 
+## Old submodules
+Modules available as maven artifacts but that have been split out of the FoBo / FoBo module. 
+The modules can still be used as stand alone modules (Lift version < 3.0). 
 -   Sonatype [FoBo-JQuery-Mobile](https://oss.sonatype.org/#nexus-search;quick~fobo-jquery-mobile) [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
     Usage FoBoJQM.InitParam.ToolKit=FoBoJQM.JQueryMobile110
 -   Sonatype [FoBo-DataTables](https://oss.sonatype.org/#nexus-search;quick~fobo-datatables) [v1.9.0] - [DataTables.net](http://datatables.net/)
@@ -257,13 +270,9 @@ The modules can still be used as stand alone modules.
 For feature listings on all releases see 
 - [Changelog](https://github.com/karma4u101/FoBo/blob/develop/CHANGELOG.md)
 
-Authors
--------
+## Authors
 This FoBo Lift module were written by [Peter Petersson](http://www.media4u101.se). The Lift Module conventions were 
 developed by the [Lift community](http://groups.google.com/group/liftweb/).
-
-After many years of Java EE development I started look at Scala/Lift in May 2011. If you find some none "best practice" stuff in there 
-and if you find something you think could be done in a more Scala/Lift fashion please let me know. Improvements, contributions and suggestions are welcome!
 
 
 
