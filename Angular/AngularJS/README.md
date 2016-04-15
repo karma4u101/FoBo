@@ -70,13 +70,13 @@ FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS153i18n    //access to angular i18n file
 FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap0100  //Angular UI Bootstrap
 FoBo.ToolKit.Init=FoBo.ToolKit.AJSMaterial107      //Angular Material
 FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIGrid307        //Angular UI-Grid
-FoBo.ToolKit.Init=FoBo.ToolKit.AJSNGGrid207        //Angular NG-Grid
+//FoBo.ToolKit.Init=FoBo.ToolKit.AJSNGGrid207        //Angular NG-Grid
 ```
 ### Lift FoBo boot hooks (when used as stand alone module)
 ```scala
-import net.liftmodules.FoBoAJS 
+import net.liftmodules.{FoBoAJS => FoBo} 
   :
-FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS106      //The core files 
+FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS153      //The core files 
   :
 ```
 ### Lift FoBo Template hooks
@@ -92,9 +92,9 @@ do not have to worry about it.
 <script type="text/javascript" src="/classpath/fobo/ui-bootstrap-tpls.js"></script>
 <!-- ui-bootstrap barbones -->
 <script type="text/javascript" src="/classpath/fobo/ui-bootstrap.js"></script>
-<!-- angular ng-grid -->
-<script type="text/javascript" src="/classpath/fobo/ng-grid.js"></script>
-<link rel="stylesheet" type='text/css' href='/classpath/fobo/ng-grid.css'>
+<!-- angular ui-grid -->
+<script type="text/javascript" src="/classpath/fobo/ui-grid.js"></script>
+<link rel="stylesheet" type='text/css' href='/classpath/fobo/ui-grid.css'>
 ```
 
 For more information on how to use AngularJS see the [FoBo Demo](http://www.media4u101.se/fobo-lift-template-demo/) and [FoBo](https://github.com/karma4u101/FoBo/blob/master/README.md).  
