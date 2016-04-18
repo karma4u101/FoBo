@@ -20,6 +20,7 @@ import net.liftmodules.FoBo.lib.BuildInfo //generated code
  * {{{ <span>vX.Y.Z</span> }}}  
  * For more examples see the individual transform functions.
  */
+
 object Info extends StatefulSnippet with Loggable {
   
   

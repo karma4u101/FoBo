@@ -1,7 +1,7 @@
 # FoBo AngularJS Resource Module
 
-This resource module provides AngularJS resource components to the FoBo AngularJS Toolkit module, but can also be used as-is 
-(see below for setup information).
+This resource module provides AngularJS resource components to the FoBo AngularJS Toolkit module, 
+but can also be used as-is, see below for setup information.
 
 ### Lift FoBo boot hooks (when used in the FoBo module)
 

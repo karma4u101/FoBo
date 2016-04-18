@@ -27,7 +27,7 @@ package object FoBoPa {
   
   object ToolKit extends ToolKit {
     var Init: ToolKit = null 
-
+ 
    /**
      * Enable usage of FoBo's Pace API and resources version 1&#8228;0&#8228;2 in your bootstrap liftweb Boot.
      * @version 1.0.2
@@ -42,7 +42,6 @@ package object FoBoPa {
      */    
      case object Pace102 extends ToolKit {
        FoBoPaRes.Resource.Pace102
-       //FoBoPaAPI.API.Pace0
      }
     
    /**
@@ -59,7 +58,6 @@ package object FoBoPa {
      */    
      case object Pace0415 extends ToolKit {
        FoBoPaRes.Resource.Pace0415
-       //FoBoPaAPI.API.Pace0
      }    
   }
 
@@ -157,7 +155,6 @@ package object FoBoPa {
   @deprecated("Use FoBoPa.ToolKit.Init=FoBoPa.ToolKit.Pace0415","1.6.0")
   case object Pace0415 extends PaToolkit {
     ToolKit.Pace0415
-    //API.Pace0415
   }
 
   /**

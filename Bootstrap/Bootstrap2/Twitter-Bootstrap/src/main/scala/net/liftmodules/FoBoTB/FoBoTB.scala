@@ -6,11 +6,12 @@ import http._
 import common._
 
 /**
- * ==FoBo Toolkit sub-module==
- * This package object provides Bootstrap 2 integration into your Lift/FoBo application.
+ * ==FoBo Twitter Bootstrap Toolkit Module==
+ * 
+ * This FoBo toolkit module provides Twitter Bootstrap v2.x API and Resource components to the 
+ * FoBo / FoBo Module, but can also be used as-is, see below for setup information.
  *
- * If you are using this module via the FoBo/FoBo artifact module
- * see [[net.liftmodules.FoBo]] for initiation information.
+ * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.FoBo]] for setup information.
  * 
  * @example To initiate this module for usage in your Lift project set something like the following in 
  * your projects Lift bootstrap.liftweb.Boot boot method. 

@@ -21,9 +21,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
 
 **Latest Snapshot Release:**
-- **2016-03-30** -- 1.6-SNAPSHOT release for Lift v3.0 and v2.6.2
-- **2016-03-25** -- 1.6-SNAPSHOT release for Lift v3.0 and v2.6.2
-See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
+- Snapshots is released regularly see [Sonatype quick search](https://oss.sonatype.org/#nexus-search;quick~fobo)
 
 FoBo v1.6
 ---------

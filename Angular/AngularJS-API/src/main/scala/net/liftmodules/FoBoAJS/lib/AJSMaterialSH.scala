@@ -4,6 +4,7 @@ import net.liftweb.util._
 
 /**
  * ==Angular Material Design Script Helper==
+ * 
  * Angular Material Design script helper is a helper class that implements some commonly 
  * used material design component script functions.
  * 
