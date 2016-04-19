@@ -19,21 +19,67 @@ import common._
  */
 package object FoBoGCP {
 
-  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoGCP.InitParam","1.6.0")
-  def init() {
+  override def toString() = {
+    FoBoGCP.ToolKit.toString()+" "+FoBoGCP.Resource.toString()+" "+FoBoGCP.API.toString()
   }
-
-  //@deprecated("","1.6.0")
-  abstract sealed trait FoBoToolkit
+  
+  /**
+   * Initiate FoBo's Google Code Prettify ToolKit(s) in you bootstrap liftweb Boot.
+   * Using the ToolKit initiation you will bring in both the 
+   * toolkit's resources and FoBo/Lift API associated 
+   * with the toolkit.  
+   * 
+   *  '''Example:'''
+   * {{{
+   *   import net.liftmodules.{FoBoGCP => FoBo}
+   *    :
+   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Companion Object]
+   * }}}
+   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
+   */  
   abstract sealed trait ToolKit
+  
+  /**
+   * Initiate FoBo's Google Code Prettify Resource(s) in you bootstrap liftweb Boot.
+   * 
+   *  '''Example:'''
+   * {{{
+   *   import net.liftmodules.{FoBoGCP => FoBo}
+   *    :
+   *   FoBo.Resource.Init=FoBo.Resource.[Resource Companion Object]
+   * }}}
+   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
+   */   
   abstract sealed trait Resource
+  
+  /**
+   * Initiate FoBo's Google Code Prettify API in you bootstrap liftweb Boot.
+   * 
+   *  '''Example:'''
+   * {{{
+   *   import net.liftmodules.{FoBoGCP => FoBo}
+   *    :
+   *   FoBo.API.Init=FoBo.API.[API Companion Object]
+   * }}}
+   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
+   */   
   abstract sealed trait API
   
   
   /*=== ToolKit ============================================*/
   
   object ToolKit extends ToolKit {
-    var Init: ToolKit = null 
+    
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[ToolKit]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:ToolKit):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }
+    override def toString() = "FoBoGCP.ToolKit = "+store.toString()
     
    /**
      * Enable usage of FoBo's Google Code Prettify API and resources version Jun2011 in your bootstrap liftweb Boot.
@@ -57,7 +103,17 @@ package object FoBoGCP {
   /*=== Resource ============================================*/
   
   object Resource extends Resource {
-    var Init: Resource = null
+   
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[Resource]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:Resource):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }  
+    override def toString() = "FoBoGCP.Resource = "+store.toString()
     
    /**
      * Enable usage of FoBo's Google Code Prettify resources version Jun2011 in your bootstrap liftweb Boot.
@@ -79,7 +135,18 @@ package object FoBoGCP {
   /*=== API ============================================*/
   
   object API extends API {
-    var Init: API = null
+    
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[API]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:API):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }      
+    override def toString() = "FoBoGCP.API = "+store.toString()
+    
     /**
      * Enable usage of FoBo's Google Code Prettify API version 1&#8228;X&#8228;X in your bootstrap liftweb Boot.
      * @version 1.X.X
@@ -101,6 +168,13 @@ package object FoBoGCP {
   }
   
   /*=== InitParam (deprecated) ============================================*/
+
+  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoGCP.InitParam","1.6.0")
+  def init() {
+  }
+
+  //@deprecated("","1.6.0")
+  abstract sealed trait FoBoToolkit  
   
   /**
    *

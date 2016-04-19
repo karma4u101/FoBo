@@ -15,21 +15,67 @@ import common._
  */
 package object FoBoFA {
 
-  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoFA.InitParam","1.6.0")
-  def init() {
+  override def toString() = {
+    FoBoFA.ToolKit.toString()+" "+FoBoFA.Resource.toString()+" "+FoBoFA.API.toString()
   }
-
-  //@deprecated("","1.6.0")
-  abstract sealed trait FAToolkit
+  
+  /**
+   * Initiate FoBo's Font Awesome ToolKit(s) in you bootstrap liftweb Boot.
+   * Using the ToolKit initiation you will bring in both the 
+   * toolkit's resources and FoBo/Lift API associated 
+   * with the toolkit.  
+   * 
+   *  '''Example:'''
+   * {{{
+   *   import net.liftmodules.{FoBoFA => FoBo}
+   *    :
+   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Companion Object]
+   * }}}
+   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
+   */  
   abstract sealed trait ToolKit
+  
+  /**
+   * Initiate FoBo's Font Awesome Resource(s) in you bootstrap liftweb Boot.
+   * 
+   *  '''Example:'''
+   * {{{
+   *   import net.liftmodules.{FoBoFA => FoBo}
+   *    :
+   *   FoBo.Resource.Init=FoBo.Resource.[Resource Companion Object]
+   * }}}
+   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
+   */   
   abstract sealed trait Resource
+  
+  /**
+   * Initiate FoBo's Font Awesome API in you bootstrap liftweb Boot.
+   * 
+   *  '''Example:'''
+   * {{{
+   *   import net.liftmodules.{FoBoFA => FoBo}
+   *    :
+   *   FoBo.API.Init=FoBo.API.[API Companion Object]
+   * }}}
+   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
+   */   
   abstract sealed trait API
   
   
   /*=== ToolKit ============================================*/
   
   object ToolKit extends ToolKit {
-    var Init: ToolKit = null 
+    
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[ToolKit]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:ToolKit):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }  
+    override def toString() = "FoBoFA.ToolKit = "+store.toString()
     
    /**
      * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;5&#8228;0 in your bootstrap liftweb Boot.
@@ -123,8 +169,17 @@ package object FoBoFA {
   /*=== Resource ============================================*/
   
   object Resource extends Resource {
-    var Init: Resource = null
     
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[Resource]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:Resource):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }     
+    override def toString() = "FoBoFA.Resource = "+store.toString()
     /**
      * Enable usage of FoBo's FontAwesome resources version 4&#8228;5&#8228;0 in your bootstrap liftweb Boot.
      * @version 4.5.0
@@ -210,7 +265,17 @@ package object FoBoFA {
   /*=== API ============================================*/
   
   object API extends API {
-    var Init: API = null
+    
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[API]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:API):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }     
+    override def toString() = "FoBoFA.API = "+store.toString()
     
     /**
      * Enable usage of FoBo's FontAwesome API version 4&#8228;X&#8228;X in your bootstrap liftweb Boot.
@@ -233,6 +298,13 @@ package object FoBoFA {
   }
   
   /*=== InitParam (deprecated) ============================================*/
+  
+  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoFA.InitParam","1.6.0")
+  def init() {
+  }
+
+  //@deprecated("","1.6.0")
+  abstract sealed trait FAToolkit
   
   /**
    *

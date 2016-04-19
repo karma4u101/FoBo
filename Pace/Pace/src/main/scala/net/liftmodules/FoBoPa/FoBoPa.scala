@@ -19,6 +19,10 @@ import common._
  */
 package object FoBoPa {
   
+  override def toString() = {
+    FoBoPa.ToolKit.toString()+" "+FoBoPa.Resource.toString()+" "+FoBoPa.API.toString()
+  }   
+  
   abstract sealed trait ToolKit
   abstract sealed trait Resource
   abstract sealed trait API
@@ -26,8 +30,18 @@ package object FoBoPa {
   /*=== ToolKit ============================================*/
   
   object ToolKit extends ToolKit {
-    var Init: ToolKit = null 
- 
+   
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[ToolKit]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:ToolKit):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }   
+    override def toString() = "FoBoPa.ToolKit = "+store.toString()
+    
    /**
      * Enable usage of FoBo's Pace API and resources version 1&#8228;0&#8228;2 in your bootstrap liftweb Boot.
      * @version 1.0.2
@@ -64,7 +78,17 @@ package object FoBoPa {
   /*=== Resource ============================================*/
   
   object Resource extends Resource {
-    var Init: Resource = null
+    
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[Resource]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:Resource):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }      
+    override def toString() = "FoBoPa.Resource = "+store.toString()
     
     /**
      * Enable usage of FoBo's Pace resources version 1&#8228;0&#8228;2 in your bootstrap liftweb Boot.
@@ -102,7 +126,17 @@ package object FoBoPa {
   /*=== API ============================================*/
   
   object API extends API {
-    var Init: API = null
+   
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[API]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:API):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }  
+    override def toString() = "FoBoPa.API = "+store.toString()
     
     /**
      * Enable usage of FoBo's Pace API version 0&#8228;X&#8228;X in your bootstrap liftweb Boot.

@@ -19,11 +19,23 @@ import common._
  */
 package object FoBoTBRes {
 
+  override def toString() = FoBoTBRes.Resource.toString()
+  
   abstract sealed trait Resource
 
   object Resource extends Resource {
-    var Init: Resource = null
-
+    
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[Resource]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:Resource):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }
+    override def toString() = "FoBoTBRes.Resource = "+store.toString()
+    
     /**
      * Enable usage of FoBo's Bootstrap version 2&#8228;3&#8228;2 resources files in your bootstrap liftweb Boot.
      * @version 2.3.2

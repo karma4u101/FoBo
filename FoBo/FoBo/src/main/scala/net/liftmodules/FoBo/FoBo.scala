@@ -15,7 +15,8 @@ import common._
  *===What FoBo will do for you===
  *
  * The FoBo/FoBo module gives you quick and easy integration of some of the industry leading web-centric open source 
- * front-end toolkits. All FoBo toolkit modules are built up of a resource module and possibly a FoBo/Lift API module.
+ * front-end toolkits. FoBo is highly modular, all FoBo toolkit modules are built up of a resource module and possibly 
+ * a FoBo/Lift API module.
  * You can depend on the FoBo/FoBo module to get access to all FoBo's toolkit/resource/api modules or you can pick the
  * module(s) you need, for example, just the bootstrap API module where you provide your own resources or you may chose 
  * any combination of modules.  
@@ -30,8 +31,8 @@ import common._
  *  - Most of the FoBo toolkit modules provides a API sub-module with Snippet helpers and lib classes that will 
  *    ease you from writing some commonly used toolkit component integration scripts making it a simple snippet invocation.  
  *  - Great responsive scalability with responsive toolkits.   
- *  - FoBo strives to be modular. FoBo is built up by independent toolkit/resource/api sub-modules (artefacts) that can be 
- *    used independent of the FoBo/FoBo assembly module.  
+ *  - FoBo strives to be highly modular. FoBo is built up by independent toolkit/resource/api module artifacts that 
+ *    can be used independent of the FoBo/FoBo assembly module.  
  *   
  *
  * ===FoBo supported toolkits/resources=== 
@@ -45,6 +46,7 @@ import common._
  *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] [[net.liftmodules.FoBoFA]]
  *  - Kinetic JS [v5.1.0] [[net.liftmodules.FoBoKi]]
  *  - Google Code Prettify [vJun2011] [[net.liftmodules.FoBoGCP]]
+ *  - Pace [v0.4.15, v1.0.2] [[net.liftmodules.FoBoPa]]
  *  - Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15, v1.4.1, v1.4.8, v1.5.3] (angular core modules) [[net.liftmodules.FoBoAJS]]
  *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component) [[net.liftmodules.FoBoAJS]]
  *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component) [[net.liftmodules.FoBoAJS]]
@@ -85,6 +87,9 @@ import common._
  */
 package object FoBo {
     
+  override def toString() = {
+    FoBo.ToolKit.toString()+" "+FoBo.Resource.toString()+" "+FoBo.API.toString()
+  }
   /**
    * Initiate FoBo's ToolKit(s) in you bootstrap liftweb Boot.
    * Using the ToolKit initiation you will bring in both the 
@@ -103,7 +108,7 @@ package object FoBo {
   
   /**
    * Initiate the toolkit's associated resources in you bootstrap liftweb Boot.
-   * You can use this if you only want to initiate the FoBo provided toolkit 
+   * You should use this if you only want to initiate the FoBo provided toolkit 
    * resources but not the FoBo API associated with the toolkit.
    * 
    *  '''Example:'''
@@ -118,7 +123,7 @@ package object FoBo {
   
   /**
    * Initiate a toolkit's associated FoBo API in you bootstrap liftweb Boot.
-   * You can use this if you want to use FoBo's API for the toolkit but
+   * You should use this if you want to use FoBo's API for the toolkit but
    * want to provide the toolkit resources yourself. 
    *  
    *  '''Example:'''
@@ -134,7 +139,16 @@ package object FoBo {
   /*=== ToolKit ============================================*/
   
   object ToolKit extends ToolKit {
-    var Init: ToolKit = null 
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[ToolKit]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:ToolKit):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }   
+    override def toString() = "FoBo.ToolKit = "+store.toString()
     
     /*===Angular ToolKit===============================================================*/
     
@@ -845,8 +859,17 @@ package object FoBo {
   /*=== Resource ============================================*/
   
   object Resource extends Resource {
-    var Init: Resource = null
-    
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[Resource]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:Resource):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }   
+    override def toString() = "FoBo.Resource = "+store.toString()
+       
     /*===Angular Resource===============================================================*/
     
     /**
@@ -1550,8 +1573,17 @@ package object FoBo {
   /*=== API ============================================*/
   
   object API extends API {
-    var Init: API = null
-    
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[API]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:API):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    } 
+    override def toString() = "FoBo.API = "+store.toString()
+        
     /*===Angular API===============================================================*/
     /**
      * Enable usage of FoBo's AngularJS API 1&#8228;x&#8228;x in your bootstrap liftweb Boot.

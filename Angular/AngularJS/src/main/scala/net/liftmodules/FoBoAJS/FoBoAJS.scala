@@ -14,6 +14,9 @@ import common._
  */
 package object FoBoAJS {
   
+  override def toString() = {
+    FoBoAJS.ToolKit.toString()+" "+FoBoAJS.Resource.toString()+" "+FoBoAJS.API.toString()
+  }  
   /**
    * Initiate FoBo's Angular ToolKit(s) in you bootstrap liftweb Boot.
    * Using the ToolKit initiation you will bring in both the 
@@ -56,9 +59,17 @@ package object FoBoAJS {
   
   /*=== ToolKit ============================================*/
   object ToolKit extends ToolKit {
-    var Init: ToolKit = null 
-   
-    
+ 
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[ToolKit]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:ToolKit):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }    
+    override def toString() = "FoBoAJS.ToolKit = "+store.toString()
     /**
      * Enable usage of FoBo's AngularJS API and resources version 1&#8228;5&#8228;3 in your bootstrap liftweb Boot.
      * @version 1.5.3
@@ -388,9 +399,17 @@ package object FoBoAJS {
   
   /*=== Resource ============================================*/
   object Resource extends Resource {
-    var Init: Resource = null
-
     
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[Resource]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:Resource):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }  
+    override def toString() = "FoBoAJS.Resource = "+store.toString()
     /**
      * Enable usage of FoBo's AngularJS version 1&#8228;5&#8228;3 resources files in your bootstrap liftweb Boot.
      * @version 1.5.3
@@ -706,8 +725,17 @@ package object FoBoAJS {
   /*=== API ============================================*/
   
   object API extends API {
-    var Init: API = null
     
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[API]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:API):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }      
+    override def toString() = "FoBoAJS.API = "+store.toString()
     /**
      * Enable usage of FoBo's AngularJS API 1&#8228;x&#8228;x in your bootstrap liftweb Boot.
      * @version 1.x.x

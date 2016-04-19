@@ -27,6 +27,9 @@ import common._
  */
 package object FoBoBs {
 
+  override def toString() = {
+    FoBoBs.ToolKit.toString()+" "+FoBoBs.Resource.toString()+" "+FoBoBs.API.toString()
+  }
   
   /**
    * Initiate FoBo's Bootstrap 3 ToolKit(s) in you bootstrap liftweb Boot.
@@ -74,8 +77,18 @@ package object FoBoBs {
   /*=== ToolKit ============================================*/ 
   
  object ToolKit extends ToolKit {
-    var Init: ToolKit = null 
-  
+    
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[ToolKit]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:ToolKit):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }  
+    override def toString() = "FoBoBs.ToolKit = "+store.toString()
+    
     /**
      * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;6 resource files in your bootstrap liftweb Boot.
      * @version 3.3.6
@@ -171,8 +184,17 @@ package object FoBoBs {
   /*=== Resource ============================================*/
   
   object Resource extends Resource {
-    var Init: Resource = null  
-  
+   
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[Resource]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:Resource):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }  
+    override def toString() = "FoBoBs.Resource = "+store.toString()
     /**
      * Enable usage of Bootstrap version 3&#8228;3&#8228;6 resource files in your bootstrap liftweb Boot.
      * @version 3.3.6
@@ -263,8 +285,17 @@ package object FoBoBs {
   /*=== API ============================================*/
   
   object API extends API {
-    var Init: API = null
-  
+   
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[API]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:API):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }  
+    override def toString() = "FoBoBs.API = "+store.toString()
     /**
      * Enable usage of FoBo's Bootstrap API 3&#8228;x&#8228;x in your bootstrap liftweb Boot.
      * @version 3.x.x

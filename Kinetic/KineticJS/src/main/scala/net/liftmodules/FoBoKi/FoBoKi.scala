@@ -19,9 +19,9 @@ import common._
  */
 package object FoBoKi {
 
-  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoKi.InitParam","1.6.0")
-  def init() {
-  }
+  override def toString() = {
+    FoBoKi.ToolKit.toString()+" "+FoBoKi.Resource.toString()+" "+FoBoKi.API.toString()
+  }   
 
   abstract sealed trait ToolKit
   abstract sealed trait Resource
@@ -30,7 +30,17 @@ package object FoBoKi {
   /*===Kinetic ToolKit===============================================================*/
   
   object ToolKit extends ToolKit {
-    var Init: ToolKit = null
+    
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[ToolKit]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:ToolKit):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }      
+    override def toString() = "FoBoKi.ToolKit = "+store.toString()
     
     /**
      * Enable usage FoBo's KineticJS API and resources version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.
@@ -54,7 +64,17 @@ package object FoBoKi {
   /*===Kinetic Resource===============================================================*/
   
   object Resource extends Resource {
-    var Init: Resource = null
+
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[Resource]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:Resource):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }   
+    override def toString() = "FoBoKi.Resource = "+store.toString() 
     
     /**
      * Enable usage FoBo's KineticJS resources version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.
@@ -78,7 +98,17 @@ package object FoBoKi {
   /*=== API ============================================*/
   
   object API extends API {
-    var Init: API = null
+  
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[API]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:API):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }    
+    override def toString() = "FoBoKi.API = "+store.toString() 
     
     /**
      * Enable usage of FoBo's KineticJs API version 5&#8228;X&#8228;X in your bootstrap liftweb Boot.
@@ -100,7 +130,11 @@ package object FoBoKi {
   }  
   
    /*=== InitParam (deprecated) ============================================*/
- 
+
+  @deprecated("Init no longer nessesary as it is now automaticaly done for respective FoBoKi.InitParam","1.6.0")
+  def init() {
+  }  
+  
   //@deprecated("","1.6.0")
   abstract sealed trait FoBoToolkit
   

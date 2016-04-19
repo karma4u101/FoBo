@@ -1,6 +1,6 @@
 package net.liftmodules
 
-import _root_.net.liftweb._
+import net.liftweb._
 import util.{ Props }
 import http._
 import common._
@@ -16,11 +16,23 @@ import common._
  */
 package object FoBoTBAPI {
 
+  override def toString() = FoBoTBAPI.API.toString()
+  
   abstract sealed trait API
 
   object API extends API {
-    var Init: API = null
-
+    
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[API]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:API):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }
+    override def toString() = "FoBoTBAPI.API = "+store.toString()
+    
     /**
      * Enable usage of FoBo's Angular API for Bootstrap version 2&#8228;X&#8228;X in your bootstrap liftweb Boot.
      * @version 2.X.X

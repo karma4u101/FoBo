@@ -18,11 +18,23 @@ import common._
  * For more information on how to set up and use the FoBo modules see the FoBo readme.
  */
 package object FoBoFARes {
+  
+  override def toString() = FoBoFARes.Resource.toString()
 
   abstract sealed trait Resource
 
   object Resource extends Resource {
-    var Init: Resource = null 
+    
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[Resource]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:Resource):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }   
+    override def toString() = "FoBoFARes.Resource = "+store.toString()
     
     /**
      * Enable usage of FoBo's FontAwesome resources version 4&#8228;5&#8228;0 in your bootstrap liftweb Boot.

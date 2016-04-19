@@ -19,10 +19,23 @@ import common._
  */
 package object FoBoPaAPI {
   
+  override def toString() = FoBoPaAPI.API.toString()
+  
   abstract sealed trait API
   
   object API extends API {
-    var Init: API = null
+    
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[API]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:API):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    }   
+    override def toString() = "FoBoPaAPI.API = "+store.toString()
+    
     /**
      * Enable usage of FoBo's Pace API version 0&#8228;X&#8228;X in your bootstrap liftweb Boot.
      * @version 0.X.X
@@ -35,14 +48,11 @@ package object FoBoPaAPI {
      *   FoBo.API.Init=FoBo.API.Pace0
      * }}}
      */    
-     case object Pace0 extends API {
-       FoBoAPI.init
-     }         
+    case object Pace0 extends API {
+      FoBoAPI.init
+    }         
   }
 
-  /**
-   * Object for initiating FoBo API packages. 
-   */
   private object FoBoAPI {
     lazy val init: Unit = {
       LiftRules.addToPackages("net.liftmodules.FoBoPa")      

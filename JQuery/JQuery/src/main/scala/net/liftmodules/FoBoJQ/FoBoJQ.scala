@@ -15,6 +15,9 @@ import common._
  */
 package object FoBoJQ {
 
+  override def toString() = {
+    FoBoJQ.ToolKit.toString()+" "+FoBoJQ.Resource.toString()+" "+FoBoJQ.API.toString()
+  }  
 
   abstract sealed trait ToolKit
   abstract sealed trait Resource
@@ -23,7 +26,17 @@ package object FoBoJQ {
  /*=== ToolKit ============================================*/
   
   object ToolKit extends ToolKit {
-    var Init: ToolKit = null 
+    
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[ToolKit]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:ToolKit):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    } 
+    override def toString() = "FoBoJQ.ToolKit = "+store.toString()
     
    /**
      * Enable usage of FoBo's JQuery-Migrate API and resources version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
@@ -168,8 +181,18 @@ package object FoBoJQ {
   /*=== Resource ============================================*/
   
   object Resource extends Resource {
-    var Init: Resource = null
-
+    
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[Resource]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:Resource):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    } 
+    override def toString() = "FoBoJQ.Resource = "+store.toString()
+    
    /**
      * Enable usage of FoBo's JQuery-Migrate resources version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
      * @version 1.2.1
@@ -305,7 +328,17 @@ package object FoBoJQ {
   /*=== API ============================================*/
   
   object API extends API {
-    var Init: API = null
+    
+    //we don't actually need to store the objects (for now) so lets just save 
+    //the object name, we can easily change this if we need to
+    private type Store = List[String] //List[API]
+    private var store:Store = List()
+    def Init:Store = store
+    def Init_=(t:API):Store = {
+      store = if (store contains t.toString) store else t.toString :: store
+      store
+    } 
+    override def toString() = "FoBoJQ.API = "+store.toString()
     
     /**
      * Enable usage of FoBo's JQuery API version 1&#8228;X&#8228;X in your bootstrap liftweb Boot.
