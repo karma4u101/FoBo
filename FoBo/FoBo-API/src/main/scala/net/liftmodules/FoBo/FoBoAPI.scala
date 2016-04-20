@@ -6,11 +6,12 @@ import http._
 import common._
 
 /**
-* ==FoBo API sub-module==
+* ==FoBo / FoBo API Module==
 *
-* This module provides initiation of API functions for the FoBo module.
-*
-* For more information on how to set up and use the FoBo modules see the FoBo readme.
+ * This FoBo / FoBo API module provides FoBo/Lift API components for the FoBo Module, 
+ * but can also be used as-is.
+ *
+ * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information.
 */
 package object FoBoAPI { 
   

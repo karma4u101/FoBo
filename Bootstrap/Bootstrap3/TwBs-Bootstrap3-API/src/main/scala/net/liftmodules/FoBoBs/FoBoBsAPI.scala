@@ -6,16 +6,13 @@ import http._
 import common._
 
 /**
- * ==FoBo API sub-module==
- * This package object provides module initiation in FoBo's most fine grain level.
+ * ==FoBo Bootstrap 3 API Module==
+ * 
+ * This FoBo API module provides FoBo/Lift API components for the Bootstrap v3.x Toolkit Module, 
+ * but can also be used as-is, see below for setup information.
  *
- * This is useful if you want to depend on a small subset of FoBo's functionality
- * by only pulling in some specific FoBo artifact(s) that provides toolkit resources
- * or FoBo API functions.
- *
- * This module provides initiation of API functions for the Bootstrap3 module.
- *
- * For more information on how to set up and use the FoBo modules see the FoBo readme.
+ * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.FoBo]] for setup information.
+ * 
  */
 package object FoBoBsAPI {
 

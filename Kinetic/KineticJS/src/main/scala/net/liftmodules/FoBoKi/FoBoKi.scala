@@ -6,16 +6,13 @@ import http._
 import common._
 
 /**
- * ==FoBo Toolkit sub-module== 
- * This package object provides KineticJs integration into your Lift/FoBo application.
+ * ==FoBo KineticJs Toolkit Module==
  * 
- * This package object is only of interest to you if you are using this module 
- * as a stand alone artifact dependency in your project (without the FoBo meta artifact).
- * This package object provides information on how to initiate and use it 
- * in your project. 
- * 
- * If you are using this module via the FoBo meta artifact 
- * see [[net.liftmodules.FoBo]] for usage information. 
+ * This FoBo toolkit module provides KineticJs API and Resource components to the 
+ * FoBo / FoBo Module, but can also be used as-is, see below for setup information.
+ *
+ * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.FoBo]] for setup information.
+ *
  */
 package object FoBoKi {
 

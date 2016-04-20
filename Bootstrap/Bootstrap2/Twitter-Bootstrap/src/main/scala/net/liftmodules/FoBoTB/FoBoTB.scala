@@ -40,9 +40,9 @@ package object FoBoTB {
    * {{{
    *   import net.liftmodules.{FoBoTB => FoBo}
    *    :
-   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Companion Object]
+   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Object]
    * }}}
-   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
+   * '''Note:''' To see available objects click on the round trait icon in the header of this page.
    *  
    */
   abstract sealed trait ToolKit
@@ -54,9 +54,9 @@ package object FoBoTB {
    * {{{
    *   import net.liftmodules.{FoBoTB => FoBo}
    *    :
-   *   FoBo.Resource.Init=FoBo.Resource.[Resource Companion Object]
+   *   FoBo.Resource.Init=FoBo.Resource.[Resource Object]
    * }}}
-   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
+   * '''Note:''' To see available objects click on the round trait icon in the header of this page.
    */
   abstract sealed trait Resource
 
@@ -67,9 +67,9 @@ package object FoBoTB {
    * {{{
    *   import net.liftmodules.{FoBoTB => FoBo}
    *    :
-   *   FoBo.API.Init=FoBo.API.[API Compainion Object]
+   *   FoBo.API.Init=FoBo.API.[API Object]
    * }}}
-   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
+   * '''Note:''' To see available objects click on the round trait icon in the header of this page.
    */
   abstract sealed trait API
 
@@ -301,40 +301,12 @@ package object FoBoTB {
    *   FoBoTB.InitParam.Toolkit=FoBoTB.Bootstrap232
    * }}}
    */
+  @deprecated("Use FoBoTB.ToolKit.Init=FoBoTB.ToolKit.Bootstrap232", "1.6.0")
   case object Bootstrap232 extends FoBoToolkit {
     net.liftmodules.FoBoTBRes.Resource.Bootstrap232
     net.liftmodules.FoBoTBAPI.API.Bootstrap2
   }
 
-  private object FoBoAPI {
-    lazy val init: Unit = {
-      LiftRules.addToPackages("net.liftmodules.FoBoAJS")
-    }
-  }
-
-  /**
-   * Object holding internally used FoBo resources.
-   */
-  private object FoBoResources {
-
-    lazy val init: Unit = {
-      ResourceServer.allow {
-        case "fobo" :: tail => true
-      }
-    }
-
-    lazy val bootstrap232: Unit = {
-      ResourceServer.rewrite {
-        case "fobo" :: "bootstrap.css" :: Nil if Props.devMode            => List("fobo", "bootstrap", "2.3.2", "css", "bootstrap.css")
-        case "fobo" :: "bootstrap.css" :: Nil                             => List("fobo", "bootstrap", "2.3.2", "css", "bootstrap-min.css")
-        case "fobo" :: "bootstrap-responsive.css" :: Nil if Props.devMode => List("fobo", "bootstrap", "2.3.2", "css", "responsive.css")
-        case "fobo" :: "bootstrap-responsive.css" :: Nil                  => List("fobo", "bootstrap", "2.3.2", "css", "responsive-min.css")
-        case "fobo" :: "bootstrap.js" :: Nil if Props.devMode             => List("fobo", "bootstrap", "2.3.2", "js", "bootstrap.js")
-        case "fobo" :: "bootstrap.js" :: Nil                              => List("fobo", "bootstrap", "2.3.2", "js", "bootstrap-min.js")
-      }
-    }
-
-  }
 
 }
 

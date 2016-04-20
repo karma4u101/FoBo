@@ -6,12 +6,13 @@ import http._
 import common._
 
 /**
- * ==FoBo - Sub-module== 
- * This package object is only of interest to you if you are using this module 
- * as a stand alone artifact dependency in your project (without FoBo).
- * This package object provides information on how to initiate and use this module 
- * in your project. If you are using this module in FoBo see [[net.liftmodules.FoBo]] 
- * for usage information. 
+ * ==FoBo Font Awesome Toolkit Module==
+ * 
+ * This FoBo toolkit module provides Font Awesome API and Resource components to the 
+ * FoBo / FoBo Module, but can also be used as-is, see below for setup information.
+ *
+ * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.FoBo]] for setup information.
+ *
  */
 package object FoBoFA {
 

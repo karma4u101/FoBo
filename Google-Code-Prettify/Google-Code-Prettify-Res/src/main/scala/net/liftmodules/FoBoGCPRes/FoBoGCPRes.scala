@@ -6,16 +6,14 @@ import http._
 import common._
 
 /**
- * ==FoBo Resource sub-module== 
- * This package object provides module initiation in FoBo's most fine grain level. 
+ * ==FoBo Google Code Prettify Resource Module== 
  * 
- * This is useful if you want to depend on a small subset of FoBo's functionality 
- * by only pulling in some specific FoBo artifact(s) that provides toolkit resources
- * or FoBo API functions.
+ * This resource module provides Google Code Prettify resource components to the FoBo Google Code Prettify Toolkit module, 
+ * but can also be used as-is, see below for setup information.
  * 
- * This module provides initation of toolkit resources for the Google-Code-Prettify module.
+ * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information. 
  * 
- * For more information on how to set up and use the FoBo modules see the FoBo readme.
+
  */
 package object FoBoGCPRes {
   

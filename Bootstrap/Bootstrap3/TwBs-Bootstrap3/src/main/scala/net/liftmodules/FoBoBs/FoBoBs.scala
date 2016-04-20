@@ -7,12 +7,13 @@ import common._
 
 
 /**
- * ==FoBo Toolkit sub-module== 
- * This package object provides Bootstrap 3 integration into your Lift/FoBo application.
+ * ==FoBo Bootstrap 3 Toolkit Module==
  * 
+ * This FoBo toolkit module provides Bootstrap v3.x API and Resource components to the 
+ * FoBo / FoBo Module, but can also be used as-is, see below for setup information.
+ *
+ * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.FoBo]] for setup information.
  * 
- * If you are using this module via the FoBo meta artifact 
- * see [[net.liftmodules.FoBo]] for usage information. 
  *
  * @example To initiate this module for usage in your Lift project set something like the following in 
  * your projects Lift bootstrap.liftweb.Boot boot method. 
@@ -450,6 +451,7 @@ object InitParam extends FoBoToolkit {
  * }}}
  * @since v1.5
  */
+@deprecated("Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.Bootstrap336","1.6.0")
 case object Bootstrap336 extends FoBoToolkit {
   net.liftmodules.FoBoBsRes.Resource.Bootstrap336
   net.liftmodules.FoBoBsAPI.API.Bootstrap3
@@ -485,6 +487,7 @@ case object Bootstrap335 extends FoBoToolkit {
  *   FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap320
  * }}}
  */
+@deprecated("Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.Bootstrap320","1.6.0")
 case object Bootstrap320 extends FoBoToolkit {
   net.liftmodules.FoBoBsRes.Resource.Bootstrap320
   net.liftmodules.FoBoBsAPI.API.Bootstrap3    
@@ -500,6 +503,7 @@ case object Bootstrap320 extends FoBoToolkit {
  *   FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap311
  * }}}
  */
+@deprecated("Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.Bootstrap311","1.6.0")
 case object Bootstrap311 extends FoBoToolkit {
   net.liftmodules.FoBoBsRes.Resource.Bootstrap311
   net.liftmodules.FoBoBsAPI.API.Bootstrap3   
@@ -516,6 +520,7 @@ case object Bootstrap311 extends FoBoToolkit {
  *   FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap301
  * }}}
  */
+@deprecated("Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.Bootstrap301","1.6.0")
 case object Bootstrap301 extends FoBoToolkit {
   net.liftmodules.FoBoBsRes.Resource.Bootstrap301
   net.liftmodules.FoBoBsAPI.API.Bootstrap3     
