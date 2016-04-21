@@ -18,6 +18,17 @@ package object FoBoTBAPI {
 
   override def toString() = FoBoTBAPI.API.toString()
   
+  /**
+   * Initiate FoBo's Bootstrap 3 API in you bootstrap liftweb Boot.
+   *
+   *  '''Example:'''
+   * {{{
+   *   import net.liftmodules.{FoBoTBAPI => FoBo}
+   *    :
+   *   FoBo.API.Init=FoBo.API.[API Object]
+   * }}}
+   * '''Note:''' To see available objects click on the round trait icon in the header of this page.
+   */  
   abstract sealed trait API
 
   object API extends API {

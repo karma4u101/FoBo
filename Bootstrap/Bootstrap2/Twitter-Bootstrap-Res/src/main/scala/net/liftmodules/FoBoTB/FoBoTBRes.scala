@@ -18,6 +18,17 @@ package object FoBoTBRes {
 
   override def toString() = FoBoTBRes.Resource.toString()
   
+  /**
+   * Initiate FoBo's Bootstrap 2 Resource(s) in you bootstrap liftweb Boot.
+   *
+   *  '''Example:'''
+   * {{{
+   *   import net.liftmodules.{FoBoTBRes => FoBo}
+   *    :
+   *   FoBo.Resource.Init=FoBo.Resource.[Resource Object]
+   * }}}
+   * '''Note:''' To see available objects click on the round trait icon in the header of this page.
+   */  
   abstract sealed trait Resource
 
   object Resource extends Resource {

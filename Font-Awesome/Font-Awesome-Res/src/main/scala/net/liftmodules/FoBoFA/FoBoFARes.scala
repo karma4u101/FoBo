@@ -17,6 +17,17 @@ package object FoBoFARes {
   
   override def toString() = FoBoFARes.Resource.toString()
 
+  /**
+   * Initiate FoBo's Font Awesome Resource(s) in you bootstrap liftweb Boot.
+   * 
+   *  '''Example:'''
+   * {{{
+   *   import net.liftmodules.{FoBoFARes => FoBo}
+   *    :
+   *   FoBo.Resource.Init=FoBo.Resource.[Resource Object]
+   * }}}
+   * '''Note:''' To see available objects click on the round trait icon in the header of this page.
+   */    
   abstract sealed trait Resource
 
   object Resource extends Resource {

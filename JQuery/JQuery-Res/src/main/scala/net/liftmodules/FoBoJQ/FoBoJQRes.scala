@@ -17,6 +17,17 @@ package object FoBoJQRes {
   
   override def toString() = FoBoJQRes.Resource.toString()
 
+  /**
+   * Initiate FoBo's JQuery Resource(s) in you bootstrap liftweb Boot.
+   * 
+   *  '''Example:'''
+   * {{{
+   *   import net.liftmodules.{FoBoJQRes => FoBo}
+   *    :
+   *   FoBo.Resource.Init=FoBo.Resource.[Resource Object]
+   * }}}
+   * '''Note:''' To see available objects click on the round trait icon in the header of this page.
+   */       
   abstract sealed trait Resource
   
   object Resource extends Resource {

@@ -18,6 +18,17 @@ package object FoBoGCPAPI {
   
   override def toString() = FoBoGCPAPI.API.toString()
   
+  /**
+   * Initiate FoBo's Google Code Prettify API in you bootstrap liftweb Boot.
+   * 
+   *  '''Example:'''
+   * {{{
+   *   import net.liftmodules.{FoBoGCPAPI => FoBo}
+   *    :
+   *   FoBo.API.Init=FoBo.API.[API Object]
+   * }}}
+   * '''Note:''' To see available objects click on the round trait icon in the header of this page.
+   */   
   abstract sealed trait API
   
   object API extends API {
