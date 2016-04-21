@@ -20,8 +20,47 @@ package object FoBoJQ {
     FoBoJQ.ToolKit.toString()+" "+FoBoJQ.Resource.toString()+" "+FoBoJQ.API.toString()
   }  
 
+  
+  /**
+   * Initiate FoBo's JQuery ToolKit(s) in you bootstrap liftweb Boot.
+   * Using the ToolKit initiation you will bring in both the 
+   * toolkit's resources and FoBo/Lift API associated 
+   * with the toolkit.  
+   * 
+   *  '''Example:'''
+   * {{{
+   *   import net.liftmodules.{FoBoJQ => FoBo}
+   *    :
+   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Object]
+   * }}}
+   * '''Note:''' To see available objects click on the round trait icon in the header of this page.
+   */    
   abstract sealed trait ToolKit
+  
+  /**
+   * Initiate FoBo's JQuery Resource(s) in you bootstrap liftweb Boot.
+   * 
+   *  '''Example:'''
+   * {{{
+   *   import net.liftmodules.{FoBoJQ => FoBo}
+   *    :
+   *   FoBo.Resource.Init=FoBo.Resource.[Resource Object]
+   * }}}
+   * '''Note:''' To see available objects click on the round trait icon in the header of this page.
+   */     
   abstract sealed trait Resource
+  
+  /**
+   * Initiate FoBo's JQuery API in you bootstrap liftweb Boot.
+   * 
+   *  '''Example:'''
+   * {{{
+   *   import net.liftmodules.{FoBoJQ => FoBo}
+   *    :
+   *   FoBo.API.Init=FoBo.API.[API Object]
+   * }}}
+   * '''Note:''' To see available objects click on the round trait icon in the header of this page.
+   */    
   abstract sealed trait API  
 
  /*=== ToolKit ============================================*/

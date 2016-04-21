@@ -30,9 +30,9 @@ package object FoBoFA {
    * {{{
    *   import net.liftmodules.{FoBoFA => FoBo}
    *    :
-   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Companion Object]
+   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Object]
    * }}}
-   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
+   * '''Note:''' To see available objects click on the round trait icon in the header of this page.
    */  
   abstract sealed trait ToolKit
   
@@ -43,9 +43,9 @@ package object FoBoFA {
    * {{{
    *   import net.liftmodules.{FoBoFA => FoBo}
    *    :
-   *   FoBo.Resource.Init=FoBo.Resource.[Resource Companion Object]
+   *   FoBo.Resource.Init=FoBo.Resource.[Resource Object]
    * }}}
-   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
+   * '''Note:''' To see available objects click on the round trait icon in the header of this page.
    */   
   abstract sealed trait Resource
   
@@ -56,9 +56,9 @@ package object FoBoFA {
    * {{{
    *   import net.liftmodules.{FoBoFA => FoBo}
    *    :
-   *   FoBo.API.Init=FoBo.API.[API Companion Object]
+   *   FoBo.API.Init=FoBo.API.[API Object]
    * }}}
-   * '''Note:''' To see available companion objects click on the round trait icon in the header of this page.
+   * '''Note:''' To see available objects click on the round trait icon in the header of this page.
    */   
   abstract sealed trait API
   
