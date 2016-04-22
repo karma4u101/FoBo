@@ -271,7 +271,7 @@ For feature listings on all releases see
 - [Changelog](https://github.com/karma4u101/FoBo/blob/develop/CHANGELOG.md)
 
 ## Authors
-This FoBo Lift module were written by [Peter Petersson](http://www.media4u101.se). The Lift Module conventions were 
+The FoBo Lift module is mostly written by [Peter Petersson](http://www.media4u101.se). The Lift Module conventions were 
 developed by the [Lift community](http://groups.google.com/group/liftweb/).
 
 
