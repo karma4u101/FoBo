@@ -374,7 +374,24 @@ package object FoBo {
      */
     case object AJMaterial107 extends ToolKit {
       net.liftmodules.FoBoAJS.ToolKit.AJMaterial107
-    }        
+    }  
+    
+     /**
+     * Enable usage of FoBo's Angular Material API and resources version 1&#8228;1&#8228;0 in your bootstrap liftweb Boot.
+     * @version 1.1.0
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial110
+     * }}}
+     *
+     */
+    case object AJMaterial110 extends ToolKit {
+      net.liftmodules.FoBoAJS.ToolKit.AJMaterial110
+    }       
     
      /**
      * Enable usage of FoBo's Angular API and AngularUI-Bootstrap resources version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.
@@ -1093,6 +1110,23 @@ package object FoBo {
      */
     case object AJMaterial107 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AJMaterial107
+    }    
+    
+     /**
+     * Enable usage of Angular Material version 1&#8228;1&#8228;0 resource files in your bootstrap liftweb Boot.
+     * @version 1.1.0
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.AJMaterial110
+     * }}}
+     *
+     */
+    case object AJMaterial110 extends Resource {
+      net.liftmodules.FoBoAJS.Resource.AJMaterial110
     }    
     
      /**

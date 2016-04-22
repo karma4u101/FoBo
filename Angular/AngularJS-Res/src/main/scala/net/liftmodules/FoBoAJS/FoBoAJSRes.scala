@@ -295,6 +295,24 @@ package object FoBoAJSRes {
       FoBoResources.init
       FoBoResources.AJMaterial107
     }    
+    
+    /**
+     * Enable usage of Angular Material version 1&#8228;1&#8228;0 resource files in your bootstrap liftweb Boot.
+     * @version 1.1.0
+     *
+     *  '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.{FoBoAJSRes => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.AJMaterial110
+     * }}}
+     *
+     */
+    case object AJMaterial110 extends Resource {
+      FoBoResources.init
+      FoBoResources.AJMaterial110
+    }        
 
     /**
      * Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 resource files in your bootstrap liftweb Boot.
@@ -4890,7 +4908,17 @@ package object FoBoAJSRes {
         case "fobo" :: "angular-material.css" :: Nil if Props.devMode        => List("fobo", "angular-material", "1.0.7", "css", "angular-material.css")
         case "fobo" :: "angular-material.css" :: Nil                         => List("fobo", "angular-material", "1.0.7", "css", "angular-material.min.css")
       }
-    }    
+    }  
+    
+    lazy val AJMaterial110 = {
+      ResourceServer.rewrite {
+        case "fobo" :: "angular-material.js" :: Nil if Props.devMode         => List("fobo", "angular-material", "1.1.0", "js", "angular-material.js")
+        case "fobo" :: "angular-material.js" :: Nil                          => List("fobo", "angular-material", "1.1.0", "js", "angular-material.min.js")
+        case "fobo" :: "angular-material-mocks.js" :: Nil                    => List("fobo", "angular-material", "1.1.0", "js", "angular-material-mocks.js")
+        case "fobo" :: "angular-material.css" :: Nil if Props.devMode        => List("fobo", "angular-material", "1.1.0", "css", "angular-material.css")
+        case "fobo" :: "angular-material.css" :: Nil                         => List("fobo", "angular-material", "1.1.0", "css", "angular-material.min.css")
+      }
+    }     
 
   }
 }
