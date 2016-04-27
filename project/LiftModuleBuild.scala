@@ -30,8 +30,8 @@ object LiftModuleFoBoBuild extends Build {
                             base = file("FoBo/FoBo"),
                             settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile),
-                             aggregate = Seq(foboapi,kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,prettify)
-                                 ).dependsOn(foboapi,kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,prettify)  
+                             aggregate = Seq(foboapi,kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,prettify,highlight)
+                                 ).dependsOn(foboapi,kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,prettify,highlight)  
                
    lazy val foboapi = Project(id   = "fobo-api", 
                              base = file("FoBo/FoBo-API"),
@@ -144,6 +144,12 @@ object LiftModuleFoBoBuild extends Build {
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))                                    
  
+   lazy val highlight   = Project(id   = "fobo-highlightjs-res", 
+                             base = file("Highlight/HighlightJS-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                    
+
+                                 
   lazy val kineticjs    = Project(id   = "fobo-kineticjs", 
                              base = file("Kinetic/KineticJS"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
