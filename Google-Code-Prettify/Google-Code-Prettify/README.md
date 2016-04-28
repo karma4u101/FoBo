@@ -5,7 +5,7 @@ but can also be used as-is, see below for setup information.
 
 ## Components and available versions 
 
-- Google Code Prettify [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
+- Google Code Prettify [vJun2011] - [google-code-prettify](https://github.com/google/code-prettify/)
 
 ## Integration into your project 
 

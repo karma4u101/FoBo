@@ -9,7 +9,7 @@ but can also be used as-is, see below for setup information.
 
 ## Integration into your project 
 
-### Dependancy settings
+### Dependency settings
 
 Example setup:
 
@@ -42,7 +42,7 @@ FoBo.Resource.Init=FoBo.Resource.PaceXYZ
 ```
 ### Lift FoBo Template hooks
 
-OBS! v1.x adds a colour prefix in the css path representing the theme colour. Available colours is listed below
+OBS! v1.x adds a color prefix in the css path representing the theme color. Available colors is listed below
 
 ```html
 <!--v0.4.15-->

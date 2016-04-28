@@ -60,7 +60,7 @@ class AJSResources extends StatefulSnippet {
   /**
    * '''Snippet Params:'''
    * 
-   *  - '''Param''' ''resources'' - A comma separated list of FoBo managed Bootstrap3 css resources.
+   *  - '''Param''' ''resources'' - A comma separated list of FoBo managed Angular css resources.
    *   
    * '''Example''' 
    * {{{ <link data-lift="FoBo.AJSResources.injectCSS?resources=ng-grid"></link>  }}}
