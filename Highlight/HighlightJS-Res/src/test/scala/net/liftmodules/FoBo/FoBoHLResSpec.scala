@@ -13,7 +13,7 @@ object FoBoHLResSpec extends Specification {
   sequential
   
   //HighlightJS930
-  "With FoBoGCPRes.Resource.Init set to FoBoGCPRes.Resource.HighlightJS930 the ResourceServer" should {
+  "With FoBoHLRes.Resource.Init set to FoBoHLRes.Resource.HighlightJS930 the ResourceServer" should {
     "allow  fobo/highlight/highlight.pack.js" in {
       allowResource(FoBoHLRes.Resource.HighlightJS930,"fobo"::"highlight"::"highlight.pack.js"::Nil) must_== true 
     }     

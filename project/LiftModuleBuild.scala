@@ -30,8 +30,8 @@ object LiftModuleFoBoBuild extends Build {
                             base = file("FoBo/FoBo"),
                             settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile),
-                             aggregate = Seq(foboapi,kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,prettify,highlight)
-                                 ).dependsOn(foboapi,kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,prettify,highlight)  
+                             aggregate = Seq(foboapi,kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,prettify,highlightjs)
+                                 ).dependsOn(foboapi,kineticjs,pace,angularjs,jquery,bootstrap,bootstrap3,fontAwesome,prettify,highlightjs)  
                
    lazy val foboapi = Project(id   = "fobo-api", 
                              base = file("FoBo/FoBo-API"),
@@ -142,13 +142,8 @@ object LiftModuleFoBoBuild extends Build {
   lazy val prettifyres     = Project(id   = "fobo-google-code-prettify-res", 
                              base = file("Google-Code-Prettify/Google-Code-Prettify-Res"),
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
-                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                    
- 
-   lazy val highlight   = Project(id   = "fobo-highlightjs-res", 
-                             base = file("Highlight/HighlightJS-Res"),
-                             settings = defaultSettings ++ scaladocSettings ++ Seq(
-                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                    
-
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))   
+                                
                                  
   lazy val kineticjs    = Project(id   = "fobo-kineticjs", 
                              base = file("Kinetic/KineticJS"),
@@ -162,7 +157,24 @@ object LiftModuleFoBoBuild extends Build {
                              settings = defaultSettings ++ scaladocSettings ++ Seq(
                                  fullClasspath in doc in Compile <<= fullClasspath in Compile))                                   
                                                                             
+lazy val highlightjs   = Project(id   = "fobo-highlightjs", 
+                             base = file("Highlight/HighlightJS"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile),
+                             aggregate = Seq(highlightres,highlightapi)
+                                 ).dependsOn(highlightres,highlightapi) 
+                                 
+lazy val highlightres   = Project(id   = "fobo-highlightjs-res", 
+                             base = file("Highlight/HighlightJS-Res"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))        
+            
+lazy val highlightapi   = Project(id   = "fobo-highlightjs-api", 
+                             base = file("Highlight/HighlightJS-API"),
+                             settings = defaultSettings ++ scaladocSettings ++ Seq(
+                                 fullClasspath in doc in Compile <<= fullClasspath in Compile))                                  
 
+                                 
   lazy val scaladocDiagramsEnabled = System.getProperty("scaladoc.diagrams", "false").toBoolean
   lazy val scaladocOptions = List() /*List("-implicits")*/ ::: (if (scaladocDiagramsEnabled) List("-diagrams") else Nil)
 
