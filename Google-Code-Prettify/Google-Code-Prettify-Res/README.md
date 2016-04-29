@@ -5,11 +5,11 @@ but can also be used as-is, see below for setup information.
 
 ## Components and available versions 
 
-- Google Code Prettify [vJun2011] - [google-code-prettify](http://code.google.com/p/google-code-prettify/)
+- Google Code Prettify [vJun2011] - [google-code-prettify](https://github.com/google/code-prettify/)
 
 ## Integration into your project 
 
-### Dependancy settings
+### Dependency settings
 
 **SBT:**
 ```scala
@@ -48,7 +48,7 @@ FoBo.ToolKit.Init=FoBo.ToolKit.PrettifyMMYYYY //for example FoBo.PrettifyJun2011
 ```
 Available lang-xxx.js is xxx=[apollo,clj,css,go,hs,listp,lua,ml,n,proto,scala,sql,tex,vb,vhdl,wiki,xq,yaml]
 
-For more information on how to use Google-Code-Prettify see [Google-Code-Prettify](http://code.google.com/p/google-code-prettify/)
+For more information on how to use Google-Code-Prettify see [Google-Code-Prettify](https://github.com/google/code-prettify/)
 
 Contributions
 ------

@@ -766,7 +766,7 @@ package object FoBo {
      /*===Bootstrap3 ToolKit===============================================================*/     
      
     /**
-     * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;6 resource files in your bootstrap liftweb Boot.
+     * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.
      * @version 3.3.6
      *
      *  '''Example:'''
@@ -783,7 +783,7 @@ package object FoBo {
     }    
     
     /**
-     * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;5 resource files in your bootstrap liftweb Boot.
+     * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;5 in your bootstrap liftweb Boot.
      * @version 3.3.5
      *
      *  '''Example:'''
@@ -800,7 +800,7 @@ package object FoBo {
     }    
     
     /**
-     * Enable usage of Bootstrap API and resources version 3&#8228;2&#8228;0 resource files in your bootstrap liftweb Boot.
+     * Enable usage of Bootstrap API and resources version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.
      * @version 3.2.0
      *
      *  '''Example:'''
@@ -817,7 +817,7 @@ package object FoBo {
     } 
     
     /**
-     * Enable usage of Bootstrap API and resources version 3&#8228;1&#8228;1 resource files in your bootstrap liftweb Boot.
+     * Enable usage of Bootstrap API and resources version 3&#8228;1&#8228;1 in your bootstrap liftweb Boot.
      * @version 3.1.1
      *
      *  '''Example:'''
@@ -834,7 +834,7 @@ package object FoBo {
     } 
     
     /**
-     * Enable usage of Bootstrap API and resources version 3&#8228;0&#8228;1 resource files in your bootstrap liftweb Boot.
+     * Enable usage of Bootstrap API and resources version 3&#8228;0&#8228;1 in your bootstrap liftweb Boot.
      * @version 3.0.1
      *
      *  '''Example:'''
@@ -853,7 +853,7 @@ package object FoBo {
     /*===Bootstrap2 ToolKit===============================================================*/     
      
     /**
-     * Enable usage of Bootstrap API and resources version 2&#8228;3&#8228;2 resource files in your bootstrap liftweb Boot.
+     * Enable usage of Bootstrap API and resources version 2&#8228;3&#8228;2 in your bootstrap liftweb Boot.
      * @version 2.3.2
      *
      *  '''Example:'''
@@ -868,6 +868,25 @@ package object FoBo {
     case object Bootstrap232 extends ToolKit {
       net.liftmodules.FoBoTB.ToolKit.Bootstrap232
     }  
+    
+    
+    /*===Highlight ToolKit===============================================================*/ 
+    
+    /**
+     * Enable usage of FoBo's Highlight JS API and resources version 9&#8228;3&#8228;0 in your bootstrap liftweb Boot.
+     * @version v9.3.0
+     *
+     * '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.HighlightJS930
+     * }}}
+     */
+    case object HighlightJS930 extends ToolKit {
+      net.liftmodules.FoBoHL.ToolKit.HighlightJS930
+    }    
     
   }//end ToolKit
   
@@ -1598,7 +1617,25 @@ package object FoBo {
      */
     case object Bootstrap232 extends Resource {
       net.liftmodules.FoBoTB.Resource.Bootstrap232
-    }       
+    }  
+    
+    /*===Highlight Resource===============================================================*/ 
+    
+    /**
+     * Enable usage of FoBo's Highlight JS version 9&#8228;3&#8228;0 resource files in your bootstrap liftweb Boot.
+     * @version v9.3.0
+     *
+     * '''Example:'''
+     *
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.HighlightJS930
+     * }}}
+     */
+    case object HighlightJS930 extends Resource {
+      net.liftmodules.FoBoHL.Resource.HighlightJS930
+    }        
     
   }  
 
