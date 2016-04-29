@@ -1,18 +1,13 @@
-Update log
-----------
+# Changelog
+
 
 For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/CHANGELOG.md#history-log) section
 
 **Latest Stable Releases:**
 - **2015-12-30** -- Module v1.5.1
-- **2015-12-28** -- Module v1.5
-- **2015-08-09** -- Module v1.4
-- **2014-07-15** -- Module v1.3
-- **2014-03-15** -- Module v1.2
-- **2013-10-11** -- Module v1.1
-- **2013-05-19** -- Module v1.0 
 
 **Latest Updates:**
+- **2016-04-29** -- [Issue #76](https://github.com/karma4u101/FoBo/issues/72) Adding HighlightJS v9.3.0
 - **2016-04-02** -- [Issue #72](https://github.com/karma4u101/FoBo/issues/72) Adding Angular Material v1.0.7
 - **2016-03-30** -- [Issue #70](https://github.com/karma4u101/FoBo/issues/70) Adding Pace v1.0.2
 - **2016-03-29** -- [Issue #69](https://github.com/karma4u101/FoBo/issues/69) Adding AngularJS v1.5.3
@@ -20,8 +15,6 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2016-03-25** -- [PR #61](https://github.com/karma4u101/FoBo/pull/61) Re-factoring modules  
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
 
-**Latest Snapshot Release:**
-- Snapshots is released regularly see [Sonatype quick search](https://oss.sonatype.org/#nexus-search;quick~fobo)
 
 FoBo v1.6
 ---------
@@ -31,6 +24,10 @@ Making it possible to, in your project depend on artifacts including everything 
 provided resource module, or one or more API or resource module(s), or as before one or more Toolkit 
 modules or via the FoBo/FoBo module get access to all it's Toolkit, Resource and API modules.   
 
+###New modules
+-   [FoBo-HighlightJS](https://github.com/karma4u101/FoBo/tree/master/Highlight) Adds v9.3.0 - [highlight.js](https://highlightjs.org/) 
+    Syntax highlighting for the Web - Packaged with 21 languages (inc Scala) and 152 styles.
+    
 ###Updated modules
 -   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) Adds v1.0.2 - [Pace](http://github.hubspot.com/pace/docs/welcome/)
 -   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.5.0 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
@@ -168,7 +165,12 @@ A live demo showing some of FoBo's sub module features, including API documentat
 ----------------
 
 **Stable Release history:**
-
+- **2015-12-28** -- Module v1.5
+- **2015-08-09** -- Module v1.4
+- **2014-07-15** -- Module v1.3
+- **2014-03-15** -- Module v1.2
+- **2013-10-11** -- Module v1.1
+- **2013-05-19** -- Module v1.0 
 
 **Updates history:**
 - **2015-12-24** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.1 (removing unreleased v1.0.0)
@@ -244,61 +246,4 @@ A live demo showing some of FoBo's sub module features, including API documentat
 - **2012-11-18** -- Module v0.7.3-SNAPSHOT Added Bootstrap v2.2.0 and released artifacts
 - **2012-11-11** -- Module v0.7.2-SNAPSHOT Lift 2.5-SNAPSHOT artifacts (for the inpatient) published to oss.sonatype.org
 - **2012-11-10** -- Module v0.7.2-SNAPSHOT Lift 2.5-M3 released to oss.sonatype.org
-
-**Snapshot Release history:**
-- **2015-12-24** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-12-20** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-12-17** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-12-15** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-12-13** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-12-03** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-12-02** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-11-24** -- Module v1.5-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-08-04** -- Module v1.4-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-07-28** -- Module v1.4-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-06-21** -- Module v1.4-SNAPSHOT released for Lift v2.6 and v3.0
-- **2015-06-16** -- Module v1.4-SNAPSHOT released for Lift v2.6 and v3.0
-- **2014-07-08** -- Module v1.3-SNAPSHOT's released for Lift v2.5, v2.6 and v3.0
-- **2014-07-06** -- Module v1.3-SNAPSHOT's released for Lift v2.5, v2.6 and v3.0
-- **2014-07-04** -- Module v1.3-SNAPSHOT's released for Lift v2.5, v2.6 and v3.0
-- **2014-07-02** -- Module v1.3-SNAPSHOT's released for Lift v2.6 (Scala 2.11.x, 2.10.x, 2.9.2, 2.9.1-1, 2.9.1) and Lift v3.0
-- **2014-06-08** -- Module v1.3 Scala 2.11 artifact released for Lift v2.6
-- **2014-05-24** -- Module v1.3-M1 artifact released for Lift 3.0-M1
-- **2014-05-15** -- Module v1.3-SNAPSHOT
-- **2014-04-18** -- Module v1.3-SNAPSHOT
-- **2014-03-09** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
-- **2014-02-21** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
-- **2014-02-06** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
-- **2013-12-16** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
-- **2013-12-13** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
-- **2013-11-28** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
-- **2013-11-24** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
-- **2013-11-23** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
-- **2013-11-18** -- Module v1.2-SNAPSHOT for Lift 2.5, 2.6 and 3.0
-- **2013-11-06** -- Module v1.1-SNAPSHOT for lift 2.5, 2.6 and 3.0
-- **2013-11-02** -- Module v1.1-SNAPSHOT for lift 2.5, 2.6 and 3.0
-- **2013-11-01** -- Module v1.1-SNAPSHOT for lift 2.5, 2.6 and 3.0
-- **2013-10-30** -- Module v1.1-SNAPSHOT artifacts release for Lift v2.5/v2.6/v3.0 Java 1.6
-- **2013-08-29** -- Module v1.1-SNAPSHOT artifacts release for Lift v2.5/v2.6/v3.0
-- **2013-08-09** -- Module v1.1-SNAPSHOT artifacts release for Lift v2.5/v2.6/v3.0
-- **2013-07-29** -- Module v1.1-SNAPSHOT artifacts release for Lift v2.5/v2.6/v3.0
-- **2013-05-13** -- Module v1.0-SNAPSHOT artifacts release for Lift v2.6/v3.0 
-- **2013-05-03** -- Module v1.0-SNAPSHOT artifacts for Lift 2.5 and 3.0
-- **2013-05-01** -- Module v0.9.9-SNAPSHOT artifacts for Lift 2.5 and 3.0
-- **2013-04-28** -- Module v0.9.8-SNAPSHOT artifacts for Lift 2.5 and 3.0
-- **2013-04-13** -- Module v0.9.7-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
-- **2013-04-06** -- Module v0.9.6-SNAPSHOT artifacts for Lift 2.5
-- **2013-03-29** -- Module v0.9.5-SNAPSHOT artifacts for Lift 2.5 and 3.0 is published.
-- **2013-03-27** -- Module v0.9.4-SNAPSHOT artifacts for Lift 2.5 and 3.0 see [Dependency settings](https://github.com/karma4u101/FoBo/blob/master/README.md#dependency-settings) for more information.
-- **2013-03-08** -- Module v0.9.3-SNAPSHOT artifacts for Lift 2.5-RC2 and Lift 3.0-SNAPSHOT
-- **2013-02-24** -- Module v0.9.2-SNAPSHOT artifacts for Lift 2.5-RC1 and 2.5-SNAPSHOT (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0 -SNAPSHOT (Scala 2.10)
-- **2013-02-22** -- Module v0.9.1-SNAPSHOT artifacts for Lift 2.5-RC1 (Scala 2.10, 2.9.2, 2.9.1-1, 2.9.1) and Lift 3.0-SNAPSHOT (Scala 2.10)
-- **2013-02-17** -- Module v0.9.0-SNAPSHOT artifacts for Lift 3.0-SNAPSHOT / Scala 2.10, Lift 2.5-SNAPSHOT 
-- **2013-02-15** -- Module v0.8.0-SNAPSHOT artifacts for Lift 3.0-SNAPSHOT / Scala 2.10
-- **2013-01-13** -- Module v0.8.0-SNAPSHOT artifacts for Lift 2.5-M4 and Lift 2.5-SNAPSHOT (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
-- **2013-01-10** -- Module v0.7.11-SNAPSHOT artifacts for Lift 2.5-SNAPSHOTS (Scala 2.10, 2.9.1, 2.9.1-1, 2.9.2) 
-- **2013-01-04** -- Module v0.7.10-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
-- **2013-01-02** -- Module v0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
-- **2012-12-30** -- Module v0.7.8-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
-- **2012-12-29** -- Module v0.7.7-SNAPSHOT artifacts for Lift-2.5-M3 and Lift 2.5-SNAPSHOTS (Scala 2.9.1, 2.9.1-1, 2.9.2)
 

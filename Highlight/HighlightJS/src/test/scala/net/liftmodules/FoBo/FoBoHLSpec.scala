@@ -14,7 +14,7 @@ object FoBoPaSpec extends Specification {
       
   
   //HighlightJS930
-  "With FoBoHLRes.ToolKit.Init set to FoBoHLRes.ToolKit.HighlightJS930 the ResourceServer" should {
+  "With FoBoHL.ToolKit.Init set to FoBoHL.ToolKit.HighlightJS930 the ResourceServer" should {
     "allow  fobo/highlight/highlight.pack.js" in {
       allowToolKitInit(FoBoHL.ToolKit.HighlightJS930,"fobo"::"highlight"::"highlight.pack.js"::Nil) must_== true 
     }     
@@ -24,7 +24,7 @@ object FoBoPaSpec extends Specification {
     }        
   } 
   
-  "With FoBoHLRes.Resource.Init set to FoBoHLRes.Resource.HighlightJS930 the ResourceServer" should {
+  "With FoBoHL.Resource.Init set to FoBoHL.Resource.HighlightJS930 the ResourceServer" should {
     "allow  fobo/highlight/highlight.pack.js" in {
       allowResource(FoBoHL.Resource.HighlightJS930,"fobo"::"highlight"::"highlight.pack.js"::Nil) must_== true 
     }     

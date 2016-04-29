@@ -46,8 +46,8 @@ package object FoBoHLRes {
     override def toString() = "FoBoHLRes.Resource = " + store.toString()
 
     /**
-     * Enable usage of FoBo's Highlight JS resources version Jun2011 in your bootstrap liftweb Boot.
-     * @version Jun2011
+     * Enable usage of FoBo's Highlight JS resources version 9&#8228;3&#8228;0 in your bootstrap liftweb Boot.
+     * @version v9.3.0
      *
      * '''Example:'''
      *

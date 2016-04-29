@@ -1256,6 +1256,28 @@ object FoBoSpec extends Specification  {
     }       
   }     
   
+  /*===Highlight ===============================================================*/ 
+  
+  //HighlightJS930
+  "With FoBo.ToolKit.Init set to FoBoHLRes.ToolKit.HighlightJS930 the ResourceServer" should {
+    "allow  fobo/highlight/highlight.pack.js" in {
+      allowToolKitInit(FoBo.ToolKit.HighlightJS930,"fobo"::"highlight"::"highlight.pack.js"::Nil) must_== true 
+    }     
+    "rewrit rewrit fobo/highlight/highlight.pack.js to fobo/highlight/9.3.0/js/highlight.pack.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.HighlightJS930,"fobo"::"highlight"::"highlight.pack.js"::Nil) must_== 
+        List("fobo", "highlight", "9.3.0", "js", "highlight.pack.js")
+    }        
+  } 
+  
+  "With FoBo.Resource.Init set to FoBo.Resource.HighlightJS930 the ResourceServer" should {
+    "allow  fobo/highlight/highlight.pack.js" in {
+      allowResource(FoBo.Resource.HighlightJS930,"fobo"::"highlight"::"highlight.pack.js"::Nil) must_== true 
+    }     
+    "rewrit rewrit fobo/highlight/highlight.pack.js to fobo/highlight/9.3.0/js/highlight.pack.js" in {
+      rewriteResource(FoBo.Resource.HighlightJS930,"fobo"::"highlight"::"highlight.pack.js"::Nil) must_== 
+        List("fobo", "highlight", "9.3.0", "js", "highlight.pack.js")
+    }        
+  }     
   
  //=== ToolKit.Init ==============//
   def allowToolKitInit(resource:FoBo.ToolKit,path:List[String]) = {

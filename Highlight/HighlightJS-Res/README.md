@@ -15,13 +15,13 @@ Example setup:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-highlight-res_3.0 % "1.6"
+"net.liftmodules" %% "fobo-highlightjs-res_3.0 % "1.6"
 ```
 **Maven:**
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-highlight-res_3.0_2.11.7</artifactId>
+  <artifactId>fobo-highlightjs-res_3.0_2.11.7</artifactId>
   <version>1.6</version>
 </dependency>
 ```
@@ -137,7 +137,7 @@ Supported languages
 - SQL [v9.3.0]
 
 
-For more information on how to use Hilight see [higlight.js](https://highlightjs.org/)
+For more information on how to use Highlight see [higlight.js](https://highlightjs.org/)
 
 ## Contributions
 
@@ -148,7 +148,7 @@ You can also leave a issue report or drop a question/suggestion on [Lift's maili
 ## Update log
 
 **Latest Update:**
-- **2016-04-28** -- Added Hilight v9.3.0
+- **2016-04-28** -- Added Highlight v9.3.0
 
 
 
