@@ -7,8 +7,8 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2015-12-30** -- Module v1.5.1
 
 **Latest Updates:**
-- **2016-04-29** -- [Issue #76](https://github.com/karma4u101/FoBo/issues/72) Adding HighlightJS v9.3.0
-- **2016-04-02** -- [Issue #72](https://github.com/karma4u101/FoBo/issues/72) Adding Angular Material v1.0.7
+- **2016-04-30** -- [Issue #78](https://github.com/karma4u101/FoBo/issues/78) Adding Angular Material v1.0.8 (removing unreleased v1.0.7)
+- **2016-04-29** -- [Issue #76](https://github.com/karma4u101/FoBo/issues/76) Adding HighlightJS v9.3.0
 - **2016-03-30** -- [Issue #70](https://github.com/karma4u101/FoBo/issues/70) Adding Pace v1.0.2
 - **2016-03-29** -- [Issue #69](https://github.com/karma4u101/FoBo/issues/69) Adding AngularJS v1.5.3
 - **2016-03-25** -- Adding Font-Awesome v4.5.0

@@ -189,24 +189,24 @@ object FoBoSpec extends Specification  {
     }       
   } 
   
-  //AJMaterial107
-  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AJMaterial107 the ResourceServer" should {    
+  //AJMaterial108
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.AJMaterial108 the ResourceServer" should {    
     "allow  fobo/angular-material.js" in {
-      allowToolKitInit(FoBo.ToolKit.AJMaterial107,"fobo"::"angular-material.js"::Nil) must_== true       
+      allowToolKitInit(FoBo.ToolKit.AJMaterial108,"fobo"::"angular-material.js"::Nil) must_== true       
     }     
-    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.7/js/angular-material.min.js" in {
-      rewriteToolKitInit(FoBo.ToolKit.AJMaterial107,"fobo"::"angular-material.js"::Nil) must_== 
-        List("fobo", "angular-material", "1.0.7", "js", "angular-material.min.js")      
+    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.8/js/angular-material.min.js" in {
+      rewriteToolKitInit(FoBo.ToolKit.AJMaterial108,"fobo"::"angular-material.js"::Nil) must_== 
+        List("fobo", "angular-material", "1.0.8", "js", "angular-material.min.js")      
     }       
   } 
   
-  "With FoBo.Resource.Init set to FoBo.Resource.AJMaterial107 the ResourceServer" should { 
+  "With FoBo.Resource.Init set to FoBo.Resource.AJMaterial108 the ResourceServer" should { 
     "allow  fobo/angular-material.js" in  {
-      allowResource(FoBo.Resource.AJMaterial107,"fobo"::"angular-material.js"::Nil)  must_== true 
+      allowResource(FoBo.Resource.AJMaterial108,"fobo"::"angular-material.js"::Nil)  must_== true 
     }     
-    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.7/js/angular-material.min.js" in  {
-     rewriteResource(FoBo.Resource.AJMaterial107,"fobo"::"angular-material.js"::Nil) must_== 
-        List("fobo", "angular-material", "1.0.7", "js", "angular-material.min.js")      
+    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.8/js/angular-material.min.js" in  {
+     rewriteResource(FoBo.Resource.AJMaterial108,"fobo"::"angular-material.js"::Nil) must_== 
+        List("fobo", "angular-material", "1.0.8", "js", "angular-material.min.js")      
     }       
   } 
   

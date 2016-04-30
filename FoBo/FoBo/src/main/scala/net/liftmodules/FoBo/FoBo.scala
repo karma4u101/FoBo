@@ -51,7 +51,7 @@ import common._
  *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component) [[net.liftmodules.FoBoAJS]]
  *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component) [[net.liftmodules.FoBoAJS]]
  *  - Angular UI-Grid [v3.0.7] (angular component) [[net.liftmodules.FoBoAJS]]
- *  - Angular Material design [v0.10.0, v1.0.1] (angular component) [[net.liftmodules.FoBoAJS]]
+ *  - Angular Material design [v0.10.0, v1.0.1, v1.0.8] (angular component) [[net.liftmodules.FoBoAJS]]
  *  
  *  
  * ===Help out!===
@@ -336,7 +336,7 @@ package object FoBo {
      * }}}
      *
      */
-    @deprecated("Use AJMaterial107 or later","1.5.0")
+    @deprecated("Use AJMaterial108 or later","1.5.0")
     case object AJMaterial0100 extends ToolKit {
       net.liftmodules.FoBoAJS.ToolKit.AJMaterial0100
     }
@@ -354,26 +354,26 @@ package object FoBo {
      * }}}
      *
      */
-    @deprecated("Use AJMaterial107 or later","1.6.0")
+    @deprecated("Use AJMaterial108 or later","1.6.0")
     case object AJMaterial101 extends ToolKit {
       net.liftmodules.FoBoAJS.ToolKit.AJMaterial101
     }     
     
      /**
-     * Enable usage of FoBo's Angular Material API and resources version 1&#8228;0&#8228;7 in your bootstrap liftweb Boot.
-     * @version 1.0.7
+     * Enable usage of FoBo's Angular Material API and resources version 1&#8228;0&#8228;8 in your bootstrap liftweb Boot.
+     * @version 1.0.8
      *
      *  '''Example:'''
      *
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial107
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial108
      * }}}
      *
      */
-    case object AJMaterial107 extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AJMaterial107
+    case object AJMaterial108 extends ToolKit {
+      net.liftmodules.FoBoAJS.ToolKit.AJMaterial108
     }  
     
      /**
@@ -1091,7 +1091,7 @@ package object FoBo {
      * }}}
      *
      */
-    @deprecated("Use AJMaterial107 or later","1.5.0")
+    @deprecated("Use AJMaterial108 or later","1.5.0")
     case object AJMaterial0100 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AJMaterial0100
     }
@@ -1109,26 +1109,26 @@ package object FoBo {
      * }}}
      *
      */
-     @deprecated("Use AJMaterial107 or later","1.6.0")
+     @deprecated("Use AJMaterial108 or later","1.6.0")
     case object AJMaterial101 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AJMaterial101
     } 
     
      /**
-     * Enable usage of Angular Material version 1&#8228;0&#8228;7 resource files in your bootstrap liftweb Boot.
-     * @version 1.0.7
+     * Enable usage of Angular Material version 1&#8228;0&#8228;8 resource files in your bootstrap liftweb Boot.
+     * @version 1.0.8
      *
      *  '''Example:'''
      *
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.Resource.Init=FoBo.Resource.AJMaterial107
+     *   FoBo.Resource.Init=FoBo.Resource.AJMaterial108
      * }}}
      *
      */
-    case object AJMaterial107 extends Resource {
-      net.liftmodules.FoBoAJS.Resource.AJMaterial107
+    case object AJMaterial108 extends Resource {
+      net.liftmodules.FoBoAJS.Resource.AJMaterial108
     }    
     
      /**

@@ -217,6 +217,7 @@ The FoBo / FoBo module includes the following sub-modules and supports the follo
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2, v1.9.1, v1.10.2, v1.11.0, v1.11.1, v1.11.3, v2.1.1, v2.1.4] - [JQuery](http://jquery.com/)
 -   FoBo-JQuery also includes JQuery Migrate [v1.2.1] - [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)
 -   [FoBo-Google-Code-Prettify](https://github.com/karma4u101/FoBo/tree/master/Google-Code-Prettify) [vJun2011] - [google-code-prettify](https://github.com/google/code-prettify/)
+-   [FoBo-Highlight](https://github.com/karma4u101/FoBo/tree/master/Highlight) [v9.3.0] - [highlight.js](https://highlightjs.org/) 
 -   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) [v0.4.15, v1.0.2] - [Pace](http://github.hubspot.com/pace/docs/welcome/) 
 -   [FoBo-Kinetic](https://github.com/karma4u101/FoBo/tree/master/Kinetic) [v5.1.0] - [Kinetic](http://kineticjs.com/) 
 
