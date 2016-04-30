@@ -12,7 +12,7 @@ but can also be used as-is, see below for setup information.
 - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0]
 - Angular NG-Grid [v2.0.4, v2.0.7]
 - Angular UI-Grid [v3.0.7]
-- Angular Material Design [v0.10.0, v1.0.1, v1.0.7]
+- Angular Material Design [v0.10.0, v1.0.1, v1.0.8]
 
 ## Integration into your project 
 
@@ -68,7 +68,7 @@ import net.liftmodules.FoBo
 FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS153        //access to core files 
 FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS153i18n    //access to angular i18n files 
 FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap0100  //Angular UI Bootstrap
-FoBo.ToolKit.Init=FoBo.ToolKit.AJSMaterial107      //Angular Material
+FoBo.ToolKit.Init=FoBo.ToolKit.AJSMaterial108      //Angular Material
 FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIGrid307        //Angular UI-Grid
 //FoBo.ToolKit.Init=FoBo.ToolKit.AJSNGGrid207        //Angular NG-Grid
 ```
@@ -127,7 +127,7 @@ For more information on how to use AngularJS see the [FoBo Demo](http://www.medi
 #### Components Css files
 
 - ng-grid.css [v1.2.1, v1.2.2]
-- angular-material.css [v0.10.0,v1.0.1,v1.0.7]
+- angular-material.css [v0.10.0,v1.0.1,v1.0.8]
 - angular-material.layouts.css [v1.0.1]
 - ui-grid.css [v3.0.7]
 
@@ -138,8 +138,8 @@ For more information on how to use AngularJS see the [FoBo Demo](http://www.medi
 - ui-bootstrap.js [v0.2.0, v0.7.0]
 - ng-grid.js [v2.0.4, v2.0.7]
 - ui-grid.js [v3.0.7]
-- angular-material.js [v0.10.0,v1.0.1,v1.0.7]
-- angular-material-mocks.js [v1.0.1,v1.0.7]
+- angular-material.js [v0.10.0,v1.0.1,v1.0.8]
+- angular-material-mocks.js [v1.0.1,v1.0.8]
  
 #### i18n files
 

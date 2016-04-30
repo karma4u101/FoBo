@@ -3,6 +3,17 @@
 This resource module provides AngularJS resource components to the FoBo AngularJS Toolkit module, 
 but can also be used as-is, see below for setup information.
 
+## Core modules 
+
+- AngularJS core [v1.0.6, v1.2.11, v1.3.15, v1.4.1, v1.4.8, v1.5.3]
+
+## Components
+
+- Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0]
+- Angular NG-Grid [v2.0.4, v2.0.7]
+- Angular UI-Grid [v3.0.7]
+- Angular Material Design [v0.10.0, v1.0.1, v1.0.8]
+
 ### Lift FoBo boot hooks (when used in the FoBo module)
 
 ```scala
@@ -11,7 +22,7 @@ import net.liftmodules.FoBo
 FoBo.Resouce.Init=FoBo.Resouce.AngularJS153        //access to v1.5.3 core files 
 FoBo.Resouce.Init=FoBo.Resouce.AngularJS153i18n    //access to angular i18n files 
 FoBo.Resouce.Init=FoBo.Resouce.AJSUIBootstrap0100  //Angular UI Bootstrap
-FoBo.Resouce.Init=FoBo.Resouce.AJSMaterial107      //Angular Material
+FoBo.Resouce.Init=FoBo.Resouce.AJSMaterial108      //Angular Material
 FoBo.Resouce.Init=FoBo.Resouce.AJSUIGrid307        //Angular UI-Grid
 FoBo.Resouce.Init=FoBo.Resouce.AJSNGGrid207        //Angular NG-Grid
 ```
