@@ -46,6 +46,7 @@ import common._
  *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] [[net.liftmodules.FoBoFA]]
  *  - Kinetic JS [v5.1.0] [[net.liftmodules.FoBoKi]]
  *  - Google Code Prettify [vJun2011] [[net.liftmodules.FoBoGCP]]
+ *  - Highlight JS [v9.3.0] [[net.liftmodules.FoBoHL]]
  *  - Pace [v0.4.15, v1.0.2] [[net.liftmodules.FoBoPa]]
  *  - Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15, v1.4.1, v1.4.8, v1.5.3] (angular core modules) [[net.liftmodules.FoBoAJS]]
  *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component) [[net.liftmodules.FoBoAJS]]

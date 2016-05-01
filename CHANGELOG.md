@@ -19,14 +19,20 @@ See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGEL
 FoBo v1.6
 ---------
 ###New Features
-Splitting modules into **Toolkit modules** composed of a **Resource module** and a **API module**. 
+Splitting FoBo modules into **Toolkit modules** composed of a **Resource module** and a **API module**. 
 Making it possible to, in your project depend on artifacts including everything from a single FoBo 
 provided resource module, or one or more API or resource module(s), or as before one or more Toolkit 
 modules or via the FoBo/FoBo module get access to all it's Toolkit, Resource and API modules.   
 
+The *FoBoToolkit* and *FoBoJQuery* trait's has been **deprecated** in favour for using the new *ToolKit*, 
+*API* and *Resource* trait's and case objects.  
+
+To aide in Lift 3 enhanced support of a strong [CSP](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) FoBo now utilize Lifts 
+page script file's, to avoid inlining of javascript, by providing new or alternative API functions for script injection.  
+
 ###New modules
 -   [FoBo-HighlightJS](https://github.com/karma4u101/FoBo/tree/master/Highlight) Adds v9.3.0 - [highlight.js](https://highlightjs.org/) 
-    Syntax highlighting for the Web - Packaged with 21 languages (inc Scala) and 152 styles.
+    Syntax highlighting for the Web - Packaged with 21 languages (inc Scala) and 70+ styles.
     
 ###Updated modules
 -   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) Adds v1.0.2 - [Pace](http://github.hubspot.com/pace/docs/welcome/)
