@@ -1707,12 +1707,32 @@ package object FoBo {
      *
      */    
     case object Bootstrap2 extends API {
-      net.liftmodules.FoBoTB.API.Bootstrap2
+      FoBoTB.API.Bootstrap2
     }     
+    
     
     /*===Font Awesome API===============================================================*/
     
     /*===Google Code Prettify API===============================================================*/
+    
+    /*===Highlight API===============================================================*/
+    
+    /**
+     * Enable usage of FoBo's Pace API version 9&#8228;X&#8228;X in your bootstrap liftweb Boot.
+     * @version 9.X.X
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.FoBo 
+     *    :
+     *   FoBo.API.Init=FoBo.API.HighlightJS9
+     * }}}
+     */    
+     case object HighlightJS9 extends API {
+       FoBoHL.API.HighlightJS9
+     }         
+      
     
     /*===Kinetic API===============================================================*/
     
