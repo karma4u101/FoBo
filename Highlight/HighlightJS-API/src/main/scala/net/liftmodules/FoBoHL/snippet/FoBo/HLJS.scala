@@ -42,9 +42,7 @@ class HLJS extends StatefulSnippet with Loggable {
    * }}}
    * @since v1.6
    */
-  def initHighlightingOnLoad:CssSel = { 
-    var id = S.attr("id") openOr "id: NOT DEFINED!?"
-    var options = S.attr("options") openOr "" 
+  def initHighlightingOnLoad:CssSel = {  
     S.appendJs(sch.initHighlightingOnLoad())
     " *" #> ""
   }

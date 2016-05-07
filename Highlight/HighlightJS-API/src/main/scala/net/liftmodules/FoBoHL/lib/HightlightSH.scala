@@ -18,17 +18,13 @@ class HightlightSH() extends ScriptHelper {
  
 
   /**
-   * This function returns a script that will sets a popover action.
+   * This function returns a script that initate highlight js via jquery.
    * 
-   * @param id - The id of the element for which the popover should occur 
-   * @param options - A string list of popover options 
    * @return net.liftweb.http.js.JsCmd 
    * @since v1.4
    */
   def initHighlightingOnLoad():JsCmd = {
     JsRaw("""$('pre code').each(function(i, block) { hljs.highlightBlock(block); });""").cmd
-    //JsRaw("""$(function () { $('%s').popover({%s}); }); """.format(id,options)).cmd
-    //$('pre code').each(function(i, block) { hljs.highlightBlock(block); });
   }    
   
 }
