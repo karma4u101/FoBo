@@ -43,7 +43,7 @@ class HLJS extends StatefulSnippet with Loggable {
    * @since v1.6
    */
   def initHighlightingOnLoad:CssSel = {  
-    S.appendJs(sch.initHighlightingOnLoad())
+    S.appendJs(sch.highlightBlocks())
     " *" #> ""
   }
   

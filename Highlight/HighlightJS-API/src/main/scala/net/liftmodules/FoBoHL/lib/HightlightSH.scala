@@ -18,12 +18,16 @@ class HightlightSH() extends ScriptHelper {
  
 
   /**
-   * This function returns a script that initate highlight js via jquery.
+   * This function returns a JsCmd that contains a script to highlight js code blocks via jquery.
    * 
+* '''Result:''' This will result in the following being returned in a JsCmd:
+   * {{{
+   *       $('pre code').each(function(i, block) { hljs.highlightBlock(block); });
+   * }}}
    * @return net.liftweb.http.js.JsCmd 
-   * @since v1.4
+   * @since v1.6
    */
-  def initHighlightingOnLoad():JsCmd = {
+  def highlightBlocks():JsCmd = {
     JsRaw("""$('pre code').each(function(i, block) { hljs.highlightBlock(block); });""").cmd
   }    
   
