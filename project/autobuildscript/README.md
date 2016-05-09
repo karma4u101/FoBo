@@ -6,7 +6,7 @@ Lift 2.6.x is built with java 6 and lift 3.x is built with java 8
 
 More memory to sbt http://stackoverflow.com/questions/15280839/how-to-set-heap-size-for-sbt
 
-To publish use the publish.sh script, to change to a local publish replace 'publish-signed' with 'publish-local-signed' in respective publish script.
+To publish use the publish.sh script, to change to a local publish replace 'publish' with 'publish-local' in respective publish script.
 
 As of FoBo v1.4 builds against Lift 2.5 is no longer supported. 
 
