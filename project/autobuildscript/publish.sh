@@ -19,7 +19,7 @@ PUBLISH_25_SBT_COMMAND_FILE=${PWD}/project/autobuildscript/build-publish-Lift25.
 PUBLISH_26_SBT_COMMAND_FILE=${PWD}/project/autobuildscript/build-publish-Lift26.txt
 PUBLISH_30_SBT_COMMAND_FILE=${PWD}/project/autobuildscript/build-publish-Lift3.txt
 #default location's for java on a ubuntu system
-JAVA_6_PATH=/usr/lib/jvm/java-6-openjdk-amd64/jre/bin/java
+JAVA_6_PATH=/usr/lib/jvm/java-6-oracle/jre/bin/java
 JAVA_7_PATH=/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
 JAVA_8_PATH=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 LOG_FILE=build.log

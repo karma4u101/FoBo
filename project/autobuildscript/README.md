@@ -2,6 +2,8 @@
 Usage  
 ===== 
 
+Lift 2.6.x is built with java 6 and lift 3.x is built with java 8
+
 More memory to sbt http://stackoverflow.com/questions/15280839/how-to-set-heap-size-for-sbt
 
 To publish use the publish.sh script, to change to a local publish replace 'publish-signed' with 'publish-local-signed' in respective publish script.
@@ -19,7 +21,7 @@ sbt < project/autobuildscript/build-publish-Lift25.txt > build.log | tail -f bui
 Current target Lift 2.6 (java6 Scala 2.9.1, 2.9.1-1, 2.9.2, 2.10, 2.11)
 sbt < project/autobuildscript/build-publish-Lift26.txt > build.log | tail -f build.log
 
-Target Lift 3.x (OBS! use java7 Scala 2.11)
+Target Lift 3.x (OBS! use java8 Scala 2.11)
 sbt < project/autobuildscript/build-publish-Lift3.txt > build.log | tail -f build.log
 
 List of major Java major version numbers
