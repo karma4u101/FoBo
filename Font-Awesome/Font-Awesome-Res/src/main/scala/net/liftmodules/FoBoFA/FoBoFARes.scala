@@ -44,8 +44,8 @@ package object FoBoFARes {
     override def toString() = "FoBoFARes.Resource = "+store.toString()
     
     /**
-     * Enable usage of FoBo's FontAwesome resources version 4&#8228;5&#8228;0 in your bootstrap liftweb Boot.
-     * @version 4.5.0
+     * Enable usage of FoBo's FontAwesome resources version 4&#8228;6&#8228;3 in your bootstrap liftweb Boot.
+     * @version 4.6.3
      * 
      * '''Example:'''
      * 
@@ -55,10 +55,11 @@ package object FoBoFARes {
      *   FoBo.Resource.Init=FoBo.Resource.FontAwesome450
      * }}}
      */    
-     case object FontAwesome450 extends Resource {
+     case object FontAwesome463 extends Resource {
        FoBoResources.init
-       FoBoResources.fontAwesome450
+       FoBoResources.fontAwesome463
      } 
+    
     
     /**
      * Enable usage of FoBo's FontAwesome resources version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
@@ -141,10 +142,10 @@ package object FoBoFARes {
         }
       }      
       
-      lazy val fontAwesome450 = {
+      lazy val fontAwesome463 = {
         ResourceServer.rewrite {
-          case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "4.5.0", "css", "font-awesome.css")
-          case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "4.5.0", "css", "font-awesome.min.css")
+          case "fobo" :: "font-awesome.css" :: Nil if Props.devMode => List("fobo", "font-awesome", "4.6.3", "css", "font-awesome.css")
+          case "fobo" :: "font-awesome.css" :: Nil => List("fobo", "font-awesome", "4.6.3", "css", "font-awesome.min.css")
         }
       }
       

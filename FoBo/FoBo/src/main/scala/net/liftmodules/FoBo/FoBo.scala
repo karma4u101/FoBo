@@ -481,20 +481,21 @@ package object FoBo {
     
     /*===Font Awesome ToolKit===============================================================*/
     
+    
    /**
-     * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;5&#8228;0 in your bootstrap liftweb Boot.
-     * @version 4.5.0
+     * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;6&#8228;3 in your bootstrap liftweb Boot.
+     * @version 4.6.3
      * 
      * '''Example:'''
      * 
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome450
+     *   FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome463
      * }}}
      */    
-     case object FontAwesome450 extends ToolKit {
-       net.liftmodules.FoBoFA.ToolKit.FontAwesome450
+     case object FontAwesome463 extends ToolKit {
+       net.liftmodules.FoBoFA.ToolKit.FontAwesome463
      } 
      
    /**
@@ -1237,19 +1238,19 @@ package object FoBo {
     /*===Font Awesome Resource===============================================================*/
 
     /**
-     * Enable usage of FoBo's FontAwesome resources version 4&#8228;5&#8228;0 in your bootstrap liftweb Boot.
-     * @version 4.5.0
+     * Enable usage of FoBo's FontAwesome resources version 4&#8228;6&#8228;3 in your bootstrap liftweb Boot.
+     * @version 4.6.3
      * 
      * '''Example:'''
      * 
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.Resource.Init=FoBo.Resource.FontAwesome450
+     *   FoBo.Resource.Init=FoBo.Resource.FontAwesome463
      * }}}
      */    
-     case object FontAwesome450 extends Resource {
-       net.liftmodules.FoBoFA.Resource.FontAwesome450
+     case object FontAwesome463 extends Resource {
+       net.liftmodules.FoBoFA.Resource.FontAwesome463
      }
      
     /**

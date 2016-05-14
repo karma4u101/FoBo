@@ -7,6 +7,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2015-12-30** -- Module v1.5.1
 
 **Latest Updates:**
+- **2016-05-14** -- [Issue #80](https://github.com/karma4u101/FoBo/issues/80) Adding Font-Awesome v4.6.3 (removing unreleased v4.5.0)
 - **2016-04-30** -- [Issue #78](https://github.com/karma4u101/FoBo/issues/78) Adding Angular Material v1.0.8 (removing unreleased v1.0.7)
 - **2016-04-29** -- [Issue #76](https://github.com/karma4u101/FoBo/issues/76) Adding HighlightJS v9.3.0
 - **2016-03-30** -- [Issue #70](https://github.com/karma4u101/FoBo/issues/70) Adding Pace v1.0.2
@@ -36,7 +37,7 @@ FoBo future utilize Lifts page script file's, to avoid inlining of javascript, b
     
 ### Updated modules
 -   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) Adds v1.0.2 - [Pace](http://github.hubspot.com/pace/docs/welcome/)
--   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.5.0 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
+-   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.6.3 - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 -   [FoBo-AngularJS core modules](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.5.3 - [AngularJS](http://angularjs.org/)
 -   [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.0.8 - [Angular Material](https://material.angularjs.org/)
 

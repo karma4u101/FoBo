@@ -5,7 +5,7 @@ but can also be used as-is, see below for setup information.
 
 ## Components and available versions 
 
-- Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
+- Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.6.3] - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 
 ## Integration into your project 
 

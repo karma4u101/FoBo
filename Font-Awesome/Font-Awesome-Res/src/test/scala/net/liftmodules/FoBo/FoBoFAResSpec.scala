@@ -12,14 +12,14 @@ object FoBoFAResSpec extends Specification {
 
   sequential
  
-  //FontAwesome450  
-  "With FoBoFARes.Resource.Init set to FoBoFARes.Resource.FontAwesome450 the ResourceServer" should {
+  //FontAwesome463  
+  "With FoBoFARes.Resource.Init set to FoBoFARes.Resource.FontAwesome463 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
-      allowResource(FoBoFARes.Resource.FontAwesome450,"fobo"::"font-awesome.css"::Nil) must_== true 
+      allowResource(FoBoFARes.Resource.FontAwesome463,"fobo"::"font-awesome.css"::Nil) must_== true 
     }     
-    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.5.0/css/font-awesome.min.css" in {
-      rewriteResource(FoBoFARes.Resource.FontAwesome450,"fobo"::"font-awesome.css"::Nil) must_== 
-        List("fobo", "font-awesome", "4.5.0", "css", "font-awesome.min.css")
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.6.3/css/font-awesome.min.css" in {
+      rewriteResource(FoBoFARes.Resource.FontAwesome463,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.6.3", "css", "font-awesome.min.css")
     }        
   }  
   

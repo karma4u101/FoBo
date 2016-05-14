@@ -666,28 +666,28 @@ object FoBoSpec extends Specification  {
      rewriteResource(FoBo.Resource.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== 
         List("fobo", "font-awesome", "4.3.0", "css", "font-awesome.min.css")      
     }       
-  }  
+  }   
   
-  //FontAwesome450
-  "With FoBo.ToolKit.Init set to FoBo.ToolKit.FontAwesome450 the ResourceServer" should {    
+  //FontAwesome463
+  "With FoBo.ToolKit.Init set to FoBo.ToolKit.FontAwesome463 the ResourceServer" should {    
     "allow  fobo/font-awesome.css" in {
-      allowToolKitInit(FoBo.ToolKit.FontAwesome450,"fobo"::"font-awesome.css"::Nil) must_== true       
+      allowToolKitInit(FoBo.ToolKit.FontAwesome463,"fobo"::"font-awesome.css"::Nil) must_== true       
     }     
-    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.5.0/css/font-awesome.min.css" in {
-      rewriteToolKitInit(FoBo.ToolKit.FontAwesome450,"fobo"::"font-awesome.css"::Nil) must_== 
-        List("fobo", "font-awesome", "4.5.0", "css", "font-awesome.min.css")      
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.6.3/css/font-awesome.min.css" in {
+      rewriteToolKitInit(FoBo.ToolKit.FontAwesome463,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.6.3", "css", "font-awesome.min.css")      
     }       
   } 
   
-  "With FoBo.Resource.Init set to FoBo.Resource.FontAwesome450 the ResourceServer" should { 
+  "With FoBo.Resource.Init set to FoBo.Resource.FontAwesome463 the ResourceServer" should { 
     "allow  fobo/font-awesome.css" in  {
-      allowResource(FoBo.Resource.FontAwesome450,"fobo"::"font-awesome.css"::Nil)  must_== true 
+      allowResource(FoBo.Resource.FontAwesome463,"fobo"::"font-awesome.css"::Nil)  must_== true 
     }     
-    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.5.0/css/font-awesome.min.css" in  {
-     rewriteResource(FoBo.Resource.FontAwesome450,"fobo"::"font-awesome.css"::Nil) must_== 
-        List("fobo", "font-awesome", "4.5.0", "css", "font-awesome.min.css")      
+    "rewrit fobo/font-awesome.css to fobo/font-awesome/4.6.3/css/font-awesome.min.css" in  {
+     rewriteResource(FoBo.Resource.FontAwesome463,"fobo"::"font-awesome.css"::Nil) must_== 
+        List("fobo", "font-awesome", "4.6.3", "css", "font-awesome.min.css")      
     }       
-  }    
+  }   
   
   /*=================Google-Code-Prettify ====================================*/
   
