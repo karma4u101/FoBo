@@ -193,6 +193,7 @@ For more information se respective sub modules readme.
 - JQueryXYZ
 - JQueryMigrateXYZ
 - PrettifyXYZ
+- HighlightJSXYZ
 - PaceXYZ
 - KineticJSXYZ
 - AngularJSXYZ with components (AJSUIBootstrapXYZ, AJSUIGridXYZ, AJSNGGridXYZ, AJMaterialXYZ)
