@@ -1,4 +1,4 @@
-# FoBo - A Comprehensive Front-End Toolkit Module for Lift 
+# FoBo - A Comprehensive and Modular Front-End Toolkit Module for Lift 
 
 [![Build Status](https://secure.travis-ci.org/karma4u101/FoBo.png)](http://travis-ci.org/karma4u101/FoBo)
 [![Stories in Ready](https://badge.waffle.io/karma4u101/FoBo.svg?label=ready&title=Ready)](http://waffle.io/karma4u101/FoBo) 
@@ -11,7 +11,7 @@ front end toolkits for developing mobile scalable responsive web applications th
 A **live demo** and introduction to using the Lift module(s), including API documentation and links to running examples of starter templates and more, 
 can be seen at the [FoBo Template Demo](http://www.media4u101.se/fobo-lift-template-demo/). 
 
-With this Lift module you will get a hassle free inclusion and smooth upgrades of toolkits, you decide what toolkits and versions to enable.
+With this Lift module you will get a hassle free inclusion and smooth upgrades of toolkits, you decide what toolkits artifacts and versions to enable.
 The FoBo module is making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot), by 
 simultaneously supporting several versions of the included toolkits and, without code or reference changes, providing debug-able js and css 
 files in development and minimized files otherwise. 
