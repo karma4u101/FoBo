@@ -8,7 +8,7 @@
 FoBo is a [Lift module](http://liftweb.net/lift_modules), composed of several Toolkit, Resource and API modules, that includes industry leading open source 
 front end toolkits for developing mobile scalable responsive web applications that will jazz up your Lift applications with the toolkit(s) of your choice.
 
-A **live demo** and introduction to using the Lift module(s), including API documentation and links to running examples of starter templates and more, 
+A **live demo** and introduction to using the FoBo module(s), including API documentation and links to running examples of starter templates and more, 
 can be seen at the [FoBo Template Demo](http://www.media4u101.se/fobo-lift-template-demo/). 
 
 With this Lift module you will get a hassle free inclusion and smooth upgrades of toolkits, you decide what toolkits artifacts and versions to enable.
