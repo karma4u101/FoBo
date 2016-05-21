@@ -36,7 +36,7 @@ Setup example:
 The example will include a module built for lift 3.0.x. 
 If you are using maven observe that the artifact id also needs the Scala version.
 
-For more information on the AngularJS API module see [FoBo AngularJS ToolKit Module](https://github.com/karma4u101/Angular/AngularJS).
+For more information on the AngularJS API module see [FoBo AngularJS Toolkit Module](https://github.com/karma4u101/Angular/AngularJS).
 
 ## Contributions
 Improvements, contributions and suggestions are welcome! Clone the project and start working on a PR. You can also leave a issue report or drop a question/suggestion to the [Lift's mailing list](http://groups.google.com/group/liftweb/) 
