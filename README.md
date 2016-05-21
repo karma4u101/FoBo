@@ -5,8 +5,9 @@
 [![Stories in Progress](https://badge.waffle.io/karma4u101/FoBo.svg?label=In Progress&title=In Progress)](http://waffle.io/karma4u101/FoBo) 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/karma4u101/FoBo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-FoBo is a [Lift module](http://liftweb.net/lift_modules), composed of several Toolkit, Resource and API modules, that includes industry leading open source 
-front end toolkits for developing mobile scalable responsive web applications that will jazz up your Lift applications with the toolkit(s) of your choice.
+FoBo is a [Lift module](http://liftweb.net/lift_modules), composed of several Toolkit modules that includes industry leading open source front end 
+toolkits for developing mobile scalable responsive web applications that will jazz up your Lift applications with the toolkit(s) of your choice.
+The toolkit modules is in it's turn composed of a API module and a Resource module artifact making the usage of FoBo scalable and flexible.
 
 A **live demo** and introduction to using the FoBo module(s), including API documentation and links to running examples of starter templates and more, 
 can be seen at the [FoBo Template Demo](http://www.media4u101.se/fobo-lift-template-demo/). 
@@ -20,9 +21,9 @@ Using this module you will also get a clean separation of the toolkit files and 
 clutter your applications web-app resources directory. 
 
 #### FoBo API
-Some of the FoBo modules also has a evolving FoBo/Lift API that includes snippet:s and helper object:s (see API documents for usage) that will take 
-care of some common toolkit and component initiation and usage, like lift site-map to bootstrap or Angular Material menu builders, resource injection, 
-script generation and more.
+Some of the FoBo toolkit modules also includes a evolving FoBo/Lift API module that includes snippet:s and helper object:s (see API documents for usage) 
+that will take care of some common toolkit and component initiation and usage, like lift site-map to bootstrap or Angular Material menu builders, 
+resource injection, script generation and more.
 
 #### FoBo - Lift starter template
 **Bootstrap** A Lift v2.6 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) 
@@ -122,12 +123,13 @@ the following into your lift Boot
 ```scala
 import net.liftmodules.FoBo
   :    
+//initiate a toolkit to initiate usage of both resource and api
 FoBo.ToolKit.Init=FoBo.ToolKit.[ToolkitObjectXYZ]
 FoBo.ToolKit.Init=FoBo.ToolKit.[additional toolkit object name]
-//you can also use one or more resources modules (excluding ev. Lift/FoBo API)
+//you can also initate one or more resources modules (excluding ev. Lift/FoBo API)
 FoBo.Resource.Init=FoBo.Resource.[ResouceObjectXYZ]
 FoBo.Resource.Init=FoBo.Resource.[additional resource object name]
-//you can also use one or more API modules (providing the corresponding resource yourself)
+//you can also initiate one or more API modules (providing the corresponding resource yourself)
 FoBo.API.Init=FoBo.API.[APIObjectXYZ]
 FoBo.API.Init=FoBo.API.[additional api object name]
 ``` 
