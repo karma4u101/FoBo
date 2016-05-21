@@ -27,21 +27,21 @@ object FoBoTBSpec extends Specification  {
     }       
   } 
  
-  "With FoBoTB.ToolKit.Init set to FoBoTB.ToolKit.Bootstrap232 the ResourceServer" should {
+  "With FoBoTB.Toolkit.Init set to FoBoTB.Toolkit.Bootstrap232 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
-      allowToolKitInit(FoBoTB.ToolKit.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== true 
+      allowToolkitInit(FoBoTB.Toolkit.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
     "rewrit fobo/bootstrap.css to fobo/bootstrap/2.3.2/css/bootstrap-min.css" in {
-       rewriteToolKitInit(FoBoTB.ToolKit.Bootstrap232,"fobo"::"bootstrap.css"::Nil) must_== 
+       rewriteToolkitInit(FoBoTB.Toolkit.Bootstrap232,"fobo"::"bootstrap.css"::Nil) must_== 
          List("fobo", "bootstrap", "2.3.2", "css", "bootstrap-min.css")
     }    
     "rewrit fobo/bootstrap.js to fobo/bootstrap/2.3.2/js/bootstrap-min.js" in {
-      rewriteToolKitInit(FoBoTB.ToolKit.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoTB.Toolkit.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== 
         List("fobo", "bootstrap", "2.3.2", "js", "bootstrap-min.js")
     }       
   }   
   
-  "With FoBoTB.InitParam.ToolKit set to FoBoTB.Bootstrap232 the ResourceServer" should {
+  "With FoBoTB.InitParam.Toolkit set to FoBoTB.Bootstrap232 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowInitParam(FoBoTB.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
@@ -57,25 +57,25 @@ object FoBoTBSpec extends Specification  {
   
   
 
- //=== ToolKit.Init ==============//
-  def allowToolKitInit(resource:FoBoTB.ToolKit,path:List[String]) = {
-    FoBoTB.ToolKit.Init=resource 
+ //=== Toolkit.Init ==============//
+  def allowToolkitInit(resource:FoBoTB.Toolkit,path:List[String]) = {
+    FoBoTB.Toolkit.Init=resource 
     ResourceServer.allowedPaths(path)
   } 
  
-  def rewriteToolKitInit(resource:FoBoTB.ToolKit,path:List[String]) = {
-    FoBoTB.ToolKit.Init=resource 
+  def rewriteToolkitInit(resource:FoBoTB.Toolkit,path:List[String]) = {
+    FoBoTB.Toolkit.Init=resource 
     ResourceServer.pathRewriter(path)
   }  
   
- //=== InitParam.ToolKit ===============// 
+ //=== InitParam.Toolkit ===============// 
   def allowInitParam(resource:FoBoTB.FoBoToolkit,path:List[String]) = {
-    FoBoTB.InitParam.ToolKit=resource 
+    FoBoTB.InitParam.Toolkit=resource 
     ResourceServer.allowedPaths(path)
   } 
  
   def rewriteInitParam(resource:FoBoTB.FoBoToolkit,path:List[String]) = {
-    FoBoTB.InitParam.ToolKit=resource 
+    FoBoTB.InitParam.Toolkit=resource 
     ResourceServer.pathRewriter(path)
   } 
  

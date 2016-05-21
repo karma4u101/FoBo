@@ -15,12 +15,12 @@ import common._
 package object FoBoAJS {
   
   override def toString() = {
-    FoBoAJS.ToolKit.toString()+" "+FoBoAJS.Resource.toString()+" "+FoBoAJS.API.toString()
+    FoBoAJS.Toolkit.toString()+" "+FoBoAJS.Resource.toString()+" "+FoBoAJS.API.toString()
   }  
   
   /**
-   * Initiate FoBo's Angular ToolKit(s) in you bootstrap liftweb Boot.
-   * Using the ToolKit initiation you will bring in both the 
+   * Initiate FoBo's Angular Toolkit(s) in you bootstrap liftweb Boot.
+   * Using the Toolkit initiation you will bring in both the 
    * toolkit's resources and if present the FoBo API associated 
    * with the toolkit.  
    * 
@@ -28,11 +28,11 @@ package object FoBoAJS {
    * {{{
    *   import net.liftmodules.{FoBoAJS => FoBo}
    *    :
-   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Object]
+   *   FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit Object]
    * }}}
    * '''Note:''' To see available objects click on the round trait icon in the header of this page.
    */  
-  abstract sealed trait ToolKit
+  abstract sealed trait Toolkit
   
   /**
    * Initiate FoBo's Angular Resource(s) in you bootstrap liftweb Boot.
@@ -61,19 +61,19 @@ package object FoBoAJS {
   abstract sealed trait API
   
   
-  /*=== ToolKit ============================================*/
-  object ToolKit extends ToolKit {
+  /*=== Toolkit ============================================*/
+  object Toolkit extends Toolkit {
  
     //we don't actually need to store the objects (for now) so lets just save 
     //the object name, we can easily change this if we need to
-    private type Store = List[String] //List[ToolKit]
+    private type Store = List[String] //List[Toolkit]
     private var store:Store = List()
     def Init:Store = store
-    def Init_=(t:ToolKit):Store = {
+    def Init_=(t:Toolkit):Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
     }    
-    override def toString() = "FoBoAJS.ToolKit = "+store.toString()
+    override def toString() = "FoBoAJS.Toolkit = "+store.toString()
     /**
      * Enable usage of FoBo's AngularJS API and resources version 1&#8228;5&#8228;3 in your bootstrap liftweb Boot.
      * @version 1.5.3
@@ -83,11 +83,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS153
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS153
      * }}}
      *
      */
-    case object AngularJS153 extends ToolKit {
+    case object AngularJS153 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AngularJS153
     } 
@@ -101,11 +101,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS153i18n
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS153i18n
      * }}}
      *
      */
-    case object AngularJS153i18n extends ToolKit {
+    case object AngularJS153i18n extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AngularJS153i18n
     }     
@@ -119,11 +119,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS148
      * }}}
      *
      */
-    case object AngularJS148 extends ToolKit {
+    case object AngularJS148 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AngularJS148
     } 
@@ -137,11 +137,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148i18n
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS148i18n
      * }}}
      *
      */
-    case object AngularJS148i18n extends ToolKit {
+    case object AngularJS148i18n extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AngularJS148i18n
     } 
@@ -155,11 +155,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS148
      * }}}
      *
      */
-    case object AngularJS141 extends ToolKit {
+    case object AngularJS141 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AngularJS141
     }    
@@ -173,11 +173,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS141i18n
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS141i18n
      * }}}
      *
      */
-    case object AngularJS141i18n extends ToolKit {
+    case object AngularJS141i18n extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AngularJS141i18n
     }
@@ -191,11 +191,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1315
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS1315
      * }}}
      *
      */
-    case object AngularJS1315 extends ToolKit {
+    case object AngularJS1315 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AngularJS1315
     } 
@@ -209,11 +209,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1315i18n
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS1315i18n
      * }}}
      *
      */
-    case object AngularJS1315i18n extends ToolKit {
+    case object AngularJS1315i18n extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AngularJS1315i18n
     }     
@@ -227,11 +227,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1219
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS1219
      * }}}
      *
      */
-    case object AngularJS1219 extends ToolKit {
+    case object AngularJS1219 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AngularJS1219
     }     
@@ -245,11 +245,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1219i18n
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS1219i18n
      * }}}
      *
      */
-    case object AngularJS1219i18n extends ToolKit {
+    case object AngularJS1219i18n extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AngularJS1219i18n
     }
@@ -263,12 +263,12 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial0100
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial0100
      * }}}
      *
      */
     @deprecated("Use AJMaterial101 or later","1.5.0")
-    case object AJMaterial0100 extends ToolKit {
+    case object AJMaterial0100 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AJMaterial0100
     }
@@ -282,11 +282,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial101
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial101
      * }}}
      *
      */
-    case object AJMaterial101 extends ToolKit {
+    case object AJMaterial101 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AJMaterial101
     }
@@ -300,11 +300,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial108
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial108
      * }}}
      *
      */
-    case object AJMaterial108 extends ToolKit {
+    case object AJMaterial108 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AJMaterial108
     }   
@@ -318,11 +318,11 @@ package object FoBoAJS {
 //     * {{{
 //     *   import net.liftmodules.{FoBoAJS => FoBo}
 //     *    :
-//     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial110
+//     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial110
 //     * }}}
 //     *
 //     */
-//    case object AJMaterial110 extends ToolKit {
+//    case object AJMaterial110 extends Toolkit {
 //      FoBoAJSAPI.API.Angular1
 //      FoBoAJSRes.Resource.AJMaterial110
 //    }         
@@ -336,11 +336,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap0100
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap0100
      * }}}
      *
      */
-    case object AJSUIBootstrap0100 extends ToolKit {
+    case object AJSUIBootstrap0100 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AJSUIBootstrap0100
     }  
@@ -354,11 +354,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    : 
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap070
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap070
      * }}}
      *
      */
-    case object AJSUIBootstrap070 extends ToolKit {
+    case object AJSUIBootstrap070 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AJSUIBootstrap070
     }
@@ -372,11 +372,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap020
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap020
      * }}}
      *
      */
-    case object AJSUIBootstrap020 extends ToolKit {
+    case object AJSUIBootstrap020 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AJSUIBootstrap020
     }    
@@ -390,11 +390,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJSNGGrid207
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJSNGGrid207
      * }}}
      *
      */
-    case object AJSNGGrid207 extends ToolKit {
+    case object AJSNGGrid207 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AJSNGGrid207
     }
@@ -408,11 +408,11 @@ package object FoBoAJS {
      * {{{
      *   import net.liftmodules.{FoBoAJS => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIGrid307
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIGrid307
      * }}}
      *
      */
-    case object AJSUIGrid307 extends ToolKit {
+    case object AJSUIGrid307 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AJSUIGrid307
     }        
@@ -801,15 +801,15 @@ package object FoBoAJS {
   }
 
   
-  @deprecated("Use FoBoAJS.ToolKit or FoBoAJS.Resource and FoBoAJS.API","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit or FoBoAJS.Resource and FoBoAJS.API","1.6.0")
   abstract sealed trait FoBoToolkit
   
   /**
    *
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.[Toolkit Object]","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.[Toolkit Object]","1.6.0")
   object InitParam extends FoBoToolkit {
-    var ToolKit: FoBoToolkit = null 
+    var Toolkit: FoBoToolkit = null 
   }
  
   /**
@@ -825,9 +825,9 @@ package object FoBoAJS {
    * }}}
    * @since v1.5
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS148","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.AngularJS148","1.6.0")
   case object AngularJS148 extends FoBoToolkit {
-    ToolKit.AngularJS148
+    Toolkit.AngularJS148
   } 
   
     /**
@@ -843,9 +843,9 @@ package object FoBoAJS {
    * }}}
    * @since v1.5
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS148i18n","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.AngularJS148i18n","1.6.0")
   case object AngularJS148i18n extends FoBoToolkit {
-    ToolKit.AngularJS148i18n
+    Toolkit.AngularJS148i18n
   } 
   
   
@@ -862,9 +862,9 @@ package object FoBoAJS {
    * }}}
    * @since v1.4
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS141","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.AngularJS141","1.6.0")
   case object AngularJS141 extends FoBoToolkit {
-    ToolKit.AngularJS141
+    Toolkit.AngularJS141
   } 
   
     /**
@@ -880,9 +880,9 @@ package object FoBoAJS {
    * }}}
    * @since v1.4
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS141i18n","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.AngularJS141i18n","1.6.0")
   case object AngularJS141i18n extends FoBoToolkit {
-    ToolKit.AngularJS141i18n
+    Toolkit.AngularJS141i18n
   } 
    
   /**
@@ -898,9 +898,9 @@ package object FoBoAJS {
    * }}}
    * @since v1.4
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS1315","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.AngularJS1315","1.6.0")
   case object AngularJS1315 extends FoBoToolkit {
-    ToolKit.AngularJS1315
+    Toolkit.AngularJS1315
   } 
   
    /**
@@ -916,9 +916,9 @@ package object FoBoAJS {
    * }}}
    * @since v1.4
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS1315i18n","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.AngularJS1315i18n","1.6.0")
   case object AngularJS1315i18n extends FoBoToolkit {
-    ToolKit.AngularJS1315i18n
+    Toolkit.AngularJS1315i18n
   }   
   
   
@@ -935,9 +935,9 @@ package object FoBoAJS {
    * }}}
    * @since v1.3
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS1219","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.AngularJS1219","1.6.0")
   case object AngularJS1219 extends FoBoToolkit {
-    ToolKit.AngularJS1219
+    Toolkit.AngularJS1219
   } 
   
    /**
@@ -953,9 +953,9 @@ package object FoBoAJS {
    * }}}
    * @since v1.3
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AngularJS1219i18n","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.AngularJS1219i18n","1.6.0")
   case object AngularJS1219i18n extends FoBoToolkit {
-    ToolKit.AngularJS1219i18n
+    Toolkit.AngularJS1219i18n
   } 
   
    /**
@@ -973,7 +973,7 @@ package object FoBoAJS {
    */
   @deprecated("Use AJMaterial101 or later","1.5.0")
   case object AJMaterial0100 extends FoBoToolkit {
-    ToolKit.AJMaterial0100
+    Toolkit.AJMaterial0100
   }
   
 
@@ -990,9 +990,9 @@ package object FoBoAJS {
    * }}}
    * @since v1.5
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJMaterial101","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.AJMaterial101","1.6.0")
   case object AJMaterial101 extends FoBoToolkit {
-    ToolKit.AJMaterial101
+    Toolkit.AJMaterial101
   }  
   
    /**
@@ -1008,9 +1008,9 @@ package object FoBoAJS {
    * }}}
    * @since v1.6
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJMaterial107","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.AJMaterial107","1.6.0")
   case object AJMaterial108 extends FoBoToolkit {
-    ToolKit.AJMaterial108
+    Toolkit.AJMaterial108
   }   
   
    /**
@@ -1026,9 +1026,9 @@ package object FoBoAJS {
    * }}}
    * @since v1.2
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJSUIBootstrap0100","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.AJSUIBootstrap0100","1.6.0")
   case object AJSUIBootstrap0100 extends FoBoToolkit {
-    ToolKit.AJSUIBootstrap0100
+    Toolkit.AJSUIBootstrap0100
   }   
   
   /**
@@ -1044,9 +1044,9 @@ package object FoBoAJS {
    * }}}
    * @since v1.2
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJSUIBootstrap070","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.AJSUIBootstrap070","1.6.0")
   case object AJSUIBootstrap070 extends FoBoToolkit {
-    ToolKit.AJSUIBootstrap070
+    Toolkit.AJSUIBootstrap070
   }   
 
   /**
@@ -1062,9 +1062,9 @@ package object FoBoAJS {
    * }}}
    * @since v1.0
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJSUIBootstrap020","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.AJSUIBootstrap020","1.6.0")
   case object AJSUIBootstrap020 extends FoBoToolkit {
-    ToolKit.AJSUIBootstrap020
+    Toolkit.AJSUIBootstrap020
   }   
  
   /**
@@ -1081,9 +1081,9 @@ package object FoBoAJS {
    * }}}
    * @since v1.2
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJSNGGrid207","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.AJSNGGrid207","1.6.0")
   case object AJSNGGrid207 extends FoBoToolkit {
-    ToolKit.AJSNGGrid207
+    Toolkit.AJSNGGrid207
   }
   
   /**
@@ -1099,9 +1099,9 @@ package object FoBoAJS {
    * }}}
    * @since v1.5
    */
-  @deprecated("Use FoBoAJS.ToolKit.Init=FoBoAJS.ToolKit.AJSUIGrid307","1.6.0")
+  @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.AJSUIGrid307","1.6.0")
   case object AJSUIGrid307 extends FoBoToolkit {
-    ToolKit.AJSUIGrid307
+    Toolkit.AJSUIGrid307
   }  
    
 }

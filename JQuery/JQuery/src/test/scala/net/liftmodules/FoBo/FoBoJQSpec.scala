@@ -21,17 +21,17 @@ object FoBoJQSpec extends Specification {
     }        
   }
   
-  "With FoBoJQ.ToolKit.Init set to FoBoJQ.ToolKit.JQueryMigrate121 the ResourceServer" should {
+  "With FoBoJQ.Toolkit.Init set to FoBoJQ.Toolkit.JQueryMigrate121 the ResourceServer" should {
     "allow  fobo/jquery-migrate.js" in {
-      allowToolKitInit(FoBoJQ.ToolKit.JQueryMigrate121,"fobo"::"jquery-migrate.js"::Nil) must_== true 
+      allowToolkitInit(FoBoJQ.Toolkit.JQueryMigrate121,"fobo"::"jquery-migrate.js"::Nil) must_== true 
     }     
     "rewrit fobo/jquery-migrate.js to jquery-migrate/1.2.1/js/jquery-migrate-min.js" in {
-      rewriteToolKitInit(FoBoJQ.ToolKit.JQueryMigrate121,"fobo"::"jquery-migrate.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoJQ.Toolkit.JQueryMigrate121,"fobo"::"jquery-migrate.js"::Nil) must_== 
         List("jquery-migrate", "1.2.1", "js", "jquery-migrate-min.js")
     }        
   }  
   
-  "With FoBoJQ.InitParam.ToolKit set to FoBoJQ.JQueryMigrate121 the ResourceServer" should {
+  "With FoBoJQ.InitParam.Toolkit set to FoBoJQ.JQueryMigrate121 the ResourceServer" should {
     "allow  fobo/jquery-migrate.js" in {
       allowInitParam(FoBoJQ.JQueryMigrate121,"fobo"::"jquery-migrate.js"::Nil) must_== true 
     }     
@@ -52,17 +52,17 @@ object FoBoJQSpec extends Specification {
     }        
   }   
   
-  "With FoBoJQ.ToolKit.Init set to FoBoJQ.ToolKit.JQuery214 the ResourceServer" should {
+  "With FoBoJQ.Toolkit.Init set to FoBoJQ.Toolkit.JQuery214 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
-      allowToolKitInit(FoBoJQ.ToolKit.JQuery214,"fobo"::"jquery.js"::Nil) must_== true 
+      allowToolkitInit(FoBoJQ.Toolkit.JQuery214,"fobo"::"jquery.js"::Nil) must_== true 
     }     
     "rewrit fobo/jquery.js to jquery-migrate/2.1.4/js/jquery-min.js" in {
-      rewriteToolKitInit(FoBoJQ.ToolKit.JQuery214,"fobo"::"jquery.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoJQ.Toolkit.JQuery214,"fobo"::"jquery.js"::Nil) must_== 
         List("jquery", "2.1.4", "js", "jquery-min.js")
     }        
   }  
   
-  "With FoBoJQ.InitParam.ToolKit set to FoBoJQ.JQuery214 the ResourceServer" should {
+  "With FoBoJQ.InitParam.Toolkit set to FoBoJQ.JQuery214 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowInitParam(FoBoJQ.JQuery214,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -83,17 +83,17 @@ object FoBoJQSpec extends Specification {
     }        
   }  
   
-  "With FoBoJQ.ToolKit.Init set to FoBoJQ.ToolKit.JQuery211 the ResourceServer" should {
+  "With FoBoJQ.Toolkit.Init set to FoBoJQ.Toolkit.JQuery211 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
-      allowToolKitInit(FoBoJQ.ToolKit.JQuery211,"fobo"::"jquery.js"::Nil) must_== true 
+      allowToolkitInit(FoBoJQ.Toolkit.JQuery211,"fobo"::"jquery.js"::Nil) must_== true 
     }     
     "rewrit fobo/jquery.js to jquery-migrate/2.1.1/js/jquery-min.js" in {
-      rewriteToolKitInit(FoBoJQ.ToolKit.JQuery211,"fobo"::"jquery.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoJQ.Toolkit.JQuery211,"fobo"::"jquery.js"::Nil) must_== 
         List("jquery", "2.1.1", "js", "jquery-min.js")
     }        
   }  
   
-  "With FoBoJQ.InitParam.ToolKit set to FoBoJQ.JQuery211 the ResourceServer" should {
+  "With FoBoJQ.InitParam.Toolkit set to FoBoJQ.JQuery211 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowInitParam(FoBoJQ.JQuery211,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -114,17 +114,17 @@ object FoBoJQSpec extends Specification {
     }        
   } 
   
-  "With FoBoJQ.ToolKit.Init set to FoBoJQ.ToolKit.JQuery1113 the ResourceServer" should {
+  "With FoBoJQ.Toolkit.Init set to FoBoJQ.Toolkit.JQuery1113 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
-      allowToolKitInit(FoBoJQ.ToolKit.JQuery1113,"fobo"::"jquery.js"::Nil) must_== true 
+      allowToolkitInit(FoBoJQ.Toolkit.JQuery1113,"fobo"::"jquery.js"::Nil) must_== true 
     }     
     "rewrit fobo/jquery.js to jquery-migrate/1.11.3/js/jquery-min.js" in {
-      rewriteToolKitInit(FoBoJQ.ToolKit.JQuery1113,"fobo"::"jquery.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoJQ.Toolkit.JQuery1113,"fobo"::"jquery.js"::Nil) must_== 
         List("jquery", "1.11.3", "js", "jquery-min.js")
     }        
   }  
   
-  "With FoBoJQ.InitParam.ToolKit set to FoBoJQ.JQuery1113 the ResourceServer" should {
+  "With FoBoJQ.InitParam.Toolkit set to FoBoJQ.JQuery1113 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowInitParam(FoBoJQ.JQuery1113,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -145,17 +145,17 @@ object FoBoJQSpec extends Specification {
     }        
   }  
   
-  "With FoBoJQ.ToolKit.Init set to FoBoJQ.ToolKit.JQuery1102 the ResourceServer" should {
+  "With FoBoJQ.Toolkit.Init set to FoBoJQ.Toolkit.JQuery1102 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
-      allowToolKitInit(FoBoJQ.ToolKit.JQuery1102,"fobo"::"jquery.js"::Nil) must_== true 
+      allowToolkitInit(FoBoJQ.Toolkit.JQuery1102,"fobo"::"jquery.js"::Nil) must_== true 
     }     
     "rewrit fobo/jquery.js to jquery-migrate/1.10.2/js/jquery-min.js" in {
-      rewriteToolKitInit(FoBoJQ.ToolKit.JQuery1102,"fobo"::"jquery.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoJQ.Toolkit.JQuery1102,"fobo"::"jquery.js"::Nil) must_== 
         List("jquery", "1.10.2", "js", "jquery-min.js")
     }        
   }  
   
-  "With FoBoJQ.InitParam.ToolKit set to FoBoJQ.JQuery1102 the ResourceServer" should {
+  "With FoBoJQ.InitParam.Toolkit set to FoBoJQ.JQuery1102 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowInitParam(FoBoJQ.JQuery1102,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -176,17 +176,17 @@ object FoBoJQSpec extends Specification {
     }        
   } 
   
-  "With FoBoJQ.ToolKit.Init set to FoBoJQ.ToolKit.JQuery191 the ResourceServer" should {
+  "With FoBoJQ.Toolkit.Init set to FoBoJQ.Toolkit.JQuery191 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
-      allowToolKitInit(FoBoJQ.ToolKit.JQuery191,"fobo"::"jquery.js"::Nil) must_== true 
+      allowToolkitInit(FoBoJQ.Toolkit.JQuery191,"fobo"::"jquery.js"::Nil) must_== true 
     }     
     "rewrit fobo/jquery.js to jquery-migrate/1.9.1/js/jquery-min.js" in {
-      rewriteToolKitInit(FoBoJQ.ToolKit.JQuery191,"fobo"::"jquery.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoJQ.Toolkit.JQuery191,"fobo"::"jquery.js"::Nil) must_== 
         List("jquery", "1.9.1", "js", "jquery-min.js")
     }        
   }  
   
-  "With FoBoJQ.InitParam.ToolKit set to FoBoJQ.JQuery191 the ResourceServer" should {
+  "With FoBoJQ.InitParam.Toolkit set to FoBoJQ.JQuery191 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowInitParam(FoBoJQ.JQuery191,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -207,17 +207,17 @@ object FoBoJQSpec extends Specification {
     }        
   }  
   
-  "With FoBoJQ.ToolKit.Init set to FoBoJQ.ToolKit.JQuery182 the ResourceServer" should {
+  "With FoBoJQ.Toolkit.Init set to FoBoJQ.Toolkit.JQuery182 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
-      allowToolKitInit(FoBoJQ.ToolKit.JQuery182,"fobo"::"jquery.js"::Nil) must_== true 
+      allowToolkitInit(FoBoJQ.Toolkit.JQuery182,"fobo"::"jquery.js"::Nil) must_== true 
     }     
     "rewrit fobo/jquery.js to jquery-migrate/1.8.2/js/jquery-min.js" in {
-      rewriteToolKitInit(FoBoJQ.ToolKit.JQuery182,"fobo"::"jquery.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoJQ.Toolkit.JQuery182,"fobo"::"jquery.js"::Nil) must_== 
         List("jquery", "1.8.2", "js", "jquery-min.js")
     }        
   }  
   
-  "With FoBoJQ.InitParam.ToolKit set to FoBoJQ.JQuery182 the ResourceServer" should {
+  "With FoBoJQ.InitParam.Toolkit set to FoBoJQ.JQuery182 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowInitParam(FoBoJQ.JQuery182,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -238,17 +238,17 @@ object FoBoJQSpec extends Specification {
     }        
   } 
   
-  "With FoBoJQ.ToolKit.Init set to FoBoJQ.ToolKit.JQuery172 the ResourceServer" should {
+  "With FoBoJQ.Toolkit.Init set to FoBoJQ.Toolkit.JQuery172 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
-      allowToolKitInit(FoBoJQ.ToolKit.JQuery172,"fobo"::"jquery.js"::Nil) must_== true 
+      allowToolkitInit(FoBoJQ.Toolkit.JQuery172,"fobo"::"jquery.js"::Nil) must_== true 
     }     
     "rewrit fobo/jquery.js to jquery-migrate/1.7.2/js/jquery-min.js" in {
-      rewriteToolKitInit(FoBoJQ.ToolKit.JQuery172,"fobo"::"jquery.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoJQ.Toolkit.JQuery172,"fobo"::"jquery.js"::Nil) must_== 
         List("jquery", "1.7.2", "js", "jquery-min.js")
     }        
   }  
   
-  "With FoBoJQ.InitParam.ToolKit set to FoBoJQ.JQuery172 the ResourceServer" should {
+  "With FoBoJQ.InitParam.Toolkit set to FoBoJQ.JQuery172 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowInitParam(FoBoJQ.JQuery172,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -258,14 +258,14 @@ object FoBoJQSpec extends Specification {
     }        
   }   
   
- //=== ToolKit.Init ==============//
-  def allowToolKitInit(resource:FoBoJQ.ToolKit,path:List[String]) = {
-    FoBoJQ.ToolKit.Init=resource 
+ //=== Toolkit.Init ==============//
+  def allowToolkitInit(resource:FoBoJQ.Toolkit,path:List[String]) = {
+    FoBoJQ.Toolkit.Init=resource 
     ResourceServer.allowedPaths(path)
   } 
  
-  def rewriteToolKitInit(resource:FoBoJQ.ToolKit,path:List[String]) = {
-    FoBoJQ.ToolKit.Init=resource 
+  def rewriteToolkitInit(resource:FoBoJQ.Toolkit,path:List[String]) = {
+    FoBoJQ.Toolkit.Init=resource 
     ResourceServer.pathRewriter(path)
   }  
  
@@ -280,7 +280,7 @@ object FoBoJQSpec extends Specification {
     ResourceServer.pathRewriter(path)
   }  
   
- //=== InitParam.ToolKit ===============// 
+ //=== InitParam.Toolkit ===============// 
   def allowInitParam(resource:FoBoJQ.FoBoJQ,path:List[String]) = {
     FoBoJQ.InitParam.JQuery=resource 
     ResourceServer.allowedPaths(path)

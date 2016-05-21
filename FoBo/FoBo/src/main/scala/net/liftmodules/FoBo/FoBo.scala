@@ -68,17 +68,17 @@ import common._
  *
  * @example To initiate this module for usage in your Lift project set something like the following in 
  * your projects Lift bootstrap.liftweb.Boot boot method. Here the FoBo ToolkitObjectNameXYZ 
- * represent one of FoBo's available FoBo ToolKit objects.
+ * represent one of FoBo's available FoBo Toolkit objects.
  * {{{
  *    import net.liftmodules.FoBo
  *     :
  *     :
- *    FoBo.ToolKit.Init=FoBo.ToolKit.JQueryXYZ  //the fobo jquery module, version xyz
- *    FoBo.ToolKit.Init=FoBo.ToolKit.ToolkitObjectNameXYZ //one or more fobo toolkits 
- *    FoBo.ToolKit.Init=FoBo.ToolKit.ToolkitObjectNameXYZ
+ *    FoBo.Toolkit.Init=FoBo.Toolkit.JQueryXYZ  //the fobo jquery module, version xyz
+ *    FoBo.Toolkit.Init=FoBo.Toolkit.ToolkitObjectNameXYZ //one or more fobo toolkits 
+ *    FoBo.Toolkit.Init=FoBo.Toolkit.ToolkitObjectNameXYZ
  * }}}
  * 
- * You may substitute ToolKit for Resource or API and if you wish also adjust the artifact dependencies 
+ * You may substitute Toolkit for Resource or API and if you wish also adjust the artifact dependencies 
  * accordingly to include just the FoBo modules you use, but if size is not a issue using the FoBo/FoBo 
  * module is convenient and gives you a lot to pick from.
  * 
@@ -89,11 +89,11 @@ import common._
 package object FoBo {
     
   override def toString() = {
-    FoBo.ToolKit.toString()+" "+FoBo.Resource.toString()+" "+FoBo.API.toString()
+    FoBo.Toolkit.toString()+" "+FoBo.Resource.toString()+" "+FoBo.API.toString()
   }
   /**
-   * Initiate FoBo's ToolKit(s) in you bootstrap liftweb Boot.
-   * Using the ToolKit initiation you will bring in both the 
+   * Initiate FoBo's Toolkit(s) in you bootstrap liftweb Boot.
+   * Using the Toolkit initiation you will bring in both the 
    * toolkit's resources and if present the FoBo API associated 
    * with the toolkit.  
    * 
@@ -101,11 +101,11 @@ package object FoBo {
    * {{{
    *   import net.liftmodules.FoBo
    *    :
-   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Object]
+   *   FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit Object]
    * }}}
    * '''Note:''' To see available objects click on the round trait icon in the header of this page.
    */
-  abstract sealed trait ToolKit
+  abstract sealed trait Toolkit
   
   /**
    * Initiate the toolkit's associated resources in you bootstrap liftweb Boot.
@@ -137,21 +137,21 @@ package object FoBo {
    */   
   abstract sealed trait API
   
-  /*=== ToolKit ============================================*/
+  /*=== Toolkit ============================================*/
   
-  object ToolKit extends ToolKit {
+  object Toolkit extends Toolkit {
     //we don't actually need to store the objects (for now) so lets just save 
     //the object name, we can easily change this if we need to
-    private type Store = List[String] //List[ToolKit]
+    private type Store = List[String] //List[Toolkit]
     private var store:Store = List()
     def Init:Store = store
-    def Init_=(t:ToolKit):Store = {
+    def Init_=(t:Toolkit):Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
     }   
-    override def toString() = "FoBo.ToolKit = "+store.toString()
+    override def toString() = "FoBo.Toolkit = "+store.toString()
     
-    /*===Angular ToolKit===============================================================*/
+    /*===Angular Toolkit===============================================================*/
     
     /**
      * Enable usage of FoBo's AngularJS API and resources version 1&#8228;5&#8228;3 in your bootstrap liftweb Boot.
@@ -162,12 +162,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS153
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS153
      * }}}
      * @since v1.6
      */
-    case object AngularJS153 extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AngularJS153
+    case object AngularJS153 extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AngularJS153
     }  
     
     /**
@@ -179,12 +179,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS153i18n
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS153i18n
      * }}}
      *
      */
-    case object AngularJS153i18n extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AngularJS153i18n
+    case object AngularJS153i18n extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AngularJS153i18n
     }     
     
     
@@ -197,12 +197,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS148
      * }}}
      *
      */
-    case object AngularJS148 extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AngularJS148
+    case object AngularJS148 extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AngularJS148
     } 
     
     /**
@@ -214,12 +214,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148i18n
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS148i18n
      * }}}
      *
      */
-    case object AngularJS148i18n extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AngularJS148i18n
+    case object AngularJS148i18n extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AngularJS148i18n
     } 
   
     /**
@@ -231,12 +231,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS148
      * }}}
      *
      */
-    case object AngularJS141 extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AngularJS141
+    case object AngularJS141 extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AngularJS141
     }    
     
     /**
@@ -248,12 +248,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS141i18n
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS141i18n
      * }}}
      *
      */
-    case object AngularJS141i18n extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AngularJS141i18n
+    case object AngularJS141i18n extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AngularJS141i18n
     }
     
     /**
@@ -265,12 +265,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1315
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS1315
      * }}}
      *
      */
-    case object AngularJS1315 extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AngularJS1315
+    case object AngularJS1315 extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AngularJS1315
     } 
 
      /**
@@ -282,12 +282,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1315i18n
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS1315i18n
      * }}}
      *
      */
-    case object AngularJS1315i18n extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AngularJS1315i18n
+    case object AngularJS1315i18n extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AngularJS1315i18n
     }     
     
     /**
@@ -299,12 +299,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1219
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS1219
      * }}}
      *
      */
-    case object AngularJS1219 extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AngularJS1219
+    case object AngularJS1219 extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AngularJS1219
     }     
     
      /**
@@ -316,12 +316,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1219i18n
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS1219i18n
      * }}}
      *
      */
-    case object AngularJS1219i18n extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AngularJS1219i18n
+    case object AngularJS1219i18n extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AngularJS1219i18n
     }
   
      /**
@@ -333,13 +333,13 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial0100
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial0100
      * }}}
      *
      */
     @deprecated("Use AJMaterial108 or later","1.5.0")
-    case object AJMaterial0100 extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AJMaterial0100
+    case object AJMaterial0100 extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AJMaterial0100
     }
 
      /**
@@ -351,13 +351,13 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial101
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial101
      * }}}
      *
      */
     @deprecated("Use AJMaterial108 or later","1.6.0")
-    case object AJMaterial101 extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AJMaterial101
+    case object AJMaterial101 extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AJMaterial101
     }     
     
      /**
@@ -369,12 +369,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial108
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial108
      * }}}
      *
      */
-    case object AJMaterial108 extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AJMaterial108
+    case object AJMaterial108 extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AJMaterial108
     }  
     
 //     /**
@@ -386,12 +386,12 @@ package object FoBo {
 //     * {{{
 //     *   import net.liftmodules.FoBo
 //     *    :
-//     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial110
+//     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial110
 //     * }}}
 //     *
 //     */
-//    case object AJMaterial110 extends ToolKit {
-//      net.liftmodules.FoBoAJS.ToolKit.AJMaterial110
+//    case object AJMaterial110 extends Toolkit {
+//      net.liftmodules.FoBoAJS.Toolkit.AJMaterial110
 //    }       
     
      /**
@@ -403,12 +403,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap0100
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap0100
      * }}}
      *
      */
-    case object AJSUIBootstrap0100 extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AJSUIBootstrap0100
+    case object AJSUIBootstrap0100 extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AJSUIBootstrap0100
     }  
  
      /**
@@ -420,12 +420,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    : 
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap070
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap070
      * }}}
      *
      */
-    case object AJSUIBootstrap070 extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AJSUIBootstrap070
+    case object AJSUIBootstrap070 extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AJSUIBootstrap070
     }
 
     /**
@@ -437,12 +437,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap020
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap020
      * }}}
      *
      */
-    case object AJSUIBootstrap020 extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AJSUIBootstrap020
+    case object AJSUIBootstrap020 extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AJSUIBootstrap020
     }    
     
     /**
@@ -454,12 +454,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJSNGGrid207
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJSNGGrid207
      * }}}
      *
      */
-    case object AJSNGGrid207 extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AJSNGGrid207
+    case object AJSNGGrid207 extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AJSNGGrid207
     }
   
     /**
@@ -471,15 +471,15 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIGrid307
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIGrid307
      * }}}
      *
      */
-    case object AJSUIGrid307 extends ToolKit {
-      net.liftmodules.FoBoAJS.ToolKit.AJSUIGrid307
+    case object AJSUIGrid307 extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AJSUIGrid307
     }         
     
-    /*===Font Awesome ToolKit===============================================================*/
+    /*===Font Awesome Toolkit===============================================================*/
     
     
    /**
@@ -491,11 +491,11 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome463
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome463
      * }}}
      */    
-     case object FontAwesome463 extends ToolKit {
-       net.liftmodules.FoBoFA.ToolKit.FontAwesome463
+     case object FontAwesome463 extends Toolkit {
+       net.liftmodules.FoBoFA.Toolkit.FontAwesome463
      } 
      
    /**
@@ -507,11 +507,11 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome430
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome430
      * }}}
      */    
-     case object FontAwesome430 extends ToolKit {
-       net.liftmodules.FoBoFA.ToolKit.FontAwesome430
+     case object FontAwesome430 extends Toolkit {
+       net.liftmodules.FoBoFA.Toolkit.FontAwesome430
      }  
     
     /**
@@ -523,11 +523,11 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome410
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome410
      * }}}
      */    
-     case object FontAwesome410 extends ToolKit {
-       net.liftmodules.FoBoFA.ToolKit.FontAwesome410
+     case object FontAwesome410 extends Toolkit {
+       net.liftmodules.FoBoFA.Toolkit.FontAwesome410
      }  
      
     /**
@@ -539,11 +539,11 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome403
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome403
      * }}}
      */    
-     case object FontAwesome403 extends ToolKit {
-       net.liftmodules.FoBoFA.ToolKit.FontAwesome403
+     case object FontAwesome403 extends Toolkit {
+       net.liftmodules.FoBoFA.Toolkit.FontAwesome403
      }   
      
     /**
@@ -555,14 +555,14 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome321
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome321
      * }}}
      */    
-     case object FontAwesome321 extends ToolKit {
-       net.liftmodules.FoBoFA.ToolKit.FontAwesome321
+     case object FontAwesome321 extends Toolkit {
+       net.liftmodules.FoBoFA.Toolkit.FontAwesome321
      }         
     
-    /*===Google Code Prettify ToolKit===============================================================*/
+    /*===Google Code Prettify Toolkit===============================================================*/
     
    /**
      * Enable usage of FoBo's Google Code Prettify API and resources version Jun2011 in your bootstrap liftweb Boot.
@@ -573,14 +573,14 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.PrettifyJun2011
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.PrettifyJun2011
      * }}}
      */    
-     case object PrettifyJun2011 extends ToolKit {
-       net.liftmodules.FoBoGCP.ToolKit.PrettifyJun2011
+     case object PrettifyJun2011 extends Toolkit {
+       net.liftmodules.FoBoGCP.Toolkit.PrettifyJun2011
      }  
      
-    /*===JQuery ToolKit===============================================================*/
+    /*===JQuery Toolkit===============================================================*/
    
    /**
      * Enable usage of FoBo's JQuery-Migrate API and resources version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
@@ -591,11 +591,11 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.JQueryMigrate121
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQueryMigrate121
      * }}}
      */    
-     case object JQueryMigrate121 extends ToolKit {
-       net.liftmodules.FoBoJQ.ToolKit.JQueryMigrate121
+     case object JQueryMigrate121 extends Toolkit {
+       net.liftmodules.FoBoJQ.Toolkit.JQueryMigrate121
      } 
     
    /**
@@ -608,11 +608,11 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.JQuery214
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery214
      * }}}
      */    
-     case object JQuery214 extends ToolKit {
-       net.liftmodules.FoBoJQ.ToolKit.JQuery214
+     case object JQuery214 extends Toolkit {
+       net.liftmodules.FoBoJQ.Toolkit.JQuery214
      }     
      
    /**
@@ -625,11 +625,11 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.JQuery211
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery211
      * }}}
      */    
-     case object JQuery211 extends ToolKit {
-       net.liftmodules.FoBoJQ.ToolKit.JQuery211
+     case object JQuery211 extends Toolkit {
+       net.liftmodules.FoBoJQ.Toolkit.JQuery211
      }  
      
    /**
@@ -641,11 +641,11 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.JQuery1113
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery1113
      * }}}
      */    
-     case object JQuery1113 extends ToolKit {
-       net.liftmodules.FoBoJQ.ToolKit.JQuery1113
+     case object JQuery1113 extends Toolkit {
+       net.liftmodules.FoBoJQ.Toolkit.JQuery1113
      }   
      
    /**
@@ -657,11 +657,11 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.JQuery1102
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery1102
      * }}}
      */    
-     case object JQuery1102 extends ToolKit {
-       net.liftmodules.FoBoJQ.ToolKit.JQuery1102
+     case object JQuery1102 extends Toolkit {
+       net.liftmodules.FoBoJQ.Toolkit.JQuery1102
      }   
      
    /**
@@ -673,11 +673,11 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.JQuery191
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery191
      * }}}
      */    
-     case object JQuery191 extends ToolKit {
-       net.liftmodules.FoBoJQ.ToolKit.JQuery191
+     case object JQuery191 extends Toolkit {
+       net.liftmodules.FoBoJQ.Toolkit.JQuery191
      }  
      
    /**
@@ -689,11 +689,11 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.JQuery182
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery182
      * }}}
      */    
-     case object JQuery182 extends ToolKit {
-       net.liftmodules.FoBoJQ.ToolKit.JQuery182
+     case object JQuery182 extends Toolkit {
+       net.liftmodules.FoBoJQ.Toolkit.JQuery182
      }  
      
    /**
@@ -705,14 +705,14 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.JQuery172
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery172
      * }}}
      */    
-     case object JQuery172 extends ToolKit {
-       net.liftmodules.FoBoJQ.ToolKit.JQuery172
+     case object JQuery172 extends Toolkit {
+       net.liftmodules.FoBoJQ.Toolkit.JQuery172
      }       
      
-    /*===Kinetic ToolKit===============================================================*/
+    /*===Kinetic Toolkit===============================================================*/
     
     /**
      * Enable usage FoBo's KineticJS API and resources version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.
@@ -723,15 +723,15 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.KineticJS510 
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.KineticJS510 
      * }}}
      *
      */
-      case object KineticJS510 extends ToolKit {
-        net.liftmodules.FoBoKi.ToolKit.KineticJS510
+      case object KineticJS510 extends Toolkit {
+        net.liftmodules.FoBoKi.Toolkit.KineticJS510
       }       
      
-    /*===Pace ToolKit===============================================================*/
+    /*===Pace Toolkit===============================================================*/
     
    /**
      * Enable usage of FoBo's Pace API and resources version 1&#8228;0&#8228;2 in your bootstrap liftweb Boot.
@@ -742,11 +742,11 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.Pace102
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.Pace102
      * }}}
      */    
-     case object Pace102 extends ToolKit {
-       net.liftmodules.FoBoPa.ToolKit.Pace102
+     case object Pace102 extends Toolkit {
+       net.liftmodules.FoBoPa.Toolkit.Pace102
      } 
      
    /**
@@ -758,14 +758,14 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.Pace0415
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.Pace0415
      * }}}
      */    
-     case object Pace0415 extends ToolKit {
-       net.liftmodules.FoBoPa.ToolKit.Pace0415
+     case object Pace0415 extends Toolkit {
+       net.liftmodules.FoBoPa.Toolkit.Pace0415
      }    
      
-     /*===Bootstrap3 ToolKit===============================================================*/     
+     /*===Bootstrap3 Toolkit===============================================================*/     
      
     /**
      * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.
@@ -776,12 +776,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap336
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap336
      * }}}
      *
      */
-    case object Bootstrap336 extends ToolKit {
-      net.liftmodules.FoBoBs.ToolKit.Bootstrap336
+    case object Bootstrap336 extends Toolkit {
+      net.liftmodules.FoBoBs.Toolkit.Bootstrap336
     }    
     
     /**
@@ -793,12 +793,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap335
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap335
      * }}}
      *
      */
-    case object Bootstrap335 extends ToolKit {
-      net.liftmodules.FoBoBs.ToolKit.Bootstrap335
+    case object Bootstrap335 extends Toolkit {
+      net.liftmodules.FoBoBs.Toolkit.Bootstrap335
     }    
     
     /**
@@ -810,12 +810,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap320
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap320
      * }}}
      *
      */
-    case object Bootstrap320 extends ToolKit {
-      net.liftmodules.FoBoBs.ToolKit.Bootstrap320
+    case object Bootstrap320 extends Toolkit {
+      net.liftmodules.FoBoBs.Toolkit.Bootstrap320
     } 
     
     /**
@@ -827,12 +827,12 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap311
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap311
      * }}}
      *
      */
-    case object Bootstrap311 extends ToolKit {
-      net.liftmodules.FoBoBs.ToolKit.Bootstrap311
+    case object Bootstrap311 extends Toolkit {
+      net.liftmodules.FoBoBs.Toolkit.Bootstrap311
     } 
     
     /**
@@ -844,15 +844,15 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap301
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap301
      * }}}
      *
      */
-    case object Bootstrap301 extends ToolKit {
-      net.liftmodules.FoBoBs.ToolKit.Bootstrap301
+    case object Bootstrap301 extends Toolkit {
+      net.liftmodules.FoBoBs.Toolkit.Bootstrap301
     }          
      
-    /*===Bootstrap2 ToolKit===============================================================*/     
+    /*===Bootstrap2 Toolkit===============================================================*/     
      
     /**
      * Enable usage of Bootstrap API and resources version 2&#8228;3&#8228;2 in your bootstrap liftweb Boot.
@@ -863,16 +863,16 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap232
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap232
      * }}}
      *
      */
-    case object Bootstrap232 extends ToolKit {
-      net.liftmodules.FoBoTB.ToolKit.Bootstrap232
+    case object Bootstrap232 extends Toolkit {
+      net.liftmodules.FoBoTB.Toolkit.Bootstrap232
     }  
     
     
-    /*===Highlight ToolKit===============================================================*/ 
+    /*===Highlight Toolkit===============================================================*/ 
     
     /**
      * Enable usage of FoBo's Highlight JS API and resources version 9&#8228;3&#8228;0 in your bootstrap liftweb Boot.
@@ -883,14 +883,14 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.HighlightJS930
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.HighlightJS930
      * }}}
      */
-    case object HighlightJS930 extends ToolKit {
-      net.liftmodules.FoBoHL.ToolKit.HighlightJS930
+    case object HighlightJS930 extends Toolkit {
+      net.liftmodules.FoBoHL.Toolkit.HighlightJS930
     }    
     
-  }//end ToolKit
+  }//end Toolkit
   
   
   
@@ -1328,7 +1328,7 @@ package object FoBo {
      * {{{
      *   import net.liftmodules.FoBo
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.PrettifyJun2011
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.PrettifyJun2011
      * }}}
      */    
      case object PrettifyJun2011 extends Resource {
@@ -1770,8 +1770,8 @@ package object FoBo {
    * @example In method boot in the Boot class of package bootstrap.liftweb set
    * {{{
    *    FoBo.InitParam.JQuery=FoBo.JQueryXYZ  //one jquery version
-   *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ //one or more toolkits 
-   *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ 
+   *    FoBo.InitParam.Toolkit=FoBo.FoBoToolkitNameXYZ //one or more toolkits 
+   *    FoBo.InitParam.Toolkit=FoBo.FoBoToolkitNameXYZ 
    *     : 
    *    FoBo.init()
    * }}}
@@ -1781,9 +1781,9 @@ package object FoBo {
   }
 
 
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.JQueryXXX","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQueryXXX","1.6.0")
   abstract sealed trait FoBoJQuery
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.[Toolkit case object name]","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit case object name]","1.6.0")
   abstract sealed trait FoBoToolkit
   
 /**
@@ -1903,10 +1903,10 @@ object TBLocInfo {
  * This example uses the Bootstrap v3.3.6 option and adds the Google code Prettify vJun2011 
  * to the enabled toolkits.  
  */
-@deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.[Toolkit case object name]","1.6.0")
+@deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit case object name]","1.6.0")
 object InitParam extends FoBoToolkit with FoBoJQuery {
   var JQuery: FoBoJQuery = JQuery182
-  var ToolKit: FoBoToolkit = _ 
+  var Toolkit: FoBoToolkit = _ 
 }
 
 
@@ -1922,7 +1922,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.3
    */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.KineticJS510","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.KineticJS510","1.6.0")
   case object KineticJS510 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoKi.KineticJS510
@@ -1940,10 +1940,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.2
    */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.Pace0415","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.Pace0415","1.6.0")
   case object Pace0415 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
-    net.liftmodules.FoBoPa.ToolKit.Pace0415
+    net.liftmodules.FoBoPa.Toolkit.Pace0415
   }
 
    /**
@@ -1959,10 +1959,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.5
    */  
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS148","1.6.0")
   case object AngularJS148 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
-    net.liftmodules.FoBoAJS.ToolKit.AngularJS148
+    net.liftmodules.FoBoAJS.Toolkit.AngularJS148
   }  
   
    /**
@@ -1976,10 +1976,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.5
    */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS148i18n","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS148i18n","1.6.0")
   case object AngularJS148i18n extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
-    net.liftmodules.FoBoAJS.ToolKit.AngularJS148i18n
+    net.liftmodules.FoBoAJS.Toolkit.AngularJS148i18n
   } 
   
   /**
@@ -1995,10 +1995,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.4
    */       
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS141","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS141","1.6.0")
   case object AngularJS141 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
-    net.liftmodules.FoBoAJS.ToolKit.AngularJS141
+    net.liftmodules.FoBoAJS.Toolkit.AngularJS141
   }
   
    /**
@@ -2012,10 +2012,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.4
    */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS141i18n","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS141i18n","1.6.0")
   case object AngularJS141i18n extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
-    net.liftmodules.FoBoAJS.ToolKit.AngularJS141i18n
+    net.liftmodules.FoBoAJS.Toolkit.AngularJS141i18n
   }
   
   
@@ -2032,10 +2032,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.4
    */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1315","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS1315","1.6.0")
   case object AngularJS1315 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
-    net.liftmodules.FoBoAJS.ToolKit.AngularJS1315
+    net.liftmodules.FoBoAJS.Toolkit.AngularJS1315
   }
   
    /**
@@ -2049,10 +2049,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.4
    */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1315i18n","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS1315i18n","1.6.0")
   case object AngularJS1315i18n extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
-    net.liftmodules.FoBoAJS.ToolKit.AngularJS1315i18n
+    net.liftmodules.FoBoAJS.Toolkit.AngularJS1315i18n
   }    
   
    /**
@@ -2068,10 +2068,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.3
    */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1219","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS1219","1.6.0")
   case object AngularJS1219 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
-    net.liftmodules.FoBoAJS.ToolKit.AngularJS1219
+    net.liftmodules.FoBoAJS.Toolkit.AngularJS1219
   }
   
    /**
@@ -2085,10 +2085,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.3
    */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS1219i18n","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS1219i18n","1.6.0")
   case object AngularJS1219i18n extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
-    net.liftmodules.FoBoAJS.ToolKit.AngularJS1219i18n
+    net.liftmodules.FoBoAJS.Toolkit.AngularJS1219i18n
   }   
   
 
@@ -2103,10 +2103,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.5
    */  
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.AJMaterial101","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial101","1.6.0")
   case object AJMaterial101 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
-    net.liftmodules.FoBoAJS.ToolKit.AJMaterial101
+    net.liftmodules.FoBoAJS.Toolkit.AJMaterial101
   }
   
   /**
@@ -2123,7 +2123,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
   @deprecated("Use AJMaterial101 or later","1.5.0")
   case object AJMaterial0100 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
-    net.liftmodules.FoBoAJS.ToolKit.AJMaterial0100
+    net.liftmodules.FoBoAJS.Toolkit.AJMaterial0100
   } 
   
   /**
@@ -2137,10 +2137,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.2
    */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap0100","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap0100","1.6.0")
   case object AJSUIBootstrap0100 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
-    net.liftmodules.FoBoAJS.ToolKit.AJSUIBootstrap0100
+    net.liftmodules.FoBoAJS.Toolkit.AJSUIBootstrap0100
   }  
   
   /**
@@ -2154,10 +2154,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.2
    */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap070","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap070","1.6.0")
   case object AJSUIBootstrap070 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
-    net.liftmodules.FoBoAJS.ToolKit.AJSUIBootstrap070
+    net.liftmodules.FoBoAJS.Toolkit.AJSUIBootstrap070
   }   
 
   /**
@@ -2171,10 +2171,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.0
    */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap020","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap020","1.6.0")
   case object AJSUIBootstrap020 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
-    net.liftmodules.FoBoAJS.ToolKit.AJSUIBootstrap020
+    net.liftmodules.FoBoAJS.Toolkit.AJSUIBootstrap020
   }   
  
   
@@ -2189,10 +2189,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.2
    */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.AJSNGGrid207","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AJSNGGrid207","1.6.0")
   case object AJSNGGrid207 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
-    net.liftmodules.FoBoAJS.ToolKit.AJSNGGrid207
+    net.liftmodules.FoBoAJS.Toolkit.AJSNGGrid207
   } 
   
   /**
@@ -2206,10 +2206,10 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.5
    */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIGrid307","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIGrid307","1.6.0")
   case object AJSUIGrid307 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
-    net.liftmodules.FoBoAJS.ToolKit.AJSUIGrid307
+    net.liftmodules.FoBoAJS.Toolkit.AJSUIGrid307
   }   
 
 /**
@@ -2223,7 +2223,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  * @since v0.7
  */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.PrettifyJun2011","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.PrettifyJun2011","1.6.0")
   case object PrettifyJun2011 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoGCP.PrettifyJun2011
@@ -2240,7 +2240,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v2.7
    */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.JQueryMigrate121","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQueryMigrate121","1.6.0")
   case object JQueryMigrate121 extends FoBoJQuery {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoJQ.JQueryMigrate121
@@ -2258,7 +2258,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.4
    */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery214","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQuery214","1.6.0")
   case object JQuery214 extends FoBoJQuery {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoJQ.JQuery214
@@ -2276,7 +2276,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    * }}}
    * @since v1.3
    */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery211","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQuery211","1.6.0")
   case object JQuery211 extends FoBoJQuery {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoJQ.JQuery211
@@ -2294,7 +2294,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  * @since v1.4
  */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery1113","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQuery1113","1.6.0")
   case object JQuery1113 extends FoBoJQuery {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoJQ.JQuery1113
@@ -2311,7 +2311,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  * @since v1.1
  */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery1102","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQuery1102","1.6.0")
   case object JQuery1102 extends FoBoJQuery {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoJQ.JQuery1102
@@ -2328,7 +2328,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  * @since v1.0
  */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery191","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQuery191","1.6.0")
   case object JQuery191 extends FoBoJQuery {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoJQ.JQuery191 
@@ -2345,7 +2345,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  * @since v0.7
  */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery182","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQuery182","1.6.0")
   case object JQuery182 extends FoBoJQuery {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoJQ.JQuery182
@@ -2362,7 +2362,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  * @since v0.7
  */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.JQuery172","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQuery172","1.6.0")
   case object JQuery172 extends FoBoJQuery {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoJQ.JQuery172
@@ -2379,7 +2379,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  * @since v1.4 
  */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome430","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome430","1.6.0")
   case object FontAwesome430 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoFA.FontAwesome430
@@ -2397,7 +2397,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  * @since v1.3 
  */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome410","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome410","1.6.0")
   case object FontAwesome410 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoFA.FontAwesome410
@@ -2414,7 +2414,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  * @since v1.2 
  */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome403","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome403","1.6.0")
   case object FontAwesome403 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoFA.FontAwesome403
@@ -2432,7 +2432,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  * @since v1.0 
  */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome321","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome321","1.6.0")
   case object FontAwesome321 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoFA.FontAwesome321
@@ -2450,7 +2450,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  * @since v1.1
  */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap232","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap232","1.6.0")
   case object Bootstrap232 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoTB.Bootstrap232
@@ -2485,7 +2485,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  * @since v1.2
  */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap311","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap311","1.6.0")
   case object Bootstrap311 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoBs.Bootstrap311 
@@ -2502,7 +2502,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  * @since v1.3
  */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap320","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap320","1.6.0")
   case object Bootstrap320 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1    
     net.liftmodules.FoBoBs.Bootstrap320
@@ -2536,7 +2536,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * }}}
  * @since v1.5
  */
-  @deprecated("Use FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap336","1.6.0")
+  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap336","1.6.0")
   case object Bootstrap336 extends FoBoToolkit {
     net.liftmodules.FoBoAPI.API.FoBo1
     net.liftmodules.FoBoBs.Bootstrap336

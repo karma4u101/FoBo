@@ -17,12 +17,12 @@ import common._
 package object FoBoFA {
 
   override def toString() = {
-    FoBoFA.ToolKit.toString()+" "+FoBoFA.Resource.toString()+" "+FoBoFA.API.toString()
+    FoBoFA.Toolkit.toString()+" "+FoBoFA.Resource.toString()+" "+FoBoFA.API.toString()
   }
   
   /**
-   * Initiate FoBo's Font Awesome ToolKit(s) in you bootstrap liftweb Boot.
-   * Using the ToolKit initiation you will bring in both the 
+   * Initiate FoBo's Font Awesome Toolkit(s) in you bootstrap liftweb Boot.
+   * Using the Toolkit initiation you will bring in both the 
    * toolkit's resources and FoBo/Lift API associated 
    * with the toolkit.  
    * 
@@ -30,11 +30,11 @@ package object FoBoFA {
    * {{{
    *   import net.liftmodules.{FoBoFA => FoBo}
    *    :
-   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Object]
+   *   FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit Object]
    * }}}
    * '''Note:''' To see available objects click on the round trait icon in the header of this page.
    */  
-  abstract sealed trait ToolKit
+  abstract sealed trait Toolkit
   
   /**
    * Initiate FoBo's Font Awesome Resource(s) in you bootstrap liftweb Boot.
@@ -63,20 +63,20 @@ package object FoBoFA {
   abstract sealed trait API
   
   
-  /*=== ToolKit ============================================*/
+  /*=== Toolkit ============================================*/
   
-  object ToolKit extends ToolKit {
+  object Toolkit extends Toolkit {
     
     //we don't actually need to store the objects (for now) so lets just save 
     //the object name, we can easily change this if we need to
-    private type Store = List[String] //List[ToolKit]
+    private type Store = List[String] //List[Toolkit]
     private var store:Store = List()
     def Init:Store = store
-    def Init_=(t:ToolKit):Store = {
+    def Init_=(t:Toolkit):Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
     }  
-    override def toString() = "FoBoFA.ToolKit = "+store.toString()
+    override def toString() = "FoBoFA.Toolkit = "+store.toString()
     
    /**
      * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;6&#8228;3 in your bootstrap liftweb Boot.
@@ -87,10 +87,10 @@ package object FoBoFA {
      * {{{
      *   import net.liftmodules.{FoBoFA => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome463
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome463
      * }}}
      */    
-     case object FontAwesome463 extends ToolKit {
+     case object FontAwesome463 extends Toolkit {
        FoBoFARes.Resource.FontAwesome463
        //FoBoFAAPI.API.FontAwesome4
      } 
@@ -104,10 +104,10 @@ package object FoBoFA {
      * {{{
      *   import net.liftmodules.{FoBoFA => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.FontAwesome430
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome430
      * }}}
      */    
-     case object FontAwesome430 extends ToolKit {
+     case object FontAwesome430 extends Toolkit {
        FoBoFARes.Resource.FontAwesome430
        //FoBoFAAPI.API.FontAwesome4
      }  
@@ -124,7 +124,7 @@ package object FoBoFA {
      *   FoBo.Resource.Init=FoBo.Resource.FontAwesome410
      * }}}
      */    
-     case object FontAwesome410 extends ToolKit {
+     case object FontAwesome410 extends Toolkit {
        FoBoFARes.Resource.FontAwesome410
        //FoBoFAAPI.API.FontAwesome4
      }  
@@ -141,7 +141,7 @@ package object FoBoFA {
      *   FoBo.Resource.Init=FoBo.Resource.FontAwesome403
      * }}}
      */    
-     case object FontAwesome403 extends ToolKit {
+     case object FontAwesome403 extends Toolkit {
        FoBoFARes.Resource.FontAwesome403
        //FoBoFAAPI.API.FontAwesome4
      }   
@@ -158,7 +158,7 @@ package object FoBoFA {
      *   FoBo.Resource.Init=FoBo.Resource.FontAwesome321
      * }}}
      */    
-     case object FontAwesome321 extends ToolKit {
+     case object FontAwesome321 extends Toolkit {
        FoBoFARes.Resource.FontAwesome321
        //FoBoFAAPI.API.FontAwesome4
      }     
@@ -310,9 +310,9 @@ package object FoBoFA {
   /**
    *
    */
-  @deprecated("Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.[Toolkit Object]","1.6.0")
+  @deprecated("Use FoBoFA.Toolkit.Init=FoBoFA.Toolkit.[Toolkit Object]","1.6.0")
   object InitParam extends FAToolkit {
-    var ToolKit: FAToolkit = null 
+    var Toolkit: FAToolkit = null 
   }
 
    /**
@@ -326,9 +326,9 @@ package object FoBoFA {
    * }}}
    * @since v1.4
    */
-  @deprecated("Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.FontAwesome430","1.6.0")
+  @deprecated("Use FoBoFA.Toolkit.Init=FoBoFA.Toolkit.FontAwesome430","1.6.0")
   case object FontAwesome430 extends FAToolkit {
-    ToolKit.FontAwesome430
+    Toolkit.FontAwesome430
   }    
     
    /**
@@ -342,9 +342,9 @@ package object FoBoFA {
    * }}}
    * @since v1.3
    */
-  @deprecated("Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.FontAwesome410","1.6.0")
+  @deprecated("Use FoBoFA.Toolkit.Init=FoBoFA.Toolkit.FontAwesome410","1.6.0")
   case object FontAwesome410 extends FAToolkit {
-    ToolKit.FontAwesome410
+    Toolkit.FontAwesome410
   }     
     
    /**
@@ -358,9 +358,9 @@ package object FoBoFA {
    * }}}
    * @since v1.2
    */
-  @deprecated("Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.FontAwesome403","1.6.0")
+  @deprecated("Use FoBoFA.Toolkit.Init=FoBoFA.Toolkit.FontAwesome403","1.6.0")
   case object FontAwesome403 extends FAToolkit {
-    ToolKit.FontAwesome403
+    Toolkit.FontAwesome403
   } 
       
    /**
@@ -374,9 +374,9 @@ package object FoBoFA {
    * }}}
    *
    */
-  @deprecated("Use FoBoFA.ToolKit.Init=FoBoFA.ToolKit.FontAwesome321","1.6.0")
+  @deprecated("Use FoBoFA.Toolkit.Init=FoBoFA.Toolkit.FontAwesome321","1.6.0")
   case object FontAwesome321 extends FAToolkit {
-    ToolKit.FontAwesome321
+    Toolkit.FontAwesome321
   }
         
   /**

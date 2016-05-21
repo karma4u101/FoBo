@@ -21,20 +21,20 @@ import common._
  *    import net.liftmodules.{FoBoBs => FoBo}
  *     :
  *     :
- *    FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap336 //or any other companion toolkit object
+ *    FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap336 //or any other companion toolkit object
  * }}}
- * You may substitute ToolKit for Resource or API and if you wish also adjust the artifact dependencies 
+ * You may substitute Toolkit for Resource or API and if you wish also adjust the artifact dependencies 
  * accordingly to include just the FoBo modules you use. 
  */
 package object FoBoBs {
 
   override def toString() = {
-    FoBoBs.ToolKit.toString()+" "+FoBoBs.Resource.toString()+" "+FoBoBs.API.toString()
+    FoBoBs.Toolkit.toString()+" "+FoBoBs.Resource.toString()+" "+FoBoBs.API.toString()
   }
   
   /**
-   * Initiate FoBo's Bootstrap 3 ToolKit(s) in you bootstrap liftweb Boot.
-   * Using the ToolKit initiation you will bring in both the 
+   * Initiate FoBo's Bootstrap 3 Toolkit(s) in you bootstrap liftweb Boot.
+   * Using the Toolkit initiation you will bring in both the 
    * toolkit's resources and FoBo/Lift API associated 
    * with the toolkit.  
    * 
@@ -42,11 +42,11 @@ package object FoBoBs {
    * {{{
    *   import net.liftmodules.{FoBoBs => FoBo}
    *    :
-   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Object]
+   *   FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit Object]
    * }}}
    * '''Note:''' To see available objects click on the round trait icon in the header of this page.
    */
-  abstract sealed trait ToolKit
+  abstract sealed trait Toolkit
   
   /**
    * Initiate FoBo's Bootstrap 3 Resource(s) in you bootstrap liftweb Boot.
@@ -75,20 +75,20 @@ package object FoBoBs {
   abstract sealed trait API
   
   
-  /*=== ToolKit ============================================*/ 
+  /*=== Toolkit ============================================*/ 
   
- object ToolKit extends ToolKit {
+ object Toolkit extends Toolkit {
     
     //we don't actually need to store the objects (for now) so lets just save 
     //the object name, we can easily change this if we need to
-    private type Store = List[String] //List[ToolKit]
+    private type Store = List[String] //List[Toolkit]
     private var store:Store = List()
     def Init:Store = store
-    def Init_=(t:ToolKit):Store = {
+    def Init_=(t:Toolkit):Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
     }  
-    override def toString() = "FoBoBs.ToolKit = "+store.toString()
+    override def toString() = "FoBoBs.Toolkit = "+store.toString()
     
     /**
      * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;6 resource files in your bootstrap liftweb Boot.
@@ -99,11 +99,11 @@ package object FoBoBs {
      * {{{
      *   import net.liftmodules.{FoBoBs => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap336
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap336
      * }}}
      *
      */
-    case object Bootstrap336 extends ToolKit {
+    case object Bootstrap336 extends Toolkit {
       net.liftmodules.FoBoBsAPI.API.Bootstrap3
       net.liftmodules.FoBoBsRes.Resource.Bootstrap336
     }    
@@ -117,11 +117,11 @@ package object FoBoBs {
      * {{{
      *   import net.liftmodules.{FoBoBs => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap335
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap335
      * }}}
      *
      */
-    case object Bootstrap335 extends ToolKit {
+    case object Bootstrap335 extends Toolkit {
       net.liftmodules.FoBoBsAPI.API.Bootstrap3
       net.liftmodules.FoBoBsRes.Resource.Bootstrap335
     }    
@@ -135,11 +135,11 @@ package object FoBoBs {
      * {{{
      *   import net.liftmodules.{FoBoBs => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap320
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap320
      * }}}
      *
      */
-    case object Bootstrap320 extends ToolKit {
+    case object Bootstrap320 extends Toolkit {
       net.liftmodules.FoBoBsAPI.API.Bootstrap3
       net.liftmodules.FoBoBsRes.Resource.Bootstrap320
     } 
@@ -153,11 +153,11 @@ package object FoBoBs {
      * {{{
      *   import net.liftmodules.{FoBoBs => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap311
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap311
      * }}}
      *
      */
-    case object Bootstrap311 extends ToolKit {
+    case object Bootstrap311 extends Toolkit {
       net.liftmodules.FoBoBsAPI.API.Bootstrap3
       net.liftmodules.FoBoBsRes.Resource.Bootstrap311
     } 
@@ -171,11 +171,11 @@ package object FoBoBs {
      * {{{
      *   import net.liftmodules.{FoBoBs => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap301
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap301
      * }}}
      *
      */
-    case object Bootstrap301 extends ToolKit {
+    case object Bootstrap301 extends Toolkit {
       net.liftmodules.FoBoBsAPI.API.Bootstrap3
       net.liftmodules.FoBoBsRes.Resource.Bootstrap301
     }     
@@ -418,7 +418,7 @@ object BSLocInfo {
   }
 
 
-@deprecated("Use FoBoBs.ToolKit or FoBoBs.Resource and FoBoBs.API","1.6.0")
+@deprecated("Use FoBoBs.Toolkit or FoBoBs.Resource and FoBoBs.API","1.6.0")
 abstract sealed trait FoBoToolkit
 
 
@@ -435,9 +435,9 @@ abstract sealed trait FoBoToolkit
  * This example uses the Bootstrap v3.0.1 option.  
  *   
  */
-@deprecated("Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.[Toolkit Object]","1.6.0")
+@deprecated("Use FoBoBs.Toolkit.Init=FoBoBs.Toolkit.[Toolkit Object]","1.6.0")
 object InitParam extends FoBoToolkit {
-  var ToolKit: FoBoToolkit = null 
+  var Toolkit: FoBoToolkit = null 
 }
 
 /**
@@ -451,7 +451,7 @@ object InitParam extends FoBoToolkit {
  * }}}
  * @since v1.5
  */
-@deprecated("Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.Bootstrap336","1.6.0")
+@deprecated("Use FoBoBs.Toolkit.Init=FoBoBs.Toolkit.Bootstrap336","1.6.0")
 case object Bootstrap336 extends FoBoToolkit {
   net.liftmodules.FoBoBsRes.Resource.Bootstrap336
   net.liftmodules.FoBoBsAPI.API.Bootstrap3
@@ -487,7 +487,7 @@ case object Bootstrap335 extends FoBoToolkit {
  *   FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap320
  * }}}
  */
-@deprecated("Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.Bootstrap320","1.6.0")
+@deprecated("Use FoBoBs.Toolkit.Init=FoBoBs.Toolkit.Bootstrap320","1.6.0")
 case object Bootstrap320 extends FoBoToolkit {
   net.liftmodules.FoBoBsRes.Resource.Bootstrap320
   net.liftmodules.FoBoBsAPI.API.Bootstrap3    
@@ -503,7 +503,7 @@ case object Bootstrap320 extends FoBoToolkit {
  *   FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap311
  * }}}
  */
-@deprecated("Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.Bootstrap311","1.6.0")
+@deprecated("Use FoBoBs.Toolkit.Init=FoBoBs.Toolkit.Bootstrap311","1.6.0")
 case object Bootstrap311 extends FoBoToolkit {
   net.liftmodules.FoBoBsRes.Resource.Bootstrap311
   net.liftmodules.FoBoBsAPI.API.Bootstrap3   
@@ -520,7 +520,7 @@ case object Bootstrap311 extends FoBoToolkit {
  *   FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap301
  * }}}
  */
-@deprecated("Use FoBoBs.ToolKit.Init=FoBoBs.ToolKit.Bootstrap301","1.6.0")
+@deprecated("Use FoBoBs.Toolkit.Init=FoBoBs.Toolkit.Bootstrap301","1.6.0")
 case object Bootstrap301 extends FoBoToolkit {
   net.liftmodules.FoBoBsRes.Resource.Bootstrap301
   net.liftmodules.FoBoBsAPI.API.Bootstrap3     

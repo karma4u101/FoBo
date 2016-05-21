@@ -13,7 +13,7 @@ object FoBoGCPSpec extends Specification {
   sequential
   
   //PrettifyJun2011
-  "With FoBoGCP.InitParam.ToolKit set to FoBoGCP.PrettifyJun2011 the ResourceServer" should {
+  "With FoBoGCP.InitParam.Toolkit set to FoBoGCP.PrettifyJun2011 the ResourceServer" should {
     "allow  fobo/prettify.js" in {
       allowInitParam(FoBoGCP.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== true 
     } 
@@ -23,12 +23,12 @@ object FoBoGCPSpec extends Specification {
     }       
   }
   
-  "With FoBoGCP.ToolKit.Init set to FoBoGCP.ToolKit.PrettifyJun2011 the ResourceServer" should {
+  "With FoBoGCP.Toolkit.Init set to FoBoGCP.Toolkit.PrettifyJun2011 the ResourceServer" should {
     "allow  fobo/prettify.js" in {
-      allowToolKitInit(FoBoGCP.ToolKit.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== true 
+      allowToolkitInit(FoBoGCP.Toolkit.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== true 
     } 
     "rewrit fobo/angular.js to fobo/pace/0.4.15/js/pace.min.js" in {
-      rewriteToolKitInit(FoBoGCP.ToolKit.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoGCP.Toolkit.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== 
         List("fobo", "google-code", "js", "prettify.js")
     }       
   }   
@@ -44,25 +44,25 @@ object FoBoGCPSpec extends Specification {
   }    
   
   
- //=== ToolKit.Init ==============//
-  def allowToolKitInit(resource:FoBoGCP.ToolKit,path:List[String]) = {
-    FoBoGCP.ToolKit.Init=resource 
+ //=== Toolkit.Init ==============//
+  def allowToolkitInit(resource:FoBoGCP.Toolkit,path:List[String]) = {
+    FoBoGCP.Toolkit.Init=resource 
     ResourceServer.allowedPaths(path)
   } 
  
-  def rewriteToolKitInit(resource:FoBoGCP.ToolKit,path:List[String]) = {
-    FoBoGCP.ToolKit.Init=resource 
+  def rewriteToolkitInit(resource:FoBoGCP.Toolkit,path:List[String]) = {
+    FoBoGCP.Toolkit.Init=resource 
     ResourceServer.pathRewriter(path)
   }  
   
- //=== InitParam.ToolKit ===============// 
+ //=== InitParam.Toolkit ===============// 
   def allowInitParam(resource:FoBoGCP.FoBoToolkit,path:List[String]) = {
-    FoBoGCP.InitParam.ToolKit=resource 
+    FoBoGCP.InitParam.Toolkit=resource 
     ResourceServer.allowedPaths(path)
   } 
  
   def rewriteInitParam(resource:FoBoGCP.FoBoToolkit,path:List[String]) = {
-    FoBoGCP.InitParam.ToolKit=resource 
+    FoBoGCP.InitParam.Toolkit=resource 
     ResourceServer.pathRewriter(path)
   } 
  

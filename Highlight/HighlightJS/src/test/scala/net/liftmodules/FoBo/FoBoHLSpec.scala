@@ -14,12 +14,12 @@ object FoBoPaSpec extends Specification {
       
   
   //HighlightJS930
-  "With FoBoHL.ToolKit.Init set to FoBoHL.ToolKit.HighlightJS930 the ResourceServer" should {
+  "With FoBoHL.Toolkit.Init set to FoBoHL.Toolkit.HighlightJS930 the ResourceServer" should {
     "allow  fobo/highlight/highlight.pack.js" in {
-      allowToolKitInit(FoBoHL.ToolKit.HighlightJS930,"fobo"::"highlight"::"highlight.pack.js"::Nil) must_== true 
+      allowToolkitInit(FoBoHL.Toolkit.HighlightJS930,"fobo"::"highlight"::"highlight.pack.js"::Nil) must_== true 
     }     
     "rewrit rewrit fobo/highlight/highlight.pack.js to fobo/highlight/9.3.0/js/highlight.pack.js" in {
-      rewriteToolKitInit(FoBoHL.ToolKit.HighlightJS930,"fobo"::"highlight"::"highlight.pack.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoHL.Toolkit.HighlightJS930,"fobo"::"highlight"::"highlight.pack.js"::Nil) must_== 
         List("fobo", "highlight", "9.3.0", "js", "highlight.pack.js")
     }        
   } 
@@ -34,14 +34,14 @@ object FoBoPaSpec extends Specification {
     }        
   }   
   
- //=== ToolKit.Init ==============//
-  def allowToolKitInit(resource:FoBoHL.ToolKit,path:List[String]) = {
-    FoBoHL.ToolKit.Init=resource 
+ //=== Toolkit.Init ==============//
+  def allowToolkitInit(resource:FoBoHL.Toolkit,path:List[String]) = {
+    FoBoHL.Toolkit.Init=resource 
     ResourceServer.allowedPaths(path)
   } 
  
-  def rewriteToolKitInit(resource:FoBoHL.ToolKit,path:List[String]) = {
-    FoBoHL.ToolKit.Init=resource 
+  def rewriteToolkitInit(resource:FoBoHL.Toolkit,path:List[String]) = {
+    FoBoHL.Toolkit.Init=resource 
     ResourceServer.pathRewriter(path)
   }  
  

@@ -12,7 +12,7 @@ object FoBoFAAPISpec extends Specification {
 
   sequential
   
-  "With FoBoFA.InitParam.ToolKit set to FoBoFA.FontAwesome321 the ResourceServer" should {
+  "With FoBoFA.InitParam.Toolkit set to FoBoFA.FontAwesome321 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
       allowFontAwesome321 must_== true 
     }    
@@ -21,7 +21,7 @@ object FoBoFAAPISpec extends Specification {
     }       
   } 
   
-  "With FoBoFA.InitParam.ToolKit set to FoBoFA.FontAwesome410 the ResourceServer" should {
+  "With FoBoFA.InitParam.Toolkit set to FoBoFA.FontAwesome410 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
       allowFontAwesome410 must_== true 
     }     
@@ -30,7 +30,7 @@ object FoBoFAAPISpec extends Specification {
     }       
   }  
   
-  "With FoBoFA.InitParam.ToolKit set to FoBoFA.FontAwesome410 the ResourceServer" should {
+  "With FoBoFA.InitParam.Toolkit set to FoBoFA.FontAwesome410 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
       allowFontAwesome430 must_== true 
     }     
@@ -41,31 +41,31 @@ object FoBoFAAPISpec extends Specification {
   
   def allowFontAwesome321 = {
     ResourceServer 
-    FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesome321
+    FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome321
     ResourceServer.allowedPaths("fobo"::"font-awesome.css"::Nil)
   }    
   def rewriteFontAwesome321CSS = {
-    FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesome321
+    FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome321
     ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
   }  
    
   def allowFontAwesome410 = {
     ResourceServer 
-    FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesome410
+    FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome410
     ResourceServer.allowedPaths("fobo"::"font-awesome.css"::Nil)
   }  
   def rewriteFontAwesome410CSS = {
-    FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesome410
+    FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome410
     ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
   }    
 
   def allowFontAwesome430 = {
     ResourceServer 
-    FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesome430
+    FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome430
     ResourceServer.allowedPaths("fobo"::"font-awesome.css"::Nil)
   }  
   def rewriteFontAwesome430CSS = {
-    FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesome430
+    FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome430
     ResourceServer.pathRewriter("fobo"::"font-awesome.css"::Nil)
   }   
   
