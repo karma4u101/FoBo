@@ -31,7 +31,7 @@ object FoBoJQSpec extends Specification {
     }        
   }  
   
-  "With FoBoJQ.InitParam.Toolkit set to FoBoJQ.JQueryMigrate121 the ResourceServer" should {
+  "With FoBoJQ.InitParam.ToolKit set to FoBoJQ.JQueryMigrate121 the ResourceServer" should {
     "allow  fobo/jquery-migrate.js" in {
       allowInitParam(FoBoJQ.JQueryMigrate121,"fobo"::"jquery-migrate.js"::Nil) must_== true 
     }     
@@ -62,7 +62,7 @@ object FoBoJQSpec extends Specification {
     }        
   }  
   
-  "With FoBoJQ.InitParam.Toolkit set to FoBoJQ.JQuery214 the ResourceServer" should {
+  "With FoBoJQ.InitParam.ToolKit set to FoBoJQ.JQuery214 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowInitParam(FoBoJQ.JQuery214,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -93,7 +93,7 @@ object FoBoJQSpec extends Specification {
     }        
   }  
   
-  "With FoBoJQ.InitParam.Toolkit set to FoBoJQ.JQuery211 the ResourceServer" should {
+  "With FoBoJQ.InitParam.ToolKit set to FoBoJQ.JQuery211 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowInitParam(FoBoJQ.JQuery211,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -124,7 +124,7 @@ object FoBoJQSpec extends Specification {
     }        
   }  
   
-  "With FoBoJQ.InitParam.Toolkit set to FoBoJQ.JQuery1113 the ResourceServer" should {
+  "With FoBoJQ.InitParam.ToolKit set to FoBoJQ.JQuery1113 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowInitParam(FoBoJQ.JQuery1113,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -155,7 +155,7 @@ object FoBoJQSpec extends Specification {
     }        
   }  
   
-  "With FoBoJQ.InitParam.Toolkit set to FoBoJQ.JQuery1102 the ResourceServer" should {
+  "With FoBoJQ.InitParam.ToolKit set to FoBoJQ.JQuery1102 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowInitParam(FoBoJQ.JQuery1102,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -186,7 +186,7 @@ object FoBoJQSpec extends Specification {
     }        
   }  
   
-  "With FoBoJQ.InitParam.Toolkit set to FoBoJQ.JQuery191 the ResourceServer" should {
+  "With FoBoJQ.InitParam.ToolKit set to FoBoJQ.JQuery191 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowInitParam(FoBoJQ.JQuery191,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -217,7 +217,7 @@ object FoBoJQSpec extends Specification {
     }        
   }  
   
-  "With FoBoJQ.InitParam.Toolkit set to FoBoJQ.JQuery182 the ResourceServer" should {
+  "With FoBoJQ.InitParam.ToolKit set to FoBoJQ.JQuery182 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowInitParam(FoBoJQ.JQuery182,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -248,7 +248,7 @@ object FoBoJQSpec extends Specification {
     }        
   }  
   
-  "With FoBoJQ.InitParam.Toolkit set to FoBoJQ.JQuery172 the ResourceServer" should {
+  "With FoBoJQ.InitParam.ToolKit set to FoBoJQ.JQuery172 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowInitParam(FoBoJQ.JQuery172,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -280,7 +280,7 @@ object FoBoJQSpec extends Specification {
     ResourceServer.pathRewriter(path)
   }  
   
- //=== InitParam.Toolkit ===============// 
+ //=== InitParam.ToolKit ===============// 
   def allowInitParam(resource:FoBoJQ.FoBoJQ,path:List[String]) = {
     FoBoJQ.InitParam.JQuery=resource 
     ResourceServer.allowedPaths(path)

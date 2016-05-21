@@ -809,7 +809,7 @@ package object FoBoAJS {
    */
   @deprecated("Use FoBoAJS.Toolkit.Init=FoBoAJS.Toolkit.[Toolkit Object]","1.6.0")
   object InitParam extends FoBoToolkit {
-    var Toolkit: FoBoToolkit = null 
+    var ToolKit: FoBoToolkit = null 
   }
  
   /**
@@ -821,7 +821,7 @@ package object FoBoAJS {
    * {{{
    *   import net.liftmodules.{FoBoAJS => FoBo}
    *    : 
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS148
+   *   FoBo.InitParam.ToolKit=FoBo.AngularJS148
    * }}}
    * @since v1.5
    */
@@ -839,7 +839,7 @@ package object FoBoAJS {
    * {{{
    *   import net.liftmodules.{FoBoAJS => FoBo}
    *    :
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS148i18n
+   *   FoBo.InitParam.ToolKit=FoBo.AngularJS148i18n
    * }}}
    * @since v1.5
    */
@@ -858,7 +858,7 @@ package object FoBoAJS {
    * {{{
    *   import net.liftmodules.{FoBoAJS => FoBo}
    *    :
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS141
+   *   FoBo.InitParam.ToolKit=FoBo.AngularJS141
    * }}}
    * @since v1.4
    */
@@ -876,7 +876,7 @@ package object FoBoAJS {
    * {{{
    *   import net.liftmodules.{FoBoAJS => FoBo}
    *    :
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS141i18n
+   *   FoBo.InitParam.ToolKit=FoBo.AngularJS141i18n
    * }}}
    * @since v1.4
    */
@@ -894,7 +894,7 @@ package object FoBoAJS {
    * {{{
    *   import net.liftmodules.{FoBoAJS => FoBo}
    *    :
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS1315
+   *   FoBo.InitParam.ToolKit=FoBo.AngularJS1315
    * }}}
    * @since v1.4
    */
@@ -912,7 +912,7 @@ package object FoBoAJS {
    * {{{
    *   import net.liftmodules.{FoBoAJS => FoBo}
    *    :
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS1315i18n
+   *   FoBo.InitParam.ToolKit=FoBo.AngularJS1315i18n
    * }}}
    * @since v1.4
    */
@@ -931,7 +931,7 @@ package object FoBoAJS {
    * {{{
    *   import net.liftmodules.{FoBoAJS => FoBo}
    *    :
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS1219
+   *   FoBo.InitParam.ToolKit=FoBo.AngularJS1219
    * }}}
    * @since v1.3
    */
@@ -949,7 +949,7 @@ package object FoBoAJS {
    * {{{
    *   import net.liftmodules.{FoBoAJS => FoBo}
    *    :
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS1219i18n
+   *   FoBo.InitParam.ToolKit=FoBo.AngularJS1219i18n
    * }}}
    * @since v1.3
    */
@@ -967,7 +967,7 @@ package object FoBoAJS {
    * {{{
    *   import net.liftmodules.{FoBoAJS => FoBo}
    *    :
-   *   FoBo.InitParam.Toolkit=FoBo.AJMaterial0100
+   *   FoBo.InitParam.ToolKit=FoBo.AJMaterial0100
    * }}}
    * @since v1.4
    */
@@ -1004,7 +1004,7 @@ package object FoBoAJS {
    * {{{
    *   import net.liftmodules.{FoBoAJS => FoBo}
    *    :
-   *   FoBo.InitParam.Toolkit=FoBo.AJMaterial108
+   *   FoBo.InitParam.ToolKit=FoBo.AJMaterial108
    * }}}
    * @since v1.6
    */
@@ -1022,7 +1022,7 @@ package object FoBoAJS {
    * {{{
    *   import net.liftmodules.{FoBoAJS => FoBo}
    *    :
-   *   FoBo.InitParam.Toolkit=FoBo.AJSUIBootstrap0100
+   *   FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap0100
    * }}}
    * @since v1.2
    */
@@ -1040,7 +1040,7 @@ package object FoBoAJS {
    * {{{
    *   import net.liftmodules.{FoBoAJS => FoBo}
    *    :
-   *   FoBo.InitParam.Toolkit=FoBo.AJSUIBootstrap070
+   *   FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap070
    * }}}
    * @since v1.2
    */
@@ -1058,7 +1058,7 @@ package object FoBoAJS {
    * {{{
    *   import net.liftmodules.{FoBoAJS => FoBo}
    *    :
-   *   FoBo.InitParam.Toolkit=FoBo.AJSUIBootstrap020
+   *   FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap020
    * }}}
    * @since v1.0
    */
@@ -1077,7 +1077,7 @@ package object FoBoAJS {
    * {{{
    *   import net.liftmodules.{FoBoAJS => FoBo}
    *    :
-   *   FoBo.InitParam.Toolkit=FoBo.AJSNGGrid207
+   *   FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207
    * }}}
    * @since v1.2
    */
@@ -1095,7 +1095,7 @@ package object FoBoAJS {
    * {{{
    *   import net.liftmodules.{FoBoAJS => FoBo}
    *    :
-   *   FoBo.InitParam.Toolkit=FoBo.AJSUIGrid307
+   *   FoBo.InitParam.ToolKit=FoBo.AJSUIGrid307
    * }}}
    * @since v1.5
    */

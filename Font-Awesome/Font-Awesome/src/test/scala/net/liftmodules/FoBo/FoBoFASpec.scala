@@ -34,7 +34,7 @@ object FoBoFASpec extends Specification {
   }    
   
   //FontAwesome430
-  "With FoBoFA.InitParam.Toolkit set to FoBoFA.FontAwesome430 the ResourceServer" should {
+  "With FoBoFA.InitParam.ToolKit set to FoBoFA.FontAwesome430 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
       allowInitParam(FoBoFA.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== true 
     } 
@@ -65,7 +65,7 @@ object FoBoFASpec extends Specification {
   }  
   
   //FontAwesome410
-  "With FoBoFA.InitParam.Toolkit set to FoBoFA.FontAwesome410 the ResourceServer" should {
+  "With FoBoFA.InitParam.ToolKit set to FoBoFA.FontAwesome410 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
       allowInitParam(FoBoFA.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== true 
     } 
@@ -96,7 +96,7 @@ object FoBoFASpec extends Specification {
   }  
 
   //FontAwesome403
-  "With FoBoFA.InitParam.Toolkit set to FoBoFA.FontAwesome403 the ResourceServer" should {
+  "With FoBoFA.InitParam.ToolKit set to FoBoFA.FontAwesome403 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
       allowInitParam(FoBoFA.FontAwesome403,"fobo"::"font-awesome.css"::Nil) must_== true 
     } 
@@ -127,7 +127,7 @@ object FoBoFASpec extends Specification {
   }  
   
   //FontAwesome321
-  "With FoBoFA.InitParam.Toolkit set to FoBoFA.FontAwesome321 the ResourceServer" should {
+  "With FoBoFA.InitParam.ToolKit set to FoBoFA.FontAwesome321 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
       allowInitParam(FoBoFA.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== true 
     } 
@@ -169,14 +169,14 @@ object FoBoFASpec extends Specification {
     ResourceServer.pathRewriter(path)
   }  
   
- //=== InitParam.Toolkit ===============// 
+ //=== InitParam.ToolKit ===============// 
   def allowInitParam(resource:FoBoFA.FAToolkit,path:List[String]) = {
-    FoBoFA.InitParam.Toolkit=resource 
+    FoBoFA.InitParam.ToolKit=resource 
     ResourceServer.allowedPaths(path)
   } 
  
   def rewriteInitParam(resource:FoBoFA.FAToolkit,path:List[String]) = {
-    FoBoFA.InitParam.Toolkit=resource 
+    FoBoFA.InitParam.ToolKit=resource 
     ResourceServer.pathRewriter(path)
   } 
  

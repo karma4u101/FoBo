@@ -206,7 +206,7 @@ package object FoBoPa {
    */
   @deprecated("Use FoBoPa.Toolkit.Init=FoBoPa.Toolkit.[Toolkit Object]","1.6.0")
   object InitParam extends PaToolkit {
-    var Toolkit: PaToolkit = null 
+    var ToolKit: PaToolkit = null 
   }
   
  /**
@@ -218,7 +218,7 @@ package object FoBoPa {
   * {{{
   *   import net.liftmodules.{FoBoPa => FoBo}
   *    :
-  *   FoBo.InitParam.Toolkit=FoBo.Pace0415
+  *   FoBo.InitParam.ToolKit=FoBo.Pace0415
   * }}}
   */
   @deprecated("Use FoBoPa.Toolkit.Init=FoBoPa.Toolkit.Pace0415","1.6.0")

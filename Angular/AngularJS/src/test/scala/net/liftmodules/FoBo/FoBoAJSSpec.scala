@@ -35,7 +35,7 @@ class FoBoAJSSpec extends mutable.Specification {
   }  
   
   //AngularJS148
-  "With FoBoAJS.InitParam.Toolkit set to FoBoAJS.AngularJS148 the ResourceServer" should {
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AngularJS148 the ResourceServer" should {
     "allow  fobo/angular.js" in {
       allowInitParam(FoBoAJS.AngularJS148,"fobo"::"angular.js"::Nil) must_== true 
     } 
@@ -66,7 +66,7 @@ class FoBoAJSSpec extends mutable.Specification {
   }   
   
   //AngularJS141
-  "With FoBoAJS.InitParam.Toolkit set to FoBoAJS.AngularJS141 the ResourceServer" should {
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AngularJS141 the ResourceServer" should {
     "allow  fobo/angular.js" in {
       allowInitParam(FoBoAJS.AngularJS141,"fobo"::"angular.js"::Nil) must_== true       
     }     
@@ -98,7 +98,7 @@ class FoBoAJSSpec extends mutable.Specification {
    
   
   //AngularJS1315
-  "With FoBoAJS.InitParam.Toolkit set to FoBoAJS.AngularJS1315 the ResourceServer" should {
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AngularJS1315 the ResourceServer" should {
     "allow  fobo/angular.js" in {
       allowInitParam(FoBoAJS.AngularJS1315,"fobo"::"angular.js"::Nil) must_== true       
     }     
@@ -130,7 +130,7 @@ class FoBoAJSSpec extends mutable.Specification {
   
     
   //AngularJS1219
-  "With FoBoAJS.InitParam.Toolkit set to FoBoAJS.AngularJS1219 the ResourceServer" should {
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AngularJS1219 the ResourceServer" should {
     "allow  fobo/angular.js" in {
       allowInitParam(FoBoAJS.AngularJS1219,"fobo"::"angular.js"::Nil) must_== true       
     }     
@@ -203,7 +203,7 @@ class FoBoAJSSpec extends mutable.Specification {
   }   
    
   //AJMaterial101
-  "With FoBoAJS.InitParam.Toolkit set to FoBoAJS.AJMaterial101 the ResourceServer" should {
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AJMaterial101 the ResourceServer" should {
     "allow  fobo/angular-material.js" in {
       allowInitParam(FoBoAJS.AJMaterial101,"fobo"::"angular-material.js"::Nil) must_== true       
     }     
@@ -234,7 +234,7 @@ class FoBoAJSSpec extends mutable.Specification {
   }    
   
   //AJMaterial0100
-  "With FoBoAJS.InitParam.Toolkit set to FoBoAJS.AJMaterial0100 the ResourceServer" should {
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AJMaterial0100 the ResourceServer" should {
     "allow  fobo/angular-material.js" in {
       allowInitParam(FoBoAJS.AJMaterial0100,"fobo"::"angular-material.js"::Nil) must_== true       
     }     
@@ -265,7 +265,7 @@ class FoBoAJSSpec extends mutable.Specification {
   }      
   
   //AJSUIBootstrap020
-  "With FoBoAJS.InitParam.Toolkit set to FoBoAJS.AJSUIBootstrap020 the ResourceServer" should {
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AJSUIBootstrap020 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {
       allowInitParam(FoBoAJS.AJSUIBootstrap020,"fobo"::"ui-bootstrap.js"::Nil) must_== true       
     }     
@@ -296,7 +296,7 @@ class FoBoAJSSpec extends mutable.Specification {
   }    
   
   //AJSUIBootstrap070
-  "With FoBoAJS.InitParam.Toolkit set to FoBoAJS.AJSUIBootstrap070 the ResourceServer" should {
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AJSUIBootstrap070 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {
       allowInitParam(FoBoAJS.AJSUIBootstrap070,"fobo"::"ui-bootstrap.js"::Nil) must_== true       
     }     
@@ -327,7 +327,7 @@ class FoBoAJSSpec extends mutable.Specification {
   } 
   
   //AJSUIBootstrap0100
-  "With FoBoAJS.InitParam.Toolkit set to FoBoAJS.AJSUIBootstrap0100 the ResourceServer" should {
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AJSUIBootstrap0100 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {
       allowInitParam(FoBoAJS.AJSUIBootstrap0100,"fobo"::"ui-bootstrap.js"::Nil) must_== true       
     }     
@@ -358,7 +358,7 @@ class FoBoAJSSpec extends mutable.Specification {
   }   
   
   //AJSNGGrid207
-  "With FoBoAJS.InitParam.Toolkit set to FoBoAJS.AJSNGGrid207 the ResourceServer" should {
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AJSNGGrid207 the ResourceServer" should {
     "allow  fobo/ng-grid.js" in {
       allowInitParam(FoBoAJS.AJSNGGrid207,"fobo"::"ng-grid.js"::Nil) must_== true       
     }     
@@ -389,7 +389,7 @@ class FoBoAJSSpec extends mutable.Specification {
   }   
    
   //AJSUIGrid307
-    "With FoBoAJS.InitParam.Toolkit set to FoBoAJS.AJSUIGrid307 the ResourceServer" should {
+    "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AJSUIGrid307 the ResourceServer" should {
     "allow  fobo/ui-grid.js" in {
       allowInitParam(FoBoAJS.AJSUIGrid307,"fobo"::"ui-grid.js"::Nil) must_== true       
     }     
@@ -441,7 +441,7 @@ class FoBoAJSSpec extends mutable.Specification {
   }    
   
   //AngularJS148i18n
-  "With FoBoAJS.InitParam.Toolkit set to FoBoAJS.AngularJS148i18n the ResourceServer" should {
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AngularJS148i18n the ResourceServer" should {
     "allow  fobo/angular-locale_sv-se.js" in {
       allowInitParam(FoBoAJS.AngularJS148i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
     }     
@@ -472,7 +472,7 @@ class FoBoAJSSpec extends mutable.Specification {
   }  
   
   //AngularJS141i18n
-  "With FoBoAJS.InitParam.Toolkit set to FoBoAJS.AngularJS141i18n the ResourceServer" should {
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AngularJS141i18n the ResourceServer" should {
     "allow  fobo/angular-locale_sv-se.js" in {
       allowInitParam(FoBoAJS.AngularJS141i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
     }     
@@ -503,7 +503,7 @@ class FoBoAJSSpec extends mutable.Specification {
   }  
   
   //AngularJS1315i18n
-  "With FoBoAJS.InitParam.Toolkit set to FoBoAJS.AngularJS1315i18n the ResourceServer" should {
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AngularJS1315i18n the ResourceServer" should {
     "allow  fobo/angular-locale_sv-se.js" in {
       allowInitParam(FoBoAJS.AngularJS1315i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
     }     
@@ -534,7 +534,7 @@ class FoBoAJSSpec extends mutable.Specification {
   } 
   
   //AngularJS1219i18n
-  "With FoBoAJS.InitParam.Toolkit set to FoBoAJS.AngularJS1219i18n the ResourceServer" should {
+  "With FoBoAJS.InitParam.ToolKit set to FoBoAJS.AngularJS1219i18n the ResourceServer" should {
     "allow  fobo/angular-locale_sv-se.js" in {
       allowInitParam(FoBoAJS.AngularJS1219i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
     }     
@@ -578,12 +578,12 @@ class FoBoAJSSpec extends mutable.Specification {
   
  //=== InitParam.Toolkit ===============// 
   def allowInitParam(resource:FoBoAJS.FoBoToolkit,path:List[String]) = {
-    FoBoAJS.InitParam.Toolkit=resource 
+    FoBoAJS.InitParam.ToolKit=resource 
     ResourceServer.allowedPaths(path)
   } 
  
   def rewriteInitParam(resource:FoBoAJS.FoBoToolkit,path:List[String]) = {
-    FoBoAJS.InitParam.Toolkit=resource 
+    FoBoAJS.InitParam.ToolKit=resource 
     ResourceServer.pathRewriter(path)
   } 
  

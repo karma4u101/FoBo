@@ -13,7 +13,7 @@ object FoBoKiSpec extends Specification {
   sequential 
   
   //KineticJS510
-  "With FoBoKi.InitParam.Toolkit set to FoBoGCP.KineticJS510 the ResourceServer" should {
+  "With FoBoKi.InitParam.ToolKit set to FoBoGCP.KineticJS510 the ResourceServer" should {
     "allow  fobo/kinetic.js" in {
       allowInitParam(FoBoKi.KineticJS510,"fobo"::"kinetic.js"::Nil) must_== true 
     } 
@@ -54,14 +54,14 @@ object FoBoKiSpec extends Specification {
     ResourceServer.pathRewriter(path)
   }  
   
- //=== InitParam.Toolkit ===============// 
+ //=== InitParam.ToolKit ===============// 
   def allowInitParam(resource:FoBoKi.FoBoToolkit,path:List[String]) = {
-    FoBoKi.InitParam.Toolkit=resource 
+    FoBoKi.InitParam.ToolKit=resource 
     ResourceServer.allowedPaths(path)
   } 
  
   def rewriteInitParam(resource:FoBoKi.FoBoToolkit,path:List[String]) = {
-    FoBoKi.InitParam.Toolkit=resource 
+    FoBoKi.InitParam.ToolKit=resource 
     ResourceServer.pathRewriter(path)
   } 
  

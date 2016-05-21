@@ -45,7 +45,7 @@ object FoBoSpec extends Specification  {
   }   
   
   //AngularJS148
-  "With FoBo.InitParam.Toolkit set to FoBo.AngularJS148 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS148 the ResourceServer" should {
     "allow  fobo/angular.js" in {
       allowInitParam(FoBo.AngularJS148,"fobo"::"angular.js"::Nil) must_== true 
     } 
@@ -76,7 +76,7 @@ object FoBoSpec extends Specification  {
   }  
   
   //AngularJS141
-  "With FoBo.InitParam.Toolkit set to FoBo.AngularJS141 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS141 the ResourceServer" should {
     "allow  fobo/angular.js" in {
       allowInitParam(FoBo.AngularJS141,"fobo"::"angular.js"::Nil) must_== true       
     }     
@@ -107,7 +107,7 @@ object FoBoSpec extends Specification  {
   } 
   
   //AngularJS1315
-  "With FoBo.InitParam.Toolkit set to FoBo.AngularJS1315 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS1315 the ResourceServer" should {
     "allow  fobo/angular.js" in {
       allowInitParam(FoBo.AngularJS1315,"fobo"::"angular.js"::Nil) must_== true       
     }     
@@ -138,7 +138,7 @@ object FoBoSpec extends Specification  {
   }
     
   //AngularJS1219
-  "With FoBo.InitParam.Toolkit set to FoBo.AngularJS1219 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS1219 the ResourceServer" should {
     "allow  fobo/angular.js" in {
       allowInitParam(FoBo.AngularJS1219,"fobo"::"angular.js"::Nil) must_== true       
     }     
@@ -211,7 +211,7 @@ object FoBoSpec extends Specification  {
   } 
   
   //AJMaterial101
-  "With FoBo.InitParam.Toolkit set to FoBo.AJMaterial101 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.AJMaterial101 the ResourceServer" should {
     "allow  fobo/angular-material.js" in {
       allowInitParam(FoBo.AJMaterial101,"fobo"::"angular-material.js"::Nil) must_== true       
     }     
@@ -242,7 +242,7 @@ object FoBoSpec extends Specification  {
   }
   
   //AJMaterial0100
-  "With FoBo.InitParam.Toolkit set to FoBo.AJMaterial0100 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.AJMaterial0100 the ResourceServer" should {
     "allow  fobo/angular-material.js" in {
       allowInitParam(FoBo.AJMaterial0100,"fobo"::"angular-material.js"::Nil) must_== true       
     }     
@@ -273,7 +273,7 @@ object FoBoSpec extends Specification  {
   }    
   
   //AJSUIBootstrap020
-  "With FoBo.InitParam.Toolkit set to FoBo.AJSUIBootstrap020 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.AJSUIBootstrap020 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {
       allowInitParam(FoBo.AJSUIBootstrap020,"fobo"::"ui-bootstrap.js"::Nil) must_== true       
     }     
@@ -304,7 +304,7 @@ object FoBoSpec extends Specification  {
   }    
   
   //AJSUIBootstrap070
-  "With FoBo.InitParam.Toolkit set to FoBo.AJSUIBootstrap070 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.AJSUIBootstrap070 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {
       allowInitParam(FoBo.AJSUIBootstrap070,"fobo"::"ui-bootstrap.js"::Nil) must_== true       
     }     
@@ -335,7 +335,7 @@ object FoBoSpec extends Specification  {
   } 
   
   //AJSUIBootstrap0100
-  "With FoBo.InitParam.Toolkit set to FoBo.AJSUIBootstrap0100 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.AJSUIBootstrap0100 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {
       allowInitParam(FoBo.AJSUIBootstrap0100,"fobo"::"ui-bootstrap.js"::Nil) must_== true       
     }     
@@ -366,7 +366,7 @@ object FoBoSpec extends Specification  {
   } 
   
   //AJSNGGrid207
-  "With FoBo.InitParam.Toolkit set to FoBo.AJSNGGrid207 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.AJSNGGrid207 the ResourceServer" should {
     "allow  fobo/ng-grid.js" in {
       allowInitParam(FoBo.AJSNGGrid207,"fobo"::"ng-grid.js"::Nil) must_== true       
     }     
@@ -397,7 +397,7 @@ object FoBoSpec extends Specification  {
   } 
   
   //AJSUIGrid307
-    "With FoBo.InitParam.Toolkit set to FoBo.AJSUIGrid307 the ResourceServer" should {
+    "With FoBo.InitParam.ToolKit set to FoBo.AJSUIGrid307 the ResourceServer" should {
     "allow  fobo/ui-grid.js" in {
       allowInitParam(FoBo.AJSUIGrid307,"fobo"::"ui-grid.js"::Nil) must_== true       
     }     
@@ -449,7 +449,7 @@ object FoBoSpec extends Specification  {
   }   
   
   //AngularJS148i18n
-  "With FoBo.InitParam.Toolkit set to FoBo.AngularJS148i18n the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS148i18n the ResourceServer" should {
     "allow  fobo/angular-locale_sv-se.js" in {
       allowInitParam(FoBo.AngularJS148i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
     }     
@@ -480,7 +480,7 @@ object FoBoSpec extends Specification  {
   }   
   
   //AngularJS141i18n
-  "With FoBo.InitParam.Toolkit set to FoBo.AngularJS141i18n the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS141i18n the ResourceServer" should {
     "allow  fobo/angular-locale_sv-se.js" in {
       allowInitParam(FoBo.AngularJS141i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
     }     
@@ -512,7 +512,7 @@ object FoBoSpec extends Specification  {
   
   
   //AngularJS1315i18n
-  "With FoBo.InitParam.Toolkit set to FoBo.AngularJS1315i18n the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS1315i18n the ResourceServer" should {
     "allow  fobo/angular-locale_sv-se.js" in {
       allowInitParam(FoBo.AngularJS1315i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
     }     
@@ -543,7 +543,7 @@ object FoBoSpec extends Specification  {
   }   
   
   //AngularJS1219i18n
-  "With FoBo.InitParam.Toolkit set to FoBo.AngularJS1219i18n the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.AngularJS1219i18n the ResourceServer" should {
     "allow  fobo/angular-locale_sv-se.js" in {
       allowInitParam(FoBo.AngularJS1219i18n,"fobo"::"angular-locale_sv-se.js"::Nil) must_== true       
     }     
@@ -576,7 +576,7 @@ object FoBoSpec extends Specification  {
   /*=================FontAwesome ====================================*/
   
   //FontAwesome321
-  "With FoBo.InitParam.Toolkit set to FoBo.FontAwesome321 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome321 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
       allowInitParam(FoBo.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== true       
     }     
@@ -607,7 +607,7 @@ object FoBoSpec extends Specification  {
   } 
   
   //FontAwesome410  
-  "With FoBo.InitParam.Toolkit set to FoBo.FontAwesome410 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome410 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
       allowInitParam(FoBo.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== true       
     }     
@@ -638,7 +638,7 @@ object FoBoSpec extends Specification  {
   }  
   
   //FontAwesome430
-  "With FoBo.InitParam.Toolkit set to FoBo.FontAwesome430 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.FontAwesome430 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
       allowInitParam(FoBo.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== true       
     }     
@@ -692,7 +692,7 @@ object FoBoSpec extends Specification  {
   /*=================Google-Code-Prettify ====================================*/
   
   //PrettifyJun2011
-  "With FoBo.InitParam.Toolkit set to FoBo.PrettifyJun2011 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.PrettifyJun2011 the ResourceServer" should {
     "allow  fobo/prettify.js" in {
       allowInitParam(FoBo.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== true       
     }     
@@ -754,7 +754,7 @@ object FoBoSpec extends Specification  {
   } 
   
   //Pace0415
-  "With FoBo.InitParam.Toolkit set to FoBo.Pace0415 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.Pace0415 the ResourceServer" should {
     "allow  fobo/pace.js" in {
       allowInitParam(FoBo.Pace0415,"fobo"::"pace.js"::Nil) must_== true       
     }     
@@ -807,7 +807,7 @@ object FoBoSpec extends Specification  {
     }       
   }
   
-  "With FoBo.InitParam.Toolkit set to FoBo.Bootstrap336 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap336 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowInitParam(FoBo.Bootstrap336,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
@@ -838,7 +838,7 @@ object FoBoSpec extends Specification  {
     }       
   }
   
-  "With FoBo.InitParam.Toolkit set to FoBo.Bootstrap335 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap335 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowInitParam(FoBo.Bootstrap335,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
@@ -869,7 +869,7 @@ object FoBoSpec extends Specification  {
     }       
   }
   
-  "With FoBo.InitParam.Toolkit set to FoBo.Bootstrap320 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap320 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowInitParam(FoBo.Bootstrap320,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
@@ -900,7 +900,7 @@ object FoBoSpec extends Specification  {
     }       
   }
   
-  "With FoBo.InitParam.Toolkit set to FoBo.Bootstrap311 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap311 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowInitParam(FoBo.Bootstrap311,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
@@ -931,7 +931,7 @@ object FoBoSpec extends Specification  {
     }       
   }
   
-  "With FoBo.InitParam.Toolkit set to FoBo.Bootstrap301 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap301 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowInitParam(FoBo.Bootstrap301,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
@@ -962,7 +962,7 @@ object FoBoSpec extends Specification  {
     }       
   }
   
-  "With FoBo.InitParam.Toolkit set to FoBo.Bootstrap232 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.Bootstrap232 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowInitParam(FoBo.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
@@ -995,7 +995,7 @@ object FoBoSpec extends Specification  {
     }        
   }  
   
-  "With FoBo.InitParam.Toolkit set to FoBo.JQueryMigrate121 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.JQueryMigrate121 the ResourceServer" should {
     "allow  fobo/jquery-migrate.js" in {
       allowJQInitParam(FoBo.JQueryMigrate121,"fobo"::"jquery-migrate.js"::Nil) must_== true 
     }     
@@ -1026,7 +1026,7 @@ object FoBoSpec extends Specification  {
     }        
   }  
   
-  "With FoBo.InitParam.Toolkit set to FoBo.JQuery214 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.JQuery214 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowJQInitParam(FoBo.JQuery214,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -1057,7 +1057,7 @@ object FoBoSpec extends Specification  {
     }        
   }  
   
-  "With FoBo.InitParam.Toolkit set to FoBo.JQuery211 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.JQuery211 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowJQInitParam(FoBo.JQuery211,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -1088,7 +1088,7 @@ object FoBoSpec extends Specification  {
     }        
   }  
   
-  "With FoBo.InitParam.Toolkit set to FoBo.JQuery1113 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.JQuery1113 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowJQInitParam(FoBo.JQuery1113,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -1119,7 +1119,7 @@ object FoBoSpec extends Specification  {
     }        
   }  
   
-  "With FoBo.InitParam.Toolkit set to FoBo.JQuery1102 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.JQuery1102 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowJQInitParam(FoBo.JQuery1102,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -1151,7 +1151,7 @@ object FoBoSpec extends Specification  {
 //    }        
 //  }  
 //  
-//  "With FoBo.InitParam.Toolkit set to FoBo.JQuery182 the ResourceServer" should {
+//  "With FoBo.InitParam.ToolKit set to FoBo.JQuery182 the ResourceServer" should {
 //    "allow  fobo/jquery.js" in {
 //      allowJQInitParam(FoBo.JQuery182,"fobo"::"jquery.js"::Nil) must_== true 
 //    }     
@@ -1182,7 +1182,7 @@ object FoBoSpec extends Specification  {
     }        
   }  
   
-  "With FoBo.InitParam.Toolkit set to FoBo.JQuery191 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.JQuery191 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowJQInitParam(FoBo.JQuery191,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -1213,7 +1213,7 @@ object FoBoSpec extends Specification  {
     }        
   }  
   
-  "With FoBo.InitParam.Toolkit set to FoBo.JQuery172 the ResourceServer" should {
+  "With FoBo.InitParam.ToolKit set to FoBo.JQuery172 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
       allowJQInitParam(FoBo.JQuery172,"fobo"::"jquery.js"::Nil) must_== true 
     }     
@@ -1301,14 +1301,14 @@ object FoBoSpec extends Specification  {
     ResourceServer.pathRewriter(path)
   } 
   
- //=== InitParam.Toolkit (deprecated in v1.6) ===============// 
+ //=== InitParam.ToolKit (deprecated in v1.6) ===============// 
   def allowInitParam(resource:FoBo.FoBoToolkit,path:List[String]) = {
-    FoBo.InitParam.Toolkit=resource 
+    FoBo.InitParam.ToolKit=resource 
     ResourceServer.allowedPaths(path)
   } 
  
   def rewriteInitParam(resource:FoBo.FoBoToolkit,path:List[String]) = {
-    FoBo.InitParam.Toolkit=resource 
+    FoBo.InitParam.ToolKit=resource 
     ResourceServer.pathRewriter(path)
   } 
   

@@ -34,7 +34,7 @@ object FoBoBsSpec extends Specification {
     }       
   }
   
-  "With FoBoBs.InitParam.Toolkit set to FoBoBs.Bootstrap336 the ResourceServer" should {
+  "With FoBoBs.InitParam.ToolKit set to FoBoBs.Bootstrap336 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowInitParam(FoBoBs.Bootstrap336,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
@@ -65,7 +65,7 @@ object FoBoBsSpec extends Specification {
     }       
   }
   
-  "With FoBoBs.InitParam.Toolkit set to FoBoBs.Bootstrap335 the ResourceServer" should {
+  "With FoBoBs.InitParam.ToolKit set to FoBoBs.Bootstrap335 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowInitParam(FoBoBs.Bootstrap335,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
@@ -96,7 +96,7 @@ object FoBoBsSpec extends Specification {
     }       
   }
   
-  "With FoBoBs.InitParam.Toolkit set to FoBoBs.Bootstrap320 the ResourceServer" should {
+  "With FoBoBs.InitParam.ToolKit set to FoBoBs.Bootstrap320 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowInitParam(FoBoBs.Bootstrap320,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
@@ -127,7 +127,7 @@ object FoBoBsSpec extends Specification {
     }       
   }
   
-  "With FoBoBs.InitParam.Toolkit set to FoBoBs.Bootstrap311 the ResourceServer" should {
+  "With FoBoBs.InitParam.ToolKit set to FoBoBs.Bootstrap311 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowInitParam(FoBoBs.Bootstrap311,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
@@ -158,7 +158,7 @@ object FoBoBsSpec extends Specification {
     }       
   }
   
-  "With FoBoBs.InitParam.Toolkit set to FoBoBs.Bootstrap301 the ResourceServer" should {
+  "With FoBoBs.InitParam.ToolKit set to FoBoBs.Bootstrap301 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowInitParam(FoBoBs.Bootstrap301,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
@@ -181,12 +181,12 @@ object FoBoBsSpec extends Specification {
   
  //=== InitParam.Toolkit ===============// 
   def allowInitParam(resource:FoBoBs.FoBoToolkit,path:List[String]) = {
-    FoBoBs.InitParam.Toolkit=resource 
+    FoBoBs.InitParam.ToolKit=resource 
     ResourceServer.allowedPaths(path)
   } 
  
   def rewriteInitParam(resource:FoBoBs.FoBoToolkit,path:List[String]) = {
-    FoBoBs.InitParam.Toolkit=resource 
+    FoBoBs.InitParam.ToolKit=resource 
     ResourceServer.pathRewriter(path)
   } 
  

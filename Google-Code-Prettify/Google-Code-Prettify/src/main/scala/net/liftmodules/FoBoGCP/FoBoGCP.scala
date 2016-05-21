@@ -178,7 +178,7 @@ package object FoBoGCP {
    */
   @deprecated("Use FoBoGCP.Toolkit.Init=FoBoPa.Toolkit.[Toolkit Object]","1.6.0")
   object InitParam extends FoBoToolkit {
-    var Toolkit: FoBoToolkit = null 
+    var ToolKit: FoBoToolkit = null 
   }
 
   
@@ -189,7 +189,7 @@ package object FoBoGCP {
   * '''Example:'''
   * 
   * {{{
-  *   FoBoGCP.InitParam.Toolkit=FoBoGCP.PrettifyJun2011
+  *   FoBoGCP.InitParam.ToolKit=FoBoGCP.PrettifyJun2011
   * }}}
   */
   @deprecated("Use FoBoGCP.Toolkit.Init=FoBoGCP.Toolkit.PrettifyJun2011","1.6.0")

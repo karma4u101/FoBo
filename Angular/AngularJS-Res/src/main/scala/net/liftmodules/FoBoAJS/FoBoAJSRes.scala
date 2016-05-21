@@ -341,7 +341,7 @@ package object FoBoAJSRes {
      * {{{
      *   import net.liftmodules.{FoBoAJSRes => FoBo}
      *    :
-     *   FoBo.InitParam.Resource.Init=FoBo.Resource.AJSUIBootstrap070
+     *   FoBo.Resource.Init=FoBo.Resource.AJSUIBootstrap070
      * }}}
      *
      */

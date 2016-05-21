@@ -41,7 +41,7 @@ object FoBoTBSpec extends Specification  {
     }       
   }   
   
-  "With FoBoTB.InitParam.Toolkit set to FoBoTB.Bootstrap232 the ResourceServer" should {
+  "With FoBoTB.InitParam.ToolKit set to FoBoTB.Bootstrap232 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowInitParam(FoBoTB.Bootstrap232,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
@@ -70,12 +70,12 @@ object FoBoTBSpec extends Specification  {
   
  //=== InitParam.Toolkit ===============// 
   def allowInitParam(resource:FoBoTB.FoBoToolkit,path:List[String]) = {
-    FoBoTB.InitParam.Toolkit=resource 
+    FoBoTB.InitParam.ToolKit=resource 
     ResourceServer.allowedPaths(path)
   } 
  
   def rewriteInitParam(resource:FoBoTB.FoBoToolkit,path:List[String]) = {
-    FoBoTB.InitParam.Toolkit=resource 
+    FoBoTB.InitParam.ToolKit=resource 
     ResourceServer.pathRewriter(path)
   } 
  

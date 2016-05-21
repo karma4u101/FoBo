@@ -312,7 +312,7 @@ package object FoBoFA {
    */
   @deprecated("Use FoBoFA.Toolkit.Init=FoBoFA.Toolkit.[Toolkit Object]","1.6.0")
   object InitParam extends FAToolkit {
-    var Toolkit: FAToolkit = null 
+    var ToolKit: FAToolkit = null 
   }
 
    /**
@@ -322,7 +322,7 @@ package object FoBoFA {
    *  '''Example:'''
    *
    * {{{
-   *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome430
+   *   FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesome430
    * }}}
    * @since v1.4
    */
@@ -338,7 +338,7 @@ package object FoBoFA {
    *  '''Example:'''
    *
    * {{{
-   *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome410
+   *   FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesome410
    * }}}
    * @since v1.3
    */
@@ -354,7 +354,7 @@ package object FoBoFA {
    *  '''Example:'''
    *
    * {{{
-   *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome403
+   *   FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesome403
    * }}}
    * @since v1.2
    */
@@ -370,7 +370,7 @@ package object FoBoFA {
    *  '''Example:'''
    *
    * {{{
-   *   FoBoFA.InitParam.Toolkit=FoBoFA.FontAwesome321
+   *   FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesome321
    * }}}
    *
    */

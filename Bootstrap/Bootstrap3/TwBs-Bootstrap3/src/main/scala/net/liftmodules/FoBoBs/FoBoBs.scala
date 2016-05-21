@@ -430,14 +430,14 @@ abstract sealed trait FoBoToolkit
  *  
  * {{{
  *   FoBoBs.InitParam.JQuery=FoBoBs.JQuery192
- *   FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap301
+ *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap301
  * }}}
  * This example uses the Bootstrap v3.0.1 option.  
  *   
  */
 @deprecated("Use FoBoBs.Toolkit.Init=FoBoBs.Toolkit.[Toolkit Object]","1.6.0")
 object InitParam extends FoBoToolkit {
-  var Toolkit: FoBoToolkit = null 
+  var ToolKit: FoBoToolkit = null 
 }
 
 /**
@@ -447,7 +447,7 @@ object InitParam extends FoBoToolkit {
  * '''Example'''
  * 
  * {{{
- *   FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap336
+ *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap336
  * }}}
  * @since v1.5
  */
@@ -467,7 +467,7 @@ case object Bootstrap336 extends FoBoToolkit {
  * '''Example'''
  * 
  * {{{
- *   FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap335
+ *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap335
  * }}}
  * @since v1.4
  */
@@ -484,7 +484,7 @@ case object Bootstrap335 extends FoBoToolkit {
  * '''Example'''
  * 
  * {{{
- *   FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap320
+ *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap320
  * }}}
  */
 @deprecated("Use FoBoBs.Toolkit.Init=FoBoBs.Toolkit.Bootstrap320","1.6.0")
@@ -500,7 +500,7 @@ case object Bootstrap320 extends FoBoToolkit {
  * '''Example'''
  * 
  * {{{
- *   FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap311
+ *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap311
  * }}}
  */
 @deprecated("Use FoBoBs.Toolkit.Init=FoBoBs.Toolkit.Bootstrap311","1.6.0")
@@ -517,7 +517,7 @@ case object Bootstrap311 extends FoBoToolkit {
  * '''Example'''
  * 
  * {{{
- *   FoBoBs.InitParam.Toolkit=FoBoBs.Bootstrap301
+ *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap301
  * }}}
  */
 @deprecated("Use FoBoBs.Toolkit.Init=FoBoBs.Toolkit.Bootstrap301","1.6.0")

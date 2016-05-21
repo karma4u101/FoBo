@@ -1770,8 +1770,8 @@ package object FoBo {
    * @example In method boot in the Boot class of package bootstrap.liftweb set
    * {{{
    *    FoBo.InitParam.JQuery=FoBo.JQueryXYZ  //one jquery version
-   *    FoBo.InitParam.Toolkit=FoBo.FoBoToolkitNameXYZ //one or more toolkits 
-   *    FoBo.InitParam.Toolkit=FoBo.FoBoToolkitNameXYZ 
+   *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ //one or more toolkits 
+   *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ 
    *     : 
    *    FoBo.init()
    * }}}
@@ -1897,8 +1897,8 @@ object TBLocInfo {
  *  
  * {{{
  *   FoBo.InitParam.JQuery=FoBo.JQuery182
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap336
- *   FoBo.InitParam.Toolkit=FoBo.PrettifyJun2011
+ *   FoBo.InitParam.ToolKit=FoBo.Bootstrap336
+ *   FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
  * }}}
  * This example uses the Bootstrap v3.3.6 option and adds the Google code Prettify vJun2011 
  * to the enabled toolkits.  
@@ -1906,7 +1906,7 @@ object TBLocInfo {
 @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit case object name]","1.6.0")
 object InitParam extends FoBoToolkit with FoBoJQuery {
   var JQuery: FoBoJQuery = JQuery182
-  var Toolkit: FoBoToolkit = _ 
+  var ToolKit: FoBoToolkit = _ 
 }
 
 
@@ -1917,7 +1917,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Lift Boot:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.KineticJS510
+   *   FoBo.InitParam.ToolKit=FoBo.KineticJS510
    *   FoBo.init()
    * }}}
    * @since v1.3
@@ -1935,7 +1935,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Lift Boot:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.Pace0415
+   *   FoBo.InitParam.ToolKit=FoBo.Pace0415
    *   FoBo.init()
    * }}}
    * @since v1.2
@@ -1954,7 +1954,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Lift Boot:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS148
+   *   FoBo.InitParam.ToolKit=FoBo.AngularJS148
    *   FoBo.init()
    * }}}
    * @since v1.5
@@ -1972,7 +1972,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Example:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS148i18n
+   *   FoBo.InitParam.ToolKit=FoBo.AngularJS148i18n
    * }}}
    * @since v1.5
    */
@@ -1990,7 +1990,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Lift Boot:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS141
+   *   FoBo.InitParam.ToolKit=FoBo.AngularJS141
    *   FoBo.init()
    * }}}
    * @since v1.4
@@ -2008,7 +2008,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Example:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS141i18n
+   *   FoBo.InitParam.ToolKit=FoBo.AngularJS141i18n
    * }}}
    * @since v1.4
    */
@@ -2027,7 +2027,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Lift Boot:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS1315
+   *   FoBo.InitParam.ToolKit=FoBo.AngularJS1315
    *   FoBo.init()
    * }}}
    * @since v1.4
@@ -2045,7 +2045,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Example:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS1315i18n
+   *   FoBo.InitParam.ToolKit=FoBo.AngularJS1315i18n
    * }}}
    * @since v1.4
    */
@@ -2063,7 +2063,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Lift Boot:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS1219
+   *   FoBo.InitParam.ToolKit=FoBo.AngularJS1219
    *   FoBo.init()
    * }}}
    * @since v1.3
@@ -2081,7 +2081,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Example:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AngularJS1219i18n
+   *   FoBo.InitParam.ToolKit=FoBo.AngularJS1219i18n
    * }}}
    * @since v1.3
    */
@@ -2099,7 +2099,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Example:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AJMaterial101
+   *   FoBo.InitParam.ToolKit=FoBo.AJMaterial101
    * }}}
    * @since v1.5
    */  
@@ -2116,7 +2116,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Example:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AJMaterial0100
+   *   FoBo.InitParam.ToolKit=FoBo.AJMaterial0100
    * }}}
    * @since v1.4
    */  
@@ -2133,7 +2133,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Example:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AJSUIBootstrap0100
+   *   FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap0100
    * }}}
    * @since v1.2
    */
@@ -2150,7 +2150,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Example:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AJSUIBootstrap070
+   *   FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap070
    * }}}
    * @since v1.2
    */
@@ -2167,7 +2167,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Example:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AJSUIBootstrap020
+   *   FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap020
    * }}}
    * @since v1.0
    */
@@ -2185,7 +2185,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Example:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AJSNGGrid207
+   *   FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207
    * }}}
    * @since v1.2
    */
@@ -2202,7 +2202,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
    *  '''Example:'''
    *
    * {{{
-   *   FoBo.InitParam.Toolkit=FoBo.AJSUIGrid307
+   *   FoBo.InitParam.ToolKit=FoBo.AJSUIGrid307
    * }}}
    * @since v1.5
    */
@@ -2219,7 +2219,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * '''Example:'''
  * 
  * {{{
- *   FoBo.InitParam.Toolkit=FoBo.PrettifyJun2011
+ *   FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
  * }}}
  * @since v0.7
  */
@@ -2375,7 +2375,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  *  '''Example:'''
  *  
  * {{{
- *   FoBo.InitParam.Toolkit=FoBo.FontAwesome430
+ *   FoBo.InitParam.ToolKit=FoBo.FontAwesome430
  * }}}
  * @since v1.4 
  */
@@ -2393,7 +2393,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  *  '''Example:'''
  *  
  * {{{
- *   FoBo.InitParam.Toolkit=FoBo.FontAwesome410
+ *   FoBo.InitParam.ToolKit=FoBo.FontAwesome410
  * }}}
  * @since v1.3 
  */
@@ -2410,7 +2410,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  *  '''Example:'''
  *  
  * {{{
- *   FoBo.InitParam.Toolkit=FoBo.FontAwesome403
+ *   FoBo.InitParam.ToolKit=FoBo.FontAwesome403
  * }}}
  * @since v1.2 
  */
@@ -2428,7 +2428,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  *  '''Example:'''
  *  
  * {{{
- *   FoBo.InitParam.Toolkit=FoBo.FontAwesome321
+ *   FoBo.InitParam.ToolKit=FoBo.FontAwesome321
  * }}}
  * @since v1.0 
  */
@@ -2446,7 +2446,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * '''Example'''
  * 
  * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap232
+ *   FoBo.InitParam.ToolKit=FoBo.Bootstrap232
  * }}}
  * @since v1.1
  */
@@ -2464,7 +2464,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * '''Example'''
  * 
  * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap301
+ *   FoBo.InitParam.ToolKit=FoBo.Bootstrap301
  * }}}
  * @since v1.1
  */
@@ -2481,7 +2481,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * '''Example'''
  * 
  * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap311
+ *   FoBo.InitParam.ToolKit=FoBo.Bootstrap311
  * }}}
  * @since v1.2
  */
@@ -2498,7 +2498,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * '''Example'''
  * 
  * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap320
+ *   FoBo.InitParam.ToolKit=FoBo.Bootstrap320
  * }}}
  * @since v1.3
  */
@@ -2515,7 +2515,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * '''Example'''
  * 
  * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap335
+ *   FoBo.InitParam.ToolKit=FoBo.Bootstrap335
  * }}}
  * @since v1.4
  */
@@ -2532,7 +2532,7 @@ object InitParam extends FoBoToolkit with FoBoJQuery {
  * '''Example'''
  * 
  * {{{
- *   FoBo.InitParam.Toolkit=FoBo.Bootstrap335
+ *   FoBo.InitParam.ToolKit=FoBo.Bootstrap335
  * }}}
  * @since v1.5
  */

@@ -13,7 +13,7 @@ object FoBoGCPSpec extends Specification {
   sequential
   
   //PrettifyJun2011
-  "With FoBoGCP.InitParam.Toolkit set to FoBoGCP.PrettifyJun2011 the ResourceServer" should {
+  "With FoBoGCP.InitParam.ToolKit set to FoBoGCP.PrettifyJun2011 the ResourceServer" should {
     "allow  fobo/prettify.js" in {
       allowInitParam(FoBoGCP.PrettifyJun2011,"fobo"::"prettify.js"::Nil) must_== true 
     } 
@@ -57,12 +57,12 @@ object FoBoGCPSpec extends Specification {
   
  //=== InitParam.Toolkit ===============// 
   def allowInitParam(resource:FoBoGCP.FoBoToolkit,path:List[String]) = {
-    FoBoGCP.InitParam.Toolkit=resource 
+    FoBoGCP.InitParam.ToolKit=resource 
     ResourceServer.allowedPaths(path)
   } 
  
   def rewriteInitParam(resource:FoBoGCP.FoBoToolkit,path:List[String]) = {
-    FoBoGCP.InitParam.Toolkit=resource 
+    FoBoGCP.InitParam.ToolKit=resource 
     ResourceServer.pathRewriter(path)
   } 
  

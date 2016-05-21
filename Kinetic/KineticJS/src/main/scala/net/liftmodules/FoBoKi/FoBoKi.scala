@@ -178,7 +178,7 @@ package object FoBoKi {
    */
   @deprecated("Use FoBoKi.Toolkit.Init=FoBoKi.Toolkit.[Toolkit Object]","1.6.0")
   object InitParam extends FoBoToolkit {
-    var Toolkit: FoBoToolkit = null 
+    var ToolKit: FoBoToolkit = null 
   }
   
   
@@ -189,7 +189,7 @@ package object FoBoKi {
  * '''Example:'''
  * 
  * {{{
- *   FoBoKi.InitParam.Toolkit=FoBoKi.KineticJS510
+ *   FoBoKi.InitParam.ToolKit=FoBoKi.KineticJS510
  * }}}
  * @since v1.3
  */

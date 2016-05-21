@@ -281,14 +281,14 @@ package object FoBoTB {
    *
    * {{{
    *   FoBoTB.InitParam.JQuery=FoBoTB.JQuery172
-   *   FoBoTB.InitParam.Toolkit=FoBoTB.Bootstrap232
+   *   FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap232
    * }}}
    * This example uses the Bootstrap v2.3.2 option.
    *
    */
   @deprecated("Use FoBoTB.Toolkit.Init=FoBoTB.Toolkit.[Toolkit Object]", "1.6.0")
   object InitParam extends FoBoToolkit {
-    var Toolkit: FoBoToolkit = null
+    var ToolKit: FoBoToolkit = null
   }
 
   /**
@@ -298,7 +298,7 @@ package object FoBoTB {
    * '''Example'''
    *
    * {{{
-   *   FoBoTB.InitParam.Toolkit=FoBoTB.Bootstrap232
+   *   FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap232
    * }}}
    */
   @deprecated("Use FoBoTB.Toolkit.Init=FoBoTB.Toolkit.Bootstrap232", "1.6.0")
