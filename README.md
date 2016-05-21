@@ -56,7 +56,7 @@ This section describes the general naming pattern for using any of FoBo's module
 
 **SBT:** Add this to your project build.sbt files libraryDependencies section 
 ```scala
-"net.liftmodules" %% "moduleName_x1.y1 % "x2.y2[.z2][-SNAPSHOT/rcx/mx]"
+"net.liftmodules" %% "moduleName_x1.y1" % "x2.y2[.z2][-SNAPSHOT/rcx/mx]"
 ```
 **Maven:** Add this in the dependency section of your pom file.
 ```xml
@@ -103,7 +103,7 @@ Setup example using the FoBo/Lift Bootstrap3 API module:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-twbs-bootstrap3-api_3.0 % "1.6"
+"net.liftmodules" %% "fobo-twbs-bootstrap3-api_3.0" % "1.6"
 ```      
 **Maven:**
 ```xml      
