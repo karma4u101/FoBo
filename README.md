@@ -124,8 +124,8 @@ the following into your lift Boot
 import net.liftmodules.FoBo
   :    
 //initiate a toolkit to initiate usage of both resource and api
-FoBo.ToolKit.Init=FoBo.ToolKit.[ToolkitObjectXYZ]
-FoBo.ToolKit.Init=FoBo.ToolKit.[additional toolkit object name]
+FoBo.Toolkit.Init=FoBo.Toolkit.[ToolkitObjectXYZ]
+FoBo.Toolkit.Init=FoBo.Toolkit.[additional toolkit object name]
 //you can also initate one or more resources modules (excluding ev. Lift/FoBo API)
 FoBo.Resource.Init=FoBo.Resource.[ResouceObjectXYZ]
 FoBo.Resource.Init=FoBo.Resource.[additional resource object name]
@@ -140,7 +140,7 @@ FoBo.API.Init=FoBo.API.[additional api object name]
 import net.liftmodules.{FoBoXY => FoBo}
   :
 //as above if toolkit
-FoBo.ToolKit.Init=FoBo.ToolKit.[ToolkitObjectXYZ]
+FoBo.Toolkit.Init=FoBo.Toolkit.[ToolkitObjectXYZ]
 //as above if resource
 FoBo.Resource.Init=FoBo.Resource.[ResouceObjectXYZ]
 //as above if api
@@ -152,8 +152,8 @@ FoBo.API.Init=FoBo.API.[APIObjectXYZ]
 import net.liftmodules.{FoBoXY1,FoBoXY2}
   :
 //toolkits
-FoBoXY1.ToolKit.Init=FoBoXY1.ToolKit.[ToolkitObjectXYZ]
-FoBoXY2.ToolKit.Init=FoBoXY2.ToolKit.[ToolkitObjectXYZ]
+FoBoXY1.Toolkit.Init=FoBoXY1.Toolkit.[ToolkitObjectXYZ]
+FoBoXY2.Toolkit.Init=FoBoXY2.Toolkit.[ToolkitObjectXYZ]
 //resource
 FoBoXY1.Resource.Init=FoBoXY1.Resource.[ResouceObjectXYZ]
 FoBoXY2.Resource.Init=FoBoXY2.Resource.[ResouceObjectXYZ]      
@@ -263,13 +263,13 @@ For a comprehensive list of updates see [Changelog](https://github.com/karma4u10
 Modules available as maven artifacts but that have been split out of the FoBo / FoBo module. 
 The modules can still be used as stand alone modules (Lift version < 3.0). 
 -   Sonatype [FoBo-JQuery-Mobile](https://oss.sonatype.org/#nexus-search;quick~fobo-jquery-mobile) [v1.0.1, v1.1.0] - [JQuery Mobile](http://jquerymobile.com/)
-    Usage FoBoJQM.InitParam.ToolKit=FoBoJQM.JQueryMobile110
+    Usage FoBoJQM.InitParam.Toolkit=FoBoJQM.JQueryMobile110
 -   Sonatype [FoBo-DataTables](https://oss.sonatype.org/#nexus-search;quick~fobo-datatables) [v1.9.0] - [DataTables.net](http://datatables.net/)
-    Usage FoBoDT.InitParam.ToolKit=FoBoDT.DataTables190
+    Usage FoBoDT.InitParam.Toolkit=FoBoDT.DataTables190
 -   Sonatype [FoBo-Knockout](https://oss.sonatype.org/#nexus-search;quick~fobo-knockout) [v2.0.0, v2.1.0, v2.2.1] - [KnockoutJS](http://knockoutjs.com/)
-    Usage FoBoKO.InitParam.ToolKit=FoBoKO.Knockout221
+    Usage FoBoKO.InitParam.Toolkit=FoBoKO.Knockout221
 -   Sonatype [FoBo-Foundation](https://oss.sonatype.org/#nexus-search;quick~fobo-foundation) [v2.1.5] - [ZURB/Foundation](http://foundation.zurb.com/)
-    Usage FoBoFo.InitParam.ToolKit=FoBoFo.Foundation215
+    Usage FoBoFo.InitParam.Toolkit=FoBoFo.Foundation215
  
 For feature listings on all releases see 
 - [Changelog](https://github.com/karma4u101/FoBo/blob/develop/CHANGELOG.md)

@@ -24,12 +24,12 @@ object FoBoBsSpec extends Specification {
     }       
   }
   
-  "With FoBoBs.ToolKit.Init set to FoBoBs.ToolKit.Bootstrap336 the ResourceServer" should {
+  "With FoBoBs.Toolkit.Init set to FoBoBs.Toolkit.Bootstrap336 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
-      allowToolKitInit(FoBoBs.ToolKit.Bootstrap336,"fobo"::"bootstrap.js"::Nil) must_== true 
+      allowToolkitInit(FoBoBs.Toolkit.Bootstrap336,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
     "rewrit fobo/bootstrap.js to fobo/bootstrap/3.3.6/js/bootstrap-min.js" in {
-      rewriteToolKitInit(FoBoBs.ToolKit.Bootstrap336,"fobo"::"bootstrap.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoBs.Toolkit.Bootstrap336,"fobo"::"bootstrap.js"::Nil) must_== 
         List("fobo", "bootstrap", "3.3.6", "js", "bootstrap.min.js")
     }       
   }
@@ -55,12 +55,12 @@ object FoBoBsSpec extends Specification {
     }       
   }
   
-  "With FoBoBs.ToolKit.Init set to FoBoBs.ToolKit.Bootstrap335 the ResourceServer" should {
+  "With FoBoBs.Toolkit.Init set to FoBoBs.Toolkit.Bootstrap335 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
-      allowToolKitInit(FoBoBs.ToolKit.Bootstrap335,"fobo"::"bootstrap.js"::Nil) must_== true 
+      allowToolkitInit(FoBoBs.Toolkit.Bootstrap335,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
     "rewrit fobo/bootstrap.js to fobo/bootstrap/3.3.5/js/bootstrap-min.js" in {
-      rewriteToolKitInit(FoBoBs.ToolKit.Bootstrap335,"fobo"::"bootstrap.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoBs.Toolkit.Bootstrap335,"fobo"::"bootstrap.js"::Nil) must_== 
         List("fobo", "bootstrap", "3.3.5", "js", "bootstrap.min.js")
     }       
   }
@@ -86,12 +86,12 @@ object FoBoBsSpec extends Specification {
     }       
   }
   
-  "With FoBoBs.ToolKit.Init set to FoBoBs.ToolKit.Bootstrap320 the ResourceServer" should {
+  "With FoBoBs.Toolkit.Init set to FoBoBs.Toolkit.Bootstrap320 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
-      allowToolKitInit(FoBoBs.ToolKit.Bootstrap320,"fobo"::"bootstrap.js"::Nil) must_== true 
+      allowToolkitInit(FoBoBs.Toolkit.Bootstrap320,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
     "rewrit fobo/bootstrap.js to fobo/bootstrap/3.2.0/js/bootstrap-min.js" in {
-      rewriteToolKitInit(FoBoBs.ToolKit.Bootstrap320,"fobo"::"bootstrap.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoBs.Toolkit.Bootstrap320,"fobo"::"bootstrap.js"::Nil) must_== 
         List("fobo", "bootstrap", "3.2.0", "js", "bootstrap.min.js")
     }       
   }
@@ -117,12 +117,12 @@ object FoBoBsSpec extends Specification {
     }       
   }
   
-  "With FoBoBs.ToolKit.Init set to FoBoBs.ToolKit.Bootstrap311 the ResourceServer" should {
+  "With FoBoBs.Toolkit.Init set to FoBoBs.Toolkit.Bootstrap311 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
-      allowToolKitInit(FoBoBs.ToolKit.Bootstrap311,"fobo"::"bootstrap.js"::Nil) must_== true 
+      allowToolkitInit(FoBoBs.Toolkit.Bootstrap311,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
     "rewrit fobo/bootstrap.js to fobo/bootstrap/3.1.1/js/bootstrap-min.js" in {
-      rewriteToolKitInit(FoBoBs.ToolKit.Bootstrap311,"fobo"::"bootstrap.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoBs.Toolkit.Bootstrap311,"fobo"::"bootstrap.js"::Nil) must_== 
         List("fobo", "bootstrap", "3.1.1", "js", "bootstrap.min.js")
     }       
   }
@@ -148,12 +148,12 @@ object FoBoBsSpec extends Specification {
     }       
   }
   
-  "With FoBoBs.ToolKit.Init set to FoBoBs.ToolKit.Bootstrap301 the ResourceServer" should {
+  "With FoBoBs.Toolkit.Init set to FoBoBs.Toolkit.Bootstrap301 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
-      allowToolKitInit(FoBoBs.ToolKit.Bootstrap301,"fobo"::"bootstrap.js"::Nil) must_== true 
+      allowToolkitInit(FoBoBs.Toolkit.Bootstrap301,"fobo"::"bootstrap.js"::Nil) must_== true 
     }    
     "rewrit fobo/bootstrap.js to fobo/bootstrap/3.0.1/js/bootstrap-min.js" in {
-      rewriteToolKitInit(FoBoBs.ToolKit.Bootstrap301,"fobo"::"bootstrap.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoBs.Toolkit.Bootstrap301,"fobo"::"bootstrap.js"::Nil) must_== 
         List("fobo", "bootstrap", "3.0.1", "js", "bootstrap.min.js")
     }       
   }
@@ -168,18 +168,18 @@ object FoBoBsSpec extends Specification {
     }       
   }   
   
- //=== ToolKit.Init ==============//
-  def allowToolKitInit(resource:FoBoBs.ToolKit,path:List[String]) = {
-    FoBoBs.ToolKit.Init=resource 
+ //=== Toolkit.Init ==============//
+  def allowToolkitInit(resource:FoBoBs.Toolkit,path:List[String]) = {
+    FoBoBs.Toolkit.Init=resource 
     ResourceServer.allowedPaths(path)
   } 
  
-  def rewriteToolKitInit(resource:FoBoBs.ToolKit,path:List[String]) = {
-    FoBoBs.ToolKit.Init=resource 
+  def rewriteToolkitInit(resource:FoBoBs.Toolkit,path:List[String]) = {
+    FoBoBs.Toolkit.Init=resource 
     ResourceServer.pathRewriter(path)
   }  
   
- //=== InitParam.ToolKit ===============// 
+ //=== InitParam.Toolkit ===============// 
   def allowInitParam(resource:FoBoBs.FoBoToolkit,path:List[String]) = {
     FoBoBs.InitParam.ToolKit=resource 
     ResourceServer.allowedPaths(path)

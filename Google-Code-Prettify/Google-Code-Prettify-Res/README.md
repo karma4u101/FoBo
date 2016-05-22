@@ -30,13 +30,13 @@ If you are using maven observe that the artifact id also needs the Scala version
 ```scala
 import net.liftmodules.{FoBoGCPRes => FoBo} 
   :
-FoBo.ToolKit.Init=FoBo.ToolKit.PrettifyMMYYYY //for example FoBo.PrettifyJun2011 
+FoBo.Toolkit.Init=FoBo.Toolkit.PrettifyMMYYYY //for example FoBo.PrettifyJun2011 
 ```
 ### Lift FoBo boot hooks (when used in the FoBo module)
 ```scala
 import net.liftmodules.FoBo 
   :
-FoBo.ToolKit.Init=FoBo.ToolKit.PrettifyMMYYYY //for example FoBo.PrettifyJun2011
+FoBo.Toolkit.Init=FoBo.Toolkit.PrettifyMMYYYY //for example FoBo.PrettifyJun2011
 ```
 ### Lift FoBo Template hooks
 ```html

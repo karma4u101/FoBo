@@ -17,12 +17,12 @@ import common._
 package object FoBoKi {
 
   override def toString() = {
-    FoBoKi.ToolKit.toString()+" "+FoBoKi.Resource.toString()+" "+FoBoKi.API.toString()
+    FoBoKi.Toolkit.toString()+" "+FoBoKi.Resource.toString()+" "+FoBoKi.API.toString()
   }   
 
   /**
-   * Initiate FoBo's KineticJs ToolKit(s) in you bootstrap liftweb Boot.
-   * Using the ToolKit initiation you will bring in both the 
+   * Initiate FoBo's KineticJs Toolkit(s) in you bootstrap liftweb Boot.
+   * Using the Toolkit initiation you will bring in both the 
    * toolkit's resources and FoBo/Lift API associated 
    * with the toolkit.  
    * 
@@ -30,11 +30,11 @@ package object FoBoKi {
    * {{{
    *   import net.liftmodules.{FoBoKi => FoBo}
    *    :
-   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Object]
+   *   FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit Object]
    * }}}
    * '''Note:''' To see available objects click on the round trait icon in the header of this page.
    */  
-  abstract sealed trait ToolKit
+  abstract sealed trait Toolkit
   
   /**
    * Initiate FoBo's KineticJs Resource(s) in you bootstrap liftweb Boot.
@@ -62,20 +62,20 @@ package object FoBoKi {
    */     
   abstract sealed trait API
   
-  /*===Kinetic ToolKit===============================================================*/
+  /*===Kinetic Toolkit===============================================================*/
   
-  object ToolKit extends ToolKit {
+  object Toolkit extends Toolkit {
     
     //we don't actually need to store the objects (for now) so lets just save 
     //the object name, we can easily change this if we need to
-    private type Store = List[String] //List[ToolKit]
+    private type Store = List[String] //List[Toolkit]
     private var store:Store = List()
     def Init:Store = store
-    def Init_=(t:ToolKit):Store = {
+    def Init_=(t:Toolkit):Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
     }      
-    override def toString() = "FoBoKi.ToolKit = "+store.toString()
+    override def toString() = "FoBoKi.Toolkit = "+store.toString()
     
     /**
      * Enable usage FoBo's KineticJS API and resources version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.
@@ -86,11 +86,11 @@ package object FoBoKi {
      * {{{
      *   import net.liftmodules.{FoBoKi => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.KineticJS510 
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.KineticJS510 
      * }}}
      *
      */
-      case object KineticJS510 extends ToolKit {
+      case object KineticJS510 extends Toolkit {
         FoBoKiRes.Resource.KineticJS510
       }    
     
@@ -176,7 +176,7 @@ package object FoBoKi {
   /**
    *
    */
-  @deprecated("Use FoBoKi.ToolKit.Init=FoBoKi.ToolKit.[Toolkit Object]","1.6.0")
+  @deprecated("Use FoBoKi.Toolkit.Init=FoBoKi.Toolkit.[Toolkit Object]","1.6.0")
   object InitParam extends FoBoToolkit {
     var ToolKit: FoBoToolkit = null 
   }
@@ -189,13 +189,13 @@ package object FoBoKi {
  * '''Example:'''
  * 
  * {{{
- *   FoBoKi.InitParam.Toolkit=FoBoKi.KineticJS510
+ *   FoBoKi.InitParam.ToolKit=FoBoKi.KineticJS510
  * }}}
  * @since v1.3
  */
-  @deprecated("Use FoBoKi.ToolKit.Init=FoBoKi.ToolKit.KineticJS510","1.6.0")
+  @deprecated("Use FoBoKi.Toolkit.Init=FoBoKi.Toolkit.KineticJS510","1.6.0")
   case object KineticJS510 extends FoBoToolkit {
-    ToolKit.KineticJS510
+    Toolkit.KineticJS510
     //API.KineticJS510
   }
    

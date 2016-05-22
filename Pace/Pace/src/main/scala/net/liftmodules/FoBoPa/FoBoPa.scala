@@ -17,12 +17,12 @@ import common._
 package object FoBoPa {
   
   override def toString() = {
-    FoBoPa.ToolKit.toString()+" "+FoBoPa.Resource.toString()+" "+FoBoPa.API.toString()
+    FoBoPa.Toolkit.toString()+" "+FoBoPa.Resource.toString()+" "+FoBoPa.API.toString()
   }   
   
   /**
-   * Initiate FoBo's Pace ToolKit(s) in you bootstrap liftweb Boot.
-   * Using the ToolKit initiation you will bring in both the 
+   * Initiate FoBo's Pace Toolkit(s) in you bootstrap liftweb Boot.
+   * Using the Toolkit initiation you will bring in both the 
    * toolkit's resources and FoBo/Lift API associated 
    * with the toolkit.  
    * 
@@ -30,11 +30,11 @@ package object FoBoPa {
    * {{{
    *   import net.liftmodules.{FoBoPa => FoBo}
    *    :
-   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Object]
+   *   FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit Object]
    * }}}
    * '''Note:''' To see available objects click on the round trait icon in the header of this page.
    */  
-  abstract sealed trait ToolKit
+  abstract sealed trait Toolkit
   
   /**
    * Initiate FoBo's Pace Resource(s) in you bootstrap liftweb Boot.
@@ -62,20 +62,20 @@ package object FoBoPa {
    */   
   abstract sealed trait API
 
-  /*=== ToolKit ============================================*/
+  /*=== Toolkit ============================================*/
   
-  object ToolKit extends ToolKit {
+  object Toolkit extends Toolkit {
    
     //we don't actually need to store the objects (for now) so lets just save 
     //the object name, we can easily change this if we need to
-    private type Store = List[String] //List[ToolKit]
+    private type Store = List[String] //List[Toolkit]
     private var store:Store = List()
     def Init:Store = store
-    def Init_=(t:ToolKit):Store = {
+    def Init_=(t:Toolkit):Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
     }   
-    override def toString() = "FoBoPa.ToolKit = "+store.toString()
+    override def toString() = "FoBoPa.Toolkit = "+store.toString()
     
    /**
      * Enable usage of FoBo's Pace API and resources version 1&#8228;0&#8228;2 in your bootstrap liftweb Boot.
@@ -86,10 +86,10 @@ package object FoBoPa {
      * {{{
      *   import net.liftmodules.{FoBoPa => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.Pace102
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.Pace102
      * }}}
      */    
-     case object Pace102 extends ToolKit {
+     case object Pace102 extends Toolkit {
        FoBoPaRes.Resource.Pace102
      }
     
@@ -102,10 +102,10 @@ package object FoBoPa {
      * {{{
      *   import net.liftmodules.{FoBoPa => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.Pace0415
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.Pace0415
      * }}}
      */    
-     case object Pace0415 extends ToolKit {
+     case object Pace0415 extends Toolkit {
        FoBoPaRes.Resource.Pace0415
      }    
   }
@@ -198,13 +198,13 @@ package object FoBoPa {
   def init() {
   }
 
-  @deprecated("Use ToolKit or Resouce","1.6.0")
+  @deprecated("Use Toolkit or Resouce","1.6.0")
   abstract sealed trait PaToolkit
   
   /**
    *
    */
-  @deprecated("Use FoBoPa.ToolKit.Init=FoBoPa.ToolKit.[Toolkit Object]","1.6.0")
+  @deprecated("Use FoBoPa.Toolkit.Init=FoBoPa.Toolkit.[Toolkit Object]","1.6.0")
   object InitParam extends PaToolkit {
     var ToolKit: PaToolkit = null 
   }
@@ -218,12 +218,12 @@ package object FoBoPa {
   * {{{
   *   import net.liftmodules.{FoBoPa => FoBo}
   *    :
-  *   FoBo.InitParam.Toolkit=FoBo.Pace0415
+  *   FoBo.InitParam.ToolKit=FoBo.Pace0415
   * }}}
   */
-  @deprecated("Use FoBoPa.ToolKit.Init=FoBoPa.ToolKit.Pace0415","1.6.0")
+  @deprecated("Use FoBoPa.Toolkit.Init=FoBoPa.Toolkit.Pace0415","1.6.0")
   case object Pace0415 extends PaToolkit {
-    ToolKit.Pace0415
+    Toolkit.Pace0415
   }
 
   /**

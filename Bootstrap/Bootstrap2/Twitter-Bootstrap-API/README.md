@@ -39,7 +39,7 @@ FoBo.API.Init=FoBo.API.Bootstrap2
 ### More information
 
 For more information on how to use Twitter Bootstrap see [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
-For more information on the Twitter Bootstrap v2.x module see [FoBo Twitter Bootstrap v2.x ToolKit Module](https://github.com/karma4u101/Bootstrap/Bootstrap2/Twitter-Bootstrap).
+For more information on the Twitter Bootstrap v2.x module see [FoBo Twitter Bootstrap v2.x Toolkit Module](https://github.com/karma4u101/Bootstrap/Bootstrap2/Twitter-Bootstrap).
 For more information on how to use Twitter Bootstrap in the FoBo module see the [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo).
 
 ## Contributions

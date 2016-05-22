@@ -17,13 +17,13 @@ import common._
 package object FoBoJQ {
 
   override def toString() = {
-    FoBoJQ.ToolKit.toString()+" "+FoBoJQ.Resource.toString()+" "+FoBoJQ.API.toString()
+    FoBoJQ.Toolkit.toString()+" "+FoBoJQ.Resource.toString()+" "+FoBoJQ.API.toString()
   }  
 
   
   /**
-   * Initiate FoBo's JQuery ToolKit(s) in you bootstrap liftweb Boot.
-   * Using the ToolKit initiation you will bring in both the 
+   * Initiate FoBo's JQuery Toolkit(s) in you bootstrap liftweb Boot.
+   * Using the Toolkit initiation you will bring in both the 
    * toolkit's resources and FoBo/Lift API associated 
    * with the toolkit.  
    * 
@@ -31,11 +31,11 @@ package object FoBoJQ {
    * {{{
    *   import net.liftmodules.{FoBoJQ => FoBo}
    *    :
-   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Object]
+   *   FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit Object]
    * }}}
    * '''Note:''' To see available objects click on the round trait icon in the header of this page.
    */    
-  abstract sealed trait ToolKit
+  abstract sealed trait Toolkit
   
   /**
    * Initiate FoBo's JQuery Resource(s) in you bootstrap liftweb Boot.
@@ -63,20 +63,20 @@ package object FoBoJQ {
    */    
   abstract sealed trait API  
 
- /*=== ToolKit ============================================*/
+ /*=== Toolkit ============================================*/
   
-  object ToolKit extends ToolKit {
+  object Toolkit extends Toolkit {
     
     //we don't actually need to store the objects (for now) so lets just save 
     //the object name, we can easily change this if we need to
-    private type Store = List[String] //List[ToolKit]
+    private type Store = List[String] //List[Toolkit]
     private var store:Store = List()
     def Init:Store = store
-    def Init_=(t:ToolKit):Store = {
+    def Init_=(t:Toolkit):Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
     } 
-    override def toString() = "FoBoJQ.ToolKit = "+store.toString()
+    override def toString() = "FoBoJQ.Toolkit = "+store.toString()
     
    /**
      * Enable usage of FoBo's JQuery-Migrate API and resources version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
@@ -87,10 +87,10 @@ package object FoBoJQ {
      * {{{
      *   import net.liftmodules.{FoBoJQ => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.JQueryMigrate121
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQueryMigrate121
      * }}}
      */    
-     case object JQueryMigrate121 extends ToolKit {
+     case object JQueryMigrate121 extends Toolkit {
        FoBoJQRes.Resource.JQueryMigrate121
        //FoBoJQAPI.API.JQuery1
      } 
@@ -105,10 +105,10 @@ package object FoBoJQ {
      * {{{
      *   import net.liftmodules.{FoBoJQ => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.JQuery214
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery214
      * }}}
      */    
-     case object JQuery214 extends ToolKit {
+     case object JQuery214 extends Toolkit {
        FoBoJQRes.Resource.JQuery214
        //FoBoJQAPI.API.JQuery2
      }     
@@ -123,10 +123,10 @@ package object FoBoJQ {
      * {{{
      *   import net.liftmodules.{FoBoJQ => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.JQuery211
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery211
      * }}}
      */    
-     case object JQuery211 extends ToolKit {
+     case object JQuery211 extends Toolkit {
        FoBoJQRes.Resource.JQuery211
        //FoBoJQAPI.API.JQuery2
      }  
@@ -140,10 +140,10 @@ package object FoBoJQ {
      * {{{
      *   import net.liftmodules.{FoBoJQ => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.JQuery1113
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery1113
      * }}}
      */    
-     case object JQuery1113 extends ToolKit {
+     case object JQuery1113 extends Toolkit {
        FoBoJQRes.Resource.JQuery1113
        //FoBoJQAPI.API.JQuery2
      }   
@@ -157,10 +157,10 @@ package object FoBoJQ {
      * {{{
      *   import net.liftmodules.{FoBoJQ => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.JQuery1102
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery1102
      * }}}
      */    
-     case object JQuery1102 extends ToolKit {
+     case object JQuery1102 extends Toolkit {
        FoBoJQRes.Resource.JQuery1102
        //FoBoJQAPI.API.JQuery2
      }   
@@ -174,10 +174,10 @@ package object FoBoJQ {
      * {{{
      *   import net.liftmodules.{FoBoJQ => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.JQuery191
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery191
      * }}}
      */    
-     case object JQuery191 extends ToolKit {
+     case object JQuery191 extends Toolkit {
        FoBoJQRes.Resource.JQuery191
        //FoBoJQAPI.API.JQuery2
      }  
@@ -191,10 +191,10 @@ package object FoBoJQ {
      * {{{
      *   import net.liftmodules.{FoBoJQ => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.JQuery182
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery182
      * }}}
      */    
-     case object JQuery182 extends ToolKit {
+     case object JQuery182 extends Toolkit {
        FoBoJQRes.Resource.JQuery182
        //FoBoJQAPI.API.JQuery2
      }  
@@ -208,10 +208,10 @@ package object FoBoJQ {
      * {{{
      *   import net.liftmodules.{FoBoJQ => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.JQuery172
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery172
      * }}}
      */    
-     case object JQuery172 extends ToolKit {
+     case object JQuery172 extends Toolkit {
        FoBoJQRes.Resource.JQuery172
        //FoBoJQAPI.API.JQuery2
      }       
@@ -432,13 +432,13 @@ package object FoBoJQ {
   def init() {
   }
 
-  @deprecated("Use ToolKit or Resouce","1.6.0")
+  @deprecated("Use Toolkit or Resouce","1.6.0")
   abstract sealed trait FoBoJQ
   
   /**
    *
    */
-  @deprecated("Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.[Toolkit Object]","1.6.0")
+  @deprecated("Use FoBoJQ.Toolkit.Init=FoBoJQ.Toolkit.[Toolkit Object]","1.6.0")
   object InitParam extends FoBoJQ {
     var JQuery: FoBoJQ = null
   }
@@ -455,9 +455,9 @@ package object FoBoJQ {
    * }}}
    * @since v1.3
    */
-  @deprecated("Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQueryMigrate121","1.6.0")
+  @deprecated("Use FoBoJQ.Toolkit.Init=FoBoJQ.Toolkit.JQueryMigrate121","1.6.0")
   case object JQueryMigrate121 extends FoBoJQ {
-    FoBoJQ.ToolKit.JQueryMigrate121
+    FoBoJQ.Toolkit.JQueryMigrate121
   }  
 
   
@@ -473,9 +473,9 @@ package object FoBoJQ {
    * }}}
    * @since v1.3
    */
-  @deprecated("Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery214","1.6.0")
+  @deprecated("Use FoBoJQ.Toolkit.Init=FoBoJQ.Toolkit.JQuery214","1.6.0")
   case object JQuery214 extends FoBoJQ {
-    FoBoJQ.ToolKit.JQuery214
+    FoBoJQ.Toolkit.JQuery214
   }
 
   /**
@@ -490,9 +490,9 @@ package object FoBoJQ {
    * }}}
    * @since v1.3
    */
-  @deprecated("Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery211","1.6.0")
+  @deprecated("Use FoBoJQ.Toolkit.Init=FoBoJQ.Toolkit.JQuery211","1.6.0")
   case object JQuery211 extends FoBoJQ {
-    FoBoJQ.ToolKit.JQuery211
+    FoBoJQ.Toolkit.JQuery211
   } 
 
 
@@ -507,9 +507,9 @@ package object FoBoJQ {
  * }}}
  * @since v1.4 
  */
-  @deprecated("Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery1113","1.6.0")
+  @deprecated("Use FoBoJQ.Toolkit.Init=FoBoJQ.Toolkit.JQuery1113","1.6.0")
   case object JQuery1113 extends FoBoJQ {
-    FoBoJQ.ToolKit.JQuery1113
+    FoBoJQ.Toolkit.JQuery1113
   }
 
 /**
@@ -522,9 +522,9 @@ package object FoBoJQ {
  *   FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery1102
  * }}}
  */
-  @deprecated("Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery1102","1.6.0")
+  @deprecated("Use FoBoJQ.Toolkit.Init=FoBoJQ.Toolkit.JQuery1102","1.6.0")
   case object JQuery1102 extends FoBoJQ {
-    FoBoJQ.ToolKit.JQuery1102
+    FoBoJQ.Toolkit.JQuery1102
   }
 
 /**
@@ -537,9 +537,9 @@ package object FoBoJQ {
  *   FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery191
  * }}}
  */
-  @deprecated("Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery191","1.6.0")
+  @deprecated("Use FoBoJQ.Toolkit.Init=FoBoJQ.Toolkit.JQuery191","1.6.0")
   case object JQuery191 extends FoBoJQ {
-    FoBoJQ.ToolKit.JQuery191
+    FoBoJQ.Toolkit.JQuery191
   }  
   
 /**
@@ -552,9 +552,9 @@ package object FoBoJQ {
  *   FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery182
  * }}}
  */
-  @deprecated("Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery182","1.6.0")
+  @deprecated("Use FoBoJQ.Toolkit.Init=FoBoJQ.Toolkit.JQuery182","1.6.0")
   case object JQuery182 extends FoBoJQ {
-    FoBoJQ.ToolKit.JQuery182
+    FoBoJQ.Toolkit.JQuery182
   }
 
 /**
@@ -567,9 +567,9 @@ package object FoBoJQ {
  *   FoBoJQ.InitParam.JQuery=FoBoJQ.JQuery172
  * }}}
  */
-  @deprecated("Use FoBoJQ.ToolKit.Init=FoBoJQ.ToolKit.JQuery172","1.6.0")
+  @deprecated("Use FoBoJQ.Toolkit.Init=FoBoJQ.Toolkit.JQuery172","1.6.0")
   case object JQuery172 extends FoBoJQ {
-    FoBoJQ.ToolKit.JQuery172
+    FoBoJQ.Toolkit.JQuery172
   }
 
 }
