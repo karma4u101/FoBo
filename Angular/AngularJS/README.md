@@ -65,18 +65,18 @@ If you are using maven observe that the artifact id also needs the Scala version
 ```scala
 import net.liftmodules.FoBo 
   :
-FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS153        //access to core files 
-FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS153i18n    //access to angular i18n files 
-FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIBootstrap0100  //Angular UI Bootstrap
-FoBo.ToolKit.Init=FoBo.ToolKit.AJSMaterial108      //Angular Material
-FoBo.ToolKit.Init=FoBo.ToolKit.AJSUIGrid307        //Angular UI-Grid
-//FoBo.ToolKit.Init=FoBo.ToolKit.AJSNGGrid207        //Angular NG-Grid
+FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS153        //access to core files 
+FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS153i18n    //access to angular i18n files 
+FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap0100  //Angular UI Bootstrap
+FoBo.Toolkit.Init=FoBo.Toolkit.AJSMaterial108      //Angular Material
+FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIGrid307        //Angular UI-Grid
+//FoBo.Toolkit.Init=FoBo.Toolkit.AJSNGGrid207        //Angular NG-Grid
 ```
 ### Lift FoBo boot hooks (when used as stand alone module)
 ```scala
 import net.liftmodules.{FoBoAJS => FoBo} 
   :
-FoBo.ToolKit.Init=FoBo.ToolKit.AngularJS153      //The core files 
+FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS153      //The core files 
   :
 ```
 ### Lift FoBo Template hooks

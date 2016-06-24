@@ -22,10 +22,10 @@ See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGEL
 ### New Features
 Splitting FoBo modules into **Toolkit modules** composed of a **Resource module** and a **API module**. 
 Making it possible to, in your project depend on artifacts including everything from a single FoBo 
-provided resource module, or one or more API or resource module(s), or as before one or more Toolkit 
+provided resource module one or more API or resource module(s) or as before one or more Toolkit 
 modules or via the FoBo/FoBo module get access to all of FoBo's Toolkit, Resource and API modules.   
 
-The *FoBoToolkit* and *FoBoJQuery* trait's has been **deprecated** in favour for using the new *ToolKit*, 
+The *FoBoToolkit* and *FoBoJQuery* trait's has been **deprecated** in favour for using the new *Toolkit*, 
 *API* and *Resource* trait's and case objects.  
 
 To aide in Lift 3 enhanced support for a strong [CSP](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) (Content Security Policy) 

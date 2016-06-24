@@ -32,13 +32,13 @@ If you are using maven observe that the artifact id also needs the Scala version
 ```scala
 import net.liftmodules.FoBo 
   :
-FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap232 
+FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap232 
 ```
 ### Lift FoBo boot hooks (when used as stand alone module)
 ```scala
 import net.liftmodules.FoBoTB 
   :
-FoBoTB.ToolKit.Init=FoBoTB.ToolKit.Bootstrap323 
+FoBoTB.Toolkit.Init=FoBoTB.Toolkit.Bootstrap323 
 ```
 ### Lift FoBo Template hooks
 ```html

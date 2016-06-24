@@ -13,16 +13,16 @@ object FoBoPaSpec extends Specification {
   sequential
   
   //Pace102
-  "With FoBoPa.ToolKit.Init set to FoBoPa.ToolKit.Pace102 the ResourceServer" should {
+  "With FoBoPa.Toolkit.Init set to FoBoPa.Toolkit.Pace102 the ResourceServer" should {
     "allow  fobo/pace.js" in {
-      allowToolKitInit(FoBoPa.ToolKit.Pace102,"fobo"::"pace.js"::Nil) must_== true 
+      allowToolkitInit(FoBoPa.Toolkit.Pace102,"fobo"::"pace.js"::Nil) must_== true 
     }     
     "rewrit fobo/pace.js to fobo/pace/1.0.2/js/pace.min.js" in {
-      rewriteToolKitInit(FoBoPa.ToolKit.Pace102,"fobo"::"pace.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoPa.Toolkit.Pace102,"fobo"::"pace.js"::Nil) must_== 
         List("fobo", "pace", "1.0.2", "js", "pace.min.js")
     }   
     "rewrit fobo/black/pace-theme-minimal.css to fobo/pace/1.0.2/css/themes/black/pace-theme-minimal.css" in {
-      rewriteToolKitInit(FoBoPa.ToolKit.Pace102,"fobo"::"black"::"pace-theme-minimal.css"::Nil) must_== 
+      rewriteToolkitInit(FoBoPa.Toolkit.Pace102,"fobo"::"black"::"pace-theme-minimal.css"::Nil) must_== 
         List("fobo", "pace", "1.0.2", "css", "themes", "black", "pace-theme-minimal.css")
     }       
   }  
@@ -53,12 +53,12 @@ object FoBoPaSpec extends Specification {
     }       
   }
   
-  "With FoBoPa.ToolKit.Init set to FoBoPa.ToolKit.Pace0415 the ResourceServer" should {
+  "With FoBoPa.Toolkit.Init set to FoBoPa.Toolkit.Pace0415 the ResourceServer" should {
     "allow  fobo/pace.js" in {
-      allowToolKitInit(FoBoPa.ToolKit.Pace0415,"fobo"::"pace.js"::Nil) must_== true 
+      allowToolkitInit(FoBoPa.Toolkit.Pace0415,"fobo"::"pace.js"::Nil) must_== true 
     } 
     "rewrit fobo/angular.js to fobo/pace/0.4.15/js/pace.min.js" in {
-      rewriteToolKitInit(FoBoPa.ToolKit.Pace0415,"fobo"::"pace.js"::Nil) must_== 
+      rewriteToolkitInit(FoBoPa.Toolkit.Pace0415,"fobo"::"pace.js"::Nil) must_== 
         List("fobo", "pace", "0.4.15", "js", "pace.min.js")
     }       
   } 
@@ -74,14 +74,14 @@ object FoBoPaSpec extends Specification {
   }    
   
   
- //=== ToolKit.Init ==============//
-  def allowToolKitInit(resource:FoBoPa.ToolKit,path:List[String]) = {
-    FoBoPa.ToolKit.Init=resource 
+ //=== Toolkit.Init ==============//
+  def allowToolkitInit(resource:FoBoPa.Toolkit,path:List[String]) = {
+    FoBoPa.Toolkit.Init=resource 
     ResourceServer.allowedPaths(path)
   } 
  
-  def rewriteToolKitInit(resource:FoBoPa.ToolKit,path:List[String]) = {
-    FoBoPa.ToolKit.Init=resource 
+  def rewriteToolkitInit(resource:FoBoPa.Toolkit,path:List[String]) = {
+    FoBoPa.Toolkit.Init=resource 
     ResourceServer.pathRewriter(path)
   }  
   

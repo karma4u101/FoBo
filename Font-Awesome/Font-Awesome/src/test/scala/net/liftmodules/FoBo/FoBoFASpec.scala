@@ -13,12 +13,12 @@ object FoBoFASpec extends Specification {
   sequential
   
   //FontAwesome463 
-  "With FoBoFA.ToolKit.Init set to FoBoFA.ToolKit.FontAwesome463 the ResourceServer" should {
+  "With FoBoFA.Toolkit.Init set to FoBoFA.Toolkit.FontAwesome463 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
-      allowToolKitInit(FoBoFA.ToolKit.FontAwesome463,"fobo"::"font-awesome.css"::Nil) must_== true 
+      allowToolkitInit(FoBoFA.Toolkit.FontAwesome463,"fobo"::"font-awesome.css"::Nil) must_== true 
     } 
     "rewrit fobo/font-awesome.css to fobo/font-awesome/4.6.3/css/font-awesome.css" in {
-      rewriteToolKitInit(FoBoFA.ToolKit.FontAwesome463,"fobo"::"font-awesome.css"::Nil) must_== 
+      rewriteToolkitInit(FoBoFA.Toolkit.FontAwesome463,"fobo"::"font-awesome.css"::Nil) must_== 
         List("fobo", "font-awesome", "4.6.3", "css", "font-awesome.min.css")
     }       
   }   
@@ -44,12 +44,12 @@ object FoBoFASpec extends Specification {
     }       
   }  
   
-  "With FoBoFA.ToolKit.Init set to FoBoFA.ToolKit.FontAwesome430 the ResourceServer" should {
+  "With FoBoFA.Toolkit.Init set to FoBoFA.Toolkit.FontAwesome430 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
-      allowToolKitInit(FoBoFA.ToolKit.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== true 
+      allowToolkitInit(FoBoFA.Toolkit.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== true 
     } 
     "rewrit fobo/font-awesome.css to fobo/font-awesome/4.3.0/css/font-awesome.css" in {
-      rewriteToolKitInit(FoBoFA.ToolKit.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== 
+      rewriteToolkitInit(FoBoFA.Toolkit.FontAwesome430,"fobo"::"font-awesome.css"::Nil) must_== 
         List("fobo", "font-awesome", "4.3.0", "css", "font-awesome.min.css")
     }       
   } 
@@ -75,12 +75,12 @@ object FoBoFASpec extends Specification {
     }       
   }  
   
-  "With FoBoFA.ToolKit.Init set to FoBoFA.ToolKit.FontAwesome410 the ResourceServer" should {
+  "With FoBoFA.Toolkit.Init set to FoBoFA.Toolkit.FontAwesome410 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
-      allowToolKitInit(FoBoFA.ToolKit.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== true 
+      allowToolkitInit(FoBoFA.Toolkit.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== true 
     } 
     "rewrit fobo/font-awesome.css to fobo/font-awesome/4.1.0/css/font-awesome.min.css" in {
-      rewriteToolKitInit(FoBoFA.ToolKit.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== 
+      rewriteToolkitInit(FoBoFA.Toolkit.FontAwesome410,"fobo"::"font-awesome.css"::Nil) must_== 
         List("fobo", "font-awesome", "4.1.0", "css", "font-awesome.min.css")
     }       
   } 
@@ -106,12 +106,12 @@ object FoBoFASpec extends Specification {
     }       
   }  
   
-  "With FoBoFA.ToolKit.Init set to FoBoFA.ToolKit.FontAwesome403 the ResourceServer" should {
+  "With FoBoFA.Toolkit.Init set to FoBoFA.Toolkit.FontAwesome403 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
-      allowToolKitInit(FoBoFA.ToolKit.FontAwesome403,"fobo"::"font-awesome.css"::Nil) must_== true 
+      allowToolkitInit(FoBoFA.Toolkit.FontAwesome403,"fobo"::"font-awesome.css"::Nil) must_== true 
     } 
     "rewrit fobo/font-awesome.css to fobo/font-awesome/4.0.3/css/font-awesome.css" in {
-      rewriteToolKitInit(FoBoFA.ToolKit.FontAwesome403,"fobo"::"font-awesome.css"::Nil) must_== 
+      rewriteToolkitInit(FoBoFA.Toolkit.FontAwesome403,"fobo"::"font-awesome.css"::Nil) must_== 
         List("fobo", "font-awesome", "4.0.3", "css", "font-awesome.min.css")
     }       
   } 
@@ -137,12 +137,12 @@ object FoBoFASpec extends Specification {
     }       
   }  
   
-  "With FoBoFA.ToolKit.Init set to FoBoFA.ToolKit.FontAwesome321 the ResourceServer" should {
+  "With FoBoFA.Toolkit.Init set to FoBoFA.Toolkit.FontAwesome321 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
-      allowToolKitInit(FoBoFA.ToolKit.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== true 
+      allowToolkitInit(FoBoFA.Toolkit.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== true 
     } 
     "rewrit fobo/font-awesome.css to fobo/font-awesome/3.2.1/css/font-awesome-min.css" in {
-      rewriteToolKitInit(FoBoFA.ToolKit.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== 
+      rewriteToolkitInit(FoBoFA.Toolkit.FontAwesome321,"fobo"::"font-awesome.css"::Nil) must_== 
         List("fobo", "font-awesome", "3.2.1", "css", "font-awesome-min.css")
     }       
   } 
@@ -158,14 +158,14 @@ object FoBoFASpec extends Specification {
   }     
   
   
- //=== ToolKit.Init ==============//
-  def allowToolKitInit(resource:FoBoFA.ToolKit,path:List[String]) = {
-    FoBoFA.ToolKit.Init=resource 
+ //=== Toolkit.Init ==============//
+  def allowToolkitInit(resource:FoBoFA.Toolkit,path:List[String]) = {
+    FoBoFA.Toolkit.Init=resource 
     ResourceServer.allowedPaths(path)
   } 
  
-  def rewriteToolKitInit(resource:FoBoFA.ToolKit,path:List[String]) = {
-    FoBoFA.ToolKit.Init=resource 
+  def rewriteToolkitInit(resource:FoBoFA.Toolkit,path:List[String]) = {
+    FoBoFA.Toolkit.Init=resource 
     ResourceServer.pathRewriter(path)
   }  
   

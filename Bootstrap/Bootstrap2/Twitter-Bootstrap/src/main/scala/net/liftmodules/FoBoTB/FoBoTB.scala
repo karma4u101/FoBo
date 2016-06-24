@@ -19,20 +19,20 @@ import common._
  *    import net.liftmodules.{FoBoTB => FoBo}
  *     :
  *     :
- *    FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap232 //or any other toolkit object
+ *    FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap232 //or any other toolkit object
  * }}}
- * You may substitute ToolKit for Resource or API and if you wish also adjust the artifact dependencies 
+ * You may substitute Toolkit for Resource or API and if you wish also adjust the artifact dependencies 
  * accordingly to include just the FoBo modules you use. 
  */
 package object FoBoTB {
 
   override def toString() = {
-    FoBoTB.ToolKit.toString()+" "+FoBoTB.Resource.toString()+" "+FoBoTB.API.toString()
+    FoBoTB.Toolkit.toString()+" "+FoBoTB.Resource.toString()+" "+FoBoTB.API.toString()
   } 
   
   /**
-   * Initiate FoBo's Bootstrap 2 ToolKit in you bootstrap liftweb Boot.
-   * Using the ToolKit initiation you will bring in both the
+   * Initiate FoBo's Bootstrap 2 Toolkit in you bootstrap liftweb Boot.
+   * Using the Toolkit initiation you will bring in both the
    * toolkit's resources and the FoBo/Lift API associated
    * with the toolkit.
    *
@@ -40,12 +40,12 @@ package object FoBoTB {
    * {{{
    *   import net.liftmodules.{FoBoTB => FoBo}
    *    :
-   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Object]
+   *   FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit Object]
    * }}}
    * '''Note:''' To see available objects click on the round trait icon in the header of this page.
    *  
    */
-  abstract sealed trait ToolKit
+  abstract sealed trait Toolkit
 
   /**
    * Initiate FoBo's Bootstrap 2 Resource(s) in you bootstrap liftweb Boot.
@@ -73,20 +73,20 @@ package object FoBoTB {
    */
   abstract sealed trait API
 
-  /*=== ToolKit ============================================*/
+  /*=== Toolkit ============================================*/
 
-  object ToolKit extends ToolKit {
+  object Toolkit extends Toolkit {
     
     //we don't actually need to store the objects (for now) so lets just save 
     //the object name, we can easily change this if we need to
-    private type Store = List[String] //List[ToolKit]
+    private type Store = List[String] //List[Toolkit]
     private var store:Store = List()
     def Init:Store = store
-    def Init_=(t:ToolKit):Store = {
+    def Init_=(t:Toolkit):Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
     } 
-    override def toString() = "FoBoTB.ToolKit = "+store.toString()
+    override def toString() = "FoBoTB.Toolkit = "+store.toString()
     /**
      * Enable usage of Bootstrap API and resources version 2&#8228;3&#8228;2 resource files in your bootstrap liftweb Boot.
      * @version 2.3.2
@@ -96,11 +96,11 @@ package object FoBoTB {
      * {{{
      *   import net.liftmodules.{FoBoTB => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.Bootstrap232
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap232
      * }}}
      *
      */
-    case object Bootstrap232 extends ToolKit {
+    case object Bootstrap232 extends Toolkit {
       net.liftmodules.FoBoTBRes.Resource.Bootstrap232
       net.liftmodules.FoBoTBAPI.API.Bootstrap2
     }
@@ -271,7 +271,7 @@ package object FoBoTB {
 
   }
 
-  @deprecated("Use FoBoTB.ToolKit or FoBoTB.Resource and FoBoTB.API", "1.6.0")
+  @deprecated("Use FoBoTB.Toolkit or FoBoTB.Resource and FoBoTB.API", "1.6.0")
   abstract sealed trait FoBoToolkit
 
   /**
@@ -281,12 +281,12 @@ package object FoBoTB {
    *
    * {{{
    *   FoBoTB.InitParam.JQuery=FoBoTB.JQuery172
-   *   FoBoTB.InitParam.Toolkit=FoBoTB.Bootstrap232
+   *   FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap232
    * }}}
    * This example uses the Bootstrap v2.3.2 option.
    *
    */
-  @deprecated("Use FoBoTB.ToolKit.Init=FoBoTB.ToolKit.[Toolkit Object]", "1.6.0")
+  @deprecated("Use FoBoTB.Toolkit.Init=FoBoTB.Toolkit.[Toolkit Object]", "1.6.0")
   object InitParam extends FoBoToolkit {
     var ToolKit: FoBoToolkit = null
   }
@@ -298,10 +298,10 @@ package object FoBoTB {
    * '''Example'''
    *
    * {{{
-   *   FoBoTB.InitParam.Toolkit=FoBoTB.Bootstrap232
+   *   FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap232
    * }}}
    */
-  @deprecated("Use FoBoTB.ToolKit.Init=FoBoTB.ToolKit.Bootstrap232", "1.6.0")
+  @deprecated("Use FoBoTB.Toolkit.Init=FoBoTB.Toolkit.Bootstrap232", "1.6.0")
   case object Bootstrap232 extends FoBoToolkit {
     net.liftmodules.FoBoTBRes.Resource.Bootstrap232
     net.liftmodules.FoBoTBAPI.API.Bootstrap2

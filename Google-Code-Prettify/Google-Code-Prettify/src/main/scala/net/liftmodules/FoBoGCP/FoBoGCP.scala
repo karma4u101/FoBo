@@ -17,12 +17,12 @@ import common._
 package object FoBoGCP {
 
   override def toString() = {
-    FoBoGCP.ToolKit.toString()+" "+FoBoGCP.Resource.toString()+" "+FoBoGCP.API.toString()
+    FoBoGCP.Toolkit.toString()+" "+FoBoGCP.Resource.toString()+" "+FoBoGCP.API.toString()
   }
   
   /**
-   * Initiate FoBo's Google Code Prettify ToolKit(s) in you bootstrap liftweb Boot.
-   * Using the ToolKit initiation you will bring in both the 
+   * Initiate FoBo's Google Code Prettify Toolkit(s) in you bootstrap liftweb Boot.
+   * Using the Toolkit initiation you will bring in both the 
    * toolkit's resources and FoBo/Lift API associated 
    * with the toolkit.  
    * 
@@ -30,11 +30,11 @@ package object FoBoGCP {
    * {{{
    *   import net.liftmodules.{FoBoGCP => FoBo}
    *    :
-   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Object]
+   *   FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit Object]
    * }}}
    * '''Note:''' To see available objects click on the round trait icon in the header of this page.
    */  
-  abstract sealed trait ToolKit
+  abstract sealed trait Toolkit
   
   /**
    * Initiate FoBo's Google Code Prettify Resource(s) in you bootstrap liftweb Boot.
@@ -63,20 +63,20 @@ package object FoBoGCP {
   abstract sealed trait API
   
   
-  /*=== ToolKit ============================================*/
+  /*=== Toolkit ============================================*/
   
-  object ToolKit extends ToolKit {
+  object Toolkit extends Toolkit {
     
     //we don't actually need to store the objects (for now) so lets just save 
     //the object name, we can easily change this if we need to
-    private type Store = List[String] //List[ToolKit]
+    private type Store = List[String] //List[Toolkit]
     private var store:Store = List()
     def Init:Store = store
-    def Init_=(t:ToolKit):Store = {
+    def Init_=(t:Toolkit):Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
     }
-    override def toString() = "FoBoGCP.ToolKit = "+store.toString()
+    override def toString() = "FoBoGCP.Toolkit = "+store.toString()
     
    /**
      * Enable usage of FoBo's Google Code Prettify API and resources version Jun2011 in your bootstrap liftweb Boot.
@@ -87,10 +87,10 @@ package object FoBoGCP {
      * {{{
      *   import net.liftmodules.{FoBoGCP => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.PrettifyJun2011
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.PrettifyJun2011
      * }}}
      */    
-     case object PrettifyJun2011 extends ToolKit {
+     case object PrettifyJun2011 extends Toolkit {
        FoBoGCPRes.Resource.PrettifyJun2011
        //FoBoPaAPI.API.Prettify1
      }    
@@ -176,7 +176,7 @@ package object FoBoGCP {
   /**
    *
    */
-  @deprecated("Use FoBoGCP.ToolKit.Init=FoBoPa.ToolKit.[Toolkit Object]","1.6.0")
+  @deprecated("Use FoBoGCP.Toolkit.Init=FoBoPa.Toolkit.[Toolkit Object]","1.6.0")
   object InitParam extends FoBoToolkit {
     var ToolKit: FoBoToolkit = null 
   }
@@ -189,12 +189,12 @@ package object FoBoGCP {
   * '''Example:'''
   * 
   * {{{
-  *   FoBoGCP.InitParam.Toolkit=FoBoGCP.PrettifyJun2011
+  *   FoBoGCP.InitParam.ToolKit=FoBoGCP.PrettifyJun2011
   * }}}
   */
-  @deprecated("Use FoBoGCP.ToolKit.Init=FoBoGCP.ToolKit.PrettifyJun2011","1.6.0")
+  @deprecated("Use FoBoGCP.Toolkit.Init=FoBoGCP.Toolkit.PrettifyJun2011","1.6.0")
   case object PrettifyJun2011 extends FoBoToolkit {
-    ToolKit.PrettifyJun2011
+    Toolkit.PrettifyJun2011
   }
 
   /**

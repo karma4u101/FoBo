@@ -44,7 +44,7 @@ or
     
 ### Lift FoBo Template hooks
 
-See [FoBo AngularJS ToolKit Module](https://github.com/karma4u101/Angular/AngularJS)
+See [FoBo AngularJS Toolkit Module](https://github.com/karma4u101/Angular/AngularJS)
 
 ### Dependency settings
 

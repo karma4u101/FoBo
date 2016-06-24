@@ -17,12 +17,12 @@ import common._
 package object FoBoHL {
   
   override def toString() = {
-    FoBoHL.ToolKit.toString()+" "+FoBoHL.Resource.toString()+" "+FoBoHL.API.toString()
+    FoBoHL.Toolkit.toString()+" "+FoBoHL.Resource.toString()+" "+FoBoHL.API.toString()
   }   
   
   /**
-   * Initiate FoBo's Highlight ToolKit(s) in you bootstrap liftweb Boot.
-   * Using the ToolKit initiation you will bring in both the 
+   * Initiate FoBo's Highlight Toolkit(s) in you bootstrap liftweb Boot.
+   * Using the Toolkit initiation you will bring in both the 
    * toolkit's resources and FoBo/Lift API associated 
    * with the toolkit.  
    * 
@@ -30,11 +30,11 @@ package object FoBoHL {
    * {{{
    *   import net.liftmodules.{FoBoHL => FoBo}
    *    :
-   *   FoBo.ToolKit.Init=FoBo.ToolKit.[ToolKit Object]
+   *   FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit Object]
    * }}}
    * '''Note:''' To see available objects click on the round trait icon in the header of this page.
    */  
-  abstract sealed trait ToolKit
+  abstract sealed trait Toolkit
   
   /**
    * Initiate FoBo's Highlight Resource(s) in you bootstrap liftweb Boot.
@@ -62,20 +62,20 @@ package object FoBoHL {
    */   
   abstract sealed trait API
 
-  /*=== ToolKit ============================================*/
+  /*=== Toolkit ============================================*/
   
-  object ToolKit extends ToolKit {
+  object Toolkit extends Toolkit {
    
     //we don't actually need to store the objects (for now) so lets just save 
     //the object name, we can easily change this if we need to
-    private type Store = List[String] //List[ToolKit]
+    private type Store = List[String] //List[Toolkit]
     private var store:Store = List()
     def Init:Store = store
-    def Init_=(t:ToolKit):Store = {
+    def Init_=(t:Toolkit):Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
     }   
-    override def toString() = "FoBoHL.ToolKit = "+store.toString()
+    override def toString() = "FoBoHL.Toolkit = "+store.toString()
     
    /**
      * Enable usage of FoBo's Highlight API and resources version 9&#8228;3&#8228;0 in your bootstrap liftweb Boot.
@@ -86,10 +86,10 @@ package object FoBoHL {
      * {{{
      *   import net.liftmodules.{FoBoHL => FoBo}
      *    :
-     *   FoBo.ToolKit.Init=FoBo.ToolKit.HighlightJS930
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.HighlightJS930
      * }}}
      */    
-     case object HighlightJS930 extends ToolKit {
+     case object HighlightJS930 extends Toolkit {
        FoBoHLRes.Resource.HighlightJS930
        FoBoHLAPI.API.HighlightJS9
      }
