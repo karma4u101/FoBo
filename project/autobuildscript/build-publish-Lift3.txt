@@ -1,8 +1,8 @@
 alias pub=publish
 
-set version       in ThisBuild:="1.6-SNAPSHOT"
+set version       in ThisBuild:="1.6"
 
-set liftVersion   in ThisBuild:="3.0-RC2"
+set liftVersion   in ThisBuild:="3.0-RC3"
 set scalaVersion  in ThisBuild:="2.11.6"
 
 project fobo

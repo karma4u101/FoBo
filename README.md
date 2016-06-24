@@ -1,4 +1,4 @@
-# FoBo - A Modular Front-End Toolkit Module for Lift 
+# FoBo - A Modular Front-End Toolkit Assembly for Lift 
 
 [![Build Status](https://secure.travis-ci.org/karma4u101/FoBo.png)](http://travis-ci.org/karma4u101/FoBo)
 [![Stories in Ready](https://badge.waffle.io/karma4u101/FoBo.svg?label=ready&title=Ready)](http://waffle.io/karma4u101/FoBo) 
