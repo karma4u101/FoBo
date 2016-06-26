@@ -1,4 +1,4 @@
-# FoBo - A Modular Front-End Toolkit Assembly for Lift 
+# FoBo - A Modular Front-End Toolkit module for Lift 
 
 [![Build Status](https://secure.travis-ci.org/karma4u101/FoBo.png)](http://travis-ci.org/karma4u101/FoBo)
 [![Stories in Ready](https://badge.waffle.io/karma4u101/FoBo.svg?label=ready&title=Ready)](http://waffle.io/karma4u101/FoBo) 
@@ -7,6 +7,7 @@
 
 FoBo is a [Lift module](http://liftweb.net/lift_modules), composed of several Toolkit modules that includes industry leading open source front end 
 toolkits for developing mobile scalable responsive web applications that will jazz up your Lift applications with the toolkit(s) of your choice.
+
 The toolkit modules is in it's turn composed of a API module and a Resource module artifact making the usage of FoBo scalable and flexible.
 
 A **live demo** and introduction to using the FoBo module(s), including API documentation and links to running examples of starter templates and more, 
