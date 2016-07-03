@@ -20,6 +20,8 @@ scalacOptions ++= Seq("-deprecation")//,"-feature" <==cant use as long as we bui
 
 parallelExecution in Test := false
 
+scalafmtConfig in ThisBuild := Some(file(".scalafmt"))
+
 EclipseKeys.withSource in ThisBuild := true
 
 EclipseKeys.skipParents in ThisBuild := false

@@ -10,6 +10,8 @@ scalacOptions ++= Seq("-deprecation")
 
 parallelExecution in Test := false
 
+scalafmtConfig := Some(file(".scalafmt"))
+
 EclipseKeys.withSource := true
 
 //scalacOptions += "-Ylog-classpath"

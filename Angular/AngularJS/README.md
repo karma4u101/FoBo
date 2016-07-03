@@ -153,8 +153,8 @@ You will find more information about available locales at [Angular Guide i18n](h
 For more information on how to use AngularJS and included components:
 - AngularJS see [AngularJS](http://angularjs.org/)
 - Angular UI Bootstrap see [Angular UI Bootstrap](http://angular-ui.github.io/bootstrap/)
-- Angular Angular NG-Grid see [Angular NG-Grid](http://angular-ui.github.io/ng-grid/)
-- FoBo AngularJS Resouces module see [FoBo AngularJSRes](https://github.com/karma4u101/FoBo/Angular/AngularJSRes).
+- Angular Angular UI-Grid see [Angular UI-Grid](http://ui-grid.info/)
+- FoBo AngularJS Resources module see [FoBo AngularJSRes](https://github.com/karma4u101/FoBo/Angular/AngularJSRes).
 - FoBo AngularJS API module see [FoBo AngularJSAPI](https://github.com/karma4u101/FoBo/Angular/AngularJSAPI).
 - FoBo AngularJS in the FoBo module see the [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo).
 
