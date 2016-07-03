@@ -14,7 +14,7 @@ EclipseKeys.createSrc := EclipseCreateSrc.Default + EclipseCreateSrc.Managed
 
 parallelExecution in Test := false
 
-scalafmtConfig := Some(file(".scalafmt"))
+//scalafmtConfig := Some(file(".scalafmt"))
 
 resolvers ++= Seq(
   "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",

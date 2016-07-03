@@ -20,7 +20,9 @@ scalacOptions ++= Seq("-deprecation")//,"-feature" <==cant use as long as we bui
 
 parallelExecution in Test := false
 
-scalafmtConfig in ThisBuild := Some(file(".scalafmt"))
+//needs improvements to the build system for this one to work
+//see https://olafurpg.github.io/scalafmt/#Configuration
+//scalafmtConfig in ThisBuild := Some(file(".scalafmt"))
 
 EclipseKeys.withSource in ThisBuild := true
 

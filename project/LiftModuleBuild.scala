@@ -4,6 +4,7 @@ import java.lang.String
 import Unidoc.{ JavaDoc, javadocSettings, junidocSources, sunidoc, unidocExclude }
 import annotation.tailrec
 import sbtbuildinfo.Plugin._
+//import org.scalafmt.sbt.ScalaFmtPlugin.autoImport._
 
 object LiftModuleFoBoBuild extends Build {
   
