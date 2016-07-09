@@ -8,11 +8,13 @@ import LiftModuleKeys._
   
 lazy val commonSettings = Seq(
   organization := "net.liftmodules",
-  version := "1.7-SNAPSHOT"
+  version := "1.7-SNAPSHOT",
+  autoAPIMappings := true
 )
 
 lazy val fobometa = (project in file(".")).
   settings(commonSettings: _*).
+  settings(unidocSettings: _*).
   settings(name := "fobo-meta").
   settings(scalaVersion in ThisBuild := "2.11.7").
   settings(liftVersion in ThisBuild <<= liftVersion ?? "3.0-RC3").
