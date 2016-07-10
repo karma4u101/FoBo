@@ -1918,7 +1918,7 @@ package object FoBo {
   @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit case object name]",
               "1.6.0")
   object InitParam extends FoBoToolkit with FoBoJQuery {
-    var JQuery: FoBoJQuery = JQuery182
+    var JQuery: FoBoJQuery = null
     var ToolKit: FoBoToolkit = _
   }
 
