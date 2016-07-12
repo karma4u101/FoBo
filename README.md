@@ -208,15 +208,16 @@ Twitter Bootstrap v2.3.0) For more information on how to set this up see below.
 
 FoBo artifacts is available for: Lift 2.4, 2.5, 2.6.x and 3.0.x
 
-- [FoBo](https://github.com/karma4u101/FoBo/tree/master/FoBo) This module conatins all the bellow listed submodules. 
+- [FoBo](https://github.com/karma4u101/FoBo/tree/master/FoBo/FoBo) This module conatins all the bellow listed toolkit modules. 
 
-FoBo is built up of several sub module that appart from beeing used in the FoBo / FoBo module also is available for use separately 
+FoBo is built up of several toolkit that in it's turn is built up of corresponding api and resource modules. Appart from 
+beeing acessable from the FoBo / FoBo module the toolkit, api and resource modules is also available for use separately. 
  
-The FoBo / FoBo module includes the following sub-modules and supports the following toolkit versions
+The FoBo / FoBo module includes the following modules and supports the following toolkit versions
 
--   [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) [v1.0.6, v1.2.11, v1.3.15, v1.4.1, v1.4.8, v1.5.3] (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) )] - [Angular](http://angularjs.org/)
--   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) [v3.0.0, v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6] - [Bootstrap 3.x](http://getbootstrap.com/)
--   [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.3.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+-   [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/Angular) [v1.0.6, v1.2.11, v1.3.15, v1.4.1, v1.4.8, v1.5.3] (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/Angular/AngularJS) )] - [Angular](http://angularjs.org/)
+-   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/Bootstrap/Bootstrap3) [v3.0.0, v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6] - [Bootstrap 3.x](http://getbootstrap.com/)
+-   [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Bootstrap/Bootstrap2) [v2.3.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 -   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0, v3.2.1, v4.0.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] - [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2, v1.9.1, v1.10.2, v1.11.0, v1.11.1, v1.11.3, v2.1.1, v2.1.4] - [JQuery](http://jquery.com/)
 -   FoBo-JQuery also includes JQuery Migrate [v1.2.1] - [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)
