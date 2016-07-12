@@ -1801,7 +1801,7 @@ package object FoBo {
     * }}} 
     * @since v1.0
     */
-  @deprecated("Use BSLocInfo or TBLocInfo provided by FoBoBs or FoBoTB ",
+  @deprecated("Use BSLocInfo or TBLocInfo provided by FoBoBs and FoBoTB ",
               "1.6.0")
   object TBLocInfo {
     private val hd: Box[String] = Full("divider")

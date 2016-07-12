@@ -22,10 +22,11 @@ See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGEL
 
 ## FoBo v1.7
 
-### Buildsystem
+### Buildsystem update
 As SBT 1.0 won't support Build.scala usage see [sbt/sbt#2524](https://github.com/sbt/sbt/pull/2524) 
-the *'object XXXX extend Build {...}'* dependency has been greatly reduced and is now using the build.sbt 
-multi project build style. The build system is now much cleaner and easier to work with. 
+the *'object XXXX extend Build {...}'* usage has been greatly reduced and is now using the build.sbt 
+multi project build style the only thing left dependant on Build is two lift module specific settings keys. 
+The build system is now much cleaner and easier to work with. 
 
 - [Multi-project build](http://www.scala-sbt.org/0.13/docs/Multi-Project.html) now using build.sbt style
 - [unidoc](https://github.com/sbt/sbt-unidoc) is now a proper sbt plugin

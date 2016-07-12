@@ -47,7 +47,7 @@ on a PR. Please see the [Contribution Document](https://github.com/karma4u101/Fo
 or drop a question/suggestion to the [Lift's mailing list](http://groups.google.com/group/liftweb/) 
 
 > As FoBo is using this [Git branching model](http://nvie.com/posts/a-successful-git-branching-model/) the **main branch** is just updated for releases 
-> so your pull requests will be against the [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
+> so your pull requests will, by default, be against the [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
      
 ## Integration into your project 
 
