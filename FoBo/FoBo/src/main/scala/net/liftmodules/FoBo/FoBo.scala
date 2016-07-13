@@ -6,7 +6,7 @@ import http._
 import common._
 
 /**
-  * ==Welcome to FoBo - A Comprehensive Front-End Toolkit Lift Module== 
+  * ==Welcome to FoBo - A Modular Front-End Toolkit module for Lift== 
   * 
   * The [[net.liftmodules.FoBo]] Package is the starting point for this API. 
   * The FoBo modules Github home is [[https://github.com/karma4u101/FoBo here]]
