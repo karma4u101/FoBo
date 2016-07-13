@@ -10,8 +10,8 @@ toolkits for developing mobile scalable responsive web applications that will ja
 
 The toolkit modules is in it's turn composed of a API module and a Resource module artifact making the usage of FoBo scalable and flexible.
 
-A **live demo** and introduction to using the FoBo module(s), including API documentation and links to running examples of starter templates and more, 
-can be seen at the [FoBo Template Demo](http://www.media4u101.se/fobo-lift-template-demo/). 
+A **live demo** and introduction to using the FoBo module(s), including [scaladoc API documentation](http://www.media4u101.se/fobo-lift-template-demo/foboapi/index.html#net.liftmodules.FoBo.package) 
+and links to running examples of starter templates and more, can be seen at the [FoBo Template Demo](http://www.media4u101.se/fobo-lift-template-demo/). 
 
 With this Lift module you will get a hassle free inclusion and smooth upgrades of toolkits, you decide what toolkits artifacts and versions to enable.
 The FoBo module is making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot), by 
