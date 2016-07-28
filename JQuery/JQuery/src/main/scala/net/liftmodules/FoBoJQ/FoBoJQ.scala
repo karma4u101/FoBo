@@ -232,6 +232,23 @@ package object FoBoJQ {
       store
     } 
     override def toString() = "FoBoJQ.Resource = "+store.toString()
+
+   /**
+     * Enable usage of FoBo's JQuery resources version 2&#8228;2&#8228;4 in your bootstrap liftweb Boot.
+     * @version 2.2.4
+     * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoJQ => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.JQuery224
+     * }}}
+     */    
+     case object JQuery224 extends Resource {
+       FoBoJQRes.Resource.JQuery224
+     }
     
    /**
      * Enable usage of FoBo's JQuery-Migrate resources version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
