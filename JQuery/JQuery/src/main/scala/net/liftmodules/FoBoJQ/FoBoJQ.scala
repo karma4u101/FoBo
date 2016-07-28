@@ -79,6 +79,24 @@ package object FoBoJQ {
     override def toString() = "FoBoJQ.Toolkit = "+store.toString()
     
    /**
+     * Enable usage of FoBo's JQuery API and resources version 2&#8228;2&#8228;4 in your bootstrap liftweb Boot.
+     * @version 2.2.4
+     * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoJQ => FoBo}
+     *    :
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery224
+     * }}}
+     */    
+     case object JQuery224 extends Toolkit {
+       FoBoJQRes.Resource.JQuery224
+       //FoBoJQAPI.API.JQuery2
+     } 
+    
+   /**
      * Enable usage of FoBo's JQuery-Migrate API and resources version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
      * @version 1.2.1
      * 
