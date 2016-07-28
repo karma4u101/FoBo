@@ -40,8 +40,26 @@ package object FoBoJQRes {
     def Init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
-    }
-    override def toString() = "FoBoJQRes.Resource = " + store.toString()
+    }    
+    override def toString() = "FoBoJQRes.Resource = "+store.toString()
+
+ 
+    /**
+     * Enable usage of FoBo's JQuery resources version 2&#8228;2&#8228;4 in your bootstrap liftweb Boot.
+     * @version 2.2.4
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoJQPRes => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.JQuery224
+     * }}}
+     */    
+     case object JQuery224 extends Resource {
+       FoBoResources.init
+       FoBoResources.jquery224
+     }
 
     /**
       * Enable usage of FoBo's JQuery resources version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.
@@ -208,7 +226,14 @@ package object FoBoJQRes {
         case "fobo" :: tail => true
       }
     }
-    
+  
+    lazy val jquery224 = {
+      ResourceServer.rewrite {//fetched from the jquery module ("adding" fobo to the modules path)
+        case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "2.2.4", "js", "jquery.js")
+        case "fobo" :: "jquery.js" :: Nil => List("jquery", "2.2.4", "js", "jquery-min.js")
+      }
+    }  
+   
     lazy val jqueryMigrate141 = {
       ResourceServer.rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
         case "fobo" :: "jquery-migrate.js" :: Nil if Props.devMode =>
