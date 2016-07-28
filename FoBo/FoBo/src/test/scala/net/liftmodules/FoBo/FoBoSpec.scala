@@ -1128,38 +1128,37 @@ object FoBoSpec extends Specification  {
         List("jquery", "1.10.2", "js", "jquery-min.js")
     }        
   }   
-
-//  //Something fishy is going on with v1.8.2   
-//  //JQuery182
-//  "With FoBo.Resource.Init set to FoBo.Resource.JQuery182 the ResourceServer" should {
-//    "allow  fobo/jquery.js" in {
-//      allowResource(FoBo.Resource.JQuery182,"fobo"::"jquery.js"::Nil) must_== true 
-//    }     
-//    "rewrit fobo/jquery.js to jquery/1.8.2/js/jquery-min.js" in {
-//      rewriteResource(FoBo.Resource.JQuery182,"fobo"::"jquery.js"::Nil) must_== 
-//        List("jquery", "1.8.2", "js", "jquery-min.js")
-//    }        
-//  }  
-//  
-//  "With FoBo.Toolkit.Init set to FoBo.Toolkit.JQuery182 the ResourceServer" should {
-//    "allow  fobo/jquery.js" in {
-//      allowToolkitInit(FoBo.Toolkit.JQuery182,"fobo"::"jquery.js"::Nil) must_== true 
-//    }     
-//    "rewrit fobo/jquery.js to jquery/1.8.2/js/jquery-min.js" in {
-//      rewriteToolkitInit(FoBo.Toolkit.JQuery182,"fobo"::"jquery.js"::Nil) must_== 
-//        List("jquery", "1.8.2", "js", "jquery-min.js")
-//    }        
-//  }  
-//  
-//  "With FoBo.InitParam.ToolKit set to FoBo.JQuery182 the ResourceServer" should {
-//    "allow  fobo/jquery.js" in {
-//      allowJQInitParam(FoBo.JQuery182,"fobo"::"jquery.js"::Nil) must_== true 
-//    }     
-//    "rewrit fobo/jquery.js to jquery/1.8.2/js/jquery-min.js" in {
-//      rewriteJQInitParam(FoBo.JQuery182,"fobo"::"jquery.js"::Nil) must_== 
-//        List("jquery", "1.8.2", "js", "jquery-min.js")
-//    }        
-//  }   
+   
+  //JQuery182
+  "With FoBo.Resource.Init set to FoBo.Resource.JQuery182 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowResource(FoBo.Resource.JQuery182,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/1.8.2/js/jquery-min.js" in {
+      rewriteResource(FoBo.Resource.JQuery182,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "1.8.2", "js", "jquery-min.js")
+    }        
+  }  
+  
+  "With FoBo.Toolkit.Init set to FoBo.Toolkit.JQuery182 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowToolkitInit(FoBo.Toolkit.JQuery182,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/1.8.2/js/jquery-min.js" in {
+      rewriteToolkitInit(FoBo.Toolkit.JQuery182,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "1.8.2", "js", "jquery-min.js")
+    }        
+  }  
+  
+  "With FoBo.InitParam.ToolKit set to FoBo.JQuery182 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowJQInitParam(FoBo.JQuery182,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/1.8.2/js/jquery-min.js" in {
+      rewriteJQInitParam(FoBo.JQuery182,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "1.8.2", "js", "jquery-min.js")
+    }        
+  }   
   
   //JQuery191
   "With FoBo.Resource.Init set to FoBo.Resource.JQuery191 the ResourceServer" should {

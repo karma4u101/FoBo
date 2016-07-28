@@ -1,8 +1,6 @@
 package net.liftmodules.FoBoAJS.lib
 
 /**
- * @author peter
- */
-class ScriptHelper {
-  
-}
+  * @author peter
+  */
+class ScriptHelper {}

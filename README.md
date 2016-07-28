@@ -1,4 +1,4 @@
-# FoBo - A Modular Front-End Toolkit Assembly for Lift 
+# FoBo - A Modular Front-End Toolkit module for Lift 
 
 [![Build Status](https://secure.travis-ci.org/karma4u101/FoBo.png)](http://travis-ci.org/karma4u101/FoBo)
 [![Stories in Ready](https://badge.waffle.io/karma4u101/FoBo.svg?label=ready&title=Ready)](http://waffle.io/karma4u101/FoBo) 
@@ -7,10 +7,11 @@
 
 FoBo is a [Lift module](http://liftweb.net/lift_modules), composed of several Toolkit modules that includes industry leading open source front end 
 toolkits for developing mobile scalable responsive web applications that will jazz up your Lift applications with the toolkit(s) of your choice.
+
 The toolkit modules is in it's turn composed of a API module and a Resource module artifact making the usage of FoBo scalable and flexible.
 
-A **live demo** and introduction to using the FoBo module(s), including API documentation and links to running examples of starter templates and more, 
-can be seen at the [FoBo Template Demo](http://www.media4u101.se/fobo-lift-template-demo/). 
+A **live demo** and introduction to using the FoBo module(s), including [unified Scaladoc API documentation](http://www.media4u101.se/fobo-lift-template-demo/foboapi/index.html#net.liftmodules.FoBo.package) 
+and links to running examples of starter templates and more, can be seen at the [FoBo Template Demo](http://www.media4u101.se/fobo-lift-template-demo/). 
 
 With this Lift module you will get a hassle free inclusion and smooth upgrades of toolkits, you decide what toolkits artifacts and versions to enable.
 The FoBo module is making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot), by 
@@ -46,7 +47,7 @@ on a PR. Please see the [Contribution Document](https://github.com/karma4u101/Fo
 or drop a question/suggestion to the [Lift's mailing list](http://groups.google.com/group/liftweb/) 
 
 > As FoBo is using this [Git branching model](http://nvie.com/posts/a-successful-git-branching-model/) the **main branch** is just updated for releases 
-> so your pull requests will be against the [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
+> so your pull requests will, by default, be against the [Development branch](https://github.com/karma4u101/FoBo/blob/develop)
      
 ## Integration into your project 
 
@@ -207,15 +208,16 @@ Twitter Bootstrap v2.3.0) For more information on how to set this up see below.
 
 FoBo artifacts is available for: Lift 2.4, 2.5, 2.6.x and 3.0.x
 
-- [FoBo](https://github.com/karma4u101/FoBo/tree/master/FoBo) This module conatins all the bellow listed submodules. 
+- [FoBo](https://github.com/karma4u101/FoBo/tree/master/FoBo/FoBo) This module conatins all the bellow listed toolkit modules. 
 
-FoBo is built up of several sub module that appart from beeing used in the FoBo / FoBo module also is available for use separately 
+FoBo is built up of several toolkit that in it's turn is built up of corresponding api and resource modules. Appart from 
+beeing acessable from the FoBo / FoBo module the toolkit, api and resource modules is also available for use separately. 
  
-The FoBo / FoBo module includes the following sub-modules and supports the following toolkit versions
+The FoBo / FoBo module includes the following modules and supports the following toolkit versions
 
--   [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) [v1.0.6, v1.2.11, v1.3.15, v1.4.1, v1.4.8, v1.5.3] (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/AngularJS) )] - [Angular](http://angularjs.org/)
--   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) [v3.0.0, v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6] - [Bootstrap 3.x](http://getbootstrap.com/)
--   [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Twitter-Bootstrap) [v2.3.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
+-   [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/Angular) [v1.0.6, v1.2.11, v1.3.15, v1.4.1, v1.4.8, v1.5.3] (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/Angular/AngularJS) )] - [Angular](http://angularjs.org/)
+-   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/Bootstrap/Bootstrap3) [v3.0.0, v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6] - [Bootstrap 3.x](http://getbootstrap.com/)
+-   [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Bootstrap/Bootstrap2) [v2.3.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 -   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0, v3.2.1, v4.0.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] - [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2, v1.9.1, v1.10.2, v1.11.0, v1.11.1, v1.11.3, v2.1.1, v2.1.4] - [JQuery](http://jquery.com/)
 -   FoBo-JQuery also includes JQuery Migrate [v1.2.1] - [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)

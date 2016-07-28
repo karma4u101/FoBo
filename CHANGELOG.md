@@ -4,10 +4,13 @@
 For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/CHANGELOG.md#history-log) section
 
 **Latest Stable Releases:**
-- **2016-06-25** -- Module v1.6
-- **2015-12-30** -- Module v1.5.1
+- **2016-06-25** -- FoBo Module v1.6
+- **2015-12-30** -- FoBo Module v1.5.1
 
 **Latest Updates:**
+- **2016-07-09** -- [Issue #71](https://github.com/karma4u101/FoBo/issues/71) Extensive buildsystem update
+- **2016-07-09** -- [Issue #37](https://github.com/karma4u101/FoBo/issues/37) Unidoc is now a propper plugin
+- **2016-07-09** -- [Issue #85](https://github.com/karma4u101/FoBo/issues/85) Adding the scalafmt code formatter plugin
 - **2016-05-14** -- [Issue #80](https://github.com/karma4u101/FoBo/issues/80) Adding Font-Awesome v4.6.3 (removing unreleased v4.5.0)
 - **2016-04-30** -- [Issue #78](https://github.com/karma4u101/FoBo/issues/78) Adding Angular Material v1.0.8 (removing unreleased v1.0.7)
 - **2016-04-29** -- [Issue #76](https://github.com/karma4u101/FoBo/issues/76) Adding HighlightJS v9.3.0
@@ -17,6 +20,17 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2016-03-25** -- [PR #61](https://github.com/karma4u101/FoBo/pull/61) Re-factoring modules  
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
 
+## FoBo v1.7
+
+### Buildsystem update
+As SBT 1.0 won't support Build.scala usage see [sbt/sbt#2524](https://github.com/sbt/sbt/pull/2524) 
+the *'object XXXX extend Build {...}'* usage has been greatly reduced and is now using the build.sbt 
+multi project build style the only thing left dependant on Build is two lift module specific settings keys. 
+The build system is now much cleaner and easier to work with. 
+
+- [Multi-project build](http://www.scala-sbt.org/0.13/docs/Multi-Project.html) now using build.sbt style
+- [unidoc](https://github.com/sbt/sbt-unidoc) is now a proper sbt plugin
+- [scalafmt](https://olafurpg.github.io/scalafmt/) FoBo is now using the Scalafmt code formatter sbt plugin  
 
 ## FoBo v1.6
 
