@@ -9,6 +9,17 @@ object FoBoJQResSpec extends Specification {
   "FoBoJQResSpec Specification".title
 
   sequential
+
+  //JQueryMigrate141
+  "With FoBoJQRes.Resource.Init set to FoBoJQRes.Resource.JQueryMigrate141 the ResourceServer" should {
+    "allow  fobo/jquery-migrate.js" in {
+      allowResource(FoBoJQRes.Resource.JQueryMigrate141,"fobo"::"jquery-migrate.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery-migrate.js to jquery-migrate/1.4.1/js/jquery-migrate-min.js" in {
+      rewriteResource(FoBoJQRes.Resource.JQueryMigrate141,"fobo"::"jquery-migrate.js"::Nil) must_== 
+        List("jquery-migrate", "1.4.1", "js", "jquery-migrate-min.js")
+    }        
+  }   
   
   //JQueryMigrate121
   "With FoBoJQRes.Resource.Init set to FoBoJQRes.Resource.JQueryMigrate121 the ResourceServer" should {
