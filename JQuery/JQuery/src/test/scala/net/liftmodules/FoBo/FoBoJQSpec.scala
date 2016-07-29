@@ -10,24 +10,24 @@ object FoBoJQSpec extends Specification {
 
   sequential
   
-  //JQueryMigrate141
-  "With FoBoJQ.Resource.Init set to FoBoJQ.Resource.JQueryMigrate141 the ResourceServer" should {
-    "allow  fobo/jquery-migrate.js" in {
-      allowResource(FoBoJQ.Resource.JQueryMigrate141,"fobo"::"jquery-migrate.js"::Nil) must_== true 
+  //JQuery300
+  "With FoBoJQ.Resource.Init set to FoBoJQ.Resource.JQuery300 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowResource(FoBoJQ.Resource.JQuery300,"fobo"::"jquery.js"::Nil) must_== true 
     }     
-    "rewrit fobo/jquery-migrate.js to jquery-migrate/1.4.1/js/jquery-migrate-min.js" in {
-      rewriteResource(FoBoJQ.Resource.JQueryMigrate141,"fobo"::"jquery-migrate.js"::Nil) must_== 
-        List("jquery-migrate", "1.4.1", "js", "jquery-migrate-min.js")
+    "rewrit fobo/jquery.js to jquery/3.0.0/js/jquery-min.js" in {
+      rewriteResource(FoBoJQ.Resource.JQuery300,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "3.0.0", "js", "jquery-min.js")
     }        
-  }
+  }   
   
-  "With FoBoJQ.Toolkit.Init set to FoBoJQ.Toolkit.JQueryMigrate141 the ResourceServer" should {
-    "allow  fobo/jquery-migrate.js" in {
-      allowToolkitInit(FoBoJQ.Toolkit.JQueryMigrate141,"fobo"::"jquery-migrate.js"::Nil) must_== true 
+  "With FoBoJQ.Toolkit.Init set to FoBoJQ.Toolkit.JQuery300 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowToolkitInit(FoBoJQ.Toolkit.JQuery300,"fobo"::"jquery.js"::Nil) must_== true 
     }     
-    "rewrit fobo/jquery-migrate.js to jquery-migrate/1.4.1/js/jquery-migrate-min.js" in {
-      rewriteToolkitInit(FoBoJQ.Toolkit.JQueryMigrate141,"fobo"::"jquery-migrate.js"::Nil) must_== 
-        List("jquery-migrate", "1.4.1", "js", "jquery-migrate-min.js")
+    "rewrit fobo/jquery.js to jquery-migrate/3.0.0/js/jquery-min.js" in {
+      rewriteToolkitInit(FoBoJQ.Toolkit.JQuery300,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "3.0.0", "js", "jquery-min.js")
     }        
   } 
   
@@ -50,8 +50,28 @@ object FoBoJQSpec extends Specification {
       rewriteToolkitInit(FoBoJQ.Toolkit.JQuery224,"fobo"::"jquery.js"::Nil) must_== 
         List("jquery", "2.2.4", "js", "jquery-min.js")
     }        
-  }  
-     
+  } 
+  
+  //JQueryMigrate141
+  "With FoBoJQ.Resource.Init set to FoBoJQ.Resource.JQueryMigrate141 the ResourceServer" should {
+    "allow  fobo/jquery-migrate.js" in {
+      allowResource(FoBoJQ.Resource.JQueryMigrate141,"fobo"::"jquery-migrate.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery-migrate.js to jquery-migrate/1.4.1/js/jquery-migrate-min.js" in {
+      rewriteResource(FoBoJQ.Resource.JQueryMigrate141,"fobo"::"jquery-migrate.js"::Nil) must_== 
+        List("jquery-migrate", "1.4.1", "js", "jquery-migrate-min.js")
+    }        
+  }
+  
+  "With FoBoJQ.Toolkit.Init set to FoBoJQ.Toolkit.JQueryMigrate141 the ResourceServer" should {
+    "allow  fobo/jquery-migrate.js" in {
+      allowToolkitInit(FoBoJQ.Toolkit.JQueryMigrate141,"fobo"::"jquery-migrate.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery-migrate.js to jquery-migrate/1.4.1/js/jquery-migrate-min.js" in {
+      rewriteToolkitInit(FoBoJQ.Toolkit.JQueryMigrate141,"fobo"::"jquery-migrate.js"::Nil) must_== 
+        List("jquery-migrate", "1.4.1", "js", "jquery-migrate-min.js")
+    }        
+  }      
   
   //JQueryMigrate121
   "With FoBoJQ.Resource.Init set to FoBoJQ.Resource.JQueryMigrate121 the ResourceServer" should {
