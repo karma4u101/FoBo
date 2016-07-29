@@ -10,6 +10,17 @@ object FoBoJQResSpec extends Specification {
 
   sequential
 
+  //JQueryMigrate300
+  "With FoBoJQRes.Resource.Init set to FoBoJQRes.Resource.JQueryMigrate300 the ResourceServer" should {
+    "allow  fobo/jquery-migrate.js" in {
+      allowResource(FoBoJQRes.Resource.JQueryMigrate300,"fobo"::"jquery-migrate.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery-migrate.js to jquery-migrate/3.0.0/js/jquery-migrate-min.js" in {
+      rewriteResource(FoBoJQRes.Resource.JQueryMigrate300,"fobo"::"jquery-migrate.js"::Nil) must_== 
+        List("jquery-migrate", "3.0.0", "js", "jquery-migrate-min.js")
+    }        
+  }  
+  
   //JQuery300
   "With FoBoJQRes.Resource.Init set to FoBoJQRes.Resource.JQuery300 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
