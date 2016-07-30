@@ -8,6 +8,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2015-12-30** -- FoBo Module v1.5.1
 
 **Latest Updates:**
+- **2016-07**    -- [Issue #92](https://github.com/karma4u101/FoBo/issues/92),[#93](https://github.com/karma4u101/FoBo/issues/93),[#94](https://github.com/karma4u101/FoBo/issues/94),[#96](https://github.com/karma4u101/FoBo/issues/96),[#98](https://github.com/karma4u101/FoBo/issues/98),[#99](https://github.com/karma4u101/FoBo/issues/99),[#100](https://github.com/karma4u101/FoBo/issues/100) JQuery additions. 
 - **2016-07-09** -- [Issue #71](https://github.com/karma4u101/FoBo/issues/71) Extensive buildsystem update
 - **2016-07-09** -- [Issue #37](https://github.com/karma4u101/FoBo/issues/37) Unidoc is now a propper plugin
 - **2016-07-09** -- [Issue #85](https://github.com/karma4u101/FoBo/issues/85) Adding the scalafmt code formatter plugin
