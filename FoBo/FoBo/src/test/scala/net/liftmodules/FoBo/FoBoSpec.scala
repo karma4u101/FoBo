@@ -974,6 +974,27 @@ object FoBoSpec extends Specification  {
   
   /*=================JQuery and JQuery Migrate ====================================*/
 
+  //JQuery310
+  "With FoBo.Resource.Init set to FoBo.Resource.JQuery310 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowResource(FoBo.Resource.JQuery310,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/3.1.0/js/jquery-min.js" in {
+      rewriteResource(FoBo.Resource.JQuery310,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "3.1.0", "js", "jquery-min.js")
+    }        
+  }   
+  
+  "With FoBo.Toolkit.Init set to FoBo.Toolkit.JQuery310 the ResourceServer" should {
+    "allow  fobo/jquery.js" in {
+      allowToolkitInit(FoBo.Toolkit.JQuery310,"fobo"::"jquery.js"::Nil) must_== true 
+    }     
+    "rewrit fobo/jquery.js to jquery/3.1.0/js/jquery-min.js" in {
+      rewriteToolkitInit(FoBo.Toolkit.JQuery310,"fobo"::"jquery.js"::Nil) must_== 
+        List("jquery", "3.1.0", "js", "jquery-min.js")
+    }        
+  }
+  
   //JQueryMigrate300
   "With FoBo.Resource.Init set to FoBo.Resource.JQueryMigrate300 the ResourceServer" should {
     "allow  fobo/jquery-migrate.js" in {
