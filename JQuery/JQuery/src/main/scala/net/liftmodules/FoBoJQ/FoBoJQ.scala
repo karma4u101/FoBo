@@ -75,241 +75,240 @@ package object FoBoJQ {
     def Init_=(t: Toolkit): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
-    } 
-    override def toString() = "FoBoJQ.Toolkit = "+store.toString()
- 
-   /**
-     * Enable usage of FoBo's JQuery API and resources version 3&#8228;1&#8228;0 in your bootstrap liftweb Boot.
-     * @version 3.1.0
-     * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery310
-     * }}}
-     * @since v2.10
-     */    
-     case object JQuery310 extends Toolkit {
-       FoBoJQRes.Resource.JQuery310
-       //FoBoJQAPI.API.JQuery2
-     }
-    
-   /**
-     * Enable usage of FoBo's JQuery-Migrate API and resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
-     * @version 3.0.0
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQueryMigrate300
-     * }}}
-     * @since v2.10
-     */    
-     case object JQueryMigrate300 extends Toolkit {
-       FoBoJQRes.Resource.JQueryMigrate300
-       //FoBoJQAPI.API.JQuery1
-     }
-    
-   /**
-     * Enable usage of FoBo's JQuery API and resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
-     * @version 3.0.0
-     * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery300
-     * }}}
-     * @since v2.10
-     */    
-     case object JQuery300 extends Toolkit {
-       FoBoJQRes.Resource.JQuery300
-       //FoBoJQAPI.API.JQuery2
-     }
-    
-   /**
-     * Enable usage of FoBo's JQuery API and resources version 2&#8228;2&#8228;4 in your bootstrap liftweb Boot.
-     * @version 2.2.4
-     * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery224
-     * }}}
-     * @since v2.10
-     */    
-     case object JQuery224 extends Toolkit {
-       FoBoJQRes.Resource.JQuery224
-       //FoBoJQAPI.API.JQuery2
-     }
-    
-   /**
-     * Enable usage of FoBo's JQuery-Migrate API and resources version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.
-     * @version 1.4.1
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQueryMigrate141
-     * }}}
-     * @since v2.10
-     */    
-     case object JQueryMigrate141 extends Toolkit {
-       FoBoJQRes.Resource.JQueryMigrate141
-       //FoBoJQAPI.API.JQuery1
-     }
-    
-     
-   /**
-     * Enable usage of FoBo's JQuery-Migrate API and resources version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
-     * @version 1.2.1
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQueryMigrate121
-     * }}}
-     */    
-     case object JQueryMigrate121 extends Toolkit {
-       FoBoJQRes.Resource.JQueryMigrate121
-       //FoBoJQAPI.API.JQuery1
-     } 
-    
-   /**
-     * Enable usage of FoBo's JQuery API and resources version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.
-     * @version 2.1.4
-     * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery214
-     * }}}
-     */    
-     case object JQuery214 extends Toolkit {
-       FoBoJQRes.Resource.JQuery214
-       //FoBoJQAPI.API.JQuery2
-     }     
-     
-   /**
-     * Enable usage of FoBo's JQuery API and resources version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.
-     * @version 2.1.1
-     * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery211
-     * }}}
-     */    
-     case object JQuery211 extends Toolkit {
-       FoBoJQRes.Resource.JQuery211
-       //FoBoJQAPI.API.JQuery2
-     }  
-     
-   /**
-     * Enable usage of FoBo's JQuery API and resources version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.
-     * @version 1.11.3
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery1113
-     * }}}
-     */    
-     case object JQuery1113 extends Toolkit {
-       FoBoJQRes.Resource.JQuery1113
-       //FoBoJQAPI.API.JQuery2
-     }   
-     
-   /**
-     * Enable usage of FoBo's JQuery API and resources version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.
-     * @version 1.10.2
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery1102
-     * }}}
-     */    
-     case object JQuery1102 extends Toolkit {
-       FoBoJQRes.Resource.JQuery1102
-       //FoBoJQAPI.API.JQuery2
-     }   
-     
-   /**
-     * Enable usage of FoBo's JQuery API and resources version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.
-     * @version 1.9.1
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery191
-     * }}}
-     */    
-     case object JQuery191 extends Toolkit {
-       FoBoJQRes.Resource.JQuery191
-       //FoBoJQAPI.API.JQuery2
-     }  
-     
-   /**
-     * Enable usage of FoBo's JQuery API and resources version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.
-     * @version 1.8.2
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery182
-     * }}}
-     */    
-     case object JQuery182 extends Toolkit {
-       FoBoJQRes.Resource.JQuery182
-       //FoBoJQAPI.API.JQuery2
-     }  
-     
-   /**
-     * Enable usage of FoBo's JQuery API and resources version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.
-     * @version 1.7.2
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery172
-     * }}}
-     */    
-     case object JQuery172 extends Toolkit {
-       FoBoJQRes.Resource.JQuery172
-       //FoBoJQAPI.API.JQuery2
-     }       
-    
+    }
+    override def toString() = "FoBoJQ.Toolkit = " + store.toString()
+
+    /**
+      * Enable usage of FoBo's JQuery API and resources version 3&#8228;1&#8228;0 in your bootstrap liftweb Boot.
+      * @version 3.1.0
+      * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery310
+      * }}}
+      * @since v2.10
+      */
+    case object JQuery310 extends Toolkit {
+      FoBoJQRes.Resource.JQuery310
+      //FoBoJQAPI.API.JQuery2
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery-Migrate API and resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
+      * @version 3.0.0
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.JQueryMigrate300
+      * }}}
+      * @since v2.10
+      */
+    case object JQueryMigrate300 extends Toolkit {
+      FoBoJQRes.Resource.JQueryMigrate300
+      //FoBoJQAPI.API.JQuery1
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery API and resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
+      * @version 3.0.0
+      * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery300
+      * }}}
+      * @since v2.10
+      */
+    case object JQuery300 extends Toolkit {
+      FoBoJQRes.Resource.JQuery300
+      //FoBoJQAPI.API.JQuery2
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery API and resources version 2&#8228;2&#8228;4 in your bootstrap liftweb Boot.
+      * @version 2.2.4
+      * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery224
+      * }}}
+      * @since v2.10
+      */
+    case object JQuery224 extends Toolkit {
+      FoBoJQRes.Resource.JQuery224
+      //FoBoJQAPI.API.JQuery2
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery-Migrate API and resources version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.
+      * @version 1.4.1
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.JQueryMigrate141
+      * }}}
+      * @since v2.10
+      */
+    case object JQueryMigrate141 extends Toolkit {
+      FoBoJQRes.Resource.JQueryMigrate141
+      //FoBoJQAPI.API.JQuery1
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery-Migrate API and resources version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
+      * @version 1.2.1
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.JQueryMigrate121
+      * }}}
+      */
+    case object JQueryMigrate121 extends Toolkit {
+      FoBoJQRes.Resource.JQueryMigrate121
+      //FoBoJQAPI.API.JQuery1
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery API and resources version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.
+      * @version 2.1.4
+      * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery214
+      * }}}
+      */
+    case object JQuery214 extends Toolkit {
+      FoBoJQRes.Resource.JQuery214
+      //FoBoJQAPI.API.JQuery2
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery API and resources version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.
+      * @version 2.1.1
+      * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery211
+      * }}}
+      */
+    case object JQuery211 extends Toolkit {
+      FoBoJQRes.Resource.JQuery211
+      //FoBoJQAPI.API.JQuery2
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery API and resources version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.
+      * @version 1.11.3
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery1113
+      * }}}
+      */
+    case object JQuery1113 extends Toolkit {
+      FoBoJQRes.Resource.JQuery1113
+      //FoBoJQAPI.API.JQuery2
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery API and resources version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.
+      * @version 1.10.2
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery1102
+      * }}}
+      */
+    case object JQuery1102 extends Toolkit {
+      FoBoJQRes.Resource.JQuery1102
+      //FoBoJQAPI.API.JQuery2
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery API and resources version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.
+      * @version 1.9.1
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery191
+      * }}}
+      */
+    case object JQuery191 extends Toolkit {
+      FoBoJQRes.Resource.JQuery191
+      //FoBoJQAPI.API.JQuery2
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery API and resources version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.
+      * @version 1.8.2
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery182
+      * }}}
+      */
+    case object JQuery182 extends Toolkit {
+      FoBoJQRes.Resource.JQuery182
+      //FoBoJQAPI.API.JQuery2
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery API and resources version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.
+      * @version 1.7.2
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery172
+      * }}}
+      */
+    case object JQuery172 extends Toolkit {
+      FoBoJQRes.Resource.JQuery172
+      //FoBoJQAPI.API.JQuery2
+    }
+
   }
 
   /*=== Resource ============================================*/
@@ -324,222 +323,222 @@ package object FoBoJQ {
     def Init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
-    } 
-    override def toString() = "FoBoJQ.Resource = "+store.toString()
+    }
+    override def toString() = "FoBoJQ.Resource = " + store.toString()
 
-   /**
-     * Enable usage of FoBo's JQuery resources version 3&#8228;1&#8228;0 in your bootstrap liftweb Boot.
-     * @version 3.1.0
-     * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Resource.Init=FoBo.Resource.JQuery310
-     * }}}
-     */    
-     case object JQuery310 extends Resource {
-       FoBoJQRes.Resource.JQuery310
-     }
-    
-   /**
-     * Enable usage of FoBo's JQuery-Migrate resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
-     * @version 3.0.0
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Resource.Init=FoBo.Resource.JQueryMigrate300
-     * }}}
-     */    
-     case object JQueryMigrate300 extends Resource {
-       FoBoJQRes.Resource.JQueryMigrate300
-     }
-    
-   /**
-     * Enable usage of FoBo's JQuery resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
-     * @version 3.0.0
-     * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Resource.Init=FoBo.Resource.JQuery300
-     * }}}
-     */    
-     case object JQuery300 extends Resource {
-       FoBoJQRes.Resource.JQuery300
-     }
-    
-   /**
-     * Enable usage of FoBo's JQuery resources version 2&#8228;2&#8228;4 in your bootstrap liftweb Boot.
-     * @version 2.2.4
-     * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Resource.Init=FoBo.Resource.JQuery224
-     * }}}
-     */    
-     case object JQuery224 extends Resource {
-       FoBoJQRes.Resource.JQuery224
-     }
-    
-   /**
-     * Enable usage of FoBo's JQuery-Migrate resources version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.
-     * @version 1.4.1
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Resource.Init=FoBo.Resource.JQueryMigrate141
-     * }}}
-     */    
-     case object JQueryMigrate141 extends Resource {
-       FoBoJQRes.Resource.JQueryMigrate141
-     } 
-        
-   /**
-     * Enable usage of FoBo's JQuery-Migrate resources version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
-     * @version 1.2.1
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Resource.Init=FoBo.Resource.JQueryMigrate121
-     * }}}
-     */    
-     case object JQueryMigrate121 extends Resource {
-       FoBoJQRes.Resource.JQueryMigrate121
-     } 
-    
-   /**
-     * Enable usage of FoBo's JQuery resources version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.
-     * @version 2.1.4
-     * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Resource.Init=FoBo.Resource.JQuery214
-     * }}}
-     */    
-     case object JQuery214 extends Resource {
-       FoBoJQRes.Resource.JQuery214
-     }     
-     
-   /**
-     * Enable usage of FoBo's JQuery resources version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.
-     * @version 2.1.1
-     * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Resource.Init=FoBo.Resource.JQuery211
-     * }}}
-     */    
-     case object JQuery211 extends Resource {
-       FoBoJQRes.Resource.JQuery211
-     }  
-     
-   /**
-     * Enable usage of FoBo's JQuery resources version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.
-     * @version 1.11.3
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Resource.Init=FoBo.Resource.JQuery1113
-     * }}}
-     */    
-     case object JQuery1113 extends Resource {
-       FoBoJQRes.Resource.JQuery1113
-     }   
-     
-   /**
-     * Enable usage of FoBo's JQuery resources version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.
-     * @version 1.10.2
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Resource.Init=FoBo.Resource.JQuery1102
-     * }}}
-     */    
-     case object JQuery1102 extends Resource {
-       FoBoJQRes.Resource.JQuery1102
-     }   
-     
-   /**
-     * Enable usage of FoBo's JQuery resources version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.
-     * @version 1.9.1
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Resource.Init=FoBo.Resource.JQuery191
-     * }}}
-     */    
-     case object JQuery191 extends Resource {
-       FoBoJQRes.Resource.JQuery191
-     }  
-     
-   /**
-     * Enable usage of FoBo's JQuery resources version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.
-     * @version 1.8.2
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Resource.Init=FoBo.Resource.JQuery182
-     * }}}
-     */    
-     case object JQuery182 extends Resource {
-       FoBoJQRes.Resource.JQuery182
-     }  
-     
-   /**
-     * Enable usage of FoBo's JQuery resources version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.
-     * @version 1.7.2
-     * 
-     * '''Example:'''
-     * 
-     * {{{
-     *   import net.liftmodules.{FoBoJQ => FoBo}
-     *    :
-     *   FoBo.Resource.Init=FoBo.Resource.JQuery172
-     * }}}
-     */    
-     case object JQuery172 extends Resource {
-       FoBoJQRes.Resource.JQuery172
-     }    
-    
+    /**
+      * Enable usage of FoBo's JQuery resources version 3&#8228;1&#8228;0 in your bootstrap liftweb Boot.
+      * @version 3.1.0
+      * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.JQuery310
+      * }}}
+      */
+    case object JQuery310 extends Resource {
+      FoBoJQRes.Resource.JQuery310
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery-Migrate resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
+      * @version 3.0.0
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.JQueryMigrate300
+      * }}}
+      */
+    case object JQueryMigrate300 extends Resource {
+      FoBoJQRes.Resource.JQueryMigrate300
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
+      * @version 3.0.0
+      * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.JQuery300
+      * }}}
+      */
+    case object JQuery300 extends Resource {
+      FoBoJQRes.Resource.JQuery300
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery resources version 2&#8228;2&#8228;4 in your bootstrap liftweb Boot.
+      * @version 2.2.4
+      * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.JQuery224
+      * }}}
+      */
+    case object JQuery224 extends Resource {
+      FoBoJQRes.Resource.JQuery224
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery-Migrate resources version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.
+      * @version 1.4.1
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.JQueryMigrate141
+      * }}}
+      */
+    case object JQueryMigrate141 extends Resource {
+      FoBoJQRes.Resource.JQueryMigrate141
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery-Migrate resources version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
+      * @version 1.2.1
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.JQueryMigrate121
+      * }}}
+      */
+    case object JQueryMigrate121 extends Resource {
+      FoBoJQRes.Resource.JQueryMigrate121
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery resources version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.
+      * @version 2.1.4
+      * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.JQuery214
+      * }}}
+      */
+    case object JQuery214 extends Resource {
+      FoBoJQRes.Resource.JQuery214
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery resources version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.
+      * @version 2.1.1
+      * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.JQuery211
+      * }}}
+      */
+    case object JQuery211 extends Resource {
+      FoBoJQRes.Resource.JQuery211
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery resources version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.
+      * @version 1.11.3
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.JQuery1113
+      * }}}
+      */
+    case object JQuery1113 extends Resource {
+      FoBoJQRes.Resource.JQuery1113
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery resources version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.
+      * @version 1.10.2
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.JQuery1102
+      * }}}
+      */
+    case object JQuery1102 extends Resource {
+      FoBoJQRes.Resource.JQuery1102
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery resources version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.
+      * @version 1.9.1
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.JQuery191
+      * }}}
+      */
+    case object JQuery191 extends Resource {
+      FoBoJQRes.Resource.JQuery191
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery resources version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.
+      * @version 1.8.2
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.JQuery182
+      * }}}
+      */
+    case object JQuery182 extends Resource {
+      FoBoJQRes.Resource.JQuery182
+    }
+
+    /**
+      * Enable usage of FoBo's JQuery resources version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.
+      * @version 1.7.2
+      * 
+      * '''Example:'''
+      * 
+      * {{{
+      *   import net.liftmodules.{FoBoJQ => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.JQuery172
+      * }}}
+      */
+    case object JQuery172 extends Resource {
+      FoBoJQRes.Resource.JQuery172
+    }
+
   }
 
   /*=== API ============================================*/
