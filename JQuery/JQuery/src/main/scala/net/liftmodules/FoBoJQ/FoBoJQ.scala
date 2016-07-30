@@ -79,6 +79,25 @@ package object FoBoJQ {
     override def toString() = "FoBoJQ.Toolkit = "+store.toString()
  
    /**
+     * Enable usage of FoBo's JQuery API and resources version 3&#8228;1&#8228;0 in your bootstrap liftweb Boot.
+     * @version 3.1.0
+     * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoJQ => FoBo}
+     *    :
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery310
+     * }}}
+     * @since v2.10
+     */    
+     case object JQuery310 extends Toolkit {
+       FoBoJQRes.Resource.JQuery310
+       //FoBoJQAPI.API.JQuery2
+     }
+    
+   /**
      * Enable usage of FoBo's JQuery-Migrate API and resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
      * @version 3.0.0
      * 
@@ -308,6 +327,23 @@ package object FoBoJQ {
     } 
     override def toString() = "FoBoJQ.Resource = "+store.toString()
 
+   /**
+     * Enable usage of FoBo's JQuery resources version 3&#8228;1&#8228;0 in your bootstrap liftweb Boot.
+     * @version 3.1.0
+     * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoJQ => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.JQuery310
+     * }}}
+     */    
+     case object JQuery310 extends Resource {
+       FoBoJQRes.Resource.JQuery310
+     }
+    
    /**
      * Enable usage of FoBo's JQuery-Migrate resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
      * @version 3.0.0

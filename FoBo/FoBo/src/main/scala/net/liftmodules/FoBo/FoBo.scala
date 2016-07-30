@@ -581,6 +581,24 @@ package object FoBo {
 
     /*===JQuery Toolkit===============================================================*/
 
+    /**
+     * Enable usage of FoBo's JQuery API and resources version 3&#8228;1&#8228;0 in your bootstrap liftweb Boot.
+     * @version 3.1.0
+     * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Toolkit.Init=FoBo.Toolkit.JQuery310
+     * }}}
+     * @since v2.10
+     */    
+     case object JQuery310 extends Toolkit {
+       net.liftmodules.FoBoJQ.Toolkit.JQuery310
+     }    
+    
    /**
      * Enable usage of FoBo's JQuery-Migrate API and resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
      * @version 3.0.0
@@ -1403,6 +1421,24 @@ package object FoBo {
 
     /*===JQuery Resource===============================================================*/
 
+   /**
+     * Enable usage of FoBo's JQuery resources version 3&#8228;1&#8228;0 in your bootstrap liftweb Boot.
+     * @version 3.1.0
+     * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.FoBo
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.JQuery310
+     * }}}
+     * @since v2.10
+     */    
+     case object JQuery310 extends Resource {
+       net.liftmodules.FoBoJQ.Resource.JQuery310
+     }
+     
    /**
      * Enable usage of FoBo's JQuery-Migrate resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
      * @version 3.0.0

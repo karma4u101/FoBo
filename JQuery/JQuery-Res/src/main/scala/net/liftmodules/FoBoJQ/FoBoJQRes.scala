@@ -62,6 +62,24 @@ package object FoBoJQRes {
     }
     
     /**
+     * Enable usage of FoBo's JQuery resources version 3&#8228;1&#8228;0 in your bootstrap liftweb Boot.
+     * @version 3.1.0
+     * 
+     * '''Example:'''
+     * 
+     * {{{
+     *   import net.liftmodules.{FoBoJQPRes => FoBo}
+     *    :
+     *   FoBo.Resource.Init=FoBo.Resource.JQuery310
+     * }}}
+     * @since v2.10
+     */    
+     case object JQuery310 extends Resource {
+       FoBoResources.init
+       FoBoResources.jquery310
+     }    
+    
+    /**
      * Enable usage of FoBo's JQuery resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
      * @version 3.0.0
      * 
@@ -264,6 +282,13 @@ package object FoBoJQRes {
       }
     }
   
+    lazy val jquery310 = {
+      ResourceServer.rewrite {//fetched from the jquery module ("adding" fobo to the modules path)
+        case "fobo" :: "jquery.js" :: Nil if Props.devMode => List("jquery", "3.1.0", "js", "jquery.js")
+        case "fobo" :: "jquery.js" :: Nil => List("jquery", "3.1.0", "js", "jquery-min.js")
+      }
+    }
+    
     lazy val jqueryMigrate300 = {
       ResourceServer.rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
         case "fobo" :: "jquery-migrate.js" :: Nil if Props.devMode =>
