@@ -5,7 +5,8 @@ but can also be used as-is see below for setup information.
 
 ## Components and available versions 
 
-- FoBo-JQuery [v1.7.2, v1.8,2, v1.9.1, v1.10.2, v1.11.0, v1.11.1, v1.11.3, v2.1.1, v2.1.4] - [JQuery](http://jquery.com/)
+- FoBo-JQuery [v1.7.2, v1.8,2, v1.9.1, v1.10.2, v1.11.0, v1.11.1, v1.11.3, v2.1.1, v2.1.4, v2.2.4, v3.0.0, v3.1.0] - [JQuery](http://jquery.com/)
+- FoBo-JQuery-Migrate [v1.2.1, v1.4.1, v3.0.0] - [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)
 
 ## Integration into your project 
 
