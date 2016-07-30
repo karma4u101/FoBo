@@ -31,6 +31,8 @@ The build system is now much cleaner and easier to work with.
 - [Multi-project build](http://www.scala-sbt.org/0.13/docs/Multi-Project.html) now using build.sbt style
 - [unidoc](https://github.com/sbt/sbt-unidoc) is now a proper sbt plugin
 - [scalafmt](https://olafurpg.github.io/scalafmt/) FoBo is now using the Scalafmt code formatter sbt plugin  
+- [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v2.2.4, v3.0.0, v3.1.0 - [JQuery](http://jquery.com/)
+- [FoBo-JQuery-Migrate](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v1.4.1, v3.0.0 - [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)
 
 ## FoBo v1.6
 
