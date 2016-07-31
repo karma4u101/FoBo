@@ -61,7 +61,7 @@ package object FoBoBsRes {
       FoBoResources.init
       FoBoResources.bootstrap337
     }
-    
+
     /**
       * Enable usage of FoBo's Bootstrap version 3&#8228;3&#8228;6 resources files in your bootstrap liftweb Boot.
       * @version 3.3.6
@@ -195,7 +195,7 @@ package object FoBoBsRes {
           List("fobo", "bootstrap", "3.3.7", "js", "bootstrap.min.js")
       }
     }
-    
+
     lazy val bootstrap336: Unit = {
       ResourceServer.rewrite {
         case "fobo" :: "bootstrap.css" :: Nil if Props.devMode =>

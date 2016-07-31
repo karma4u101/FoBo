@@ -870,7 +870,7 @@ package object FoBo {
     case object Bootstrap337 extends Toolkit {
       net.liftmodules.FoBoBs.Toolkit.Bootstrap337
     }
-    
+
     /**
       * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.
       * @version 3.3.6
@@ -1724,7 +1724,7 @@ package object FoBo {
     case object Bootstrap337 extends Resource {
       net.liftmodules.FoBoBs.Resource.Bootstrap337
     }
-    
+
     /**
       * Enable usage of Bootstrap version 3&#8228;3&#8228;6 resource files in your bootstrap liftweb Boot.
       * @version 3.3.6
