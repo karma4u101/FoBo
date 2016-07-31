@@ -5,7 +5,7 @@ but can also be used as-is, see below for setup information.
 
 ## Components and available versions 
 
-- Bootstrap [v3.0.0, v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6] - [Bootstrap 3.x](http://getbootstrap.com/)
+- Bootstrap [v3.0.0, v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6, v3.3.7] - [Bootstrap 3.x](http://getbootstrap.com/)
 
 ## Integration into your project 
 
@@ -62,33 +62,6 @@ Improvements, contributions and suggestions are welcome! Please see the [Contrib
 
 ## Update log
 
-For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/Bootstrap#history-log) (master) section
-
 **Latest Module Version:** 
 - See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo/tree/master) (master)
-
-**Latest Updates:**
-- **2015-12-02** -- Module v1.5-SNAPSHOT Adding Bootstrap v3.3.6
-- **2015-07-28** -- Module v1.4-SNAPSHOT Adding Bootstrap v3.3.5
-- **2014-07-02** -- Module v1.3-SNAPSHOT Adding bootstrap v3.2.0
-- **2014-03-09** -- Module v1.2-SNAPSHOT Adding bootstrap v3.1.1
-- **2013-11-03** -- Module v1.1-SNAPSHOT Adding bootstrap v3.0.1 
-- **2013-11-01** -- Module v1.1-SNAPSHOT renaming of Bootstrap v3.x Snippets. Snippet names now start with "Bs3*"
-- **2013-10-26** -- Module v1.1-SNAPSHOT Added BootstrapMegaMetaProtoUser for mapper with Bootstrap3 styled views. 
-- **2013-08-29** -- Module v1.1-SNAPSHOT Added bootstrap v3.0.0 deprecated v3.0-RC1
-- **2013-07-29** -- Module v1.1-SNAPSHOT Added bootstrap v3.0-RC1 
-
-**Latest Releases:**
-- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo/tree/master) (master) for release information.
-
-### History log
-
-**Module Version history:**
-- **2013-01-17** -- 0.1.0-SNAPSHOT
-- **2013-01-10** -- 0.0.1-SNAPSHOT
-
-**Updates history:**
-- **2013-01-10** -- 0.0.1-SNAPSHOT First Draft
-
-**Snapshot Release history:**
 

@@ -5,7 +5,7 @@ but can also be used as-is (see below for setup information).
 
 ## Components and available versions 
 
-- Bootstrap [v3.0.0, v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6] - [Bootstrap 3.x](http://getbootstrap.com/)
+- Bootstrap [v3.0.0, v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6, v3.3.7] - [Bootstrap 3.x](http://getbootstrap.com/)
 
 ## Integration into your project 
 
