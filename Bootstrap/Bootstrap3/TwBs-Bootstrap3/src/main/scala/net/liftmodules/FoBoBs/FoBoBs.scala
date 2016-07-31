@@ -90,6 +90,24 @@ package object FoBoBs {
     override def toString() = "FoBoBs.Toolkit = " + store.toString()
 
     /**
+      * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;7 resource files in your bootstrap liftweb Boot.
+      * @version 3.3.7
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{FoBoBs => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap337
+      * }}}
+      * @since v1.7
+      */
+    case object Bootstrap337 extends Toolkit {
+      net.liftmodules.FoBoBsAPI.API.Bootstrap3
+      net.liftmodules.FoBoBsRes.Resource.Bootstrap337
+    }
+    
+    /**
       * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;6 resource files in your bootstrap liftweb Boot.
       * @version 3.3.6
       *
@@ -102,6 +120,7 @@ package object FoBoBs {
       * }}}
       *
       */
+    @deprecated("Use Bootstrap337 or later", "1.7.0")
     case object Bootstrap336 extends Toolkit {
       net.liftmodules.FoBoBsAPI.API.Bootstrap3
       net.liftmodules.FoBoBsRes.Resource.Bootstrap336
@@ -120,6 +139,7 @@ package object FoBoBs {
       * }}}
       *
       */
+    @deprecated("Use Bootstrap337 or later", "1.7.0")
     case object Bootstrap335 extends Toolkit {
       net.liftmodules.FoBoBsAPI.API.Bootstrap3
       net.liftmodules.FoBoBsRes.Resource.Bootstrap335
@@ -197,6 +217,23 @@ package object FoBoBs {
     override def toString() = "FoBoBs.Resource = " + store.toString()
 
     /**
+      * Enable usage of Bootstrap version 3&#8228;3&#8228;7 resource files in your bootstrap liftweb Boot.
+      * @version 3.3.7
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{FoBoBs => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.Bootstrap337
+      * }}}
+      * @since v1.7
+      */
+    case object Bootstrap337 extends Resource {
+      FoBoBsRes.Resource.Bootstrap337
+    }
+    
+    /**
       * Enable usage of Bootstrap version 3&#8228;3&#8228;6 resource files in your bootstrap liftweb Boot.
       * @version 3.3.6
       *
@@ -207,8 +244,9 @@ package object FoBoBs {
       *    :
       *   FoBo.Resource.Init=FoBo.Resource.Bootstrap336
       * }}}
-      *
+      * @since v1.5
       */
+    @deprecated("Use Bootstrap337 or later", "1.7.0")
     case object Bootstrap336 extends Resource {
       FoBoBsRes.Resource.Bootstrap336
     }
@@ -226,6 +264,7 @@ package object FoBoBs {
       * }}}
       *
       */
+    @deprecated("Use Bootstrap337 or later", "1.7.0")
     case object Bootstrap335 extends Resource {
       FoBoBsRes.Resource.Bootstrap335
     }

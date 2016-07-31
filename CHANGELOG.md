@@ -8,6 +8,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2015-12-30** -- FoBo Module v1.5.1
 
 **Latest Updates:**
+- **2016-07-31** -- [Issue #91](https://github.com/karma4u101/FoBo/issues/91) Adding Bootstrap v3.3.7
 - **2016-07**    -- [Issue #92](https://github.com/karma4u101/FoBo/issues/92),[#93](https://github.com/karma4u101/FoBo/issues/93),[#94](https://github.com/karma4u101/FoBo/issues/94),[#96](https://github.com/karma4u101/FoBo/issues/96),[#98](https://github.com/karma4u101/FoBo/issues/98),[#99](https://github.com/karma4u101/FoBo/issues/99),[#100](https://github.com/karma4u101/FoBo/issues/100) JQuery additions. 
 - **2016-07-09** -- [Issue #71](https://github.com/karma4u101/FoBo/issues/71) Extensive buildsystem update
 - **2016-07-09** -- [Issue #37](https://github.com/karma4u101/FoBo/issues/37) Unidoc is now a propper plugin
@@ -32,8 +33,13 @@ The build system is now much cleaner and easier to work with.
 - [Multi-project build](http://www.scala-sbt.org/0.13/docs/Multi-Project.html) now using build.sbt style
 - [unidoc](https://github.com/sbt/sbt-unidoc) is now a proper sbt plugin
 - [scalafmt](https://olafurpg.github.io/scalafmt/) FoBo is now using the Scalafmt code formatter sbt plugin  
+
+### Updated modules
+- [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) Adds v3.3.7 - [Bootstrap 3.x](http://getbootstrap.com/)
 - [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v2.2.4, v3.0.0, v3.1.0 - [JQuery](http://jquery.com/)
 - [FoBo-JQuery-Migrate](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v1.4.1, v3.0.0 - [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)
+
+
 
 ## FoBo v1.6
 
