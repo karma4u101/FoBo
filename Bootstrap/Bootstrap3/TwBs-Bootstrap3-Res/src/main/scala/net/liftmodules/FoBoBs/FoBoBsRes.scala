@@ -45,6 +45,24 @@ package object FoBoBsRes {
     override def toString() = "FoBoBsRes.Resource = " + store.toString()
 
     /**
+      * Enable usage of FoBo's Bootstrap version 3&#8228;3&#8228;7 resources files in your bootstrap liftweb Boot.
+      * @version 3.3.7
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{FoBoBsRes => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.Bootstrap337
+      * }}}
+      * @since v1.7
+      */
+    case object Bootstrap337 extends Resource {
+      FoBoResources.init
+      FoBoResources.bootstrap337
+    }
+    
+    /**
       * Enable usage of FoBo's Bootstrap version 3&#8228;3&#8228;6 resources files in your bootstrap liftweb Boot.
       * @version 3.3.6
       *
@@ -57,6 +75,7 @@ package object FoBoBsRes {
       * }}}
       * @since v1.5
       */
+    @deprecated("Use Bootstrap337 or later", "1.7.0")
     case object Bootstrap336 extends Resource {
       FoBoResources.init
       FoBoResources.bootstrap336
@@ -148,6 +167,35 @@ package object FoBoBsRes {
       }
     }
 
+    lazy val bootstrap337: Unit = {
+      ResourceServer.rewrite {
+        case "fobo" :: "bootstrap.css" :: Nil if Props.devMode =>
+          List("fobo", "bootstrap", "3.3.7", "css", "bootstrap.css")
+        case "fobo" :: "bootstrap.css" :: Nil =>
+          List("fobo", "bootstrap", "3.3.7", "css", "bootstrap.min.css")
+        case "fobo" :: "bootstrap.css.map" :: Nil if Props.devMode =>
+          List("fobo", "bootstrap", "3.3.7", "css", "bootstrap.css.map")
+        case "fobo" :: "bootstrap.css.map" :: Nil =>
+          List("fobo", "bootstrap", "3.3.7", "css", "bootstrap.min.css.map")
+        case "fobo" :: "bootstrap-theme.css" :: Nil if Props.devMode =>
+          List("fobo", "bootstrap", "3.3.7", "css", "bootstrap-theme.css")
+        case "fobo" :: "bootstrap-theme.css" :: Nil =>
+          List("fobo", "bootstrap", "3.3.7", "css", "bootstrap-theme.min.css")
+        case "fobo" :: "bootstrap-theme.css.map" :: Nil if Props.devMode =>
+          List("fobo", "bootstrap", "3.3.7", "css", "bootstrap-theme.css.map")
+        case "fobo" :: "bootstrap-theme.css.map" :: Nil =>
+          List("fobo",
+               "bootstrap",
+               "3.3.7",
+               "css",
+               "bootstrap-theme.min.css.map")
+        case "fobo" :: "bootstrap.js" :: Nil if Props.devMode =>
+          List("fobo", "bootstrap", "3.3.7", "js", "bootstrap.js")
+        case "fobo" :: "bootstrap.js" :: Nil =>
+          List("fobo", "bootstrap", "3.3.7", "js", "bootstrap.min.js")
+      }
+    }
+    
     lazy val bootstrap336: Unit = {
       ResourceServer.rewrite {
         case "fobo" :: "bootstrap.css" :: Nil if Props.devMode =>

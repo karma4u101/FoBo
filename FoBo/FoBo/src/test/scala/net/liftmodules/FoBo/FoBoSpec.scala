@@ -786,6 +786,27 @@ object FoBoSpec extends Specification  {
   
   /*=================Bootstrap ====================================*/
   
+  //Bootstrap337
+  "With FoBo.Resource.Init set to FoBo.Resource.Bootstrap337 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowResource(FoBo.Resource.Bootstrap337,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.3.7/js/bootstrap-min.js" in {
+      rewriteResource(FoBo.Resource.Bootstrap337,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.3.7", "js", "bootstrap.min.js")
+    }       
+  }
+  
+  "With FoBo.Toolkit.Init set to FoBo.Toolkit.Bootstrap337 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowToolkitInit(FoBo.Toolkit.Bootstrap337,"fobo"::"bootstrap.js"::Nil) must_== true 
+    }    
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.3.7/js/bootstrap-min.js" in {
+      rewriteToolkitInit(FoBo.Toolkit.Bootstrap337,"fobo"::"bootstrap.js"::Nil) must_== 
+        List("fobo", "bootstrap", "3.3.7", "js", "bootstrap.min.js")
+    }       
+  }
+  
   //Bootstrap336
   "With FoBo.Resource.Init set to FoBo.Resource.Bootstrap336 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {

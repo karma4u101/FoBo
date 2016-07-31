@@ -38,9 +38,9 @@ import common._
   * 
   * The following is a list of available toolkits resources 
   *  
-  *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.3, v.2.1.1, v.2.1.4,v2.2.4,v3.0.0,v3.1.0] [[net.liftmodules.FoBoJQ]]
+  *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.3, v.2.1.1, v.2.1.4, v2.2.4, v3.0.0, v3.1.0] [[net.liftmodules.FoBoJQ]]
   *  - JQueryMigrate [v1.2.1,v1.4.1,v3.0.0] [[net.liftmodules.FoBoJQ]]
-  *  - Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6] [[net.liftmodules.FoBoBs]]
+  *  - Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6, v3.3.7] [[net.liftmodules.FoBoBs]]
   *  - Bootstrap v2.x series [v2.3.2] [[net.liftmodules.FoBoTB]]
   *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] [[net.liftmodules.FoBoFA]]
   *  - Kinetic JS [v5.1.0] [[net.liftmodules.FoBoKi]]
@@ -855,6 +855,23 @@ package object FoBo {
     /*===Bootstrap3 Toolkit===============================================================*/
 
     /**
+      * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;7 in your bootstrap liftweb Boot.
+      * @version 3.3.7
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap337
+      * }}}
+      * @since v1.7
+      */
+    case object Bootstrap337 extends Toolkit {
+      net.liftmodules.FoBoBs.Toolkit.Bootstrap337
+    }
+    
+    /**
       * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.
       * @version 3.3.6
       *
@@ -865,8 +882,9 @@ package object FoBo {
       *    :
       *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap336
       * }}}
-      *
+      * @since v1.5
       */
+    @deprecated("Use Bootstrap337 or later", "1.7.0")
     case object Bootstrap336 extends Toolkit {
       net.liftmodules.FoBoBs.Toolkit.Bootstrap336
     }
@@ -884,6 +902,7 @@ package object FoBo {
       * }}}
       *
       */
+    @deprecated("Use Bootstrap337 or later", "1.7.0")
     case object Bootstrap335 extends Toolkit {
       net.liftmodules.FoBoBs.Toolkit.Bootstrap335
     }
@@ -1690,6 +1709,23 @@ package object FoBo {
     /*===Bootstrap3 Resource===============================================================*/
 
     /**
+      * Enable usage of Bootstrap version 3&#8228;3&#8228;7 resource files in your bootstrap liftweb Boot.
+      * @version 3.3.7
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.Bootstrap337
+      * }}}
+      * @since v1.7
+      */
+    case object Bootstrap337 extends Resource {
+      net.liftmodules.FoBoBs.Resource.Bootstrap337
+    }
+    
+    /**
       * Enable usage of Bootstrap version 3&#8228;3&#8228;6 resource files in your bootstrap liftweb Boot.
       * @version 3.3.6
       *
@@ -1700,8 +1736,9 @@ package object FoBo {
       *    :
       *   FoBo.Resource.Init=FoBo.Resource.Bootstrap336
       * }}}
-      *
+      * @since v1.5
       */
+    @deprecated("Use Bootstrap337 or later", "1.7.0")
     case object Bootstrap336 extends Resource {
       net.liftmodules.FoBoBs.Resource.Bootstrap336
     }
@@ -1719,6 +1756,7 @@ package object FoBo {
       * }}}
       *
       */
+    @deprecated("Use Bootstrap337 or later", "1.7.0")
     case object Bootstrap335 extends Resource {
       net.liftmodules.FoBoBs.Resource.Bootstrap335
     }
