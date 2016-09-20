@@ -7,22 +7,22 @@ import common._
 
 /**
   * ==FoBo Twitter Bootstrap Toolkit Module==
-  * 
-  * This FoBo toolkit module provides Twitter Bootstrap v2.x API and Resource components to the 
+  *
+  * This FoBo toolkit module provides Twitter Bootstrap v2.x API and Resource components to the
   * FoBo / FoBo Module, but can also be used as-is, see below for setup information.
   *
   * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.FoBo]] for setup information.
-  * 
-  * @example To initiate this module for usage in your Lift project set something like the following in 
-  * your projects Lift bootstrap.liftweb.Boot boot method. 
+  *
+  * @example To initiate this module for usage in your Lift project set something like the following in
+  * your projects Lift bootstrap.liftweb.Boot boot method.
   * {{{
   *    import net.liftmodules.{FoBoTB => FoBo}
   *     :
   *     :
   *    FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap232 //or any other toolkit object
   * }}}
-  * You may substitute Toolkit for Resource or API and if you wish also adjust the artifact dependencies 
-  * accordingly to include just the FoBo modules you use. 
+  * You may substitute Toolkit for Resource or API and if you wish also adjust the artifact dependencies
+  * accordingly to include just the FoBo modules you use.
   */
 package object FoBoTB {
 
@@ -44,7 +44,7 @@ package object FoBoTB {
     *   FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit Object]
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
-    *  
+    *
     */
   abstract sealed trait Toolkit
 
@@ -78,7 +78,7 @@ package object FoBoTB {
 
   object Toolkit extends Toolkit {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Toolkit]
     private var store: Store = List()
@@ -113,7 +113,7 @@ package object FoBoTB {
 
   object Resource extends Resource {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
@@ -147,7 +147,7 @@ package object FoBoTB {
 
   object API extends API {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
@@ -291,8 +291,8 @@ package object FoBoTB {
     * params so default Toolkit and JQuery values will be used.
     */
   @deprecated(
-      "Init no longer nessesary as it is now automaticaly done for respective FoBoTB.InitParam",
-      "1.6.0")
+    "Init no longer nessesary as it is now automaticaly done for respective FoBoTB.InitParam",
+    "1.6.0")
   def init() {}
 
   @deprecated("Use FoBoTB.Toolkit or FoBoTB.Resource and FoBoTB.API", "1.6.0")

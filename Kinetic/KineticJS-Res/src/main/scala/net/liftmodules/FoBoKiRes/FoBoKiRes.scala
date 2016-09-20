@@ -6,12 +6,12 @@ import http._
 import common._
 
 /**
-  * ==FoBo KineticJs Resource Module== 
-  * 
-  * This resource module provides JQuery resource components to the FoBo KineticJs Toolkit module, 
+  * ==FoBo KineticJs Resource Module==
+  *
+  * This resource module provides JQuery resource components to the FoBo KineticJs Toolkit module,
   * but can also be used as-is, see below for setup information.
-  * 
-  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information. 
+  *
+  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information.
   */
 package object FoBoKiRes {
 
@@ -19,7 +19,7 @@ package object FoBoKiRes {
 
   /**
     * Initiate FoBo's KineticJs Resource(s) in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoKiRes => FoBo}
@@ -32,7 +32,7 @@ package object FoBoKiRes {
 
   object Resource extends Resource {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
@@ -46,12 +46,12 @@ package object FoBoKiRes {
     /**
       * Enable usage of KineticJS version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.
       * @version 5.1.0
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoKiRes => FoBo}
-      *    : 
+      *    :
       *   FoBo.Resource.Init=FoBo.Resource.KineticJS510
       * }}}
       */
@@ -60,7 +60,7 @@ package object FoBoKiRes {
       FoBoResources.KineticJS510
     }
 
-  } //end Resource object 
+  } //end Resource object
 
   /**
     * Object holding internally used FoBo resources.

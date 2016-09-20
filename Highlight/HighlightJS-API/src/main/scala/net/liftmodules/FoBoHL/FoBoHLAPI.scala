@@ -6,12 +6,12 @@ import http._
 import common._
 
 /**
-  * ==FoBo Highlight API Module== 
-  * 
-  * This FoBo API module provides FoBo/Lift API components for the Highlight Toolkit Module, 
+  * ==FoBo Highlight API Module==
+  *
+  * This FoBo API module provides FoBo/Lift API components for the Highlight Toolkit Module,
   * but can also be used as-is, see below for setup information.
   *
-  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information. 
+  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information.
   */
 package object FoBoHLAPI {
 
@@ -19,7 +19,7 @@ package object FoBoHLAPI {
 
   /**
     * Initiate FoBo's Highlight API in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoHLAPI => FoBo}
@@ -32,7 +32,7 @@ package object FoBoHLAPI {
 
   object API extends API {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
@@ -51,7 +51,7 @@ package object FoBoHLAPI {
       *
       * {{{
       *   import net.liftmodules.{FoBoHLAPI => FoBo}
-      *    : 
+      *    :
       *   FoBo.API.Init=FoBo.API.HighlightJS9
       * }}}
       *

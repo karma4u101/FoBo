@@ -6,12 +6,12 @@ import http._
 import common._
 
 /**
-  * ==FoBo JQuery Resource Module== 
-  * 
-  * This resource module provides JQuery resource components to the FoBo JQuery Toolkit module, 
+  * ==FoBo JQuery Resource Module==
+  *
+  * This resource module provides JQuery resource components to the FoBo JQuery Toolkit module,
   * but can also be used as-is, see below for setup information.
-  * 
-  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information. 
+  *
+  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information.
   */
 package object FoBoJQRes {
 
@@ -19,7 +19,7 @@ package object FoBoJQRes {
 
   /**
     * Initiate FoBo's JQuery Resource(s) in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoJQRes => FoBo}
@@ -32,7 +32,7 @@ package object FoBoJQRes {
 
   object Resource extends Resource {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
@@ -46,9 +46,9 @@ package object FoBoJQRes {
     /**
       * Enable usage of FoBo's JQuery resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
       * @version 3.0.0
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoJQPRes => FoBo}
       *    :
@@ -64,9 +64,9 @@ package object FoBoJQRes {
     /**
       * Enable usage of FoBo's JQuery resources version 3&#8228;1&#8228;0 in your bootstrap liftweb Boot.
       * @version 3.1.0
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoJQPRes => FoBo}
       *    :
@@ -82,9 +82,9 @@ package object FoBoJQRes {
     /**
       * Enable usage of FoBo's JQuery resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
       * @version 3.0.0
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoJQPRes => FoBo}
       *    :
@@ -100,9 +100,9 @@ package object FoBoJQRes {
     /**
       * Enable usage of FoBo's JQuery resources version 2&#8228;2&#8228;4 in your bootstrap liftweb Boot.
       * @version 2.2.4
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoJQPRes => FoBo}
       *    :
@@ -118,9 +118,9 @@ package object FoBoJQRes {
     /**
       * Enable usage of FoBo's JQuery resources version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.4.1
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoJQPRes => FoBo}
       *    :
@@ -136,9 +136,9 @@ package object FoBoJQRes {
     /**
       * Enable usage of FoBo's JQuery resources version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.2.1
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoJQPRes => FoBo}
       *    :
@@ -153,9 +153,9 @@ package object FoBoJQRes {
     /**
       * Enable usage of FoBo's JQuery resources version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.
       * @version 2.1.4
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoJQPRes => FoBo}
       *    :
@@ -170,9 +170,9 @@ package object FoBoJQRes {
     /**
       * Enable usage of FoBo's JQuery resources version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.
       * @version 2.1.1
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoJQPRes => FoBo}
       *    :
@@ -187,9 +187,9 @@ package object FoBoJQRes {
     /**
       * Enable usage of FoBo's JQuery resources version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.
       * @version 1.11.3
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoJQPRes => FoBo}
       *    :
@@ -204,9 +204,9 @@ package object FoBoJQRes {
     /**
       * Enable usage of FoBo's JQuery resources version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.
       * @version 1.10.2
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoJQPRes => FoBo}
       *    :
@@ -221,9 +221,9 @@ package object FoBoJQRes {
     /**
       * Enable usage of FoBo's JQuery resources version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.9.1
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoJQPRes => FoBo}
       *    :
@@ -238,9 +238,9 @@ package object FoBoJQRes {
     /**
       * Enable usage of FoBo's JQuery resources version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.8.2
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoJQPRes => FoBo}
       *    :
@@ -255,9 +255,9 @@ package object FoBoJQRes {
     /**
       * Enable usage of FoBo's JQuery resources version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.7.2
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoJQPRes => FoBo}
       *    :

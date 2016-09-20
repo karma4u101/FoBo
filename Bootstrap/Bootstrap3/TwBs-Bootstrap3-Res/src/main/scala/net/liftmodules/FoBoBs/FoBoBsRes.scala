@@ -6,13 +6,13 @@ import http._
 import common._
 
 /**
-  * ==FoBo Bootstrap 3 Resource Module== 
-  * 
-  * This resource module provides Bootstrap resource components to the FoBo Bootstrap 3 Toolkit module, 
+  * ==FoBo Bootstrap 3 Resource Module==
+  *
+  * This resource module provides Bootstrap resource components to the FoBo Bootstrap 3 Toolkit module,
   * but can also be used as-is, see below for setup information.
-  * 
-  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information. 
-  * 
+  *
+  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information.
+  *
   */
 package object FoBoBsRes {
 
@@ -20,7 +20,7 @@ package object FoBoBsRes {
 
   /**
     * Initiate FoBo's Bootstrap 3 Resource(s) in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoBsRes => FoBo}
@@ -33,7 +33,7 @@ package object FoBoBsRes {
 
   object Resource extends Resource {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
@@ -111,7 +111,7 @@ package object FoBoBsRes {
       *    :
       *   FoBo.Resource.Init=FoBo.Resource.Bootstrap320
       * }}}
-      * 
+      *
       */
     case object Bootstrap320 extends Resource {
       FoBoResources.init
@@ -129,7 +129,7 @@ package object FoBoBsRes {
       *    :
       *   FoBo.Resource.Init=FoBo.Resource.Bootstrap311
       * }}}
-      * 
+      *
       */
     case object Bootstrap311 extends Resource {
       FoBoResources.init
@@ -147,7 +147,7 @@ package object FoBoBsRes {
       *    :
       *   FoBo.Resource.Init=FoBo.Resource.Bootstrap301
       * }}}
-      * 
+      *
       */
     case object Bootstrap301 extends Resource {
       FoBoResources.init
@@ -157,7 +157,7 @@ package object FoBoBsRes {
   }
 
   /**
-    * Object holding internally used FoBo resources. 
+    * Object holding internally used FoBo resources.
     */
   private object FoBoResources {
 

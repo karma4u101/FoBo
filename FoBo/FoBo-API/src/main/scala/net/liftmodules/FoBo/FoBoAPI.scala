@@ -8,7 +8,7 @@ import common._
 /**
   * ==FoBo / FoBo API Module==
   *
-  * This FoBo / FoBo API module provides FoBo/Lift API components for the FoBo Module, 
+  * This FoBo / FoBo API module provides FoBo/Lift API components for the FoBo Module,
   * but can also be used as-is.
   *
   * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information.
@@ -19,7 +19,7 @@ package object FoBoAPI {
 
   /**
     * Initiate FoBo's FoBo API in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoAPI => FoBo}
@@ -32,7 +32,7 @@ package object FoBoAPI {
 
   object API extends API {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()

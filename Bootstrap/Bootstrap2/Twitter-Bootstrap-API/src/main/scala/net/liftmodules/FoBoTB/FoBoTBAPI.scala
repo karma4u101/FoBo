@@ -7,12 +7,12 @@ import common._
 
 /**
   * ==FoBo Twitter Bootstrap API Module==
-  * 
-  * This FoBo API module provides FoBo/Lift API components for the Twitter Bootstrap v2.x Toolkit Module, 
+  *
+  * This FoBo API module provides FoBo/Lift API components for the Twitter Bootstrap v2.x Toolkit Module,
   * but can also be used as-is, see below for setup information.
   *
   * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.FoBo]] for setup information.
-  * 
+  *
   */
 package object FoBoTBAPI {
 
@@ -33,7 +33,7 @@ package object FoBoTBAPI {
 
   object API extends API {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()

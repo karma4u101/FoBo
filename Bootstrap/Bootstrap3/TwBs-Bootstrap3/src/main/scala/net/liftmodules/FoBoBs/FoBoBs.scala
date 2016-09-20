@@ -7,23 +7,23 @@ import common._
 
 /**
   * ==FoBo Bootstrap 3 Toolkit Module==
-  * 
-  * This FoBo toolkit module provides Bootstrap v3.x API and Resource components to the 
+  *
+  * This FoBo toolkit module provides Bootstrap v3.x API and Resource components to the
   * FoBo / FoBo Module, but can also be used as-is, see below for setup information.
   *
   * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.FoBo]] for setup information.
-  * 
   *
-  * @example To initiate this module for usage in your Lift project set something like the following in 
-  * your projects Lift bootstrap.liftweb.Boot boot method. 
+  *
+  * @example To initiate this module for usage in your Lift project set something like the following in
+  * your projects Lift bootstrap.liftweb.Boot boot method.
   * {{{
   *    import net.liftmodules.{FoBoBs => FoBo}
   *     :
   *     :
   *    FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap336 //or any other companion toolkit object
   * }}}
-  * You may substitute Toolkit for Resource or API and if you wish also adjust the artifact dependencies 
-  * accordingly to include just the FoBo modules you use. 
+  * You may substitute Toolkit for Resource or API and if you wish also adjust the artifact dependencies
+  * accordingly to include just the FoBo modules you use.
   */
 package object FoBoBs {
 
@@ -34,10 +34,10 @@ package object FoBoBs {
 
   /**
     * Initiate FoBo's Bootstrap 3 Toolkit(s) in you bootstrap liftweb Boot.
-    * Using the Toolkit initiation you will bring in both the 
-    * toolkit's resources and FoBo/Lift API associated 
-    * with the toolkit.  
-    * 
+    * Using the Toolkit initiation you will bring in both the
+    * toolkit's resources and FoBo/Lift API associated
+    * with the toolkit.
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoBs => FoBo}
@@ -50,7 +50,7 @@ package object FoBoBs {
 
   /**
     * Initiate FoBo's Bootstrap 3 Resource(s) in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoBs => FoBo}
@@ -63,7 +63,7 @@ package object FoBoBs {
 
   /**
     * Initiate FoBo's Bootstrap 3 API in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoBs => FoBo}
@@ -78,7 +78,7 @@ package object FoBoBs {
 
   object Toolkit extends Toolkit {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Toolkit]
     private var store: Store = List()
@@ -205,7 +205,7 @@ package object FoBoBs {
 
   object Resource extends Resource {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
@@ -326,7 +326,7 @@ package object FoBoBs {
 
   object API extends API {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
@@ -357,21 +357,21 @@ package object FoBoBs {
   }
 
   /**
-    * Extends your Lift SiteMap with various common bootstrap menu manipulations such 
+    * Extends your Lift SiteMap with various common bootstrap menu manipulations such
     * as horizontal and vertical menu dividers and menu labels (labels coming soon).
-    *  
+    *
     * This object should be used in conjunction with the TB* menu builder objects in [[net.liftmodules.FoBo.snippet.FoBo]] snippet's.
-    * 
+    *
     * '''Example:'''
-    * {{{ 
-    *   : 
-    *  //add a horizontal menu divider 
+    * {{{
+    *   :
+    *  //add a horizontal menu divider
     *  divider1 >> LocGroup(...) >> FoBoBs.BsLocInfo.Divider,
     *   :
-    *  //add a vertical menu divider 
+    *  //add a vertical menu divider
     *  divider2 >> LocGroup(...) >> FoBoBs.BsLocInfo.DividerVertical,
-    *   : 
-    * }}} 
+    *   :
+    * }}}
     */
   object BSLocInfo {
     private val hd: Box[String] = Full("divider")
@@ -385,15 +385,15 @@ package object FoBoBs {
 
     /**
       * Provides a way to specify a horizontal divider for your bootstrap menu in Lift's SiteMap.
-      * 
+      *
       * '''Example:'''
       * {{{
       * val index            = Menu.i("Home") / "index"
-      *      : 
+      *      :
       * val about            = Menu.i("About") / "about"
-      * val divider2         = Menu("divider2") / "divider2" //dummy entry only showing a menu divider 
+      * val divider2         = Menu("divider2") / "divider2" //dummy entry only showing a menu divider
       * val navHeader1       = Menu.i("navHeader1") / "navHeader1" //Adds a header (label) to your FoBo.NavList
-      * 
+      *
       * def sitemap = SiteMap(
       *   navHeader1 >> LocGroup("nl1") >> FoBoBs.BSLocInfo.NavHeader,
       *   index >> LocGroup("top","nl1",...),
@@ -402,10 +402,10 @@ package object FoBoBs {
       *       about ,
       *       divider2 >> FoBoBs.BSLocInfo.Divider,
       *       contact,
-      *       feedback  
+      *       feedback
       *       )
-      * )      
-      * }}} 
+      * )
+      * }}}
       */
     val Divider = new net.liftweb.sitemap.Loc.LocInfo[String] {
       def apply() = hd.map(x => () => x)
@@ -413,7 +413,7 @@ package object FoBoBs {
 
     /**
       * Add a vertical divider in your bootstrap menu.
-      * For a usage example see the Divider val above. 
+      * For a usage example see the Divider val above.
       */
     val DividerVertical = new net.liftweb.sitemap.Loc.LocInfo[String] {
       def apply() = vd.map(x => () => x)
@@ -421,7 +421,7 @@ package object FoBoBs {
 
     /**
       * Add nav header(s) to your bootstrap nav list.
-      * For a usage example see the NavHeader val above. 
+      * For a usage example see the NavHeader val above.
       */
     val NavHeader = new net.liftweb.sitemap.Loc.LocInfo[String] {
       def apply() = nh.map(x => () => x)
@@ -467,12 +467,12 @@ package object FoBoBs {
     * {{{
     *   FoBoBs.init()
     * }}}
-    * The above example just calls init without specifying fobo init 
-    * params so default Toolkit and JQuery values will be used. 
+    * The above example just calls init without specifying fobo init
+    * params so default Toolkit and JQuery values will be used.
     */
   @deprecated(
-      "Init no longer nessesary as it is now automaticaly done for respective FoBoBs.InitParam",
-      "1.6.0")
+    "Init no longer nessesary as it is now automaticaly done for respective FoBoBs.InitParam",
+    "1.6.0")
   def init(): Unit = {}
 
   @deprecated("Use FoBoBs.Toolkit or FoBoBs.Resource and FoBoBs.API", "1.6.0")
@@ -482,13 +482,13 @@ package object FoBoBs {
     * Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot
     *
     * '''Example:'''
-    *  
+    *
     * {{{
     *   FoBoBs.InitParam.JQuery=FoBoBs.JQuery192
     *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap301
     * }}}
-    * This example uses the Bootstrap v3.0.1 option.  
-    *   
+    * This example uses the Bootstrap v3.0.1 option.
+    *
     */
   @deprecated("Use FoBoBs.Toolkit.Init=FoBoBs.Toolkit.[Toolkit Object]",
               "1.6.0")
@@ -499,9 +499,9 @@ package object FoBoBs {
   /**
     * Enable usage of Bootstrap version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.
     * @version 3.3.6
-    * 
+    *
     * '''Example'''
-    * 
+    *
     * {{{
     *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap336
     * }}}
@@ -519,9 +519,9 @@ package object FoBoBs {
   /**
     * Enable usage of Bootstrap version 3&#8228;3&#8228;5 in your bootstrap liftweb Boot.
     * @version 3.3.5
-    * 
+    *
     * '''Example'''
-    * 
+    *
     * {{{
     *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap335
     * }}}
@@ -536,9 +536,9 @@ package object FoBoBs {
   /**
     * Enable usage of Bootstrap version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.
     * @version 3.2.0
-    * 
+    *
     * '''Example'''
-    * 
+    *
     * {{{
     *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap320
     * }}}
@@ -552,9 +552,9 @@ package object FoBoBs {
   /**
     * Enable usage of Bootstrap version 3&#8228;1&#8228;1 in your bootstrap liftweb Boot.
     * @version 3.1.1
-    * 
+    *
     * '''Example'''
-    * 
+    *
     * {{{
     *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap311
     * }}}
@@ -568,9 +568,9 @@ package object FoBoBs {
   /**
     * Enable usage of Bootstrap version 3&#8228;0&#8228;1 in your bootstrap liftweb Boot.
     * @version 3.0.1
-    * 
+    *
     * '''Example'''
-    * 
+    *
     * {{{
     *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap301
     * }}}

@@ -6,11 +6,11 @@ import http._
 import common._
 
 /**
-  * ==FoBo AngularJS Toolkit Module== 
-  * This FoBo toolkit module provides AngularJS API and Resource components to the FoBo Module, 
+  * ==FoBo AngularJS Toolkit Module==
+  * This FoBo toolkit module provides AngularJS API and Resource components to the FoBo Module,
   * but can also be used as-is, see below for setup information.
-  * 
-  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information. 
+  *
+  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information.
   */
 package object FoBoAJS {
 
@@ -21,10 +21,10 @@ package object FoBoAJS {
 
   /**
     * Initiate FoBo's Angular Toolkit(s) in you bootstrap liftweb Boot.
-    * Using the Toolkit initiation you will bring in both the 
-    * toolkit's resources and if present the FoBo API associated 
-    * with the toolkit.  
-    * 
+    * Using the Toolkit initiation you will bring in both the
+    * toolkit's resources and if present the FoBo API associated
+    * with the toolkit.
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoAJS => FoBo}
@@ -37,7 +37,7 @@ package object FoBoAJS {
 
   /**
     * Initiate FoBo's Angular Resource(s) in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoAJS => FoBo}
@@ -50,7 +50,7 @@ package object FoBoAJS {
 
   /**
     * Initiate FoBo's Angular API in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoAJS => FoBo}
@@ -64,7 +64,7 @@ package object FoBoAJS {
   /*=== Toolkit ============================================*/
   object Toolkit extends Toolkit {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Toolkit]
     private var store: Store = List()
@@ -326,7 +326,7 @@ package object FoBoAJS {
 //    case object AJMaterial110 extends Toolkit {
 //      FoBoAJSAPI.API.Angular1
 //      FoBoAJSRes.Resource.AJMaterial110
-//    }         
+//    }
 
     /**
       * Enable usage of FoBo's Angular API and AngularUI-Bootstrap resources version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.
@@ -354,7 +354,7 @@ package object FoBoAJS {
       *
       * {{{
       *   import net.liftmodules.{FoBoAJS => FoBo}
-      *    : 
+      *    :
       *   FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap070
       * }}}
       *
@@ -422,7 +422,7 @@ package object FoBoAJS {
   /*=== Resource ============================================*/
   object Resource extends Resource {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
@@ -671,7 +671,7 @@ package object FoBoAJS {
 //     */
 //    case object AJMaterial110 extends Resource {
 //      FoBoAJSRes.Resource.AJMaterial110
-//    }        
+//    }
 
     /**
       * Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 resource files in your bootstrap liftweb Boot.
@@ -698,7 +698,7 @@ package object FoBoAJS {
       *
       * {{{
       *   import net.liftmodules.{FoBoAJS => FoBo}
-      *    : 
+      *    :
       *   FoBo.Resource.Init=FoBo.Resource.AJSUIBootstrap070
       * }}}
       *
@@ -764,7 +764,7 @@ package object FoBoAJS {
 
   object API extends API {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
@@ -796,8 +796,8 @@ package object FoBoAJS {
   /*=== InitParam (deprecated) ============================================*/
 
   @deprecated(
-      "Init is no longer nessesary as it is now automaticaly done for respective FoBoAJS.InitParam",
-      "1.6.0")
+    "Init is no longer nessesary as it is now automaticaly done for respective FoBoAJS.InitParam",
+    "1.6.0")
   def init() {}
 
   @deprecated("Use FoBoAJS.Toolkit or FoBoAJS.Resource and FoBoAJS.API",
@@ -821,7 +821,7 @@ package object FoBoAJS {
     *
     * {{{
     *   import net.liftmodules.{FoBoAJS => FoBo}
-    *    : 
+    *    :
     *   FoBo.InitParam.ToolKit=FoBo.AngularJS148
     * }}}
     * @since v1.5

@@ -6,12 +6,12 @@ import http._
 import common._
 
 /**
-  * ==FoBo Pace Resource Module== 
-  * 
-  * This resource module provides JQuery resource components to the FoBo Pace Toolkit module, 
+  * ==FoBo Pace Resource Module==
+  *
+  * This resource module provides JQuery resource components to the FoBo Pace Toolkit module,
   * but can also be used as-is, see below for setup information.
-  * 
-  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information. 
+  *
+  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information.
   */
 package object FoBoPaRes {
 
@@ -19,7 +19,7 @@ package object FoBoPaRes {
 
   /**
     * Initiate FoBo's Pace Resource(s) in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoPaRes => FoBo}
@@ -32,7 +32,7 @@ package object FoBoPaRes {
 
   object Resource extends Resource {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
@@ -77,7 +77,7 @@ package object FoBoPaRes {
       FoBoResources.Pace0415
     }
 
-  } //end Resource object 
+  } //end Resource object
 
   /**
     * Object holding internally used FoBo resources.

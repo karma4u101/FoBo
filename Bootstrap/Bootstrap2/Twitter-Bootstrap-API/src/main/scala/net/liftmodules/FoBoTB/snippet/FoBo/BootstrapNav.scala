@@ -8,12 +8,12 @@ import net.liftweb.util.IterableFunc
 
 /**
   * ==BootstrapNav v2.x Snippet==
-  * 
+  *
   * This snippet object transforms lift sitemap menu with specified loc group name into Bootsrap nav menu items including dropdown menu items.
   * This work is originally contributed to the FoBo module by community member Damian Helme.
   * http://tech.damianhelme.com/twitter-bootstrap-navbar-dropdowns-and-lifts.
   * '''Example''' Invoke with
-  * {{{<span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true"> 
+  * {{{<span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true">
   *     <span data-lift="Menu.builder?top:class=nav pull-right;li_item:class=active;linkToSelf=true;expandAll=true;group=frontNav"></span>
   *	  </span>}}}
   * @since v0.7
@@ -35,14 +35,14 @@ object BootstrapNav extends Logger {
    */
 
   /**
-    * This method will transform the enclosed menu builder call adding provided bootstrap attributes 
-    * for declared items in lift sitemap loc locgroup.   
+    * This method will transform the enclosed menu builder call adding provided bootstrap attributes
+    * for declared items in lift sitemap loc locgroup.
     * '''Example'''
-    * {{{<span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true"> 
+    * {{{<span data-lift="FoBo.BootstrapNav.menuToTBNav?eager_eval=true">
     *     <span data-lift="Menu.builder?top:class=nav;li_item:class=active;linkToSelf=true;expandAll=true;group=frontNav"></span>
     *  </span>}}}
     *  '''Result:''' Depending on the items in and the structure of the net.liftweb.sitemap.loc.LocGroup
-    *   matching the value specified by the group parameter a nodeSeq formated as a "bootstrap navigation 
+    *   matching the value specified by the group parameter a nodeSeq formated as a "bootstrap navigation
     *   menu" containing the declared sitemap items will be returned.
     */
   def menuToTBNav(in: NodeSeq): NodeSeq = {
@@ -50,10 +50,10 @@ object BootstrapNav extends Logger {
     object t1 extends RewriteRule {
       override def transform(n: Node): Seq[Node] = n match {
 
-        // removes the white space which appears between elements 
+        // removes the white space which appears between elements
         case Text(text) if (text.matches("\\s+")) => NodeSeq.Empty
 
-        /* matches xml of the format:     
+        /* matches xml of the format:
          *<li>
            <span>Test</span>
            <ul>
@@ -109,7 +109,7 @@ object BootstrapNav extends Logger {
                  other: _*)
         }
 
-        /* matches xml of the format:     
+        /* matches xml of the format:
          *<li>
            <a href="/test">Test</a>
            <ul>
@@ -121,9 +121,9 @@ object BootstrapNav extends Logger {
             </li>
            </ul>
           </li>
-          
+
       and transforms it to:
-      
+
         <li class="dropdown" >
            <a class="dropdown-toggle" data-toggle="dropdown" >Test<b class="caret"></b></a>
            <ul class="dropdown-menu">
@@ -187,7 +187,7 @@ object BootstrapNav extends Logger {
 
      val f = "li [class+]" #>
        (((ns: NodeSeq) => Some("dropdown").filter(ignore => childHasUI(ns))): IterableFunc )
-       
+
      f(in)
   }
    */
@@ -197,17 +197,17 @@ object BootstrapNav extends Logger {
     appendToClass(oldAttribs, "dropdown")
   private def newAAttribs(oldAttribs: MetaData) =
     appendToClass(oldAttribs, "dropdown-toggle").append(
-        "data-toggle" -> "dropdown")
+      "data-toggle" -> "dropdown")
   private def newUlAttribs(oldAttribs: MetaData) =
     appendToClass(oldAttribs, "dropdown-menu")
   private def newAChildren(oldChildren: NodeSeq) =
     oldChildren ++ <b class="caret"></b>
 
-  // append a new value to the class attribute if one already exists, otherwise create a new class 
+  // append a new value to the class attribute if one already exists, otherwise create a new class
   // with the given value
   private def appendToClass(attribs: MetaData, newClass: String): MetaData = {
     // Note that MetaData.get("class") returns a Option[Seq[Node]] , not Option[Node] as might be expected
-    // for an explanation of why see the scala-xml book: 
+    // for an explanation of why see the scala-xml book:
     val oldClass: Option[String] =
       attribs.get("class").map(_.mkString).filterNot(_ == "")
     val resultingClass = oldClass.map(_.trim + " ").getOrElse("") + newClass

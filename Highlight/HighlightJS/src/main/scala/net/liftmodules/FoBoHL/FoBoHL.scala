@@ -7,8 +7,8 @@ import common._
 
 /**
   * ==FoBo Highlight Toolkit Module==
-  * 
-  * This FoBo toolkit module provides Highlight API and Resource components to the 
+  *
+  * This FoBo toolkit module provides Highlight API and Resource components to the
   * FoBo / FoBo Module, but can also be used as-is, see below for setup information.
   *
   * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.FoBo]] for setup information.
@@ -23,10 +23,10 @@ package object FoBoHL {
 
   /**
     * Initiate FoBo's Highlight Toolkit(s) in you bootstrap liftweb Boot.
-    * Using the Toolkit initiation you will bring in both the 
-    * toolkit's resources and FoBo/Lift API associated 
-    * with the toolkit.  
-    * 
+    * Using the Toolkit initiation you will bring in both the
+    * toolkit's resources and FoBo/Lift API associated
+    * with the toolkit.
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoHL => FoBo}
@@ -39,7 +39,7 @@ package object FoBoHL {
 
   /**
     * Initiate FoBo's Highlight Resource(s) in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoHL => FoBo}
@@ -52,7 +52,7 @@ package object FoBoHL {
 
   /**
     * Initiate FoBo's Highlight API in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoHL => FoBo}
@@ -67,7 +67,7 @@ package object FoBoHL {
 
   object Toolkit extends Toolkit {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Toolkit]
     private var store: Store = List()
@@ -81,9 +81,9 @@ package object FoBoHL {
     /**
       * Enable usage of FoBo's Highlight API and resources version 9&#8228;3&#8228;0 in your bootstrap liftweb Boot.
       * @version 9.3.0
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoHL => FoBo}
       *    :
@@ -101,7 +101,7 @@ package object FoBoHL {
 
   object Resource extends Resource {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
@@ -115,9 +115,9 @@ package object FoBoHL {
     /**
       * Enable usage of FoBo's Highlight resources version 9&#8228;3&#8228;0 in your bootstrap liftweb Boot.
       * @version 9.3.0
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoHL => FoBo}
       *    :
@@ -134,7 +134,7 @@ package object FoBoHL {
 
   object API extends API {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
@@ -148,9 +148,9 @@ package object FoBoHL {
     /**
       * Enable usage of FoBo's Pace API version 9&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 9.X.X
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoHL => FoBo}
       *    :

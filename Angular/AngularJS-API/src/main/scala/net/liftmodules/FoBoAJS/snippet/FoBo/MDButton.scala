@@ -17,15 +17,15 @@ class MDButton extends StatefulSnippet with Loggable {
 
   /**
     *  '''Snippet Params:'''
-    *  
+    *
     *  - '''Param''' ''name'' - The Loc name to create the link value from.
-    *  
-    * '''Example''' 
+    *
+    * '''Example'''
     * {{{ <md-button data-lift="FoBo.MDButton.ngHref?name=Login" ng-href="#"> }}}
-    * 
+    *
     * '''Result:'''
     * {{{ <md-button ng-href="/evContext/andloginPath"> }}}
-    * 
+    *
     */
   def ngHref: net.liftweb.util.CssSel = {
     val name = S.attr("name") getOrElse ""
@@ -34,15 +34,15 @@ class MDButton extends StatefulSnippet with Loggable {
 
   /**
     *  '''Snippet Params:'''
-    *  
+    *
     *  - '''Param''' ''name'' - The Loc name to create the link value from.
-    *  
-    * '''Example''' 
+    *
+    * '''Example'''
     * {{{ <md-button data-lift="FoBo.MDButton.ngHref?name=Login" href="#"> }}}
-    * 
+    *
     * '''Result:'''
     * {{{ <md-button href="/evContext/andloginPath"> }}}
-    * 
+    *
     */
   def href: net.liftweb.util.CssSel = {
     val name = S.attr("name") getOrElse ""

@@ -7,12 +7,12 @@ import common._
 
 /**
   * ==FoBo Bootstrap 3 API Module==
-  * 
-  * This FoBo API module provides FoBo/Lift API components for the Bootstrap v3.x Toolkit Module, 
+  *
+  * This FoBo API module provides FoBo/Lift API components for the Bootstrap v3.x Toolkit Module,
   * but can also be used as-is, see below for setup information.
   *
   * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.FoBo]] for setup information.
-  * 
+  *
   */
 package object FoBoBsAPI {
 
@@ -20,7 +20,7 @@ package object FoBoBsAPI {
 
   /**
     * Initiate FoBo's Bootstrap 3 API in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoBsAPI => FoBo}
@@ -33,7 +33,7 @@ package object FoBoBsAPI {
 
   object API extends API {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()

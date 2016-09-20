@@ -7,12 +7,12 @@ import common._
 
 /**
   * ==FoBo AngularJS Resource Module==
-  * 
-  * This resource module provides AngularJS resource components to the FoBo AngularJS Toolkit module, 
+  *
+  * This resource module provides AngularJS resource components to the FoBo AngularJS Toolkit module,
   * but can also be used as-is, see below for setup information.
-  * 
-  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information. 
-  * 
+  *
+  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information.
+  *
   */
 package object FoBoAJSRes {
 
@@ -20,7 +20,7 @@ package object FoBoAJSRes {
 
   /**
     * Initiate FoBo's Angular Resource(s) in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoAJSRes => FoBo}
@@ -33,7 +33,7 @@ package object FoBoAJSRes {
 
   object Resource extends Resource {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
@@ -313,7 +313,7 @@ package object FoBoAJSRes {
 //    case object AJMaterial110 extends Resource {
 //      FoBoResources.init
 //      FoBoResources.AJMaterial110
-//    }        
+//    }
 
     /**
       * Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 resource files in your bootstrap liftweb Boot.
@@ -405,7 +405,7 @@ package object FoBoAJSRes {
       FoBoResources.uigrid307
     }
 
-  } //end Resource object   
+  } //end Resource object
 
   /**
     * Object holding internally used FoBo resources.
@@ -5861,7 +5861,7 @@ package object FoBoAJSRes {
                "1.4.8",
                "js",
                "angular-sanitize.min.js.map")
-        //dev/test only 
+        //dev/test only
         case "fobo" :: "angular-scenario.js" :: Nil if Props.devMode =>
           List("fobo", "angular-js", "1.4.8", "js", "angular-scenario.js")
 
@@ -9630,7 +9630,7 @@ package object FoBoAJSRes {
                "1.4.1",
                "js",
                "angular-sanitize.min.js.map")
-        //dev/test only 
+        //dev/test only
         case "fobo" :: "angular-scenario.js" :: Nil if Props.devMode =>
           List("fobo", "angular-js", "1.4.1", "js", "angular-scenario.js")
 
@@ -13392,7 +13392,7 @@ package object FoBoAJSRes {
                "1.3.15",
                "js",
                "angular-sanitize.min.js.map")
-        //dev/test only 
+        //dev/test only
         case "fobo" :: "angular-scenario.js" :: Nil if Props.devMode =>
           List("fobo", "angular-js", "1.3.15", "js", "angular-scenario.js")
 
@@ -15234,7 +15234,7 @@ package object FoBoAJSRes {
 
     lazy val angularjs1315i18n3 = {
       ResourceServer.rewrite {
-        //i18n files    
+        //i18n files
         case "fobo" :: "angular-locale_en-jm.js" :: Nil =>
           List("fobo",
                "angular-js",
@@ -17140,7 +17140,7 @@ package object FoBoAJSRes {
                "1.2.19",
                "js",
                "angular-sanitize.min.js.map")
-        //dev/test only 
+        //dev/test only
         case "fobo" :: "angular-scenario.js" :: Nil if Props.devMode =>
           List("fobo", "angular-js", "1.2.19", "js", "angular-scenario.js")
 
@@ -18876,7 +18876,7 @@ package object FoBoAJSRes {
 //        case "fobo" :: "angular-material.css" :: Nil if Props.devMode        => List("fobo", "angular-material", "1.1.0", "css", "angular-material.css")
 //        case "fobo" :: "angular-material.css" :: Nil                         => List("fobo", "angular-material", "1.1.0", "css", "angular-material.min.css")
 //      }
-//    }     
+//    }
 
   }
 }

@@ -6,13 +6,13 @@ import http._
 import common._
 
 /**
-  * ==FoBo Google Code Prettify Resource Module== 
-  * 
-  * This resource module provides Google Code Prettify resource components to the FoBo Google Code Prettify Toolkit module, 
+  * ==FoBo Google Code Prettify Resource Module==
+  *
+  * This resource module provides Google Code Prettify resource components to the FoBo Google Code Prettify Toolkit module,
   * but can also be used as-is, see below for setup information.
-  * 
-  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information. 
-  * 
+  *
+  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information.
+  *
 
   */
 package object FoBoGCPRes {
@@ -21,7 +21,7 @@ package object FoBoGCPRes {
 
   /**
     * Initiate FoBo's Google Code Prettify Resource(s) in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoGCPRes => FoBo}
@@ -34,7 +34,7 @@ package object FoBoGCPRes {
 
   object Resource extends Resource {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
@@ -48,9 +48,9 @@ package object FoBoGCPRes {
     /**
       * Enable usage of FoBo's Google Code Prettify resources version Jun2011 in your bootstrap liftweb Boot.
       * @version Jun2011
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoGCPRes => FoBo}
       *    :

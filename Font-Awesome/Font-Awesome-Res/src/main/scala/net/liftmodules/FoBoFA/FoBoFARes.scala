@@ -6,12 +6,12 @@ import http._
 import common._
 
 /**
-  * ==FoBo Font Awesome Resource Module== 
-  * 
-  * This resource module provides Font Awesome resource components to the FoBo Font Awesome Toolkit module, 
+  * ==FoBo Font Awesome Resource Module==
+  *
+  * This resource module provides Font Awesome resource components to the FoBo Font Awesome Toolkit module,
   * but can also be used as-is, see below for setup information.
-  * 
-  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information. 
+  *
+  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information.
   */
 package object FoBoFARes {
 
@@ -19,7 +19,7 @@ package object FoBoFARes {
 
   /**
     * Initiate FoBo's Font Awesome Resource(s) in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoFARes => FoBo}
@@ -32,7 +32,7 @@ package object FoBoFARes {
 
   object Resource extends Resource {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
@@ -46,9 +46,9 @@ package object FoBoFARes {
     /**
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;6&#8228;3 in your bootstrap liftweb Boot.
       * @version 4.6.3
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoFARes => FoBo}
       *    :
@@ -63,9 +63,9 @@ package object FoBoFARes {
     /**
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
       * @version 4.3.0
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoFARes => FoBo}
       *    :
@@ -80,9 +80,9 @@ package object FoBoFARes {
     /**
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.
       * @version 4.1.0
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoFARes => FoBo}
       *    :
@@ -97,9 +97,9 @@ package object FoBoFARes {
     /**
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.
       * @version 4.0.3
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoFARes => FoBo}
       *    :
@@ -114,9 +114,9 @@ package object FoBoFARes {
     /**
       * Enable usage of FoBo's FontAwesome resources version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.
       * @version 3.2.1
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoFARes => FoBo}
       *    :
@@ -128,7 +128,7 @@ package object FoBoFARes {
       FoBoResources.fontAwesome321
     }
 
-  } //end Resource object   
+  } //end Resource object
 
   /**
     * Object holding internally used FoBo resources.

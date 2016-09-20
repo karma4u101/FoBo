@@ -9,12 +9,12 @@ import Helpers._
 
 /**
   * ==TBResources Snippet==
-  * 
+  *
   * This snippet class lets you inject FoBo Bootstrap 2.x resources into your templates.
-  * Instead of hand write the resource tags you can use this helper snippet to inject it for you.   
-  * 
-  * '''Example''' Invoke with 
-  * {{{ data-lift="FoBo.TBResources.functionName?paramName=paramValue&...." }}} 
+  * Instead of hand write the resource tags you can use this helper snippet to inject it for you.
+  *
+  * '''Example''' Invoke with
+  * {{{ data-lift="FoBo.TBResources.functionName?paramName=paramValue&...." }}}
   * For more examples see the individual transform functions.
   * @since v1.3
   */
@@ -27,10 +27,10 @@ class TBResources extends StatefulSnippet {
 
   /**
     * '''Snippet Params:'''
-    * 
+    *
     *  - '''Param''' ''resources'' - A comma separated list of FoBo managed Bootstrap 2.x js resources.
-    *   
-    * '''Example''' 
+    *
+    * '''Example'''
     * {{{ <script data-lift="FoBo.TBResources.injectJS?resources=bootstrap"></script> }}}
     * or making bootstrap.js implicit.
     *  {{{ <script data-lift="FoBo.TBResources.injectJS"></script> }}}
@@ -38,10 +38,10 @@ class TBResources extends StatefulSnippet {
     * '''Result:''' This example will result in the following being injected in place of the snippet invocation:
     * {{{
     * <script src="/classpath/fobo/bootstrap.js" type="text/javascript"></script>
-    * 
-    * }}}  
-    *  
-    * @since v1.3         
+    *
+    * }}}
+    *
+    * @since v1.3
     */
   def injectJS: net.liftweb.util.CssSel = {
     def transform(res: List[String]): List[scala.xml.Elem] = {
@@ -61,21 +61,21 @@ class TBResources extends StatefulSnippet {
 
   /**
     * '''Snippet Params:'''
-    * 
+    *
     *  - '''Param''' ''resources'' - A comma separated list of FoBo managed Bootstrap 2.x css resources.
-    *   
-    * '''Example''' 
+    *
+    * '''Example'''
     * {{{ <link data-lift="FoBo.TBResources.injectCSS?resources=bootstrap,bootstrap-theme"></link>  }}}
     * or making bootstrap.css and bootstrap-responsive.css implicit.
     * {{{ <link data-lift="FoBo.TBResources.injectCSS"></link>  }}}
-    * 
+    *
     * '''Result:''' This example will result in the following being injected in place of the snippet invocation:
     * {{{
     * <link href="/classpath/fobo/bootstrap.css" rel="stylesheet" type="text/css" />
     * <link href="/classpath/fobo/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
-    * }}}   
-    * 
-    * @since v1.3         
+    * }}}
+    *
+    * @since v1.3
     */
   def injectCSS: net.liftweb.util.CssSel = {
     def transform(res: List[String]): List[scala.xml.Elem] = {

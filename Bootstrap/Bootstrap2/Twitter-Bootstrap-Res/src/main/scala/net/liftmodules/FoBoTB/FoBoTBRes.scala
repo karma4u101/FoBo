@@ -7,11 +7,11 @@ import common._
 
 /**
   * ==FoBo Twitter Bootstrap Resource Module==
-  * 
-  * This resource module provides Twitter Bootstrap resource components to the FoBo Twitter Bootstrap Toolkit module, 
+  *
+  * This resource module provides Twitter Bootstrap resource components to the FoBo Twitter Bootstrap Toolkit module,
   * but can also be used as-is, see below for setup information.
-  * 
-  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information. 
+  *
+  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information.
   *
   */
 package object FoBoTBRes {
@@ -33,7 +33,7 @@ package object FoBoTBRes {
 
   object Resource extends Resource {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()

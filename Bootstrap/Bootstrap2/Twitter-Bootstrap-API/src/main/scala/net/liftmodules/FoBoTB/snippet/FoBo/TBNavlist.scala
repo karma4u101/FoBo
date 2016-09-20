@@ -11,39 +11,39 @@ import xml._
 
 /**
   * ==TBNavList Snippet Bootstrap v2.x==
-  * 
-  * This snippet object transforms lift SiteMap menu items associated with specified loc 
+  *
+  * This snippet object transforms lift SiteMap menu items associated with specified loc
   * group name's into Twitter Bootsrap Navlist items including nav-header label items and menu dividers from SiteMap entries.
-  * 
-  * See also the TBLocInfo object in [[net.liftmodules.FoBo]] for various, simple to use, SiteMap manipulation functions.  
-  * 
+  *
+  * See also the TBLocInfo object in [[net.liftmodules.FoBo]] for various, simple to use, SiteMap manipulation functions.
+  *
   * '''Snippet Usage:'''
   * {{{<span data-lift="FoBo.TBNavlist.builder?group=[LocGroup name]"></span>}}}
-  * 
-  * 
+  *
+  *
   * '''Snippet Params:'''
-  * 
-  *  - '''Param''' ''group'' - The LocGroup name   
-  * 
-  * '''Result:''' The above will result in 
+  *
+  *  - '''Param''' ''group'' - The LocGroup name
+  *
+  * '''Result:''' The above will result in
   * {{{
-  *   <u l class="nav nav-list">...lift SiteMap items associated with the locGroup name...</u l> 
-  * }}} 
-  * This will be expand into a twitter bootstrap navlist's built from the named 
+  *   <u l class="nav nav-list">...lift SiteMap items associated with the locGroup name...</u l>
+  * }}}
+  * This will be expand into a twitter bootstrap navlist's built from the named
   * Lift menu locGroup content.
-  * 
-  * '''Example - Navlist''' Invoke with something like this 
+  *
+  * '''Example - Navlist''' Invoke with something like this
   * {{{<d i v class="well" style="max-width: 340px; padding: 8px 0;">	
       <span data-lift="FoBo.TBNavlist.builder?group=nl1"></span>
   * </d i v>}}}
-  * 
+  *
   * '''Result:''' This will create a Navlist with menu entries associated with the LocGroup 'nl1'.
   * @since v1.0
   */
 trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
 
   // a hack to use structural typing to get around the private[http] on Loc.buildItem
-  //type StructBuildItem = {def buildItem(kids: List[MenuItem], current: Boolean, path: Boolean): Box[MenuItem]}  
+  //type StructBuildItem = {def buildItem(kids: List[MenuItem], current: Boolean, path: Boolean): Box[MenuItem]}
 
   def dispatch: DispatchIt =
     overridenDispatch orElse net.liftweb.builtin.snippet.Menu.dispatch
@@ -92,21 +92,21 @@ trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
 
   override def updateForCurrent(nodes: Elem, current: Boolean): Elem = nodes
 
-  //override def updateTBForCurrent(nodes: NodeSeq, current: Boolean): Elem = nodes  
+  //override def updateTBForCurrent(nodes: NodeSeq, current: Boolean): Elem = nodes
 
   override def renderPlaceholder(item: MenuItem,
                                  renderInner: Seq[MenuItem] => NodeSeq): Elem =
     buildTBInnerTag(
-        <li class='dropdown'><a href='#' class='dropdown-toggle' data-toggle='dropdown' id='content-dropdown'><span>{item.text}</span> <b class='caret'></b></a>{renderInner(item.kids)}</li>,
-        item.path,
-        item.current)
+      <li class='dropdown'><a href='#' class='dropdown-toggle' data-toggle='dropdown' id='content-dropdown'><span>{item.text}</span> <b class='caret'></b></a>{renderInner(item.kids)}</li>,
+      item.path,
+      item.current)
 
 //    buildTBInnerTag(<xml:group><li class='dropdown'><a href='#' class='dropdown-toggle' data-toggle='dropdown' id='content-dropdown'><span>{item.text}</span> <b class='caret'></b></a>{renderInner(item.kids)}</li></xml:group>,
-//      item.path, item.current)    
+//      item.path, item.current)
 
 //  override def renderPlaceholder(item: MenuItem, renderInner: Seq[MenuItem] => NodeSeq): Elem =
 //    buildInnerTag(<xml:group><span>{item.text}</span>{renderInner(item.kids)}</xml:group>,
-//      item.path, item.current)            
+//      item.path, item.current)
 
   override def buildItemMenu[A](loc: Loc[A],
                                 currLoc: Box[Loc[_]],
@@ -131,8 +131,8 @@ trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
                              current: Boolean): Elem = {
     if (current) {
       updateForCurrent(
-          updateForPath(<li class="active">{ contents }</li>, path),
-          current)
+        updateForPath(<li class="active">{ contents }</li>, path),
+        current)
     } else {
       updateForCurrent(updateForPath(<li>{ contents }</li>, path), current)
     }
@@ -142,8 +142,8 @@ trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
                        path: Boolean,
                        current: Boolean): Elem =
     updateForCurrent(
-        updateForPath(<li class="nav-header">{ contents }</li>, path),
-        current)
+      updateForPath(<li class="nav-header">{ contents }</li>, path),
+      current)
 
   def buildTBDivider(contents: NodeSeq,
                      path: Boolean,
@@ -162,9 +162,9 @@ trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
       item: MenuItem,
       renderInner: Seq[MenuItem] => NodeSeq): Elem =
     buildInnerTag(
-        <xml:group>{renderSelf(item)}{renderInner(item.kids)}</xml:group>,
-        item.path,
-        item.current)
+      <xml:group>{renderSelf(item)}{renderInner(item.kids)}</xml:group>,
+      item.path,
+      item.current)
 
   override def renderItemInPath(item: MenuItem,
                                 renderInner: Seq[MenuItem] => NodeSeq): Elem =
@@ -193,20 +193,20 @@ trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
                          item.path,
                          item.current)
       } else if (f().equals("_blank") || f().equals("_self") || f().equals(
-                     "_parent") || f().equals("_top")) {
+                   "_parent") || f().equals("_top")) {
         buildInnerTag(
-            <xml:group>{ renderLinkWithTarget(item.uri, item.text, item.path, item.current,f) }{ renderInner(item.kids) }</xml:group>,
-            item.path,
-            item.current)
+          <xml:group>{ renderLinkWithTarget(item.uri, item.text, item.path, item.current,f) }{ renderInner(item.kids) }</xml:group>,
+          item.path,
+          item.current)
       } else {
         //Unknown function value do the default thingy
         buildInnerTag(
-            <xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>,
-            item.path,
-            item.current)
+          <xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>,
+          item.path,
+          item.current)
       }
     }
-    //http://lift.la/scala-option-lift-box-and-how-to-make-your-co //should probably rewrite this using for comprehension 
+    //http://lift.la/scala-option-lift-box-and-how-to-make-your-co //should probably rewrite this using for comprehension
     info match {
       case head :: Nil => {
         head match {
@@ -214,18 +214,18 @@ trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
             buildWithInfo(f, renderInner, item)
           }
           case Empty => {
-            //hmmm a empty list 
+            //hmmm a empty list
             buildInnerTag(
-                <xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>,
-                item.path,
-                item.current)
+              <xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>,
+              item.path,
+              item.current)
           }
           case Failure(message, _, _) => {
-            //something got wrong 
+            //something got wrong
             buildInnerTag(
-                <xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>,
-                item.path,
-                item.current)
+              <xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>,
+              item.path,
+              item.current)
           }
         }
       }
@@ -244,9 +244,9 @@ trait TBNavlist extends FlexMenuBuilder with DispatchSnippet {
         //there was no info
         //var c = item.current
         buildInnerTag(
-            <xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>,
-            item.path,
-            item.current)
+          <xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>,
+          item.path,
+          item.current)
       }
 
     }

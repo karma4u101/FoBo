@@ -4,17 +4,17 @@ import net.liftweb.util._
 
 /**
   * ==Angular Material Design Script Helper==
-  * 
-  * Angular Material Design script helper is a helper class that implements some commonly 
+  *
+  * Angular Material Design script helper is a helper class that implements some commonly
   * used material design component script functions.
-  * 
+  *
   */
 class AJSMaterialSH extends ScriptHelper {
 
   //due to the use of default arguments we can't use overloaded functions (same name) as the compiler can't handle it
   /**
     * Wraps a lift message in a Material Design Toast component.
-    * 
+    *
     * '''Example'''
     * In your "app js" file you you can set up the toast themes like this.
     * {{{
@@ -25,7 +25,7 @@ class AJSMaterialSH extends ScriptHelper {
     *  \$mdThemingProvider.theme('success-toast').primaryPalette('green');
     * });
     * }}}
-    * 
+    *
     * In your "app css" file you could set up something like this.
     * {{{
     *  md-toast.md-success-toast-theme {
@@ -38,7 +38,7 @@ class AJSMaterialSH extends ScriptHelper {
     *    background-color: #d9534f;
     *  }
     * }}}
-    * 
+    *
     * In your Scala code you could wrap the message in a Toast like this.
     * {{{
     * import net.liftmodules.FoBoAJS.lib.{AJSMaterialSH => msh}
@@ -48,13 +48,13 @@ class AJSMaterialSH extends ScriptHelper {
     *   :
     *   S.error(msh.mdToastWrapMsg(msg,theme="error-toast"))
     * }}}
-    * 
-    * 
+    *
+    *
     * @param msg - The message to display.
-    * @param position - The position of the toast message. If not provided defaults to 'bottom left' 
-    * @param theme - The color theme to use for the Toast component. If not provided some none 
+    * @param position - The position of the toast message. If not provided defaults to 'bottom left'
+    * @param theme - The color theme to use for the Toast component. If not provided some none
     *        theme specific color will be used.
-    * @return scala.xml.NodeSeq   
+    * @return scala.xml.NodeSeq
     */
   def mdToastWrapMsg(msg: String,
                      position: String = "bottom left",
@@ -66,7 +66,7 @@ class AJSMaterialSH extends ScriptHelper {
 
   /**
     * Wraps a lift message in a Material Design Toast component.
-    * 
+    *
     * '''Example'''
     * In your "app js" file you you can set up the toast themes like this.
     * {{{
@@ -77,7 +77,7 @@ class AJSMaterialSH extends ScriptHelper {
     *  \$mdThemingProvider.theme('success-toast').primaryPalette('green');
     * });
     * }}}
-    * 
+    *
     * In your "app css" file you could set up something like this.
     * {{{
     *  md-toast.md-success-toast-theme {
@@ -90,7 +90,7 @@ class AJSMaterialSH extends ScriptHelper {
     *    background-color: #d9534f;
     *  }
     * }}}
-    * 
+    *
     * In your Scala code you could wrap the message in a Toast like this.
     * {{{
     * import net.liftmodules.FoBoAJS.lib.{AJSMaterialSH => msh}
@@ -100,13 +100,13 @@ class AJSMaterialSH extends ScriptHelper {
     *   :
     *   S.error(msh.mdToastWrapNSMsg(msg,theme="error-toast"))
     * }}}
-    * 
-    * 
+    *
+    *
     * @param msg - The message to display.
-    * @param position - The position of the toast message. If not provided defaults to 'bottom left' 
-    * @param theme - The color theme to use for the Toast component. If not provided some none 
+    * @param position - The position of the toast message. If not provided defaults to 'bottom left'
+    * @param theme - The color theme to use for the Toast component. If not provided some none
     *        theme specific color will be used.
-    * @return scala.xml.NodeSeq   
+    * @return scala.xml.NodeSeq
     */
   def mdToastWrapNSMsg(msg: scala.xml.NodeSeq,
                        position: String = "bottom left",
@@ -118,7 +118,7 @@ class AJSMaterialSH extends ScriptHelper {
 
   /**
     * Wraps a lift message in a Material Design Toast component.
-    * 
+    *
     * '''Example'''
     * In your "app js" file you you can set up the toast themes like this.
     * {{{
@@ -129,7 +129,7 @@ class AJSMaterialSH extends ScriptHelper {
     *  \$mdThemingProvider.theme('success-toast').primaryPalette('green');
     * });
     * }}}
-    * 
+    *
     * In your "app css" file you could set up something like this.
     * {{{
     *  md-toast.md-success-toast-theme {
@@ -142,7 +142,7 @@ class AJSMaterialSH extends ScriptHelper {
     *    background-color: #d9534f;
     *  }
     * }}}
-    * 
+    *
     * In your Scala code you could wrap the message in a Toast like this.
     * {{{
     * import net.liftmodules.FoBoAJS.lib.{AJSMaterialSH => msh}
@@ -152,13 +152,13 @@ class AJSMaterialSH extends ScriptHelper {
     *   :
     *   S.error(msh.mdToastWrapFEMsg(vi,theme="error-toast"))
     * }}}
-    * 
-    * 
+    *
+    *
     * @param vi - The message to display.
-    * @param position - The position of the toast message. If not provided defaults to 'bottom left' 
-    * @param theme - The color theme to use for the Toast component. If not provided some none 
+    * @param position - The position of the toast message. If not provided defaults to 'bottom left'
+    * @param theme - The color theme to use for the Toast component. If not provided some none
     *        theme specific color will be used.
-    * @return scala.xml.NodeSeq   
+    * @return scala.xml.NodeSeq
     */
   def mdToastWrapFEMsg(vi: List[FieldError],
                        position: String = "bottom left",

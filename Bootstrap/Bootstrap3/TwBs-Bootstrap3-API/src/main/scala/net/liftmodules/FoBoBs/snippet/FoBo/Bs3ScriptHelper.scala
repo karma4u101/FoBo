@@ -12,11 +12,11 @@ import net.liftmodules.FoBoBs.lib.{ScriptHelper => sch}
 
 /**
   * ==Script Helper Snippet Bootstrap v3.x==
-  * 
-  * This snippet class contains functions for common transform operations useful when working 
+  *
+  * This snippet class contains functions for common transform operations useful when working
   * with the any toolkit, for convenience included as a Bootstrap v3.x snippet.
-  * '''Example''' Most of the functions in this class can be invoked using the following pattern. 
-  * {{{ data-lift="FoBo.Bs3ScriptHelper.functionName?paramName=paramValue&...." }}} 
+  * '''Example''' Most of the functions in this class can be invoked using the following pattern.
+  * {{{ data-lift="FoBo.Bs3ScriptHelper.functionName?paramName=paramValue&...." }}}
   * For more examples see the individual transform functions.
   * @since v1.1
   */
@@ -32,17 +32,17 @@ class Bs3ScriptHelper extends StatefulSnippet with Loggable {
 
   /**
     * This function register a load event factory script
-    * 
-    * '''Example'''  
-    * {{{ 
+    *
+    * '''Example'''
+    * {{{
     *     <head>
     *       :
-    *       <script data-lift="FoBo.Bs3Comp.activateDropdown?on=.dropdown-toggle"></script> 
+    *       <script data-lift="FoBo.Bs3Comp.activateDropdown?on=.dropdown-toggle"></script>
     *       <script data-lift="FoBo.Bs3ScriptHelper.registerLoadEventFactory"></script>
     *     </head>
     * }}}
-    * This load event factory script has to be registered ones before any activation can be loaded. 
-    * 
+    * This load event factory script has to be registered ones before any activation can be loaded.
+    *
     * '''Result:''' This example snippet invocation will result in the following script:
     * {{{
     *  <script type="text/javascript">// drop down activation that uses the load factory </script>
@@ -62,17 +62,17 @@ class Bs3ScriptHelper extends StatefulSnippet with Loggable {
     *                }
     *             }
     *          }
-    *    // ]]>  
+    *    // ]]>
     *  </script>
     * }}}
-    * 
+    *
     */
   def registerLoadEventFactory: CssSel = {
     " *" #> JsCmds.Script(sch.registerLoadEventFactoryScript())
   }
 
   /**
-    * '''Lift 3 alternativ''' -- This function creates a register load event factory function and 
+    * '''Lift 3 alternativ''' -- This function creates a register load event factory function and
     * appends it to lift's page-script global space.
     * @since v1.4
     */

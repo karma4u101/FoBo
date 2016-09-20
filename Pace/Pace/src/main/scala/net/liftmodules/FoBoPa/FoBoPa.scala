@@ -7,8 +7,8 @@ import common._
 
 /**
   * ==FoBo Pace Toolkit Module==
-  * 
-  * This FoBo toolkit module provides Pace API and Resource components to the 
+  *
+  * This FoBo toolkit module provides Pace API and Resource components to the
   * FoBo / FoBo Module, but can also be used as-is, see below for setup information.
   *
   * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.FoBo]] for setup information.
@@ -23,10 +23,10 @@ package object FoBoPa {
 
   /**
     * Initiate FoBo's Pace Toolkit(s) in you bootstrap liftweb Boot.
-    * Using the Toolkit initiation you will bring in both the 
-    * toolkit's resources and FoBo/Lift API associated 
-    * with the toolkit.  
-    * 
+    * Using the Toolkit initiation you will bring in both the
+    * toolkit's resources and FoBo/Lift API associated
+    * with the toolkit.
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoPa => FoBo}
@@ -39,7 +39,7 @@ package object FoBoPa {
 
   /**
     * Initiate FoBo's Pace Resource(s) in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoPa => FoBo}
@@ -52,7 +52,7 @@ package object FoBoPa {
 
   /**
     * Initiate FoBo's Pace API in you bootstrap liftweb Boot.
-    * 
+    *
     *  '''Example:'''
     * {{{
     *   import net.liftmodules.{FoBoPa => FoBo}
@@ -67,7 +67,7 @@ package object FoBoPa {
 
   object Toolkit extends Toolkit {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Toolkit]
     private var store: Store = List()
@@ -81,9 +81,9 @@ package object FoBoPa {
     /**
       * Enable usage of FoBo's Pace API and resources version 1&#8228;0&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.0.2
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoPa => FoBo}
       *    :
@@ -97,9 +97,9 @@ package object FoBoPa {
     /**
       * Enable usage of FoBo's Pace API and resources version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
       * @version 0.4.15
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoPa => FoBo}
       *    :
@@ -115,7 +115,7 @@ package object FoBoPa {
 
   object Resource extends Resource {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
@@ -129,9 +129,9 @@ package object FoBoPa {
     /**
       * Enable usage of FoBo's Pace resources version 1&#8228;0&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.0.2
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoPa => FoBo}
       *    :
@@ -145,9 +145,9 @@ package object FoBoPa {
     /**
       * Enable usage of FoBo's Pace resources version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
       * @version 0.4.15
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoPa => FoBo}
       *    :
@@ -163,7 +163,7 @@ package object FoBoPa {
 
   object API extends API {
 
-    //we don't actually need to store the objects (for now) so lets just save 
+    //we don't actually need to store the objects (for now) so lets just save
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
@@ -177,9 +177,9 @@ package object FoBoPa {
     /**
       * Enable usage of FoBo's Pace API version 0&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 0.X.X
-      * 
+      *
       * '''Example:'''
-      * 
+      *
       * {{{
       *   import net.liftmodules.{FoBoPa => FoBo}
       *    :
@@ -196,8 +196,8 @@ package object FoBoPa {
   /*=== InitParam (deprecated) ============================================*/
 
   @deprecated(
-      "Init no longer nessesary as it is now automaticaly done for respective FoBoPa.InitParam",
-      "1.6.0")
+    "Init no longer nessesary as it is now automaticaly done for respective FoBoPa.InitParam",
+    "1.6.0")
   def init() {}
 
   @deprecated("Use Toolkit or Resouce", "1.6.0")
@@ -215,9 +215,9 @@ package object FoBoPa {
   /**
     * Enable usage of Pace version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
     * @version 0.4.15
-    * 
+    *
     * '''Example:'''
-    * 
+    *
     * {{{
     *   import net.liftmodules.{FoBoPa => FoBo}
     *    :
@@ -230,7 +230,7 @@ package object FoBoPa {
   }
 
   /**
-    * Object for initiating FoBo API packages. 
+    * Object for initiating FoBo API packages.
     */
   private object FoBoAPI {
     lazy val init: Unit = {

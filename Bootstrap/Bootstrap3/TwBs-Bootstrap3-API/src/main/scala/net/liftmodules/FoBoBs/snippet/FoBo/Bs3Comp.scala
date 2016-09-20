@@ -12,11 +12,11 @@ import net.liftmodules.FoBoBs.lib.{BootstrapSH => sch}
 
 /**
   * ==Bs3Component's Snippet Bootstrap v3.x==
-  * 
-  * This snippet class contains a collection of functions for common transform operations useful when working 
+  *
+  * This snippet class contains a collection of functions for common transform operations useful when working
   * with the Bootstrap toolkit components.
-  * '''Example''' Invoke with 
-  * {{{ data-lift="FoBo.Bs3Comp.functionName?paramName=paramValue&...." }}} 
+  * '''Example''' Invoke with
+  * {{{ data-lift="FoBo.Bs3Comp.functionName?paramName=paramValue&...." }}}
   * For more examples see the individual transform functions.
   * @since v1.1
   */
@@ -40,20 +40,20 @@ class Bs3Comp extends StatefulSnippet with Loggable {
     * This function sets a popover action on a element by inlining a script snippet on the page.
     *
     * '''Snippet Params:'''
-    * 
-    *  - '''Param''' ''id'' - The element id 
+    *
+    *  - '''Param''' ''id'' - The element id
     *  - '''Param''' ''options'' - The option string see bootstrap documentation for available options.
-    * 
-    * '''Example''' 
+    *
+    * '''Example'''
     * {{{ <script data-lift="FoBo.Bs3Comp.popover?id=#theId&options=placement:'left'"></script> }}}
-    * 
+    *
     * '''Result:''' This example will result in the following being injected in place of the snippet invocation:
     * {{{
     *   <script type="text/javascript">
     *     // <![CDATA[
     *       $(function () { $('#theId').popover({placement:'left'}); }); ;
     *     // ]]>
-    *   </script> 
+    *   </script>
     * }}}
     */
   def popover = {
@@ -64,16 +64,16 @@ class Bs3Comp extends StatefulSnippet with Loggable {
 
   /**
     * '''Lift 3 alternativ''' --
-    * This function sets a popover action on a element by appending a script snippet to lift's page-script on page load function. 
+    * This function sets a popover action on a element by appending a script snippet to lift's page-script on page load function.
     *
     * '''Snippet Params:'''
-    * 
-    *  - '''Param''' ''id'' - The element id 
+    *
+    *  - '''Param''' ''id'' - The element id
     *  - '''Param''' ''options'' - The option string see bootstrap documentation for available options.
-    * 
-    * '''Example''' 
+    *
+    * '''Example'''
     * {{{ <script data-lift="FoBo.Bs3Comp.popoverAppendJs?id=#theId&options=placement:'left'"></script> }}}
-    * 
+    *
     * '''Result:''' This example will result in the following being appended to lift's page-script on page load function:
     * {{{
     *       $(function () { $('#theId').popover({placement:'left'}); }); ;
@@ -92,25 +92,25 @@ class Bs3Comp extends StatefulSnippet with Loggable {
     * @note If you are using Lift 3 you should use the AppendJs alternative.
     *
     * '''Snippet Params:'''
-    * 
-    *  - '''Param''' ''id'' - The element id 
+    *
+    *  - '''Param''' ''id'' - The element id
     *  - '''Param''' ''options'' - The option string see bootstrap documentation for available options.
-    * 
-    * '''Example''' Showing a example element using the tooltip and the actual snippet invocation  
+    *
+    * '''Example''' Showing a example element using the tooltip and the actual snippet invocation
     * {{{
-    *  <a id="aId" 
-    *     title="The most powerful, most secure web framework available today. It simply rocks!" 
-    *     href="http://liftweb.net/">Lift</a> 
-    *  <script data-lift="FoBo.Bs3Comp.tooltip?id=#aId&options=placement:'bottom'"></script> 
+    *  <a id="aId"
+    *     title="The most powerful, most secure web framework available today. It simply rocks!"
+    *     href="http://liftweb.net/">Lift</a>
+    *  <script data-lift="FoBo.Bs3Comp.tooltip?id=#aId&options=placement:'bottom'"></script>
     * }}}
-    * 
+    *
     * '''Result:''' The script tag with the snippet invocation will result in the following being injected in place of the snippet invocation:
     * {{{
     *   <script type="text/javascript">
     *     // <![CDATA[
     *       $(function () { $('#aId').tooltip({placement:'bottom'}); }); ;
     *     // ]]>
-    *   </script> 
+    *   </script>
     * }}}
     * @see [[net.liftmodules.FoBoBs.lib.BootstrapSH.tooltipScript]]
     */
@@ -124,22 +124,22 @@ class Bs3Comp extends StatefulSnippet with Loggable {
     * '''Lift 3 alternativ''' -- This function sets a tooltip action on a element by appending to lift's page-script on page load function.
     *
     * '''Snippet Params:'''
-    * 
-    *  - '''Param''' ''id'' - The element id 
+    *
+    *  - '''Param''' ''id'' - The element id
     *  - '''Param''' ''options'' - The option string see bootstrap documentation for available options.
-    * 
-    * '''Example''' Showing a example element using the tooltip and the actual snippet invocation  
+    *
+    * '''Example''' Showing a example element using the tooltip and the actual snippet invocation
     * {{{
-    *  <a id="aId" 
-    *     title="The most powerful, most secure web framework available today. It simply rocks!" 
-    *     href="http://liftweb.net/">Lift</a> 
-    *  <script data-lift="FoBo.Bs3Comp.tooltip?id=#aId&options=placement:'bottom'"></script> 
+    *  <a id="aId"
+    *     title="The most powerful, most secure web framework available today. It simply rocks!"
+    *     href="http://liftweb.net/">Lift</a>
+    *  <script data-lift="FoBo.Bs3Comp.tooltip?id=#aId&options=placement:'bottom'"></script>
     * }}}
-    * 
-    * '''Result:''' The script tag with the snippet invocation will result in the following being 
+    *
+    * '''Result:''' The script tag with the snippet invocation will result in the following being
     * injected in the lift page script :
     * {{{
-    *       $(function () { $('#aId').tooltip({placement:'bottom'}); }); 
+    *       $(function () { $('#aId').tooltip({placement:'bottom'}); });
     * }}}
     * @since v1.4
     */
@@ -152,40 +152,39 @@ class Bs3Comp extends StatefulSnippet with Loggable {
 
   /**
     * This function prevents the default action on a popover element.
-    * 
+    *
     * '''Snippet Params:'''
-    * 
+    *
     *  - '''Param''' ''on'' - The element id or something more general like the default value a[rel=popover]
-    * 
-    * '''Example''' 
+    *
+    * '''Example'''
     * {{{ <script data-lift="FoBo.Bs3Comp.popoverPreventDefault?on=#theId"></script> }}}
-    * 
+    *
     * '''Result:''' This example will result in the following being injected in place of the snippet invocation:
     * {{{
     *   <script type="text/javascript">
     *     // <![CDATA[
     *       $(function(){$('#theId').popover().click(function(e){e.preventDefault()});});;
     *     // ]]>
-    *   </script> 
+    *   </script>
     * }}}
     */
   def popoverPreventDefault = {
     var on = onTest(S.attr("on") openOr "a[rel=popover]")
-    " *" #> JsCmds
-      .Script(sch.popoverPreventDefaultScript(on)) //  sch.popoverPreventDefault(on)
+    " *" #> JsCmds.Script(sch.popoverPreventDefaultScript(on)) //  sch.popoverPreventDefault(on)
   }
 
   /**
     * '''Lift 3 alternativ''' -- This function prevents the default action on a popover element.
-    * 
+    *
     * '''Snippet Params:'''
-    * 
+    *
     *  - '''Param''' ''on'' - The element id or something more general like the default value a[rel=popover]
-    * 
-    * '''Example''' 
+    *
+    * '''Example'''
     * {{{ <script data-lift="FoBo.Bs3Comp.popoverPreventDefault?on=#theId"></script> }}}
-    * 
-    * '''Result:''' This example will result in the following being appended to lift's 
+    *
+    * '''Result:''' This example will result in the following being appended to lift's
     * page-script document ready function:
     * {{{
     *       $(function(){$('#theId').popover().click(function(e){e.preventDefault()});});;
@@ -201,21 +200,21 @@ class Bs3Comp extends StatefulSnippet with Loggable {
   /**
     * This function loads the dropdown activation
     * @note If you are using Lift 3 you should use the AppendJs alternative.
-    * 
+    *
     * '''Snippet Param:'''
-    * 
-    * - '''Param''' ''on'' - The element id or class to activate dropdown on 
-    * 
+    *
+    * - '''Param''' ''on'' - The element id or class to activate dropdown on
+    *
     * '''Example'''
-    * {{{ 
+    * {{{
     *     <head>
     *       :
-    *       <script data-lift="FoBo.Bs3Comp.activateDropdown?on=.dropdown-toggle"></script> 
+    *       <script data-lift="FoBo.Bs3Comp.activateDropdown?on=.dropdown-toggle"></script>
     *       <script data-lift="FoBo.Bs3ScriptHelper.registerLoadEventFactory"></script>
     *     </head>
     * }}}
-    * The load event factory has to be registered ones before any activation can be loaded. 
-    * 
+    * The load event factory has to be registered ones before any activation can be loaded.
+    *
     * '''Result:''' This example will result in the following being injected in place of the snippet invocation:
     * {{{
     *  <script type="text/javascript">
@@ -225,7 +224,7 @@ class Bs3Comp extends StatefulSnippet with Loggable {
     *  </script>
     *  <script type="text/javascript">//registerLoadEventFactory script ...</script>
     * }}}
-    *  
+    *
     */
   def activateDropdown = {
     var on = S.attr("on") openOr "on: ELEMENT CLASS or ID NOT DEFINED!?"
@@ -234,24 +233,24 @@ class Bs3Comp extends StatefulSnippet with Loggable {
 
   /**
     * '''Lift 3 alternativ''' -- This function loads the dropdown activation
-    * 
+    *
     * '''Snippet Param:'''
-    * 
-    * - '''Param''' ''on'' - The element id or class to activate dropdown on 
-    * 
+    *
+    * - '''Param''' ''on'' - The element id or class to activate dropdown on
+    *
     * '''Example'''
-    * {{{ 
+    * {{{
     *     <head>
     *       :
-    *       <script data-lift="FoBo.Bs3Comp.activateDropdownAppendJs?on=.dropdown-toggle"></script> 
+    *       <script data-lift="FoBo.Bs3Comp.activateDropdownAppendJs?on=.dropdown-toggle"></script>
     *       <script data-lift="FoBo.ScriptHelper.registerLoadEventFactoryAppendGlobalJs"></script>
     *     </head>
     * }}}
-    * The load event factory has to be registered ones before any activation can be loaded. 
-    * 
-    * '''Result:''' This example will result in the following being appended to lift's 
+    * The load event factory has to be registered ones before any activation can be loaded.
+    *
+    * '''Result:''' This example will result in the following being appended to lift's
     * page-script document ready function:
-    * {{{ 
+    * {{{
     *      addLoadEvent(function() { $('.dropdown-toggle').dropdown(); });;
     * }}}
     * @since v1.4
