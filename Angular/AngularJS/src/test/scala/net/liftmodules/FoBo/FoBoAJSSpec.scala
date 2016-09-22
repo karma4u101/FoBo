@@ -206,7 +206,7 @@ class FoBoAJSSpec extends mutable.Specification {
                        "fobo" :: "angular-material.js" :: Nil) must_== true
     }
     "rewrit fobo/angular-material.js to fobo/angular-material/1.1.1/js/angular-material.min.js" in {
-      rewriteToolkitInit(FoBoAJS.Toolkit.AJMaterial108,
+      rewriteToolkitInit(FoBoAJS.Toolkit.AJMaterial111,
                          "fobo" :: "angular-material.js" :: Nil) must_==
         List("fobo",
              "angular-material",
