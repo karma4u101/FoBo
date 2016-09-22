@@ -297,6 +297,24 @@ package object FoBoAJSRes {
       FoBoResources.AJMaterial108
     }
 
+    /**
+      * Enable usage of Angular Material version 1&#8228;1&#8228;1 resource files in your bootstrap liftweb Boot.
+      * @version 1.1.1
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{FoBoAJSRes => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.AJMaterial111
+      * }}}
+      *
+      */
+    case object AJMaterial111 extends Resource {
+      FoBoResources.init
+      FoBoResources.AJMaterial111
+    }
+
 //    /**
 //     * Enable usage of Angular Material version 1&#8228;1&#8228;0 resource files in your bootstrap liftweb Boot.
 //     * @version 1.1.0
@@ -18863,6 +18881,41 @@ package object FoBoAJSRes {
           List("fobo",
                "angular-material",
                "1.0.8",
+               "css",
+               "angular-material.min.css")
+      }
+    }
+
+    lazy val AJMaterial111 = {
+      ResourceServer.rewrite {
+        case "fobo" :: "angular-material.js" :: Nil if Props.devMode =>
+          List("fobo",
+               "angular-material",
+               "1.1.1",
+               "js",
+               "angular-material.js")
+        case "fobo" :: "angular-material.js" :: Nil =>
+          List("fobo",
+               "angular-material",
+               "1.1.1",
+               "js",
+               "angular-material.min.js")
+        case "fobo" :: "angular-material-mocks.js" :: Nil =>
+          List("fobo",
+               "angular-material",
+               "1.1.1",
+               "js",
+               "angular-material-mocks.js")
+        case "fobo" :: "angular-material.css" :: Nil if Props.devMode =>
+          List("fobo",
+               "angular-material",
+               "1.1.1",
+               "css",
+               "angular-material.css")
+        case "fobo" :: "angular-material.css" :: Nil =>
+          List("fobo",
+               "angular-material",
+               "1.1.1",
                "css",
                "angular-material.min.css")
       }
