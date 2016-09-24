@@ -51,7 +51,7 @@ import common._
   *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component) [[net.liftmodules.FoBoAJS]]
   *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component) [[net.liftmodules.FoBoAJS]]
   *  - Angular UI-Grid [v3.0.7] (angular component) [[net.liftmodules.FoBoAJS]]
-  *  - Angular Material design [v0.10.0, v1.0.1, v1.0.8] (angular component) [[net.liftmodules.FoBoAJS]]
+  *  - Angular Material design [v0.10.0, v1.0.1, v1.0.8, v1.1.1] (angular component) [[net.liftmodules.FoBoAJS]]
   *
   *
   * ===Help out!===
@@ -388,7 +388,8 @@ package object FoBo {
       *    :
       *   FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial111
       * }}}
-      *
+      * 
+      * @since v1.7
       */
     case object AJMaterial111 extends Toolkit {
       net.liftmodules.FoBoAJS.Toolkit.AJMaterial111

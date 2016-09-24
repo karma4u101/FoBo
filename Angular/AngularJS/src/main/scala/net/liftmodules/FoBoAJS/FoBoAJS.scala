@@ -321,7 +321,8 @@ package object FoBoAJS {
       *    :
       *   FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial111
       * }}}
-      *
+      * 
+      * @since v1.7
       */
     case object AJMaterial111 extends Toolkit {
       FoBoAJSAPI.API.Angular1

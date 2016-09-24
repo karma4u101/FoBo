@@ -1,4 +1,4 @@
-alias pub=publish-local-signed
+alias pub=publish-signed
 
 set version       in ThisBuild:="1.7-SNAPSHOT"
 

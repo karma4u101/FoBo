@@ -12,7 +12,7 @@ but can also be used as-is, see below for setup information.
 - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0]
 - Angular NG-Grid [v2.0.4, v2.0.7]
 - Angular UI-Grid [v3.0.7]
-- Angular Material Design [v0.10.0, v1.0.1, v1.0.8]
+- Angular Material Design [v0.10.0, v1.0.1, v1.0.8, v1.1.1]
 
 ## Integration into your project 
 
