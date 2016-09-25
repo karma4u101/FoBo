@@ -39,7 +39,7 @@ import common._
   * The following is a list of available toolkits resources
   *
   *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.3, v.2.1.1, v.2.1.4, v2.2.4, v3.0.0, v3.1.0] [[net.liftmodules.FoBoJQ]]
-  *  - JQueryMigrate [v1.2.1,v1.4.1,v3.0.0] [[net.liftmodules.FoBoJQ]]
+  *  - JQueryMigrate [v1.2.1, v1.4.1, v3.0.0] [[net.liftmodules.FoBoJQ]]
   *  - Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6, v3.3.7] [[net.liftmodules.FoBoBs]]
   *  - Bootstrap v2.x series [v2.3.2] [[net.liftmodules.FoBoTB]]
   *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] [[net.liftmodules.FoBoFA]]
@@ -81,7 +81,7 @@ import common._
   * accordingly to include just the FoBo modules you use, but if size is not a issue using the FoBo/FoBo
   * module is convenient and gives you a lot to pick from.
   *
-  * @version v1.6
+  * @version v1.7
   * @author Peter Petersson (Github karma4u101) and the Lift community
   *
   */
