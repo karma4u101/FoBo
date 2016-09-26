@@ -36,7 +36,7 @@ is available from here [Lift v3.0 Template Applications](https://github.com/lift
 **Material Design** A Lift v3.0 starter template with FoBo setup using Angular Material and FoBo's MaterialMegaMetaProtoUser (for mapper ProtoUser 
 views) is available from here [FoBo-Demo](https://github.com/karma4u101/FoBo-Demo/)
 
-For more information on how to get started with FoBo's starter templates see [Quick Start with Lift Template Applications](#Quick Start with Lift Template Applications)
+For more information on how to get started with FoBo's starter templates see [Quick Start with Lift Template Applications](#quick-start-with-lift-template-applications)
 
 If you have ideas and suggestions let us know!
 
