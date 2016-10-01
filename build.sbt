@@ -18,7 +18,7 @@ lazy val fobometa = (project in file("."))
   //.settings(scalafmtConfig in ThisBuild := Some(file(".scalafmt")))
   .settings(name := "fobo-meta")
   .settings(scalaVersion in ThisBuild := "2.11.7")
-  .settings(liftVersion in ThisBuild <<= liftVersion ?? "3.0-RC3")
+  .settings(liftVersion in ThisBuild <<= liftVersion ?? "3.0-RC4")
   .settings(liftEdition in ThisBuild <<= liftVersion apply {
     _.substring(0, 3)
   })
