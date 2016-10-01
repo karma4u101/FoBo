@@ -37,7 +37,7 @@ package object FoBoTBAPI {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
-    def Init: Store = store
+    def Init: Store          = store
     def Init_=(t: API): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -87,9 +87,9 @@ package object FoBoTBAPI {
     * }}}
     */
   object TBLocInfo {
-    private val hd: Box[String] = Full("divider")
-    private val vd: Box[String] = Full("divider-vertical")
-    private val nh: Box[String] = Full("nav-header")
+    private val hd: Box[String]  = Full("divider")
+    private val vd: Box[String]  = Full("divider-vertical")
+    private val nh: Box[String]  = Full("nav-header")
     private val ltb: Box[String] = Full("_blank")
     private val lts: Box[String] = Full("_self")
     private val ltp: Box[String] = Full("_parent")

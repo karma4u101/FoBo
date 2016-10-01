@@ -23,10 +23,10 @@ class Bootstrap extends StatefulSnippet with Loggable {
   private lazy val sch = new sch()
 
   def dispatch = {
-    case "popover" => popover
-    case "tooltip" => tooltip
+    case "popover"               => popover
+    case "tooltip"               => tooltip
     case "popoverPreventDefault" => popoverPreventDefault
-    case "activateDropdown" => activateDropdown
+    case "activateDropdown"      => activateDropdown
   }
 
   /**
@@ -50,7 +50,7 @@ class Bootstrap extends StatefulSnippet with Loggable {
     * }}}
     */
   def popover = {
-    var id = S.attr("id") openOr "id: NOT DEFINED!?"
+    var id      = S.attr("id") openOr "id: NOT DEFINED!?"
     var options = S.attr("options") openOr ""
     " *" #> sch.popover(id, options)
   }
@@ -81,7 +81,7 @@ class Bootstrap extends StatefulSnippet with Loggable {
     * }}}
     */
   def tooltip = {
-    var id = S.attr("id") openOr "id: NOT DEFINED!?"
+    var id      = S.attr("id") openOr "id: NOT DEFINED!?"
     var options = S.attr("options") openOr ""
     " *" #> sch.tooltip(id, options)
   }
@@ -145,8 +145,8 @@ class Bootstrap extends StatefulSnippet with Loggable {
 
   private def onTest(on: String): String = on match {
     case "arelpop" => "a[rel=popover]"
-    case "a[rel" => "a[rel=popover]"
-    case _ => on
+    case "a[rel"   => "a[rel=popover]"
+    case _         => on
   }
 
 }

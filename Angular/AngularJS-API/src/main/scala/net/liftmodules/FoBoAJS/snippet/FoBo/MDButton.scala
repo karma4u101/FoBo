@@ -12,7 +12,7 @@ class MDButton extends StatefulSnippet with Loggable {
 
   def dispatch: DispatchIt = {
     case "ngHref" => ngHref
-    case "href" => href
+    case "href"   => href
   }
 
   /**
@@ -50,7 +50,7 @@ class MDButton extends StatefulSnippet with Loggable {
   }
 
   private def getLink(name: S.attr.Info): String = {
-    val loc = SiteMap.findAndTestLoc(name).toList
+    val loc  = SiteMap.findAndTestLoc(name).toList
     val link = (if (!loc.isEmpty) loc.head.createDefaultLink else None) getOrElse NodeSeq.Empty
     if (!S.contextPath.isEmpty() && !link.isEmpty)
       S.contextPath + link.toString()

@@ -37,7 +37,7 @@ package object FoBoTBRes {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def Init: Store = store
+    def Init: Store          = store
     def Init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store

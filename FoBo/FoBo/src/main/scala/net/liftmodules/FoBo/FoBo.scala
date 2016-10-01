@@ -145,7 +145,7 @@ package object FoBo {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Toolkit]
     private var store: Store = List()
-    def Init: Store = store
+    def Init: Store          = store
     def Init_=(t: Toolkit): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -388,7 +388,7 @@ package object FoBo {
       *    :
       *   FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial111
       * }}}
-      * 
+      *
       * @since v1.7
       */
     case object AJMaterial111 extends Toolkit {
@@ -1022,7 +1022,7 @@ package object FoBo {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def Init: Store = store
+    def Init: Store          = store
     def Init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -1893,7 +1893,7 @@ package object FoBo {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
-    def Init: Store = store
+    def Init: Store          = store
     def Init_=(t: API): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -2053,9 +2053,9 @@ package object FoBo {
   @deprecated("Use BSLocInfo or TBLocInfo provided by FoBoBs and FoBoTB ",
               "1.6.0")
   object TBLocInfo {
-    private val hd: Box[String] = Full("divider")
-    private val vd: Box[String] = Full("divider-vertical")
-    private val nh: Box[String] = Full("nav-header")
+    private val hd: Box[String]  = Full("divider")
+    private val vd: Box[String]  = Full("divider-vertical")
+    private val nh: Box[String]  = Full("nav-header")
     private val ltb: Box[String] = Full("_blank")
     private val lts: Box[String] = Full("_self")
     private val ltp: Box[String] = Full("_parent")
@@ -2167,7 +2167,7 @@ package object FoBo {
   @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit case object name]",
               "1.6.0")
   object InitParam extends FoBoToolkit with FoBoJQuery {
-    var JQuery: FoBoJQuery = null
+    var JQuery: FoBoJQuery   = null
     var ToolKit: FoBoToolkit = _
   }
 
