@@ -4,6 +4,7 @@
 For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/CHANGELOG.md#history-log) section
 
 **Latest Stable Releases:**
+- **2016-10-03** -- FoBo Module v.17
 - **2016-06-25** -- FoBo Module v1.6
 - **2015-12-30** -- FoBo Module v1.5.1
 

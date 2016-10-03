@@ -81,14 +81,14 @@ Setup example:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo_3.0 % "1.6"
+"net.liftmodules" %% "fobo_3.0 % "1.7"
 ```      
 **Maven:**      
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
   <artifactId>fobo_3.0_2.11.6</artifactId>
-  <version>1.6</version>
+  <version>1.7</version>
 </dependency>
 ```
 The example shows how to include the FoBo/FoBo module built for lift 3.0.x. 
@@ -104,14 +104,14 @@ Setup example using the FoBo/Lift Bootstrap3 API module:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-twbs-bootstrap3-api_3.0" % "1.6"
+"net.liftmodules" %% "fobo-twbs-bootstrap3-api_3.0" % "1.7"
 ```      
 **Maven:**
 ```xml      
 <dependency>
   <groupId>net.liftmodules</groupId>
   <artifactId>fobo-twbs-bootstrap3-api_3.0_2.11.6</artifactId>
-  <version>1.6</version>
+  <version>1.7</version>
 </dependency>
 ```
 The example shows how to include the FoBo Bootstrap3 API module built for lift 3.0.x. 
