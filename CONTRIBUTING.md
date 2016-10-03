@@ -16,9 +16,10 @@ Some things that will increase the chance that your pull request is accepted
 * Comment your pull request with clear explanation of what your contribution will accomplish.
 
 Syntax:
+FoBo uses the scalafmt scala code formater plugin to format the code so you do not have to worry about it 
+but here is some guidelines:  
 
-* Two spaces, no tabs.
 * No trailing whitespace. Blank lines should not have any space.
-* Follow the conventions you see used in the source already.
+* Try follow the conventions you see used in the source already.
 
 Thanks a million! We are looking forward to see your contribution! 

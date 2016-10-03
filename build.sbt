@@ -1,109 +1,285 @@
-moduleName := "fobo-meta"
+import LiftModuleKeys._
 
-organization := "net.liftmodules"
+//##################################################################
+//##
+//##  Build settings
+//##
+//##############
 
-version in ThisBuild := "1.6"
+lazy val commonSettings = Seq(
+  organization := "net.liftmodules",
+  version := "1.7-SNAPSHOT",
+  autoAPIMappings := true
+)
 
-liftVersion in ThisBuild <<= liftVersion ?? "3.0-RC3" //"2.6.3" //
+lazy val fobometa = (project in file("."))
+  .settings(commonSettings: _*)
+  .settings(unidocSettings: _*)
+  //.settings(scalafmtConfig in ThisBuild := Some(file(".scalafmt")))
+  .settings(name := "fobo-meta")
+  .settings(scalaVersion in ThisBuild := "2.11.7")
+  .settings(liftVersion in ThisBuild <<= liftVersion ?? "3.0-RC4")
+  .settings(liftEdition in ThisBuild <<= liftVersion apply {
+    _.substring(0, 3)
+  })
+  .aggregate(fobo)
 
-liftEdition in ThisBuild <<= liftVersion apply { _.substring(0,3) }
+lazy val fobo = (project in file("FoBo/FoBo"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo")
+  .aggregate(foboapi,
+             kineticjs,
+             pace,
+             angularjs,
+             jquery,
+             bootstrap,
+             bootstrap3,
+             fontAwesome,
+             prettify,
+             highlightjs)
+  .dependsOn(foboapi,
+             kineticjs,
+             pace,
+             angularjs,
+             jquery,
+             bootstrap,
+             bootstrap3,
+             fontAwesome,
+             prettify,
+             highlightjs)
 
-moduleName <<= (name, liftEdition) { (n, e) =>  n + "_" + e }
+lazy val foboapi = (project in file("FoBo/FoBo-API"))
+  .enablePlugins(BuildInfoPlugin)
+  .settings(name := "fobo-api")
+  .settings(commonSettings: _*)
+  .settings(
+    buildInfoKeys := Seq[BuildInfoKey](name,
+                                       version,
+                                       scalaVersion,
+                                       sbtVersion),
+    buildInfoPackage := "net.liftmodules.FoBo.lib"
+  )
 
-crossScalaVersions := Seq("2.11.4", "2.10.4", "2.9.3", "2.9.2", "2.9.1-1", "2.9.1")
+lazy val kineticjs = (project in file("Kinetic/KineticJS"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-kineticjs")
+  .aggregate(kineticjsres)
+  .dependsOn(kineticjsres)
 
-scalaVersion in ThisBuild := "2.11.4"
+lazy val kineticjsres = (project in file("Kinetic/KineticJS-Res"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-kineticjs-res")
 
-logLevel in ThisBuild := Level.Info   //Level.Debug Level.Info
+lazy val pace = (project in file("Pace/Pace"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-pace")
+  .aggregate(paceres)
+  .dependsOn(paceres)
 
-scalacOptions ++= Seq("-deprecation")//,"-feature" <==cant use as long as we build using 2.9.x
+lazy val paceres = (project in file("Pace/Pace-Res"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-pace-res")
 
-parallelExecution in Test := false
+lazy val angularjs = (project in file("Angular/AngularJS"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-angularjs")
+  .aggregate(angularjsapi, angularjsres)
+  .dependsOn(angularjsapi, angularjsres)
 
+lazy val angularjsapi = (project in file("Angular/AngularJS-API"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-angularjs-api")
+
+lazy val angularjsres = (project in file("Angular/AngularJS-Res"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-angularjs-res")
+
+lazy val jquery = (project in file("JQuery/JQuery"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-jquery")
+  .aggregate(jqueryapi, jqueryres)
+  .dependsOn(jqueryapi, jqueryres)
+
+lazy val jqueryapi = (project in file("JQuery/JQuery-API"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-jquery-api")
+
+lazy val jqueryres = (project in file("JQuery/JQuery-Res"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-jquery-res")
+
+lazy val bootstrap =
+  (project in file("Bootstrap/Bootstrap2/Twitter-Bootstrap"))
+    .settings(commonSettings: _*)
+    .settings(name := "fobo-twitter-bootstrap")
+    .aggregate(bootstrapapi, bootstrapres)
+    .dependsOn(bootstrapapi, bootstrapres)
+
+lazy val bootstrapapi =
+  (project in file("Bootstrap/Bootstrap2/Twitter-Bootstrap-API"))
+    .settings(commonSettings: _*)
+    .settings(name := "fobo-twitter-bootstrap-api")
+
+lazy val bootstrapres =
+  (project in file("Bootstrap/Bootstrap2/Twitter-Bootstrap-Res"))
+    .settings(commonSettings: _*)
+    .settings(name := "fobo-twitter-bootstrap-res")
+
+lazy val bootstrap3 = (project in file("Bootstrap/Bootstrap3/TwBs-Bootstrap3"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-twbs-bootstrap3")
+  .aggregate(bootstrap3api, bootstrap3res)
+  .dependsOn(bootstrap3api, bootstrap3res)
+
+lazy val bootstrap3api =
+  (project in file("Bootstrap/Bootstrap3/TwBs-Bootstrap3-API"))
+    .settings(commonSettings: _*)
+    .settings(name := "fobo-twbs-bootstrap3-api")
+
+lazy val bootstrap3res =
+  (project in file("Bootstrap/Bootstrap3/TwBs-Bootstrap3-Res"))
+    .settings(commonSettings: _*)
+    .settings(name := "fobo-twbs-bootstrap3-res")
+
+lazy val fontAwesome = (project in file("Font-Awesome/Font-Awesome"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-font-awesome")
+  .aggregate(fontAwesomeres)
+  .dependsOn(fontAwesomeres)
+
+lazy val fontAwesomeres = (project in file("Font-Awesome/Font-Awesome-Res"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-font-awesome-res")
+
+lazy val prettify =
+  (project in file("Google-Code-Prettify/Google-Code-Prettify"))
+    .settings(commonSettings: _*)
+    .settings(name := "fobo-google-code-prettify")
+    .aggregate(prettifyres)
+    .dependsOn(prettifyres)
+
+lazy val prettifyres =
+  (project in file("Google-Code-Prettify/Google-Code-Prettify-Res"))
+    .settings(commonSettings: _*)
+    .settings(name := "fobo-google-code-prettify-res")
+
+lazy val highlightjs = (project in file("Highlight/HighlightJS"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-highlightjs")
+  .aggregate(highlightjsapi, highlightjsres)
+  .dependsOn(highlightjsapi, highlightjsres)
+
+lazy val highlightjsapi = (project in file("Highlight/HighlightJS-API"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-highlightjs-api")
+
+lazy val highlightjsres = (project in file("Highlight/HighlightJS-Res"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-highlightjs-res")
+
+//##
+//##
+//##################################################################
+
+//##################################################################
+//##
+//##  Common resolvers
+//##
+//##############
+resolvers in ThisBuild ++= Seq(
+  "snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",
+  "releases" at "https://oss.sonatype.org/content/repositories/releases"
+)
+//##
+//##
+//##################################################################
+
+//##################################################################
+//##
+//##  Common dependencies
+//##
+//##############
+libraryDependencies in ThisBuild <++= (liftVersion, liftEdition, version) {
+  (v, e, mv) =>
+    "net.liftweb"   %% "lift-webkit"  % v % "provided" ::
+      "net.liftweb" %% "lift-testkit" % v % "provided" ::
+        Nil
+}
+
+libraryDependencies in ThisBuild <++= (scalaVersion, liftVersion) { (sv, lv) =>
+  ((sv, lv) match {
+    case ("2.9.2", _) | ("2.9.1", _) | ("2.9.1-1", _) =>
+      "org.specs2" %% "specs2" % "1.12.3" % "test"
+    case ("2.10.4", _) => "org.specs2" %% "specs2" % "1.13"   % "test"
+    case (_, "2.6.2")  => "org.specs2" %% "specs2" % "2.3.11" % "test"
+    case (_, _)        => "org.specs2" %% "specs2" % "3.7"    % "test"
+  }) ::
+    ((sv, lv) match {
+      case ("2.10.4", _) | ("2.9.2", _) | ("2.9.1", _) | ("2.9.1-1", _) =>
+        "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
+      case (_, "2.6.2") => "org.scalacheck" %% "scalacheck"        % "1.11.4" % "test"
+      case (_, _)       => "org.specs2"     %% "specs2-scalacheck" % "3.7"    % "test"
+    }) ::
+      Nil
+}
+
+libraryDependencies in ThisBuild <++= liftVersion { lv =>
+  (lv match {
+    case "2.6.2" => "javax.servlet" % "servlet-api"       % "2.5"   % "provided,test"
+    case _       => "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided,test"
+  }) ::
+    Nil
+}
+
+libraryDependencies in ThisBuild ++= {
+  "ch.qos.logback" % "logback-classic" % "1.0.0"  % "provided" ::
+    "log4j"        % "log4j"           % "1.2.16" % "provided" ::
+      Nil
+}
+
+//##
+//##
+//##################################################################
+
+//##################################################################
+//##
+//##  Eclipse stuff
+//##
+//##############
 EclipseKeys.withSource in ThisBuild := true
 
 EclipseKeys.skipParents in ThisBuild := false
 
-EclipseKeys.createSrc in ThisBuild := EclipseCreateSrc.Default + EclipseCreateSrc.Managed
-
-net.virtualvoid.sbt.graph.Plugin.graphSettings
-
-//useGpgAgent := true
-
-resolvers ++= Seq(
-  "Scala Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/",
-  "Scala" at "https://oss.sonatype.org/content/groups/scala-tools/"
-)
-
-//Reference library's used in eclipse has to be defined in the top level project(?)
-libraryDependencies <++= (liftVersion,liftEdition,version) { (v,e,mv) =>
-    "net.liftweb"      %% "lift-webkit"                       % v       % "provided" :: 
-    "net.liftweb"      %% "lift-testkit"                      % v       % "provided" :: 
-    "net.liftweb"      %% "lift-mapper"                       % v       % "provided" ::
-    Nil
-}
-
-libraryDependencies <++= scalaVersion { sv => 
-  (sv match {
-      case "2.9.2" | "2.9.1" | "2.9.1-1" => "org.specs2" %% "specs2" % "1.12.3" % "test"
-      case "2.10.4" => "org.specs2" %% "specs2" % "1.13" % "test"
-      case _ => "org.specs2" %% "specs2" % "3.7" % "test"
- }) ::
-    (sv match {
-      case "2.10.4" | "2.9.2" | "2.9.1" | "2.9.1-1" => "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
-      case _ => "org.specs2" %% "specs2-scalacheck" % "3.7" % "test"
-      }) ::
-  Nil
-}
-
-//############################################################
-//#### THE BUILDINFO BUILD
-//## https://github.com/sbt/sbt-buildinfo
-//## Moved to LiftModuleBuild.scala
+EclipseKeys.createSrc := EclipseCreateSrc.Default + EclipseCreateSrc.Managed
 //##
-//#############################################################
-//seq(buildInfoSettings: _*)
+//##
+//##################################################################
 
-//sourceGenerators in Compile <+= buildInfo
+//##################################################################
+//##
+//##  Publish to Sonatype
+//##
+//##############
+credentials in ThisBuild += Credentials(
+  file("/private/liftmodules/sonatype.credentials"))
 
-//buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion)
+publishTo in ThisBuild <<= version { v: String =>
+  val sonatype = "https://oss.sonatype.org/"
+  if (v.trim.endsWith("SNAPSHOT"))
+    Some("snapshots" at sonatype + "content/repositories/snapshots")
+  else
+    Some("releases" at sonatype + "service/local/staging/deploy/maven2")
+}
 
-//buildInfoPackage := "net.liftmodules.FoBo.lib"
-
-//################################################################
-//#### Publish to Sonatype
-//## 
-//##  
-//## 
-//################################################################
-credentials += Credentials(file(Path.userHome + "/.sbt/liftmodules/.credentials") )
-
-credentials += Credentials( file("/private/liftmodules/sonatype.credentials") )
-
-//credentials += Credentials(Path.userHome / ".sbt" / ".credentials" )
-//publishTo <<= version { v: String =>
-//   val nexus = "http://www.media4u101.se:8081/nexus/"
-//   if (v.trim.endsWith("SNAPSHOT"))
-//	 Some("snapshots" at nexus + "content/repositories/snapshots")
-//   else
-//     Some("releases" at nexus + "content/repositories/releases")
-//   }
-
-publishTo <<= version { v: String =>
-   val sonatype = "https://oss.sonatype.org/"
-   if (v.trim.endsWith("SNAPSHOT"))
-	 Some("snapshots" at sonatype + "content/repositories/snapshots")
-   else
-     Some("releases" at sonatype + "service/local/staging/deploy/maven2")
-   }
-
-publishMavenStyle := true
+publishMavenStyle in ThisBuild := true
 
 publishArtifact in Test := false
 
-pomIncludeRepository := { x => false }
+pomIncludeRepository in ThisBuild := { x =>
+  false
+}
 
-pomExtra := (
+pomExtra in ThisBuild := (
   <url>http://www.media4u101.se/fobo-lift-template-demo/</url>
   <licenses>
     <license>
@@ -125,7 +301,6 @@ pomExtra := (
   </developers>
 )
 
-
-
-
-
+//##
+//##
+//##################################################################

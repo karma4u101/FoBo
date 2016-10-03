@@ -1,7 +1,7 @@
 package net.liftmodules
 
 import net.liftweb._
-import util.{ Props }
+import util.{Props}
 import http._
 import common._
 
@@ -11,6 +11,5 @@ object FoBoGCPAPISpec extends Specification {
   "FoBoGCPAPISpec Specification".title
 
   sequential
-  
-  
+
 }

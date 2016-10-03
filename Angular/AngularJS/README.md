@@ -12,7 +12,7 @@ but can also be used as-is, see below for setup information.
 - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0]
 - Angular NG-Grid [v2.0.4, v2.0.7]
 - Angular UI-Grid [v3.0.7]
-- Angular Material Design [v0.10.0, v1.0.1, v1.0.8]
+- Angular Material Design [v0.10.0, v1.0.1, v1.0.8, v1.1.1]
 
 ## Integration into your project 
 
@@ -153,8 +153,8 @@ You will find more information about available locales at [Angular Guide i18n](h
 For more information on how to use AngularJS and included components:
 - AngularJS see [AngularJS](http://angularjs.org/)
 - Angular UI Bootstrap see [Angular UI Bootstrap](http://angular-ui.github.io/bootstrap/)
-- Angular Angular NG-Grid see [Angular NG-Grid](http://angular-ui.github.io/ng-grid/)
-- FoBo AngularJS Resouces module see [FoBo AngularJSRes](https://github.com/karma4u101/FoBo/Angular/AngularJSRes).
+- Angular Angular UI-Grid see [Angular UI-Grid](http://ui-grid.info/)
+- FoBo AngularJS Resources module see [FoBo AngularJSRes](https://github.com/karma4u101/FoBo/Angular/AngularJSRes).
 - FoBo AngularJS API module see [FoBo AngularJSAPI](https://github.com/karma4u101/FoBo/Angular/AngularJSAPI).
 - FoBo AngularJS in the FoBo module see the [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo).
 

@@ -5,7 +5,8 @@ but can also be used as-is, see below for setup information.
 
 ## Components and available versions 
 
-- FoBo-JQuery [v1.7.2, v1.8,2, v1.9.1, v1.10.2, v1.11.0, v1.11.1, v1.11.3, v2.1.1, v2.1.4] - [JQuery](http://jquery.com/)
+- FoBo-JQuery [v1.7.2, v1.8,2, v1.9.1, v1.10.2, v1.11.0, v1.11.1, v1.11.3, v2.1.1, v2.1.4, v2.2.4, v3.0.0, v3.1.0] - [JQuery](http://jquery.com/)
+- FoBo-JQuery-Migrate [v1.2.1, v1.4.1, v3.0.0] - [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)
 
 ## Integration into your project 
 
@@ -54,21 +55,5 @@ Improvements, contributions and suggestions are welcome!
 Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). 
 You can also leave a issue report or drop a question/suggestion on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
 
-## Update log
-
-**Latest Update:**
-- **2015-08-05** -- Module v1.4-SNAPSHOT Adding JQuery v1.11.3 
-
-### History log
-
-
-**Updates history:**
-- **2015-07-28** -- Module v1.4-SNAPSHOT Adding JQuery v2.1.4
-- **2013-10-21** -- Module v1.1-SNAPSHOT Now using v2.5 of lift-jquery-module for all flavours of Lift.
-- **2013-08-21** -- Module v1.1-SNAPSHOT Adding JQuery v1.10.2
-- **2013-05-01** -- Module v0.9.9-SNAPSHOT ++ One version to rule them all, unified FoBo module and sub-module versions.
-- **2013-04-27** -- Module v0.3.0-SNAPSHOT Adding jquery v1.9.1
-- **2013-04-06** -- Module v0.2.0-SNAPSHOT Using lift-query-module v2.3 for Lift v2.5 with new version schema.
-- **2013-03-29** -- Module v0.1.0-SNAPSHOT Making JQuery a FoBo sub-module/project.
  
 
