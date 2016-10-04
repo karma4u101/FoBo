@@ -8,7 +8,7 @@ import LiftModuleKeys._
 
 lazy val commonSettings = Seq(
   organization := "net.liftmodules",
-  version := "1.7-SNAPSHOT",
+  version in ThisBuild := "1.7",
   autoAPIMappings := true
 )
 
@@ -188,7 +188,7 @@ lazy val highlightjsres = (project in file("Highlight/HighlightJS-Res"))
 //##############
 resolvers in ThisBuild ++= Seq(
   "snapshots" at "https://oss.sonatype.org/content/repositories/snapshots",
-  "releases" at "https://oss.sonatype.org/content/repositories/releases"
+  "releases" at "https://oss.sonatype.org/service/local/staging/deploy/maven2"
 )
 //##
 //##
