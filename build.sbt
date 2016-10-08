@@ -8,7 +8,7 @@ import LiftModuleKeys._
 
 lazy val commonSettings = Seq(
   organization := "net.liftmodules",
-  version in ThisBuild := "1.7",
+  version in ThisBuild := "2.0-SNAPSHOT",
   autoAPIMappings := true
 )
 

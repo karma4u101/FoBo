@@ -58,16 +58,6 @@ object FoBoPaSpec extends Specification {
   }
 
   //Pace0415
-  "With FoBoPa.InitParam.ToolKit set to FoBoPa.Pace0415 the ResourceServer" should {
-    "allow  fobo/pace.js" in {
-      allowInitParam(FoBoPa.Pace0415, "fobo" :: "pace.js" :: Nil) must_== true
-    }
-    "rewrit fobo/angular.js to fobo/pace/0.4.15/js/pace.min.js" in {
-      rewriteInitParam(FoBoPa.Pace0415, "fobo" :: "pace.js" :: Nil) must_==
-        List("fobo", "pace", "0.4.15", "js", "pace.min.js")
-    }
-  }
-
   "With FoBoPa.Toolkit.Init set to FoBoPa.Toolkit.Pace0415 the ResourceServer" should {
     "allow  fobo/pace.js" in {
       allowToolkitInit(FoBoPa.Toolkit.Pace0415, "fobo" :: "pace.js" :: Nil) must_== true
@@ -96,17 +86,6 @@ object FoBoPaSpec extends Specification {
 
   def rewriteToolkitInit(resource: FoBoPa.Toolkit, path: List[String]) = {
     FoBoPa.Toolkit.Init = resource
-    ResourceServer.pathRewriter(path)
-  }
-
-  //=== InitParam.ToolKit ===============//
-  def allowInitParam(resource: FoBoPa.PaToolkit, path: List[String]) = {
-    FoBoPa.InitParam.ToolKit = resource
-    ResourceServer.allowedPaths(path)
-  }
-
-  def rewriteInitParam(resource: FoBoPa.PaToolkit, path: List[String]) = {
-    FoBoPa.InitParam.ToolKit = resource
     ResourceServer.pathRewriter(path)
   }
 

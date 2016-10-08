@@ -242,25 +242,6 @@ package object FoBoAJSRes {
     }
 
     /**
-      * Enable usage of Angular Material version 0&#8228;10&#8228;0 resource files in your bootstrap liftweb Boot.
-      * @version 0.10.0
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.{FoBoAJSRes => FoBo}
-      *    :
-      *   FoBo.Resource.Init=FoBo.Resource.AJMaterial0100
-      * }}}
-      *
-      */
-    @deprecated("Use AJMaterial108 or later", "1.5.0")
-    case object AJMaterial0100 extends Resource {
-      FoBoResources.init
-      FoBoResources.AJMaterial0100
-    }
-
-    /**
       * Enable usage of Angular Material version 1&#8228;0&#8228;1 resource files in your bootstrap liftweb Boot.
       * @version 1.0.1
       *
@@ -18764,36 +18745,6 @@ package object FoBoAJSRes {
                "3.0.7",
                "css",
                "ui-grid.min.css")
-      }
-    }
-
-    @deprecated("Use AJMaterial100 or later", "1.5.0")
-    lazy val AJMaterial0100 = {
-      ResourceServer.rewrite {
-        case "fobo" :: "angular-material.js" :: Nil if Props.devMode =>
-          List("fobo",
-               "angular-material",
-               "0.10.0",
-               "js",
-               "angular-material.js")
-        case "fobo" :: "angular-material.js" :: Nil =>
-          List("fobo",
-               "angular-material",
-               "0.10.0",
-               "js",
-               "angular-material.min.js")
-        case "fobo" :: "angular-material.css" :: Nil if Props.devMode =>
-          List("fobo",
-               "angular-material",
-               "0.10.0",
-               "css",
-               "angular-material.css")
-        case "fobo" :: "angular-material.css" :: Nil =>
-          List("fobo",
-               "angular-material",
-               "0.10.0",
-               "css",
-               "angular-material.css")
       }
     }
 
