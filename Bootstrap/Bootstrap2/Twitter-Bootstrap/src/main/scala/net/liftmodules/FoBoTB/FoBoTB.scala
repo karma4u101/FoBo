@@ -280,56 +280,5 @@ package object FoBoTB {
     }
 
   }
-
-  /*============== InitParam (deprecated) ===================*/
-  /**
-    * @example In bootstrap liftweb Boot set
-    * {{{
-    *   FoBoTB.init()
-    * }}}
-    * The above example just calls init without specifying fobo init
-    * params so default Toolkit and JQuery values will be used.
-    */
-  @deprecated(
-    "Init no longer nessesary as it is now automaticaly done for respective FoBoTB.InitParam",
-    "1.6.0")
-  def init() {}
-
-  @deprecated("Use FoBoTB.Toolkit or FoBoTB.Resource and FoBoTB.API", "1.6.0")
-  abstract sealed trait FoBoToolkit
-
-  /**
-    * Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot.
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   FoBoTB.InitParam.JQuery=FoBoTB.JQuery172
-    *   FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap232
-    * }}}
-    * This example uses the Bootstrap v2.3.2 option.
-    *
-    */
-  @deprecated("Use FoBoTB.Toolkit.Init=FoBoTB.Toolkit.[Toolkit Object]",
-              "1.6.0")
-  object InitParam extends FoBoToolkit {
-    var ToolKit: FoBoToolkit = null
-  }
-
-  /**
-    * Enable usage of Twitter Bootstrap version 2&#8228;3&#8228;2 in your bootstrap liftweb Boot.
-    * @version 2.3.2
-    *
-    * '''Example'''
-    *
-    * {{{
-    *   FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap232
-    * }}}
-    */
-  @deprecated("Use FoBoTB.Toolkit.Init=FoBoTB.Toolkit.Bootstrap232", "1.6.0")
-  case object Bootstrap232 extends FoBoToolkit {
-    net.liftmodules.FoBoTBRes.Resource.Bootstrap232
-    net.liftmodules.FoBoTBAPI.API.Bootstrap2
-  }
-
+  
 }

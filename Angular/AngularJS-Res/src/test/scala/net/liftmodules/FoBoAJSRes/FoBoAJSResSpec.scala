@@ -170,32 +170,6 @@ object FoBoAJSResSpec extends Specification {
     }
   }
 
-  //AJMaterial0100
-  "With FoBoAJSRes.Resource.Init set to FoBoAJSRes.Resource.AJMaterial0100 the ResourceServer" should {
-    "allow  fobo/angular-material.js" in {
-      allowResource(FoBoAJSRes.Resource.AJMaterial0100,
-                    "fobo" :: "angular-material.js" :: Nil) must_== true
-    }
-    "rewrit fobo/angular-material.js to fobo/angular-material/0.10.0/js/angular-material.min.js" in {
-      rewriteResource(FoBoAJSRes.Resource.AJMaterial0100,
-                      "fobo" :: "angular-material.js" :: Nil) must_==
-        List("fobo",
-             "angular-material",
-             "0.10.0",
-             "js",
-             "angular-material.min.js")
-    }
-    "rewrit fobo/angular-material.css to fobo/angular-material/0.10.0/js/angular-material.css" in {
-      rewriteResource(FoBoAJSRes.Resource.AJMaterial0100,
-                      "fobo" :: "angular-material.css" :: Nil) must_==
-        List("fobo",
-             "angular-material",
-             "0.10.0",
-             "css",
-             "angular-material.css")
-    }
-  }
-
   //AJSUIBootstrap020
   "With FoBoAJSRes.Resource.Init set to FoBoAJSRes.Resource.AJSUIBootstrap020 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {

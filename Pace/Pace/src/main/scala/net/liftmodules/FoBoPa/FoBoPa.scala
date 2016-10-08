@@ -193,42 +193,6 @@ package object FoBoPa {
     }
   }
 
-  /*=== InitParam (deprecated) ============================================*/
-
-  @deprecated(
-    "Init no longer nessesary as it is now automaticaly done for respective FoBoPa.InitParam",
-    "1.6.0")
-  def init() {}
-
-  @deprecated("Use Toolkit or Resouce", "1.6.0")
-  abstract sealed trait PaToolkit
-
-  /**
-    *
-    */
-  @deprecated("Use FoBoPa.Toolkit.Init=FoBoPa.Toolkit.[Toolkit Object]",
-              "1.6.0")
-  object InitParam extends PaToolkit {
-    var ToolKit: PaToolkit = null
-  }
-
-  /**
-    * Enable usage of Pace version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
-    * @version 0.4.15
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   import net.liftmodules.{FoBoPa => FoBo}
-    *    :
-    *   FoBo.InitParam.ToolKit=FoBo.Pace0415
-    * }}}
-    */
-  @deprecated("Use FoBoPa.Toolkit.Init=FoBoPa.Toolkit.Pace0415", "1.6.0")
-  case object Pace0415 extends PaToolkit {
-    Toolkit.Pace0415
-  }
-
   /**
     * Object for initiating FoBo API packages.
     */

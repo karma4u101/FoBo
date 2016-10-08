@@ -164,41 +164,6 @@ package object FoBoGCP {
 
   }
 
-  /*=== InitParam (deprecated) ============================================*/
-
-  @deprecated(
-    "Init no longer nessesary as it is now automaticaly done for respective FoBoGCP.InitParam",
-    "1.6.0")
-  def init() {}
-
-  //@deprecated("","1.6.0")
-  abstract sealed trait FoBoToolkit
-
-  /**
-    *
-    */
-  @deprecated("Use FoBoGCP.Toolkit.Init=FoBoPa.Toolkit.[Toolkit Object]",
-              "1.6.0")
-  object InitParam extends FoBoToolkit {
-    var ToolKit: FoBoToolkit = null
-  }
-
-  /**
-    * Enable usage of Prettify version Jun2011 in your bootstrap liftweb Boot.
-    * @version Jun2011
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   FoBoGCP.InitParam.ToolKit=FoBoGCP.PrettifyJun2011
-    * }}}
-    */
-  @deprecated("Use FoBoGCP.Toolkit.Init=FoBoGCP.Toolkit.PrettifyJun2011",
-              "1.6.0")
-  case object PrettifyJun2011 extends FoBoToolkit {
-    Toolkit.PrettifyJun2011
-  }
-
   /**
     * Object for initiating FoBo API packages.
     */
