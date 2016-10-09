@@ -10,6 +10,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 
 **Latest Updates:**
 - **2016-10-08** -- [Issue #116](https://github.com/karma4u101/FoBo/issues/116) FoBo v2.0 -- Remove FoBoToolkit and FoBoJQuery deprecations 
+
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
 
 ## FoBo v2.0
