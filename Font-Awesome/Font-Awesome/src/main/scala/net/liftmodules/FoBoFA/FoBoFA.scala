@@ -1,9 +1,7 @@
 package net.liftmodules
 
-import _root_.net.liftweb._
-import util.{Props}
+import net.liftweb._
 import http._
-import common._
 
 /**
   * ==FoBo Font Awesome Toolkit Module==
@@ -35,7 +33,7 @@ package object FoBoFA {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Toolkit
+  sealed trait Toolkit
 
   /**
     * Initiate FoBo's Font Awesome Resource(s) in you bootstrap liftweb Boot.
@@ -48,7 +46,7 @@ package object FoBoFA {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Resource
+  sealed trait Resource
 
   /**
     * Initiate FoBo's Font Awesome API in you bootstrap liftweb Boot.
@@ -61,7 +59,7 @@ package object FoBoFA {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait API
+  sealed trait API
 
   /*=== Toolkit ============================================*/
 

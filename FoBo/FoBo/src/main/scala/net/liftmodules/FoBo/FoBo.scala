@@ -1,10 +1,5 @@
 package net.liftmodules
 
-import net.liftweb._
-import util.{Props}
-import http._
-import common._
-
 /**
   * ==Welcome to FoBo - A Modular Front-End Toolkit module for Lift==
   *
@@ -106,7 +101,7 @@ package object FoBo {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Toolkit
+  sealed trait Toolkit
 
   /**
     * Initiate the toolkit's associated resources in you bootstrap liftweb Boot.
@@ -121,7 +116,7 @@ package object FoBo {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Resource
+  sealed trait Resource
 
   /**
     * Initiate a toolkit's associated FoBo API in you bootstrap liftweb Boot.
@@ -136,7 +131,7 @@ package object FoBo {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait API
+  sealed trait API
 
   /*=== Toolkit ============================================*/
 
