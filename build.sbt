@@ -17,8 +17,8 @@ lazy val fobometa = (project in file("."))
   .settings(unidocSettings: _*)
   //.settings(scalafmtConfig in ThisBuild := Some(file(".scalafmt")))
   .settings(name := "fobo-meta")
-  .settings(scalaVersion in ThisBuild := "2.11.7")
-  .settings(liftVersion in ThisBuild <<= liftVersion ?? "3.0-RC4")
+  .settings(scalaVersion in ThisBuild := "2.12.1")
+  .settings(liftVersion in ThisBuild <<= liftVersion ?? "3.0.1")
   .settings(liftEdition in ThisBuild <<= liftVersion apply {
     _.substring(0, 3)
   })
@@ -212,13 +212,17 @@ libraryDependencies in ThisBuild <++= (scalaVersion, liftVersion) { (sv, lv) =>
       "org.specs2" %% "specs2" % "1.12.3" % "test"
     case ("2.10.4", _) => "org.specs2" %% "specs2" % "1.13"   % "test"
     case (_, "2.6.2")  => "org.specs2" %% "specs2" % "2.3.11" % "test"
-    case (_, _)        => "org.specs2" %% "specs2" % "3.7"    % "test"
+    case (_, "3.0.0")  => "org.specs2" %% "specs2" % "2.3.11" % "test"
+    case (_, _)        => "org.specs2" %% "specs2-core" % "3.8.6"    % "test"
+  }) ::
+  ((sv, lv) match {
+    case ("2.12.1", _) => "org.specs2" %% "specs2-matcher-extra" % "3.8.6"    % "test"
   }) ::
     ((sv, lv) match {
       case ("2.10.4", _) | ("2.9.2", _) | ("2.9.1", _) | ("2.9.1-1", _) =>
         "org.scalacheck" %% "scalacheck" % "1.10.0" % "test"
       case (_, "2.6.2") => "org.scalacheck" %% "scalacheck"        % "1.11.4" % "test"
-      case (_, _)       => "org.specs2"     %% "specs2-scalacheck" % "3.7"    % "test"
+      case (_, _)       => "org.specs2"     %% "specs2-scalacheck" % "3.8.6"    % "test"
     }) ::
       Nil
 }
