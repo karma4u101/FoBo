@@ -2,7 +2,7 @@ alias pub=publish-local-signed
 
 set version       in ThisBuild:="2.0-SNAPSHOT"
 
-set liftVersion   in ThisBuild:="3.0.1"
+set liftVersion   in ThisBuild:="3.1-SNAPSHOT"
 set scalaVersion  in ThisBuild:="2.12.1"
 
 project fobo
@@ -10,6 +10,16 @@ clean
 clean-files
 set parallelExecution in Test := false
 ; compile ; test ; pub
+
+set scalaVersion  in ThisBuild:="2.11.7"
+
+project fobo
+clean
+clean-files
+set parallelExecution in Test := false
+; compile ; test ; pub
+
+
 
 
 

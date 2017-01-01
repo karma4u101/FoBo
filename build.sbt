@@ -1,4 +1,5 @@
 import LiftModuleKeys._
+import sbt.project
 
 //##################################################################
 //##
@@ -19,7 +20,7 @@ lazy val fobometa = (project in file("."))
   //.settings(scalafmtConfig in ThisBuild := Some(file(".scalafmt")))
   .settings(name := "fobo-meta")
   .settings(scalaVersion in ThisBuild := "2.12.1")
-  .settings(liftVersion in ThisBuild <<= liftVersion ?? "3.0.1")
+  .settings(liftVersion in ThisBuild <<= liftVersion ?? "3.1-SNAPSHOT")
   .settings(liftEdition in ThisBuild <<= liftVersion apply {
     _.substring(0, 3)
   })
