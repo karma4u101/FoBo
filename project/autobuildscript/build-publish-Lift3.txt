@@ -11,7 +11,7 @@ clean-files
 set parallelExecution in Test := false
 ; compile ; test ; pub
 
-set scalaVersion  in ThisBuild:="2.11.4"
+set scalaVersion  in ThisBuild:="2.11.7"
 
 project fobo
 clean
