@@ -9,6 +9,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2015-12-30** -- FoBo Module v1.5.1
 
 **Latest Updates:**
+- **2017-01-07** -- [PR #124](https://github.com/karma4u101/FoBo/pull/124) FoBo v2.0 -- Adding UI Bootstrap v2.4.0
 - **2016-10-08** -- [Issue #116](https://github.com/karma4u101/FoBo/issues/116) FoBo v2.0 -- Remove FoBoToolkit and FoBoJQuery deprecations 
 
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
