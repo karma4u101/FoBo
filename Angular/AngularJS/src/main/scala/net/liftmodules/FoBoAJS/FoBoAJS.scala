@@ -268,6 +268,7 @@ package object FoBoAJS {
       * }}}
       *
       */
+    @deprecated("Use AJMaterial108 or later", "1.6.0")
     case object AJMaterial101 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AJMaterial101
@@ -286,6 +287,7 @@ package object FoBoAJS {
       * }}}
       *
       */
+    @deprecated("Use AJMaterial111 or later", "2.0.0")
     case object AJMaterial108 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AJMaterial108
@@ -309,23 +311,24 @@ package object FoBoAJS {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AJMaterial111
     }
-//     /**
-//     * Enable usage of FoBo's Angular Material API and resources version 1&#8228;1&#8228;0 in your bootstrap liftweb Boot.
-//     * @version 1.1.0
-//     *
-//     *  '''Example:'''
-//     *
-//     * {{{
-//     *   import net.liftmodules.{FoBoAJS => FoBo}
-//     *    :
-//     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial110
-//     * }}}
-//     *
-//     */
-//    case object AJMaterial110 extends Toolkit {
-//      FoBoAJSAPI.API.Angular1
-//      FoBoAJSRes.Resource.AJMaterial110
-//    }
+
+    /**
+      * Enable usage of FoBo's Angular API and AngularUI-Bootstrap resources version 2&#8228;4&#8228;0 in your bootstrap liftweb Boot.
+      * @version 2.4.0
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{FoBoAJS => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap240
+      * }}}
+      *
+      */
+    case object AJSUIBootstrap240 extends Toolkit {
+      FoBoAJSAPI.API.Angular1
+      FoBoAJSRes.Resource.AJSUIBootstrap240
+    }
 
     /**
       * Enable usage of FoBo's Angular API and AngularUI-Bootstrap resources version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.
@@ -358,6 +361,7 @@ package object FoBoAJS {
       * }}}
       *
       */
+    @deprecated("Use AJSUIBootstrap0100 or later", "2.0.0")
     case object AJSUIBootstrap070 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AJSUIBootstrap070
@@ -376,6 +380,7 @@ package object FoBoAJS {
       * }}}
       *
       */
+    @deprecated("Use AJSUIBootstrap0100 or later", "2.0.0")
     case object AJSUIBootstrap020 extends Toolkit {
       FoBoAJSAPI.API.Angular1
       FoBoAJSRes.Resource.AJSUIBootstrap020
@@ -633,6 +638,7 @@ package object FoBoAJS {
       * }}}
       *
       */
+    @deprecated("Use AJMaterial111 or later", "2.0.0")
     case object AJMaterial108 extends Resource {
       FoBoAJSRes.Resource.AJMaterial108
     }
@@ -652,6 +658,23 @@ package object FoBoAJS {
       */
     case object AJMaterial111 extends Resource {
       FoBoAJSRes.Resource.AJMaterial111
+    }
+
+    /**
+      * Enable usage of AngularUI-Bootstrap version 2&#8228;4&#8228;0 resource files in your bootstrap liftweb Boot.
+      * @version 2.4.0
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{FoBoAJS => FoBo}
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.AJSUIBootstrap240
+      * }}}
+      *
+      */
+    case object AJSUIBootstrap240 extends Resource {
+      FoBoAJSRes.Resource.AJSUIBootstrap240
     }
 
     /**
@@ -684,6 +707,7 @@ package object FoBoAJS {
       * }}}
       *
       */
+    @deprecated("Use AJSUIBootstrap0100 or later", "2.0.0")
     case object AJSUIBootstrap070 extends Resource {
       FoBoAJSRes.Resource.AJSUIBootstrap070
     }
@@ -701,6 +725,7 @@ package object FoBoAJS {
       * }}}
       *
       */
+    @deprecated("Use AJSUIBootstrap0100 or later", "2.0.0")
     case object AJSUIBootstrap020 extends Resource {
       FoBoAJSRes.Resource.AJSUIBootstrap020
     }

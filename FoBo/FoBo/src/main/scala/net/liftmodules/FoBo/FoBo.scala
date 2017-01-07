@@ -350,6 +350,7 @@ package object FoBo {
       * }}}
       *
       */
+    @deprecated("Use AJMaterial111 or later", "2.0.0")
     case object AJMaterial108 extends Toolkit {
       net.liftmodules.FoBoAJS.Toolkit.AJMaterial108
     }
@@ -370,6 +371,23 @@ package object FoBo {
       */
     case object AJMaterial111 extends Toolkit {
       net.liftmodules.FoBoAJS.Toolkit.AJMaterial111
+    }
+
+    /**
+      * Enable usage of FoBo's Angular API and AngularUI-Bootstrap resources version 2&#8228;4&#8228;0 in your bootstrap liftweb Boot.
+      * @version 2.4.0
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap240
+      * }}}
+      *
+      */
+    case object AJSUIBootstrap240 extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AJSUIBootstrap240
     }
 
     /**
@@ -402,6 +420,7 @@ package object FoBo {
       * }}}
       *
       */
+    @deprecated("Use AJSUIBootstrap0100 or later", "2.0.0")
     case object AJSUIBootstrap070 extends Toolkit {
       net.liftmodules.FoBoAJS.Toolkit.AJSUIBootstrap070
     }
@@ -419,6 +438,7 @@ package object FoBo {
       * }}}
       *
       */
+    @deprecated("Use AJSUIBootstrap0100 or later", "2.0.0")
     case object AJSUIBootstrap020 extends Toolkit {
       net.liftmodules.FoBoAJS.Toolkit.AJSUIBootstrap020
     }
@@ -1192,6 +1212,7 @@ package object FoBo {
       * }}}
       *
       */
+    @deprecated("Use AJMaterial111 or later", "2.0.0")
     case object AJMaterial108 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AJMaterial108
     }
@@ -1213,6 +1234,22 @@ package object FoBo {
       net.liftmodules.FoBoAJS.Resource.AJMaterial111
     }
 
+    /**
+      * Enable usage of AngularUI-Bootstrap version 2&#8228;4&#8228;0 resource files in your bootstrap liftweb Boot.
+      * @version 2.4.0
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.AJSUIBootstrap240
+      * }}}
+      *
+      */
+    case object AJSUIBootstrap240 extends Resource {
+      net.liftmodules.FoBoAJS.Resource.AJSUIBootstrap240
+    }
 
     /**
       * Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 resource files in your bootstrap liftweb Boot.
