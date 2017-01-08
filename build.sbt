@@ -17,7 +17,6 @@ lazy val commonSettings = Seq(
 lazy val fobometa = (project in file("."))
   .settings(commonSettings: _*)
   .settings(unidocSettings: _*)
-  //.settings(scalafmtConfig in ThisBuild := Some(file(".scalafmt")))
   .settings(name := "fobo-meta")
   .settings(scalaVersion in ThisBuild := "2.12.1")
   .settings(liftVersion in ThisBuild <<= liftVersion ?? "3.1-SNAPSHOT")
