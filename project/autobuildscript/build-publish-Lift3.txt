@@ -1,4 +1,4 @@
-alias pub=publish-local-signed
+alias pub=publish-signed
 
 set version       in ThisBuild:="2.0-SNAPSHOT"
 
@@ -34,3 +34,4 @@ clean
 clean-files
 set parallelExecution in Test := false
 ; compile ; test ; pub
+
