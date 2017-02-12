@@ -5,7 +5,6 @@ moduleName <<= (name, liftEdition) { (n, e) =>
 }
 
 libraryDependencies <++= (liftVersion, liftEdition) { (v, e) =>
-  //"net.liftmodules" %% ("lift-jquery-module" + "_" + e) % "2.11-SNAPSHOT" % "compile" ::
-    "net.liftmodules" %% ("lift-jquery-module" + "_" + e) % "2.10" % "compile" ::
+  "net.liftmodules" %% ("lift-jquery-module" + "_" + e) % "2.11-SNAPSHOT" % "compile" ::
     Nil
 }
