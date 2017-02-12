@@ -4,7 +4,7 @@ set version       in ThisBuild:="2.0-SNAPSHOT"
 
 set liftVersion   in ThisBuild:="2.6.2"
 
-set scalaVersion  in ThisBuild:="2.11.4"
+set scalaVersion  in ThisBuild:="2.11.7"
 
 project fobo
 set parallelExecution in Test := false
