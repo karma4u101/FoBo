@@ -993,6 +993,24 @@ package object FoBo {
       net.liftmodules.FoBoHL.Toolkit.HighlightJS930
     }
 
+    /*===Tether Toolkit===============================================================*/
+
+    /**
+      * Enable usage of FoBo's Tether API and resources version 1&#8228;4&#8228;0 in your bootstrap liftweb Boot.
+      * @version v1.4.0
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.Tether140
+      * }}}
+      */
+    case object Tether140 extends Toolkit {
+      net.liftmodules.FoBoTet.Toolkit.Tether140
+    }
+
   } //end Toolkit
 
   /*=== Resource ============================================*/
@@ -1847,6 +1865,24 @@ package object FoBo {
       net.liftmodules.FoBoHL.Resource.HighlightJS930
     }
 
+    /*===Tether Resource===============================================================*/
+
+    /**
+      * Enable usage of FoBo's Tether version 1&#8228;4&#8228;0 resource files in your bootstrap liftweb Boot.
+      * @version v1.4.0
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.Tether140
+      * }}}
+      */
+    case object Tether140 extends Resource {
+      net.liftmodules.FoBoTet.Resource.Tether140
+    }
+
   }
 
   /*=== API ============================================*/
@@ -1960,6 +1996,25 @@ package object FoBo {
       */
     case object FoBo1 extends API {
       net.liftmodules.FoBoAPI.API.FoBo1
+    }
+
+    /*===Tether API ==============================================================*/
+
+    /**
+      * Enable usage of FoBo's Tether API 1&#8228;x&#8228;x in your bootstrap liftweb Boot.
+      * @version 1.x.x
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.API.Init=FoBo.API.Tether1
+      * }}}
+      *
+      */
+    case object Tether1 extends API {
+      net.liftmodules.FoBoTetAPI.API.Tether1
     }
 
   }
