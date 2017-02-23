@@ -4,7 +4,7 @@
  jdk:
    - oraclejdk8
 
-script: travis_wait sbt ++$TRAVIS_SCALA_VERSION test
+script: travis_wait 20 sbt ++$TRAVIS_SCALA_VERSION test
 
 notifications:
   webhooks:
