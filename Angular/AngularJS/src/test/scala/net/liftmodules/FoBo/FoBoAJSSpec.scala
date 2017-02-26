@@ -346,34 +346,34 @@ class FoBoAJSSpec extends mutable.Specification {
   "With FoBoAJS.Toolkit.Init set to FoBoAJS.Toolkit.AJSUIBootstrap240 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {
       allowToolkitInit(FoBoAJS.Toolkit.AJSUIBootstrap240,
-        "fobo" :: "ui-bootstrap.js" :: Nil) must_== true
+                       "fobo" :: "ui-bootstrap.js" :: Nil) must_== true
     }
     "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/2.4.0/js/ui-bootstrap-2.4.0.min.js" in {
       rewriteToolkitInit(FoBoAJS.Toolkit.AJSUIBootstrap240,
-        "fobo" :: "ui-bootstrap.js" :: Nil) must_==
+                         "fobo" :: "ui-bootstrap.js" :: Nil) must_==
         List("fobo",
-          "angular-ui",
-          "bootstrap",
-          "2.4.0",
-          "js",
-          "ui-bootstrap-2.4.0.min.js")
+             "angular-ui",
+             "bootstrap",
+             "2.4.0",
+             "js",
+             "ui-bootstrap-2.4.0.min.js")
     }
   }
 
   "With FoBoAJS.Resource.Init set to FoBoAJS.Resource.AJSUIBootstrap240 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {
       allowResource(FoBoAJS.Resource.AJSUIBootstrap240,
-        "fobo" :: "ui-bootstrap.js" :: Nil) must_== true
+                    "fobo" :: "ui-bootstrap.js" :: Nil) must_== true
     }
     "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/2.4.0/js/ui-bootstrap-2.4.0.min.js" in {
       rewriteResource(FoBoAJS.Resource.AJSUIBootstrap240,
-        "fobo" :: "ui-bootstrap.js" :: Nil) must_==
+                      "fobo" :: "ui-bootstrap.js" :: Nil) must_==
         List("fobo",
-          "angular-ui",
-          "bootstrap",
-          "2.4.0",
-          "js",
-          "ui-bootstrap-2.4.0.min.js")
+             "angular-ui",
+             "bootstrap",
+             "2.4.0",
+             "js",
+             "ui-bootstrap-2.4.0.min.js")
     }
   }
 

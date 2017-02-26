@@ -151,7 +151,6 @@ object FoBoJQSpec extends Specification {
     }
   }
 
-
   //JQuery214
   "With FoBoJQ.Resource.Init set to FoBoJQ.Resource.JQuery214 the ResourceServer" should {
     "allow  fobo/jquery.js" in {
@@ -173,7 +172,6 @@ object FoBoJQSpec extends Specification {
         List("jquery", "2.1.4", "js", "jquery-min.js")
     }
   }
-
 
   //JQuery211
   "With FoBoJQ.Resource.Init set to FoBoJQ.Resource.JQuery211 the ResourceServer" should {
@@ -306,7 +304,6 @@ object FoBoJQSpec extends Specification {
         List("jquery", "1.7.2", "js", "jquery-min.js")
     }
   }
-
 
   //=== Toolkit.Init ==============//
   def allowToolkitInit(resource: FoBoJQ.Toolkit, path: List[String]) = {
