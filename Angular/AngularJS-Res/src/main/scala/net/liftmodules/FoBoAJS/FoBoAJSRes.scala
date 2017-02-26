@@ -37,7 +37,7 @@ package object FoBoAJSRes {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -18598,32 +18598,32 @@ package object FoBoAJSRes {
       ResourceServer.rewrite {
         case "fobo" :: "ui-bootstrap.js" :: Nil if Props.devMode =>
           List("fobo",
-            "angular-ui",
-            "bootstrap",
-            "2.4.0",
-            "js",
-            "ui-bootstrap-2.4.0.js")
+               "angular-ui",
+               "bootstrap",
+               "2.4.0",
+               "js",
+               "ui-bootstrap-2.4.0.js")
         case "fobo" :: "ui-bootstrap.js" :: Nil =>
           List("fobo",
-            "angular-ui",
-            "bootstrap",
-            "2.4.0",
-            "js",
-            "ui-bootstrap-2.4.0.min.js")
+               "angular-ui",
+               "bootstrap",
+               "2.4.0",
+               "js",
+               "ui-bootstrap-2.4.0.min.js")
         case "fobo" :: "ui-bootstrap-tpls.js" :: Nil if Props.devMode =>
           List("fobo",
-            "angular-ui",
-            "bootstrap",
-            "2.4.0",
-            "js",
-            "ui-bootstrap-tpls-2.4.0.js")
+               "angular-ui",
+               "bootstrap",
+               "2.4.0",
+               "js",
+               "ui-bootstrap-tpls-2.4.0.js")
         case "fobo" :: "ui-bootstrap-tpls.js" :: Nil =>
           List("fobo",
-            "angular-ui",
-            "bootstrap",
-            "2.4.0",
-            "js",
-            "ui-bootstrap-tpls-2.4.0.min.js")
+               "angular-ui",
+               "bootstrap",
+               "2.4.0",
+               "js",
+               "ui-bootstrap-tpls-2.4.0.min.js")
       }
     }
 

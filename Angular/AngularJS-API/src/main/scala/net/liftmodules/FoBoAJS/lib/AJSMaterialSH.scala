@@ -163,9 +163,12 @@ class AJSMaterialSH extends ScriptHelper {
   def mdToastWrapFEMsg(vi: List[FieldError],
                        position: String = "bottom left",
                        theme: String = ""): scala.xml.NodeSeq = {
-    val msg: scala.xml.NodeSeq = (vi.map { i =>
-      i.msg
-    }).lift(0).getOrElse(<span>Something whent wrong!</span>);
+    val msg: scala.xml.NodeSeq = (vi
+      .map { i =>
+        i.msg
+      })
+      .lift(0)
+      .getOrElse(<span>Something whent wrong!</span>);
     val initFunc =
       """showSimpleToast('%s','%s','%s');""".format(msg, position, theme)
     return <div ng-controller='LiftMsgToastCtrl' ng-init={initFunc}></div>

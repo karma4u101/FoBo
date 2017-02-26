@@ -36,7 +36,7 @@ package object FoBoTetRes {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -90,10 +90,19 @@ package object FoBoTetRes {
         case "fobo" :: "tether-theme-arrows.css" :: Nil =>
           List("fobo", "tether", "1.4.0", "css", "tether-theme-arrows.min.css")
 
-        case "fobo" :: "tether-theme-arrows-dark.css" :: Nil if Props.devMode =>
-          List("fobo", "tether", "1.4.0", "css", "tether-theme-arrows-dark.css")
+        case "fobo" :: "tether-theme-arrows-dark.css" :: Nil
+            if Props.devMode =>
+          List("fobo",
+               "tether",
+               "1.4.0",
+               "css",
+               "tether-theme-arrows-dark.css")
         case "fobo" :: "tether-theme-arrows-dark.css" :: Nil =>
-          List("fobo", "tether", "1.4.0", "css", "tether-theme-arrows-dark.min.css")
+          List("fobo",
+               "tether",
+               "1.4.0",
+               "css",
+               "tether-theme-arrows-dark.min.css")
 
         case "fobo" :: "tether-theme-basic.css" :: Nil if Props.devMode =>
           List("fobo", "tether", "1.4.0", "css", "tether-theme-basic.css")

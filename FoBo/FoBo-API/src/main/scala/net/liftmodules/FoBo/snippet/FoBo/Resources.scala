@@ -21,7 +21,7 @@ import Helpers._
 class Resources extends StatefulSnippet {
 
   def dispatch = {
-    case "injectJS"  => injectJS
+    case "injectJS" => injectJS
     case "injectCSS" => injectCSS
   }
 

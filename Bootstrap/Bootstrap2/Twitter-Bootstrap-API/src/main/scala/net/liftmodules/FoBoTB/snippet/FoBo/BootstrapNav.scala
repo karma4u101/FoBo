@@ -79,34 +79,36 @@ object BootstrapNav extends Logger {
         </li>
          */
         case li @ Elem(
-            liPrefix,
-            "li",
-            liAttribs,
-            liScope,
-            span @ Elem(spanPrefix,
-                        "span",
-                        spanAttribs,
-                        spanScope,
-                        spanChildren @ _ *),
-            ul @ Elem(ulPrefix, "ul", ulAttribs, ulScope, ulChildren @ _ *),
-            other @ _ *) => {
+              liPrefix,
+              "li",
+              liAttribs,
+              liScope,
+              span @ Elem(spanPrefix,
+                          "span",
+                          spanAttribs,
+                          spanScope,
+                          spanChildren @ _ *),
+              ul @ Elem(ulPrefix, "ul", ulAttribs, ulScope, ulChildren @ _ *),
+              other @ _ *) => {
 
           // create a new node seq with modified attributes
-          Elem(liPrefix,
-               "li",
-               newLiAttribs(liAttribs),
-               liScope,
-               Elem(spanPrefix,
-                    "a",
-                    newAAttribs(spanAttribs),
-                    spanScope,
-                    newAChildren(spanChildren): _*) ++
-                 Elem(ulPrefix,
-                      "ul",
-                      newUlAttribs(ulAttribs),
-                      ulScope,
-                      ulChildren: _*) ++
-                 other: _*)
+          Elem(
+            liPrefix,
+            "li",
+            newLiAttribs(liAttribs),
+            liScope,
+            Elem(spanPrefix,
+                 "a",
+                 newAAttribs(spanAttribs),
+                 spanScope,
+                 newAChildren(spanChildren): _*) ++
+              Elem(ulPrefix,
+                   "ul",
+                   newUlAttribs(ulAttribs),
+                   ulScope,
+                   ulChildren: _*) ++
+              other: _*
+          )
         }
 
         /* matches xml of the format:
@@ -137,30 +139,32 @@ object BootstrapNav extends Logger {
         </li>
          */
         case li @ Elem(
-            liPrefix,
-            "li",
-            liAttribs,
-            liScope,
-            a @ Elem(aPrefix, "a", aAttribs, aScope, aChildren @ _ *),
-            ul @ Elem(ulPrefix, "ul", ulAttribs, ulScope, ulChildren @ _ *),
-            other @ _ *) => {
+              liPrefix,
+              "li",
+              liAttribs,
+              liScope,
+              a @ Elem(aPrefix, "a", aAttribs, aScope, aChildren @ _ *),
+              ul @ Elem(ulPrefix, "ul", ulAttribs, ulScope, ulChildren @ _ *),
+              other @ _ *) => {
 
           // create a new node seq with modified attributes
-          Elem(liPrefix,
-               "li",
-               newLiAttribs(liAttribs),
-               liScope,
-               Elem(aPrefix,
-                    "a",
-                    newAAttribs(aAttribs),
-                    aScope,
-                    newAChildren(aChildren): _*) ++
-                 Elem(ulPrefix,
-                      "ul",
-                      newUlAttribs(ulAttribs),
-                      ulScope,
-                      ulChildren: _*) ++
-                 other: _*)
+          Elem(
+            liPrefix,
+            "li",
+            newLiAttribs(liAttribs),
+            liScope,
+            Elem(aPrefix,
+                 "a",
+                 newAAttribs(aAttribs),
+                 aScope,
+                 newAChildren(aChildren): _*) ++
+              Elem(ulPrefix,
+                   "ul",
+                   newUlAttribs(ulAttribs),
+                   ulScope,
+                   ulChildren: _*) ++
+              other: _*
+          )
         }
         case other @ _ => other
       }

@@ -243,27 +243,27 @@ object FoBoAJSResSpec extends Specification {
   "With FoBoAJSRes.Resource.Init set to FoBoAJSRes.Resource.AJSUIBootstrap240 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {
       allowResource(FoBoAJSRes.Resource.AJSUIBootstrap240,
-        "fobo" :: "ui-bootstrap.js" :: Nil) must_== true
+                    "fobo" :: "ui-bootstrap.js" :: Nil) must_== true
     }
     "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/2.4.0/js/ui-bootstrap-2.4.0.min.js" in {
       rewriteResource(FoBoAJSRes.Resource.AJSUIBootstrap240,
-        "fobo" :: "ui-bootstrap.js" :: Nil) must_==
+                      "fobo" :: "ui-bootstrap.js" :: Nil) must_==
         List("fobo",
-          "angular-ui",
-          "bootstrap",
-          "2.4.0",
-          "js",
-          "ui-bootstrap-2.4.0.min.js")
+             "angular-ui",
+             "bootstrap",
+             "2.4.0",
+             "js",
+             "ui-bootstrap-2.4.0.min.js")
     }
     "rewrit fobo/ui-bootstrap-tpls.js to fobo/angular-ui/bootstrap/2.4.0/js/ui-bootstrap-tpls-2.4.0.min.js" in {
       rewriteResource(FoBoAJSRes.Resource.AJSUIBootstrap240,
-        "fobo" :: "ui-bootstrap-tpls.js" :: Nil) must_==
+                      "fobo" :: "ui-bootstrap-tpls.js" :: Nil) must_==
         List("fobo",
-          "angular-ui",
-          "bootstrap",
-          "2.4.0",
-          "js",
-          "ui-bootstrap-tpls-2.4.0.min.js")
+             "angular-ui",
+             "bootstrap",
+             "2.4.0",
+             "js",
+             "ui-bootstrap-tpls-2.4.0.min.js")
     }
   }
 

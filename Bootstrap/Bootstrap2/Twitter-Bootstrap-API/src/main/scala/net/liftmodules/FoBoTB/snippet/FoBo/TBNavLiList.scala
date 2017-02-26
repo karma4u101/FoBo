@@ -57,7 +57,7 @@ trait TBNavLiList extends FlexMenuBuilder with DispatchSnippet {
         render
   }
 
-  override def expandAll  = true
+  override def expandAll = true
   override def linkToSelf = true
 
   override def renderOuterTag(inner: NodeSeq, top: Boolean): NodeSeq = inner
@@ -222,7 +222,7 @@ trait TBNavLiList extends FlexMenuBuilder with DispatchSnippet {
           case Full(f) => {
             buildWithInfo(f, renderInner, item)
           }
-          case Empty                  =>
+          case Empty =>
           case Failure(message, _, _) => ""
         }
         //info list has more elements

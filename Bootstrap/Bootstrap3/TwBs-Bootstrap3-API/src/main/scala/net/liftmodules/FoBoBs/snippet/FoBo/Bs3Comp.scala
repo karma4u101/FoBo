@@ -25,14 +25,14 @@ class Bs3Comp extends StatefulSnippet with Loggable {
   private lazy val sch = new sch()
 
   def dispatch = {
-    case "popover"                       => popover
-    case "popoverAppendJs"               => popoverAppendJs
-    case "popoverPreventDefault"         => popoverPreventDefault
+    case "popover" => popover
+    case "popoverAppendJs" => popoverAppendJs
+    case "popoverPreventDefault" => popoverPreventDefault
     case "popoverPreventDefaultAppendJs" => popoverPreventDefaultAppendJs
-    case "tooltip"                       => tooltip
-    case "tooltipAppendJs"               => tooltipAppendJs
-    case "activateDropdown"              => activateDropdown
-    case "activateDropdownAppendJs"      => activateDropdownAppendJs
+    case "tooltip" => tooltip
+    case "tooltipAppendJs" => tooltipAppendJs
+    case "activateDropdown" => activateDropdown
+    case "activateDropdownAppendJs" => activateDropdownAppendJs
 
   }
 
@@ -57,7 +57,7 @@ class Bs3Comp extends StatefulSnippet with Loggable {
     * }}}
     */
   def popover = {
-    var id      = S.attr("id") openOr "id: NOT DEFINED!?"
+    var id = S.attr("id") openOr "id: NOT DEFINED!?"
     var options = S.attr("options") openOr ""
     " *" #> JsCmds.Script(sch.popoverScript(id, options))
   }
@@ -81,7 +81,7 @@ class Bs3Comp extends StatefulSnippet with Loggable {
     * @since v1.4
     */
   def popoverAppendJs: CssSel = {
-    var id      = S.attr("id") openOr "id: NOT DEFINED!?"
+    var id = S.attr("id") openOr "id: NOT DEFINED!?"
     var options = S.attr("options") openOr ""
     S.appendJs(sch.popoverScript(id, options))
     " *" #> ""
@@ -115,7 +115,7 @@ class Bs3Comp extends StatefulSnippet with Loggable {
     * @see [[net.liftmodules.FoBoBs.lib.BootstrapSH.tooltipScript]]
     */
   def tooltip: CssSel = {
-    var id      = S.attr("id") openOr "id: NOT DEFINED!?"
+    var id = S.attr("id") openOr "id: NOT DEFINED!?"
     var options = S.attr("options") openOr ""
     " *" #> JsCmds.Script(sch.tooltipScript(id, options))
   }
@@ -144,7 +144,7 @@ class Bs3Comp extends StatefulSnippet with Loggable {
     * @since v1.4
     */
   def tooltipAppendJs: CssSel = {
-    var id      = S.attr("id") openOr "id: NOT DEFINED!?"
+    var id = S.attr("id") openOr "id: NOT DEFINED!?"
     var options = S.attr("options") openOr ""
     S.appendJs(sch.tooltipScript(id, options))
     " *" #> ""
@@ -263,8 +263,8 @@ class Bs3Comp extends StatefulSnippet with Loggable {
 
   private def onTest(on: String): String = on match {
     case "arelpop" => "a[rel=popover]"
-    case "a[rel"   => "a[rel=popover]"
-    case _         => on
+    case "a[rel" => "a[rel=popover]"
+    case _ => on
   }
 
 }
