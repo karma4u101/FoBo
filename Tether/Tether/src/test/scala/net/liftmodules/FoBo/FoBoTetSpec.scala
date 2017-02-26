@@ -15,12 +15,7 @@ object FoBoTetSpec extends Specification {
   //Tether140
   "With FoBoTet.Toolkit.Init set to FoBoTet.Toolkit.Tether140 the ResourceServer" should {
     "allow  fobo/tether.js" in {
-<<<<<<< HEAD
       allowToolkitInit(FoBoTet.Toolkit.Tether140, "fobo" :: "tether.js" :: Nil) must_== true
-=======
-      allowToolkitInit(FoBoTet.Toolkit.Tether140,
-                       "fobo" :: "tether.js" :: Nil) must_== true
->>>>>>> 3731f37... Adding the Tether toolkit library to fobo.
     }
     "rewrit fobo/tether.js to fobo/tether/1.4.0/js/tether.min.js" in {
       rewriteToolkitInit(FoBoTet.Toolkit.Tether140,
@@ -31,19 +26,10 @@ object FoBoTetSpec extends Specification {
 
   "With FoBoTet.Resource.Init set to FoBoTet.Resource.Tether140 the ResourceServer" should {
     "allow  fobo/tether.js" in {
-<<<<<<< HEAD
       allowResource(FoBoTet.Resource.Tether140, "fobo" :: "tether.js" :: Nil) must_== true
     }
     "rewrit fobo/tether.js to fobo/tether/1.4.0/js/tether.min.js" in {
       rewriteResource(FoBoTet.Resource.Tether140, "fobo" :: "tether.js" :: Nil) must_==
-=======
-      allowResource(FoBoTet.Resource.Tether140,
-                    "fobo" :: "tether.js" :: Nil) must_== true
-    }
-    "rewrit fobo/tether.js to fobo/tether/1.4.0/js/tether.min.js" in {
-      rewriteResource(FoBoTet.Resource.Tether140,
-                      "fobo" :: "tether.js" :: Nil) must_==
->>>>>>> 3731f37... Adding the Tether toolkit library to fobo.
         List("fobo", "tether", "1.4.0", "js", "tether.min.js")
     }
   }
