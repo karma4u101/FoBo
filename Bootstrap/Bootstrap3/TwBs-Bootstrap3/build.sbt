@@ -1,11 +1,9 @@
 moduleName := "fobo-twbs-bootstrap3"
 
-moduleName <<= (name, liftEdition) { (n, e) =>
-  n + "_" + e
-}
+moduleName := { name.value + "_" + liftEdition.value }
 
-libraryDependencies <++= (liftVersion, liftEdition, version) { (v, e, mv) =>
-  "net.liftmodules" %% ("fobo-twbs-bootstrap3-res" + "_" + e) % mv % "provided" ::
-    "net.liftmodules" %% ("fobo-twbs-bootstrap3-api" + "_" + e) % mv % "provided" ::
+libraryDependencies ++= {
+  "net.liftmodules" %% ("fobo-twbs-bootstrap3-res" + "_" + liftEdition.value) % version.value % "provided" ::
+    "net.liftmodules" %% ("fobo-twbs-bootstrap3-api" + "_" + liftEdition.value) % version.value % "provided" ::
       Nil
 }

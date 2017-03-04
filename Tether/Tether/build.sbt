@@ -1,10 +1,8 @@
 moduleName := "fobo-tether"
 
-moduleName <<= (name, liftEdition) { (n, e) =>
-  n + "_" + e
-}
+moduleName := { name.value + "_" + liftEdition.value }
 
-libraryDependencies <++= (liftVersion, liftEdition, version) { (v, e, mv) =>
-  "net.liftmodules" %% ("fobo-tether-res" + "_" + e) % mv % "provided" ::
+libraryDependencies ++= {
+  "net.liftmodules" %% ("fobo-tether-res" + "_" + liftEdition.value) % version.value % "provided" ::
     Nil
 }

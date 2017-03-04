@@ -1,10 +1,8 @@
 moduleName := "fobo-jquery-res"
 
-moduleName <<= (name, liftEdition) { (n, e) =>
-  n + "_" + e
-}
+moduleName := { name.value + "_" + liftEdition.value }
 
-libraryDependencies <++= (liftVersion, liftEdition) { (v, e) =>
-  "net.liftmodules" %% ("lift-jquery-module" + "_" + e) % "2.11-SNAPSHOT" % "compile" ::
+libraryDependencies ++= {
+  "net.liftmodules" %% ("lift-jquery-module" + "_" + liftEdition.value) % "2.11-SNAPSHOT" % "compile" ::
     Nil
 }
