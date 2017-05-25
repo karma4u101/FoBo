@@ -10,11 +10,11 @@ import net.liftweb.util.Helpers._
 object ResourceSpecs extends Specification {
   val session = new LiftSession("", randomString(20), Empty)
 
-  "Using split and trim on a comma sepparated (resource) string to transform it to a distinct List " should {
-    "remove duplicates and perserve the order of the items" in {
+  "Using split and trim on a comma separated (resource) string to transform it to a distinct List " should {
+    "remove duplicates and preserve the order of the items" in {
       import scala.collection._
       val expected: List[String] = List("a", "b", "c", "d", "e", "f", "g", "h")
-      val testdata = List("a,a,b,c,d,e,f,g,h") //width duplicates
+      val testdata               = List("a,a,b,c,d,e,f,g,h") //width duplicates
       val out: List[String] = testdata.flatMap(
         x =>
           x.split(",")

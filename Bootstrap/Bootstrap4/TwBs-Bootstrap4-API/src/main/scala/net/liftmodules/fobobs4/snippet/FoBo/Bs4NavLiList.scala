@@ -1,4 +1,4 @@
-package net.liftmodules.FoBoBs4.snippet.FoBo
+package net.liftmodules.fobobs4.snippet.FoBo
 
 import net.liftweb._
 import http._
@@ -57,7 +57,7 @@ trait Bs4NavLiList extends FlexMenuBuilder with DispatchSnippet {
         render
   }
 
-  override def expandAll = true
+  override def expandAll  = true
   override def linkToSelf = true
 
   override def renderOuterTag(inner: NodeSeq, top: Boolean): NodeSeq = inner
@@ -139,9 +139,7 @@ trait Bs4NavLiList extends FlexMenuBuilder with DispatchSnippet {
       updateForPath(<li class="nav-header">{ contents }</li>, path),
       current)
 
-  def buildTBDivider(contents: NodeSeq,
-                     path: Boolean,
-                     current: Boolean): Elem =
+  def buildTBDivider(contents: NodeSeq, path: Boolean, current: Boolean): Elem =
     updateForCurrent(updateForPath(<li class="divider"></li>, path), current)
 
   override def renderSelf(item: MenuItem): NodeSeq = <span>{item.text}</span>
@@ -223,7 +221,7 @@ trait Bs4NavLiList extends FlexMenuBuilder with DispatchSnippet {
           case Full(f) => {
             buildWithInfo(f, renderInner, item)
           }
-          case Empty =>
+          case Empty                  =>
           case Failure(message, _, _) => ""
         }
         //info list has more elements

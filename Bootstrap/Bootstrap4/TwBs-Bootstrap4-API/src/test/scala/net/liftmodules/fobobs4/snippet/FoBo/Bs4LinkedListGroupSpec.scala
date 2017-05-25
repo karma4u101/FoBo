@@ -1,4 +1,4 @@
-package net.liftmodules.FoBoBs4.snippet.FoBo
+package net.liftmodules.fobobs4.snippet.FoBo
 
 import net.liftweb.http.{S, LiftRules}
 import net.liftweb.common.{Full, Empty}
@@ -53,7 +53,8 @@ object Bs4LinkedListGroupSpec
     "Respect the LocGroup 'lg1' attribute" withSFor (testUrl1) in {
       val attrs = collection.immutable.HashMap("group" -> "lg1")
       object Bs4LinkedListGroup extends Bs4LinkedListGroup
-      val linkToSelf = <a class="list-group-item list-group-item-action" href="/index">Home</a>
+      val linkToSelf =
+        <a class="list-group-item list-group-item-action" href="/index">Home</a>
                        <a class="list-group-item active" href="/page1">Page1</a>
                        <a class="list-group-item list-group-item-action" href="/page2">Page2</a>
                        <a class="list-group-item list-group-item-action" href="/page3">Page3</a>;
@@ -67,7 +68,8 @@ object Bs4LinkedListGroupSpec
       val attrs = collection.immutable.HashMap("group" -> "lg1")
       object Bs4LinkedListGroup extends Bs4LinkedListGroup
 
-      val linkToSelf = <a class="list-group-item list-group-item-action" href="/index">Home</a>
+      val linkToSelf =
+        <a class="list-group-item list-group-item-action" href="/index">Home</a>
                        <a class="list-group-item active" href="/page1">Page1</a>
                        <a class="list-group-item list-group-item-action" href="/page2">Page2</a>
                        <a class="list-group-item list-group-item-action" href="/page3">Page3</a>;
@@ -87,7 +89,7 @@ object Bs4LinkedListGroupSpec
   */
 object Bs4LinkedListGroupSpecBoot {
   def boot() {
-    val home = Menu.i("Home") / "index"
+    val home  = Menu.i("Home") / "index"
     val page1 = Menu.i("Page1") / "page1"
     val page2 = Menu.i("Page2") / "page2"
     val page3 = Menu.i("Page3") / "page3"

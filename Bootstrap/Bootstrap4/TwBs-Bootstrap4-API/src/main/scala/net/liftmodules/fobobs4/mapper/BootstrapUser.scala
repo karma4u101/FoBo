@@ -1,12 +1,11 @@
-package net.liftmodules.FoBoBs4.mapper
+package net.liftmodules.fobobs4.mapper
 
 import net.liftweb.http._
 import net.liftweb.common._
 import net.liftweb.proto.{ProtoUser => GenProtoUser}
-import scala.xml.{NodeSeq, Node, Text, Elem, Attribute, Null}
+import scala.xml.NodeSeq
 import net.liftweb.mapper._
 import net.liftweb.sitemap._
-import net.liftweb.sitemap.Loc._
 import net.liftweb.util._
 import net.liftweb.util.Helpers._
 import net.liftweb.util.Mailer._
@@ -494,8 +493,7 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]]
     * override lift's corresponding key value. If the key is present but the value is empty it will render empty.
     */
   def resChangePasswordSubmitChange: NodeSeq =
-    S.loc("fobo.ProtoUser.ChangePassword.submit",
-          scala.xml.Text(S.?("change")))
+    S.loc("fobo.ProtoUser.ChangePassword.submit", scala.xml.Text(S.?("change")))
 
   override def login = {
     if (S.post_?) {
@@ -565,8 +563,8 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]]
       case Full(user) if user.validated_? =>
         user.resetUniqueId().save
         val resetLink = S.hostAndPath +
-            passwordResetPath.mkString("/", "/", "/") + urlEncode(
-            user.getUniqueId())
+          passwordResetPath.mkString("/", "/", "/") + urlEncode(
+          user.getUniqueId())
 
         val email: String = user.getEmail
 
@@ -574,7 +572,7 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]]
                         Subject(passwordResetEmailSubject),
                         (To(user.getEmail) ::
                           generateResetEmailBodies(user, resetLink) :::
-                            (bccEmail.toList.map(BCC(_)))): _*)
+                          (bccEmail.toList.map(BCC(_)))): _*)
 
         S.notice(S.?("password.reset.email.sent"))
         S.redirectTo(homePage)
@@ -596,7 +594,7 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]]
     */
   override def sendValidationEmail(user: TheUserType) {
     val resetLink = S.hostAndPath + "/" + validateUserPath.mkString("/") +
-        "/" + urlEncode(user.getUniqueId())
+      "/" + urlEncode(user.getUniqueId())
 
     val email: String = user.getEmail
 
@@ -606,7 +604,7 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]]
                     Subject(signupMailSubject),
                     (To(user.getEmail) ::
                       generateValidationEmailBodies(user, resetLink) :::
-                        (bccEmail.toList.map(BCC(_)))): _*)
+                      (bccEmail.toList.map(BCC(_)))): _*)
   }
 
 //    /**
@@ -641,7 +639,7 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]]
                                    fields: List[FieldPointerType]): NodeSeq = {
     for {
       pointer <- fields
-      field <- computeFieldFromPointer(user, pointer).toList
+      field   <- computeFieldFromPointer(user, pointer).toList
       if field.show_? && (!ignorePassword || !pointer.isPasswordField_?)
       form <- field.toForm.toList
     } yield {
@@ -678,10 +676,10 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]]
   protected def extractLocalFormPasswordField(
       form: NodeSeq,
       field: BaseField): (NodeSeq, NodeSeq) = {
-    val pwInputElems = form \ "input"
+    val pwInputElems           = form \ "input"
     val bindAttrToPwInputElems = "input [class]" #> "form-control"
-    val bsPwInputElems = bindAttrToPwInputElems(pwInputElems)
-    val pw1 = bsPwInputElems.head
+    val bsPwInputElems         = bindAttrToPwInputElems(pwInputElems)
+    val pw1                    = bsPwInputElems.head
     val bindAttrToPw1 =
       "input [placeholder]" #> resSignUpPlaceholderPassword &
         "input [value]" #> ""
@@ -695,8 +693,8 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]]
   }
 
   override def signup = {
-    val theUser: TheUserType = mutateUserOnSignup(createNewUserInstance())
-    val theName = signUpPath.mkString("")
+    val theUser: TheUserType            = mutateUserOnSignup(createNewUserInstance())
+    val theName                         = signUpPath.mkString("")
     val submitAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "btn btn-default")
 
     def testSignup() {
@@ -738,7 +736,7 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]]
   override def edit = {
     val theUser: TheUserType = mutateUserOnEdit(
       currentUser.openOrThrowException("we know we're logged in"))
-    val theName = editPath.mkString("")
+    val theName                         = editPath.mkString("")
     val submitAttr: Seq[SHtml.ElemAttr] = Seq("class" -> "btn btn-default")
 
     def testEdit() {
@@ -812,7 +810,7 @@ trait BootstrapMegaMetaProtoUser[ModelType <: MegaProtoUser[ModelType]]
   override def changePassword = {
     val user = currentUser.openOrThrowException(
       "we can do this because the logged in test has happened")
-    var oldPassword = ""
+    var oldPassword               = ""
     var newPassword: List[String] = Nil
 
     def testAndSet() {

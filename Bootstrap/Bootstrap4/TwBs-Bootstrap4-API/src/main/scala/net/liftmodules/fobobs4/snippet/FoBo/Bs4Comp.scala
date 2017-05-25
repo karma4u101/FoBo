@@ -1,4 +1,4 @@
-package net.liftmodules.FoBoBs4.snippet.FoBo
+package net.liftmodules.fobobs4.snippet.FoBo
 
 import scala.xml.{NodeSeq, Text}
 import net.liftweb.util._
@@ -8,7 +8,7 @@ import net.liftweb._
 import Helpers._
 import net.liftweb.http.js._
 import net.liftweb.http.js.JsCmds._
-import net.liftmodules.FoBoBs4.lib.{BootstrapSH => sch}
+import net.liftmodules.fobobs4.lib.{BootstrapSH => sch}
 
 /**
   * ==Bs4Component's Snippet Bootstrap v4.x==
@@ -18,22 +18,21 @@ import net.liftmodules.FoBoBs4.lib.{BootstrapSH => sch}
   * '''Example''' Invoke with
   * {{{ data-lift="FoBo.Bs4Comp.functionName?paramName=paramValue&...." }}}
   * For more examples see the individual transform functions.
-  * @since v1.1
+  * @since v2.0
   */
 class Bs4Comp extends StatefulSnippet with Loggable {
 
   private lazy val sch = new sch()
 
   def dispatch = {
-    case "popover" => popover
-    case "popoverAppendJs" => popoverAppendJs
-    case "popoverPreventDefault" => popoverPreventDefault
+    case "popover"                       => popover
+    case "popoverAppendJs"               => popoverAppendJs
+    case "popoverPreventDefault"         => popoverPreventDefault
     case "popoverPreventDefaultAppendJs" => popoverPreventDefaultAppendJs
-    case "tooltip" => tooltip
-    case "tooltipAppendJs" => tooltipAppendJs
-    case "activateDropdown" => activateDropdown
-    case "activateDropdownAppendJs" => activateDropdownAppendJs
-
+    case "tooltip"                       => tooltip
+    case "tooltipAppendJs"               => tooltipAppendJs
+    case "activateDropdown"              => activateDropdown
+    case "activateDropdownAppendJs"      => activateDropdownAppendJs
   }
 
   /**
@@ -55,9 +54,10 @@ class Bs4Comp extends StatefulSnippet with Loggable {
     *     // ]]>
     *   </script>
     * }}}
+    * @since v2.0
     */
   def popover = {
-    var id = S.attr("id") openOr "id: NOT DEFINED!?"
+    var id      = S.attr("id") openOr "id: NOT DEFINED!?"
     var options = S.attr("options") openOr ""
     " *" #> JsCmds.Script(sch.popoverScript(id, options))
   }
@@ -78,10 +78,10 @@ class Bs4Comp extends StatefulSnippet with Loggable {
     * {{{
     *       $(function () { $('#theId').popover({placement:'left'}); }); ;
     * }}}
-    * @since v1.4
+    * @since v2.0
     */
   def popoverAppendJs: CssSel = {
-    var id = S.attr("id") openOr "id: NOT DEFINED!?"
+    var id      = S.attr("id") openOr "id: NOT DEFINED!?"
     var options = S.attr("options") openOr ""
     S.appendJs(sch.popoverScript(id, options))
     " *" #> ""
@@ -113,9 +113,10 @@ class Bs4Comp extends StatefulSnippet with Loggable {
     *   </script>
     * }}}
     * @see [[net.liftmodules.FoBoBs.lib.BootstrapSH.tooltipScript]]
+    * @since v2.0
     */
   def tooltip: CssSel = {
-    var id = S.attr("id") openOr "id: NOT DEFINED!?"
+    var id      = S.attr("id") openOr "id: NOT DEFINED!?"
     var options = S.attr("options") openOr ""
     " *" #> JsCmds.Script(sch.tooltipScript(id, options))
   }
@@ -141,10 +142,10 @@ class Bs4Comp extends StatefulSnippet with Loggable {
     * {{{
     *       $(function () { $('#aId').tooltip({placement:'bottom'}); });
     * }}}
-    * @since v1.4
+    * @since v2.0
     */
   def tooltipAppendJs: CssSel = {
-    var id = S.attr("id") openOr "id: NOT DEFINED!?"
+    var id      = S.attr("id") openOr "id: NOT DEFINED!?"
     var options = S.attr("options") openOr ""
     S.appendJs(sch.tooltipScript(id, options))
     " *" #> ""
@@ -168,6 +169,7 @@ class Bs4Comp extends StatefulSnippet with Loggable {
     *     // ]]>
     *   </script>
     * }}}
+    * @since v2.0
     */
   def popoverPreventDefault = {
     var on = onTest(S.attr("on") openOr "a[rel=popover]")
@@ -189,7 +191,7 @@ class Bs4Comp extends StatefulSnippet with Loggable {
     * {{{
     *       $(function(){$('#theId').popover().click(function(e){e.preventDefault()});});;
     * }}}
-    * @since v1.4
+    * @since v2.0
     */
   def popoverPreventDefaultAppendJs: CssSel = {
     var on = onTest(S.attr("on") openOr "a[rel=popover]")
@@ -224,7 +226,7 @@ class Bs4Comp extends StatefulSnippet with Loggable {
     *  </script>
     *  <script type="text/javascript">//registerLoadEventFactory script ...</script>
     * }}}
-    *
+    * @since v2.0
     */
   def activateDropdown = {
     var on = S.attr("on") openOr "on: ELEMENT CLASS or ID NOT DEFINED!?"
@@ -253,7 +255,7 @@ class Bs4Comp extends StatefulSnippet with Loggable {
     * {{{
     *      addLoadEvent(function() { $('.dropdown-toggle').dropdown(); });;
     * }}}
-    * @since v1.4
+    * @since v2.0
     */
   def activateDropdownAppendJs = {
     var on = S.attr("on") openOr "on: ELEMENT CLASS or ID NOT DEFINED!?"
@@ -263,8 +265,8 @@ class Bs4Comp extends StatefulSnippet with Loggable {
 
   private def onTest(on: String): String = on match {
     case "arelpop" => "a[rel=popover]"
-    case "a[rel" => "a[rel=popover]"
-    case _ => on
+    case "a[rel"   => "a[rel=popover]"
+    case _         => on
   }
 
 }

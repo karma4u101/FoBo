@@ -1,4 +1,4 @@
-package net.liftmodules.FoBoBs4.lib
+package net.liftmodules.fobobs4.lib
 
 import _root_.net.liftweb._
 import util.{Props}
