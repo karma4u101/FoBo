@@ -1,4 +1,4 @@
-package net.liftmodules.FoBoBs4.snippet.FoBo
+package net.liftmodules.fobobs4.snippet.FoBo
 
 import scala.xml.{NodeSeq, Text}
 import net.liftweb.util._
@@ -8,7 +8,7 @@ import net.liftweb._
 import Helpers._
 import net.liftweb.http.js._
 import net.liftweb.http.js.JsCmds._
-import net.liftmodules.FoBoBs4.lib.{ScriptHelper => sch}
+import net.liftmodules.fobobs4.lib.{ScriptHelper => sch}
 
 /**
   * ==Script Helper Snippet Bootstrap v4.x==

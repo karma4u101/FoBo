@@ -1,9 +1,8 @@
 package net.liftmodules
 
 import _root_.net.liftweb._
-import util.{Props}
+import util.Props
 import http._
-import common._
 
 /**
   * ==FoBo Bootstrap 4 Resource Module==
@@ -11,25 +10,25 @@ import common._
   * This resource module provides Bootstrap resource components to the FoBo Bootstrap 4 Toolkit module,
   * but can also be used as-is, see below for setup information.
   *
-  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information.
+  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.fobo]] for setup information.
   *
   */
-package object FoBoBs4Res {
+package object fobobs4res {
 
-  override def toString() = FoBoBs4Res.Resource.toString()
+  override def toString() = fobobs4res.Resource.toString()
 
   /**
     * Initiate FoBo's Bootstrap 4 Resource(s) in you bootstrap liftweb Boot.
     *
     *  '''Example:'''
     * {{{
-    *   import net.liftmodules.{FoBoBs4Res => FoBo}
+    *   import net.liftmodules.{fobobs4res => fobo}
     *    :
-    *   FoBo.Resource.Init=FoBo.Resource.[Resource Object]
+    *   fobo.Resource.init=fobo.Resource.[Resource Object]
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Resource
+  sealed trait Resource
 
   object Resource extends Resource {
 
@@ -37,12 +36,12 @@ package object FoBoBs4Res {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def Init: Store = store
-    def Init_=(t: Resource): Store = {
+    def init: Store          = store
+    def init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
     }
-    override def toString() = "FoBoBs4Res.Resource = " + store.toString()
+    override def toString() = "fobobs4res.Resource = " + store.toString()
 
     /**
       * Enable usage of FoBo's Bootstrap version 4&#8228;0&#8228;0 resources files in your bootstrap liftweb Boot.
@@ -51,9 +50,9 @@ package object FoBoBs4Res {
       *  '''Example:'''
       *
       * {{{
-      *   import net.liftmodules.{FoBoBs4Res => FoBo}
+      *   import net.liftmodules.{fobobs4res => fobo}
       *    :
-      *   FoBo.Resource.Init=FoBo.Resource.Bootstrap400
+      *   fobo.Resource.init=fobo.Resource.Bootstrap400
       * }}}
       * @since v2.0
       */
@@ -105,10 +104,10 @@ package object FoBoBs4Res {
           List("fobo", "bootstrap", "4.0.0", "css", "bootstrap-reboot.css.map")
         case "fobo" :: "bootstrap-reboot.css.map" :: Nil =>
           List("fobo",
-            "bootstrap",
-            "4.0.0",
-            "css",
-            "bootstrap-reboot.min.css.map")
+               "bootstrap",
+               "4.0.0",
+               "css",
+               "bootstrap-reboot.min.css.map")
         case "fobo" :: "bootstrap.js" :: Nil if Props.devMode =>
           List("fobo", "bootstrap", "4.0.0", "js", "bootstrap.js")
         case "fobo" :: "bootstrap.js" :: Nil =>

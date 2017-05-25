@@ -18,7 +18,7 @@ package net.liftmodules
   * Usage benefits:
   *  - Due to uniform declaration and integration points across toolkit versions only a small amount of changes
   *    is needed for a up/down-grading of a used Toolkit/resource, optimally, if the toolkit has no breaking changes
-  *    it will just be a version change of the FoBo.Initparam in Lift bootstrap.liftweb.Boot.
+  *    it will just be a version change of the init param in Lift bootstrap.liftweb.Boot.
   *  - The module provides debug-able js and css files in development and minimized files otherwise.
   *  - FoBo is simultaneously supporting several versions of each toolkit which makes development, maintenance,
   *    upgrade and fall-back quick and easy.
@@ -35,7 +35,8 @@ package net.liftmodules
   *
   *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.3, v.2.1.1, v.2.1.4, v2.2.4, v3.0.0, v3.1.0] [[net.liftmodules.fobojq]]
   *  - JQueryMigrate [v1.2.1, v1.4.1, v3.0.0] [[net.liftmodules.fobojq]]
-  *  - Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.7] [[net.liftmodules.fobobs]]
+  *  - Bootstrap v4.x series [v4.0.0] [[net.liftmodules.fobobs4]]
+  *  - Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6, v3.3.7] [[net.liftmodules.fobobs]]
   *  - Bootstrap v2.x series [v2.3.2] [[net.liftmodules.fobotb]]
   *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.6.3, v4.7.0] [[net.liftmodules.fobofa]]
   *  - Google Code Prettify [vJun2011] [[net.liftmodules.fobogcp]]
@@ -64,7 +65,7 @@ package net.liftmodules
   * your projects Lift bootstrap.liftweb.Boot boot method. Here the FoBo ToolkitObjectNameXYZ
   * represent one of FoBo's available FoBo Toolkit objects.
   * {{{
-  *    import net.liftmodules.FoBo
+  *    import net.liftmodules.fobo
   *     :
   *     :
   *    fobo.Toolkit.init=fobo.Toolkit.JQueryXYZ  //the fobo jquery module, version xyz
@@ -139,7 +140,7 @@ package object fobo {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Toolkit]
     private var store: Store = List()
-    def init: Store = store
+    def init: Store          = store
     def init_=(t: Toolkit): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -855,14 +856,14 @@ package object fobo {
       *  '''Example:'''
       *
       * {{{
-      *   import net.liftmodules.FoBo
+      *   import net.liftmodules.fobo
       *    :
-      *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap400
+      *   fobo.Toolkit.init=fobo.Toolkit.Bootstrap400
       * }}}
       * @since v2.0
       */
     case object Bootstrap400 extends Toolkit {
-      net.liftmodules.FoBoBs4.Toolkit.Bootstrap400
+      net.liftmodules.fobobs4.Toolkit.Bootstrap400
     }
 
     /*===Bootstrap3 Toolkit===============================================================*/
@@ -1019,7 +1020,7 @@ package object fobo {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def init: Store = store
+    def init: Store          = store
     def init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -1726,14 +1727,14 @@ package object fobo {
       *  '''Example:'''
       *
       * {{{
-      *   import net.liftmodules.FoBo
+      *   import net.liftmodules.fobo
       *    :
-      *   FoBo.Resource.Init=FoBo.Resource.Bootstrap400
+      *   fobo.Resource.init=fobo.Resource.Bootstrap400
       * }}}
       * @since v2.0
       */
     case object Bootstrap400 extends Resource {
-      net.liftmodules.FoBoBs4.Resource.Bootstrap400
+      net.liftmodules.fobobs4.Resource.Bootstrap400
     }
 
     /*===Bootstrap3 Resource===============================================================*/
@@ -1890,7 +1891,7 @@ package object fobo {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
-    def init: Store = store
+    def init: Store          = store
     def init_=(t: API): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -1924,14 +1925,14 @@ package object fobo {
       *  '''Example:'''
       *
       * {{{
-      *   import net.liftmodules.FoBo
+      *   import net.liftmodules.fobo
       *    :
-      *   FoBo.API.Init=FoBo.API.Bootstrap4
+      *   fobo.API.init=fobo.API.Bootstrap4
       * }}}
       *
       */
     case object Bootstrap4 extends API {
-      net.liftmodules.FoBoBs4.API.Bootstrap4
+      net.liftmodules.fobobs4.API.Bootstrap4
     }
 
     /**

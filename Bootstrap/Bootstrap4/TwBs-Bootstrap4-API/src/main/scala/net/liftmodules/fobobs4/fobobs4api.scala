@@ -1,7 +1,6 @@
 package net.liftmodules
 
 import _root_.net.liftweb._
-import util.{Props}
 import http._
 import common._
 
@@ -11,25 +10,25 @@ import common._
   * This FoBo API module provides FoBo/Lift API components for the Bootstrap v4.x Toolkit Module,
   * but can also be used as-is, see below for setup information.
   *
-  * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.FoBo]] for setup information.
+  * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.fobo]] for setup information.
   *
   */
-package object FoBoBs4API {
+package object fobobs4api {
 
-  override def toString() = FoBoBs4API.API.toString()
+  override def toString() = fobobs4api.API.toString()
 
   /**
     * Initiate FoBo's Bootstrap 4 API in you bootstrap liftweb Boot.
     *
     *  '''Example:'''
     * {{{
-    *   import net.liftmodules.{FoBoBs4API => FoBo}
+    *   import net.liftmodules.{fobobs4api => fobo}
     *    :
-    *   FoBo.API.Init=FoBo.API.[API Object]
+    *   fobo.API.init=fobo.API.[API Object]
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait API
+  sealed trait API
 
   object API extends API {
 
@@ -37,12 +36,12 @@ package object FoBoBs4API {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
-    def Init: Store = store
-    def Init_=(t: API): Store = {
+    def init: Store          = store
+    def init_=(t: API): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
     }
-    override def toString() = "FoBoBs4API.API = " + store.toString()
+    override def toString() = "fobobs4api.API = " + store.toString()
 
     /**
       * Enable usage of FoBo's Angular API for Bootstrap version 4&#8228;X&#8228;X in your bootstrap liftweb Boot.
@@ -51,9 +50,9 @@ package object FoBoBs4API {
       *  '''Example:'''
       *
       * {{{
-      *   import net.liftmodules.{FoBoBs4API => FoBo}
+      *   import net.liftmodules.{fobobs4api => fobo}
       *    :
-      *   FoBo.API.Init=FoBo.API.Bootstrap4
+      *   fobo.API.init=fobo.API.Bootstrap4
       * }}}
       *
       */
@@ -65,7 +64,7 @@ package object FoBoBs4API {
 
   private object FoBoAPI {
     lazy val init: Unit = {
-      LiftRules.addToPackages("net.liftmodules.FoBoBs4")
+      LiftRules.addToPackages("net.liftmodules.fobobs4")
     }
   }
 
@@ -73,7 +72,7 @@ package object FoBoBs4API {
     * Extends your Lift SiteMap with various common bootstrap menu manipulations such
     * as horizontal and vertical menu dividers and menu labels (labels coming soon).
     *
-    * This object should be used in conjunction with the TB* menu builder objects in [[net.liftmodules.FoBo.snippet.FoBo]] snippet's.
+    * This object should be used in conjunction with the TB* menu builder objects in [[net.liftmodules.fobo.snippet.FoBo]] snippet's.
     *
     * '''Example:'''
     * {{{

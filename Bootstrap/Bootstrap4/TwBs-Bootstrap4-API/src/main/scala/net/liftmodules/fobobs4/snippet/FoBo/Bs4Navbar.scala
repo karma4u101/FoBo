@@ -1,4 +1,4 @@
-package net.liftmodules.FoBoBs4.snippet.FoBo
+package net.liftmodules.fobobs4.snippet.FoBo
 
 import net.liftweb._
 import http._
@@ -36,24 +36,23 @@ import xml._
   * Lift menu locGroup content where the second list will be pull to the right.
   *
   * '''Example - Fluid Navbar fixed to top''' Invoke with something like this
-  * {{{<d i v class="navbar navbar-fixed-top">
-  *   <d i v class="navbar-inner">
-  *	   <d i v class="container-fluid">
-  *	     <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-collapse">
-  *         <span class="icon-bar"></span>
-  *         <span class="icon-bar"></span>
-  *         <span class="icon-bar"></span>
-  *	     </a> <a class="brand" href="...">Project</a>
-  *	     <d i v class="navbar-collapse">
-  *         <span data-lift="FoBo.Bs4Navbar.builder?group=top"></span>
-  *         <span data-lift="FoBo.Bs4Navbar.builderPullRight?group=top2"></span>
-  *	     </d i v>
-  *	   </d i v>
-  *   </d i v>
-  * </d i v>}}}
+  * {{{<nav class="navbar navbar-toggleable-md fixed-top navbar-inverse">
+  *      <d i v class="container">
+  *        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+  *            <i class="fa fa-bars" aria-hidden="true"></i>
+  *        </button>
+  *        <a class="navbar-brand alt" href="#">
+  *            app
+  *        </a>
+  *        <d i v class="collapse navbar-collapse navbar-ex1-collapse" id="navbarCollapse">
+  *            <span data-lift="FoBo.Bs4Navbar.builder?group=top"></span>
+  *            <span data-lift="FoBo.Bs4Navbar.builderPullRight?group=topRight"></span>
+  *        </d i v>
+  *    </d i v>
+  * </nav>}}}
   *
   * '''Result:''' This will create a fluid bootstrap navbar fixed to top with menu entries associated with the
-  * two LocGroup's 'top' and 'top2' where the second one is pulled to the right.
+  * two LocGroup's 'top' and 'topRight' where the second one is pulled to the right.
   * @since v2.0
   */
 trait Bs4Navbar extends FlexMenuBuilder with DispatchSnippet {
@@ -85,7 +84,7 @@ trait Bs4Navbar extends FlexMenuBuilder with DispatchSnippet {
     render
   }
 
-  override def expandAll = true
+  override def expandAll  = true
   override def linkToSelf = true
 
   override def renderOuterTag(inner: NodeSeq, top: Boolean): NodeSeq = {
@@ -116,10 +115,10 @@ trait Bs4Navbar extends FlexMenuBuilder with DispatchSnippet {
     <a class="nav-link" href={ uri }>{ text }</a>
 
   //investigate why we never get current here
-  def renderDropdownItem (uri: NodeSeq,
-                          text: NodeSeq,
-                          path: Boolean,
-                          current: Boolean): NodeSeq =
+  def renderDropdownItem(uri: NodeSeq,
+                         text: NodeSeq,
+                         path: Boolean,
+                         current: Boolean): NodeSeq =
     if (current)
       <a class="dropdown-item active" href={uri}>
         {text}
@@ -157,12 +156,15 @@ trait Bs4Navbar extends FlexMenuBuilder with DispatchSnippet {
       item.current
     )
 
-
   override def buildItemMenu[A](loc: Loc[A],
                                 currLoc: Box[Loc[_]],
                                 expandAll: Boolean): List[MenuItem] = {
-    val kids: List[MenuItem] = if (expandAll) loc.buildKidMenuItems(loc.menu.kids) else Nil
-    loc.asInstanceOf[StructBuildItem].buildItem(kids, currLoc == Full(loc), currLoc == Full(loc)).toList
+    val kids: List[MenuItem] =
+      if (expandAll) loc.buildKidMenuItems(loc.menu.kids) else Nil
+    loc
+      .asInstanceOf[StructBuildItem]
+      .buildItem(kids, currLoc == Full(loc), currLoc == Full(loc))
+      .toList
   }
 
   override def emptyGroup: NodeSeq = NodeSeq.Empty
@@ -175,40 +177,50 @@ trait Bs4Navbar extends FlexMenuBuilder with DispatchSnippet {
                              path: Boolean,
                              current: Boolean): Elem = {
     if (current) {
-      updateForCurrent(updateForPath(<li class="nav-item active">{ contents }</li>, path), current)
+      updateForCurrent(
+        updateForPath(<li class="nav-item active">{ contents }</li>, path),
+        current)
     } else {
-      updateForCurrent(updateForPath(<li class="nav-item">{ contents }</li>, path), current)
+      updateForCurrent(
+        updateForPath(<li class="nav-item">{ contents }</li>, path),
+        current)
     }
   }
 
-  def buildTBDivider(contents: NodeSeq,
-                     path: Boolean,
-                     current: Boolean): Elem =
-    updateForCurrent(updateForPath(<li class="nav-item divider"></li>, path), current)
+  def buildTBDivider(contents: NodeSeq, path: Boolean, current: Boolean): Elem =
+    updateForCurrent(updateForPath(<li class="nav-item divider"></li>, path),
+                     current)
 
   def buildTBVerticalDivider(contents: NodeSeq,
                              path: Boolean,
                              current: Boolean): Elem =
-    updateForCurrent(updateForPath(<li class="nav-item divider-vertical"></li>, path),
+    updateForCurrent(
+      updateForPath(<li class="nav-item divider-vertical"></li>, path),
       current)
 
   def buildTBDropdown(contents: NodeSeq,
                       path: Boolean,
                       current: Boolean): Elem =
-    updateForCurrent(updateForPath({contents}.asInstanceOf[Elem], path), current)
+    updateForCurrent(updateForPath({ contents }.asInstanceOf[Elem], path),
+                     current)
 
   override def renderSelf(item: MenuItem): NodeSeq = <span>{ item.text }</span>
 
   override def renderSelfNotLinked(
-                                    item: MenuItem,
-                                    renderInner: Seq[MenuItem] => NodeSeq): Elem =
-    buildInnerTag(<xml:group>{ renderSelf(item) }{ renderInner(item.kids) }</xml:group>, item.path, item.current)
+      item: MenuItem,
+      renderInner: Seq[MenuItem] => NodeSeq): Elem =
+    buildInnerTag(
+      <xml:group>{ renderSelf(item) }{ renderInner(item.kids) }</xml:group>,
+      item.path,
+      item.current)
 
   override def renderItemInPath(item: MenuItem,
                                 renderInner: Seq[MenuItem] => NodeSeq): Elem =
     buildInnerTag(<xml:group>
       {renderLink(item.uri, item.text, item.path, item.current)}{renderInner(item.kids)}
-    </xml:group>, item.path, item.current)
+    </xml:group>,
+                  item.path,
+                  item.current)
 
   override def renderItem(item: MenuItem,
                           renderInner: Seq[MenuItem] => NodeSeq): Elem = {
@@ -216,9 +228,9 @@ trait Bs4Navbar extends FlexMenuBuilder with DispatchSnippet {
   }
 
   private def renderItemWithInfo(
-                                  info: List[net.liftweb.common.Box[Function0[_]]],
-                                  renderInner: Seq[MenuItem] => NodeSeq,
-                                  item: MenuItem): Elem = {
+      info: List[net.liftweb.common.Box[Function0[_]]],
+      renderInner: Seq[MenuItem] => NodeSeq,
+      item: MenuItem): Elem = {
 
     def buildWithInfo(f: Function0[_],
                       renderInner: Seq[MenuItem] => NodeSeq,
@@ -226,11 +238,9 @@ trait Bs4Navbar extends FlexMenuBuilder with DispatchSnippet {
       if (f().equals("divider")) {
         buildTBDivider(<xml:group></xml:group>, item.path, item.current)
       } else if (f().equals("divider-vertical")) {
-        buildTBVerticalDivider(<xml:group></xml:group>,
-          item.path,
-          item.current)
+        buildTBVerticalDivider(<xml:group></xml:group>, item.path, item.current)
       } else if (f().equals("_blank") || f().equals("_self") || f().equals(
-        "_parent") || f().equals("_top")) {
+                   "_parent") || f().equals("_top")) {
         buildInnerTag(
           <xml:group>{ renderLinkWithTarget(item.uri, item.text, item.path, item.current, f) }{ renderInner(item.kids) }</xml:group>,
           item.path,
@@ -252,11 +262,17 @@ trait Bs4Navbar extends FlexMenuBuilder with DispatchSnippet {
           }
           case Empty => {
             //hmmm a empty list
-            buildInnerTag(<xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>, item.path, item.current)
+            buildInnerTag(
+              <xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>,
+              item.path,
+              item.current)
           }
           case Failure(message, _, _) => {
             //something got wrong
-            buildInnerTag(<xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>, item.path, item.current)
+            buildInnerTag(
+              <xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>,
+              item.path,
+              item.current)
           }
         }
       }
@@ -266,7 +282,7 @@ trait Bs4Navbar extends FlexMenuBuilder with DispatchSnippet {
           case Full(f) => {
             buildWithInfo(f, renderInner, item)
           }
-          case Empty =>
+          case Empty                  =>
           case Failure(message, _, _) => ""
         }
         //info list has more elements
@@ -274,7 +290,10 @@ trait Bs4Navbar extends FlexMenuBuilder with DispatchSnippet {
       }
       case Nil => {
         //there was no info
-        buildInnerTag(<xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>, item.path, item.current)
+        buildInnerTag(
+          <xml:group>{ renderLink(item.uri, item.text, item.path, item.current) }{ renderInner(item.kids) }</xml:group>,
+          item.path,
+          item.current)
       }
     }
 
