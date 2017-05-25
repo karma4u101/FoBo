@@ -205,7 +205,7 @@ Twitter Bootstrap v2.3.0) For more information on how to set this up see below.
 
 ## FoBo Modules -- Toolkit:s and available versions
 
-FoBo artifacts is available for: Lift 2.4, 2.5, 2.6.x and 3.0.x
+FoBo artifacts is available for: Lift 2.4, 2.5, 2.6.x, 3.0.x and 3.1.x 
 
 - [FoBo](https://github.com/karma4u101/FoBo/tree/master/FoBo/FoBo) This module conatins all the bellow listed toolkit modules. 
 
@@ -215,6 +215,7 @@ beeing acessable from the FoBo / FoBo module the toolkit, api and resource modul
 The FoBo / FoBo module includes the following modules and supports the following toolkit versions
 
 -   [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/Angular) [v1.0.6, v1.2.11, v1.3.15, v1.4.1, v1.4.8, v1.5.3] (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/Angular/AngularJS) )] - [Angular](http://angularjs.org/)
+-   [FoBo-TwBs-Bootstrap4](https://github.com/karma4u101/FoBo/tree/master/Bootstrap/Bootstrap4) [v4.0.0] - [Bootstrap 4.x](http://getbootstrap.com/)
 -   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/Bootstrap/Bootstrap3) [v3.0.0, v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6, v3.3.7] - [Bootstrap 3.x](http://getbootstrap.com/)
 -   [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Bootstrap/Bootstrap2) [v2.3.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 -   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0, v3.2.1, v4.0.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] - [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 

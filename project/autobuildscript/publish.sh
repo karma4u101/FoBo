@@ -128,6 +128,18 @@ function do31Publish {
   debug "\n***...done processing the sbt command file***\n"
 }
 
+#Execute the necessary steps for publishing a Lift 3.1 module build
+function do31Publish {
+  debug "\nTarget is set to Lift v3.1, require java-8";
+  if ! requiredJavaIsSuccessfullySet $JAVA_8_PATH ; then
+    die "java-8 dosen't seem to be present, cancelling release build!"
+  fi
+  debug "Current java environment is java-8\n"
+  debug "\n***Start processing the sbt command file.***\n"
+  sbt < $PUBLISH_31_SBT_COMMAND_FILE 2>&1|tee ${LOG_FILE}
+  debug "\n***...done processing the sbt command file***\n"
+}
+
 function runMain {
   if [ $LIFT_TARGET == "2.5" ]; then {
     do25Publish

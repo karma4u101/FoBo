@@ -33,6 +33,7 @@ lazy val fobo = (project in file("FoBo/FoBo"))
              jquery,
              bootstrap,
              bootstrap3,
+             bootstrap4,
              fontAwesome,
              prettify,
              highlightjs,
@@ -44,6 +45,7 @@ lazy val fobo = (project in file("FoBo/FoBo"))
              jquery,
              bootstrap,
              bootstrap3,
+             bootstrap4,
              fontAwesome,
              prettify,
              highlightjs,
@@ -133,6 +135,22 @@ lazy val bootstrap3res =
   (project in file("Bootstrap/Bootstrap3/TwBs-Bootstrap3-Res"))
     .settings(commonSettings: _*)
     .settings(name := "fobo-twbs-bootstrap3-res")
+
+lazy val bootstrap4 = (project in file("Bootstrap/Bootstrap4/TwBs-Bootstrap4"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-twbs-bootstrap4")
+  .aggregate(bootstrap4api, bootstrap4res)
+  .dependsOn(bootstrap4api, bootstrap4res)
+
+lazy val bootstrap4api =
+  (project in file("Bootstrap/Bootstrap4/TwBs-Bootstrap4-API"))
+    .settings(commonSettings: _*)
+    .settings(name := "fobo-twbs-bootstrap4-api")
+
+lazy val bootstrap4res =
+  (project in file("Bootstrap/Bootstrap4/TwBs-Bootstrap4-Res"))
+    .settings(commonSettings: _*)
+    .settings(name := "fobo-twbs-bootstrap4-res")
 
 lazy val fontAwesome = (project in file("Font-Awesome/Font-Awesome"))
   .settings(commonSettings: _*)
