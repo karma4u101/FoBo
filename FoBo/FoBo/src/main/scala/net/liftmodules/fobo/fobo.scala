@@ -846,6 +846,25 @@ package object fobo {
       net.liftmodules.fobopa.Toolkit.Pace0415
     }
 
+    /*===Bootstrap4 Toolkit===============================================================*/
+
+    /**
+      * Enable usage of Bootstrap API and resources version 4&#8228;0&#8228;0 in your bootstrap liftweb Boot.
+      * @version 4.0.0
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap400
+      * }}}
+      * @since v2.0
+      */
+    case object Bootstrap400 extends Toolkit {
+      net.liftmodules.FoBoBs4.Toolkit.Bootstrap400
+    }
+
     /*===Bootstrap3 Toolkit===============================================================*/
 
     /**
@@ -1698,6 +1717,25 @@ package object fobo {
       net.liftmodules.fobopa.Resource.Pace0415
     }
 
+    /*===Bootstrap4 Resource===============================================================*/
+
+    /**
+      * Enable usage of Bootstrap version 4&#8228;0&#8228;0 resource files in your bootstrap liftweb Boot.
+      * @version 4.0.0
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.Bootstrap400
+      * }}}
+      * @since v2.0
+      */
+    case object Bootstrap400 extends Resource {
+      net.liftmodules.FoBoBs4.Resource.Bootstrap400
+    }
+
     /*===Bootstrap3 Resource===============================================================*/
 
     /**
@@ -1878,6 +1916,23 @@ package object fobo {
     }
 
     /*===Bootstrap API===============================================================*/
+
+    /**
+      * Enable usage of FoBo's Bootstrap API 4&#8228;x&#8228;x in your bootstrap liftweb Boot.
+      * @version 4.x.x
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.API.Init=FoBo.API.Bootstrap4
+      * }}}
+      *
+      */
+    case object Bootstrap4 extends API {
+      net.liftmodules.FoBoBs4.API.Bootstrap4
+    }
 
     /**
       * Enable usage of FoBo's Bootstrap API 3&#8228;x&#8228;x in your bootstrap liftweb Boot.
