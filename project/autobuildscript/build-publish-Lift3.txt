@@ -2,8 +2,8 @@ alias pub=publish-signed
 
 set version       in ThisBuild:="1.7"
 
-set liftVersion   in ThisBuild:="3.0-RC4"
-set scalaVersion  in ThisBuild:="2.11.7"
+set liftVersion   in ThisBuild:="3.0.1"
+set scalaVersion  in ThisBuild:="2.12.1"
 
 project fobo
 clean

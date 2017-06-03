@@ -87,7 +87,7 @@ Setup example:
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo_3.0_2.11.6</artifactId>
+  <artifactId>fobo_3.0_2.12.1</artifactId>
   <version>1.7</version>
 </dependency>
 ```
@@ -110,7 +110,7 @@ Setup example using the FoBo/Lift Bootstrap3 API module:
 ```xml      
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-twbs-bootstrap3-api_3.0_2.11.6</artifactId>
+  <artifactId>fobo-twbs-bootstrap3-api_3.0_2.12.1</artifactId>
   <version>1.7</version>
 </dependency>
 ```

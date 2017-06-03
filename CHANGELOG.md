@@ -4,7 +4,8 @@
 For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/CHANGELOG.md#history-log) section
 
 **Latest Stable Releases:**
-- **2016-10-04** -- FoBo Module v1.7
+- **2016-12-17** -- FoBo Module v.1.7 (Scala 2.12)
+- **2016-10-04** -- FoBo Module v.1.7 (Scala 2.11)
 - **2016-06-25** -- FoBo Module v1.6
 - **2015-12-30** -- FoBo Module v1.5.1
 
