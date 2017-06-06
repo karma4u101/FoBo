@@ -2,11 +2,8 @@ alias pub=publish-local-signed
 
 set version       in ThisBuild:="2.0-SNAPSHOT"
 
-<<<<<<< HEAD
 set liftVersion   in ThisBuild:="3.1.0-M3"
-=======
-set liftVersion   in ThisBuild:="3.1-SNAPSHOT"
->>>>>>> dab7831... Fixing <<=, <+=, <++= sbt deprecations, fixes #127
+
 #set scalaVersion  in ThisBuild:="2.12.1"
 
 project fobo
@@ -23,7 +20,6 @@ clean-files
 set parallelExecution in Test := false
 ; compile ; test ; pub
 
-<<<<<<< HEAD
 #set liftVersion   in ThisBuild:="3.0.1"
 #
 #project fobo
@@ -40,21 +36,3 @@ set parallelExecution in Test := false
 #set parallelExecution in Test := false
 #; compile ; test ; pub
 
-
-=======
-set liftVersion   in ThisBuild:="3.0.1"
-
-project fobo
-clean
-clean-files
-set parallelExecution in Test := false
-; compile ; test ; pub
-
-set scalaVersion  in ThisBuild:="2.11.7"
-
-project fobo
-clean
-clean-files
-set parallelExecution in Test := false
-; compile ; test ; pub
->>>>>>> dab7831... Fixing <<=, <+=, <++= sbt deprecations, fixes #127
