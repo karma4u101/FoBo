@@ -47,7 +47,8 @@ package net.liftmodules
   *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component) [[net.liftmodules.FoBoAJS]]
   *  - Angular UI-Grid [v3.0.7] (angular component) [[net.liftmodules.FoBoAJS]]
   *  - Angular Material design [v0.10.0, v1.0.1, v1.0.8, v1.1.1] (angular component) [[net.liftmodules.FoBoAJS]]
-  *
+  *  - Popper [v1.9.9]
+  *  - Tooltip [v1.1.4]
   *
   * ===Help out!===
   *
@@ -1011,6 +1012,44 @@ package object FoBo {
       net.liftmodules.FoBoTet.Toolkit.Tether140
     }
 
+    /*===Popper Toolkit===============================================================*/
+
+    /**
+      * Enable usage FoBo's Popper API and resources version 1&#8228;1&#8228;4 in your bootstrap liftweb Boot.
+      * @version 1.9.9
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{FoBoPop => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.Popper199
+      * }}}
+      * @since v2.0
+      */
+    case object Popper199 extends Toolkit {
+      net.liftmodules.FoBoPop.Toolkit.Popper199
+    }
+
+    /*===Tooltip Toolkit===============================================================*/
+
+    /**
+      * Enable usage FoBo's Tooltip API and resources version 1&#8228;1&#8228;4 in your bootstrap liftweb Boot.
+      * @version 1.1.4
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{FoBoToo => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.Tooltip114
+      * }}}
+      * @since v2.0
+      */
+    case object Tooltip114 extends Toolkit {
+      net.liftmodules.FoBoToo.Toolkit.Tooltip114
+    }
+
   } //end Toolkit
 
   /*=== Resource ============================================*/
@@ -1881,6 +1920,44 @@ package object FoBo {
       */
     case object Tether140 extends Resource {
       net.liftmodules.FoBoTet.Resource.Tether140
+    }
+
+    /*===Tooltip Resource===============================================================*/
+
+    /**
+      * Enable usage of FoBo's Popper version 1&#8228;9&#8228;9 resource files in your bootstrap liftweb Boot.
+      * @version v1.9.9
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.Popper199
+      * }}}
+      * @since v2.0
+      */
+    case object Popper199 extends Resource {
+      net.liftmodules.FoBoPop.Resource.Popper199
+    }
+
+    /*===Tooltip Resource===============================================================*/
+
+    /**
+      * Enable usage of FoBo's Popper Tooltip version 1&#8228;1&#8228;4 resource files in your bootstrap liftweb Boot.
+      * @version v1.1.4
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.Tether140
+      * }}}
+      * @since v2.0
+      */
+    case object Tooltip114 extends Resource {
+      net.liftmodules.FoBoToo.Resource.Tooltip114
     }
 
   }
