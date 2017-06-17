@@ -1,10 +1,7 @@
 package net.liftmodules
 
 import net.liftweb._
-import util.{Props}
 import http._
-import common._
-
 import org.specs2.mutable.Specification
 
 object FoBoSpec extends Specification {
@@ -1278,6 +1275,71 @@ object FoBoSpec extends Specification {
         FoBo.Resource.HighlightJS930,
         "fobo" :: "highlight" :: "highlight.pack.js" :: Nil) must_==
         List("fobo", "highlight", "9.3.0", "js", "highlight.pack.js")
+    }
+  }
+
+  //== Popper ==================================//
+  //Popper199
+  "With FoBo.Toolkit.Init set to FoBo.Toolkit.Popper199 the ResourceServer" should {
+    "allow  fobo/popper.js" in {
+      allowToolkitInit(FoBo.Toolkit.Popper199, "fobo" :: "popper.js" :: Nil) must_== true
+    }
+    "rewrit fobo/popper.js to fobo/popper/1.9.9/js/umd/popper.min.js" in {
+      rewriteToolkitInit(FoBo.Toolkit.Popper199, "fobo" :: "popper.js" :: Nil) must_==
+        List("fobo", "popper", "1.9.9", "js", "umd", "popper.min.js")
+    }
+
+    "allow  fobo/popper-utils.js" in {
+      allowToolkitInit(FoBo.Toolkit.Popper199,
+                       "fobo" :: "popper-utils.js" :: Nil) must_== true
+    }
+    "rewrit fobo/popper-utils.js to fobo/popper/1.9.9/js/umd/popper-utils.min.js" in {
+      rewriteToolkitInit(FoBo.Toolkit.Popper199,
+                         "fobo" :: "popper-utils.js" :: Nil) must_==
+        List("fobo", "popper", "1.9.9", "js", "umd", "popper-utils.min.js")
+    }
+  }
+
+  "With FoBo.Resource.Init set to FoBo.Resource.Popper199 the ResourceServer" should {
+    "allow  fobo/popper.js" in {
+      allowResource(FoBo.Resource.Popper199, "fobo" :: "popper.js" :: Nil) must_== true
+    }
+    "rewrit fobo/popper.js to fobo/popper/1.9.9/js/umd/popper.min.js" in {
+      rewriteResource(FoBo.Resource.Popper199, "fobo" :: "popper.js" :: Nil) must_==
+        List("fobo", "popper", "1.9.9", "js", "umd", "popper.min.js")
+    }
+
+    "allow  fobo/popper-utils.js" in {
+      allowResource(FoBo.Resource.Popper199,
+                    "fobo" :: "popper-utils.js" :: Nil) must_== true
+    }
+    "rewrit fobo/popper-utils.js to fobo/popper/1.9.9/js/umd/popper-utils.min.js" in {
+      rewriteResource(FoBo.Resource.Popper199,
+                      "fobo" :: "popper-utils.js" :: Nil) must_==
+        List("fobo", "popper", "1.9.9", "js", "umd", "popper-utils.min.js")
+    }
+  }
+
+  //=== Tooltip ======================================//
+  //Tooltip114
+  "With FoBo.Toolkit.Init set to FoBo.Toolkit.Tooltip114 the ResourceServer" should {
+    "allow  fobo/tooltip.js" in {
+      allowToolkitInit(FoBo.Toolkit.Tooltip114, "fobo" :: "tooltip.js" :: Nil) must_== true
+    }
+    "rewrit fobo/tooltip.js to fobo/tooltip/1.1.4/js/umd/tooltip.min.js" in {
+      rewriteToolkitInit(FoBo.Toolkit.Tooltip114,
+                         "fobo" :: "tooltip.js" :: Nil) must_==
+        List("fobo", "tooltip", "1.1.4", "js", "umd", "tooltip.min.js")
+    }
+  }
+
+  "With FoBo.Resource.Init set to FoBo.Resource.Tooltip114 the ResourceServer" should {
+    "allow  fobo/tooltip.js" in {
+      allowResource(FoBo.Resource.Tooltip114, "fobo" :: "tooltip.js" :: Nil) must_== true
+    }
+    "rewrit fobo/tooltip.js to fobo/tooltip/1.1.4/js/umd/tooltip.min.js" in {
+      rewriteResource(FoBo.Resource.Tooltip114, "fobo" :: "tooltip.js" :: Nil) must_==
+        List("fobo", "tooltip", "1.1.4", "js", "umd", "tooltip.min.js")
     }
   }
 

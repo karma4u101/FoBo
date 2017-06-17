@@ -20,8 +20,7 @@ lazy val fobometa = (project in file("."))
   .settings(unidocSettings: _*)
   .settings(name := "fobo-meta")
   .settings(scalaVersion in ThisBuild := "2.12.1")
-  .settings(
-    liftVersion in ThisBuild := { liftVersion ?? "3.1-SNAPSHOT" }.value)
+  .settings(liftVersion in ThisBuild := { liftVersion ?? "3.1.0-M3" }.value)
   .settings(liftEdition in ThisBuild := {
     liftVersion apply { _.substring(0, 3) }
   }.value)
@@ -40,7 +39,9 @@ lazy val fobo = (project in file("FoBo/FoBo"))
              fontAwesome,
              prettify,
              highlightjs,
-             tether)
+             tether,
+             popper,
+             tooltip)
   .dependsOn(foboapi,
              kineticjs,
              pace,
@@ -51,7 +52,9 @@ lazy val fobo = (project in file("FoBo/FoBo"))
              fontAwesome,
              prettify,
              highlightjs,
-             tether)
+             tether,
+             popper,
+             tooltip)
 
 lazy val foboapi = (project in file("FoBo/FoBo-API"))
   .enablePlugins(BuildInfoPlugin)
@@ -196,6 +199,34 @@ lazy val tetherres = (project in file("Tether/Tether-Res"))
   .settings(commonSettings: _*)
   .settings(name := "fobo-tether-res")
 
+lazy val popper = (project in file("Popper/Popper"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-popper")
+  .aggregate(popperapi, popperres)
+  .dependsOn(popperapi, popperres)
+
+lazy val popperapi = (project in file("Popper/Popper-API"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-popper-api")
+
+lazy val popperres = (project in file("Popper/Popper-Res"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-popper-res")
+
+lazy val tooltip = (project in file("Popper/Tooltip"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-tooltip")
+  .aggregate(tooltipapi, tooltipres)
+  .dependsOn(tooltipapi, tooltipres)
+
+lazy val tooltipapi = (project in file("Popper/Tooltip-API"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-tooltip-api")
+
+lazy val tooltipres = (project in file("Popper/Tooltip-Res"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-tooltip-res")
+
 //##
 //##
 //##################################################################
@@ -222,7 +253,7 @@ resolvers in ThisBuild ++= Seq(
 libraryDependencies in ThisBuild ++= {
   "net.liftweb" %% "lift-webkit" % liftVersion.value % "provided" ::
     "net.liftweb" %% "lift-testkit" % liftVersion.value % "provided" ::
-      Nil
+    Nil
 }
 
 libraryDependencies in ThisBuild ++= {
@@ -237,28 +268,28 @@ libraryDependencies in ThisBuild ++= {
       "org.specs2" %% "specs2-core" % "3.8.6" % "test" //lift 3.1.x
   }) ::
     ((scalaVersion.value, liftVersion.value) match {
-      case ("2.10.4", _) | ("2.9.2", _) | ("2.9.1", _) | ("2.9.1-1", _) =>
-        "org.specs2" %% "specs2" % "1.12.3" % "test"
-      case ("2.11.7", "2.6.2") | ("2.11.7", "2.6.3") =>
-        "org.specs2" %% "specs2" % "2.3.11" % "test"
-      case (_, "3.0.0") =>
-        "org.specs2" %% "specs2" % "3.7" % "test" //no mather extras for 3.7
-      case (_, "3.0.1") =>
-        "org.specs2" %% "specs2-matcher-extra" % "3.8.6" % "test"
-      case (_, _) =>
-        "org.specs2" %% "specs2-matcher-extra" % "3.8.6" % "test" //lift 3.1.x
-    }) ::
-      ((scalaVersion.value, liftVersion.value) match {
-        case (_, "2.6.2") | (_, "2.6.3") =>
-          "org.scalacheck" %% "scalacheck" % "1.10.1" % "test"
-        case (_, "3.0.0") =>
-          "org.specs2" %% "specs2-scalacheck" % "3.7" % "test"
-        case (_, "3.0.1") =>
-          "org.specs2" %% "specs2-scalacheck" % "3.8.6" % "test"
-        case (_, _) =>
-          "org.specs2" %% "specs2-scalacheck" % "3.8.6" % "test" //lift 3.1.x
-      }) ::
-        Nil
+    case ("2.10.4", _) | ("2.9.2", _) | ("2.9.1", _) | ("2.9.1-1", _) =>
+      "org.specs2" %% "specs2" % "1.12.3" % "test"
+    case ("2.11.7", "2.6.2") | ("2.11.7", "2.6.3") =>
+      "org.specs2" %% "specs2" % "2.3.11" % "test"
+    case (_, "3.0.0") =>
+      "org.specs2" %% "specs2" % "3.7" % "test" //no mather extras for 3.7
+    case (_, "3.0.1") =>
+      "org.specs2" %% "specs2-matcher-extra" % "3.8.6" % "test"
+    case (_, _) =>
+      "org.specs2" %% "specs2-matcher-extra" % "3.8.6" % "test" //lift 3.1.x
+  }) ::
+    ((scalaVersion.value, liftVersion.value) match {
+    case (_, "2.6.2") | (_, "2.6.3") =>
+      "org.scalacheck" %% "scalacheck" % "1.10.1" % "test"
+    case (_, "3.0.0") =>
+      "org.specs2" %% "specs2-scalacheck" % "3.7" % "test"
+    case (_, "3.0.1") =>
+      "org.specs2" %% "specs2-scalacheck" % "3.8.6" % "test"
+    case (_, _) =>
+      "org.specs2" %% "specs2-scalacheck" % "3.8.6" % "test" //lift 3.1.x
+  }) ::
+    Nil
 }
 
 libraryDependencies in ThisBuild ++= {
@@ -273,7 +304,7 @@ libraryDependencies in ThisBuild ++= {
 libraryDependencies in ThisBuild ++= {
   "ch.qos.logback" % "logback-classic" % "1.0.0" % "provided" ::
     "log4j" % "log4j" % "1.2.16" % "provided" ::
-      Nil
+    Nil
 }
 
 //##
