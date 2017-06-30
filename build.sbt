@@ -1,6 +1,9 @@
 import LiftModuleKeys._
 import sbt.project
 
+//val liftVersion = settingKey[String]("Lift Web Framework full version number")
+//val liftEdition = settingKey[String]("Lift Edition (such as 2.6 or 3.0)")
+
 //##################################################################
 //##
 //##  Build settings
@@ -17,7 +20,7 @@ lazy val commonSettings = Seq(
 
 lazy val fobometa = (project in file("."))
   .settings(commonSettings: _*)
-  .settings(unidocSettings: _*)
+  //.settings(unidocSettings: _*)
   .settings(name := "fobo-meta")
   .settings(scalaVersion in ThisBuild := "2.12.1")
   .settings(liftVersion in ThisBuild := { liftVersion ?? "3.1.0-M3" }.value)
@@ -302,8 +305,8 @@ libraryDependencies in ThisBuild ++= {
 }
 
 libraryDependencies in ThisBuild ++= {
-  "ch.qos.logback" % "logback-classic" % "1.0.0" % "provided" ::
-    "log4j" % "log4j" % "1.2.16" % "provided" ::
+  "ch.qos.logback" % "logback-classic" % "1.2.3" % "provided" ::
+    "log4j" % "log4j" % "1.2.17" % "provided" ::
     Nil
 }
 
