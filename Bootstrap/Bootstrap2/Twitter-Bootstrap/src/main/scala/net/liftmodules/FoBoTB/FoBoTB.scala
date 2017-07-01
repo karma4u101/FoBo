@@ -82,7 +82,7 @@ package object FoBoTB {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Toolkit]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: Toolkit): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -117,7 +117,7 @@ package object FoBoTB {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -151,7 +151,7 @@ package object FoBoTB {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: API): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -195,9 +195,9 @@ package object FoBoTB {
     * }}}
     */
   object TBLocInfo {
-    private val hd: Box[String]  = Full("divider")
-    private val vd: Box[String]  = Full("divider-vertical")
-    private val nh: Box[String]  = Full("nav-header")
+    private val hd: Box[String] = Full("divider")
+    private val vd: Box[String] = Full("divider-vertical")
+    private val nh: Box[String] = Full("nav-header")
     private val ltb: Box[String] = Full("_blank")
     private val lts: Box[String] = Full("_self")
     private val ltp: Box[String] = Full("_parent")
@@ -279,57 +279,6 @@ package object FoBoTB {
       def apply() = ltt.map(x => () => x)
     }
 
-  }
-
-  /*============== InitParam (deprecated) ===================*/
-  /**
-    * @example In bootstrap liftweb Boot set
-    * {{{
-    *   FoBoTB.init()
-    * }}}
-    * The above example just calls init without specifying fobo init
-    * params so default Toolkit and JQuery values will be used.
-    */
-  @deprecated(
-    "Init no longer nessesary as it is now automaticaly done for respective FoBoTB.InitParam",
-    "1.6.0")
-  def init() {}
-
-  @deprecated("Use FoBoTB.Toolkit or FoBoTB.Resource and FoBoTB.API", "1.6.0")
-  abstract sealed trait FoBoToolkit
-
-  /**
-    * Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot.
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   FoBoTB.InitParam.JQuery=FoBoTB.JQuery172
-    *   FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap232
-    * }}}
-    * This example uses the Bootstrap v2.3.2 option.
-    *
-    */
-  @deprecated("Use FoBoTB.Toolkit.Init=FoBoTB.Toolkit.[Toolkit Object]",
-              "1.6.0")
-  object InitParam extends FoBoToolkit {
-    var ToolKit: FoBoToolkit = null
-  }
-
-  /**
-    * Enable usage of Twitter Bootstrap version 2&#8228;3&#8228;2 in your bootstrap liftweb Boot.
-    * @version 2.3.2
-    *
-    * '''Example'''
-    *
-    * {{{
-    *   FoBoTB.InitParam.ToolKit=FoBoTB.Bootstrap232
-    * }}}
-    */
-  @deprecated("Use FoBoTB.Toolkit.Init=FoBoTB.Toolkit.Bootstrap232", "1.6.0")
-  case object Bootstrap232 extends FoBoToolkit {
-    net.liftmodules.FoBoTBRes.Resource.Bootstrap232
-    net.liftmodules.FoBoTBAPI.API.Bootstrap2
   }
 
 }

@@ -1,10 +1,5 @@
 package net.liftmodules
 
-import net.liftweb._
-import util.{Props}
-import http._
-import common._
-
 /**
   * ==Welcome to FoBo - A Modular Front-End Toolkit module for Lift==
   *
@@ -52,7 +47,8 @@ import common._
   *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component) [[net.liftmodules.FoBoAJS]]
   *  - Angular UI-Grid [v3.0.7] (angular component) [[net.liftmodules.FoBoAJS]]
   *  - Angular Material design [v0.10.0, v1.0.1, v1.0.8, v1.1.1] (angular component) [[net.liftmodules.FoBoAJS]]
-  *
+  *  - Popper [v1.9.9]
+  *  - Tooltip [v1.1.4]
   *
   * ===Help out!===
   *
@@ -81,7 +77,7 @@ import common._
   * accordingly to include just the FoBo modules you use, but if size is not a issue using the FoBo/FoBo
   * module is convenient and gives you a lot to pick from.
   *
-  * @version v1.7
+  * @version v2.0-SNAPSHOT
   * @author Peter Petersson (Github karma4u101) and the Lift community
   *
   */
@@ -106,7 +102,7 @@ package object FoBo {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Toolkit
+  sealed trait Toolkit
 
   /**
     * Initiate the toolkit's associated resources in you bootstrap liftweb Boot.
@@ -121,7 +117,7 @@ package object FoBo {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Resource
+  sealed trait Resource
 
   /**
     * Initiate a toolkit's associated FoBo API in you bootstrap liftweb Boot.
@@ -136,7 +132,7 @@ package object FoBo {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait API
+  sealed trait API
 
   /*=== Toolkit ============================================*/
 
@@ -145,7 +141,7 @@ package object FoBo {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Toolkit]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: Toolkit): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -325,24 +321,6 @@ package object FoBo {
     }
 
     /**
-      * Enable usage of FoBo's Angular Material API and resources version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.
-      * @version 0.10.0
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.FoBo
-      *    :
-      *   FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial0100
-      * }}}
-      *
-      */
-    @deprecated("Use AJMaterial108 or later", "1.5.0")
-    case object AJMaterial0100 extends Toolkit {
-      net.liftmodules.FoBoAJS.Toolkit.AJMaterial0100
-    }
-
-    /**
       * Enable usage of FoBo's Angular Material API and resources version 1&#8228;0&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.0.1
       *
@@ -373,6 +351,7 @@ package object FoBo {
       * }}}
       *
       */
+    @deprecated("Use AJMaterial111 or later", "2.0.0")
     case object AJMaterial108 extends Toolkit {
       net.liftmodules.FoBoAJS.Toolkit.AJMaterial108
     }
@@ -395,22 +374,22 @@ package object FoBo {
       net.liftmodules.FoBoAJS.Toolkit.AJMaterial111
     }
 
-//     /**
-//     * Enable usage of FoBo's Angular Material API and resources version 1&#8228;1&#8228;0 in your bootstrap liftweb Boot.
-//     * @version 1.1.0
-//     *
-//     *  '''Example:'''
-//     *
-//     * {{{
-//     *   import net.liftmodules.FoBo
-//     *    :
-//     *   FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial110
-//     * }}}
-//     *
-//     */
-//    case object AJMaterial110 extends Toolkit {
-//      net.liftmodules.FoBoAJS.Toolkit.AJMaterial110
-//    }
+    /**
+      * Enable usage of FoBo's Angular API and AngularUI-Bootstrap resources version 2&#8228;4&#8228;0 in your bootstrap liftweb Boot.
+      * @version 2.4.0
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap240
+      * }}}
+      *
+      */
+    case object AJSUIBootstrap240 extends Toolkit {
+      net.liftmodules.FoBoAJS.Toolkit.AJSUIBootstrap240
+    }
 
     /**
       * Enable usage of FoBo's Angular API and AngularUI-Bootstrap resources version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.
@@ -442,6 +421,7 @@ package object FoBo {
       * }}}
       *
       */
+    @deprecated("Use AJSUIBootstrap0100 or later", "2.0.0")
     case object AJSUIBootstrap070 extends Toolkit {
       net.liftmodules.FoBoAJS.Toolkit.AJSUIBootstrap070
     }
@@ -459,6 +439,7 @@ package object FoBo {
       * }}}
       *
       */
+    @deprecated("Use AJSUIBootstrap0100 or later", "2.0.0")
     case object AJSUIBootstrap020 extends Toolkit {
       net.liftmodules.FoBoAJS.Toolkit.AJSUIBootstrap020
     }
@@ -1013,6 +994,62 @@ package object FoBo {
       net.liftmodules.FoBoHL.Toolkit.HighlightJS930
     }
 
+    /*===Tether Toolkit===============================================================*/
+
+    /**
+      * Enable usage of FoBo's Tether API and resources version 1&#8228;4&#8228;0 in your bootstrap liftweb Boot.
+      * @version v1.4.0
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.Tether140
+      * }}}
+      */
+    case object Tether140 extends Toolkit {
+      net.liftmodules.FoBoTet.Toolkit.Tether140
+    }
+
+    /*===Popper Toolkit===============================================================*/
+
+    /**
+      * Enable usage FoBo's Popper API and resources version 1&#8228;1&#8228;4 in your bootstrap liftweb Boot.
+      * @version 1.9.9
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{FoBoPop => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.Popper199
+      * }}}
+      * @since v2.0
+      */
+    case object Popper199 extends Toolkit {
+      net.liftmodules.FoBoPop.Toolkit.Popper199
+    }
+
+    /*===Tooltip Toolkit===============================================================*/
+
+    /**
+      * Enable usage FoBo's Tooltip API and resources version 1&#8228;1&#8228;4 in your bootstrap liftweb Boot.
+      * @version 1.1.4
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{FoBoToo => FoBo}
+      *    :
+      *   FoBo.Toolkit.Init=FoBo.Toolkit.Tooltip114
+      * }}}
+      * @since v2.0
+      */
+    case object Tooltip114 extends Toolkit {
+      net.liftmodules.FoBoToo.Toolkit.Tooltip114
+    }
+
   } //end Toolkit
 
   /*=== Resource ============================================*/
@@ -1022,7 +1059,7 @@ package object FoBo {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -1202,24 +1239,6 @@ package object FoBo {
     }
 
     /**
-      * Enable usage of Angular Material version 0&#8228;10&#8228;0 resource files in your bootstrap liftweb Boot.
-      * @version 0.10.0
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.FoBo
-      *    :
-      *   FoBo.Resource.Init=FoBo.Resource.AJMaterial0100
-      * }}}
-      *
-      */
-    @deprecated("Use AJMaterial108 or later", "1.5.0")
-    case object AJMaterial0100 extends Resource {
-      net.liftmodules.FoBoAJS.Resource.AJMaterial0100
-    }
-
-    /**
       * Enable usage of Angular Material version 1&#8228;0&#8228;1 resource files in your bootstrap liftweb Boot.
       * @version 1.0.1
       *
@@ -1250,6 +1269,7 @@ package object FoBo {
       * }}}
       *
       */
+    @deprecated("Use AJMaterial111 or later", "2.0.0")
     case object AJMaterial108 extends Resource {
       net.liftmodules.FoBoAJS.Resource.AJMaterial108
     }
@@ -1271,22 +1291,22 @@ package object FoBo {
       net.liftmodules.FoBoAJS.Resource.AJMaterial111
     }
 
-//     /**
-//     * Enable usage of Angular Material version 1&#8228;1&#8228;0 resource files in your bootstrap liftweb Boot.
-//     * @version 1.1.0
-//     *
-//     *  '''Example:'''
-//     *
-//     * {{{
-//     *   import net.liftmodules.FoBo
-//     *    :
-//     *   FoBo.Resource.Init=FoBo.Resource.AJMaterial110
-//     * }}}
-//     *
-//     */
-//    case object AJMaterial110 extends Resource {
-//      net.liftmodules.FoBoAJS.Resource.AJMaterial110
-//    }
+    /**
+      * Enable usage of AngularUI-Bootstrap version 2&#8228;4&#8228;0 resource files in your bootstrap liftweb Boot.
+      * @version 2.4.0
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.AJSUIBootstrap240
+      * }}}
+      *
+      */
+    case object AJSUIBootstrap240 extends Resource {
+      net.liftmodules.FoBoAJS.Resource.AJSUIBootstrap240
+    }
 
     /**
       * Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 resource files in your bootstrap liftweb Boot.
@@ -1884,6 +1904,62 @@ package object FoBo {
       net.liftmodules.FoBoHL.Resource.HighlightJS930
     }
 
+    /*===Tether Resource===============================================================*/
+
+    /**
+      * Enable usage of FoBo's Tether version 1&#8228;4&#8228;0 resource files in your bootstrap liftweb Boot.
+      * @version v1.4.0
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.Tether140
+      * }}}
+      */
+    case object Tether140 extends Resource {
+      net.liftmodules.FoBoTet.Resource.Tether140
+    }
+
+    /*===Tooltip Resource===============================================================*/
+
+    /**
+      * Enable usage of FoBo's Popper version 1&#8228;9&#8228;9 resource files in your bootstrap liftweb Boot.
+      * @version v1.9.9
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.Popper199
+      * }}}
+      * @since v2.0
+      */
+    case object Popper199 extends Resource {
+      net.liftmodules.FoBoPop.Resource.Popper199
+    }
+
+    /*===Tooltip Resource===============================================================*/
+
+    /**
+      * Enable usage of FoBo's Popper Tooltip version 1&#8228;1&#8228;4 resource files in your bootstrap liftweb Boot.
+      * @version v1.1.4
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.FoBo
+      *    :
+      *   FoBo.Resource.Init=FoBo.Resource.Tether140
+      * }}}
+      * @since v2.0
+      */
+    case object Tooltip114 extends Resource {
+      net.liftmodules.FoBoToo.Resource.Tooltip114
+    }
+
   }
 
   /*=== API ============================================*/
@@ -1893,7 +1969,7 @@ package object FoBo {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: API): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -1999,800 +2075,25 @@ package object FoBo {
       net.liftmodules.FoBoAPI.API.FoBo1
     }
 
-  }
-
-  /*=============InitParam (deprecated)=====================*/
-
-  /**
-    * When your Lift application first starts up, it executes the code in Boot.scala
-    * By calling FoBo.init() in Boot.scala the FoBo API packages and toolkit resources
-    * will be available in your Lift application.
-    * @example In method boot in the Boot class of package bootstrap.liftweb set
-    * {{{
-    *    FoBo.InitParam.JQuery=FoBo.JQueryXYZ  //one jquery version
-    *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ //one or more toolkits
-    *    FoBo.InitParam.ToolKit=FoBo.FoBoToolkitNameXYZ
-    *     :
-    *    FoBo.init()
-    * }}}
-    */
-  @deprecated(
-    "Init no longer nessesary as it is now automaticaly done for respective FoBo.InitParam",
-    "1.6.0")
-  def init() {}
-
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQueryXXX", "1.6.0")
-  abstract sealed trait FoBoJQuery
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit case object name]",
-              "1.6.0")
-  abstract sealed trait FoBoToolkit
-
-  /**
-    * Extends your Lift SiteMap with various common bootstrap menu manipulations such
-    * as horizontal and vertical menu dividers and menu labels (labels coming soon).
-    *
-    * This object should be used in conjunction with the TB* or BS3* menu builder objects in
-    * [[net.liftmodules.FoBoTB.snippet.FoBo]] or [[net.liftmodules.FoBoBs.snippet.FoBo]] snippet's.
-    *
-    *
-    * '''Example:'''
-    * {{{
-    *   :
-    *  //add a horizontal menu divider
-    *  divider1 >> LocGroup(...) >> FoBo.TBLocInfo.Divider,
-    *   :
-    *  //add a vertical menu divider
-    *  divider2 >> LocGroup(...) >> FoBo.TBLocInfo.DividerVertical,
-    *   :
-    *  //open link in new tab
-    *  ... FoBo.TBLocInfo.LinkTargetBlank
-    *   :
-    * }}}
-    * @since v1.0
-    */
-  @deprecated("Use BSLocInfo or TBLocInfo provided by FoBoBs and FoBoTB ",
-              "1.6.0")
-  object TBLocInfo {
-    private val hd: Box[String]  = Full("divider")
-    private val vd: Box[String]  = Full("divider-vertical")
-    private val nh: Box[String]  = Full("nav-header")
-    private val ltb: Box[String] = Full("_blank")
-    private val lts: Box[String] = Full("_self")
-    private val ltp: Box[String] = Full("_parent")
-    private val ltt: Box[String] = Full("_top")
+    /*===Tether API ==============================================================*/
 
     /**
-      * Provides a way to specify a horizontal divider for your bootstrap menu in Lift's SiteMap.
+      * Enable usage of FoBo's Tether API 1&#8228;x&#8228;x in your bootstrap liftweb Boot.
+      * @version 1.x.x
       *
-      * '''Example:'''
+      *  '''Example:'''
+      *
       * {{{
-      * val index            = Menu.i("Home") / "index"
-      *      :
-      * val about            = Menu.i("About") / "about"
-      * val divider2         = Menu("divider2") / "divider2" //dummy entry only showing a menu divider
-      * val navHeader1       = Menu.i("navHeader1") / "navHeader1" //Adds a header (label) to your FoBo.NavList
-      *
-      * def sitemap = SiteMap(
-      *   navHeader1 >> LocGroup("nl1") >> FoBo.TBLocInfo.NavHeader,
-      *   index >> LocGroup("top","nl1",...),
+      *   import net.liftmodules.FoBo
       *    :
-      *   ddLabel >> LocGroup("top",...)  >> PlaceHolder submenus(
-      *       about ,
-      *       divider2 >> FoBo.TBLocInfo.Divider,
-      *       contact,
-      *       feedback
-      *       )
-      * )
+      *   FoBo.API.Init=FoBo.API.Tether1
       * }}}
-      * @since v1.0
-      */
-    val Divider = new net.liftweb.sitemap.Loc.LocInfo[String] {
-      def apply() = hd.map(x => () => x)
-    }
-
-    /**
-      * Add a vertical divider in your bootstrap menu.
-      * For a usage example see the Divider val above.
-      * @since v1.0
-      */
-    val DividerVertical = new net.liftweb.sitemap.Loc.LocInfo[String] {
-      def apply() = vd.map(x => () => x)
-    }
-
-    /**
-      * Add nav header(s) to your bootstrap nav list. A NavHeader is a text label that can be used to label a navbar
-      * or a section of the navbar.
-      * For a usage example see the NavHeader val above.
-      * @since v1.0
-      */
-    val NavHeader = new net.liftweb.sitemap.Loc.LocInfo[String] {
-      def apply() = nh.map(x => () => x)
-    }
-
-    /**
-      * Adds target="_blank" to the link
       *
-      * {{{
-      * val AngularJS       = Menu(Loc("AngularJS",
-      *     ExtLink("http://angularjs.org/"),
-      *     S.loc("AngularJS" , scala.xml.Text("AngularJS")),
-      *     LocGroup("lg2"),
-      *     FoBo.TBLocInfo.LinkTargetBlank  ))
-      * }}}
-      * @since v1.2
       */
-    val LinkTargetBlank = new net.liftweb.sitemap.Loc.LocInfo[String] {
-      def apply() = ltb.map(x => () => x)
+    case object Tether1 extends API {
+      net.liftmodules.FoBoTetAPI.API.Tether1
     }
 
-    /**
-      * Adds target="_self" to the link
-      * @since v1.2
-      */
-    val LinkTargetSelf = new net.liftweb.sitemap.Loc.LocInfo[String] {
-      def apply() = lts.map(x => () => x)
-    }
-
-    /**
-      * Adds target="_parent" to the link
-      * @since v1.2
-      */
-    val LinkTargetParent = new net.liftweb.sitemap.Loc.LocInfo[String] {
-      def apply() = ltp.map(x => () => x)
-    }
-
-    /**
-      * Adds target="_top" to the link
-      * @since v1.2
-      */
-    val LinkTargetTop = new net.liftweb.sitemap.Loc.LocInfo[String] {
-      def apply() = ltt.map(x => () => x)
-    }
-
-  }
-
-  /**
-    * Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot.
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.JQuery=FoBo.JQuery182
-    *   FoBo.InitParam.ToolKit=FoBo.Bootstrap336
-    *   FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
-    * }}}
-    * This example uses the Bootstrap v3.3.6 option and adds the Google code Prettify vJun2011
-    * to the enabled toolkits.
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.[Toolkit case object name]",
-              "1.6.0")
-  object InitParam extends FoBoToolkit with FoBoJQuery {
-    var JQuery: FoBoJQuery   = null
-    var ToolKit: FoBoToolkit = _
-  }
-
-  /**
-    * Enable usage of KineticJS version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.
-    * @version 5.1.0
-    *
-    *  '''Lift Boot:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.KineticJS510
-    *   FoBo.init()
-    * }}}
-    * @since v1.3
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.KineticJS510", "1.6.0")
-  case object KineticJS510 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoKi.KineticJS510
-  }
-
-  /**
-    * Enable usage of Pace version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
-    * @version 0.4.15
-    *
-    *  '''Lift Boot:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.Pace0415
-    *   FoBo.init()
-    * }}}
-    * @since v1.2
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.Pace0415", "1.6.0")
-  case object Pace0415 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoPa.Toolkit.Pace0415
-  }
-
-  /**
-    * Enable usage of AngularJS version 1&#8228;4&#8228;8 in your bootstrap liftweb Boot.
-    *
-    * @version 1.4.8
-    *
-    *  '''Lift Boot:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.AngularJS148
-    *   FoBo.init()
-    * }}}
-    * @since v1.5
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS148", "1.6.0")
-  case object AngularJS148 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoAJS.Toolkit.AngularJS148
-  }
-
-  /**
-    * Enable usage of i18n files for AngularJS version 1&#8228;4&#8228;8 in your bootstrap liftweb Boot.
-    * @version 1.4.8
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.AngularJS148i18n
-    * }}}
-    * @since v1.5
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS148i18n", "1.6.0")
-  case object AngularJS148i18n extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoAJS.Toolkit.AngularJS148i18n
-  }
-
-  /**
-    * Enable usage of AngularJS version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.
-    *
-    * @version 1.4.1
-    *
-    *  '''Lift Boot:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.AngularJS141
-    *   FoBo.init()
-    * }}}
-    * @since v1.4
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS141", "1.6.0")
-  case object AngularJS141 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoAJS.Toolkit.AngularJS141
-  }
-
-  /**
-    * Enable usage of i18n files for AngularJS version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.
-    * @version 1.4.1
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.AngularJS141i18n
-    * }}}
-    * @since v1.4
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS141i18n", "1.6.0")
-  case object AngularJS141i18n extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoAJS.Toolkit.AngularJS141i18n
-  }
-
-  /**
-    * Enable usage of AngularJS version 1&#8228;3&#8228;15 in your bootstrap liftweb Boot.
-    *
-    * @version 1.3.15
-    *
-    *  '''Lift Boot:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.AngularJS1315
-    *   FoBo.init()
-    * }}}
-    * @since v1.4
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS1315", "1.6.0")
-  case object AngularJS1315 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoAJS.Toolkit.AngularJS1315
-  }
-
-  /**
-    * Enable usage of i18n files for AngularJS version 1&#8228;3&#8228;15 in your bootstrap liftweb Boot.
-    * @version 1.3.15
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.AngularJS1315i18n
-    * }}}
-    * @since v1.4
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS1315i18n", "1.6.0")
-  case object AngularJS1315i18n extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoAJS.Toolkit.AngularJS1315i18n
-  }
-
-  /**
-    * Enable usage of AngularJS version 1&#8228;2&#8228;19 in your bootstrap liftweb Boot.
-    *
-    * @version 1.2.19
-    *
-    *  '''Lift Boot:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.AngularJS1219
-    *   FoBo.init()
-    * }}}
-    * @since v1.3
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS1219", "1.6.0")
-  case object AngularJS1219 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoAJS.Toolkit.AngularJS1219
-  }
-
-  /**
-    * Enable usage of i18n files for AngularJS version 1&#8228;2&#8228;19 in your bootstrap liftweb Boot.
-    * @version 1.2.19
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.AngularJS1219i18n
-    * }}}
-    * @since v1.3
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS1219i18n", "1.6.0")
-  case object AngularJS1219i18n extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoAJS.Toolkit.AngularJS1219i18n
-  }
-
-  /**
-    * Enable usage of Angular-Material version 1&#8228;0&#8228;1 in your bootstrap liftweb Boot.
-    * @version 1.0.1
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.AJMaterial101
-    * }}}
-    * @since v1.5
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AJMaterial101", "1.6.0")
-  case object AJMaterial101 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoAJS.Toolkit.AJMaterial101
-  }
-
-  /**
-    * Enable usage of Angular-Material version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.
-    * @version 0.10.0
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.AJMaterial0100
-    * }}}
-    * @since v1.4
-    */
-  @deprecated("Use AJMaterial101 or later", "1.5.0")
-  case object AJMaterial0100 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoAJS.Toolkit.AJMaterial0100
-  }
-
-  /**
-    * Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.
-    * @version 0.10.0
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap0100
-    * }}}
-    * @since v1.2
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap0100", "1.6.0")
-  case object AJSUIBootstrap0100 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoAJS.Toolkit.AJSUIBootstrap0100
-  }
-
-  /**
-    * Enable usage of AngularUI-Bootstrap version 0&#8228;7&#8228;0 in your bootstrap liftweb Boot.
-    * @version 0.7.0
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap070
-    * }}}
-    * @since v1.2
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap070", "1.6.0")
-  case object AJSUIBootstrap070 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoAJS.Toolkit.AJSUIBootstrap070
-  }
-
-  /**
-    * Enable usage of AngularUI-Bootstrap version 0&#8228;2&#8228;0 in your bootstrap liftweb Boot.
-    * @version 0.2.0
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.AJSUIBootstrap020
-    * }}}
-    * @since v1.0
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap020", "1.6.0")
-  case object AJSUIBootstrap020 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoAJS.Toolkit.AJSUIBootstrap020
-  }
-
-  /**
-    * Enable usage of NG-Grid version 2&#8228;0&#8228;7 in your bootstrap liftweb Boot.
-    * @version 2.0.7
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.AJSNGGrid207
-    * }}}
-    * @since v1.2
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AJSNGGrid207", "1.6.0")
-  case object AJSNGGrid207 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoAJS.Toolkit.AJSNGGrid207
-  }
-
-  /**
-    * Enable usage of UI-Grid version 3&#8228;0&#8228;7 in your bootstrap liftweb Boot.
-    * @version 3.0.7
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.AJSUIGrid307
-    * }}}
-    * @since v1.5
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIGrid307", "1.6.0")
-  case object AJSUIGrid307 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoAJS.Toolkit.AJSUIGrid307
-  }
-
-  /**
-    * Enable usage of Prettify version Jun2011 in your bootstrap liftweb Boot.
-    * @version Jun2011
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.PrettifyJun2011
-    * }}}
-    * @since v0.7
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.PrettifyJun2011", "1.6.0")
-  case object PrettifyJun2011 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoGCP.PrettifyJun2011
-  }
-
-  /**
-    * Enable usage of JQuery-migrate version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
-    * @version 1.2.1
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   JQueryModule.InitParam.JQuery=JQueryModule.JQueryMigrate121
-    * }}}
-    * @since v2.7
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQueryMigrate121", "1.6.0")
-  case object JQueryMigrate121 extends FoBoJQuery {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoJQ.JQueryMigrate121
-  }
-
-  /**
-    * Enable usage of JQuery version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.
-    * @version 2.1.4
-    * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery214
-    * }}}
-    * @since v1.4
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQuery214", "1.6.0")
-  case object JQuery214 extends FoBoJQuery {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoJQ.JQuery214
-  }
-
-  /**
-    * Enable usage of JQuery version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.
-    * @version 2.1.1
-    * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   JQueryModule.InitParam.JQuery=JQueryModule.JQuery211
-    * }}}
-    * @since v1.3
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQuery211", "1.6.0")
-  case object JQuery211 extends FoBoJQuery {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoJQ.JQuery211
-  }
-
-  /**
-    * Enable usage of JQuery version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.
-    * @version 1.11.3
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.JQuery=FoBo.JQuery1113
-    * }}}
-    * @since v1.4
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQuery1113", "1.6.0")
-  case object JQuery1113 extends FoBoJQuery {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoJQ.JQuery1113
-  }
-
-  /**
-    * Enable usage of JQuery version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.
-    * @version 1.10.2
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.JQuery=FoBo.JQuery1102
-    * }}}
-    * @since v1.1
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQuery1102", "1.6.0")
-  case object JQuery1102 extends FoBoJQuery {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoJQ.JQuery1102
-  }
-
-  /**
-    * Enable usage of JQuery version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.
-    * @version 1.9.1
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.JQuery=FoBo.JQuery191
-    * }}}
-    * @since v1.0
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQuery191", "1.6.0")
-  case object JQuery191 extends FoBoJQuery {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoJQ.JQuery191
-  }
-
-  /**
-    * Enable usage of JQuery version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.
-    * @version 1.8.2
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.JQuery=FoBo.JQuery182
-    * }}}
-    * @since v0.7
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQuery182", "1.6.0")
-  case object JQuery182 extends FoBoJQuery {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoJQ.JQuery182
-  }
-
-  /**
-    * Enable usage of JQuery version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.
-    * @version 1.7.2
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.JQuery=FoBo.JQuery172
-    * }}}
-    * @since v0.7
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.JQuery172", "1.6.0")
-  case object JQuery172 extends FoBoJQuery {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoJQ.JQuery172
-  }
-
-  /**
-    * Enable usage of Font-Awesome version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
-    * @version 4.3.0
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.FontAwesome430
-    * }}}
-    * @since v1.4
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome430", "1.6.0")
-  case object FontAwesome430 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoFA.FontAwesome430
-  }
-
-  /**
-    * Enable usage of Font-Awesome version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.
-    * @version 4.1.0
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.FontAwesome410
-    * }}}
-    * @since v1.3
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome410", "1.6.0")
-  case object FontAwesome410 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoFA.FontAwesome410
-  }
-
-  /**
-    * Enable usage of Font-Awesome version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.
-    * @version 4.0.3
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.FontAwesome403
-    * }}}
-    * @since v1.2
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome403", "1.6.0")
-  case object FontAwesome403 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoFA.FontAwesome403
-  }
-
-  /**
-    * Enable usage of Font-Awesome version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.
-    * @version 3.2.1
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.FontAwesome321
-    * }}}
-    * @since v1.0
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.FontAwesome321", "1.6.0")
-  case object FontAwesome321 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoFA.FontAwesome321
-  }
-
-  /**
-    * Enable usage of Twitter Bootstrap version 2&#8228;3&#8228;2 in your bootstrap liftweb Boot.
-    * @version 2.3.2
-    *
-    * '''Example'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.Bootstrap232
-    * }}}
-    * @since v1.1
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap232", "1.6.0")
-  case object Bootstrap232 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoTB.Bootstrap232
-  }
-
-  /**
-    * Enable usage of Twitter Bootstrap version 3&#8228;0&#8228;1 in your bootstrap liftweb Boot.
-    * @version 3.0.1
-    *
-    * '''Example'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.Bootstrap301
-    * }}}
-    * @since v1.1
-    */
-  @deprecated("Use Bootstrap311 or later", "1.5.0")
-  case object Bootstrap301 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoBs.Bootstrap301
-  }
-
-  /**
-    * Enable usage of Twitter Bootstrap version 3&#8228;1&#8228;1 in your bootstrap liftweb Boot.
-    * @version 3.1.1
-    *
-    * '''Example'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.Bootstrap311
-    * }}}
-    * @since v1.2
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap311", "1.6.0")
-  case object Bootstrap311 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoBs.Bootstrap311
-  }
-
-  /**
-    * Enable usage of Twitter Bootstrap version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.
-    * @version 3.2.0
-    *
-    * '''Example'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.Bootstrap320
-    * }}}
-    * @since v1.3
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap320", "1.6.0")
-  case object Bootstrap320 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoBs.Bootstrap320
-  }
-
-  /**
-    * Enable usage of Twitter Bootstrap version 3&#8228;3&#8228;5 in your bootstrap liftweb Boot.
-    * @version 3.3.5
-    *
-    * '''Example'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.Bootstrap335
-    * }}}
-    * @since v1.4
-    */
-  @deprecated("Use Bootstrap336 or later", "1.5.0")
-  case object Bootstrap335 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoBs.Bootstrap335
-  }
-
-  /**
-    * Enable usage of Twitter Bootstrap version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.
-    * @version 3.3.6
-    *
-    * '''Example'''
-    *
-    * {{{
-    *   FoBo.InitParam.ToolKit=FoBo.Bootstrap335
-    * }}}
-    * @since v1.5
-    */
-  @deprecated("Use FoBo.Toolkit.Init=FoBo.Toolkit.Bootstrap336", "1.6.0")
-  case object Bootstrap336 extends FoBoToolkit {
-    net.liftmodules.FoBoAPI.API.FoBo1
-    net.liftmodules.FoBoBs.Bootstrap336
   }
 
 }

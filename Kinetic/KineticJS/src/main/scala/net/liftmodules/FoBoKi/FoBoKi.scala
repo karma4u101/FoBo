@@ -71,7 +71,7 @@ package object FoBoKi {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Toolkit]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: Toolkit): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -105,7 +105,7 @@ package object FoBoKi {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -139,7 +139,7 @@ package object FoBoKi {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: API): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -163,42 +163,6 @@ package object FoBoKi {
       //FoBoKiAPI.API.KineticJS0
       FoBoAPI.init
     }
-  }
-
-  /*=== InitParam (deprecated) ============================================*/
-
-  @deprecated(
-    "Init no longer nessesary as it is now automaticaly done for respective FoBoKi.InitParam",
-    "1.6.0")
-  def init() {}
-
-  //@deprecated("","1.6.0")
-  abstract sealed trait FoBoToolkit
-
-  /**
-    *
-    */
-  @deprecated("Use FoBoKi.Toolkit.Init=FoBoKi.Toolkit.[Toolkit Object]",
-              "1.6.0")
-  object InitParam extends FoBoToolkit {
-    var ToolKit: FoBoToolkit = null
-  }
-
-  /**
-    * Enable usage of KineticJS version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.
-    * @version 5.1.0
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   FoBoKi.InitParam.ToolKit=FoBoKi.KineticJS510
-    * }}}
-    * @since v1.3
-    */
-  @deprecated("Use FoBoKi.Toolkit.Init=FoBoKi.Toolkit.KineticJS510", "1.6.0")
-  case object KineticJS510 extends FoBoToolkit {
-    Toolkit.KineticJS510
-    //API.KineticJS510
   }
 
 //ToDo this should be fetched from KineticJSAPI

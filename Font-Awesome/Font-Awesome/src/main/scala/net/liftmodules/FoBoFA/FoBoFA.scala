@@ -1,9 +1,7 @@
 package net.liftmodules
 
-import _root_.net.liftweb._
-import util.{Props}
+import net.liftweb._
 import http._
-import common._
 
 /**
   * ==FoBo Font Awesome Toolkit Module==
@@ -35,7 +33,7 @@ package object FoBoFA {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Toolkit
+  sealed trait Toolkit
 
   /**
     * Initiate FoBo's Font Awesome Resource(s) in you bootstrap liftweb Boot.
@@ -48,7 +46,7 @@ package object FoBoFA {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Resource
+  sealed trait Resource
 
   /**
     * Initiate FoBo's Font Awesome API in you bootstrap liftweb Boot.
@@ -61,7 +59,7 @@ package object FoBoFA {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait API
+  sealed trait API
 
   /*=== Toolkit ============================================*/
 
@@ -71,7 +69,7 @@ package object FoBoFA {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Toolkit]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: Toolkit): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -173,7 +171,7 @@ package object FoBoFA {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -270,7 +268,7 @@ package object FoBoFA {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: API): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -295,89 +293,6 @@ package object FoBoFA {
       FoBoAPI.init
     }
 
-  }
-
-  /*=== InitParam (deprecated) ============================================*/
-
-  @deprecated(
-    "Init no longer nessesary as it is now automaticaly done for respective FoBoFA.InitParam",
-    "1.6.0")
-  def init() {}
-
-  //@deprecated("","1.6.0")
-  abstract sealed trait FAToolkit
-
-  /**
-    *
-    */
-  @deprecated("Use FoBoFA.Toolkit.Init=FoBoFA.Toolkit.[Toolkit Object]",
-              "1.6.0")
-  object InitParam extends FAToolkit {
-    var ToolKit: FAToolkit = null
-  }
-
-  /**
-    * Enable usage of Font-Awesome version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
-    * @version 4.3.0
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesome430
-    * }}}
-    * @since v1.4
-    */
-  @deprecated("Use FoBoFA.Toolkit.Init=FoBoFA.Toolkit.FontAwesome430", "1.6.0")
-  case object FontAwesome430 extends FAToolkit {
-    Toolkit.FontAwesome430
-  }
-
-  /**
-    * Enable usage of Font-Awesome version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.
-    * @version 4.1.0
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesome410
-    * }}}
-    * @since v1.3
-    */
-  @deprecated("Use FoBoFA.Toolkit.Init=FoBoFA.Toolkit.FontAwesome410", "1.6.0")
-  case object FontAwesome410 extends FAToolkit {
-    Toolkit.FontAwesome410
-  }
-
-  /**
-    * Enable usage of Font-Awesome version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.
-    * @version 4.0.3
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesome403
-    * }}}
-    * @since v1.2
-    */
-  @deprecated("Use FoBoFA.Toolkit.Init=FoBoFA.Toolkit.FontAwesome403", "1.6.0")
-  case object FontAwesome403 extends FAToolkit {
-    Toolkit.FontAwesome403
-  }
-
-  /**
-    * Enable usage of Font-Awesome version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.
-    * @version 3.2.1
-    *
-    *  '''Example:'''
-    *
-    * {{{
-    *   FoBoFA.InitParam.ToolKit=FoBoFA.FontAwesome321
-    * }}}
-    *
-    */
-  @deprecated("Use FoBoFA.Toolkit.Init=FoBoFA.Toolkit.FontAwesome321", "1.6.0")
-  case object FontAwesome321 extends FAToolkit {
-    Toolkit.FontAwesome321
   }
 
   /**

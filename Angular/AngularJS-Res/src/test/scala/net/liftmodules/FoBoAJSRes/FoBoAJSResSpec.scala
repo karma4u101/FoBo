@@ -79,21 +79,6 @@ object FoBoAJSResSpec extends Specification {
     }
   }
 
-  //Angular Material
-//   //AJMaterial110
-//  "With FoBoAJSRes.Resource.Init set to FoBoAJSRes.Resource.AJMaterial110 the ResourceServer" should {
-//    "allow  fobo/angular-material.js" in {
-//      allowResource(FoBoAJSRes.Resource.AJMaterial110,"fobo"::"angular-material.js"::Nil) must_== true
-//    }
-//    "rewrit fobo/angular-material.js to fobo/angular-material/1.1.0/js/angular-material.min.js" in {
-//      rewriteResource(FoBoAJSRes.Resource.AJMaterial110,"fobo"::"angular-material.js"::Nil) must_==
-//        List("fobo", "angular-material", "1.1.0", "js", "angular-material.min.js")
-//    }
-//    "rewrit fobo/angular-material.css to fobo/angular-material/1.1.0/js/angular-material.min.css" in {
-//      rewriteResource(FoBoAJSRes.Resource.AJMaterial110,"fobo"::"angular-material.css"::Nil) must_==
-//        List("fobo", "angular-material", "1.1.0", "css", "angular-material.min.css")
-//    }
-//  }
   //AJMaterial111
   "With FoBoAJSRes.Resource.Init set to FoBoAJSRes.Resource.AJMaterial111 the ResourceServer" should {
     "allow  fobo/angular-material.js" in {
@@ -167,32 +152,6 @@ object FoBoAJSResSpec extends Specification {
              "1.0.1",
              "css",
              "angular-material.min.css")
-    }
-  }
-
-  //AJMaterial0100
-  "With FoBoAJSRes.Resource.Init set to FoBoAJSRes.Resource.AJMaterial0100 the ResourceServer" should {
-    "allow  fobo/angular-material.js" in {
-      allowResource(FoBoAJSRes.Resource.AJMaterial0100,
-                    "fobo" :: "angular-material.js" :: Nil) must_== true
-    }
-    "rewrit fobo/angular-material.js to fobo/angular-material/0.10.0/js/angular-material.min.js" in {
-      rewriteResource(FoBoAJSRes.Resource.AJMaterial0100,
-                      "fobo" :: "angular-material.js" :: Nil) must_==
-        List("fobo",
-             "angular-material",
-             "0.10.0",
-             "js",
-             "angular-material.min.js")
-    }
-    "rewrit fobo/angular-material.css to fobo/angular-material/0.10.0/js/angular-material.css" in {
-      rewriteResource(FoBoAJSRes.Resource.AJMaterial0100,
-                      "fobo" :: "angular-material.css" :: Nil) must_==
-        List("fobo",
-             "angular-material",
-             "0.10.0",
-             "css",
-             "angular-material.css")
     }
   }
 
@@ -277,6 +236,34 @@ object FoBoAJSResSpec extends Specification {
              "0.10.0",
              "js",
              "ui-bootstrap-tpls-0.10.0.min.js")
+    }
+  }
+
+  //AJSUIBootstrap240
+  "With FoBoAJSRes.Resource.Init set to FoBoAJSRes.Resource.AJSUIBootstrap240 the ResourceServer" should {
+    "allow  fobo/ui-bootstrap.js" in {
+      allowResource(FoBoAJSRes.Resource.AJSUIBootstrap240,
+                    "fobo" :: "ui-bootstrap.js" :: Nil) must_== true
+    }
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/2.4.0/js/ui-bootstrap-2.4.0.min.js" in {
+      rewriteResource(FoBoAJSRes.Resource.AJSUIBootstrap240,
+                      "fobo" :: "ui-bootstrap.js" :: Nil) must_==
+        List("fobo",
+             "angular-ui",
+             "bootstrap",
+             "2.4.0",
+             "js",
+             "ui-bootstrap-2.4.0.min.js")
+    }
+    "rewrit fobo/ui-bootstrap-tpls.js to fobo/angular-ui/bootstrap/2.4.0/js/ui-bootstrap-tpls-2.4.0.min.js" in {
+      rewriteResource(FoBoAJSRes.Resource.AJSUIBootstrap240,
+                      "fobo" :: "ui-bootstrap-tpls.js" :: Nil) must_==
+        List("fobo",
+             "angular-ui",
+             "bootstrap",
+             "2.4.0",
+             "js",
+             "ui-bootstrap-tpls-2.4.0.min.js")
     }
   }
 

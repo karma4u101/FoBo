@@ -36,7 +36,7 @@ package object FoBoJQRes {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -283,129 +283,143 @@ package object FoBoJQRes {
     }
 
     lazy val jquery310 = {
-      ResourceServer.rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
-        case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
-          List("jquery", "3.1.0", "js", "jquery.js")
-        case "fobo" :: "jquery.js" :: Nil =>
-          List("jquery", "3.1.0", "js", "jquery-min.js")
-      }
+      ResourceServer
+        .rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
+          case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
+            List("jquery", "3.1.0", "js", "jquery.js")
+          case "fobo" :: "jquery.js" :: Nil =>
+            List("jquery", "3.1.0", "js", "jquery-min.js")
+        }
     }
 
     lazy val jqueryMigrate300 = {
-      ResourceServer.rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
-        case "fobo" :: "jquery-migrate.js" :: Nil if Props.devMode =>
-          List("jquery-migrate", "3.0.0", "js", "jquery-migrate.js")
-        case "fobo" :: "jquery-migrate.js" :: Nil =>
-          List("jquery-migrate", "3.0.0", "js", "jquery-migrate-min.js")
-      }
+      ResourceServer
+        .rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
+          case "fobo" :: "jquery-migrate.js" :: Nil if Props.devMode =>
+            List("jquery-migrate", "3.0.0", "js", "jquery-migrate.js")
+          case "fobo" :: "jquery-migrate.js" :: Nil =>
+            List("jquery-migrate", "3.0.0", "js", "jquery-migrate-min.js")
+        }
     }
 
     lazy val jquery300 = {
-      ResourceServer.rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
-        case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
-          List("jquery", "3.0.0", "js", "jquery.js")
-        case "fobo" :: "jquery.js" :: Nil =>
-          List("jquery", "3.0.0", "js", "jquery-min.js")
-      }
+      ResourceServer
+        .rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
+          case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
+            List("jquery", "3.0.0", "js", "jquery.js")
+          case "fobo" :: "jquery.js" :: Nil =>
+            List("jquery", "3.0.0", "js", "jquery-min.js")
+        }
     }
 
     lazy val jquery224 = {
-      ResourceServer.rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
-        case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
-          List("jquery", "2.2.4", "js", "jquery.js")
-        case "fobo" :: "jquery.js" :: Nil =>
-          List("jquery", "2.2.4", "js", "jquery-min.js")
-      }
+      ResourceServer
+        .rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
+          case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
+            List("jquery", "2.2.4", "js", "jquery.js")
+          case "fobo" :: "jquery.js" :: Nil =>
+            List("jquery", "2.2.4", "js", "jquery-min.js")
+        }
     }
 
     lazy val jqueryMigrate141 = {
-      ResourceServer.rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
-        case "fobo" :: "jquery-migrate.js" :: Nil if Props.devMode =>
-          List("jquery-migrate", "1.4.1", "js", "jquery-migrate.js")
-        case "fobo" :: "jquery-migrate.js" :: Nil =>
-          List("jquery-migrate", "1.4.1", "js", "jquery-migrate-min.js")
-      }
+      ResourceServer
+        .rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
+          case "fobo" :: "jquery-migrate.js" :: Nil if Props.devMode =>
+            List("jquery-migrate", "1.4.1", "js", "jquery-migrate.js")
+          case "fobo" :: "jquery-migrate.js" :: Nil =>
+            List("jquery-migrate", "1.4.1", "js", "jquery-migrate-min.js")
+        }
     }
 
     lazy val jqueryMigrate121 = {
-      ResourceServer.rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
-        case "fobo" :: "jquery-migrate.js" :: Nil if Props.devMode =>
-          List("jquery-migrate", "1.2.1", "js", "jquery-migrate.js")
-        case "fobo" :: "jquery-migrate.js" :: Nil =>
-          List("jquery-migrate", "1.2.1", "js", "jquery-migrate-min.js")
-      }
+      ResourceServer
+        .rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
+          case "fobo" :: "jquery-migrate.js" :: Nil if Props.devMode =>
+            List("jquery-migrate", "1.2.1", "js", "jquery-migrate.js")
+          case "fobo" :: "jquery-migrate.js" :: Nil =>
+            List("jquery-migrate", "1.2.1", "js", "jquery-migrate-min.js")
+        }
     }
 
     lazy val jquery214 = {
-      ResourceServer.rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
-        case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
-          List("jquery", "2.1.4", "js", "jquery.js")
-        case "fobo" :: "jquery.js" :: Nil =>
-          List("jquery", "2.1.4", "js", "jquery-min.js")
-      }
+      ResourceServer
+        .rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
+          case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
+            List("jquery", "2.1.4", "js", "jquery.js")
+          case "fobo" :: "jquery.js" :: Nil =>
+            List("jquery", "2.1.4", "js", "jquery-min.js")
+        }
     }
 
     lazy val jquery211 = {
-      ResourceServer.rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
-        case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
-          List("jquery", "2.1.1", "js", "jquery.js")
-        case "fobo" :: "jquery.js" :: Nil =>
-          List("jquery", "2.1.1", "js", "jquery-min.js")
-      }
+      ResourceServer
+        .rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
+          case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
+            List("jquery", "2.1.1", "js", "jquery.js")
+          case "fobo" :: "jquery.js" :: Nil =>
+            List("jquery", "2.1.1", "js", "jquery-min.js")
+        }
     }
 
     lazy val jquery1113 = {
-      ResourceServer.rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
-        case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
-          List("jquery", "1.11.3", "js", "jquery.js")
-        case "fobo" :: "jquery.js" :: Nil =>
-          List("jquery", "1.11.3", "js", "jquery-min.js")
-      }
+      ResourceServer
+        .rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
+          case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
+            List("jquery", "1.11.3", "js", "jquery.js")
+          case "fobo" :: "jquery.js" :: Nil =>
+            List("jquery", "1.11.3", "js", "jquery-min.js")
+        }
     }
 
     lazy val jquery1111 = {
-      ResourceServer.rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
-        case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
-          List("jquery", "1.11.1", "js", "jquery.js")
-        case "fobo" :: "jquery.js" :: Nil =>
-          List("jquery", "1.11.1", "js", "jquery-min.js")
-      }
+      ResourceServer
+        .rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
+          case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
+            List("jquery", "1.11.1", "js", "jquery.js")
+          case "fobo" :: "jquery.js" :: Nil =>
+            List("jquery", "1.11.1", "js", "jquery-min.js")
+        }
     }
 
     lazy val jquery1110 = {
-      ResourceServer.rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
-        case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
-          List("jquery", "1.11.0", "js", "jquery.js")
-        case "fobo" :: "jquery.js" :: Nil =>
-          List("jquery", "1.11.0", "js", "jquery-min.js")
-      }
+      ResourceServer
+        .rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
+          case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
+            List("jquery", "1.11.0", "js", "jquery.js")
+          case "fobo" :: "jquery.js" :: Nil =>
+            List("jquery", "1.11.0", "js", "jquery-min.js")
+        }
     }
 
     lazy val jquery1102 = {
-      ResourceServer.rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
-        case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
-          List("jquery", "1.10.2", "js", "jquery.js")
-        case "fobo" :: "jquery.js" :: Nil =>
-          List("jquery", "1.10.2", "js", "jquery-min.js")
-      }
+      ResourceServer
+        .rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
+          case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
+            List("jquery", "1.10.2", "js", "jquery.js")
+          case "fobo" :: "jquery.js" :: Nil =>
+            List("jquery", "1.10.2", "js", "jquery-min.js")
+        }
     }
 
     lazy val jquery191 = {
-      ResourceServer.rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
-        case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
-          List("jquery", "1.9.1", "js", "jquery.js")
-        case "fobo" :: "jquery.js" :: Nil =>
-          List("jquery", "1.9.1", "js", "jquery-min.js")
-      }
+      ResourceServer
+        .rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
+          case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
+            List("jquery", "1.9.1", "js", "jquery.js")
+          case "fobo" :: "jquery.js" :: Nil =>
+            List("jquery", "1.9.1", "js", "jquery-min.js")
+        }
     }
 
     lazy val jquery182 = {
-      ResourceServer.rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
-        case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
-          List("jquery", "1.8.2", "js", "jquery.js")
-        case "fobo" :: "jquery.js" :: Nil =>
-          List("jquery", "1.8.2", "js", "jquery-min.js")
-      }
+      ResourceServer
+        .rewrite { //fetched from the jquery module ("adding" fobo to the modules path)
+          case "fobo" :: "jquery.js" :: Nil if Props.devMode =>
+            List("jquery", "1.8.2", "js", "jquery.js")
+          case "fobo" :: "jquery.js" :: Nil =>
+            List("jquery", "1.8.2", "js", "jquery-min.js")
+        }
     }
 
     lazy val jquery172 = {

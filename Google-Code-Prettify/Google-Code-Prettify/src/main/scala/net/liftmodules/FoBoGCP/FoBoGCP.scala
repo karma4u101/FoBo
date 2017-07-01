@@ -71,7 +71,7 @@ package object FoBoGCP {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Toolkit]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: Toolkit): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -105,7 +105,7 @@ package object FoBoGCP {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -137,7 +137,7 @@ package object FoBoGCP {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: API): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -162,41 +162,6 @@ package object FoBoGCP {
       FoBoAPI.init
     }
 
-  }
-
-  /*=== InitParam (deprecated) ============================================*/
-
-  @deprecated(
-    "Init no longer nessesary as it is now automaticaly done for respective FoBoGCP.InitParam",
-    "1.6.0")
-  def init() {}
-
-  //@deprecated("","1.6.0")
-  abstract sealed trait FoBoToolkit
-
-  /**
-    *
-    */
-  @deprecated("Use FoBoGCP.Toolkit.Init=FoBoPa.Toolkit.[Toolkit Object]",
-              "1.6.0")
-  object InitParam extends FoBoToolkit {
-    var ToolKit: FoBoToolkit = null
-  }
-
-  /**
-    * Enable usage of Prettify version Jun2011 in your bootstrap liftweb Boot.
-    * @version Jun2011
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   FoBoGCP.InitParam.ToolKit=FoBoGCP.PrettifyJun2011
-    * }}}
-    */
-  @deprecated("Use FoBoGCP.Toolkit.Init=FoBoGCP.Toolkit.PrettifyJun2011",
-              "1.6.0")
-  case object PrettifyJun2011 extends FoBoToolkit {
-    Toolkit.PrettifyJun2011
   }
 
   /**

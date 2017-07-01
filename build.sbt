@@ -1,4 +1,8 @@
 import LiftModuleKeys._
+import sbt.project
+
+//val liftVersion = settingKey[String]("Lift Web Framework full version number")
+//val liftEdition = settingKey[String]("Lift Edition (such as 2.6 or 3.0)")
 
 //##################################################################
 //##
@@ -8,20 +12,21 @@ import LiftModuleKeys._
 
 lazy val commonSettings = Seq(
   organization := "net.liftmodules",
-  version in ThisBuild := "1.7",
+  version in ThisBuild := "2.0-SNAPSHOT",
+  //scalacOptions in ThisBuild ++= Seq("-unchecked", "-deprecation", "-feature"),
+  scalacOptions in ThisBuild ++= Seq("-unchecked", "-deprecation"),
   autoAPIMappings := true
 )
 
 lazy val fobometa = (project in file("."))
   .settings(commonSettings: _*)
-  .settings(unidocSettings: _*)
-  //.settings(scalafmtConfig in ThisBuild := Some(file(".scalafmt")))
+  //.settings(unidocSettings: _*)
   .settings(name := "fobo-meta")
-  .settings(scalaVersion in ThisBuild := "2.11.7")
-  .settings(liftVersion in ThisBuild <<= liftVersion ?? "3.0-RC4")
-  .settings(liftEdition in ThisBuild <<= liftVersion apply {
-    _.substring(0, 3)
-  })
+  .settings(scalaVersion in ThisBuild := "2.12.1")
+  .settings(liftVersion in ThisBuild := { liftVersion ?? "3.1.0-M3" }.value)
+  .settings(liftEdition in ThisBuild := {
+    liftVersion apply { _.substring(0, 3) }
+  }.value)
   .aggregate(fobo)
 
 lazy val fobo = (project in file("FoBo/FoBo"))
@@ -36,7 +41,10 @@ lazy val fobo = (project in file("FoBo/FoBo"))
              bootstrap3,
              fontAwesome,
              prettify,
-             highlightjs)
+             highlightjs,
+             tether,
+             popper,
+             tooltip)
   .dependsOn(foboapi,
              kineticjs,
              pace,
@@ -46,7 +54,10 @@ lazy val fobo = (project in file("FoBo/FoBo"))
              bootstrap3,
              fontAwesome,
              prettify,
-             highlightjs)
+             highlightjs,
+             tether,
+             popper,
+             tooltip)
 
 lazy val foboapi = (project in file("FoBo/FoBo-API"))
   .enablePlugins(BuildInfoPlugin)
@@ -177,6 +188,48 @@ lazy val highlightjsres = (project in file("Highlight/HighlightJS-Res"))
   .settings(commonSettings: _*)
   .settings(name := "fobo-highlightjs-res")
 
+lazy val tether = (project in file("Tether/Tether"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-tether")
+  .aggregate(tetherapi, tetherres)
+  .dependsOn(tetherapi, tetherres)
+
+lazy val tetherapi = (project in file("Tether/Tether-API"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-tether-api")
+
+lazy val tetherres = (project in file("Tether/Tether-Res"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-tether-res")
+
+lazy val popper = (project in file("Popper/Popper"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-popper")
+  .aggregate(popperapi, popperres)
+  .dependsOn(popperapi, popperres)
+
+lazy val popperapi = (project in file("Popper/Popper-API"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-popper-api")
+
+lazy val popperres = (project in file("Popper/Popper-Res"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-popper-res")
+
+lazy val tooltip = (project in file("Popper/Tooltip"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-tooltip")
+  .aggregate(tooltipapi, tooltipres)
+  .dependsOn(tooltipapi, tooltipres)
+
+lazy val tooltipapi = (project in file("Popper/Tooltip-API"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-tooltip-api")
+
+lazy val tooltipres = (project in file("Popper/Tooltip-Res"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-tooltip-res")
+
 //##
 //##
 //##################################################################
@@ -199,11 +252,11 @@ resolvers in ThisBuild ++= Seq(
 //##  Common dependencies
 //##
 //##############
-libraryDependencies in ThisBuild <++= (liftVersion, liftEdition, version) {
-  (v, e, mv) =>
-    "net.liftweb" %% "lift-webkit" % v % "provided" ::
-      "net.liftweb" %% "lift-testkit" % v % "provided" ::
-      Nil
+
+libraryDependencies in ThisBuild ++= {
+  "net.liftweb" %% "lift-webkit" % liftVersion.value % "provided" ::
+    "net.liftweb" %% "lift-testkit" % liftVersion.value % "provided" ::
+    Nil
 }
 
 libraryDependencies in ThisBuild ++= {
@@ -283,13 +336,15 @@ EclipseKeys.createSrc := EclipseCreateSrc.Default + EclipseCreateSrc.Managed
 credentials in ThisBuild += Credentials(
   file("/private/liftmodules/sonatype.credentials"))
 
-publishTo in ThisBuild <<= version { v: String =>
-  val sonatype = "https://oss.sonatype.org/"
-  if (v.trim.endsWith("SNAPSHOT"))
-    Some("snapshots" at sonatype + "content/repositories/snapshots")
-  else
-    Some("releases" at sonatype + "service/local/staging/deploy/maven2")
-}
+publishTo in ThisBuild := {
+  version { v: String =>
+    val sonatype = "https://oss.sonatype.org/"
+    if (v.trim.endsWith("SNAPSHOT"))
+      Some("snapshots" at sonatype + "content/repositories/snapshots")
+    else
+      Some("releases" at sonatype + "service/local/staging/deploy/maven2")
+  }
+}.value
 
 publishMavenStyle in ThisBuild := true
 

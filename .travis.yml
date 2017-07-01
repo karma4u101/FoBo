@@ -1,5 +1,17 @@
  language: scala
  scala:
-   - "2.11.4"
+   - "2.12.1"
  jdk:
    - oraclejdk8
+
+script: travis_wait 20 sbt ++$TRAVIS_SCALA_VERSION test
+
+notifications:
+  webhooks:
+    urls:
+      - https://webhooks.gitter.im/e/253625f0a9938e89a729
+    on_success: always  # options: [always|never|change] default: always
+    on_failure: always  # options: [always|never|change] default: always
+    on_start: never     # options: [always|never|change] default: always
+
+

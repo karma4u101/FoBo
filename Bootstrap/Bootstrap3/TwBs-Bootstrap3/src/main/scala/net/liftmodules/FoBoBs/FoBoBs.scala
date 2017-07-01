@@ -82,7 +82,7 @@ package object FoBoBs {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Toolkit]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: Toolkit): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -209,7 +209,7 @@ package object FoBoBs {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -330,7 +330,7 @@ package object FoBoBs {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
-    def Init: Store          = store
+    def Init: Store = store
     def Init_=(t: API): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -458,127 +458,6 @@ package object FoBoBs {
     val LinkTargetTop = new net.liftweb.sitemap.Loc.LocInfo[String] {
       def apply() = ltt.map(x => () => x)
     }
-  }
-
-  /*============== InitParam (deprecated) ===================*/
-
-  /**
-    * @example In bootstrap liftweb Boot set
-    * {{{
-    *   FoBoBs.init()
-    * }}}
-    * The above example just calls init without specifying fobo init
-    * params so default Toolkit and JQuery values will be used.
-    */
-  @deprecated(
-    "Init no longer nessesary as it is now automaticaly done for respective FoBoBs.InitParam",
-    "1.6.0")
-  def init(): Unit = {}
-
-  @deprecated("Use FoBoBs.Toolkit or FoBoBs.Resource and FoBoBs.API", "1.6.0")
-  abstract sealed trait FoBoToolkit
-
-  /**
-    * Enable Toolkit(s)/JQuery options for the FoBo module in your bootstrap liftweb Boot
-    *
-    * '''Example:'''
-    *
-    * {{{
-    *   FoBoBs.InitParam.JQuery=FoBoBs.JQuery192
-    *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap301
-    * }}}
-    * This example uses the Bootstrap v3.0.1 option.
-    *
-    */
-  @deprecated("Use FoBoBs.Toolkit.Init=FoBoBs.Toolkit.[Toolkit Object]",
-              "1.6.0")
-  object InitParam extends FoBoToolkit {
-    var ToolKit: FoBoToolkit = null
-  }
-
-  /**
-    * Enable usage of Bootstrap version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.
-    * @version 3.3.6
-    *
-    * '''Example'''
-    *
-    * {{{
-    *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap336
-    * }}}
-    * @since v1.5
-    */
-  @deprecated("Use FoBoBs.Toolkit.Init=FoBoBs.Toolkit.Bootstrap336", "1.6.0")
-  case object Bootstrap336 extends FoBoToolkit {
-    net.liftmodules.FoBoBsRes.Resource.Bootstrap336
-    net.liftmodules.FoBoBsAPI.API.Bootstrap3
-    //FoBoAPI.init
-    //FoBoResources.init
-    //FoBoResources.bootstrap336
-  }
-
-  /**
-    * Enable usage of Bootstrap version 3&#8228;3&#8228;5 in your bootstrap liftweb Boot.
-    * @version 3.3.5
-    *
-    * '''Example'''
-    *
-    * {{{
-    *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap335
-    * }}}
-    * @since v1.4
-    */
-  @deprecated("Use Bootstrap336 or later", "1.5.0")
-  case object Bootstrap335 extends FoBoToolkit {
-    net.liftmodules.FoBoBsRes.Resource.Bootstrap335
-    net.liftmodules.FoBoBsAPI.API.Bootstrap3
-  }
-
-  /**
-    * Enable usage of Bootstrap version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.
-    * @version 3.2.0
-    *
-    * '''Example'''
-    *
-    * {{{
-    *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap320
-    * }}}
-    */
-  @deprecated("Use FoBoBs.Toolkit.Init=FoBoBs.Toolkit.Bootstrap320", "1.6.0")
-  case object Bootstrap320 extends FoBoToolkit {
-    net.liftmodules.FoBoBsRes.Resource.Bootstrap320
-    net.liftmodules.FoBoBsAPI.API.Bootstrap3
-  }
-
-  /**
-    * Enable usage of Bootstrap version 3&#8228;1&#8228;1 in your bootstrap liftweb Boot.
-    * @version 3.1.1
-    *
-    * '''Example'''
-    *
-    * {{{
-    *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap311
-    * }}}
-    */
-  @deprecated("Use FoBoBs.Toolkit.Init=FoBoBs.Toolkit.Bootstrap311", "1.6.0")
-  case object Bootstrap311 extends FoBoToolkit {
-    net.liftmodules.FoBoBsRes.Resource.Bootstrap311
-    net.liftmodules.FoBoBsAPI.API.Bootstrap3
-  }
-
-  /**
-    * Enable usage of Bootstrap version 3&#8228;0&#8228;1 in your bootstrap liftweb Boot.
-    * @version 3.0.1
-    *
-    * '''Example'''
-    *
-    * {{{
-    *   FoBoBs.InitParam.ToolKit=FoBoBs.Bootstrap301
-    * }}}
-    */
-  @deprecated("Use FoBoBs.Toolkit.Init=FoBoBs.Toolkit.Bootstrap301", "1.6.0")
-  case object Bootstrap301 extends FoBoToolkit {
-    net.liftmodules.FoBoBsRes.Resource.Bootstrap301
-    net.liftmodules.FoBoBsAPI.API.Bootstrap3
   }
 
 }

@@ -1,8 +1,7 @@
 # FoBo - A Modular Front-End Toolkit module for Lift 
 
-[![Build Status](https://secure.travis-ci.org/karma4u101/FoBo.png)](http://travis-ci.org/karma4u101/FoBo)
 [![Stories in Ready](https://badge.waffle.io/karma4u101/FoBo.svg?label=ready&title=Ready)](http://waffle.io/karma4u101/FoBo) 
-[![Stories in Progress](https://badge.waffle.io/karma4u101/FoBo.svg?label=In Progress&title=In Progress)](http://waffle.io/karma4u101/FoBo) 
+[![Build Status](https://secure.travis-ci.org/karma4u101/FoBo.png)](http://travis-ci.org/karma4u101/FoBo)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/karma4u101/FoBo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 FoBo is a [Lift module](http://liftweb.net/lift_modules), composed of several Toolkit modules that includes industry leading open source front end 
@@ -10,7 +9,7 @@ toolkits for developing mobile scalable responsive web applications that will ja
 
 The toolkit modules is in it's turn composed of a API module and a Resource module artifact making the usage of FoBo scalable and flexible.
 
-A **live demo** and introduction to using the FoBo module(s), including [unified Scaladoc API documentation](http://www.media4u101.se/fobo-lift-template-demo/foboapi/index.html#net.liftmodules.FoBo.package) 
+A **live demo** and introduction to using the FoBo module(s), including [unified Scaladoc API documentation](http://www.media4u101.se/fobo-lift-template-demo/foboapi/current/index.html#net.liftmodules.FoBo.package) 
 and links to running examples of starter templates and more, can be seen at the [FoBo Template Demo](http://www.media4u101.se/fobo-lift-template-demo/). 
 
 With this Lift module you will get a hassle free inclusion and smooth upgrades of toolkits, you decide what toolkits artifacts and versions to enable.
@@ -191,15 +190,16 @@ For more information see [FoBo API: Resources](http://www.media4u101.se/fobo-lif
 The following is a list of names that can be used in Lift Boot either pulled in by the FoBo meta module or as stand alone (sub) modules. 
 For more information se respective sub modules readme. 
 
+- AngularJSXYZ with components (AJSUIBootstrapXYZ, AJSUIGridXYZ, AJSNGGridXYZ, AJMaterialXYZ)
 - BootstrapXYZ 
-- FontAwesomeXYZ 
+- FontAwesomeXYZ
+- HighlightJSXYZ
 - JQueryXYZ
 - JQueryMigrateXYZ
-- PrettifyXYZ
-- HighlightJSXYZ
-- PaceXYZ
 - KineticJSXYZ
-- AngularJSXYZ with components (AJSUIBootstrapXYZ, AJSUIGridXYZ, AJSNGGridXYZ, AJMaterialXYZ)
+- PaceXYZ
+- PrettifyXYZ
+- Tether
 
 Where X is major, Y minor and Z incremental version numbers as seen in the Toolkits list above (for example BootstrapXYZ will be Bootstrap230 for 
 Twitter Bootstrap v2.3.0) For more information on how to set this up see below. 
@@ -219,12 +219,13 @@ The FoBo / FoBo module includes the following modules and supports the following
 -   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/Bootstrap/Bootstrap3) [v3.0.0, v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6, v3.3.7] - [Bootstrap 3.x](http://getbootstrap.com/)
 -   [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Bootstrap/Bootstrap2) [v2.3.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 -   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0, v3.2.1, v4.0.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] - [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 
+-   [FoBo-Highlight](https://github.com/karma4u101/FoBo/tree/master/Highlight) [v9.3.0] - [highlight.js](https://highlightjs.org/) 
 -   [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery)  [v1.7.2, v1.8,2, v1.9.1, v1.10.2, v1.11.0, v1.11.1, v1.11.3, v2.1.1, v2.1.4, v2.2.4, v3.0.0, v3.1.0] - [JQuery](http://jquery.com/)
 -   FoBo-JQuery also includes JQuery Migrate [v1.2.1, v1.4.1, v3.0.0] - [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)
--   [FoBo-Google-Code-Prettify](https://github.com/karma4u101/FoBo/tree/master/Google-Code-Prettify) [vJun2011] - [google-code-prettify](https://github.com/google/code-prettify/)
--   [FoBo-Highlight](https://github.com/karma4u101/FoBo/tree/master/Highlight) [v9.3.0] - [highlight.js](https://highlightjs.org/) 
--   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) [v0.4.15, v1.0.2] - [Pace](http://github.hubspot.com/pace/docs/welcome/) 
 -   [FoBo-Kinetic](https://github.com/karma4u101/FoBo/tree/master/Kinetic) [v5.1.0] - [Kinetic](http://kineticjs.com/) 
+-   [FoBo-Google-Code-Prettify](https://github.com/karma4u101/FoBo/tree/master/Google-Code-Prettify) [vJun2011] - [google-code-prettify](https://github.com/google/code-prettify/)
+-   [FoBo-Pace](https://github.com/karma4u101/FoBo/tree/master/Pace) [v0.4.15, v1.0.2] - [Pace](http://github.hubspot.com/pace/docs/welcome/) 
+-   [Tether](https://github.com/karma4u101/FoBo/tree/master/Tether) [v1.4.0] - [Tether](http://tether.io/)
 
 **Note:** Some of the listed toolkit versions may have been deprecated (and possible removed after having been deprecated in 2 releases).
 

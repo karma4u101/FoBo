@@ -82,7 +82,7 @@ trait TBNavbar extends FlexMenuBuilder with DispatchSnippet {
     render
   }
 
-  override def expandAll  = true
+  override def expandAll = true
   override def linkToSelf = true
 
   override def renderOuterTag(inner: NodeSeq, top: Boolean): NodeSeq = {
@@ -97,12 +97,14 @@ trait TBNavbar extends FlexMenuBuilder with DispatchSnippet {
 
   override def renderSelfLinked(item: MenuItem,
                                 renderInner: Seq[MenuItem] => NodeSeq): Elem =
-    buildInnerTag(<xml:group>{
+    buildInnerTag(
+      <xml:group>{
       renderLink(item.uri, item.text, item.path,
         item.current)
     }{ renderInner(item.kids) }</xml:group>,
-                  item.path,
-                  item.current)
+      item.path,
+      item.current
+    )
 
   override def renderLink(uri: NodeSeq,
                           text: NodeSeq,
@@ -130,7 +132,8 @@ trait TBNavbar extends FlexMenuBuilder with DispatchSnippet {
     buildTBInnerTag(
       <li class='dropdown'><a href='#' class='dropdown-toggle' data-toggle='dropdown' id='content-dropdown'><span>{ item.text }</span> <b class='caret'></b></a>{ renderInner(item.kids) }</li>,
       item.path,
-      item.current)
+      item.current
+    )
 
   override def buildItemMenu[A](loc: Loc[A],
                                 currLoc: Box[Loc[_]],
@@ -258,7 +261,7 @@ trait TBNavbar extends FlexMenuBuilder with DispatchSnippet {
           case Full(f) => {
             buildWithInfo(f, renderInner, item)
           }
-          case Empty                  =>
+          case Empty =>
           case Failure(message, _, _) => ""
         }
         //info list has more elements
