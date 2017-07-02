@@ -1,0 +1,20 @@
+alias pub=publish-signed
+
+set version       in ThisBuild:="1.7"
+
+set liftVersion   in ThisBuild:="3.1.0-RC1"
+set scalaVersion  in ThisBuild:="2.12.2"
+
+project fobo
+clean
+clean-files
+set parallelExecution in Test := false
+; compile ; test ; pub
+
+set scalaVersion  in ThisBuild:="2.11.11"
+
+project fobo
+clean
+clean-files
+set parallelExecution in Test := false
+; compile ; test ; pub
