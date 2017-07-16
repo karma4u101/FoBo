@@ -11,7 +11,7 @@ import common._
   * This FoBo toolkit module provides Tether API and Resource components to the
   * FoBo / FoBo Module, but can also be used as-is, see below for setup information.
   *
-  * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.FoBo]] for setup information.
+  * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.fobo]] for setup information.
   *
   */
 package object FoBoTet {

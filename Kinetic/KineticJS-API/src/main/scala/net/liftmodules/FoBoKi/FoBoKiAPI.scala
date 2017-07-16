@@ -11,7 +11,7 @@ import common._
   * This FoBo API module provides FoBo/Lift API components for the KineticJs Toolkit Module,
   * but can also be used as-is, see below for setup information.
   *
-  * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.FoBo]] for setup information.
+  * If you are using this module via the FoBo/FoBo artifact module see also [[net.liftmodules.fobo]] for setup information.
   *
   */
 package object FoBoKiAPI {
