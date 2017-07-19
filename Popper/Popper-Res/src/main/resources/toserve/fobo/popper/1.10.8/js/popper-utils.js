@@ -1,3 +1,27 @@
+/**!
+ * @fileOverview Kickass library to create and place poppers near their reference elements.
+ * @version 1.10.8
+ * @license
+ * Copyright (c) 2016 Federico Zivolo and contributors
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
 /**
  * Get CSS computed property of the given element
  * @method
@@ -313,23 +337,27 @@ function getOffsetRectRelativeToArbitraryNode(children, parent) {
   const childrenRect = getBoundingClientRect(children);
   const parentRect = getBoundingClientRect(parent);
   const scrollParent = getScrollParent(children);
+
+  const styles = getStyleComputedProperty(parent);
+  const borderTopWidth = +styles.borderTopWidth.split('px')[0];
+  const borderLeftWidth = +styles.borderLeftWidth.split('px')[0];
+
   let offsets = getClientRect({
-    top: childrenRect.top - parentRect.top,
-    left: childrenRect.left - parentRect.left,
+    top: childrenRect.top - parentRect.top - borderTopWidth,
+    left: childrenRect.left - parentRect.left - borderLeftWidth,
     width: childrenRect.width,
     height: childrenRect.height
   });
+  offsets.marginTop = 0;
+  offsets.marginLeft = 0;
 
   // Subtract margins of documentElement in case it's being used as parent
   // we do this only on HTML because it's the only element that behaves
   // differently when margins are applied to it. The margins are included in
   // the box of the documentElement, in the other cases not.
-  if (isHTML || parent.nodeName === 'BODY') {
-    const styles = getStyleComputedProperty(parent);
-    const borderTopWidth = isIE10 && isHTML ? 0 : +styles.borderTopWidth.split('px')[0];
-    const borderLeftWidth = isIE10 && isHTML ? 0 : +styles.borderLeftWidth.split('px')[0];
-    const marginTop = isIE10 && isHTML ? 0 : +styles.marginTop.split('px')[0];
-    const marginLeft = isIE10 && isHTML ? 0 : +styles.marginLeft.split('px')[0];
+  if (!isIE10 && isHTML) {
+    const marginTop = +styles.marginTop.split('px')[0];
+    const marginLeft = +styles.marginLeft.split('px')[0];
 
     offsets.top -= borderTopWidth - marginTop;
     offsets.bottom -= borderTopWidth - marginTop;
@@ -844,6 +872,12 @@ function runModifiers(modifiers, data, ends) {
     }
     const fn = modifier.function || modifier.fn;
     if (modifier.enabled && isFunction(fn)) {
+      // Add properties to offsets to make them a complete clientRect object
+      // we do this before each modifier to make sure the previous one doesn't
+      // mess with these values
+      data.offsets.popper = getClientRect(data.offsets.popper);
+      data.offsets.reference = getClientRect(data.offsets.reference);
+
       data = fn(data, modifier);
     }
   });
@@ -920,7 +954,12 @@ function setupEventListeners(reference, options, state, updateBound) {
   return state;
 }
 
-/** @namespace Popper.Utils */
+// This is here just for backward compatibility with versions lower than v1.10.3
+// you should import the utilities using named exports, if you want them all use:
+// ```
+// import * as PopperUtils from 'popper-utils';
+// ```
+// The default export will be removed in the next major version.
 var index = {
   computeAutoPlacement,
   debounce,
@@ -954,5 +993,5 @@ var index = {
   setupEventListeners
 };
 
-export default index;
+export { computeAutoPlacement, debounce, findIndex, getBordersSize, getBoundaries, getBoundingClientRect, getClientRect, getOffsetParent, getOffsetRect, getOffsetRectRelativeToArbitraryNode, getOuterSizes, getParentNode, getPopperOffsets, getReferenceOffsets, getScroll, getScrollParent, getStyleComputedProperty, getSupportedPropertyName, getWindowSizes, isFixed, isFunction, isModifierEnabled, isModifierRequired, isNative, isNumeric, removeEventListeners, runModifiers, setAttributes, setStyles, setupEventListeners };export default index;
 //# sourceMappingURL=popper-utils.js.map

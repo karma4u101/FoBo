@@ -1,3 +1,33 @@
+/**!
+ * @fileOverview Kickass library to create and place poppers near their reference elements.
+ * @version 1.10.8
+ * @license
+ * Copyright (c) 2016 Federico Zivolo and contributors
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof define === 'function' && define.amd ? define(factory) :
+	(global.Popper = factory());
+}(this, (function () { 'use strict';
+
 var nativeHints = ['native code', '[object MutationObserverConstructor]'];
 
 /**
@@ -76,36 +106,6 @@ var supportsNativeMutationObserver = isBrowser && isNative(window.MutationObserv
 * @returns {Function}
 */
 var debounce = supportsNativeMutationObserver ? microtaskDebounce : taskDebounce;
-
-/**
- * Tells if a given input is a number
- * @method
- * @memberof Popper.Utils
- * @param {*} input to check
- * @return {Boolean}
- */
-function isNumeric(n) {
-  return n !== '' && !isNaN(parseFloat(n)) && isFinite(n);
-}
-
-/**
- * Set the style to the given popper
- * @method
- * @memberof Popper.Utils
- * @argument {Element} element - Element to apply the style to
- * @argument {Object} styles
- * Object with a list of properties and values which will be applied to the element
- */
-function setStyles(element, styles) {
-  Object.keys(styles).forEach(function (prop) {
-    var unit = '';
-    // add unit if the value is numeric and is one of the following
-    if (['width', 'height', 'top', 'right', 'bottom', 'left'].indexOf(prop) !== -1 && isNumeric(styles[prop])) {
-      unit = 'px';
-    }
-    element.style[prop] = styles[prop] + unit;
-  });
-}
 
 /**
  * Check if the given variable is a function
@@ -488,23 +488,27 @@ function getOffsetRectRelativeToArbitraryNode(children, parent) {
   var childrenRect = getBoundingClientRect(children);
   var parentRect = getBoundingClientRect(parent);
   var scrollParent = getScrollParent(children);
+
+  var styles = getStyleComputedProperty(parent);
+  var borderTopWidth = +styles.borderTopWidth.split('px')[0];
+  var borderLeftWidth = +styles.borderLeftWidth.split('px')[0];
+
   var offsets = getClientRect({
-    top: childrenRect.top - parentRect.top,
-    left: childrenRect.left - parentRect.left,
+    top: childrenRect.top - parentRect.top - borderTopWidth,
+    left: childrenRect.left - parentRect.left - borderLeftWidth,
     width: childrenRect.width,
     height: childrenRect.height
   });
+  offsets.marginTop = 0;
+  offsets.marginLeft = 0;
 
   // Subtract margins of documentElement in case it's being used as parent
   // we do this only on HTML because it's the only element that behaves
   // differently when margins are applied to it. The margins are included in
   // the box of the documentElement, in the other cases not.
-  if (isHTML || parent.nodeName === 'BODY') {
-    var styles = getStyleComputedProperty(parent);
-    var borderTopWidth = isIE10 && isHTML ? 0 : +styles.borderTopWidth.split('px')[0];
-    var borderLeftWidth = isIE10 && isHTML ? 0 : +styles.borderLeftWidth.split('px')[0];
-    var marginTop = isIE10 && isHTML ? 0 : +styles.marginTop.split('px')[0];
-    var marginLeft = isIE10 && isHTML ? 0 : +styles.marginLeft.split('px')[0];
+  if (!isIE10 && isHTML) {
+    var marginTop = +styles.marginTop.split('px')[0];
+    var marginLeft = +styles.marginLeft.split('px')[0];
 
     offsets.top -= borderTopWidth - marginTop;
     offsets.bottom -= borderTopWidth - marginTop;
@@ -834,6 +838,12 @@ function runModifiers(modifiers, data, ends) {
     }
     var fn = modifier.function || modifier.fn;
     if (modifier.enabled && isFunction(fn)) {
+      // Add properties to offsets to make them a complete clientRect object
+      // we do this before each modifier to make sure the previous one doesn't
+      // mess with these values
+      data.offsets.popper = getClientRect(data.offsets.popper);
+      data.offsets.reference = getClientRect(data.offsets.reference);
+
       data = fn(data, modifier);
     }
   });
@@ -1033,6 +1043,36 @@ function disableEventListeners() {
 }
 
 /**
+ * Tells if a given input is a number
+ * @method
+ * @memberof Popper.Utils
+ * @param {*} input to check
+ * @return {Boolean}
+ */
+function isNumeric(n) {
+  return n !== '' && !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+/**
+ * Set the style to the given popper
+ * @method
+ * @memberof Popper.Utils
+ * @argument {Element} element - Element to apply the style to
+ * @argument {Object} styles
+ * Object with a list of properties and values which will be applied to the element
+ */
+function setStyles(element, styles) {
+  Object.keys(styles).forEach(function (prop) {
+    var unit = '';
+    // add unit if the value is numeric and is one of the following
+    if (['width', 'height', 'top', 'right', 'bottom', 'left'].indexOf(prop) !== -1 && isNumeric(styles[prop])) {
+      unit = 'px';
+    }
+    element.style[prop] = styles[prop] + unit;
+  });
+}
+
+/**
  * Set the attributes to the given popper
  * @method
  * @memberof Popper.Utils
@@ -1060,46 +1100,16 @@ function setAttributes(element, attributes) {
  * @argument {Object} options - Modifiers configuration and options
  * @returns {Object} The same data object
  */
-function applyStyle(data, options) {
-  // apply the final offsets to the popper
-  // NOTE: 1 DOM access here
-  var styles = {
-    position: data.offsets.popper.position
-  };
-
-  var attributes = {
-    'x-placement': data.placement
-  };
-
-  // round top and left to avoid blurry text
-  var left = Math.round(data.offsets.popper.left);
-  var top = Math.round(data.offsets.popper.top);
-
-  // if gpuAcceleration is set to true and transform is supported,
-  //  we use `translate3d` to apply the position to the popper we
-  // automatically use the supported prefixed version if needed
-  var prefixedProperty = getSupportedPropertyName('transform');
-  if (options.gpuAcceleration && prefixedProperty) {
-    styles[prefixedProperty] = 'translate3d(' + left + 'px, ' + top + 'px, 0)';
-    styles.top = 0;
-    styles.left = 0;
-    styles.willChange = 'transform';
-  } else {
-    // othwerise, we use the standard `left` and `top` properties
-    styles.left = left;
-    styles.top = top;
-    styles.willChange = 'top, left';
-  }
-
+function applyStyle(data) {
   // any property present in `data.styles` will be applied to the popper,
   // in this way we can make the 3rd party modifiers add custom styles to it
   // Be aware, modifiers could override the properties defined in the previous
   // lines of this modifier!
-  setStyles(data.instance.popper, _extends({}, styles, data.styles));
+  setStyles(data.instance.popper, data.styles);
 
   // any property present in `data.attributes` will be applied to the popper,
   // they will be set as HTML attributes of the element
-  setAttributes(data.instance.popper, _extends({}, attributes, data.attributes));
+  setAttributes(data.instance.popper, data.attributes);
 
   // if the arrow style has been computed, apply the arrow style
   if (data.offsets.arrow) {
@@ -1129,7 +1139,105 @@ function applyStyleOnLoad(reference, popper, options, modifierOptions, state) {
   var placement = computeAutoPlacement(options.placement, referenceOffsets, popper, reference, options.modifiers.flip.boundariesElement, options.modifiers.flip.padding);
 
   popper.setAttribute('x-placement', placement);
+
+  // Apply `position` to popper before anything else because
+  // without the position applied we can't guarantee correct computations
+  setStyles(popper, { position: 'absolute' });
+
   return options;
+}
+
+/**
+ * @function
+ * @memberof Modifiers
+ * @argument {Object} data - The data object generated by `update` method
+ * @argument {Object} options - Modifiers configuration and options
+ * @returns {Object} The data object, properly modified
+ */
+function computeStyle(data, options) {
+  var x = options.x,
+      y = options.y;
+  var popper = data.offsets.popper;
+
+  // Remove this legacy support in Popper.js v2
+
+  var legacyGpuAccelerationOption = find(data.instance.modifiers, function (modifier) {
+    return modifier.name === 'applyStyle';
+  }).gpuAcceleration;
+  if (legacyGpuAccelerationOption !== undefined) {
+    console.warn('WARNING: `gpuAcceleration` option moved to `computeStyle` modifier and will not be supported in future versions of Popper.js!');
+  }
+  var gpuAcceleration = legacyGpuAccelerationOption !== undefined ? legacyGpuAccelerationOption : options.gpuAcceleration;
+
+  var offsetParent = getOffsetParent(data.instance.popper);
+  var offsetParentRect = getBoundingClientRect(offsetParent);
+
+  // Styles
+  var styles = {
+    position: popper.position
+  };
+
+  // floor sides to avoid blurry text
+  var offsets = {
+    left: Math.floor(popper.left),
+    top: Math.floor(popper.top),
+    bottom: Math.floor(popper.bottom),
+    right: Math.floor(popper.right)
+  };
+
+  var sideA = x === 'bottom' ? 'top' : 'bottom';
+  var sideB = y === 'right' ? 'left' : 'right';
+
+  // if gpuAcceleration is set to `true` and transform is supported,
+  //  we use `translate3d` to apply the position to the popper we
+  // automatically use the supported prefixed version if needed
+  var prefixedProperty = getSupportedPropertyName('transform');
+
+  // now, let's make a step back and look at this code closely (wtf?)
+  // If the content of the popper grows once it's been positioned, it
+  // may happen that the popper gets misplaced because of the new content
+  // overflowing its reference element
+  // To avoid this problem, we provide two options (x and y), which allow
+  // the consumer to define the offset origin.
+  // If we position a popper on top of a reference element, we can set
+  // `x` to `top` to make the popper grow towards its top instead of
+  // its bottom.
+  var left = void 0,
+      top = void 0;
+  if (sideA === 'bottom') {
+    top = -offsetParentRect.height + offsets.bottom;
+  } else {
+    top = offsets.top;
+  }
+  if (sideB === 'right') {
+    left = -offsetParentRect.width + offsets.right;
+  } else {
+    left = offsets.left;
+  }
+  if (gpuAcceleration && prefixedProperty) {
+    styles[prefixedProperty] = 'translate3d(' + left + 'px, ' + top + 'px, 0)';
+    styles[sideA] = 0;
+    styles[sideB] = 0;
+    styles.willChange = 'transform';
+  } else {
+    // othwerise, we use the standard `top`, `left`, `bottom` and `right` properties
+    var invertTop = sideA === 'bottom' ? -1 : 1;
+    var invertLeft = sideB === 'right' ? -1 : 1;
+    styles[sideA] = top * invertTop;
+    styles[sideB] = left * invertLeft;
+    styles.willChange = sideA + ', ' + sideB;
+  }
+
+  // Attributes
+  var attributes = {
+    'x-placement': data.placement
+  };
+
+  // Update attributes and styles of `data`
+  data.attributes = _extends({}, attributes, data.attributes);
+  data.styles = _extends({}, styles, data.styles);
+
+  return data;
 }
 
 /**
@@ -1193,8 +1301,10 @@ function arrow(data, options) {
   }
 
   var placement = data.placement.split('-')[0];
-  var popper = getClientRect(data.offsets.popper);
-  var reference = data.offsets.reference;
+  var _data$offsets = data.offsets,
+      popper = _data$offsets.popper,
+      reference = _data$offsets.reference;
+
   var isVertical = ['left', 'right'].indexOf(placement) !== -1;
 
   var len = isVertical ? 'height' : 'width';
@@ -1227,7 +1337,7 @@ function arrow(data, options) {
 
   data.arrowElement = arrowElement;
   data.offsets.arrow = {};
-  data.offsets.arrow[side] = Math.floor(sideValue);
+  data.offsets.arrow[side] = Math.round(sideValue);
   data.offsets.arrow[altSide] = ''; // make sure to unset any eventual altSide value from the DOM node
 
   return data;
@@ -1357,7 +1467,7 @@ function flip(data, options) {
     placement = data.placement.split('-')[0];
     placementOpposite = getOppositePlacement(placement);
 
-    var popperOffsets = getClientRect(data.offsets.popper);
+    var popperOffsets = data.offsets.popper;
     var refOffsets = data.offsets.reference;
 
     // using floor because the reference offsets may contain decimals we are not going to consider here
@@ -1407,8 +1517,10 @@ function flip(data, options) {
  * @returns {Object} The data object, properly modified
  */
 function keepTogether(data) {
-  var popper = getClientRect(data.offsets.popper);
-  var reference = data.offsets.reference;
+  var _data$offsets = data.offsets,
+      popper = _data$offsets.popper,
+      reference = _data$offsets.reference;
+
   var placement = data.placement.split('-')[0];
   var floor = Math.floor;
   var isVertical = ['top', 'bottom'].indexOf(placement) !== -1;
@@ -1609,11 +1721,19 @@ function offset(data, _ref) {
  */
 function preventOverflow(data, options) {
   var boundariesElement = options.boundariesElement || getOffsetParent(data.instance.popper);
+
+  // If offsetParent is the reference element, we really want to
+  // go one step up and use the next offsetParent as reference to
+  // avoid to make this modifier completely useless and look like broken
+  if (data.instance.reference === boundariesElement) {
+    boundariesElement = getOffsetParent(boundariesElement);
+  }
+
   var boundaries = getBoundaries(data.instance.popper, data.instance.reference, options.padding, boundariesElement);
   options.boundaries = boundaries;
 
   var order = options.priority;
-  var popper = getClientRect(data.offsets.popper);
+  var popper = data.offsets.popper;
 
   var check = {
     primary: function primary(placement) {
@@ -1657,8 +1777,10 @@ function shift(data) {
 
   // if shift shiftvariation is specified, run the modifier
   if (shiftvariation) {
-    var reference = data.offsets.reference;
-    var popper = getClientRect(data.offsets.popper);
+    var _data$offsets = data.offsets,
+        reference = _data$offsets.reference,
+        popper = _data$offsets.popper;
+
     var isVertical = ['bottom', 'top'].indexOf(basePlacement) !== -1;
     var side = isVertical ? 'left' : 'top';
     var measurement = isVertical ? 'width' : 'height';
@@ -1722,8 +1844,10 @@ function hide(data) {
 function inner(data) {
   var placement = data.placement;
   var basePlacement = placement.split('-')[0];
-  var popper = getClientRect(data.offsets.popper);
-  var reference = getClientRect(data.offsets.reference);
+  var _data$offsets = data.offsets,
+      popper = _data$offsets.popper,
+      reference = _data$offsets.reference;
+
   var isHoriz = ['left', 'right'].indexOf(basePlacement) !== -1;
 
   var subtractLength = ['top', 'left'].indexOf(basePlacement) === -1;
@@ -1848,7 +1972,7 @@ var modifiers = {
     /** @prop {ModifierFn} */
     fn: preventOverflow,
     /**
-     * @prop {Array} priority=['left', 'right', 'top', 'bottom']
+     * @prop {Array} [priority=['left','right','top','bottom']]
      * Popper will try to prevent overflow following these priorities by default,
      * then, it could overflow on the left and on top of the `boundariesElement`
      */
@@ -1982,11 +2106,56 @@ var modifiers = {
   },
 
   /**
+   * Computes the style that will be applied to the popper element to gets
+   * properly positioned.
+   *
+   * Note that this modifier will not touch the DOM, it just prepares the styles
+   * so that `applyStyle` modifier can apply it. This separation is useful
+   * in case you need to replace `applyStyle` with a custom implementation.
+   *
+   * This modifier has `850` as `order` value to maintain backward compatibility
+   * with previous versions of Popper.js. Expect the modifiers ordering method
+   * to change in future major versions of the library.
+   *
+   * @memberof modifiers
+   * @inner
+   */
+  computeStyle: {
+    /** @prop {number} order=850 - Index used to define the order of execution */
+    order: 850,
+    /** @prop {Boolean} enabled=true - Whether the modifier is enabled or not */
+    enabled: true,
+    /** @prop {ModifierFn} */
+    fn: computeStyle,
+    /**
+     * @prop {Boolean} gpuAcceleration=true
+     * If true, it uses the CSS 3d transformation to position the popper.
+     * Otherwise, it will use the `top` and `left` properties.
+     */
+    gpuAcceleration: true,
+    /**
+     * @prop {string} [x='bottom']
+     * Where to anchor the X axis (`bottom` or `top`). AKA X offset origin.
+     * Change this if your popper should grow in a direction different from `bottom`
+     */
+    x: 'bottom',
+    /**
+     * @prop {string} [x='left']
+     * Where to anchor the Y axis (`left` or `right`). AKA Y offset origin.
+     * Change this if your popper should grow in a direction different from `right`
+     */
+    y: 'right'
+  },
+
+  /**
    * Applies the computed styles to the popper element.
    *
    * All the DOM manipulations are limited to this modifier. This is useful in case
    * you want to integrate Popper.js inside a framework or view library and you
    * want to delegate all the DOM manipulations to it.
+   *
+   * Note that if you disable this modifier, you must make sure the popper element
+   * has its position set to `absolute` before Popper.js can do its work!
    *
    * Just disable this modifier and define you own to achieve the desired effect.
    *
@@ -2003,11 +2172,12 @@ var modifiers = {
     /** @prop {Function} */
     onLoad: applyStyleOnLoad,
     /**
+     * @deprecated since version 1.10.0, the property moved to `computeStyle` modifier
      * @prop {Boolean} gpuAcceleration=true
      * If true, it uses the CSS 3d transformation to position the popper.
      * Otherwise, it will use the `top` and `left` properties.
      */
-    gpuAcceleration: true
+    gpuAcceleration: undefined
   }
 };
 
@@ -2045,7 +2215,7 @@ var modifiers = {
  * @static
  * @memberof Popper
  */
-var DEFAULTS = {
+var Defaults = {
   /**
    * Popper's placement
    * @prop {Popper.placements} placement='bottom'
@@ -2109,7 +2279,7 @@ var Popper = function () {
    * @class Popper
    * @param {HTMLElement|referenceObject} reference - The reference element used to position the popper
    * @param {HTMLElement} popper - The HTML element used as popper.
-   * @param {Object} options - Your custom options to override the ones defined in [DEFAULTS](#defaults)
+   * @param {Object} options - Your custom options to override the ones defined in [Defaults](#defaults)
    * @return {Object} instance - The generated Popper.js instance
    */
   function Popper(reference, popper) {
@@ -2138,9 +2308,6 @@ var Popper = function () {
     // get reference and popper elements (allow jQuery wrappers)
     this.reference = reference.jquery ? reference[0] : reference;
     this.popper = popper.jquery ? popper[0] : popper;
-
-    // make sure to apply the popper position before any computation
-    setStyles(this.popper, { position: 'absolute' });
 
     // Deep merge modifiers options
     this.options.modifiers = {};
@@ -2220,7 +2387,10 @@ var Popper = function () {
      *
      * **DEPRECATION**: This way to access PopperUtils is deprecated
      * and will be removed in v2! Use the PopperUtils module directly instead.
+     * Due to the high instability of the methods contained in Utils, we can't
+     * guarantee them to follow semver. Use them at your own risk!
      * @static
+     * @private
      * @type {Object}
      * @deprecated since version 1.8
      * @member Utils
@@ -2254,7 +2424,9 @@ var Popper = function () {
 
 Popper.Utils = (typeof window !== 'undefined' ? window : global).PopperUtils;
 Popper.placements = placements;
-Popper.Defaults = DEFAULTS;
+Popper.Defaults = Defaults;
 
-export default Popper;
+return Popper;
+
+})));
 //# sourceMappingURL=popper.js.map
