@@ -11,7 +11,7 @@ import common._
   * This resource module provides Tether resource components to the FoBo Tether Toolkit module,
   * but can also be used as-is, see below for setup information.
   *
-  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information.
+  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.fobo]] for setup information.
   */
 package object FoBoTetRes {
 
@@ -90,13 +90,8 @@ package object FoBoTetRes {
         case "fobo" :: "tether-theme-arrows.css" :: Nil =>
           List("fobo", "tether", "1.4.0", "css", "tether-theme-arrows.min.css")
 
-        case "fobo" :: "tether-theme-arrows-dark.css" :: Nil
-            if Props.devMode =>
-          List("fobo",
-               "tether",
-               "1.4.0",
-               "css",
-               "tether-theme-arrows-dark.css")
+        case "fobo" :: "tether-theme-arrows-dark.css" :: Nil if Props.devMode =>
+          List("fobo", "tether", "1.4.0", "css", "tether-theme-arrows-dark.css")
         case "fobo" :: "tether-theme-arrows-dark.css" :: Nil =>
           List("fobo",
                "tether",

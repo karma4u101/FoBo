@@ -20,6 +20,7 @@ lazy val commonSettings = Seq(
 
 lazy val fobometa = (project in file("."))
   .settings(commonSettings: _*)
+  .enablePlugins(ScalaUnidocPlugin)
   //.settings(unidocSettings: _*)
   .settings(name := "fobo-meta")
   .settings(scalaVersion in ThisBuild := "2.12.1")
@@ -64,11 +65,8 @@ lazy val foboapi = (project in file("FoBo/FoBo-API"))
   .settings(name := "fobo-api")
   .settings(commonSettings: _*)
   .settings(
-    buildInfoKeys := Seq[BuildInfoKey](name,
-                                       version,
-                                       scalaVersion,
-                                       sbtVersion),
-    buildInfoPackage := "net.liftmodules.FoBo.lib"
+    buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
+    buildInfoPackage := "net.liftmodules.fobo.lib"
   )
 
 lazy val kineticjs = (project in file("Kinetic/KineticJS"))

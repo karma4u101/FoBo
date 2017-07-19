@@ -11,7 +11,7 @@ import common._
   * This resource module provides JQuery resource components to the FoBo KineticJs Toolkit module,
   * but can also be used as-is, see below for setup information.
   *
-  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.FoBo]] for setup information.
+  * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.fobo]] for setup information.
   */
 package object FoBoKiRes {
 
