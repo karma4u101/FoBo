@@ -43,21 +43,21 @@ package object fobopopres {
     override def toString() = "fobopopres.Resource = " + store.toString()
 
     /**
-      * Enable usage of Popper version 1&#8228;9&#8228;9 in your bootstrap liftweb Boot.
-      * @version 1.9.9
+      * Enable usage of Popper version 1&#8228;10&#8228;9 in your bootstrap liftweb Boot.
+      * @version 1.10.8
       *
       * '''Example:'''
       *
       * {{{
       *   import net.liftmodules.{fobopopres => fobo}
       *    :
-      *   fobo.Resource.init=fobo.Resource.Popper199
+      *   fobo.Resource.init=fobo.Resource.Popper1108
       * }}}
       * @since v2.0
       */
-    case object Popper199 extends Resource {
+    case object Popper1108 extends Resource {
       FoBoResources.init
-      FoBoResources.Popper199
+      FoBoResources.Popper1108
     }
 
   } //end Resource object
@@ -73,35 +73,36 @@ package object fobopopres {
       }
     }
 
-    lazy val Popper199: Unit = {
-      /*
-      Here we use the Universal Module Definition (UMD) module from the dist folder of popper.
-      This is done as it is the most versertile module format. If we in the future needs the ESM
-      module of the or the dist folders unnambed module type script files we need to fined a way to
-      express that level for example by prefixing fobo.Resource.init=fobo.Resource.ESM.Popper199,
-      fobo.Resource.init=fobo.Resource.UMD.Popper199.
-      https://github.com/umdjs/umd
-       */
+    /*
+    Here we use the Universal Module Definition (UMD) module from the dist folder of popper.
+    This is done as it is the most versertile module format. If we in the future needs the ESM
+    module of the or the dist folders unnambed module type script files we need to fined a way to
+    express that level for example by prefixing fobo.Resource.init=fobo.Resource.ESM.Popper199,
+    fobo.Resource.init=fobo.Resource.UMD.Popper199.
+    https://github.com/umdjs/umd
+     */
+
+    lazy val Popper1108: Unit = {
       ResourceServer.rewrite {
         case "fobo" :: "popper.js" :: Nil if Props.devMode =>
-          List("fobo", "popper", "1.9.9", "js", "umd", "popper.js")
+          List("fobo", "popper", "1.10.8", "js", "umd", "popper.js")
         case "fobo" :: "popper.js" :: Nil =>
-          List("fobo", "popper", "1.9.9", "js", "umd", "popper.min.js")
+          List("fobo", "popper", "1.10.8", "js", "umd", "popper.min.js")
         case "fobo" :: "popper.js.map" :: Nil if Props.devMode =>
-          List("fobo", "popper", "1.9.9", "js", "umd", "popper.js.map")
+          List("fobo", "popper", "1.10.8", "js", "umd", "popper.js.map")
         case "fobo" :: "popper.js.map" :: Nil =>
-          List("fobo", "popper", "1.9.9", "js", "umd", "popper.min.js.map")
+          List("fobo", "popper", "1.10.8", "js", "umd", "popper.min.js.map")
 
         case "fobo" :: "popper-utils.js" :: Nil if Props.devMode =>
-          List("fobo", "popper", "1.9.9", "js", "umd", "popper-utils.js")
+          List("fobo", "popper", "1.10.8", "js", "umd", "popper-utils.js")
         case "fobo" :: "popper-utils.js" :: Nil =>
-          List("fobo", "popper", "1.9.9", "js", "umd", "popper-utils.min.js")
+          List("fobo", "popper", "1.10.8", "js", "umd", "popper-utils.min.js")
         case "fobo" :: "popper-utils.js.map" :: Nil if Props.devMode =>
-          List("fobo", "popper", "1.9.9", "js", "umd", "popper-utils.js.map")
+          List("fobo", "popper", "1.10.8", "js", "umd", "popper-utils.js.map")
         case "fobo" :: "popper-utils.js.map" :: Nil =>
           List("fobo",
                "popper",
-               "1.9.9",
+               "1.10.8",
                "js",
                "umd",
                "popper-utils.min.js.map")
