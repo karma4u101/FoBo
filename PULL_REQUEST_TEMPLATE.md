@@ -14,7 +14,7 @@
 
 **Connected to**: Connected to [#IssueNr -- specify the issue number to connect this PR to a existing issue]
 
-**Fixes**: Fixes [#IssueNr what issues this fixes. Will automaticaly close the issue when PR is merged]
+**Fixes**: Fixes [#IssueNr what issues this fixes. Will automatically close the issue when PR is merged]
 
 **State**: [the state of this PR, e.g. WIP, ready, etc.]
 
