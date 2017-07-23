@@ -45,7 +45,7 @@ package net.liftmodules
   *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component) [[net.liftmodules.foboajs]]
   *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component) [[net.liftmodules.foboajs]]
   *  - Angular UI-Grid [v3.0.7] (angular component) [[net.liftmodules.foboajs]]
-  *  - Angular Material design [v0.10.0, v1.0.1, v1.0.8, v1.1.1] (angular component) [[net.liftmodules.foboajs]]
+  *  - Angular Material design [v0.10.0, v1.0.1, v1.0.8, v1.1.1, v1.1.4] (angular component) [[net.liftmodules.foboajs]]
   *  - Popper [v1.9.9]
   *  - Tooltip [v1.1.4]
   *
@@ -370,6 +370,24 @@ package object fobo {
       */
     case object AJMaterial111 extends Toolkit {
       net.liftmodules.foboajs.Toolkit.AJMaterial111
+    }
+
+    /**
+      * Enable usage of FoBo's Angular Material API and resources version 1&#8228;1&#8228;4 in your bootstrap liftweb Boot.
+      * @version 1.1.4
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.fobo
+      *    :
+      *   fobo.Toolkit.init=fobo.Toolkit.AJMaterial114
+      * }}}
+      *
+      * @since v2.0
+      */
+    case object AJMaterial114 extends Toolkit {
+      net.liftmodules.foboajs.Toolkit.AJMaterial114
     }
 
     /**
@@ -1264,10 +1282,27 @@ package object fobo {
       *    :
       *   fobo.Resource.init=fobo.Resource.AJMaterial111
       * }}}
-      *
+      * @since v1.7
       */
     case object AJMaterial111 extends Resource {
       net.liftmodules.foboajs.Resource.AJMaterial111
+    }
+
+    /**
+      * Enable usage of Angular Material version 1&#8228;1&#8228;4 resource files in your bootstrap liftweb Boot.
+      * @version 1.1.4
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.fobo
+      *    :
+      *   fobo.Resource.init=fobo.Resource.AJMaterial114
+      * }}}
+      * @since v2.0
+      */
+    case object AJMaterial114 extends Resource {
+      net.liftmodules.foboajs.Resource.AJMaterial114
     }
 
     /**
