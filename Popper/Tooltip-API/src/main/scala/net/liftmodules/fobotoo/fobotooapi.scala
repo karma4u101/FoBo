@@ -19,7 +19,7 @@ package object fobotooapi {
   /**
     * Initiate FoBo's Tooltip API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobotooapi => fobo}
     *    :
@@ -27,7 +27,7 @@ package object fobotooapi {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait API
+  sealed trait API
 
   object API extends API {
 
@@ -46,7 +46,7 @@ package object fobotooapi {
       * Enable usage of FoBo's Tooltip API version 1&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 1.X.X
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobotooapi => fobo}

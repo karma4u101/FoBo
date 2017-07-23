@@ -18,7 +18,7 @@ package object foboajsapi {
   /**
     * Initiate FoBo's Angular API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{foboajsapi => fobo}
     *    :
@@ -45,7 +45,7 @@ package object foboajsapi {
       * Enable usage of FoBo's Angular API for Angular version 1&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 1.X.X
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsapi => fobo}

@@ -20,7 +20,7 @@ class MDButton extends StatefulSnippet with Loggable {
     *
     *  - '''Param''' ''name'' - The Loc name to create the link value from.
     *
-    * '''Example'''
+    * @example
     * {{{ <md-button data-lift="FoBo.MDButton.ngHref?name=Login" ng-href="#"> }}}
     *
     * '''Result:'''
@@ -37,7 +37,7 @@ class MDButton extends StatefulSnippet with Loggable {
     *
     *  - '''Param''' ''name'' - The Loc name to create the link value from.
     *
-    * '''Example'''
+    * @example
     * {{{ <md-button data-lift="FoBo.MDButton.ngHref?name=Login" href="#"> }}}
     *
     * '''Result:'''

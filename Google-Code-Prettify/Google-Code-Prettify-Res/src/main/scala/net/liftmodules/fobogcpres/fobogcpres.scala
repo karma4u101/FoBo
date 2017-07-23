@@ -21,7 +21,7 @@ package object fobogcpres {
   /**
     * Initiate FoBo's Google Code Prettify Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobogcpres => fobo}
     *    :
@@ -29,7 +29,7 @@ package object fobogcpres {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Resource
+  sealed trait Resource
 
   object Resource extends Resource {
 
@@ -48,7 +48,7 @@ package object fobogcpres {
       * Enable usage of FoBo's Google Code Prettify resources version Jun2011 in your bootstrap liftweb Boot.
       * @version Jun2011
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobogcpres => fobo}

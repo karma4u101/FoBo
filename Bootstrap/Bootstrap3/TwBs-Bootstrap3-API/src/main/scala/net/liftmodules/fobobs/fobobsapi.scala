@@ -20,7 +20,7 @@ package object fobobsapi {
   /**
     * Initiate FoBo's Bootstrap 3 API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobobsapi => fobo}
     *    :
@@ -47,7 +47,7 @@ package object fobobsapi {
       * Enable usage of FoBo's Angular API for Bootstrap version 3&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 3.X.X
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobsapi => fobo}
@@ -74,7 +74,7 @@ package object fobobsapi {
     *
     * This object should be used in conjunction with the TB* menu builder objects in [[net.liftmodules.fobo.snippet.FoBo]] snippet's.
     *
-    * '''Example:'''
+    * @example
     * {{{
     *   :
     *  //add a horizontal menu divider
@@ -98,7 +98,7 @@ package object fobobsapi {
     /**
       * Provides a way to specify a horizontal divider for your bootstrap menu in Lift's SiteMap.
       *
-      * '''Example:'''
+      * @example
       * {{{
       * val index            = Menu.i("Home") / "index"
       *      :

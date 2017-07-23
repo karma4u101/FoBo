@@ -25,7 +25,7 @@ package object fobogcp {
     * toolkit's resources and FoBo/Lift API associated
     * with the toolkit.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobogcp => fobo}
     *    :
@@ -38,7 +38,7 @@ package object fobogcp {
   /**
     * Initiate FoBo's Google Code Prettify Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobogcp => fobo}
     *    :
@@ -51,7 +51,7 @@ package object fobogcp {
   /**
     * Initiate FoBo's Google Code Prettify API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobogcp => fobo}
     *    :
@@ -80,7 +80,7 @@ package object fobogcp {
       * Enable usage of FoBo's Google Code Prettify API and resources version Jun2011 in your bootstrap liftweb Boot.
       * @version Jun2011
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobogcp => fobo}
@@ -114,7 +114,7 @@ package object fobogcp {
       * Enable usage of FoBo's Google Code Prettify resources version Jun2011 in your bootstrap liftweb Boot.
       * @version Jun2011
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobogcp => fobo}
@@ -146,7 +146,7 @@ package object fobogcp {
       * Enable usage of FoBo's Google Code Prettify API version 1&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 1.X.X
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobogcp => fobo}

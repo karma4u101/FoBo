@@ -25,7 +25,7 @@ package object fobopa {
     * toolkit's resources and FoBo/Lift API associated
     * with the toolkit.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobopa => fobo}
     *    :
@@ -38,7 +38,7 @@ package object fobopa {
   /**
     * Initiate FoBo's Pace Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobopa => fobo}
     *    :
@@ -51,7 +51,7 @@ package object fobopa {
   /**
     * Initiate FoBo's Pace API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobopa => fobo}
     *    :
@@ -80,7 +80,7 @@ package object fobopa {
       * Enable usage of FoBo's Pace API and resources version 1&#8228;0&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.0.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobopa => fobo}
@@ -97,7 +97,7 @@ package object fobopa {
       * Enable usage of FoBo's Pace API and resources version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
       * @version 0.4.15
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobopa => fobo}
@@ -131,7 +131,7 @@ package object fobopa {
       * Enable usage of FoBo's Pace resources version 1&#8228;0&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.0.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobopa => fobo}
@@ -147,7 +147,7 @@ package object fobopa {
       * Enable usage of FoBo's Pace resources version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
       * @version 0.4.15
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobopa => fobo}
@@ -180,7 +180,7 @@ package object fobopa {
       * Enable usage of FoBo's Pace API version 0&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 0.X.X
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobopa => fobo}

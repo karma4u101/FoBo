@@ -1,9 +1,8 @@
 package net.liftmodules
 
 import _root_.net.liftweb._
-import util.{Props}
+import util.Props
 import http._
-import common._
 
 /**
   * ==FoBo Twitter Bootstrap Resource Module==
@@ -14,22 +13,22 @@ import common._
   * If you are using this module via the FoBo/FoBo module see also [[net.liftmodules.fobo]] for setup information.
   *
   */
-package object FoBoTBRes {
+package object fobotbres {
 
-  override def toString() = FoBoTBRes.Resource.toString()
+  override def toString() = fobotbres.Resource.toString()
 
   /**
     * Initiate FoBo's Bootstrap 2 Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
-    *   import net.liftmodules.{FoBoTBRes => FoBo}
+    *   import net.liftmodules.{fobotbres => fobo}
     *    :
-    *   FoBo.Resource.Init=FoBo.Resource.[Resource Object]
+    *   fobo.Resource.init=fobo.Resource.[Resource Object]
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Resource
+  sealed trait Resource
 
   object Resource extends Resource {
 
@@ -37,23 +36,23 @@ package object FoBoTBRes {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def Init: Store = store
-    def Init_=(t: Resource): Store = {
+    def init: Store = store
+    def init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
     }
-    override def toString() = "FoBoTBRes.Resource = " + store.toString()
+    override def toString() = "fobotbres.Resource = " + store.toString()
 
     /**
       * Enable usage of FoBo's Bootstrap version 2&#8228;3&#8228;2 resources files in your bootstrap liftweb Boot.
       * @version 2.3.2
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
-      *   import net.liftmodules.{FoBoTBRes => FoBo}
+      *   import net.liftmodules.{fobotbres => fobo}
       *    :
-      *   FoBo.Resource.Init=FoBo.Resource.Bootstrap232
+      *   fobo.Resource.init=fobo.Resource.Bootstrap232
       * }}}
       *
       */

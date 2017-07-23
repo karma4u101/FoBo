@@ -21,7 +21,7 @@ package object fobopaapi {
   /**
     * Initiate FoBo's Pace API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobopaapi => fobo}
     *    :
@@ -48,7 +48,7 @@ package object fobopaapi {
       * Enable usage of FoBo's Pace API version 0&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 0.X.X
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobopaapi => fobo}
