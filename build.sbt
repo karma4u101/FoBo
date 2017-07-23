@@ -34,7 +34,6 @@ lazy val fobo = (project in file("FoBo/FoBo"))
   .settings(commonSettings: _*)
   .settings(name := "fobo")
   .aggregate(foboapi,
-             kineticjs,
              pace,
              angularjs,
              jquery,
@@ -47,7 +46,6 @@ lazy val fobo = (project in file("FoBo/FoBo"))
              popper,
              tooltip)
   .dependsOn(foboapi,
-             kineticjs,
              pace,
              angularjs,
              jquery,
@@ -68,16 +66,6 @@ lazy val foboapi = (project in file("FoBo/FoBo-API"))
     buildInfoKeys := Seq[BuildInfoKey](name, version, scalaVersion, sbtVersion),
     buildInfoPackage := "net.liftmodules.fobo.lib"
   )
-
-lazy val kineticjs = (project in file("Kinetic/KineticJS"))
-  .settings(commonSettings: _*)
-  .settings(name := "fobo-kineticjs")
-  .aggregate(kineticjsres)
-  .dependsOn(kineticjsres)
-
-lazy val kineticjsres = (project in file("Kinetic/KineticJS-Res"))
-  .settings(commonSettings: _*)
-  .settings(name := "fobo-kineticjs-res")
 
 lazy val pace = (project in file("Pace/Pace"))
   .settings(commonSettings: _*)

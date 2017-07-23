@@ -1204,30 +1204,6 @@ object FoBoSpec extends Specification {
     }
   }
 
-  /*================= KineticJS ====================================*/
-
-  //KineticJS510
-  "With fobo.Toolkit.init set to fobo.Toolkit.KineticJS510 the ResourceServer" should {
-    "allow  fobo/kinetic.js" in {
-      allowToolkitInit(fobo.Toolkit.KineticJS510, "fobo" :: "kinetic.js" :: Nil) must_== true
-    }
-    "rewrit fobo/kinetic.js to fobo/kinetic/5.1.0/js/kineti.min.js" in {
-      rewriteToolkitInit(fobo.Toolkit.KineticJS510,
-                         "fobo" :: "kinetic.js" :: Nil) must_==
-        List("fobo", "kinetic", "5.1.0", "js", "kinetic.min.js")
-    }
-  }
-
-  "With fobo.Resource.init set to fobo.Resource.KineticJS510 the ResourceServer" should {
-    "allow  fobo/kinetic.js" in {
-      allowResource(fobo.Resource.KineticJS510, "fobo" :: "kinetic.js" :: Nil) must_== true
-    }
-    "rewrit fobo/kinetic.js to fobo/kinetic/5.1.0/js/kineti.min.js" in {
-      rewriteResource(fobo.Resource.KineticJS510, "fobo" :: "kinetic.js" :: Nil) must_==
-        List("fobo", "kinetic", "5.1.0", "js", "kinetic.min.js")
-    }
-  }
-
   /*===Highlight ===============================================================*/
 
   //HighlightJS930
