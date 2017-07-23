@@ -38,7 +38,6 @@ package net.liftmodules
   *  - Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6, v3.3.7] [[net.liftmodules.fobobs]]
   *  - Bootstrap v2.x series [v2.3.2] [[net.liftmodules.fobotb]]
   *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] [[net.liftmodules.fobofa]]
-  *  - Kinetic JS [v5.1.0] [[net.liftmodules.FoBoKi]]
   *  - Google Code Prettify [vJun2011] [[net.liftmodules.fobogcp]]
   *  - Highlight JS [v9.3.0] [[net.liftmodules.fobohl]]
   *  - Pace [v0.4.15, v1.0.2] [[net.liftmodules.fobopa]]
@@ -795,25 +794,6 @@ package object fobo {
       */
     case object JQuery172 extends Toolkit {
       net.liftmodules.fobojq.Toolkit.JQuery172
-    }
-
-    /*===Kinetic Toolkit===============================================================*/
-
-    /**
-      * Enable usage FoBo's KineticJS API and resources version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.
-      * @version 5.1.0
-      *
-      * '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.fobo
-      *    :
-      *   fobo.Toolkit.init=fobo.Toolkit.KineticJS510
-      * }}}
-      *
-      */
-    case object KineticJS510 extends Toolkit {
-      net.liftmodules.FoBoKi.Toolkit.KineticJS510
     }
 
     /*===Pace Toolkit===============================================================*/
@@ -1710,25 +1690,6 @@ package object fobo {
       */
     case object JQuery172 extends Resource {
       net.liftmodules.fobojq.Resource.JQuery172
-    }
-
-    /*===Kinetic Resource===============================================================*/
-
-    /**
-      * Enable usage FoBo's KineticJS resources version 5&#8228;1&#8228;0 in your bootstrap liftweb Boot.
-      * @version 5.1.0
-      *
-      * '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.fobo
-      *    :
-      *   fobo.Resource.init=fobo.Resource.KineticJS510
-      * }}}
-      *
-      */
-    case object KineticJS510 extends Resource {
-      net.liftmodules.FoBoKi.Resource.KineticJS510
     }
 
     /*===Pace Resource===============================================================*/

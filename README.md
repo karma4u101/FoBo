@@ -196,7 +196,6 @@ For more information se respective sub modules readme.
 - HighlightJSXYZ
 - JQueryXYZ
 - JQueryMigrateXYZ
-- KineticJSXYZ
 - PaceXYZ
 - PrettifyXYZ
 - Tether

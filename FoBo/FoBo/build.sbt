@@ -6,7 +6,6 @@ libraryDependencies ++= {
   "net.liftmodules" %% ("fobo-api" + "_" + liftEdition.value) % version.value % "compile" ::
     "net.liftmodules" %% ("fobo-pace" + "_" + liftEdition.value) % version.value % "compile" ::
     "net.liftmodules" %% ("fobo-jquery" + "_" + liftEdition.value) % version.value % "compile" ::
-    "net.liftmodules" %% ("fobo-kineticjs" + "_" + liftEdition.value) % version.value % "compile" ::
     "net.liftmodules" %% ("fobo-angularjs" + "_" + liftEdition.value) % version.value % "compile" ::
     "net.liftmodules" %% ("fobo-highlightjs" + "_" + liftEdition.value) % version.value % "compile" ::
     "net.liftmodules" %% ("fobo-font-awesome" + "_" + liftEdition.value) % version.value % "compile" ::
