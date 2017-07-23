@@ -36,7 +36,7 @@ package object fobobs {
     * toolkit's resources and FoBo/Lift API associated
     * with the toolkit.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobobs => fobo}
     *    :
@@ -49,7 +49,7 @@ package object fobobs {
   /**
     * Initiate FoBo's Bootstrap 3 Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobobs => fobo}
     *    :
@@ -62,7 +62,7 @@ package object fobobs {
   /**
     * Initiate FoBo's Bootstrap 3 API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobobs => fobo}
     *    :
@@ -91,7 +91,7 @@ package object fobobs {
       * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;7 resource files in your bootstrap liftweb Boot.
       * @version 3.3.7
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobs => fobo}
@@ -109,7 +109,7 @@ package object fobobs {
       * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;6 resource files in your bootstrap liftweb Boot.
       * @version 3.3.6
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobs => fobo}
@@ -128,7 +128,7 @@ package object fobobs {
       * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;5 resource files in your bootstrap liftweb Boot.
       * @version 3.3.5
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobs => fobo}
@@ -147,7 +147,7 @@ package object fobobs {
       * Enable usage of Bootstrap API and resources version 3&#8228;2&#8228;0 resource files in your bootstrap liftweb Boot.
       * @version 3.2.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobs => fobo}
@@ -165,7 +165,7 @@ package object fobobs {
       * Enable usage of Bootstrap API and resources version 3&#8228;1&#8228;1 resource files in your bootstrap liftweb Boot.
       * @version 3.1.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobs => fobo}
@@ -183,7 +183,7 @@ package object fobobs {
       * Enable usage of Bootstrap API and resources version 3&#8228;0&#8228;1 resource files in your bootstrap liftweb Boot.
       * @version 3.0.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobs => fobo}
@@ -218,7 +218,7 @@ package object fobobs {
       * Enable usage of Bootstrap version 3&#8228;3&#8228;7 resource files in your bootstrap liftweb Boot.
       * @version 3.3.7
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobs => fobo}
@@ -235,7 +235,7 @@ package object fobobs {
       * Enable usage of Bootstrap version 3&#8228;3&#8228;6 resource files in your bootstrap liftweb Boot.
       * @version 3.3.6
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobs => fobo}
@@ -253,7 +253,7 @@ package object fobobs {
       * Enable usage of Bootstrap version 3&#8228;3&#8228;5 resource files in your bootstrap liftweb Boot.
       * @version 3.3.5
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobs => fobo}
@@ -271,7 +271,7 @@ package object fobobs {
       * Enable usage of Bootstrap version 3&#8228;2&#8228;0 resource files in your bootstrap liftweb Boot.
       * @version 3.2.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobs => fobo}
@@ -288,7 +288,7 @@ package object fobobs {
       * Enable usage of Bootstrap version 3&#8228;1&#8228;1 resource files in your bootstrap liftweb Boot.
       * @version 3.1.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobs => fobo}
@@ -305,7 +305,7 @@ package object fobobs {
       * Enable usage of Bootstrap version 3&#8228;0&#8228;1 resource files in your bootstrap liftweb Boot.
       * @version 3.0.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobs => fobo}
@@ -339,7 +339,7 @@ package object fobobs {
       * Enable usage of FoBo's Bootstrap API 3&#8228;x&#8228;x in your bootstrap liftweb Boot.
       * @version 3.x.x
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobs => fobo}
@@ -360,7 +360,7 @@ package object fobobs {
     *
     * This object should be used in conjunction with the TB* menu builder objects in [[net.liftmodules.fobo.snippet.FoBo]] snippet's.
     *
-    * '''Example:'''
+    * @example
     * {{{
     *   :
     *  //add a horizontal menu divider
@@ -384,7 +384,7 @@ package object fobobs {
     /**
       * Provides a way to specify a horizontal divider for your bootstrap menu in Lift's SiteMap.
       *
-      * '''Example:'''
+      * @example
       * {{{
       * val index            = Menu.i("Home") / "index"
       *      :

@@ -19,7 +19,7 @@ package object fobopares {
   /**
     * Initiate FoBo's Pace Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobopares => fobo}
     *    :
@@ -46,7 +46,7 @@ package object fobopares {
       * Enable usage of FoBo's Pace resources version 1&#8228;0&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.0.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobopares => fobo}
@@ -63,7 +63,7 @@ package object fobopares {
       * Enable usage of FoBo's Pace resources version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
       * @version 0.4.15
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobopares => fobo}

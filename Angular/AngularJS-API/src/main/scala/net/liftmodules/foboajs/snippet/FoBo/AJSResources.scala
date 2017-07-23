@@ -13,7 +13,7 @@ import Helpers._
   * This snippet class lets you inject FoBo Angular resources into your templates.
   * Instead of hand write the resource tags you can use this helper snippet to inject it for you.
   *
-  * '''Example''' Invoke with
+  * @example Invoke with
   * {{{ data-lift="FoBo.AJSResources.functionName?paramName=paramValue&...." }}}
   * For more examples see the individual transform functions.
   * @since v1.3
@@ -30,7 +30,7 @@ class AJSResources extends StatefulSnippet {
     *
     *  - '''Param''' ''resources'' - A comma separated list of FoBo managed js resources.
     *
-    * '''Example'''
+    * @example
     * {{{ <script data-lift="FoBo.AJSResources.injectJS?resources=angular,angular-animate"></script> }}}
     * or making angular.js implicit.
     *  {{{ <script data-lift="FoBo.AJSResources.injectJS?resources=angular-animate"></script> }}}
@@ -64,7 +64,7 @@ class AJSResources extends StatefulSnippet {
     *
     *  - '''Param''' ''resources'' - A comma separated list of FoBo managed Angular css resources.
     *
-    * '''Example'''
+    * @example
     * {{{ <link data-lift="FoBo.AJSResources.injectCSS?resources=ng-grid"></link>  }}}
     *
     * '''Result:''' This example will result in the following being injected in place of the snippet invocation:

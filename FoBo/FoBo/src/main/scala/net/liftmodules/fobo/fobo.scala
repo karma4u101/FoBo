@@ -46,7 +46,7 @@ package net.liftmodules
   *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component) [[net.liftmodules.foboajs]]
   *  - Angular UI-Grid [v3.0.7] (angular component) [[net.liftmodules.foboajs]]
   *  - Angular Material design [v0.10.0, v1.0.1, v1.0.8, v1.1.1, v1.1.4] (angular component) [[net.liftmodules.foboajs]]
-  *  - Popper [v1.9.9]
+  *  - Popper [v1.9.9] [[net.liftmodules.fobopop]]
   *  - Tooltip [v1.1.4]
   *
   * ===Help out!===
@@ -56,8 +56,8 @@ package net.liftmodules
   *
   * ===Setup===
   *
-  *  - This module has published artifacts for Lift v2.6 and v3.0 and it's supported Scala versions.
-  *    Older versions of FoBo also supports Lift v2.4/v2.5
+  *  - This module has published artifacts for Lift v3.1 and v3.0 and it's supported Scala versions.
+  *    Older versions of FoBo also supports Lift v2.4/v2.5/v2.6
   *  - For a introduction to FoBo see [[http://www.media4u101.se/fobo-lift-template-demo/ FoBo introduction]]
   *
   * @example To initiate this module for usage in your Lift project set something like the following in
@@ -92,7 +92,7 @@ package object fobo {
     * toolkit's resources and if present the FoBo API associated
     * with the toolkit.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.fobo
     *    :
@@ -107,7 +107,7 @@ package object fobo {
     * You should use this if you only want to initiate the FoBo provided toolkit
     * resources but not the FoBo API associated with the toolkit.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.fobo
     *    :
@@ -122,7 +122,7 @@ package object fobo {
     * You should use this if you want to use FoBo's API for the toolkit but
     * want to provide the toolkit resources yourself.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.fobo
     *    :
@@ -152,7 +152,7 @@ package object fobo {
       * Enable usage of FoBo's AngularJS API and resources version 1&#8228;5&#8228;3 in your bootstrap liftweb Boot.
       * @version 1.5.3
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -169,7 +169,7 @@ package object fobo {
       * Enable usage of AngularJS i18n resources files in your bootstrap liftweb Boot.
       * @version 1.5.3 i18n
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -186,7 +186,7 @@ package object fobo {
       * Enable usage of FoBo's AngularJS API and resources version 1&#8228;4&#8228;8 in your bootstrap liftweb Boot.
       * @version 1.4.8
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -203,7 +203,7 @@ package object fobo {
       * Enable usage of AngularJS i18n resources files in your bootstrap liftweb Boot.
       * @version 1.4.8 i18n
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -220,7 +220,7 @@ package object fobo {
       * Enable usage of FoBo's AngularJS API and resources version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.4.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -237,7 +237,7 @@ package object fobo {
       * Enable usage of AngularJS i18n resources files in your bootstrap liftweb Boot.
       * @version 1.4.1 i18n
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -254,7 +254,7 @@ package object fobo {
       * Enable usage of FoBo's AngularJS API and resources version 1&#8228;3&#8228;15 in your bootstrap liftweb Boot.
       * @version 1.3.15
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -271,7 +271,7 @@ package object fobo {
       * Enable usage of AngularJS i18n resource files in your bootstrap liftweb Boot.
       * @version 1.3.15 i18n
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -288,7 +288,7 @@ package object fobo {
       * Enable usage of FoBo's AngularJS API and resources version 1&#8228;2&#8228;19 in your bootstrap liftweb Boot.
       * @version 1.2.19
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -305,7 +305,7 @@ package object fobo {
       * Enable usage of AngularJS i18n resource files in your bootstrap liftweb Boot.
       * @version 1.2.19 i18n
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -322,7 +322,7 @@ package object fobo {
       * Enable usage of FoBo's Angular Material API and resources version 1&#8228;0&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.0.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -340,7 +340,7 @@ package object fobo {
       * Enable usage of FoBo's Angular Material API and resources version 1&#8228;0&#8228;8 in your bootstrap liftweb Boot.
       * @version 1.0.8
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -358,7 +358,7 @@ package object fobo {
       * Enable usage of FoBo's Angular Material API and resources version 1&#8228;1&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.1.1
       *
-      *  '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -376,7 +376,7 @@ package object fobo {
       * Enable usage of FoBo's Angular Material API and resources version 1&#8228;1&#8228;4 in your bootstrap liftweb Boot.
       * @version 1.1.4
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -394,7 +394,7 @@ package object fobo {
       * Enable usage of FoBo's Angular API and AngularUI-Bootstrap resources version 2&#8228;4&#8228;0 in your bootstrap liftweb Boot.
       * @version 2.4.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -411,7 +411,7 @@ package object fobo {
       * Enable usage of FoBo's Angular API and AngularUI-Bootstrap resources version 0&#8228;10&#8228;0 in your bootstrap liftweb Boot.
       * @version 0.10.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -428,7 +428,7 @@ package object fobo {
       * Enable usage of FoBo's Angular API and AngularUI-Bootstrap resources version 0&#8228;7&#8228;0 in your bootstrap liftweb Boot.
       * @version 0.7.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -446,7 +446,7 @@ package object fobo {
       * Enable usage of FoBo's Angular API and AngularUI-Bootstrap resources version 0&#8228;2&#8228;0 in your bootstrap liftweb Boot.
       * @version 0.2.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -464,7 +464,7 @@ package object fobo {
       * Enable usage of FoBo's Angular API and NG-Grid resources version 2&#8228;0&#8228;7 in your bootstrap liftweb Boot.
       * @version 2.0.7
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -481,7 +481,7 @@ package object fobo {
       * Enable usage of FoBo's Angular API and UI-Grid resources version 3&#8228;0&#8228;7 in your bootstrap liftweb Boot.
       * @version 3.0.7
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -500,7 +500,7 @@ package object fobo {
       * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;6&#8228;3 in your bootstrap liftweb Boot.
       * @version 4.6.3
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -516,7 +516,7 @@ package object fobo {
       * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
       * @version 4.3.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -532,7 +532,7 @@ package object fobo {
       * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.
       * @version 4.1.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -548,7 +548,7 @@ package object fobo {
       * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.
       * @version 4.0.3
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -564,7 +564,7 @@ package object fobo {
       * Enable usage of FoBo's FontAwesome resources and API version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.
       * @version 3.2.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -582,7 +582,7 @@ package object fobo {
       * Enable usage of FoBo's Google Code Prettify API and resources version Jun2011 in your bootstrap liftweb Boot.
       * @version Jun2011
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -601,7 +601,7 @@ package object fobo {
       * @version 3.1.0
       * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -618,7 +618,7 @@ package object fobo {
       * Enable usage of FoBo's JQuery-Migrate API and resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
       * @version 3.0.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -636,7 +636,7 @@ package object fobo {
       * @version 3.0.0
       * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -654,7 +654,7 @@ package object fobo {
       * @version 2.2.4
       * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -671,7 +671,7 @@ package object fobo {
       * Enable usage of FoBo's JQuery-Migrate API and resources version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.4.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -688,7 +688,7 @@ package object fobo {
       * Enable usage of FoBo's JQuery-Migrate API and resources version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.2.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -705,7 +705,7 @@ package object fobo {
       * @version 2.1.4
       * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -722,7 +722,7 @@ package object fobo {
       * @version 2.1.1
       * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -738,7 +738,7 @@ package object fobo {
       * Enable usage of FoBo's JQuery API and resources version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.
       * @version 1.11.3
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -754,7 +754,7 @@ package object fobo {
       * Enable usage of FoBo's JQuery API and resources version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.10.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -770,7 +770,7 @@ package object fobo {
       * Enable usage of FoBo's JQuery API and resources version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.9.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -786,7 +786,7 @@ package object fobo {
       * Enable usage of FoBo's JQuery API and resources version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.8.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -802,7 +802,7 @@ package object fobo {
       * Enable usage of FoBo's JQuery API and resources version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.7.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -820,7 +820,7 @@ package object fobo {
       * Enable usage of FoBo's Pace API and resources version 1&#8228;0&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.0.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -836,7 +836,7 @@ package object fobo {
       * Enable usage of FoBo's Pace API and resources version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
       * @version 0.4.15
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -854,7 +854,7 @@ package object fobo {
       * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;7 in your bootstrap liftweb Boot.
       * @version 3.3.7
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -871,7 +871,7 @@ package object fobo {
       * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.
       * @version 3.3.6
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -889,7 +889,7 @@ package object fobo {
       * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;5 in your bootstrap liftweb Boot.
       * @version 3.3.5
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -907,7 +907,7 @@ package object fobo {
       * Enable usage of Bootstrap API and resources version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.
       * @version 3.2.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -924,7 +924,7 @@ package object fobo {
       * Enable usage of Bootstrap API and resources version 3&#8228;1&#8228;1 in your bootstrap liftweb Boot.
       * @version 3.1.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -941,7 +941,7 @@ package object fobo {
       * Enable usage of Bootstrap API and resources version 3&#8228;0&#8228;1 in your bootstrap liftweb Boot.
       * @version 3.0.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -960,7 +960,7 @@ package object fobo {
       * Enable usage of Bootstrap API and resources version 2&#8228;3&#8228;2 in your bootstrap liftweb Boot.
       * @version 2.3.2
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -979,7 +979,7 @@ package object fobo {
       * Enable usage of FoBo's Highlight JS API and resources version 9&#8228;3&#8228;0 in your bootstrap liftweb Boot.
       * @version v9.3.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -997,7 +997,7 @@ package object fobo {
       * Enable usage of FoBo's Tether API and resources version 1&#8228;4&#8228;0 in your bootstrap liftweb Boot.
       * @version v1.4.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1015,7 +1015,7 @@ package object fobo {
       * Enable usage FoBo's Popper API and resources version 1&#8228;10&#8228;8 in your bootstrap liftweb Boot.
       * @version 1.10.8
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{FoBoPop => fobo}
@@ -1034,7 +1034,7 @@ package object fobo {
       * Enable usage FoBo's Tooltip API and resources version 1&#8228;1&#8228;4 in your bootstrap liftweb Boot.
       * @version 1.1.4
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{FoBoToo => fobo}
@@ -1069,7 +1069,7 @@ package object fobo {
       * Enable usage of FoBo's AngularJS version 1&#8228;5&#8228;3 resources files in your bootstrap liftweb Boot.
       * @version 1.5.3
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1086,7 +1086,7 @@ package object fobo {
       * Enable usage of AngularJS i18n resources files in your bootstrap liftweb Boot.
       * @version 1.5.3 i18n
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1103,7 +1103,7 @@ package object fobo {
       * Enable usage of FoBo's AngularJS version 1&#8228;4&#8228;8 resources files in your bootstrap liftweb Boot.
       * @version 1.4.8
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1120,7 +1120,7 @@ package object fobo {
       * Enable usage of AngularJS i18n resources files in your bootstrap liftweb Boot.
       * @version 1.4.8 i18n
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1137,7 +1137,7 @@ package object fobo {
       * Enable usage of AngularJS version 1&#8228;4&#8228;1 resource files in your bootstrap liftweb Boot.
       * @version 1.4.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1154,7 +1154,7 @@ package object fobo {
       * Enable usage of AngularJS i18n resources files in your bootstrap liftweb Boot.
       * @version 1.4.1 i18n
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1171,7 +1171,7 @@ package object fobo {
       * Enable usage of AngularJS version 1&#8228;3&#8228;15 resource files in your bootstrap liftweb Boot.
       * @version 1.3.15
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1188,7 +1188,7 @@ package object fobo {
       * Enable usage of AngularJS i18n resource files in your bootstrap liftweb Boot.
       * @version 1.3.15 i18n
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1205,7 +1205,7 @@ package object fobo {
       * Enable usage of AngularJS version 1&#8228;2&#8228;19 resource files in your bootstrap liftweb Boot.
       * @version 1.2.19
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1222,7 +1222,7 @@ package object fobo {
       * Enable usage of AngularJS i18n resource files in your bootstrap liftweb Boot.
       * @version 1.2.19 i18n
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1239,7 +1239,7 @@ package object fobo {
       * Enable usage of Angular Material version 1&#8228;0&#8228;1 resource files in your bootstrap liftweb Boot.
       * @version 1.0.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1257,7 +1257,7 @@ package object fobo {
       * Enable usage of Angular Material version 1&#8228;0&#8228;8 resource files in your bootstrap liftweb Boot.
       * @version 1.0.8
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1275,7 +1275,7 @@ package object fobo {
       * Enable usage of Angular Material version 1&#8228;1&#8228;1 resource files in your bootstrap liftweb Boot.
       * @version 1.1.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1292,7 +1292,7 @@ package object fobo {
       * Enable usage of Angular Material version 1&#8228;1&#8228;4 resource files in your bootstrap liftweb Boot.
       * @version 1.1.4
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1309,7 +1309,7 @@ package object fobo {
       * Enable usage of AngularUI-Bootstrap version 2&#8228;4&#8228;0 resource files in your bootstrap liftweb Boot.
       * @version 2.4.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1326,7 +1326,7 @@ package object fobo {
       * Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 resource files in your bootstrap liftweb Boot.
       * @version 0.10.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1343,7 +1343,7 @@ package object fobo {
       * Enable usage of AngularUI-Bootstrap version 0&#8228;7&#8228;0 resource files in your bootstrap liftweb Boot.
       * @version 0.7.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1360,7 +1360,7 @@ package object fobo {
       * Enable usage of AngularUI-Bootstrap version 0&#8228;2&#8228;0 resource files in your bootstrap liftweb Boot.
       * @version 0.2.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1377,7 +1377,7 @@ package object fobo {
       * Enable usage of NG-Grid version 2&#8228;0&#8228;7 resource files in your bootstrap liftweb Boot.
       * @version 2.0.7
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1394,7 +1394,7 @@ package object fobo {
       * Enable usage of UI-Grid version 3&#8228;0&#8228;7 resource files in your bootstrap liftweb Boot.
       * @version 3.0.7
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1413,7 +1413,7 @@ package object fobo {
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;6&#8228;3 in your bootstrap liftweb Boot.
       * @version 4.6.3
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1429,7 +1429,7 @@ package object fobo {
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
       * @version 4.3.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1445,7 +1445,7 @@ package object fobo {
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.
       * @version 4.1.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1461,7 +1461,7 @@ package object fobo {
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.
       * @version 4.0.3
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1477,7 +1477,7 @@ package object fobo {
       * Enable usage of FoBo's FontAwesome resources version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.
       * @version 3.2.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1495,7 +1495,7 @@ package object fobo {
       * Enable usage of FoBo's Google Code Prettify API and resources version Jun2011 in your bootstrap liftweb Boot.
       * @version Jun2011
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1514,7 +1514,7 @@ package object fobo {
       * @version 3.1.0
       * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1531,7 +1531,7 @@ package object fobo {
       * Enable usage of FoBo's JQuery-Migrate resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
       * @version 3.0.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1549,7 +1549,7 @@ package object fobo {
       * @version 3.0.0
       * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1567,7 +1567,7 @@ package object fobo {
       * @version 2.2.4
       * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1584,7 +1584,7 @@ package object fobo {
       * Enable usage of FoBo's JQuery-Migrate resources version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.4.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1601,7 +1601,7 @@ package object fobo {
       * Enable usage of FoBo's JQuery-Migrate resources version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.2.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1618,7 +1618,7 @@ package object fobo {
       * @version 2.1.4
       * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1635,7 +1635,7 @@ package object fobo {
       * @version 2.1.1
       * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1651,7 +1651,7 @@ package object fobo {
       * Enable usage of FoBo's JQuery resources version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.
       * @version 1.11.3
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1667,7 +1667,7 @@ package object fobo {
       * Enable usage of FoBo's JQuery resources version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.10.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1683,7 +1683,7 @@ package object fobo {
       * Enable usage of FoBo's JQuery resources version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.9.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1699,7 +1699,7 @@ package object fobo {
       * Enable usage of FoBo's JQuery resources version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.8.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1715,7 +1715,7 @@ package object fobo {
       * Enable usage of FoBo's JQuery resources version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.7.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1732,7 +1732,7 @@ package object fobo {
       * Enable usage of FoBo's Pace resources version 1&#8228;0&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.0.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   fobo.Resource.init=fobo.Resource.Pace102
@@ -1746,7 +1746,7 @@ package object fobo {
       * Enable usage of FoBo's Pace resources version 0&#8228;4&#8228;15 in your bootstrap liftweb Boot.
       * @version 0.4.15
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   fobo.Resource.init=fobo.Resource.Pace0415
@@ -1762,7 +1762,7 @@ package object fobo {
       * Enable usage of Bootstrap version 3&#8228;3&#8228;7 resource files in your bootstrap liftweb Boot.
       * @version 3.3.7
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1779,7 +1779,7 @@ package object fobo {
       * Enable usage of Bootstrap version 3&#8228;3&#8228;6 resource files in your bootstrap liftweb Boot.
       * @version 3.3.6
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1797,7 +1797,7 @@ package object fobo {
       * Enable usage of Bootstrap version 3&#8228;3&#8228;5 resource files in your bootstrap liftweb Boot.
       * @version 3.3.5
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1815,7 +1815,7 @@ package object fobo {
       * Enable usage of Bootstrap version 3&#8228;2&#8228;0 resource files in your bootstrap liftweb Boot.
       * @version 3.2.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1832,7 +1832,7 @@ package object fobo {
       * Enable usage of Bootstrap version 3&#8228;1&#8228;1 resource files in your bootstrap liftweb Boot.
       * @version 3.1.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1849,7 +1849,7 @@ package object fobo {
       * Enable usage of Bootstrap version 3&#8228;0&#8228;1 resource files in your bootstrap liftweb Boot.
       * @version 3.0.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1868,7 +1868,7 @@ package object fobo {
       * Enable usage of Bootstrap version 3&#8228;0&#8228;1 resource files in your bootstrap liftweb Boot.
       * @version 2.3.2
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1887,7 +1887,7 @@ package object fobo {
       * Enable usage of FoBo's Highlight JS version 9&#8228;3&#8228;0 resource files in your bootstrap liftweb Boot.
       * @version v9.3.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1905,7 +1905,7 @@ package object fobo {
       * Enable usage of FoBo's Tether version 1&#8228;4&#8228;0 resource files in your bootstrap liftweb Boot.
       * @version v1.4.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1923,7 +1923,7 @@ package object fobo {
       * Enable usage of FoBo's Popper version 1&#8228;10&#8228;8 resource files in your bootstrap liftweb Boot.
       * @version v1.10.8
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1942,7 +1942,7 @@ package object fobo {
       * Enable usage of FoBo's Popper Tooltip version 1&#8228;1&#8228;4 resource files in your bootstrap liftweb Boot.
       * @version v1.1.4
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1976,7 +1976,7 @@ package object fobo {
       * Enable usage of FoBo's AngularJS API 1&#8228;x&#8228;x in your bootstrap liftweb Boot.
       * @version 1.4.8
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -1995,7 +1995,7 @@ package object fobo {
       * Enable usage of FoBo's Bootstrap API 3&#8228;x&#8228;x in your bootstrap liftweb Boot.
       * @version 3.x.x
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -2012,7 +2012,7 @@ package object fobo {
       * Enable usage of FoBo's Bootstrap API 2&#8228;x&#8228;x in your bootstrap liftweb Boot.
       * @version 2.x.x
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -2035,7 +2035,7 @@ package object fobo {
       * Enable usage of FoBo's Pace API version 9&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 9.X.X
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -2057,7 +2057,7 @@ package object fobo {
       * Enable usage of FoBo's FoBo API 1&#8228;x&#8228;x in your bootstrap liftweb Boot.
       * @version 1.x.x
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo
@@ -2076,7 +2076,7 @@ package object fobo {
       * Enable usage of FoBo's Tether API 1&#8228;x&#8228;x in your bootstrap liftweb Boot.
       * @version 1.x.x
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.fobo

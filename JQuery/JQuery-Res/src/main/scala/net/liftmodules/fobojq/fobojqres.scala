@@ -19,7 +19,7 @@ package object fobojqres {
   /**
     * Initiate FoBo's JQuery Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobojqres => fobo}
     *    :
@@ -46,7 +46,7 @@ package object fobojqres {
       * Enable usage of FoBo's JQuery resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
       * @version 3.0.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{FoBoJQPRes => fobo}
@@ -64,7 +64,7 @@ package object fobojqres {
       * Enable usage of FoBo's JQuery resources version 3&#8228;1&#8228;0 in your bootstrap liftweb Boot.
       * @version 3.1.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojqres => fobo}
@@ -82,7 +82,7 @@ package object fobojqres {
       * Enable usage of FoBo's JQuery resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
       * @version 3.0.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojqres => FoBo}
@@ -100,7 +100,7 @@ package object fobojqres {
       * Enable usage of FoBo's JQuery resources version 2&#8228;2&#8228;4 in your bootstrap liftweb Boot.
       * @version 2.2.4
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojqres => FoBo}
@@ -118,7 +118,7 @@ package object fobojqres {
       * Enable usage of FoBo's JQuery resources version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.4.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojqres => FoBo}
@@ -136,7 +136,7 @@ package object fobojqres {
       * Enable usage of FoBo's JQuery resources version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.2.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojqres => FoBo}
@@ -153,7 +153,7 @@ package object fobojqres {
       * Enable usage of FoBo's JQuery resources version 2&#8228;1&#8228;4 in your bootstrap liftweb Boot.
       * @version 2.1.4
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojqres => FoBo}
@@ -170,7 +170,7 @@ package object fobojqres {
       * Enable usage of FoBo's JQuery resources version 2&#8228;1&#8228;1 in your bootstrap liftweb Boot.
       * @version 2.1.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojqres => FoBo}
@@ -187,7 +187,7 @@ package object fobojqres {
       * Enable usage of FoBo's JQuery resources version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.
       * @version 1.11.3
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojqres => FoBo}
@@ -204,7 +204,7 @@ package object fobojqres {
       * Enable usage of FoBo's JQuery resources version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.
       * @version 1.10.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojqres => FoBo}
@@ -221,7 +221,7 @@ package object fobojqres {
       * Enable usage of FoBo's JQuery resources version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.9.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojqres => FoBo}
@@ -238,7 +238,7 @@ package object fobojqres {
       * Enable usage of FoBo's JQuery resources version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.8.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojqres => FoBo}
@@ -255,7 +255,7 @@ package object fobojqres {
       * Enable usage of FoBo's JQuery resources version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.7.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojqres => fobo}

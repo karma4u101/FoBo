@@ -10,6 +10,8 @@ import sbt.project
 //##
 //##############
 
+//scalacOptions in Compile ++= Seq("-doc-root-content", "rootdoc.txt")
+
 lazy val commonSettings = Seq(
   organization := "net.liftmodules",
   version in ThisBuild := "2.0-SNAPSHOT",

@@ -19,7 +19,7 @@ package object fobopopres {
   /**
     * Initiate fobo's Popper Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobopopres => fobo}
     *    :
@@ -27,7 +27,7 @@ package object fobopopres {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Resource
+  sealed trait Resource
 
   object Resource extends Resource {
 
@@ -46,7 +46,7 @@ package object fobopopres {
       * Enable usage of Popper version 1&#8228;10&#8228;9 in your bootstrap liftweb Boot.
       * @version 1.10.8
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobopopres => fobo}

@@ -15,7 +15,7 @@ class AJSMaterialSH extends ScriptHelper {
   /**
     * Wraps a lift message in a Material Design Toast component.
     *
-    * '''Example'''
+    * @example
     * In your "app js" file you you can set up the toast themes like this.
     * {{{
     * app.config(function(\$mdThemingProvider) {
@@ -67,7 +67,7 @@ class AJSMaterialSH extends ScriptHelper {
   /**
     * Wraps a lift message in a Material Design Toast component.
     *
-    * '''Example'''
+    * @example
     * In your "app js" file you you can set up the toast themes like this.
     * {{{
     * app.config(function(\$mdThemingProvider) {
@@ -119,7 +119,7 @@ class AJSMaterialSH extends ScriptHelper {
   /**
     * Wraps a lift message in a Material Design Toast component.
     *
-    * '''Example'''
+    * @example
     * In your "app js" file you you can set up the toast themes like this.
     * {{{
     * app.config(function(\$mdThemingProvider) {

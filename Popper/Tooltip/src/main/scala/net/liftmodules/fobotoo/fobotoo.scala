@@ -22,7 +22,7 @@ package object fobotoo {
     * toolkit's resources and FoBo/Lift API associated
     * with the toolkit.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobotoo => fobo}
     *    :
@@ -35,7 +35,7 @@ package object fobotoo {
   /**
     * Initiate FoBo's Tooltip Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobotoo => fobo}
     *    :
@@ -48,7 +48,7 @@ package object fobotoo {
   /**
     * Initiate FoBo's Tooltip API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobotoo => fobo}
     *    :
@@ -77,7 +77,7 @@ package object fobotoo {
       * Enable usage FoBo's Tooltip API and resources version 1&#8228;1&#8228;4 in your bootstrap liftweb Boot.
       * @version 1.1.4
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobotoo => fobo}
@@ -111,7 +111,7 @@ package object fobotoo {
       * Enable usage FoBo's Tooltip resources version 1&#8228;1&#8228;4 in your bootstrap liftweb Boot.
       * @version 1.1.4
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobotoo => fobo}
@@ -145,7 +145,7 @@ package object fobotoo {
       * Enable usage of FoBo's Tooltip API version 1&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 1.X.X
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobotoo => fobo}

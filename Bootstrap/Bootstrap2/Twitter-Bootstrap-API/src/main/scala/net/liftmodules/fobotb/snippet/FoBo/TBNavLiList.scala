@@ -3,10 +3,7 @@ package net.liftmodules.fobotb.snippet.FoBo
 import net.liftweb._
 import http._
 import common._
-import common.Box._
-import http.{S, LiftRules}
 import sitemap._
-import util.Helpers
 import xml._
 
 /**

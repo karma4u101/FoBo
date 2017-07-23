@@ -3,10 +3,7 @@ package net.liftmodules.fobobs.snippet.FoBo
 import net.liftweb._
 import http._
 import common._
-import common.Box._
-import http.{S, LiftRules}
 import sitemap._
-import util.Helpers
 import xml._
 
 /**
@@ -20,6 +17,7 @@ import xml._
   * the BsNavbar dose nor dose it support transformations into menu headers or menu dividers as the Bootstrap v2 TBNavlist
   * but you can of course add your own menu section header's between loc groups in the list group as shown in the example below.
   *
+  * @example
   * '''Snippet Usage:'''
   * {{{<span data-lift="FoBo.Bs3LinkedListGroup.builder?group=[LocGroup name]"></span>}}}
   *
