@@ -32,7 +32,7 @@ package object foboajs {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Toolkit
+  sealed trait Toolkit
 
   /**
     * Initiate FoBo's Angular Resource(s) in you bootstrap liftweb Boot.
@@ -45,7 +45,7 @@ package object foboajs {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Resource
+  sealed trait Resource
 
   /**
     * Initiate FoBo's Angular API in you bootstrap liftweb Boot.
@@ -58,7 +58,7 @@ package object foboajs {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait API
+  sealed trait API
 
   /*=== Toolkit ============================================*/
   object Toolkit extends Toolkit {
@@ -309,6 +309,25 @@ package object foboajs {
     case object AJMaterial111 extends Toolkit {
       foboajsapi.API.Angular1
       foboajsres.Resource.AJMaterial111
+    }
+
+    /**
+      * Enable usage of FoBo's Angular Material API and resources version 1&#8228;1&#8228;4 in your bootstrap liftweb Boot.
+      * @version 1.1.4
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{foboajs => fobo}
+      *    :
+      *   fobo.Toolkit.init=fobo.Toolkit.AJMaterial114
+      * }}}
+      *
+      * @since v2.0
+      */
+    case object AJMaterial114 extends Toolkit {
+      foboajsapi.API.Angular1
+      foboajsres.Resource.AJMaterial114
     }
 
     /**
@@ -657,6 +676,23 @@ package object foboajs {
       */
     case object AJMaterial111 extends Resource {
       foboajsres.Resource.AJMaterial111
+    }
+
+    /**
+      * Enable usage of Angular Material version 1&#8228;1&#8228;4 resource files in your bootstrap liftweb Boot.
+      * @version 1.1.4
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{foboajs => fobo}
+      *    :
+      *   fobo.Resource.init=fobo.Resource.AJMaterial114
+      * }}}
+      * @since 2.0
+      */
+    case object AJMaterial114 extends Resource {
+      foboajsres.Resource.AJMaterial114
     }
 
     /**

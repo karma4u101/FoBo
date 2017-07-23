@@ -132,6 +132,39 @@ object FoBoSpec extends Specification {
     }
   }
 
+  //AJMaterial114
+  "With fobo.Toolkit.init set to fobo.Toolkit.AJMaterial114 the ResourceServer" should {
+    "allow  fobo/angular-material.js" in {
+      allowToolkitInit(fobo.Toolkit.AJMaterial114,
+                       "fobo" :: "angular-material.js" :: Nil) must_== true
+    }
+    "rewrit fobo/angular-material.js to fobo/angular-material/1.1.4/js/angular-material.min.js" in {
+      rewriteToolkitInit(fobo.Toolkit.AJMaterial114,
+                         "fobo" :: "angular-material.js" :: Nil) must_==
+        List("fobo",
+             "angular-material",
+             "1.1.4",
+             "js",
+             "angular-material.min.js")
+    }
+  }
+
+  "With fobo.Resource.init set to fobo.Resource.AJMaterial114 the ResourceServer" should {
+    "allow  fobo/angular-material.js" in {
+      allowResource(fobo.Resource.AJMaterial114,
+                    "fobo" :: "angular-material.js" :: Nil) must_== true
+    }
+    "rewrit fobo/angular-material.js to fobo/angular-material/1.1.4/js/angular-material.min.js" in {
+      rewriteResource(fobo.Resource.AJMaterial114,
+                      "fobo" :: "angular-material.js" :: Nil) must_==
+        List("fobo",
+             "angular-material",
+             "1.1.4",
+             "js",
+             "angular-material.min.js")
+    }
+  }
+
   //AJMaterial111
   "With fobo.Toolkit.init set to fobo.Toolkit.AJMaterial111 the ResourceServer" should {
     "allow  fobo/angular-material.js" in {
