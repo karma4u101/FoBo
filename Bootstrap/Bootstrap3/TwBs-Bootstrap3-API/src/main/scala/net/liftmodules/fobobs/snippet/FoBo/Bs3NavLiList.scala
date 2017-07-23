@@ -3,10 +3,7 @@ package net.liftmodules.fobobs.snippet.FoBo
 import net.liftweb._
 import http._
 import common._
-import common.Box._
-import http.{S, LiftRules}
 import sitemap._
-import util.Helpers
 import xml._
 
 /**
@@ -20,6 +17,7 @@ import xml._
   * from SiteMap entries, see TBLocInfo the object in [[net.liftmodules.fobo]] for various, simple to use,
   * SiteMap manipulation functions.
   *
+  * @example
   * '''Snippet Usage:'''
   * {{{<span data-lift="FoBo.Bs3NavLiList.builder?group=[LocGroup name]"></span>}}}
   *

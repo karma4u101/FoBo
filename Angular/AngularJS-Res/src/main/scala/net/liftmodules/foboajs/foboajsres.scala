@@ -20,7 +20,7 @@ package object foboajsres {
   /**
     * Initiate FoBo's Angular Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{foboajsres => fobo}
     *    :
@@ -47,7 +47,7 @@ package object foboajsres {
       * Enable usage of FoBo's AngularJS version 1&#8228;5&#8228;3 resources files in your bootstrap liftweb Boot.
       * @version 1.5.3
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -65,7 +65,7 @@ package object foboajsres {
       * Enable usage of AngularJS i18n resources files in your bootstrap liftweb Boot.
       * @version 1.5.3 i18n
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -90,7 +90,7 @@ package object foboajsres {
       * Enable usage of FoBo's AngularJS version 1&#8228;4&#8228;8 resources files in your bootstrap liftweb Boot.
       * @version 1.4.8
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -108,7 +108,7 @@ package object foboajsres {
       * Enable usage of AngularJS i18n resources files in your bootstrap liftweb Boot.
       * @version 1.4.8 i18n
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -129,7 +129,7 @@ package object foboajsres {
       * Enable usage of AngularJS version 1&#8228;4&#8228;1 resource files in your bootstrap liftweb Boot.
       * @version 1.4.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -148,7 +148,7 @@ package object foboajsres {
       * Enable usage of AngularJS i18n resources files in your bootstrap liftweb Boot.
       * @version 1.4.1 i18n
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -170,7 +170,7 @@ package object foboajsres {
       * Enable usage of AngularJS version 1&#8228;3&#8228;15 resource files in your bootstrap liftweb Boot.
       * @version 1.3.15
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -188,7 +188,7 @@ package object foboajsres {
       * Enable usage of AngularJS i18n resource files in your bootstrap liftweb Boot.
       * @version 1.3.15 i18n
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -209,7 +209,7 @@ package object foboajsres {
       * Enable usage of AngularJS version 1&#8228;2&#8228;19 resource files in your bootstrap liftweb Boot.
       * @version 1.2.19
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -227,7 +227,7 @@ package object foboajsres {
       * Enable usage of AngularJS i18n resource files in your bootstrap liftweb Boot.
       * @version 1.2.19 i18n
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -246,7 +246,7 @@ package object foboajsres {
       * Enable usage of Angular Material version 1&#8228;0&#8228;8 resource files in your bootstrap liftweb Boot.
       * @version 1.0.8
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -265,7 +265,7 @@ package object foboajsres {
       * Enable usage of Angular Material version 1&#8228;1&#8228;1 resource files in your bootstrap liftweb Boot.
       * @version 1.1.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -283,7 +283,7 @@ package object foboajsres {
       * Enable usage of Angular Material version 1&#8228;1&#8228;4 resource files in your bootstrap liftweb Boot.
       * @version 1.1.4
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -301,7 +301,7 @@ package object foboajsres {
       * Enable usage of AngularUI-Bootstrap version 2&#8228;5&#8228;0 resource files in your bootstrap liftweb Boot.
       * @version 2.5.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -319,7 +319,7 @@ package object foboajsres {
       * Enable usage of AngularUI-Bootstrap version 0&#8228;10&#8228;0 resource files in your bootstrap liftweb Boot.
       * @version 0.10.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -338,7 +338,7 @@ package object foboajsres {
       * Enable usage of AngularUI-Bootstrap version 0&#8228;7&#8228;0 resource files in your bootstrap liftweb Boot.
       * @version 0.7.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -357,7 +357,7 @@ package object foboajsres {
       * Enable usage of AngularUI-Bootstrap version 0&#8228;2&#8228;0 resource files in your bootstrap liftweb Boot.
       * @version 0.2.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -376,7 +376,7 @@ package object foboajsres {
       * Enable usage of NG-Grid version 2&#8228;0&#8228;7 resource files in your bootstrap liftweb Boot.
       * @version 2.0.7
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
@@ -394,7 +394,7 @@ package object foboajsres {
       * Enable usage of UI-Grid version 3&#8228;0&#8228;7 resource files in your bootstrap liftweb Boot.
       * @version 3.0.7
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}

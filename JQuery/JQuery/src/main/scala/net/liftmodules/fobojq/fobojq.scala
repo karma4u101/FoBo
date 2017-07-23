@@ -22,7 +22,7 @@ package object fobojq {
     * toolkit's resources and FoBo/Lift API associated
     * with the toolkit.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobojq => fobo}
     *    :
@@ -35,7 +35,7 @@ package object fobojq {
   /**
     * Initiate FoBo's JQuery Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobojq => fobo}
     *    :
@@ -48,7 +48,7 @@ package object fobojq {
   /**
     * Initiate FoBo's JQuery API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobojq => fobo}
     *    :
@@ -78,7 +78,7 @@ package object fobojq {
       * @version 3.1.0
       * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -96,7 +96,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery-Migrate API and resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
       * @version 3.0.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -115,7 +115,7 @@ package object fobojq {
       * @version 3.0.0
       * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -134,7 +134,7 @@ package object fobojq {
       * @version 2.2.4
       * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -152,7 +152,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery-Migrate API and resources version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.4.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -170,7 +170,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery-Migrate API and resources version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.2.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -188,7 +188,7 @@ package object fobojq {
       * @version 2.1.4
       * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -206,7 +206,7 @@ package object fobojq {
       * @version 2.1.1
       * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -223,7 +223,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery API and resources version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.
       * @version 1.11.3
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -240,7 +240,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery API and resources version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.10.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -257,7 +257,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery API and resources version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.9.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -274,7 +274,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery API and resources version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.8.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -291,7 +291,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery API and resources version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.7.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -326,7 +326,7 @@ package object fobojq {
       * @version 3.1.0
       * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -342,7 +342,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery-Migrate resources version 3&#8228;0&#8228;0 in your bootstrap liftweb Boot.
       * @version 3.0.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -359,7 +359,7 @@ package object fobojq {
       * @version 3.0.0
       * OBS! JQuery 3.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -376,7 +376,7 @@ package object fobojq {
       * @version 2.2.4
       * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -392,7 +392,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery-Migrate resources version 1&#8228;4&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.4.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -408,7 +408,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery-Migrate resources version 1&#8228;2&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.2.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -425,7 +425,7 @@ package object fobojq {
       * @version 2.1.4
       * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -442,7 +442,7 @@ package object fobojq {
       * @version 2.1.1
       * OBS! JQuery 2.x dose not support Internet Explorer 6, 7, or 8.
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -458,7 +458,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery resources version 1&#8228;11&#8228;3 in your bootstrap liftweb Boot.
       * @version 1.11.3
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -474,7 +474,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery resources version 1&#8228;10&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.10.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -490,7 +490,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery resources version 1&#8228;9&#8228;1 in your bootstrap liftweb Boot.
       * @version 1.9.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -506,7 +506,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery resources version 1&#8228;8&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.8.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -522,7 +522,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery resources version 1&#8228;7&#8228;2 in your bootstrap liftweb Boot.
       * @version 1.7.2
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -555,7 +555,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery API version 1&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 1.X.X
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}
@@ -572,7 +572,7 @@ package object fobojq {
       * Enable usage of FoBo's JQuery API version 2&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 2.X.X
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojq => fobo}

@@ -3,10 +3,7 @@ package net.liftmodules.fobotb.snippet.FoBo
 import net.liftweb._
 import http._
 import common._
-import common.Box._
-import http.{S, LiftRules}
 import sitemap._
-import util.Helpers
 import xml._
 
 /**
@@ -16,6 +13,8 @@ import xml._
   * group name's into Twitter Bootsrap Navlist items including nav-header label items and menu dividers from SiteMap entries.
   *
   * See also the TBLocInfo object in [[net.liftmodules.fobo]] for various, simple to use, SiteMap manipulation functions.
+  *
+  * @example
   *
   * '''Snippet Usage:'''
   * {{{<span data-lift="FoBo.TBNavlist.builder?group=[LocGroup name]"></span>}}}

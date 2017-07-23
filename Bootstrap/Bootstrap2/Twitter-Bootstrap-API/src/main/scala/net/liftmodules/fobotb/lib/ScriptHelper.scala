@@ -1,14 +1,7 @@
 package net.liftmodules.fobotb.lib
 
-import _root_.net.liftweb._
-import util.{Props}
-import http._
-import common._
-import net.liftweb.http._
 import net.liftweb.http.js._
-import net.liftweb.http.js.JsCmds._
 import net.liftweb.http.js.JE.JsRaw
-import net.liftweb.http.js.JsCmd
 
 /**
   * ==Script Helper Bootstrap v2.x==

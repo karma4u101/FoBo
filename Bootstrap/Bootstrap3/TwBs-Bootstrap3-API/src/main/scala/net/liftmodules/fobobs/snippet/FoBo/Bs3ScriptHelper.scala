@@ -12,7 +12,7 @@ import net.liftmodules.fobobs.lib.BootstrapSH
   *
   * This snippet class contains functions for common transform operations useful when working
   * with the any toolkit, for convenience included as a Bootstrap v3.x snippet.
-  * '''Example''' Most of the functions in this class can be invoked using the following pattern.
+  * @example Most of the functions in this class can be invoked using the following pattern.
   * {{{ data-lift="FoBo.Bs3ScriptHelper.functionName?paramName=paramValue&...." }}}
   * For more examples see the individual transform functions.
   * @since v1.1
@@ -30,7 +30,7 @@ class Bs3ScriptHelper extends StatefulSnippet with Loggable {
   /**
     * This function register a load event factory script
     *
-    * '''Example'''
+    * @example
     * {{{
     *     <head>
     *       :

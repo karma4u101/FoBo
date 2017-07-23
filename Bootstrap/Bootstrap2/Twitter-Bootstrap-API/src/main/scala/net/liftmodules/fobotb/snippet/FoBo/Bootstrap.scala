@@ -11,7 +11,7 @@ import net.liftmodules.fobotb.lib.BootstrapSH
   *
   * This snippet class contains functions for common transform operations useful when working
   * with the Bootstrap toolkit.
-  * '''Example''' Invoke with
+  * @example Invoke with
   * {{{ data-lift="FoBo.Bootstrap.functionName?paramName=paramValue&...." }}}
   * For more examples see the individual transform functions.
   * @since v1.0
@@ -35,7 +35,7 @@ class Bootstrap extends StatefulSnippet with Loggable {
     *  - '''Param''' ''id'' - The element id
     *  - '''Param''' ''options'' - The option string see bootstrap documentation for available options.
     *
-    * '''Example'''
+    * @example
     * {{{ <script data-lift="FoBo.Bootstrap.popover?id=#theId&options=placement:'left'"></script> }}}
     *
     * '''Result:''' This example will result in the following being injected in place of the snippet invocation:
@@ -61,7 +61,7 @@ class Bootstrap extends StatefulSnippet with Loggable {
     *  - '''Param''' ''id'' - The element id
     *  - '''Param''' ''options'' - The option string see bootstrap documentation for available options.
     *
-    * '''Example''' Showing a example element using the tooltip and the actual snippet invocation
+    * @example Showing a example element using the tooltip and the actual snippet invocation
     * {{{
     *  <a id="aId"
     *     title="The most powerful, most secure web framework available today. It simply rocks!"
@@ -91,7 +91,7 @@ class Bootstrap extends StatefulSnippet with Loggable {
     *
     *  - '''Param''' ''on'' - The element id or something more general like the default value a[rel=popover]
     *
-    * '''Example'''
+    * @example
     * {{{ <script data-lift="FoBo.Bootstrap.popoverPreventDefault?on=#theId"></script> }}}
     *
     * '''Result:''' This example will result in the following being injected in place of the snippet invocation:
@@ -115,7 +115,7 @@ class Bootstrap extends StatefulSnippet with Loggable {
     *
     * - '''Param''' ''on'' - The element id or class to activate dropdown on
     *
-    * '''Example'''
+    * @example
     * {{{
     *     <head>
     *       :

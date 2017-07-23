@@ -1,10 +1,7 @@
 package net.liftmodules.fobohl.snippet.FoBo
 
-import scala.xml.{NodeSeq, Text}
 import net.liftweb.util._
-import net.liftweb.common._
 import net.liftweb.http._
-import net.liftweb._
 import Helpers._
 
 /**
@@ -13,7 +10,7 @@ import Helpers._
   * This snippet class lets you inject FoBo Hightlight resources into your templates.
   * Instead of hand write the resource tags you can use this helper snippet to inject it for you.
   *
-  * '''Example''' Invoke with
+  * @example Invoke with
   * {{{ data-lift="FoBo.HLResources.functionName?paramName=paramValue&...." }}}
   * For more examples see the individual transform functions.
   * @since v1.6
@@ -30,7 +27,7 @@ class HLResources extends StatefulSnippet {
     *
     *  - '''Param''' ''resources'' - A comma separated list of FoBo managed js resources.
     *
-    * '''Example'''
+    * @example
     * {{{ <script data-lift="FoBo.HLResources.injectJS?resources=highlight.pack"></script> }}}
     *
     * '''Result:''' This example will result in the following being injected in place of the snippet invocation:
@@ -60,7 +57,7 @@ class HLResources extends StatefulSnippet {
     *
     *  - '''Param''' ''resources'' - A comma separated list of FoBo managed Hightlight css resources.
     *
-    * '''Example'''
+    * @example
     * {{{ <link data-lift="FoBo.HLResources.injectCSS?resources=github-gist"></link>  }}}
     *
     * '''Result:''' This example will result in the following being injected in place of the snippet invocation:
