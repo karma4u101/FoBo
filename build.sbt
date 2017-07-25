@@ -25,7 +25,7 @@ lazy val fobometa = (project in file("."))
   .enablePlugins(ScalaUnidocPlugin)
   //.settings(unidocSettings: _*)
   .settings(name := "fobo-meta")
-  .settings(scalaVersion in ThisBuild := "2.12.1")
+  .settings(scalaVersion in ThisBuild := "2.12.2")
   .settings(liftVersion in ThisBuild := { liftVersion ?? "3.1.0-M3" }.value)
   .settings(liftEdition in ThisBuild := {
     liftVersion apply { _.substring(0, 3) }

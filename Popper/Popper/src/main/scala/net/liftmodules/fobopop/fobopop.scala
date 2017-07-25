@@ -75,7 +75,7 @@ package object fobopop {
 
     /**
       * Enable usage FoBo's Popper API and resources version 1&#8228;10&#8228;8 in your bootstrap liftweb Boot.
-      * @version 1.9.9
+      * @version 1.10.8
       *
       * @example
       *
