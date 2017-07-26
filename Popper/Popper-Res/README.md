@@ -1,11 +1,11 @@
-# FoBo Tether Resource Module
+# FoBo Popper Resource Module
 
-This module provides Tether resources to the Tether Toolkit module, 
+This module provides Popper resources to the Popper Toolkit module, 
 but can also be used as-is see below for setup information. 
 
 ## Components and available versions
 
-- FoBo-Tether [v1.4.0] - [Tether](http://tether.io/) 
+- FoBo-Popper [v1.9.9] - [Popper](https://popper.js.org/)
 
 ## Integration into your project 
 
@@ -15,47 +15,43 @@ Example setup:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-tether-res_3.0 % "2.0"
+"net.liftmodules" %% "fobo-tether-res_3.1 % "2.0"
 ```
 **Maven:**
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-tether-res_3.0_2.12.1</artifactId>
+  <artifactId>fobo-tether-res_3.1_2.12.2</artifactId>
   <version>2.0</version>
 </dependency>
 ```
-The example will include a module built for lift 3.0.x. 
+The example will include a module built for lift 3.1.x. 
 If you are using maven observe that the artifact id also needs the Scala version.
 
 ### Lift FoBo boot hooks (when used as stand alone module)
 ```scala
-import net.liftmodules.{FoBoTetRes => FoBo}
+import net.liftmodules.{fobopopres => fobo}
   :
-FoBo.Resource.Init=FoBo.Resource.TetherXYZ 
+fobo.Resource.init = fobo.Resource.TetherXYZ 
 ```
 ### Lift FoBo boot hooks (when used in the FoBo module)
 ```scala
-import net.liftmodules.FoBo 
+import net.liftmodules.fobo 
   :
-FoBo.Resource.Init=FoBo.Resource.TetherXYZ 
+fobo.Resource.init = fobo.Resource.TetherXYZ 
 ```
 ### Lift FoBo Template hooks
 ```html
-<script src="/classpath/fobo/tether.js" type="text/javascript"></script>
+<script src="/classpath/fobo/popper.js" type="text/javascript"></script>
 ```
-Css files
-
-- tether.css [v1.4.0]
-- tether-theme-arrows.css [v1.4.0]
-- tether-theme-arrows-dark.css [v1.4.0]
-- tether-theme-basic.css [v1.4.0]
 
 Script files
 
-- tether.js [v1.4.0]
+- popper.js [v1.9.9]
+- popper-utils.js [v1.9.9]
+- popper-map.js [v1.9.9]
 
-For more information on how to use Tether see [Tether](http://tether.io/)
+For more information on how to use Popper see [Popper](https://popper.js.org/)
 
 ## Contributions
 

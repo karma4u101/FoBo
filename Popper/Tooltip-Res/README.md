@@ -21,7 +21,7 @@ Example setup:
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-tether-res_3.1_2.12.1</artifactId>
+  <artifactId>fobo-tether-res_3.1_2.12.2</artifactId>
   <version>2.0</version>
 </dependency>
 ```
@@ -30,15 +30,15 @@ If you are using maven observe that the artifact id also needs the Scala version
 
 ### Lift FoBo boot hooks (when used as stand alone module)
 ```scala
-import net.liftmodules.{FoBoTooRes => FoBo}
+import net.liftmodules.{fobotoores => fobo}
   :
-FoBo.Resource.Init=FoBo.Resource.TooltipXYZ 
+fobo.Resource.init = fobo.Resource.TooltipXYZ 
 ```
 ### Lift FoBo boot hooks (when used in the FoBo module)
 ```scala
-import net.liftmodules.FoBo
+import net.liftmodules.fobo
   :
-FoBo.Resource.Init=FoBo.Resource.TooltipXYZ 
+fobo.Resource.init = fobo.Resource.TooltipXYZ 
 ```
 ### Lift FoBo Template hooks
 ```html
@@ -57,4 +57,3 @@ For more information on how to use Tooltip see [Tooltip](https://popper.js.org/)
 Improvements, contributions and suggestions are welcome! 
 Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). 
 You can also leave a issue report or drop a question/suggestion on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
-
