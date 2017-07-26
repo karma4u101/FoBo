@@ -17,28 +17,28 @@ but can also be used as-is, see below for setup information.
 ### Lift FoBo boot hooks (when used in the FoBo module)
 
 ```scala
-import net.liftmodules.FoBo 
+import net.liftmodules.fobo 
   :
-FoBo.Resouce.Init=FoBo.Resouce.AngularJS153        //access to v1.5.3 core files 
-FoBo.Resouce.Init=FoBo.Resouce.AngularJS153i18n    //access to angular i18n files 
-FoBo.Resouce.Init=FoBo.Resouce.AJSUIBootstrap0100  //Angular UI Bootstrap
-FoBo.Resouce.Init=FoBo.Resouce.AJSMaterial108      //Angular Material
-FoBo.Resouce.Init=FoBo.Resouce.AJSUIGrid307        //Angular UI-Grid
-FoBo.Resouce.Init=FoBo.Resouce.AJSNGGrid207        //Angular NG-Grid
+fobo.Resouce.init = fobo.Resouce.AngularJS153        //access to v1.5.3 core files 
+fobo.Resouce.init = fobo.Resouce.AngularJS153i18n    //access to angular i18n files 
+fobo.Resouce.init = fobo.Resouce.AJSUIBootstrap0100  //Angular UI Bootstrap
+fobo.Resouce.init = fobo.Resouce.AJSMaterial108      //Angular Material
+fobo.Resouce.init = fobo.Resouce.AJSUIGrid307        //Angular UI-Grid
+fobo.Resouce.init = fobo.Resouce.AJSNGGrid207        //Angular NG-Grid
 ```
 ### Lift FoBo boot hooks (when used as stand alone module)
 
 Using a import alias
 ```scala
-    import net.liftmodules.{FoBoAJSRes => FoBo} 
+    import net.liftmodules.{foboajsres => fobo}
     :
-    FoBo.... //same as above
+    fobo.... //same as above
 ```
 or 
 ```scala
-    import net.liftmodules.FoBoAJSRes 
+    import net.liftmodules.foboajsres 
     :
-    FoBoAJSRes.Resouce.Init=FoBoAJSRes.Resouce.AngularJS121      //access to core files
+    foboajsres.Resouce.init = foboajsres.Resouce.AngularJS121      //access to core files
     : 
 ```
     

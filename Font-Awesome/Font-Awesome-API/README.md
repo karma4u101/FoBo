@@ -17,7 +17,7 @@ Example setup:
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-font-awesome_3.1_2.12.2</artifactId>
+  <artifactId>fobo-font-awesome-api_3.1_2.12.2</artifactId>
   <version>2.0</version>
 </dependency>
 ```

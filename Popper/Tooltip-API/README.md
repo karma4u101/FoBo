@@ -17,7 +17,7 @@ Example setup:
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-tooltip-api_3.1_2.12.1</artifactId>
+  <artifactId>fobo-tooltip-api_3.1_2.12.2</artifactId>
   <version>2.0</version>
 </dependency>
 ```
@@ -26,15 +26,15 @@ If you are using maven observe that the artifact id also needs the Scala version
 
 ### Lift FoBo boot hooks (when used as stand alone module)
 ```scala
-import net.liftmodules.{FoBoTooAPI => FoBo}
+import net.liftmodules.{fobotooapi => fobo}
   :
-FoBo.API.Init=FoBo.API.TooltipX
+fobo.API.init = fobo.API.TooltipX
 ```
 ### Lift FoBo boot hooks (when used in the FoBo module)
 ```scala
-import net.liftmodules.FoBo 
+import net.liftmodules.fobo 
   :
-FoBo.API.Init=FoBo.API.TooltipX 
+fobo.API.init = fobo.API.TooltipX 
 ```
 
 ## Contributions
@@ -42,4 +42,3 @@ FoBo.API.Init=FoBo.API.TooltipX
 Improvements, contributions and suggestions are welcome! 
 Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). 
 You can also leave a issue report or drop a question/suggestion on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
-
