@@ -46,7 +46,7 @@ package net.liftmodules
   *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component) [[net.liftmodules.foboajs]]
   *  - Angular UI-Grid [v3.0.7] (angular component) [[net.liftmodules.foboajs]]
   *  - Angular Material design [v0.10.0, v1.0.1, v1.0.8, v1.1.1, v1.1.4] (angular component) [[net.liftmodules.foboajs]]
-  *  - Popper [v1.9.9]
+  *  - Popper [v1.11.0]
   *  - Tooltip [v1.1.4]
   *
   * ===Help out!===
@@ -1012,20 +1012,20 @@ package object fobo {
     /*===Popper Toolkit===============================================================*/
 
     /**
-      * Enable usage FoBo's Popper API and resources version 1&#8228;10&#8228;8 in your bootstrap liftweb Boot.
-      * @version 1.10.8
+      * Enable usage FoBo's Popper API and resources version 1&#8228;11&#8228;0 in your bootstrap liftweb Boot.
+      * @version 1.11.0
       *
       * '''Example:'''
       *
       * {{{
       *   import net.liftmodules.{FoBoPop => fobo}
       *    :
-      *   fobo.Toolkit.init=fobo.Toolkit.Popper1108
+      *   fobo.Toolkit.init=fobo.Toolkit.Popper1110
       * }}}
       * @since v2.0
       */
-    case object Popper1108 extends Toolkit {
-      net.liftmodules.fobopop.Toolkit.Popper1108
+    case object Popper1110 extends Toolkit {
+      net.liftmodules.fobopop.Toolkit.Popper1110
     }
 
     /*===Tooltip Toolkit===============================================================*/
@@ -1920,20 +1920,20 @@ package object fobo {
     /*===Tooltip Resource===============================================================*/
 
     /**
-      * Enable usage of FoBo's Popper version 1&#8228;10&#8228;8 resource files in your bootstrap liftweb Boot.
-      * @version v1.10.8
+      * Enable usage of FoBo's Popper version 1&#8228;11&#8228;0 resource files in your bootstrap liftweb Boot.
+      * @version v1.11.0
       *
       * '''Example:'''
       *
       * {{{
       *   import net.liftmodules.fobo
       *    :
-      *   fobo.Resource.init=fobo.Resource.Popper1108
+      *   fobo.Resource.init=fobo.Resource.Popper1110
       * }}}
       * @since v2.0
       */
-    case object Popper1108 extends Resource {
-      net.liftmodules.fobopop.Resource.Popper1108
+    case object Popper1110 extends Resource {
+      net.liftmodules.fobopop.Resource.Popper1110
     }
 
     /*===Tooltip Resource===============================================================*/

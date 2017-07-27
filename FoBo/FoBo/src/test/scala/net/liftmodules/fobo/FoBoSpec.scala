@@ -1269,44 +1269,44 @@ object FoBoSpec extends Specification {
   }
 
   //== Popper ==================================//
-  //Popper1108
-  "With fobo.Toolkit.init set to fobo.Toolkit.Popper1108 the ResourceServer" should {
+  //Popper1110
+  "With fobo.Toolkit.init set to fobo.Toolkit.Popper1110 the ResourceServer" should {
     "allow  fobo/popper.js" in {
-      allowToolkitInit(fobo.Toolkit.Popper1108, "fobo" :: "popper.js" :: Nil) must_== true
+      allowToolkitInit(fobo.Toolkit.Popper1110, "fobo" :: "popper.js" :: Nil) must_== true
     }
-    "rewrit fobo/popper.js to fobo/popper/1.10.8/js/umd/popper.min.js" in {
-      rewriteToolkitInit(fobo.Toolkit.Popper1108, "fobo" :: "popper.js" :: Nil) must_==
-        List("fobo", "popper", "1.10.8", "js", "umd", "popper.min.js")
+    "rewrit fobo/popper.js to fobo/popper/1.11.0/js/umd/popper.min.js" in {
+      rewriteToolkitInit(fobo.Toolkit.Popper1110, "fobo" :: "popper.js" :: Nil) must_==
+        List("fobo", "popper", "1.11.0", "js", "umd", "popper.min.js")
     }
 
     "allow  fobo/popper-utils.js" in {
-      allowToolkitInit(fobo.Toolkit.Popper1108,
+      allowToolkitInit(fobo.Toolkit.Popper1110,
                        "fobo" :: "popper-utils.js" :: Nil) must_== true
     }
-    "rewrit fobo/popper-utils.js to fobo/popper/1.10.8/js/umd/popper-utils.min.js" in {
-      rewriteToolkitInit(fobo.Toolkit.Popper1108,
+    "rewrit fobo/popper-utils.js to fobo/popper/1.11.0/js/umd/popper-utils.min.js" in {
+      rewriteToolkitInit(fobo.Toolkit.Popper1110,
                          "fobo" :: "popper-utils.js" :: Nil) must_==
-        List("fobo", "popper", "1.10.8", "js", "umd", "popper-utils.min.js")
+        List("fobo", "popper", "1.11.0", "js", "umd", "popper-utils.min.js")
     }
   }
 
-  "With fobo.Resource.init set to fobo.Resource.Popper1108 the ResourceServer" should {
+  "With fobo.Resource.init set to fobo.Resource.Popper1110 the ResourceServer" should {
     "allow  fobo/popper.js" in {
-      allowResource(fobo.Resource.Popper1108, "fobo" :: "popper.js" :: Nil) must_== true
+      allowResource(fobo.Resource.Popper1110, "fobo" :: "popper.js" :: Nil) must_== true
     }
-    "rewrit fobo/popper.js to fobo/popper/1.10.8/js/umd/popper.min.js" in {
-      rewriteResource(fobo.Resource.Popper1108, "fobo" :: "popper.js" :: Nil) must_==
-        List("fobo", "popper", "1.10.8", "js", "umd", "popper.min.js")
+    "rewrit fobo/popper.js to fobo/popper/1.11.0/js/umd/popper.min.js" in {
+      rewriteResource(fobo.Resource.Popper1110, "fobo" :: "popper.js" :: Nil) must_==
+        List("fobo", "popper", "1.11.0", "js", "umd", "popper.min.js")
     }
 
     "allow  fobo/popper-utils.js" in {
-      allowResource(fobo.Resource.Popper1108,
+      allowResource(fobo.Resource.Popper1110,
                     "fobo" :: "popper-utils.js" :: Nil) must_== true
     }
-    "rewrit fobo/popper-utils.js to fobo/popper/1.10.8/js/umd/popper-utils.min.js" in {
-      rewriteResource(fobo.Resource.Popper1108,
+    "rewrit fobo/popper-utils.js to fobo/popper/1.11.0/js/umd/popper-utils.min.js" in {
+      rewriteResource(fobo.Resource.Popper1110,
                       "fobo" :: "popper-utils.js" :: Nil) must_==
-        List("fobo", "popper", "1.10.8", "js", "umd", "popper-utils.min.js")
+        List("fobo", "popper", "1.11.0", "js", "umd", "popper-utils.min.js")
     }
   }
 
