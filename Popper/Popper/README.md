@@ -47,9 +47,9 @@ fobo.Toolkit.init = fobo.Toolkit.PopperXYZ
 
 Script files
 
-- popper.js [v1.9.9]
-- popper-utils.js [v1.9.9]
-- popper-map.js [v1.9.9]
+- popper.js [v1.10.8]
+- popper-utils.js [v1.10.8]
+- popper-map.js [v1.10.8]
 
 For more information on how to use Popper see [Popper](https://popper.js.org/)
 
