@@ -10,6 +10,7 @@ section
 - **2015-12-30** -- FoBo Module v1.5.1
 
 **Latest Updates:**
+- **2017-07-27** -- [PR #150](https://github.com/karma4u101/FoBo/pull/150) FoBo v2.0 -- Updating Popper to v1.11.0
 - **2017-07-25** -- [PR #145](https://github.com/karma4u101/FoBo/pull/145) FoBo v2.0 -- Adding Angular material v1.1.4
 - **2017-07-23** -- [PR #143](https://github.com/karma4u101/FoBo/pull/143) FoBo v2.0 -- Removing Kinetic
 - **2017-07-19** -- [PR #141](https://github.com/karma4u101/FoBo/pull/141) FoBo v2.0 -- Naming convention fix
@@ -53,7 +54,7 @@ use the Toolkit, Resource and API objects in favour for the old init style, v1.7
 
   
 ### New modules
--   [Popper](https://github.com/karma4u101/FoBo/tree/master/Popper) [1.10.8] - [Popper](https://popper.js.org/)
+-   [Popper](https://github.com/karma4u101/FoBo/tree/master/Popper) [v1.11.0] - [Popper](https://popper.js.org/)
 -   [Tether](https://github.com/karma4u101/FoBo/tree/master/Tether) [v1.4.0] - [Tether](http://tether.io/)
 
 ### Updated modules
