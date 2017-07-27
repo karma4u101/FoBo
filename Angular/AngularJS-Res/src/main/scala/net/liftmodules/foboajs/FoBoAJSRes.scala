@@ -346,6 +346,7 @@ package object foboajsres {
       * }}}
       *
       */
+    @deprecated("Use AJSUIBootstrap250 or later", "2.0.0")
     case object AJSUIBootstrap0100 extends Resource {
       FoBoResources.init
       FoBoResources.uibootstrap0100
@@ -364,7 +365,7 @@ package object foboajsres {
       * }}}
       *
       */
-    @deprecated("Use AJSUIBootstrap0100 or later", "2.0.0")
+    @deprecated("Use AJSUIBootstrap250 or later", "2.0.0")
     case object AJSUIBootstrap070 extends Resource {
       FoBoResources.init
       FoBoResources.uibootstrap070
@@ -383,7 +384,7 @@ package object foboajsres {
       * }}}
       *
       */
-    @deprecated("Use AJSUIBootstrap0100 or later", "2.0.0")
+    @deprecated("Use AJSUIBootstrap250 or later", "2.0.0")
     case object AJSUIBootstrap020 extends Resource {
       FoBoResources.init
       FoBoResources.uibootstrap020
