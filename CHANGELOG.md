@@ -1,7 +1,8 @@
 # Changelog
 
 
-For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/CHANGELOG.md#history-log) section
+For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/CHANGELOG.md#history-log) 
+section
 
 **Latest Stable Releases:**
 - **2016-10-04** -- FoBo Module v1.7
@@ -9,23 +10,56 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2015-12-30** -- FoBo Module v1.5.1
 
 **Latest Updates:**
-- **2017-02-19** -- [PR #129](https://github.com/karma4u101/FoBo/pull/129) FoBo v2.0 -- Adding the Tether toolkit library to FoBo
+- **2017-07-25** -- [PR #145](https://github.com/karma4u101/FoBo/pull/145) FoBo v2.0 -- Adding Angular material v1.1.4
+- **2017-07-23** -- [PR #143](https://github.com/karma4u101/FoBo/pull/143) FoBo v2.0 -- Removing Kinetic
+- **2017-07-19** -- [PR #141](https://github.com/karma4u101/FoBo/pull/141) FoBo v2.0 -- Naming convention fix
+- **2017-07-17** -- [PR #132](https://github.com/karma4u101/FoBo/pull/132) FoBo v2.0 -- Adding popper and tooltip 
+  modules from Popper.js
+- **2017-02-19** -- [PR #129](https://github.com/karma4u101/FoBo/pull/129) FoBo v2.0 -- Adding the Tether toolkit 
+  library to FoBo
 - **2017-01-07** -- [PR #124](https://github.com/karma4u101/FoBo/pull/124) FoBo v2.0 -- Adding UI Bootstrap v2.4.0
-- **2016-10-08** -- [Issue #116](https://github.com/karma4u101/FoBo/issues/116) FoBo v2.0 -- Remove FoBoToolkit and FoBoJQuery deprecations 
+- **2016-10-08** -- [Issue #116](https://github.com/karma4u101/FoBo/issues/116) FoBo v2.0 -- Remove FoBoToolkit and 
+  FoBoJQuery deprecations 
 
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
 
+
 ## FoBo v2.0
+
+### Braking changes
+- **Naming convention correction** -- As this is a major number release there was a opportunity to correct the package 
+  object naming and init function naming mistakes present in previous releases of FoBo. This means that the module 
+  initiation has changed from:
+   ```scala
+   FoBo.Toolkit.Init = FoBo.Toolkit.ToolkitXXX
+   ```
+   to
+   ```scala
+   fobo.Toolkit.init = fobo.Toolkit.ToolkitXXX
+   ```   
+   For more information about Scala's naming conventions see the 
+   [Scala naming conventions -- Style guide](http://docs.scala-lang.org/style/naming-conventions.html)
+- **Removing Kinetic** -- The motivation of removing this module is:
+  - This has been a very unfrequented used FoBo module and as FoBo does not have anny API hooks 
+    for this module it will be farly easy to replace the usage of this FoBo module with its javascript resources.
+  - The author of kineticjs has moved on to other ventures, kineticjs is stable but has not seen any updates in 3+ 
+    years. The author recommends using the more lightweight http://www.concretejs.com/ library. 
 
 ### Deprecations 
 In order to cleanup and improve the API the old style FoBoTolkit and FoBoJQuery initiation functions have been removed after 
 some time of deprecation. v1.7 is the last version having FoBoTolkit and FoBoJQuery so if you have not already switched to
-use the Toolkit, Resource and API objects in faivour for the old init style, v1.7 is a good pit stop on the way to v2.0 as it
-(and v1.6) provides a easy migration path.   
+use the Toolkit, Resource and API objects in favour for the old init style, v1.7 is a good pit stop on the way to v2.0 as it
+(and v1.6) provides a easy migration path. 
 
+  
 ### New modules
+-   [Popper](https://github.com/karma4u101/FoBo/tree/master/Popper) [1.10.8] - [Popper](https://popper.js.org/)
 -   [Tether](https://github.com/karma4u101/FoBo/tree/master/Tether) [v1.4.0] - [Tether](http://tether.io/)
-a client-side library to make absolutely positioned elements attach to elements in the page efficiently.
+
+### Updated modules
+- [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.1.4 - [Angular Material](https://material.angularjs.org/)
+- [FoBo-AngularJS UI Bootstrap](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v2.4.0 - [UI Bootstrap](https://angular-ui.github.io/bootstrap/)
+
 
 ## FoBo v1.7
 
