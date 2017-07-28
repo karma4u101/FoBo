@@ -369,38 +369,38 @@ object FoBoSpec extends Specification {
     }
   }
 
-  //AJSUIBootstrap240
-  "With fobo.Toolkit.init set to fobo.Toolkit.AJSUIBootstrap240 the ResourceServer" should {
+  //AJSUIBootstrap250
+  "With fobo.Toolkit.init set to fobo.Toolkit.AJSUIBootstrap250 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {
-      allowToolkitInit(fobo.Toolkit.AJSUIBootstrap240,
+      allowToolkitInit(fobo.Toolkit.AJSUIBootstrap250,
                        "fobo" :: "ui-bootstrap.js" :: Nil) must_== true
     }
-    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/0.10.0/js/ui-bootstrap-0.10.0.min.js" in {
-      rewriteToolkitInit(fobo.Toolkit.AJSUIBootstrap240,
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/2.5.0/js/ui-bootstrap-2.5.0.min.js" in {
+      rewriteToolkitInit(fobo.Toolkit.AJSUIBootstrap250,
                          "fobo" :: "ui-bootstrap.js" :: Nil) must_==
         List("fobo",
              "angular-ui",
              "bootstrap",
-             "2.4.0",
+             "2.5.0",
              "js",
-             "ui-bootstrap-2.4.0.min.js")
+             "ui-bootstrap-2.5.0.min.js")
     }
   }
 
-  "With fobo.Resource.init set to fobo.Resource.AJSUIBootstrap240 the ResourceServer" should {
+  "With fobo.Resource.init set to fobo.Resource.AJSUIBootstrap250 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {
-      allowResource(fobo.Resource.AJSUIBootstrap240,
+      allowResource(fobo.Resource.AJSUIBootstrap250,
                     "fobo" :: "ui-bootstrap.js" :: Nil) must_== true
     }
-    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/2.4.0/js/ui-bootstrap-2.4.0.min.js" in {
-      rewriteResource(fobo.Resource.AJSUIBootstrap240,
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/2.5.0/js/ui-bootstrap-2.5.0.min.js" in {
+      rewriteResource(fobo.Resource.AJSUIBootstrap250,
                       "fobo" :: "ui-bootstrap.js" :: Nil) must_==
         List("fobo",
              "angular-ui",
              "bootstrap",
-             "2.4.0",
+             "2.5.0",
              "js",
-             "ui-bootstrap-2.4.0.min.js")
+             "ui-bootstrap-2.5.0.min.js")
     }
   }
 

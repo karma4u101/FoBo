@@ -1,9 +1,7 @@
 package net.liftmodules
 
 import net.liftweb._
-import util.{Props}
 import http._
-import common._
 
 import org.specs2.mutable.{Specification}
 //import org.specs2.mutable.BeforeAfter
@@ -264,31 +262,31 @@ object FoBoAJSResSpec extends Specification {
     }
   }
 
-  //AJSUIBootstrap240
-  "With foboajsres.Resource.init set to foboajsres.Resource.AJSUIBootstrap240 the ResourceServer" should {
+  //AJSUIBootstrap250
+  "With foboajsres.Resource.init set to foboajsres.Resource.AJSUIBootstrap250 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {
-      allowResource(foboajsres.Resource.AJSUIBootstrap240,
+      allowResource(foboajsres.Resource.AJSUIBootstrap250,
                     "fobo" :: "ui-bootstrap.js" :: Nil) must_== true
     }
-    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/2.4.0/js/ui-bootstrap-2.4.0.min.js" in {
-      rewriteResource(foboajsres.Resource.AJSUIBootstrap240,
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/2.5.0/js/ui-bootstrap-2.5.0.min.js" in {
+      rewriteResource(foboajsres.Resource.AJSUIBootstrap250,
                       "fobo" :: "ui-bootstrap.js" :: Nil) must_==
         List("fobo",
              "angular-ui",
              "bootstrap",
-             "2.4.0",
+             "2.5.0",
              "js",
-             "ui-bootstrap-2.4.0.min.js")
+             "ui-bootstrap-2.5.0.min.js")
     }
-    "rewrit fobo/ui-bootstrap-tpls.js to fobo/angular-ui/bootstrap/2.4.0/js/ui-bootstrap-tpls-2.4.0.min.js" in {
-      rewriteResource(foboajsres.Resource.AJSUIBootstrap240,
+    "rewrit fobo/ui-bootstrap-tpls.js to fobo/angular-ui/bootstrap/2.5.0/js/ui-bootstrap-tpls-2.5.0.min.js" in {
+      rewriteResource(foboajsres.Resource.AJSUIBootstrap250,
                       "fobo" :: "ui-bootstrap-tpls.js" :: Nil) must_==
         List("fobo",
              "angular-ui",
              "bootstrap",
-             "2.4.0",
+             "2.5.0",
              "js",
-             "ui-bootstrap-tpls-2.4.0.min.js")
+             "ui-bootstrap-tpls-2.5.0.min.js")
     }
   }
 
