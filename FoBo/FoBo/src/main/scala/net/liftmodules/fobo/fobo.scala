@@ -35,18 +35,18 @@ package net.liftmodules
   *
   *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.3, v.2.1.1, v.2.1.4, v2.2.4, v3.0.0, v3.1.0] [[net.liftmodules.fobojq]]
   *  - JQueryMigrate [v1.2.1, v1.4.1, v3.0.0] [[net.liftmodules.fobojq]]
-  *  - Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6, v3.3.7] [[net.liftmodules.fobobs]]
+  *  - Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.7] [[net.liftmodules.fobobs]]
   *  - Bootstrap v2.x series [v2.3.2] [[net.liftmodules.fobotb]]
   *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] [[net.liftmodules.fobofa]]
   *  - Google Code Prettify [vJun2011] [[net.liftmodules.fobogcp]]
   *  - Highlight JS [v9.3.0] [[net.liftmodules.fobohl]]
   *  - Pace [v0.4.15, v1.0.2] [[net.liftmodules.fobopa]]
   *  - Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15, v1.4.1, v1.4.8, v1.5.3] (angular core modules) [[net.liftmodules.foboajs]]
-  *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component) [[net.liftmodules.foboajs]]
+  *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0, v2.5.0] (angular component) [[net.liftmodules.foboajs]]
   *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component) [[net.liftmodules.foboajs]]
   *  - Angular UI-Grid [v3.0.7] (angular component) [[net.liftmodules.foboajs]]
-  *  - Angular Material design [v0.10.0, v1.0.1, v1.0.8, v1.1.1, v1.1.4] (angular component) [[net.liftmodules.foboajs]]
-  *  - Popper [v1.9.9]
+  *  - Angular Material design [v0.10.0, v1.0.8, v1.1.1, v1.1.4] (angular component) [[net.liftmodules.foboajs]]
+  *  - Popper [v1.11.0]
   *  - Tooltip [v1.1.4]
   *
   * ===Help out!===
