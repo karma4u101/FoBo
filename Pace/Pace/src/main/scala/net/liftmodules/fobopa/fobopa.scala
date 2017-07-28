@@ -104,6 +104,7 @@ package object fobopa {
       *   fobo.Toolkit.init=fobo.Toolkit.Pace0415
       * }}}
       */
+    @deprecated("Use Pace102 or later", "2.0.0")
     case object Pace0415 extends Toolkit {
       fobopa.Resource.Pace0415
     }
@@ -152,6 +153,7 @@ package object fobopa {
       *   fobo.Resource.init=fobo.Resource.Pace0415
       * }}}
       */
+    @deprecated("Use Pace102 or later", "2.0.0")
     case object Pace0415 extends Resource {
       fobopares.Resource.Pace0415
     }

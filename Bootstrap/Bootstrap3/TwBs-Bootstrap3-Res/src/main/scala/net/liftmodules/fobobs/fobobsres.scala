@@ -62,44 +62,6 @@ package object fobobsres {
     }
 
     /**
-      * Enable usage of FoBo's Bootstrap version 3&#8228;3&#8228;6 resources files in your bootstrap liftweb Boot.
-      * @version 3.3.6
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.{fobobsres => fobo}
-      *    :
-      *   fobo.Resource.init=fobo.Resource.Bootstrap336
-      * }}}
-      * @since v1.5
-      */
-    @deprecated("Use Bootstrap337 or later", "1.7.0")
-    case object Bootstrap336 extends Resource {
-      FoBoResources.init
-      FoBoResources.bootstrap336
-    }
-
-    /**
-      * Enable usage of FoBo's Bootstrap version 3&#8228;3&#8228;5 resources files in your bootstrap liftweb Boot.
-      * @version 3.3.5
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.{fobobsres => fobo}
-      *    :
-      *   fobo.Resource.init=fobo.Resource.Bootstrap335
-      * }}}
-      * @since v1.4
-      */
-    @deprecated("Use Bootstrap336 or later", "1.5.0")
-    case object Bootstrap335 extends Resource {
-      FoBoResources.init
-      FoBoResources.bootstrap335
-    }
-
-    /**
       * Enable usage of FoBo's Bootstrap version 3&#8228;2&#8228;0 resources files in your bootstrap liftweb Boot.
       * @version 3.2.0
       *
@@ -192,56 +154,6 @@ package object fobobsres {
           List("fobo", "bootstrap", "3.3.7", "js", "bootstrap.js")
         case "fobo" :: "bootstrap.js" :: Nil =>
           List("fobo", "bootstrap", "3.3.7", "js", "bootstrap.min.js")
-      }
-    }
-
-    lazy val bootstrap336: Unit = {
-      ResourceServer.rewrite {
-        case "fobo" :: "bootstrap.css" :: Nil if Props.devMode =>
-          List("fobo", "bootstrap", "3.3.6", "css", "bootstrap.css")
-        case "fobo" :: "bootstrap.css" :: Nil =>
-          List("fobo", "bootstrap", "3.3.6", "css", "bootstrap.min.css")
-        case "fobo" :: "bootstrap.css.map" :: Nil if Props.devMode =>
-          List("fobo", "bootstrap", "3.3.6", "css", "bootstrap.css.map")
-        case "fobo" :: "bootstrap.css.map" :: Nil =>
-          List("fobo", "bootstrap", "3.3.6", "css", "bootstrap.min.css.map")
-        case "fobo" :: "bootstrap-theme.css" :: Nil if Props.devMode =>
-          List("fobo", "bootstrap", "3.3.6", "css", "bootstrap-theme.css")
-        case "fobo" :: "bootstrap-theme.css" :: Nil =>
-          List("fobo", "bootstrap", "3.3.6", "css", "bootstrap-theme.min.css")
-        case "fobo" :: "bootstrap-theme.css.map" :: Nil if Props.devMode =>
-          List("fobo", "bootstrap", "3.3.6", "css", "bootstrap-theme.css.map")
-        case "fobo" :: "bootstrap-theme.css.map" :: Nil =>
-          List("fobo",
-               "bootstrap",
-               "3.3.6",
-               "css",
-               "bootstrap-theme.min.css.map")
-        case "fobo" :: "bootstrap.js" :: Nil if Props.devMode =>
-          List("fobo", "bootstrap", "3.3.6", "js", "bootstrap.js")
-        case "fobo" :: "bootstrap.js" :: Nil =>
-          List("fobo", "bootstrap", "3.3.6", "js", "bootstrap.min.js")
-      }
-    }
-
-    lazy val bootstrap335: Unit = {
-      ResourceServer.rewrite {
-        case "fobo" :: "bootstrap.css" :: Nil if Props.devMode =>
-          List("fobo", "bootstrap", "3.3.5", "css", "bootstrap.css")
-        case "fobo" :: "bootstrap.css" :: Nil =>
-          List("fobo", "bootstrap", "3.3.5", "css", "bootstrap.min.css")
-        case "fobo" :: "bootstrap.css.map" :: Nil =>
-          List("fobo", "bootstrap", "3.3.5", "css", "bootstrap.css.map")
-        case "fobo" :: "bootstrap-theme.css" :: Nil if Props.devMode =>
-          List("fobo", "bootstrap", "3.3.5", "css", "bootstrap-theme.css")
-        case "fobo" :: "bootstrap-theme.css" :: Nil =>
-          List("fobo", "bootstrap", "3.3.5", "css", "bootstrap-theme.min.css")
-        case "fobo" :: "bootstrap-theme.css.map" :: Nil =>
-          List("fobo", "bootstrap", "3.3.5", "css", "bootstrap-theme.css.map")
-        case "fobo" :: "bootstrap.js" :: Nil if Props.devMode =>
-          List("fobo", "bootstrap", "3.3.5", "js", "bootstrap.js")
-        case "fobo" :: "bootstrap.js" :: Nil =>
-          List("fobo", "bootstrap", "3.3.5", "js", "bootstrap.min.js")
       }
     }
 

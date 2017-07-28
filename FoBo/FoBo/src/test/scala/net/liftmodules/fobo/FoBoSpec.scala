@@ -231,39 +231,6 @@ object FoBoSpec extends Specification {
     }
   }
 
-  //AJMaterial101
-  "With fobo.Toolkit.init set to fobo.Toolkit.AJMaterial101 the ResourceServer" should {
-    "allow  fobo/angular-material.js" in {
-      allowToolkitInit(fobo.Toolkit.AJMaterial101,
-                       "fobo" :: "angular-material.js" :: Nil) must_== true
-    }
-    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.1/js/angular-material.min.js" in {
-      rewriteToolkitInit(fobo.Toolkit.AJMaterial101,
-                         "fobo" :: "angular-material.js" :: Nil) must_==
-        List("fobo",
-             "angular-material",
-             "1.0.1",
-             "js",
-             "angular-material.min.js")
-    }
-  }
-
-  "With fobo.Resource.init set to fobo.Resource.AJMaterial101 the ResourceServer" should {
-    "allow  fobo/angular-material.js" in {
-      allowResource(fobo.Resource.AJMaterial101,
-                    "fobo" :: "angular-material.js" :: Nil) must_== true
-    }
-    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.1/js/angular-material.min.js" in {
-      rewriteResource(fobo.Resource.AJMaterial101,
-                      "fobo" :: "angular-material.js" :: Nil) must_==
-        List("fobo",
-             "angular-material",
-             "1.0.1",
-             "js",
-             "angular-material.min.js")
-    }
-  }
-
   //AJSUIBootstrap020
   "With fobo.Toolkit.init set to fobo.Toolkit.AJSUIBootstrap020 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {
@@ -803,54 +770,6 @@ object FoBoSpec extends Specification {
       rewriteToolkitInit(fobo.Toolkit.Bootstrap337,
                          "fobo" :: "bootstrap.js" :: Nil) must_==
         List("fobo", "bootstrap", "3.3.7", "js", "bootstrap.min.js")
-    }
-  }
-
-  //Bootstrap336
-  "With fobo.Resource.init set to fobo.Resource.Bootstrap336 the ResourceServer" should {
-    "allow  fobo/bootstrap.js" in {
-      allowResource(fobo.Resource.Bootstrap336, "fobo" :: "bootstrap.js" :: Nil) must_== true
-    }
-    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.3.6/js/bootstrap-min.js" in {
-      rewriteResource(fobo.Resource.Bootstrap336,
-                      "fobo" :: "bootstrap.js" :: Nil) must_==
-        List("fobo", "bootstrap", "3.3.6", "js", "bootstrap.min.js")
-    }
-  }
-
-  "With fobo.Toolkit.init set to fobo.Toolkit.Bootstrap336 the ResourceServer" should {
-    "allow  fobo/bootstrap.js" in {
-      allowToolkitInit(fobo.Toolkit.Bootstrap336,
-                       "fobo" :: "bootstrap.js" :: Nil) must_== true
-    }
-    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.3.6/js/bootstrap-min.js" in {
-      rewriteToolkitInit(fobo.Toolkit.Bootstrap336,
-                         "fobo" :: "bootstrap.js" :: Nil) must_==
-        List("fobo", "bootstrap", "3.3.6", "js", "bootstrap.min.js")
-    }
-  }
-
-  //Bootstrap335
-  "With fobo.Resource.init set to fobo.Resource.Bootstrap335 the ResourceServer" should {
-    "allow  fobo/bootstrap.js" in {
-      allowResource(fobo.Resource.Bootstrap335, "fobo" :: "bootstrap.js" :: Nil) must_== true
-    }
-    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.3.5/js/bootstrap-min.js" in {
-      rewriteResource(fobo.Resource.Bootstrap335,
-                      "fobo" :: "bootstrap.js" :: Nil) must_==
-        List("fobo", "bootstrap", "3.3.5", "js", "bootstrap.min.js")
-    }
-  }
-
-  "With fobo.Toolkit.init set to fobo.Toolkit.Bootstrap335 the ResourceServer" should {
-    "allow  fobo/bootstrap.js" in {
-      allowToolkitInit(fobo.Toolkit.Bootstrap335,
-                       "fobo" :: "bootstrap.js" :: Nil) must_== true
-    }
-    "rewrit fobo/bootstrap.js to fobo/bootstrap/3.3.5/js/bootstrap-min.js" in {
-      rewriteToolkitInit(fobo.Toolkit.Bootstrap335,
-                         "fobo" :: "bootstrap.js" :: Nil) must_==
-        List("fobo", "bootstrap", "3.3.5", "js", "bootstrap.min.js")
     }
   }
 
