@@ -316,21 +316,21 @@ package object foboajsres {
     }
 
     /**
-      * Enable usage of AngularUI-Bootstrap version 2&#8228;4&#8228;0 resource files in your bootstrap liftweb Boot.
-      * @version 2.4.0
+      * Enable usage of AngularUI-Bootstrap version 2&#8228;5&#8228;0 resource files in your bootstrap liftweb Boot.
+      * @version 2.5.0
       *
       *  '''Example:'''
       *
       * {{{
       *   import net.liftmodules.{foboajsres => fobo}
       *    :
-      *   fobo.Resource.init=fobo.Resource.AJSUIBootstrap240
+      *   fobo.Resource.init=fobo.Resource.AJSUIBootstrap250
       * }}}
       *
       */
-    case object AJSUIBootstrap240 extends Resource {
+    case object AJSUIBootstrap250 extends Resource {
       FoBoResources.init
-      FoBoResources.uibootstrap240
+      FoBoResources.uibootstrap250
     }
 
     /**
@@ -14072,36 +14072,36 @@ package object foboajsres {
       }
     }
 
-    lazy val uibootstrap240 = {
+    lazy val uibootstrap250 = {
       ResourceServer.rewrite {
         case "fobo" :: "ui-bootstrap.js" :: Nil if Props.devMode =>
           List("fobo",
                "angular-ui",
                "bootstrap",
-               "2.4.0",
+               "2.5.0",
                "js",
-               "ui-bootstrap-2.4.0.js")
+               "ui-bootstrap-2.5.0.js")
         case "fobo" :: "ui-bootstrap.js" :: Nil =>
           List("fobo",
                "angular-ui",
                "bootstrap",
-               "2.4.0",
+               "2.5.0",
                "js",
-               "ui-bootstrap-2.4.0.min.js")
+               "ui-bootstrap-2.5.0.min.js")
         case "fobo" :: "ui-bootstrap-tpls.js" :: Nil if Props.devMode =>
           List("fobo",
                "angular-ui",
                "bootstrap",
-               "2.4.0",
+               "2.5.0",
                "js",
-               "ui-bootstrap-tpls-2.4.0.js")
+               "ui-bootstrap-tpls-2.5.0.js")
         case "fobo" :: "ui-bootstrap-tpls.js" :: Nil =>
           List("fobo",
                "angular-ui",
                "bootstrap",
-               "2.4.0",
+               "2.5.0",
                "js",
-               "ui-bootstrap-tpls-2.4.0.min.js")
+               "ui-bootstrap-tpls-2.5.0.min.js")
       }
     }
 

@@ -391,20 +391,20 @@ package object fobo {
     }
 
     /**
-      * Enable usage of FoBo's Angular API and AngularUI-Bootstrap resources version 2&#8228;4&#8228;0 in your bootstrap liftweb Boot.
-      * @version 2.4.0
+      * Enable usage of FoBo's Angular API and AngularUI-Bootstrap resources version 2&#8228;5&#8228;0 in your bootstrap liftweb Boot.
+      * @version 2.5.0
       *
       *  '''Example:'''
       *
       * {{{
       *   import net.liftmodules.fobo
       *    :
-      *   fobo.Toolkit.init=fobo.Toolkit.AJSUIBootstrap240
+      *   fobo.Toolkit.init=fobo.Toolkit.AJSUIBootstrap250
       * }}}
       *
       */
-    case object AJSUIBootstrap240 extends Toolkit {
-      net.liftmodules.foboajs.Toolkit.AJSUIBootstrap240
+    case object AJSUIBootstrap250 extends Toolkit {
+      net.liftmodules.foboajs.Toolkit.AJSUIBootstrap250
     }
 
     /**
@@ -1306,20 +1306,20 @@ package object fobo {
     }
 
     /**
-      * Enable usage of AngularUI-Bootstrap version 2&#8228;4&#8228;0 resource files in your bootstrap liftweb Boot.
-      * @version 2.4.0
+      * Enable usage of AngularUI-Bootstrap version 2&#8228;5&#8228;0 resource files in your bootstrap liftweb Boot.
+      * @version 2.5.0
       *
       *  '''Example:'''
       *
       * {{{
       *   import net.liftmodules.fobo
       *    :
-      *   fobo.Resource.init=fobo.Resource.AJSUIBootstrap240
+      *   fobo.Resource.init=fobo.Resource.AJSUIBootstrap250
       * }}}
       *
       */
-    case object AJSUIBootstrap240 extends Resource {
-      net.liftmodules.foboajs.Resource.AJSUIBootstrap240
+    case object AJSUIBootstrap250 extends Resource {
+      net.liftmodules.foboajs.Resource.AJSUIBootstrap250
     }
 
     /**
