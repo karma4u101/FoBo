@@ -237,39 +237,6 @@ class FoBoAJSSpec extends mutable.Specification {
     }
   }
 
-  //AJMaterial101
-  "With foboajs.Toolkit.init set to foboajs.Toolkit.AJMaterial101 the ResourceServer" should {
-    "allow  fobo/angular-material.js" in {
-      allowToolkitInit(foboajs.Toolkit.AJMaterial101,
-                       "fobo" :: "angular-material.js" :: Nil) must_== true
-    }
-    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.1/js/angular-material.min.js" in {
-      rewriteToolkitInit(foboajs.Toolkit.AJMaterial101,
-                         "fobo" :: "angular-material.js" :: Nil) must_==
-        List("fobo",
-             "angular-material",
-             "1.0.1",
-             "js",
-             "angular-material.min.js")
-    }
-  }
-
-  "With foboajs.Resource.init set to foboajs.Resource.AJMaterial101 the ResourceServer" should {
-    "allow  fobo/angular-material.js" in {
-      allowResource(foboajs.Resource.AJMaterial101,
-                    "fobo" :: "angular-material.js" :: Nil) must_== true
-    }
-    "rewrit fobo/angular-material.js to fobo/angular-material/1.0.1/js/angular-material.min.js" in {
-      rewriteResource(foboajs.Resource.AJMaterial101,
-                      "fobo" :: "angular-material.js" :: Nil) must_==
-        List("fobo",
-             "angular-material",
-             "1.0.1",
-             "js",
-             "angular-material.min.js")
-    }
-  }
-
   //AJSUIBootstrap020
   "With foboajs.Toolkit.init set to foboajs.Toolkit.AJSUIBootstrap020 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {

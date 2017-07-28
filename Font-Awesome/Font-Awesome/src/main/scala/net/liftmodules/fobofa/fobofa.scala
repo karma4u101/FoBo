@@ -122,6 +122,7 @@ package object fobofa {
       *   fobo.Resource.init=fobo.Resource.FontAwesome410
       * }}}
       */
+    @deprecated("Use FontAwesome463 or later", "2.0.0")
     case object FontAwesome410 extends Toolkit {
       fobofares.Resource.FontAwesome410
       //FoBoFAAPI.API.FontAwesome4
@@ -139,6 +140,7 @@ package object fobofa {
       *   fobo.Resource.init=fobo.Resource.FontAwesome403
       * }}}
       */
+    @deprecated("Use FontAwesome463 or later", "2.0.0")
     case object FontAwesome403 extends Toolkit {
       fobofares.Resource.FontAwesome403
       //FoBoFAAPI.API.FontAwesome4

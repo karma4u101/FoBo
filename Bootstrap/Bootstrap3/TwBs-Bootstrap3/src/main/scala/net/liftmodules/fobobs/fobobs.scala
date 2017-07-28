@@ -106,44 +106,6 @@ package object fobobs {
     }
 
     /**
-      * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;6 resource files in your bootstrap liftweb Boot.
-      * @version 3.3.6
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.{fobobs => fobo}
-      *    :
-      *   fobo.Toolkit.init=fobo.Toolkit.Bootstrap336
-      * }}}
-      *
-      */
-    @deprecated("Use Bootstrap337 or later", "1.7.0")
-    case object Bootstrap336 extends Toolkit {
-      net.liftmodules.fobobsapi.API.Bootstrap3
-      net.liftmodules.fobobsres.Resource.Bootstrap336
-    }
-
-    /**
-      * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;5 resource files in your bootstrap liftweb Boot.
-      * @version 3.3.5
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.{fobobs => fobo}
-      *    :
-      *   fobo.Toolkit.init=fobo.Toolkit.Bootstrap335
-      * }}}
-      *
-      */
-    @deprecated("Use Bootstrap337 or later", "1.7.0")
-    case object Bootstrap335 extends Toolkit {
-      net.liftmodules.fobobsapi.API.Bootstrap3
-      net.liftmodules.fobobsres.Resource.Bootstrap335
-    }
-
-    /**
       * Enable usage of Bootstrap API and resources version 3&#8228;2&#8228;0 resource files in your bootstrap liftweb Boot.
       * @version 3.2.0
       *
@@ -229,42 +191,6 @@ package object fobobs {
       */
     case object Bootstrap337 extends Resource {
       fobobsres.Resource.Bootstrap337
-    }
-
-    /**
-      * Enable usage of Bootstrap version 3&#8228;3&#8228;6 resource files in your bootstrap liftweb Boot.
-      * @version 3.3.6
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.{fobobs => fobo}
-      *    :
-      *   fobo.Resource.init=fobo.Resource.Bootstrap336
-      * }}}
-      * @since v1.5
-      */
-    @deprecated("Use Bootstrap337 or later", "1.7.0")
-    case object Bootstrap336 extends Resource {
-      fobobsres.Resource.Bootstrap336
-    }
-
-    /**
-      * Enable usage of Bootstrap version 3&#8228;3&#8228;5 resource files in your bootstrap liftweb Boot.
-      * @version 3.3.5
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.{fobobs => fobo}
-      *    :
-      *   fobo.Resource.init=fobo.Resource.Bootstrap335
-      * }}}
-      *
-      */
-    @deprecated("Use Bootstrap337 or later", "1.7.0")
-    case object Bootstrap335 extends Resource {
-      fobobsres.Resource.Bootstrap335
     }
 
     /**

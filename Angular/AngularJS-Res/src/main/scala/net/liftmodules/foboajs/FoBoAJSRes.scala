@@ -3,7 +3,6 @@ package net.liftmodules
 import _root_.net.liftweb._
 import util.Props
 import http._
-import common._
 
 /**
   * ==FoBo AngularJS Resource Module==
@@ -29,7 +28,7 @@ package object foboajsres {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Resource
+  sealed trait Resource
 
   object Resource extends Resource {
 
@@ -139,6 +138,7 @@ package object foboajsres {
       * }}}
       *
       */
+    @deprecated("Use AngularJS148 or later", "2.0.0")
     case object AngularJS141 extends Resource {
       FoBoResources.init
       FoBoResources.angularjs141
@@ -157,6 +157,7 @@ package object foboajsres {
       * }}}
       *
       */
+    @deprecated("Use AngularJS148 or later", "2.0.0")
     case object AngularJS141i18n extends Resource {
       FoBoResources.init
       FoBoResources.angularjs141i18n
@@ -239,25 +240,6 @@ package object foboajsres {
       FoBoResources.init
       FoBoResources.angularjs1219i18n
       FoBoResources.angularjs1219i18n2
-    }
-
-    /**
-      * Enable usage of Angular Material version 1&#8228;0&#8228;1 resource files in your bootstrap liftweb Boot.
-      * @version 1.0.1
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.{foboajsres => fobo}
-      *    :
-      *   fobo.Resource.init=fobo.Resource.AJMaterial101
-      * }}}
-      *
-      */
-    @deprecated("Use AJMaterial108 or later", "1.6.0")
-    case object AJMaterial101 extends Resource {
-      FoBoResources.init
-      FoBoResources.AJMaterial101
     }
 
     /**
@@ -346,6 +328,7 @@ package object foboajsres {
       * }}}
       *
       */
+    @deprecated("Use AJSUIBootstrap250 or later", "2.0.0")
     case object AJSUIBootstrap0100 extends Resource {
       FoBoResources.init
       FoBoResources.uibootstrap0100
@@ -364,7 +347,7 @@ package object foboajsres {
       * }}}
       *
       */
-    @deprecated("Use AJSUIBootstrap0100 or later", "2.0.0")
+    @deprecated("Use AJSUIBootstrap250 or later", "2.0.0")
     case object AJSUIBootstrap070 extends Resource {
       FoBoResources.init
       FoBoResources.uibootstrap070
@@ -383,7 +366,7 @@ package object foboajsres {
       * }}}
       *
       */
-    @deprecated("Use AJSUIBootstrap0100 or later", "2.0.0")
+    @deprecated("Use AJSUIBootstrap250 or later", "2.0.0")
     case object AJSUIBootstrap020 extends Resource {
       FoBoResources.init
       FoBoResources.uibootstrap020
@@ -14247,56 +14230,6 @@ package object foboajsres {
                "3.0.7",
                "css",
                "ui-grid.min.css")
-      }
-    }
-
-    lazy val AJMaterial101 = {
-      ResourceServer.rewrite {
-        case "fobo" :: "angular-material.js" :: Nil if Props.devMode =>
-          List("fobo", "angular-material", "1.0.1", "js", "angular-material.js")
-        case "fobo" :: "angular-material.js" :: Nil =>
-          List("fobo",
-               "angular-material",
-               "1.0.1",
-               "js",
-               "angular-material.min.js")
-        case "fobo" :: "angular-material-mocks.js" :: Nil if Props.devMode =>
-          List("fobo",
-               "angular-material",
-               "1.0.1",
-               "js",
-               "angular-material-mocks.js")
-        case "fobo" :: "angular-material-mocks.js" :: Nil =>
-          List("fobo",
-               "angular-material",
-               "1.0.1",
-               "js",
-               "angular-material-mocks.js")
-        case "fobo" :: "angular-material.css" :: Nil if Props.devMode =>
-          List("fobo",
-               "angular-material",
-               "1.0.1",
-               "css",
-               "angular-material.css")
-        case "fobo" :: "angular-material.css" :: Nil =>
-          List("fobo",
-               "angular-material",
-               "1.0.1",
-               "css",
-               "angular-material.min.css")
-        case "fobo" :: "angular-material.layout.css" :: Nil if Props.devMode =>
-          List("fobo",
-               "angular-material",
-               "1.0.1",
-               "css",
-               "angular-material.layout.css")
-        case "fobo" :: "angular-material.layout.css" :: Nil =>
-          List("fobo",
-               "angular-material",
-               "1.0.1",
-               "css",
-               "angular-material.layout.min.css")
-
       }
     }
 

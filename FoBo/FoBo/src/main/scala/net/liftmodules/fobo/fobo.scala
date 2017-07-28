@@ -35,17 +35,18 @@ package net.liftmodules
   *
   *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.3, v.2.1.1, v.2.1.4, v2.2.4, v3.0.0, v3.1.0] [[net.liftmodules.fobojq]]
   *  - JQueryMigrate [v1.2.1, v1.4.1, v3.0.0] [[net.liftmodules.fobojq]]
-  *  - Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6, v3.3.7] [[net.liftmodules.fobobs]]
+  *  - Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.7] [[net.liftmodules.fobobs]]
   *  - Bootstrap v2.x series [v2.3.2] [[net.liftmodules.fobotb]]
   *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] [[net.liftmodules.fobofa]]
   *  - Google Code Prettify [vJun2011] [[net.liftmodules.fobogcp]]
   *  - Highlight JS [v9.3.0] [[net.liftmodules.fobohl]]
   *  - Pace [v0.4.15, v1.0.2] [[net.liftmodules.fobopa]]
   *  - Angular JS [v1.0.6, v1.2.11, v1.2.19, v1.3.15, v1.4.1, v1.4.8, v1.5.3] (angular core modules) [[net.liftmodules.foboajs]]
-  *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0] (angular component) [[net.liftmodules.foboajs]]
+  *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0, v2.5.0] (angular component) [[net.liftmodules.foboajs]]
   *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component) [[net.liftmodules.foboajs]]
   *  - Angular UI-Grid [v3.0.7] (angular component) [[net.liftmodules.foboajs]]
-  *  - Angular Material design [v0.10.0, v1.0.1, v1.0.8, v1.1.1, v1.1.4] (angular component) [[net.liftmodules.foboajs]]
+
+  *  - Angular Material design [v0.10.0, v1.0.8, v1.1.1, v1.1.4] (angular component) [[net.liftmodules.foboajs]]
   *  - Popper [v1.11.0]
   *  - Tooltip [v1.1.4]
   *
@@ -316,24 +317,6 @@ package object fobo {
       */
     case object AngularJS1219i18n extends Toolkit {
       net.liftmodules.foboajs.Toolkit.AngularJS1219i18n
-    }
-
-    /**
-      * Enable usage of FoBo's Angular Material API and resources version 1&#8228;0&#8228;1 in your bootstrap liftweb Boot.
-      * @version 1.0.1
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.fobo
-      *    :
-      *   fobo.Toolkit.init=fobo.Toolkit.AJMaterial101
-      * }}}
-      *
-      */
-    @deprecated("Use AJMaterial108 or later", "1.6.0")
-    case object AJMaterial101 extends Toolkit {
-      net.liftmodules.foboajs.Toolkit.AJMaterial101
     }
 
     /**
@@ -868,42 +851,6 @@ package object fobo {
     }
 
     /**
-      * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;6 in your bootstrap liftweb Boot.
-      * @version 3.3.6
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.fobo
-      *    :
-      *   fobo.Toolkit.init=fobo.Toolkit.Bootstrap336
-      * }}}
-      * @since v1.5
-      */
-    @deprecated("Use Bootstrap337 or later", "1.7.0")
-    case object Bootstrap336 extends Toolkit {
-      net.liftmodules.fobobs.Toolkit.Bootstrap336
-    }
-
-    /**
-      * Enable usage of Bootstrap API and resources version 3&#8228;3&#8228;5 in your bootstrap liftweb Boot.
-      * @version 3.3.5
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.fobo
-      *    :
-      *   fobo.Toolkit.init=fobo.Toolkit.Bootstrap335
-      * }}}
-      *
-      */
-    @deprecated("Use Bootstrap337 or later", "1.7.0")
-    case object Bootstrap335 extends Toolkit {
-      net.liftmodules.fobobs.Toolkit.Bootstrap335
-    }
-
-    /**
       * Enable usage of Bootstrap API and resources version 3&#8228;2&#8228;0 in your bootstrap liftweb Boot.
       * @version 3.2.0
       *
@@ -1233,24 +1180,6 @@ package object fobo {
       */
     case object AngularJS1219i18n extends Resource {
       net.liftmodules.foboajs.Resource.AngularJS1219i18n
-    }
-
-    /**
-      * Enable usage of Angular Material version 1&#8228;0&#8228;1 resource files in your bootstrap liftweb Boot.
-      * @version 1.0.1
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.fobo
-      *    :
-      *   fobo.Resource.init=fobo.Resource.AJMaterial101
-      * }}}
-      *
-      */
-    @deprecated("Use AJMaterial108 or later", "1.6.0")
-    case object AJMaterial101 extends Resource {
-      net.liftmodules.foboajs.Resource.AJMaterial101
     }
 
     /**
@@ -1773,42 +1702,6 @@ package object fobo {
       */
     case object Bootstrap337 extends Resource {
       net.liftmodules.fobobs.Resource.Bootstrap337
-    }
-
-    /**
-      * Enable usage of Bootstrap version 3&#8228;3&#8228;6 resource files in your bootstrap liftweb Boot.
-      * @version 3.3.6
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.fobo
-      *    :
-      *   fobo.Resource.init=fobo.Resource.Bootstrap336
-      * }}}
-      * @since v1.5
-      */
-    @deprecated("Use Bootstrap337 or later", "1.7.0")
-    case object Bootstrap336 extends Resource {
-      net.liftmodules.fobobs.Resource.Bootstrap336
-    }
-
-    /**
-      * Enable usage of Bootstrap version 3&#8228;3&#8228;5 resource files in your bootstrap liftweb Boot.
-      * @version 3.3.5
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.fobo
-      *    :
-      *   fobo.Resource.init=fobo.Resource.Bootstrap335
-      * }}}
-      *
-      */
-    @deprecated("Use Bootstrap337 or later", "1.7.0")
-    case object Bootstrap335 extends Resource {
-      net.liftmodules.fobobs.Resource.Bootstrap335
     }
 
     /**

@@ -255,25 +255,6 @@ package object foboajs {
     }
 
     /**
-      * Enable usage of FoBo's Angular Material API and resources version 1&#8228;0&#8228;1 in your bootstrap liftweb Boot.
-      * @version 1.0.1
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.{foboajs => fobo}
-      *    :
-      *   fobo.Toolkit.init=fobo.Toolkit.AJMaterial101
-      * }}}
-      *
-      */
-    @deprecated("Use AJMaterial108 or later", "1.6.0")
-    case object AJMaterial101 extends Toolkit {
-      foboajsapi.API.Angular1
-      foboajsres.Resource.AJMaterial101
-    }
-
-    /**
       * Enable usage of FoBo's Angular Material API and resources version 1&#8228;0&#8228;8 in your bootstrap liftweb Boot.
       * @version 1.0.8
       *
@@ -624,24 +605,6 @@ package object foboajs {
       */
     case object AngularJS1219i18n extends Resource {
       foboajsres.Resource.AngularJS1219i18n
-    }
-
-    /**
-      * Enable usage of Angular Material version 1&#8228;0&#8228;1 resource files in your bootstrap liftweb Boot.
-      * @version 1.0.1
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.{foboajs => fobo}
-      *    :
-      *   fobo.Resource.init=fobo.Resource.AJMaterial101
-      * }}}
-      *
-      */
-    @deprecated("Use AJMaterial108 or later", "1.6.0")
-    case object AJMaterial101 extends Resource {
-      foboajsres.Resource.AJMaterial101
     }
 
     /**

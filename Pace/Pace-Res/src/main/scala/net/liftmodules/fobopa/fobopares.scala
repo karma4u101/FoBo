@@ -71,6 +71,7 @@ package object fobopares {
       *   fobo.Resource.init=fobo.Resource.Pace0415
       * }}}
       */
+    @deprecated("Use Pace102 or later", "2.0.0")
     case object Pace0415 extends Resource {
       FoBoResources.init
       FoBoResources.Pace0415
