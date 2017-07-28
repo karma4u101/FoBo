@@ -312,21 +312,21 @@ package object foboajs {
     }
 
     /**
-      * Enable usage of FoBo's Angular API and AngularUI-Bootstrap resources version 2&#8228;4&#8228;0 in your bootstrap liftweb Boot.
-      * @version 2.4.0
+      * Enable usage of FoBo's Angular API and AngularUI-Bootstrap resources version 2&#8228;5&#8228;0 in your bootstrap liftweb Boot.
+      * @version 2.5.0
       *
       *  '''Example:'''
       *
       * {{{
       *   import net.liftmodules.{foboajs => fobo}
       *    :
-      *   fobo.Toolkit.init=fobo.Toolkit.AJSUIBootstrap240
+      *   fobo.Toolkit.init=fobo.Toolkit.AJSUIBootstrap250
       * }}}
-      *
+      * @since v2.0
       */
-    case object AJSUIBootstrap240 extends Toolkit {
+    case object AJSUIBootstrap250 extends Toolkit {
       foboajsapi.API.Angular1
-      foboajsres.Resource.AJSUIBootstrap240
+      foboajsres.Resource.AJSUIBootstrap250
     }
 
     /**
@@ -342,6 +342,7 @@ package object foboajs {
       * }}}
       *
       */
+    @deprecated("Use AJSUIBootstrap250 or later", "2.0.0")
     case object AJSUIBootstrap0100 extends Toolkit {
       foboajsapi.API.Angular1
       foboajsres.Resource.AJSUIBootstrap0100
@@ -659,20 +660,20 @@ package object foboajs {
     }
 
     /**
-      * Enable usage of AngularUI-Bootstrap version 2&#8228;4&#8228;0 resource files in your bootstrap liftweb Boot.
-      * @version 2.4.0
+      * Enable usage of AngularUI-Bootstrap version 2&#8228;5&#8228;0 resource files in your bootstrap liftweb Boot.
+      * @version 2.5.0
       *
       *  '''Example:'''
       *
       * {{{
       *   import net.liftmodules.{foboajs => fobo}
       *    :
-      *   fobo.Resource.init=fobo.Resource.AJSUIBootstrap240
+      *   fobo.Resource.init=fobo.Resource.AJSUIBootstrap250
       * }}}
-      *
+      * @since v2.0
       */
-    case object AJSUIBootstrap240 extends Resource {
-      foboajsres.Resource.AJSUIBootstrap240
+    case object AJSUIBootstrap250 extends Resource {
+      foboajsres.Resource.AJSUIBootstrap250
     }
 
     /**
@@ -688,6 +689,7 @@ package object foboajs {
       * }}}
       *
       */
+    @deprecated("Use AJSUIBootstrap250 or later", "2.0.0")
     case object AJSUIBootstrap0100 extends Resource {
       foboajsres.Resource.AJSUIBootstrap0100
     }

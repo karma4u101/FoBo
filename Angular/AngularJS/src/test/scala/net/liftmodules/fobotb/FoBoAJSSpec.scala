@@ -342,38 +342,38 @@ class FoBoAJSSpec extends mutable.Specification {
     }
   }
 
-  //AJSUIBootstrap240
-  "With foboajs.Toolkit.init set to foboajs.Toolkit.AJSUIBootstrap240 the ResourceServer" should {
+  //AJSUIBootstrap250
+  "With foboajs.Toolkit.init set to foboajs.Toolkit.AJSUIBootstrap250 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {
-      allowToolkitInit(foboajs.Toolkit.AJSUIBootstrap240,
+      allowToolkitInit(foboajs.Toolkit.AJSUIBootstrap250,
                        "fobo" :: "ui-bootstrap.js" :: Nil) must_== true
     }
-    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/2.4.0/js/ui-bootstrap-2.4.0.min.js" in {
-      rewriteToolkitInit(foboajs.Toolkit.AJSUIBootstrap240,
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/2.5.0/js/ui-bootstrap-2.5.0.min.js" in {
+      rewriteToolkitInit(foboajs.Toolkit.AJSUIBootstrap250,
                          "fobo" :: "ui-bootstrap.js" :: Nil) must_==
         List("fobo",
              "angular-ui",
              "bootstrap",
-             "2.4.0",
+             "2.5.0",
              "js",
-             "ui-bootstrap-2.4.0.min.js")
+             "ui-bootstrap-2.5.0.min.js")
     }
   }
 
-  "With foboajs.Resource.init set to foboajs.Resource.AJSUIBootstrap240 the ResourceServer" should {
+  "With foboajs.Resource.init set to foboajs.Resource.AJSUIBootstrap250 the ResourceServer" should {
     "allow  fobo/ui-bootstrap.js" in {
-      allowResource(foboajs.Resource.AJSUIBootstrap240,
+      allowResource(foboajs.Resource.AJSUIBootstrap250,
                     "fobo" :: "ui-bootstrap.js" :: Nil) must_== true
     }
-    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/2.4.0/js/ui-bootstrap-2.4.0.min.js" in {
-      rewriteResource(foboajs.Resource.AJSUIBootstrap240,
+    "rewrit fobo/ui-bootstrap.js to fobo/angular-ui/bootstrap/2.5.0/js/ui-bootstrap-2.5.0.min.js" in {
+      rewriteResource(foboajs.Resource.AJSUIBootstrap250,
                       "fobo" :: "ui-bootstrap.js" :: Nil) must_==
         List("fobo",
              "angular-ui",
              "bootstrap",
-             "2.4.0",
+             "2.5.0",
              "js",
-             "ui-bootstrap-2.4.0.min.js")
+             "ui-bootstrap-2.5.0.min.js")
     }
   }
 

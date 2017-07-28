@@ -43,21 +43,21 @@ package object fobopopres {
     override def toString() = "fobopopres.Resource = " + store.toString()
 
     /**
-      * Enable usage of Popper version 1&#8228;10&#8228;9 in your bootstrap liftweb Boot.
-      * @version 1.10.8
+      * Enable usage of Popper version 1&#8228;11&#8228;0 in your bootstrap liftweb Boot.
+      * @version 1.11.0
       *
       * '''Example:'''
       *
       * {{{
       *   import net.liftmodules.{fobopopres => fobo}
       *    :
-      *   fobo.Resource.init=fobo.Resource.Popper1108
+      *   fobo.Resource.init=fobo.Resource.Popper1110
       * }}}
       * @since v2.0
       */
-    case object Popper1108 extends Resource {
+    case object Popper1110 extends Resource {
       FoBoResources.init
-      FoBoResources.Popper1108
+      FoBoResources.Popper1110
     }
 
   } //end Resource object
@@ -82,27 +82,27 @@ package object fobopopres {
     https://github.com/umdjs/umd
      */
 
-    lazy val Popper1108: Unit = {
+    lazy val Popper1110: Unit = {
       ResourceServer.rewrite {
         case "fobo" :: "popper.js" :: Nil if Props.devMode =>
-          List("fobo", "popper", "1.10.8", "js", "umd", "popper.js")
+          List("fobo", "popper", "1.11.0", "js", "umd", "popper.js")
         case "fobo" :: "popper.js" :: Nil =>
-          List("fobo", "popper", "1.10.8", "js", "umd", "popper.min.js")
+          List("fobo", "popper", "1.11.0", "js", "umd", "popper.min.js")
         case "fobo" :: "popper.js.map" :: Nil if Props.devMode =>
-          List("fobo", "popper", "1.10.8", "js", "umd", "popper.js.map")
+          List("fobo", "popper", "1.11.0", "js", "umd", "popper.js.map")
         case "fobo" :: "popper.js.map" :: Nil =>
-          List("fobo", "popper", "1.10.8", "js", "umd", "popper.min.js.map")
+          List("fobo", "popper", "1.11.0", "js", "umd", "popper.min.js.map")
 
         case "fobo" :: "popper-utils.js" :: Nil if Props.devMode =>
-          List("fobo", "popper", "1.10.8", "js", "umd", "popper-utils.js")
+          List("fobo", "popper", "1.11.0", "js", "umd", "popper-utils.js")
         case "fobo" :: "popper-utils.js" :: Nil =>
-          List("fobo", "popper", "1.10.8", "js", "umd", "popper-utils.min.js")
+          List("fobo", "popper", "1.11.0", "js", "umd", "popper-utils.min.js")
         case "fobo" :: "popper-utils.js.map" :: Nil if Props.devMode =>
-          List("fobo", "popper", "1.10.8", "js", "umd", "popper-utils.js.map")
+          List("fobo", "popper", "1.11.0", "js", "umd", "popper-utils.js.map")
         case "fobo" :: "popper-utils.js.map" :: Nil =>
           List("fobo",
                "popper",
-               "1.10.8",
+               "1.11.0",
                "js",
                "umd",
                "popper-utils.min.js.map")

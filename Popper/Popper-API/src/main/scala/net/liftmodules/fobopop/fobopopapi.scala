@@ -29,7 +29,7 @@ package object fobopopapi {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait API
+  sealed trait API
 
   object API extends API {
 
