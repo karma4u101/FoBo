@@ -90,7 +90,7 @@ package object fobofa {
       */
     case object FontAwesome463 extends Toolkit {
       fobofares.Resource.FontAwesome463
-      //FoBoFAAPI.API.FontAwesome4
+      fobofaapi.API.FontAwesome4
     }
 
     /**
@@ -107,7 +107,7 @@ package object fobofa {
       */
     case object FontAwesome430 extends Toolkit {
       fobofares.Resource.FontAwesome430
-      //FoBoFAAPI.API.FontAwesome4
+      fobofaapi.API.FontAwesome4
     }
 
     /**
@@ -125,7 +125,7 @@ package object fobofa {
     @deprecated("Use FontAwesome463 or later", "2.0.0")
     case object FontAwesome410 extends Toolkit {
       fobofares.Resource.FontAwesome410
-      //FoBoFAAPI.API.FontAwesome4
+      fobofaapi.API.FontAwesome4
     }
 
     /**
@@ -143,7 +143,7 @@ package object fobofa {
     @deprecated("Use FontAwesome463 or later", "2.0.0")
     case object FontAwesome403 extends Toolkit {
       fobofares.Resource.FontAwesome403
-      //FoBoFAAPI.API.FontAwesome4
+      fobofaapi.API.FontAwesome4
     }
 
     /**
@@ -160,7 +160,7 @@ package object fobofa {
       */
     case object FontAwesome321 extends Toolkit {
       fobofares.Resource.FontAwesome321
-      //FoBoFAAPI.API.FontAwesome4
+      fobofaapi.API.FontAwesome4
     }
 
   }
@@ -290,20 +290,7 @@ package object fobofa {
       * }}}
       */
     case object FontAwesome4 extends API {
-      //ToDo get from module fobo-fontawesome-api in FoBoFAAPI
-      //FoBoFAAPI.API.FontAwesome4
-      FoBoAPI.init
-    }
-
-  }
-
-  /**
-    * Object for initiating FoBo API packages.
-    */
-  private object FoBoAPI {
-    lazy val init: Unit = {
-      LiftRules.addToPackages("net.liftmodules.fobofa")
+      fobofaapi.API.FontAwesome4
     }
   }
-
 }

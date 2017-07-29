@@ -141,12 +141,16 @@ lazy val bootstrap3res =
 lazy val fontAwesome = (project in file("Font-Awesome/Font-Awesome"))
   .settings(commonSettings: _*)
   .settings(name := "fobo-font-awesome")
-  .aggregate(fontAwesomeres)
-  .dependsOn(fontAwesomeres)
+  .aggregate(fontAwesomeapi, fontAwesomeres)
+  .dependsOn(fontAwesomeapi, fontAwesomeres)
 
 lazy val fontAwesomeres = (project in file("Font-Awesome/Font-Awesome-Res"))
   .settings(commonSettings: _*)
   .settings(name := "fobo-font-awesome-res")
+
+lazy val fontAwesomeapi = (project in file("Font-Awesome/Font-Awesome-API"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-font-awesome-api")
 
 lazy val prettify =
   (project in file("Google-Code-Prettify/Google-Code-Prettify"))
