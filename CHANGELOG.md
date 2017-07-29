@@ -10,6 +10,7 @@ section
 - **2015-12-30** -- FoBo Module v1.5.1
 
 **Latest Updates:**
+- **2017-07-28** -- [PR #151](https://github.com/karma4u101/FoBo/pull/151) FoBo v2.0 -- Updating UI Bootstrap to v2.5.0
 - **2017-07-27** -- [PR #150](https://github.com/karma4u101/FoBo/pull/150) FoBo v2.0 -- Updating Popper to v1.11.0
 - **2017-07-25** -- [PR #145](https://github.com/karma4u101/FoBo/pull/145) FoBo v2.0 -- Adding Angular material v1.1.4
 - **2017-07-23** -- [PR #143](https://github.com/karma4u101/FoBo/pull/143) FoBo v2.0 -- Removing Kinetic
@@ -47,10 +48,10 @@ See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGEL
     years. The author recommends using the more lightweight http://www.concretejs.com/ library. 
 
 ### Deprecations 
-In order to cleanup and improve the API the old style FoBoTolkit and FoBoJQuery initiation functions have been removed after 
-some time of deprecation. v1.7 is the last version having FoBoTolkit and FoBoJQuery so if you have not already switched to
-use the Toolkit, Resource and API objects in favour for the old init style, v1.7 is a good pit stop on the way to v2.0 as it
-(and v1.6) provides a easy migration path. 
+In order to cleanup and improve the API the old style FoBoTolkit and FoBoJQuery initiation functions have been removed 
+after some time of deprecation. v1.7 is the last version having FoBoTolkit and FoBoJQuery so if you have not already 
+switched to use the Toolkit, Resource and API objects in favour for the old init style, v1.7 is a good pit stop on the 
+way to v2.0 as it (and v1.6) provides a easy migration path. 
 
   
 ### New modules
@@ -58,8 +59,10 @@ use the Toolkit, Resource and API objects in favour for the old init style, v1.7
 -   [Tether](https://github.com/karma4u101/FoBo/tree/master/Tether) [v1.4.0] - [Tether](http://tether.io/)
 
 ### Updated modules
-- [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.1.4 - [Angular Material](https://material.angularjs.org/)
-- [FoBo-AngularJS UI Bootstrap](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v2.4.0 - [UI Bootstrap](https://angular-ui.github.io/bootstrap/)
+- [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.1.4 - 
+  [Angular Material](https://material.angularjs.org/)
+- [FoBo-AngularJS UI Bootstrap](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v2.5.0 - 
+  [UI Bootstrap](https://angular-ui.github.io/bootstrap/)
 
 
 ## FoBo v1.7
@@ -75,10 +78,14 @@ The build system is now much cleaner and easier to work with.
 - [scalafmt](https://olafurpg.github.io/scalafmt/) FoBo is now using the Scalafmt code formatter sbt plugin  
 
 ### Updated modules
-- [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.1.1 - [Angular Material](https://material.angularjs.org/)
-- [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) Adds v3.3.7 - [Bootstrap 3.x](http://getbootstrap.com/)
-- [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v2.2.4, v3.0.0, v3.1.0 - [JQuery](http://jquery.com/)
-- [FoBo-JQuery-Migrate](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v1.4.1, v3.0.0 - [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)
+- [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.1.1 - 
+  [Angular Material](https://material.angularjs.org/)
+- [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) Adds v3.3.7 - 
+  [Bootstrap 3.x](http://getbootstrap.com/)
+- [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v2.2.4, v3.0.0, v3.1.0 - 
+  [JQuery](http://jquery.com/)
+- [FoBo-JQuery-Migrate](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v1.4.1, v3.0.0 - 
+  [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)
 
 
 
