@@ -63,7 +63,7 @@ package object fobopaapi {
 
   private object FoBoAPI {
     lazy val init: Unit = {
-      LiftRules.addToPackages("net.liftmodules.FoBoPa")
+      LiftRules.addToPackages("net.liftmodules.fobopa")
     }
   }
 
