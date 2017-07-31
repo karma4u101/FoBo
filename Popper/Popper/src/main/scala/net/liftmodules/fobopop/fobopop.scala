@@ -87,6 +87,7 @@ package object fobopop {
       * @since v2.0
       */
     case object Popper1110 extends Toolkit {
+      fobopopapi.API.Popper1
       fobopopres.Resource.Popper1110
     }
 

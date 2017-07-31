@@ -89,6 +89,7 @@ package object fobopa {
       * }}}
       */
     case object Pace102 extends Toolkit {
+      fobopaapi.API.Pace0
       fobopa.Resource.Pace102
     }
 
@@ -106,6 +107,7 @@ package object fobopa {
       */
     @deprecated("Use Pace102 or later", "2.0.0")
     case object Pace0415 extends Toolkit {
+      fobopaapi.API.Pace0
       fobopa.Resource.Pace0415
     }
   }
@@ -187,20 +189,7 @@ package object fobopa {
       * }}}
       */
     case object Pace0 extends API {
-      //ToDo get from module fobo-pace-api in PaceAPI
-      //FoBoPaAPI.API.Pace0
-      FoBoAPI.init
+      fobopaapi.API.Pace0
     }
   }
-
-  /**
-    * Object for initiating FoBo API packages.
-    */
-  private object FoBoAPI {
-    lazy val init: Unit = {
-      LiftRules.addToPackages("net.liftmodules.fobopa")
-
-    }
-  }
-
 }
