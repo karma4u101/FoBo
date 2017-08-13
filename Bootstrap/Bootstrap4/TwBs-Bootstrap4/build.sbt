@@ -1,3 +1,5 @@
+import LiftModuleKeys.liftEdition
+
 moduleName := "fobo-twbs-bootstrap4"
 
 moduleName := { name.value + "_" + liftEdition.value }
