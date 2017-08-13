@@ -1,3 +1,5 @@
+import LiftModuleKeys.liftEdition
+
 moduleName := "fobo"
 
 moduleName := { name.value + "_" + liftEdition.value }

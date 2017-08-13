@@ -1,3 +1,5 @@
+import LiftModuleKeys.liftEdition
+
 moduleName := "fobo-tooltip"
 
 moduleName := { name.value + "_" + liftEdition.value }

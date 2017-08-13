@@ -1,8 +1,4 @@
-import LiftModuleKeys._
-import sbt.project
-
-//val liftVersion = settingKey[String]("Lift Web Framework full version number")
-//val liftEdition = settingKey[String]("Lift Edition (such as 2.6 or 3.0)")
+import LiftModuleKeys.{liftVersion, liftEdition}
 
 //##################################################################
 //##
@@ -12,19 +8,17 @@ import sbt.project
 
 lazy val commonSettings = Seq(
   organization := "net.liftmodules",
-  version in ThisBuild := "2.0-SNAPSHOT",
-  //scalacOptions in ThisBuild ++= Seq("-unchecked", "-deprecation", "-feature"),
-  scalacOptions in ThisBuild ++= Seq("-unchecked", "-deprecation"),
+  version := "2.0-SNAPSHOT",
+  scalacOptions ++= Seq("-unchecked", "-deprecation"),
   autoAPIMappings := true
 )
 
 lazy val fobometa = (project in file("."))
   .settings(commonSettings: _*)
   .enablePlugins(ScalaUnidocPlugin)
-  //.settings(unidocSettings: _*)
   .settings(name := "fobo-meta")
-  .settings(scalaVersion in ThisBuild := "2.12.1")
-  .settings(liftVersion in ThisBuild := { liftVersion ?? "3.1.0-M3" }.value)
+  .settings(scalaVersion in ThisBuild := "2.12.2")
+  .settings(liftVersion in ThisBuild := { liftVersion ?? "3.1.0" }.value)
   .settings(liftEdition in ThisBuild := {
     liftVersion apply { _.substring(0, 3) }
   }.value)
@@ -313,11 +307,11 @@ libraryDependencies in ThisBuild ++= {
 //##  Eclipse stuff
 //##
 //##############
-EclipseKeys.withSource in ThisBuild := true
+//EclipseKeys.withSource in ThisBuild := true
 
-EclipseKeys.skipParents in ThisBuild := false
+//EclipseKeys.skipParents in ThisBuild := false
 
-EclipseKeys.createSrc := EclipseCreateSrc.Default + EclipseCreateSrc.Managed
+//EclipseKeys.createSrc := EclipseCreateSrc.Default + EclipseCreateSrc.Managed
 //##
 //##
 //##################################################################

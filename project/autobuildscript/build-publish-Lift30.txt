@@ -1,21 +1,17 @@
 alias pub=publishLocal
 
-set LiftModuleKeys.liftVersion in ThisBuild := "3.1.0"
+set LiftModuleKeys.liftVersion in ThisBuild := "3.0.1"
 set version                    in ThisBuild := "2.0-SNAPSHOT"
 
-set scalaVersion in ThisBuild := "2.12.2"
+set scalaVersion in ThisBuild := "2.12.1"
 project fobo
 clean
 cleanFiles
 ; compile ; test ; pub
 
-set scalaVersion in ThisBuild := "2.11.11"
+set scalaVersion  in ThisBuild := "2.11.7"
 project fobo
 clean
 cleanFiles
 ; compile ; test ; pub
-
-
-
-
 
