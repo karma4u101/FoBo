@@ -1,3 +1,5 @@
+import LiftModuleKeys.liftEdition
+
 moduleName := "fobo-font-awesome"
 
 moduleName := { name.value + "_" + liftEdition.value }

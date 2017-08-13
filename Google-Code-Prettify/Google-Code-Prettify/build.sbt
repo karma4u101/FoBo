@@ -1,3 +1,5 @@
+import LiftModuleKeys.liftEdition
+
 moduleName := "fobo-google-code-prettify"
 
 moduleName := { name.value + "_" + liftEdition.value }

@@ -1,3 +1,5 @@
+import LiftModuleKeys.{liftEdition, liftVersion}
+
 moduleName := "fobo-angularjs-api"
 
 moduleName := { name.value + "_" + liftEdition.value }

@@ -1,3 +1,5 @@
+import LiftModuleKeys.liftEdition
+
 moduleName := "fobo-tether"
 
 moduleName := { name.value + "_" + liftEdition.value }
