@@ -36,7 +36,6 @@ lazy val fobo = (project in file("FoBo/FoBo"))
              fontAwesome,
              prettify,
              highlightjs,
-             tether,
              popper,
              tooltip)
   .dependsOn(foboapi,
@@ -48,7 +47,6 @@ lazy val fobo = (project in file("FoBo/FoBo"))
              fontAwesome,
              prettify,
              highlightjs,
-             tether,
              popper,
              tooltip)
 
@@ -175,20 +173,6 @@ lazy val highlightjsapi = (project in file("Highlight/HighlightJS-API"))
 lazy val highlightjsres = (project in file("Highlight/HighlightJS-Res"))
   .settings(commonSettings: _*)
   .settings(name := "fobo-highlightjs-res")
-
-lazy val tether = (project in file("Tether/Tether"))
-  .settings(commonSettings: _*)
-  .settings(name := "fobo-tether")
-  .aggregate(tetherapi, tetherres)
-  .dependsOn(tetherapi, tetherres)
-
-lazy val tetherapi = (project in file("Tether/Tether-API"))
-  .settings(commonSettings: _*)
-  .settings(name := "fobo-tether-api")
-
-lazy val tetherres = (project in file("Tether/Tether-Res"))
-  .settings(commonSettings: _*)
-  .settings(name := "fobo-tether-res")
 
 lazy val popper = (project in file("Popper/Popper"))
   .settings(commonSettings: _*)

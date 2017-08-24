@@ -45,7 +45,6 @@ package net.liftmodules
   *  - Angular UI Bootstrap [v0.2.0, v0.7.0, v0.10.0, v2.5.0] (angular component) [[net.liftmodules.foboajs]]
   *  - Angular NG-Grid [v2.0.4, v2.0.7] (angular component) [[net.liftmodules.foboajs]]
   *  - Angular UI-Grid [v3.0.7] (angular component) [[net.liftmodules.foboajs]]
-
   *  - Angular Material design [v0.10.0, v1.0.8, v1.1.1, v1.1.4] (angular component) [[net.liftmodules.foboajs]]
   *  - Popper [v1.11.0]
   *  - Tooltip [v1.1.4]
@@ -938,24 +937,6 @@ package object fobo {
       net.liftmodules.fobohl.Toolkit.HighlightJS930
     }
 
-    /*===Tether Toolkit===============================================================*/
-
-    /**
-      * Enable usage of FoBo's Tether API and resources version 1&#8228;4&#8228;0 in your bootstrap liftweb Boot.
-      * @version v1.4.0
-      *
-      * '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.fobo
-      *    :
-      *   fobo.Toolkit.init=fobo.Toolkit.Tether140
-      * }}}
-      */
-    case object Tether140 extends Toolkit {
-      net.liftmodules.FoBoTet.Toolkit.Tether140
-    }
-
     /*===Popper Toolkit===============================================================*/
 
     /**
@@ -1792,25 +1773,7 @@ package object fobo {
       net.liftmodules.fobohl.Resource.HighlightJS930
     }
 
-    /*===Tether Resource===============================================================*/
-
-    /**
-      * Enable usage of FoBo's Tether version 1&#8228;4&#8228;0 resource files in your bootstrap liftweb Boot.
-      * @version v1.4.0
-      *
-      * '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.fobo
-      *    :
-      *   fobo.Resourc  e.init=fobo.Resource.Tether140
-      * }}}
-      */
-    case object Tether140 extends Resource {
-      net.liftmodules.FoBoTet.Resource.Tether140
-    }
-
-    /*===Tooltip Resource===============================================================*/
+    /*===Popper Resource===============================================================*/
 
     /**
       * Enable usage of FoBo's Popper version 1&#8228;11&#8228;0 resource files in your bootstrap liftweb Boot.
@@ -1961,25 +1924,6 @@ package object fobo {
       */
     case object FoBo1 extends API {
       net.liftmodules.foboapi.API.FoBo1
-    }
-
-    /*===Tether API ==============================================================*/
-
-    /**
-      * Enable usage of FoBo's Tether API 1&#8228;x&#8228;x in your bootstrap liftweb Boot.
-      * @version 1.x.x
-      *
-      *  '''Example:'''
-      *
-      * {{{
-      *   import net.liftmodules.fobo
-      *    :
-      *   fobo.API.init=fobo.API.Tether1
-      * }}}
-      *
-      */
-    case object Tether1 extends API {
-      net.liftmodules.FoBoTetAPI.API.Tether1
     }
 
   }
