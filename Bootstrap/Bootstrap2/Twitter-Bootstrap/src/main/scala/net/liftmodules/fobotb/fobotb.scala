@@ -1,8 +1,6 @@
 package net.liftmodules
 
 import _root_.net.liftweb._
-import util.Props
-import http._
 import common._
 
 /**
@@ -103,7 +101,7 @@ package object fobotb {
       *
       */
     case object Bootstrap232 extends Toolkit {
-      net.liftmodules.FoBoTBRes.Resource.Bootstrap232
+      net.liftmodules.fobotbres.Resource.Bootstrap232
       net.liftmodules.fobotbapi.API.Bootstrap2
     }
 
@@ -138,7 +136,7 @@ package object fobotb {
       *
       */
     case object Bootstrap232 extends Resource {
-      net.liftmodules.FoBoTBRes.Resource.Bootstrap232
+      net.liftmodules.fobotbres.Resource.Bootstrap232
     }
 
   }
