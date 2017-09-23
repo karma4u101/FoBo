@@ -18,7 +18,8 @@ lazy val fobometa = (project in file("."))
   .enablePlugins(ScalaUnidocPlugin)
   .settings(name := "fobo-meta")
   .settings(scalaVersion in ThisBuild := "2.12.2")
-  .settings(liftVersion in ThisBuild := { liftVersion ?? "3.1.0" }.value)
+  .settings(
+    liftVersion in ThisBuild := { liftVersion ?? "3.2.0-SNAPSHOT" }.value)
   .settings(liftEdition in ThisBuild := {
     liftVersion apply { _.substring(0, 3) }
   }.value)
@@ -64,8 +65,8 @@ lazy val foboapi = (project in file("FoBo/FoBo-API"))
 lazy val pace = (project in file("Pace/Pace"))
   .settings(commonSettings: _*)
   .settings(name := "fobo-pace")
-  .aggregate(paceapi,paceres)
-  .dependsOn(paceapi,paceres)
+  .aggregate(paceapi, paceres)
+  .dependsOn(paceapi, paceres)
 
 lazy val paceapi = (project in file("Pace/Pace-API"))
   .settings(commonSettings: _*)
