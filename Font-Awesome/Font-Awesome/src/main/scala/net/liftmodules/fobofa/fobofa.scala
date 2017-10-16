@@ -77,6 +77,23 @@ package object fobofa {
     override def toString() = "fobofa.Toolkit = " + store.toString()
 
     /**
+      * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;7&#8228;0 in your bootstrap liftweb Boot.
+      * @version 4.7.0
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{fobofa => fobo}
+      *    :
+      *   fobo.Toolkit.init=fobo.Toolkit.FontAwesome470
+      * }}}
+      */
+    case object FontAwesome470 extends Toolkit {
+      fobofares.Resource.FontAwesome470
+      fobofaapi.API.FontAwesome4
+    }
+
+    /**
       * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;6&#8228;3 in your bootstrap liftweb Boot.
       * @version 4.6.3
       *
@@ -179,6 +196,22 @@ package object fobofa {
       store
     }
     override def toString() = "fobofa.Resource = " + store.toString()
+
+    /**
+      * Enable usage of FoBo's FontAwesome resources version 4&#8228;7&#8228;0 in your bootstrap liftweb Boot.
+      * @version 4.7.0
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{fobofa => fobo}
+      *    :
+      *   fobo.Resource.init=fobo.Resource.FontAwesome470
+      * }}}
+      */
+    case object FontAwesome470 extends Resource {
+      fobofares.Resource.FontAwesome470
+    }
 
     /**
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;6&#8228;3 in your bootstrap liftweb Boot.
