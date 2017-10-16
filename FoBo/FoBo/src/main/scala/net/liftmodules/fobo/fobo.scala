@@ -37,7 +37,7 @@ package net.liftmodules
   *  - JQueryMigrate [v1.2.1, v1.4.1, v3.0.0] [[net.liftmodules.fobojq]]
   *  - Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.7] [[net.liftmodules.fobobs]]
   *  - Bootstrap v2.x series [v2.3.2] [[net.liftmodules.fobotb]]
-  *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0] [[net.liftmodules.fobofa]]
+  *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.6.3, v4.7.0] [[net.liftmodules.fobofa]]
   *  - Google Code Prettify [vJun2011] [[net.liftmodules.fobogcp]]
   *  - Highlight JS [v9.3.0] [[net.liftmodules.fobohl]]
   *  - Pace [v0.4.15, v1.0.2] [[net.liftmodules.fobopa]]
@@ -477,6 +477,22 @@ package object fobo {
     }
 
     /*===Font Awesome Toolkit===============================================================*/
+
+    /**
+      * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;7&#8228;0 in your bootstrap liftweb Boot.
+      * @version 4.7.0
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.fobo
+      *    :
+      *   fobo.Toolkit.init=fobo.Toolkit.FontAwesome470
+      * }}}
+      */
+    case object FontAwesome470 extends Toolkit {
+      net.liftmodules.fobofa.Toolkit.FontAwesome470
+    }
 
     /**
       * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;6&#8228;3 in your bootstrap liftweb Boot.
@@ -1318,6 +1334,22 @@ package object fobo {
     }
 
     /*===Font Awesome Resource===============================================================*/
+
+    /**
+      * Enable usage of FoBo's FontAwesome resources version 4&#8228;7&#8228;0 in your bootstrap liftweb Boot.
+      * @version 4.7.0
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.fobo
+      *    :
+      *   fobo.Resource.init=fobo.Resource.FontAwesome470
+      * }}}
+      */
+    case object FontAwesome470 extends Resource {
+      net.liftmodules.fobofa.Resource.FontAwesome470
+    }
 
     /**
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;6&#8228;3 in your bootstrap liftweb Boot.
