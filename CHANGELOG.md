@@ -55,15 +55,14 @@ way to v2.0 as it (and v1.6) provides a easy migration path.
 
   
 ### New modules
--   [Popper](https://github.com/karma4u101/FoBo/tree/master/Popper) [v1.11.0] - [Popper](https://popper.js.org/)
--   [Tether](https://github.com/karma4u101/FoBo/tree/master/Tether) [v1.4.0] - [Tether](http://tether.io/)
+-   [Popper](https://github.com/karma4u101/FoBo/tree/master/Popper) [v1.12.5] - [Popper](https://popper.js.org/)
 
 ### Updated modules
 - [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.1.4 - 
   [Angular Material](https://material.angularjs.org/)
 - [FoBo-AngularJS UI Bootstrap](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v2.5.0 - 
   [UI Bootstrap](https://angular-ui.github.io/bootstrap/)
-
+- [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.7.0 - [Font-Awesome](http://fontawesome.io/)
 
 ## FoBo v1.7
 
