@@ -66,7 +66,7 @@ package object fobopop {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Toolkit]
     private var store: Store = List()
-    def init: Store = store
+    def init: Store          = store
     def init_=(t: Toolkit): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -74,21 +74,21 @@ package object fobopop {
     override def toString() = "fobopop.Toolkit = " + store.toString()
 
     /**
-      * Enable usage FoBo's Popper API and resources version 1&#8228;12&#8228;3 in your bootstrap liftweb Boot.
-      * @version 1.12.3
+      * Enable usage FoBo's Popper API and resources version 1&#8228;12&#8228;5 in your bootstrap liftweb Boot.
+      * @version 1.12.5
       *
       * '''Example:'''
       *
       * {{{
       *   import net.liftmodules.{fobopop => fobo}
       *    :
-      *   fobo.Toolkit.init=fobo.Toolkit.Popper1123
+      *   fobo.Toolkit.init=fobo.Toolkit.Popper1125
       * }}}
       * @since v2.0
       */
-    case object Popper1123 extends Toolkit {
+    case object Popper1125 extends Toolkit {
       fobopopapi.API.Popper1
-      fobopopres.Resource.Popper1123
+      fobopopres.Resource.Popper1125
     }
 
   }
@@ -101,7 +101,7 @@ package object fobopop {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def init: Store = store
+    def init: Store          = store
     def init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -109,20 +109,20 @@ package object fobopop {
     override def toString() = "fobopop.Resource = " + store.toString()
 
     /**
-      * Enable usage FoBo's Popper resources version 1&#8228;12&#8228;3 in your bootstrap liftweb Boot.
-      * @version 1.12.3
+      * Enable usage FoBo's Popper resources version 1&#8228;12&#8228;5 in your bootstrap liftweb Boot.
+      * @version 1.12.5
       *
       * '''Example:'''
       *
       * {{{
       *   import net.liftmodules.{fobopop => fobo}
       *    :
-      *   fobo.Resource.init=fobo.Resource.Popper1123
+      *   fobo.Resource.init=fobo.Resource.Popper1125
       * }}}
       * @since v2.0
       */
-    case object Popper1123 extends Resource {
-      fobopopres.Resource.Popper1123
+    case object Popper1125 extends Resource {
+      fobopopres.Resource.Popper1125
     }
 
   }
@@ -135,7 +135,7 @@ package object fobopop {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
-    def init: Store = store
+    def init: Store          = store
     def init_=(t: API): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store

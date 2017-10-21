@@ -984,12 +984,12 @@ package object fobo {
       * {{{
       *   import net.liftmodules.{FoBoPop => fobo}
       *    :
-      *   fobo.Toolkit.init=fobo.Toolkit.Popper1123
+      *   fobo.Toolkit.init=fobo.Toolkit.Popper1125
       * }}}
       * @since v2.0
       */
-    case object Popper1123 extends Toolkit {
-      net.liftmodules.fobopop.Toolkit.Popper1123
+    case object Popper1125 extends Toolkit {
+      net.liftmodules.fobopop.Toolkit.Popper1125
     }
 
     /*===Tooltip Toolkit===============================================================*/
@@ -1847,20 +1847,20 @@ package object fobo {
     /*===Popper Resource===============================================================*/
 
     /**
-      * Enable usage of FoBo's Popper version 1&#8228;12&#8228;3 resource files in your bootstrap liftweb Boot.
-      * @version v1.12.3
+      * Enable usage of FoBo's Popper version 1&#8228;12&#8228;5 resource files in your bootstrap liftweb Boot.
+      * @version v1.12.5
       *
       * '''Example:'''
       *
       * {{{
       *   import net.liftmodules.fobo
       *    :
-      *   fobo.Resource.init=fobo.Resource.Popper1123
+      *   fobo.Resource.init=fobo.Resource.Popper1125
       * }}}
       * @since v2.0
       */
-    case object Popper1123 extends Resource {
-      net.liftmodules.fobopop.Resource.Popper1123
+    case object Popper1125 extends Resource {
+      net.liftmodules.fobopop.Resource.Popper1125
     }
 
     /*===Tooltip Resource===============================================================*/
