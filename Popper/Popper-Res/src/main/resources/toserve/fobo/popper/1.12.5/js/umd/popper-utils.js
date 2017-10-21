@@ -1,6 +1,6 @@
 /**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version 1.12.3
+ * @version 1.12.5
  * @license
  * Copyright (c) 2016 Federico Zivolo and contributors
  *
@@ -22,6 +22,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+	typeof define === 'function' && define.amd ? define(['exports'], factory) :
+	(factory((global.PopperUtils = global.PopperUtils || {})));
+}(this, (function (exports) { 'use strict';
+
 /**
  * Get CSS computed property of the given element
  * @method
@@ -1046,5 +1052,39 @@ var index = {
   setupEventListeners: setupEventListeners
 };
 
-export { computeAutoPlacement, debounce, findIndex, getBordersSize, getBoundaries, getBoundingClientRect, getClientRect, getOffsetParent, getOffsetRect, getOffsetRectRelativeToArbitraryNode, getOuterSizes, getParentNode, getPopperOffsets, getReferenceOffsets, getScroll, getScrollParent, getStyleComputedProperty, getSupportedPropertyName, getWindowSizes, isFixed, isFunction, isModifierEnabled, isModifierRequired, isNative, isNumeric, removeEventListeners, runModifiers, setAttributes, setStyles, setupEventListeners };export default index;
+exports.computeAutoPlacement = computeAutoPlacement;
+exports.debounce = debounce;
+exports.findIndex = findIndex;
+exports.getBordersSize = getBordersSize;
+exports.getBoundaries = getBoundaries;
+exports.getBoundingClientRect = getBoundingClientRect;
+exports.getClientRect = getClientRect;
+exports.getOffsetParent = getOffsetParent;
+exports.getOffsetRect = getOffsetRect;
+exports.getOffsetRectRelativeToArbitraryNode = getOffsetRectRelativeToArbitraryNode;
+exports.getOuterSizes = getOuterSizes;
+exports.getParentNode = getParentNode;
+exports.getPopperOffsets = getPopperOffsets;
+exports.getReferenceOffsets = getReferenceOffsets;
+exports.getScroll = getScroll;
+exports.getScrollParent = getScrollParent;
+exports.getStyleComputedProperty = getStyleComputedProperty;
+exports.getSupportedPropertyName = getSupportedPropertyName;
+exports.getWindowSizes = getWindowSizes;
+exports.isFixed = isFixed;
+exports.isFunction = isFunction;
+exports.isModifierEnabled = isModifierEnabled;
+exports.isModifierRequired = isModifierRequired;
+exports.isNative = isNative;
+exports.isNumeric = isNumeric;
+exports.removeEventListeners = removeEventListeners;
+exports.runModifiers = runModifiers;
+exports.setAttributes = setAttributes;
+exports.setStyles = setStyles;
+exports.setupEventListeners = setupEventListeners;
+exports['default'] = index;
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+})));
 //# sourceMappingURL=popper-utils.js.map

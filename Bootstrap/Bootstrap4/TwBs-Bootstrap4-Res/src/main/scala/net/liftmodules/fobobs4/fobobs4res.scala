@@ -112,6 +112,19 @@ package object fobobs4res {
           List("fobo", "bootstrap", "4.0.0", "js", "bootstrap.js")
         case "fobo" :: "bootstrap.js" :: Nil =>
           List("fobo", "bootstrap", "4.0.0", "js", "bootstrap.min.js")
+        case "fobo" :: "bootstrap.js.map" :: Nil =>
+          List("fobo", "bootstrap", "4.0.0", "js", "bootstrap.min.js.map")
+        case "fobo" :: "bootstrap.bundle.js" :: Nil if Props.devMode =>
+          List("fobo", "bootstrap", "4.0.0", "js", "bootstrap.bundle.js")
+        case "fobo" :: "bootstrap.bundle.js" :: Nil =>
+          List("fobo", "bootstrap", "4.0.0", "js", "bootstrap.bundle.min.js")
+        case "fobo" :: "bootstrap.bundle.js.map" :: Nil =>
+          List("fobo",
+               "bootstrap",
+               "4.0.0",
+               "js",
+               "bootstrap.bundle.min.js.map")
+
       }
     }
 

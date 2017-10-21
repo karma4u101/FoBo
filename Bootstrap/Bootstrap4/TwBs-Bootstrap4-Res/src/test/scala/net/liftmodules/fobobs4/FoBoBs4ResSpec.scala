@@ -14,7 +14,7 @@ object FoBoBs4ResSpec extends Specification {
 
   //Bootstrap400
   "With FoBoBsRes.Resource.init set to FoBoBsRes.Resource.Bootstrap400 the ResourceServer" should {
-    "allow  fobo/bootstrap.js" in {
+    "allow fobo/bootstrap.js" in {
       allowResource(fobobs4res.Resource.Bootstrap400,
                     "fobo" :: "bootstrap.js" :: Nil) must_== true
     }
