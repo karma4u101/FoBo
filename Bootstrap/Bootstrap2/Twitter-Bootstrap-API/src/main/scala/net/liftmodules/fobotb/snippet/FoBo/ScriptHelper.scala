@@ -4,7 +4,7 @@ import net.liftweb.util._
 import net.liftweb.common._
 import net.liftweb.http._
 import Helpers._
-import net.liftmodules.fobotb.lib.BootstrapSH
+import net.liftmodules.fobotb.lib._
 
 /**
   * ==Script Helper Snippet Bootstrap v2.x==

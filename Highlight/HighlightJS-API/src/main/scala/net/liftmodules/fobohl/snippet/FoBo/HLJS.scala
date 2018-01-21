@@ -1,10 +1,10 @@
 package net.liftmodules.fobohl.snippet.FoBo
 
-import net.liftmodules.fobohl.lib.HightlightSH
 import net.liftweb.util._
 import net.liftweb.common._
 import net.liftweb.http._
 import Helpers._
+import net.liftmodules.fobohl.lib._
 
 /**
   * ==Hightlight JS Snippet==

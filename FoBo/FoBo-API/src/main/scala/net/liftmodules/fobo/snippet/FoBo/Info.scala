@@ -5,7 +5,8 @@ import util._
 import common._
 import http._
 import Helpers._
-import net.liftmodules.fobo.lib.BuildInfo //generated code
+import net.liftmodules.fobo.lib._
+//generated code
 
 /**
   * ==Info Snippet==

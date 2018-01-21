@@ -74,21 +74,21 @@ package object fobopop {
     override def toString() = "fobopop.Toolkit = " + store.toString()
 
     /**
-      * Enable usage FoBo's Popper API and resources version 1&#8228;12&#8228;5 in your bootstrap liftweb Boot.
-      * @version 1.12.5
+      * Enable usage FoBo's Popper API and resources version 1&#8228;12&#8228;9 in your bootstrap liftweb Boot.
+      * @version 1.12.9
       *
       * '''Example:'''
       *
       * {{{
       *   import net.liftmodules.{fobopop => fobo}
       *    :
-      *   fobo.Toolkit.init=fobo.Toolkit.Popper1125
+      *   fobo.Toolkit.init=fobo.Toolkit.Popper1129
       * }}}
       * @since v2.0
       */
-    case object Popper1125 extends Toolkit {
+    case object Popper1129 extends Toolkit {
       fobopopapi.API.Popper1
-      fobopopres.Resource.Popper1125
+      fobopopres.Resource.Popper1129
     }
 
   }
@@ -109,20 +109,20 @@ package object fobopop {
     override def toString() = "fobopop.Resource = " + store.toString()
 
     /**
-      * Enable usage FoBo's Popper resources version 1&#8228;12&#8228;5 in your bootstrap liftweb Boot.
-      * @version 1.12.5
+      * Enable usage FoBo's Popper resources version 1&#8228;12&#8228;9 in your bootstrap liftweb Boot.
+      * @version 1.12.9
       *
       * '''Example:'''
       *
       * {{{
       *   import net.liftmodules.{fobopop => fobo}
       *    :
-      *   fobo.Resource.init=fobo.Resource.Popper1125
+      *   fobo.Resource.init=fobo.Resource.Popper1129
       * }}}
       * @since v2.0
       */
-    case object Popper1125 extends Resource {
-      fobopopres.Resource.Popper1125
+    case object Popper1129 extends Resource {
+      fobopopres.Resource.Popper1129
     }
 
   }
