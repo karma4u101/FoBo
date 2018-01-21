@@ -1,7 +1,5 @@
 package net.liftmodules
 
-import _root_.net.liftweb._
-
 /**
   * ==FoBo Highlight Toolkit Module==
   *
@@ -24,7 +22,7 @@ package object fobohl {
     * toolkit's resources and FoBo/Lift API associated
     * with the toolkit.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobohl => fobo}
     *    :
@@ -37,7 +35,7 @@ package object fobohl {
   /**
     * Initiate FoBo's Highlight Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobohl => fobo}
     *    :
@@ -50,7 +48,7 @@ package object fobohl {
   /**
     * Initiate FoBo's Highlight API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobohl => fobo}
     *    :
@@ -79,7 +77,7 @@ package object fobohl {
       * Enable usage of FoBo's Highlight API and resources version 9&#8228;3&#8228;0 in your bootstrap liftweb Boot.
       * @version 9.3.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobohl => fobo}
@@ -113,7 +111,7 @@ package object fobohl {
       * Enable usage of FoBo's Highlight resources version 9&#8228;3&#8228;0 in your bootstrap liftweb Boot.
       * @version 9.3.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobohl => fobo}
@@ -146,7 +144,7 @@ package object fobohl {
       * Enable usage of FoBo's Pace API version 9&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 9.X.X
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobohl => fobo}

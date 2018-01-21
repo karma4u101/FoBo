@@ -15,31 +15,31 @@ Example setup:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-twbs-bootstrap3_3.0 % "1.6"
+"net.liftmodules" %% "fobo-twbs-bootstrap3_3.1 % "2.0"
 ```
 **Maven:**
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-twbs-bootstrap3_3.0_2.11.7</artifactId>
-  <version>1.6</version>
+  <artifactId>fobo-twbs-bootstrap3_3.1_2.12.2</artifactId>
+  <version>2.0</version>
 </dependency>
 ```
-The example will include the FoBo Bootstrap3 toolkit module built for lift 3.0. 
+The example will include the FoBo Bootstrap3 toolkit module built for lift 3.1. 
 If you are using maven observe that the artifact id also needs the Scala version.
 
 ### Lift FoBo boot hooks (when used in the FoBo module)
 ```scala
-import net.liftmodules.FoBo 
+import net.liftmodules.fobo 
   :
-FoBo.Toolkit.Init=FoBo.Toolkit.BootstrapXXX 
+fobo.Toolkit.init = fobo.Toolkit.BootstrapXXX 
 ```    
 
 ### Lift FoBo boot hooks (when used as stand alone module)
 ```scala
-import net.liftmodules.{FoBoBs => FoBo}
+import net.liftmodules.{fobobs => fobo}
   :
-FoBo.Toolkit.Init=FoBo.Toolkit.BootstrapXXX 
+fobo.Toolkit.init = fobo.Toolkit.BootstrapXXX 
 ```
 ### Lift FoBo Template hooks
 ```html
@@ -59,9 +59,4 @@ For more information on how to use Twitter Bootstrap see [Twitter Bootstrap](htt
 ## Contributions
 
 Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
-
-## Update log
-
-**Latest Module Version:** 
-- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo/tree/master) (master)
 

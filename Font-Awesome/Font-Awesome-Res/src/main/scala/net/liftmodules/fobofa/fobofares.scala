@@ -3,7 +3,6 @@ package net.liftmodules
 import _root_.net.liftweb._
 import util.Props
 import http._
-import common._
 
 /**
   * ==FoBo Font Awesome Resource Module==
@@ -20,7 +19,7 @@ package object fobofares {
   /**
     * Initiate FoBo's Font Awesome Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{FoBoFARes => fobo}
     *    :
@@ -65,7 +64,7 @@ package object fobofares {
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;6&#8228;3 in your bootstrap liftweb Boot.
       * @version 4.6.3
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofares => fobo}
@@ -82,7 +81,7 @@ package object fobofares {
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
       * @version 4.3.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofares => fobo}
@@ -99,7 +98,7 @@ package object fobofares {
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.
       * @version 4.1.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofares => fobo}
@@ -117,7 +116,7 @@ package object fobofares {
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.
       * @version 4.0.3
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofares => fobo}
@@ -135,7 +134,7 @@ package object fobofares {
       * Enable usage of FoBo's FontAwesome resources version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.
       * @version 3.2.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofares => fobo}

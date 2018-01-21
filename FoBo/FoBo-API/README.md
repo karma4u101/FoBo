@@ -9,9 +9,9 @@ FoBo / FoBo API provides generic resouce injection functionality but resource in
 ## Integration into your project 
 
 ```scala
-import net.liftmodules.FoBo 
+import net.liftmodules.fobo 
   :
-FoBo.API.Init=FoBo.API.FoBo1 
+fobo.API.init = fobo.API.FoBo1 
 ``` 
 ### Dependency settings 
  
@@ -22,15 +22,15 @@ Setup example:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-api_3.0 % "1.6"
+"net.liftmodules" %% "fobo-api_3.1 % "2.0"
 ```
 **Maven:**
 ```xml      
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-angularjs-api_3.0_2.11.7</artifactId>
-  <version>1.6</version>
+  <artifactId>fobo-angularjs-api_3.1_2.12.2</artifactId>
+  <version>2.0</version>
 </dependency>
 ```
-The example will include a module built for lift 3.0.x. 
+The example will include a module built for lift 3.1.x. 
 If you are using maven observe that the artifact id also needs the Scala version.

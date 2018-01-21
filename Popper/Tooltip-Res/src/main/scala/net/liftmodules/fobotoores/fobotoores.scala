@@ -1,9 +1,8 @@
 package net.liftmodules
 
 import _root_.net.liftweb._
-import util.{Props}
+import util.Props
 import http._
-import common._
 
 /**
   * ==FoBo Tooltip Resource Module==
@@ -20,7 +19,7 @@ package object fobotoores {
   /**
     * Initiate FoBo's Tooltip Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobotoores => fobo}
     *    :
@@ -28,7 +27,7 @@ package object fobotoores {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Resource
+  sealed trait Resource
 
   object Resource extends Resource {
 
@@ -47,7 +46,7 @@ package object fobotoores {
       * Enable usage of Tooltip version 1&#8228;1&#8228;4 in your bootstrap liftweb Boot.
       * @version 1.1.4
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobotoores => fobo}

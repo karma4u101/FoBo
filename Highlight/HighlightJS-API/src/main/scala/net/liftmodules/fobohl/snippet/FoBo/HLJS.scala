@@ -11,7 +11,7 @@ import net.liftmodules.fobohl.lib._
   *
   * This snippet class contains a collection of functions for common transform operations useful when working
   * with the Higlight toolkit components.
-  * '''Example''' Invoke with
+  * @example Invoke with
   * {{{ data-lift="FoBo.JLJS.functionName?paramName=paramValue&...." }}}
   * For more examples see the individual transform functions.
   * @since v1.6
@@ -29,7 +29,7 @@ class HLJS extends StatefulSnippet with Loggable {
     * This function initiates the Higlight code sections by appending a script snippet to lift's page-script on page load function.
     *
     *
-    * '''Example'''
+    * @example
     * {{{ <script data-lift="FoBo.HLJS.initHighlightingOnLoad"></script> }}}
     *
     * '''Result:''' This example will result in the following being appended to lift's page-script on page load function:

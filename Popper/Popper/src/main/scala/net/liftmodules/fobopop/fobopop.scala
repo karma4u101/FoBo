@@ -22,7 +22,7 @@ package object fobopop {
     * toolkit's resources and FoBo/Lift API associated
     * with the toolkit.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobopop => fobo}
     *    :
@@ -35,7 +35,7 @@ package object fobopop {
   /**
     * Initiate FoBo's Popper Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobopop => fobo}
     *    :
@@ -48,7 +48,7 @@ package object fobopop {
   /**
     * Initiate FoBo's Popper API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobopop => fobo}
     *    :
@@ -77,7 +77,7 @@ package object fobopop {
       * Enable usage FoBo's Popper API and resources version 1&#8228;12&#8228;9 in your bootstrap liftweb Boot.
       * @version 1.12.9
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobopop => fobo}
@@ -112,7 +112,7 @@ package object fobopop {
       * Enable usage FoBo's Popper resources version 1&#8228;12&#8228;9 in your bootstrap liftweb Boot.
       * @version 1.12.9
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobopop => fobo}
@@ -146,7 +146,7 @@ package object fobopop {
       * Enable usage of FoBo's Popper API version 1&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 1.X.X
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobopop => fobo}

@@ -1,6 +1,6 @@
 alias pub=publish
 
-set LiftModuleKeys.liftVersion in ThisBuild := "3.2.0-SNAPSHOT"
+set LiftModuleKeys.liftVersion in ThisBuild := "3.2.0-RC1"
 set version                    in ThisBuild := "2.0-SNAPSHOT"
 
 set scalaVersion in ThisBuild := "2.12.2"

@@ -35,7 +35,7 @@ package object fobotb {
     * toolkit's resources and the FoBo/Lift API associated
     * with the toolkit.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobotb => fobo}
     *    :
@@ -49,7 +49,7 @@ package object fobotb {
   /**
     * Initiate FoBo's Bootstrap 2 Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobotb => fobo}
     *    :
@@ -62,7 +62,7 @@ package object fobotb {
   /**
     * Initiate FoBo's Bootstrap 3 API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobotb => fobo}
     *    :
@@ -91,7 +91,7 @@ package object fobotb {
       * Enable usage of Bootstrap API and resources version 2&#8228;3&#8228;2 resource files in your bootstrap liftweb Boot.
       * @version 2.3.2
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobotb => fobo}
@@ -126,7 +126,7 @@ package object fobotb {
       * Enable usage of Bootstrap version 2&#8228;3&#8228;2 resource files in your bootstrap liftweb Boot.
       * @version 2.3.2
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobotb => fobo}
@@ -160,7 +160,7 @@ package object fobotb {
       * Enable usage of FoBo's Bootstrap API 2&#8228;x&#8228;x in your bootstrap liftweb Boot.
       * @version 2.x.x
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobotb => fobo}
@@ -181,7 +181,7 @@ package object fobotb {
     *
     * This object should be used in conjunction with the TB* menu builder objects in [[net.liftmodules.fobo.snippet.FoBo]] snippet's.
     *
-    * '''Example:'''
+    * @example
     * {{{
     *   :
     *  //add a horizontal menu divider
@@ -204,7 +204,7 @@ package object fobotb {
     /**
       * Provides a way to specify a horizontal divider for your bootstrap menu in Lift's SiteMap.
       *
-      * '''Example:'''
+      * @example
       * {{{
       * val index            = Menu.i("Home") / "index"
       *      :
