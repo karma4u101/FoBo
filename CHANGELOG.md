@@ -10,6 +10,8 @@ section
 - **2015-12-30** -- FoBo Module v1.5.1
 
 **Latest Updates:**
+- **2018-01-21** -- [PR #126](https://github.com/karma4u101/FoBo/pull/157) FoBo v2.0 -- Bootstrap v4.0.0 
+- **2018-01-21** -- [PR #1XX](https://github.com/karma4u101/FoBo/pull/1XX) FoBo v2.0 -- Updating Popper to v1.12.9
 - **2017-07-28** -- [PR #151](https://github.com/karma4u101/FoBo/pull/151) FoBo v2.0 -- Updating UI Bootstrap to v2.5.0
 - **2017-07-27** -- [PR #150](https://github.com/karma4u101/FoBo/pull/150) FoBo v2.0 -- Updating Popper to v1.11.0
 - **2017-07-25** -- [PR #145](https://github.com/karma4u101/FoBo/pull/145) FoBo v2.0 -- Adding Angular material v1.1.4
@@ -55,7 +57,8 @@ way to v2.0 as it (and v1.6) provides a easy migration path.
 
   
 ### New modules
--   [Popper](https://github.com/karma4u101/FoBo/tree/master/Popper) [v1.12.5] - [Popper](https://popper.js.org/)
+-   [Bootstrap v4](https://github.com/karma4u101/FoBo/tree/master/Bootstrap/Bootstrap4) [v4.0.0] - [Bootstrap](https://getbootstrap.com/docs/4.0/) 
+-   [Popper](https://github.com/karma4u101/FoBo/tree/master/Popper) [v1.12.9] - [Popper](https://popper.js.org/)
 
 ### Updated modules
 - [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.1.4 - 
