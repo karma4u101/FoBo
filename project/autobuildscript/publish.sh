@@ -19,6 +19,7 @@ PUBLISH_25_SBT_COMMAND_FILE=${PWD}/project/autobuildscript/build-publish-Lift25.
 PUBLISH_26_SBT_COMMAND_FILE=${PWD}/project/autobuildscript/build-publish-Lift26.txt
 PUBLISH_30_SBT_COMMAND_FILE=${PWD}/project/autobuildscript/build-publish-Lift30.txt
 PUBLISH_31_SBT_COMMAND_FILE=${PWD}/project/autobuildscript/build-publish-Lift31.txt
+PUBLISH_32_SBT_COMMAND_FILE=${PWD}/project/autobuildscript/build-publish-Lift32.txt
 #default location's for java on a ubuntu system
 JAVA_6_PATH=/usr/lib/jvm/java-6-oracle/jre/bin/java
 JAVA_7_PATH=/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
@@ -128,17 +129,36 @@ function do31Publish {
   debug "\n***...done processing the sbt command file***\n"
 }
 
+#Execute the necessary steps for publishing a Lift 3.2 module build
+function do32Publish {
+  debug "\nTarget is set to Lift v3.2, require java-8";
+  if ! requiredJavaIsSuccessfullySet $JAVA_8_PATH ; then
+    die "java-8 dosen't seem to be present, cancelling release build!"
+  fi
+  debug "Current java environment is java-8\n"
+  debug "\n***Start processing the sbt command file.***\n"
+  sbt < $PUBLISH_32_SBT_COMMAND_FILE 2>&1|tee ${LOG_FILE}
+  debug "\n***...done processing the sbt command file***\n"
+}
+
 function runMain {
   if [ $LIFT_TARGET == "2.5" ]; then {
     do25Publish
-  } elif [ $LIFT_TARGET == "2.6" ]; then {
+  }
+  elif [ $LIFT_TARGET == "2.6" ]; then {
     do26Publish
-  } elif [ $LIFT_TARGET == "3.0" ]; then {
+  }
+  elif [ $LIFT_TARGET == "3.0" ]; then {
     do30Publish
-  } elif [ $LIFT_TARGET == "3.1" ]; then {
+  }
+  elif [ $LIFT_TARGET == "3.1" ]; then {
     do31Publish
-  } else
-    echo -e "\nNo target set! You need to specify a Lift version as target.\nUsage ./project/autobuildscript/publish.sh -t [2.5,2.6,3.0]\n";
+  }
+  elif [ $LIFT_TARGET == "3.2" ]; then {
+    do32Publish
+  }
+  else
+    echo -e "\nNo target set! You need to specify a Lift version as target.\nUsage ./project/autobuildscript/publish.sh -t [2.5,2.6,3.0,3.1,3.2]\n";
   fi
 }
 

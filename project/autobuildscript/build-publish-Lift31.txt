@@ -1,6 +1,6 @@
-alias pub=publishLocal
+alias pub=publish
 
-set LiftModuleKeys.liftVersion in ThisBuild := "3.1.0"
+set LiftModuleKeys.liftVersion in ThisBuild := "3.1.1"
 set version                    in ThisBuild := "2.0-SNAPSHOT"
 
 set scalaVersion in ThisBuild := "2.12.2"

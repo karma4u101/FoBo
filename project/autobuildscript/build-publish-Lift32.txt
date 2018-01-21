@@ -1,0 +1,21 @@
+alias pub=publish
+
+set LiftModuleKeys.liftVersion in ThisBuild := "3.2.0-SNAPSHOT"
+set version                    in ThisBuild := "2.0-SNAPSHOT"
+
+set scalaVersion in ThisBuild := "2.12.2"
+project fobo
+clean
+cleanFiles
+; compile ; test ; pub
+
+set scalaVersion in ThisBuild := "2.11.11"
+project fobo
+clean
+cleanFiles
+; compile ; test ; pub
+
+
+
+
+

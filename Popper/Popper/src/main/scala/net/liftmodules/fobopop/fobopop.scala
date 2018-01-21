@@ -66,7 +66,7 @@ package object fobopop {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Toolkit]
     private var store: Store = List()
-    def init: Store = store
+    def init: Store          = store
     def init_=(t: Toolkit): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -101,7 +101,7 @@ package object fobopop {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def init: Store = store
+    def init: Store          = store
     def init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -135,7 +135,7 @@ package object fobopop {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
-    def init: Store = store
+    def init: Store          = store
     def init_=(t: API): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store

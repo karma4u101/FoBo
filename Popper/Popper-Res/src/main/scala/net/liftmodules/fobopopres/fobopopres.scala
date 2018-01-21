@@ -35,7 +35,7 @@ package object fobopopres {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def init: Store = store
+    def init: Store          = store
     def init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store

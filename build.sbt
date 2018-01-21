@@ -18,7 +18,8 @@ lazy val fobometa = (project in file("."))
   .enablePlugins(ScalaUnidocPlugin)
   .settings(name := "fobo-meta")
   .settings(scalaVersion in ThisBuild := "2.12.2")
-  .settings(liftVersion in ThisBuild := { liftVersion ?? "3.1.0" }.value)
+  .settings(
+    liftVersion in ThisBuild := { liftVersion ?? "3.2.0-SNAPSHOT" }.value)
   .settings(liftEdition in ThisBuild := {
     liftVersion apply { _.substring(0, 3) }
   }.value)
@@ -33,6 +34,7 @@ lazy val fobo = (project in file("FoBo/FoBo"))
              jquery,
              bootstrap,
              bootstrap3,
+             bootstrap4,
              fontAwesome,
              prettify,
              highlightjs,
@@ -44,6 +46,7 @@ lazy val fobo = (project in file("FoBo/FoBo"))
              jquery,
              bootstrap,
              bootstrap3,
+             bootstrap4,
              fontAwesome,
              prettify,
              highlightjs,
@@ -62,8 +65,8 @@ lazy val foboapi = (project in file("FoBo/FoBo-API"))
 lazy val pace = (project in file("Pace/Pace"))
   .settings(commonSettings: _*)
   .settings(name := "fobo-pace")
-  .aggregate(paceapi,paceres)
-  .dependsOn(paceapi,paceres)
+  .aggregate(paceapi, paceres)
+  .dependsOn(paceapi, paceres)
 
 lazy val paceapi = (project in file("Pace/Pace-API"))
   .settings(commonSettings: _*)
@@ -133,6 +136,22 @@ lazy val bootstrap3res =
   (project in file("Bootstrap/Bootstrap3/TwBs-Bootstrap3-Res"))
     .settings(commonSettings: _*)
     .settings(name := "fobo-twbs-bootstrap3-res")
+
+lazy val bootstrap4 = (project in file("Bootstrap/Bootstrap4/TwBs-Bootstrap4"))
+  .settings(commonSettings: _*)
+  .settings(name := "fobo-twbs-bootstrap4")
+  .aggregate(bootstrap4api, bootstrap4res)
+  .dependsOn(bootstrap4api, bootstrap4res)
+
+lazy val bootstrap4api =
+  (project in file("Bootstrap/Bootstrap4/TwBs-Bootstrap4-API"))
+    .settings(commonSettings: _*)
+    .settings(name := "fobo-twbs-bootstrap4-api")
+
+lazy val bootstrap4res =
+  (project in file("Bootstrap/Bootstrap4/TwBs-Bootstrap4-Res"))
+    .settings(commonSettings: _*)
+    .settings(name := "fobo-twbs-bootstrap4-res")
 
 lazy val fontAwesome = (project in file("Font-Awesome/Font-Awesome"))
   .settings(commonSettings: _*)
@@ -226,7 +245,7 @@ resolvers in ThisBuild ++= Seq(
 //##############
 
 libraryDependencies in ThisBuild ++= {
-  "net.liftweb" %% "lift-webkit" % liftVersion.value % "provided" ::
+  "net.liftweb"   %% "lift-webkit"  % liftVersion.value % "provided" ::
     "net.liftweb" %% "lift-testkit" % liftVersion.value % "provided" ::
     Nil
 }
@@ -237,7 +256,7 @@ libraryDependencies in ThisBuild ++= {
       "org.specs2" %% "specs2" % "1.12.3" % "test"
     case ("2.11.7", "2.6.2") | ("2.11.7", "2.6.3") =>
       "org.specs2" %% "specs2" % "2.3.11" % "test"
-    case (_, "3.0.0") => "org.specs2" %% "specs2" % "3.7" % "test"
+    case (_, "3.0.0") => "org.specs2" %% "specs2"      % "3.7"   % "test"
     case (_, "3.0.1") => "org.specs2" %% "specs2-core" % "3.8.6" % "test"
     case (_, _) =>
       "org.specs2" %% "specs2-core" % "3.8.6" % "test" //lift 3.1.x
@@ -277,8 +296,8 @@ libraryDependencies in ThisBuild ++= {
 }
 
 libraryDependencies in ThisBuild ++= {
-  "ch.qos.logback" % "logback-classic" % "1.2.3" % "provided" ::
-    "log4j" % "log4j" % "1.2.17" % "provided" ::
+  "ch.qos.logback" % "logback-classic" % "1.2.3"  % "provided" ::
+    "log4j"        % "log4j"           % "1.2.17" % "provided" ::
     Nil
 }
 
