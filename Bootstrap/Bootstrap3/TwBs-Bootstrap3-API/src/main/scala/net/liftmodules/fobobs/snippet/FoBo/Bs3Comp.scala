@@ -5,7 +5,7 @@ import net.liftweb.common._
 import net.liftweb.http._
 import Helpers._
 import net.liftweb.http.js._
-import net.liftmodules.fobobs.lib.BootstrapSH
+import net.liftmodules.fobobs.lib._
 
 /**
   * ==Bs3Component's Snippet Bootstrap v3.x==
