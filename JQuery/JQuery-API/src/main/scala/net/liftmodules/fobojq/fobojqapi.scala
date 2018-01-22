@@ -19,7 +19,7 @@ package object fobojqapi {
   /**
     * Initiate FoBo's JQuery API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobojqapi => fobo}
     *    :
@@ -46,7 +46,7 @@ package object fobojqapi {
       * Enable usage of FoBo's JQuery API version 1 in your bootstrap liftweb Boot.
       * @version 1.X.X
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojqapi => fobo}
@@ -59,10 +59,10 @@ package object fobojqapi {
     }
 
     /**
-      * Enable usage of FoBo's JQuery API version 1 in your bootstrap liftweb Boot.
+      * Enable usage of FoBo's JQuery API version 2 in your bootstrap liftweb Boot.
       * @version 2.X.X
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobojqapi => fobo}

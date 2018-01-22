@@ -18,7 +18,7 @@ package object fobohlapi {
   /**
     * Initiate FoBo's Highlight API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobohlapi => fobo}
     *    :
@@ -45,7 +45,7 @@ package object fobohlapi {
       * Enable usage of FoBo's Highlight API for Highlight version 9&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 9.X.X
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobohlapi => fobo}

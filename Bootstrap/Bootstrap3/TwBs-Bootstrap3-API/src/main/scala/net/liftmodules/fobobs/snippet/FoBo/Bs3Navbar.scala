@@ -37,7 +37,8 @@ import xml._
   * This will be expand into twitter bootstrap nav list's built from the named
   * Lift menu locGroup content where the second list will be pull to the right.
   *
-  * '''Example - Fluid Navbar fixed to top''' Invoke with something like this
+  * @example
+  * '''Fluid Navbar fixed to top''' Invoke with something like this
   * {{{<d i v class="navbar navbar-fixed-top">	
   *   <d i v class="navbar-inner">
   *	   <d i v class="container-fluid">

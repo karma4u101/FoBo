@@ -1,10 +1,7 @@
 package net.liftmodules.fobotb.snippet.FoBo
 
-import scala.xml.{NodeSeq, Text}
 import net.liftweb.util._
-import net.liftweb.common._
 import net.liftweb.http._
-import net.liftweb._
 import Helpers._
 
 /**
@@ -13,7 +10,7 @@ import Helpers._
   * This snippet class lets you inject FoBo Bootstrap 2.x resources into your templates.
   * Instead of hand write the resource tags you can use this helper snippet to inject it for you.
   *
-  * '''Example''' Invoke with
+  * @example Invoke with
   * {{{ data-lift="FoBo.TBResources.functionName?paramName=paramValue&...." }}}
   * For more examples see the individual transform functions.
   * @since v1.3
@@ -30,7 +27,7 @@ class TBResources extends StatefulSnippet {
     *
     *  - '''Param''' ''resources'' - A comma separated list of FoBo managed Bootstrap 2.x js resources.
     *
-    * '''Example'''
+    * @example
     * {{{ <script data-lift="FoBo.TBResources.injectJS?resources=bootstrap"></script> }}}
     * or making bootstrap.js implicit.
     *  {{{ <script data-lift="FoBo.TBResources.injectJS"></script> }}}
@@ -64,7 +61,7 @@ class TBResources extends StatefulSnippet {
     *
     *  - '''Param''' ''resources'' - A comma separated list of FoBo managed Bootstrap 2.x css resources.
     *
-    * '''Example'''
+    * @example
     * {{{ <link data-lift="FoBo.TBResources.injectCSS?resources=bootstrap,bootstrap-theme"></link>  }}}
     * or making bootstrap.css and bootstrap-responsive.css implicit.
     * {{{ <link data-lift="FoBo.TBResources.injectCSS"></link>  }}}

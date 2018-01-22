@@ -11,7 +11,7 @@ import net.liftmodules.fobotb.lib._
   *
   * This snippet class contains functions for common transform operations useful when working
   * with the any toolkit.
-  * '''Example''' Most of the functions in this class can be invoked using the following pattern.
+  * @example Most of the functions in this class can be invoked using the following pattern.
   * {{{ data-lift="FoBo.ScriptHelper.functionName?paramName=paramValue&...." }}}
   * For more examples see the individual transform functions.
   * @since v1.0
@@ -27,7 +27,7 @@ class ScriptHelper extends StatefulSnippet with Loggable {
   /**
     * This function register a load event factory script
     *
-    * '''Example'''
+    * @example
     * {{{
     *     <head>
     *       :

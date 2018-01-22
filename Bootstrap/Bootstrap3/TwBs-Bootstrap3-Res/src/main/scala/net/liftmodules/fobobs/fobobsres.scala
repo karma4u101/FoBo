@@ -20,7 +20,7 @@ package object fobobsres {
   /**
     * Initiate FoBo's Bootstrap 3 Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobobsres => fobo}
     *    :
@@ -36,7 +36,7 @@ package object fobobsres {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def init: Store = store
+    def init: Store          = store
     def init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -47,7 +47,7 @@ package object fobobsres {
       * Enable usage of FoBo's Bootstrap version 3&#8228;3&#8228;7 resources files in your bootstrap liftweb Boot.
       * @version 3.3.7
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobsres => fobo}
@@ -65,7 +65,7 @@ package object fobobsres {
       * Enable usage of FoBo's Bootstrap version 3&#8228;2&#8228;0 resources files in your bootstrap liftweb Boot.
       * @version 3.2.0
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobsres => fobo}
@@ -83,7 +83,7 @@ package object fobobsres {
       * Enable usage of FoBo's Bootstrap version 3&#8228;1&#8228;1 resources files in your bootstrap liftweb Boot.
       * @version 3.1.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobsres => fobo}
@@ -101,7 +101,7 @@ package object fobobsres {
       * Enable usage of FoBo's Bootstrap version 3&#8228;0&#8228;1 resources files in your bootstrap liftweb Boot.
       * @version 3.0.1
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobobsres => fobo}

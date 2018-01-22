@@ -21,7 +21,7 @@ package object fobopopapi {
   /**
     * Initiate FoBo's Popper API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobopopapi => FoBo}
     *    :
@@ -48,7 +48,7 @@ package object fobopopapi {
       * Enable usage of FoBo's Popper API version 1&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 1.X.X
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobopopapi => fobo}

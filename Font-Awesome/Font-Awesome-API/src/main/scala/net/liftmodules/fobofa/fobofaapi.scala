@@ -19,7 +19,7 @@ package object fobofaapi {
   /**
     * Initiate FoBo's Font Awesome API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobofaapi => fobo}
     *    :
@@ -46,7 +46,7 @@ package object fobofaapi {
       * Enable usage of FoBo's FontAwesome API version 4&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 4.X.X
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofaapi => fobo}

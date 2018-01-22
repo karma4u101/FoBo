@@ -1,7 +1,7 @@
 package net.liftmodules
 
 import _root_.net.liftweb._
-import util.{Props}
+import util.Props
 import http._
 
 /**
@@ -20,7 +20,7 @@ package object fobotbres {
   /**
     * Initiate FoBo's Bootstrap 2 Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobotbres => fobo}
     *    :
@@ -28,7 +28,7 @@ package object fobotbres {
     * }}}
     * '''Note:''' To see available objects click on the round trait icon in the header of this page.
     */
-  abstract sealed trait Resource
+  sealed trait Resource
 
   object Resource extends Resource {
 
@@ -47,7 +47,7 @@ package object fobotbres {
       * Enable usage of FoBo's Bootstrap version 2&#8228;3&#8228;2 resources files in your bootstrap liftweb Boot.
       * @version 2.3.2
       *
-      *  '''Example:'''
+      *  @example
       *
       * {{{
       *   import net.liftmodules.{fobotbres => fobo}

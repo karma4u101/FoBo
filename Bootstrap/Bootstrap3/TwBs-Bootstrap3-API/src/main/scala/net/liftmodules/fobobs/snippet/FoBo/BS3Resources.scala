@@ -1,10 +1,7 @@
 package net.liftmodules.fobobs.snippet.FoBo
 
-import scala.xml.{NodeSeq, Text}
 import net.liftweb.util._
-import net.liftweb.common._
 import net.liftweb.http._
-import net.liftweb._
 import Helpers._
 
 /**
@@ -13,7 +10,7 @@ import Helpers._
   * This snippet class lets you inject FoBo Bootstrap3 resources into your templates.
   * Instead of hand write the resource tags you can use this helper snippet to inject it for you.
   *
-  * '''Example''' Invoke with
+  * @example Invoke with
   * {{{ data-lift="FoBo.BS3Resources.functionName?paramName=paramValue&...." }}}
   * For more examples see the individual transform functions.
   * @since v1.3
@@ -30,7 +27,7 @@ class BS3Resources extends StatefulSnippet {
     *
     *  - '''Param''' ''resources'' - A comma separated list of FoBo managed js resources.
     *
-    * '''Example'''
+    * @example
     * {{{ <script data-lift="FoBo.BS3Resources.injectJS?resources=bootstrap"></script> }}}
     * or making bootstrap.js implicit.
     *  {{{ <script data-lift="FoBo.BS3Resources.injectJS"></script> }}}
@@ -63,7 +60,7 @@ class BS3Resources extends StatefulSnippet {
     *
     *  - '''Param''' ''resources'' - A comma separated list of FoBo managed Bootstrap3 css resources.
     *
-    * '''Example'''
+    * @example
     * {{{ <link data-lift="FoBo.BS3Resources.injectCSS?resources=bootstrap,bootstrap-theme"></link>  }}}
     * or making bootstrap.css implicit.
     * {{{ <link data-lift="FoBo.BS3Resources.injectCSS?resources=bootstrap-theme"></link>  }}}

@@ -13,7 +13,7 @@ object fobtbresspec extends Specification {
   sequential
 
   //Bootstrap232
-  "With fobotbres.Resource.Init set to fobotbres.Resource.Bootstrap232 the ResourceServer" should {
+  "With fobotbres.Resource.init set to fobotbres.Resource.Bootstrap232 the ResourceServer" should {
     "allow  fobo/bootstrap.js" in {
       allowResource(fobotbres.Resource.Bootstrap232,
                     "fobo" :: "bootstrap.js" :: Nil) must_== true
@@ -30,7 +30,7 @@ object fobtbresspec extends Specification {
     }
   }
 
-  //=== Resource.Init ===============//
+  //=== Resource.init ===============//
 
   def allowResource(resource: fobotbres.Resource, path: List[String]) = {
     fobotbres.Resource.init = resource

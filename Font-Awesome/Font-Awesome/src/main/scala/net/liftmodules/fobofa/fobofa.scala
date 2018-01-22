@@ -25,7 +25,7 @@ package object fobofa {
     * toolkit's resources and FoBo/Lift API associated
     * with the toolkit.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobofa => fobo}
     *    :
@@ -38,7 +38,7 @@ package object fobofa {
   /**
     * Initiate FoBo's Font Awesome Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobofa => fobo}
     *    :
@@ -51,7 +51,7 @@ package object fobofa {
   /**
     * Initiate FoBo's Font Awesome API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobofa => fobo}
     *    :
@@ -97,7 +97,7 @@ package object fobofa {
       * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;6&#8228;3 in your bootstrap liftweb Boot.
       * @version 4.6.3
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofa => fobo}
@@ -114,7 +114,7 @@ package object fobofa {
       * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
       * @version 4.3.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofa => fobo}
@@ -131,7 +131,7 @@ package object fobofa {
       * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.
       * @version 4.1.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofares => fobo}
@@ -149,7 +149,7 @@ package object fobofa {
       * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.
       * @version 4.0.3
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofares => fobo}
@@ -167,7 +167,7 @@ package object fobofa {
       * Enable usage of FoBo's FontAwesome resources and API version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.
       * @version 3.2.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofares => fobo}
@@ -217,7 +217,7 @@ package object fobofa {
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;6&#8228;3 in your bootstrap liftweb Boot.
       * @version 4.6.3
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofa => fobo}
@@ -233,7 +233,7 @@ package object fobofa {
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;3&#8228;0 in your bootstrap liftweb Boot.
       * @version 4.3.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofa => fobo}
@@ -249,7 +249,7 @@ package object fobofa {
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;1&#8228;0 in your bootstrap liftweb Boot.
       * @version 4.1.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofa => fobo}
@@ -265,7 +265,7 @@ package object fobofa {
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;0&#8228;3 in your bootstrap liftweb Boot.
       * @version 4.0.3
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofa => fobo}
@@ -281,7 +281,7 @@ package object fobofa {
       * Enable usage of FoBo's FontAwesome resources version 3&#8228;2&#8228;1 in your bootstrap liftweb Boot.
       * @version 3.2.1
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofa => fobo}
@@ -314,7 +314,7 @@ package object fobofa {
       * Enable usage of FoBo's FontAwesome API version 4&#8228;X&#8228;X in your bootstrap liftweb Boot.
       * @version 4.X.X
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobofa => fobo}

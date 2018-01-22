@@ -20,7 +20,7 @@ package object fobohlres {
   /**
     * Initiate FoBo's Highlight JS Resource(s) in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{FoBoHLRes => FoBo}
     *    :
@@ -47,7 +47,7 @@ package object fobohlres {
       * Enable usage of FoBo's Highlight JS resources version 9&#8228;3&#8228;0 in your bootstrap liftweb Boot.
       * @version v9.3.0
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobohlres => fobo}

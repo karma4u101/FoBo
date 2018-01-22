@@ -48,35 +48,35 @@ For example when using this module as a stand alone module i.e without using the
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-angularjs_3.0 % "1.6"
+"net.liftmodules" %% "fobo-angularjs_3.1 % "2.0"
 ``` 
 **Maven:**
 ```xml      
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-angularjs_3.0_2.11.7</artifactId>
-  <version>1.6</version>
+  <artifactId>fobo-angularjs_3.1_2.12.2</artifactId>
+  <version>2.0</version>
 </dependency>
 ```
-The example will include the FoBo AngularJS Toolkit module v1.6 built for Lift 3.0.x. 
+The example will include the FoBo AngularJS Toolkit module v2.0 built for Lift 3.1.x. 
 If you are using maven observe that the artifact id also needs the Scala version.
 
 ### Lift FoBo boot hooks (when used in the FoBo / FoBo module)
 ```scala
-import net.liftmodules.FoBo 
+import net.liftmodules.fobo 
   :
-FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS153        //access to core files 
-FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS153i18n    //access to angular i18n files 
-FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIBootstrap0100  //Angular UI Bootstrap
-FoBo.Toolkit.Init=FoBo.Toolkit.AJSMaterial108      //Angular Material
-FoBo.Toolkit.Init=FoBo.Toolkit.AJSUIGrid307        //Angular UI-Grid
-//FoBo.Toolkit.Init=FoBo.Toolkit.AJSNGGrid207        //Angular NG-Grid
+fobo.Toolkit.init = fobo.Toolkit.AngularJS153        //access to core files 
+fobo.Toolkit.init = fobo.Toolkit.AngularJS153i18n    //access to angular i18n files 
+fobo.Toolkit.init = fobo.Toolkit.AJSUIBootstrap0100  //Angular UI Bootstrap
+fobo.Toolkit.init = fobo.Toolkit.AJSMaterial108      //Angular Material
+fobo.Toolkit.init = fobo.Toolkit.AJSUIGrid307        //Angular UI-Grid
+//fobo.Toolkit.init=fobo.Toolkit.AJSNGGrid207        //Angular NG-Grid
 ```
 ### Lift FoBo boot hooks (when used as stand alone module)
 ```scala
-import net.liftmodules.{FoBoAJS => FoBo} 
+import net.liftmodules.{foboajs => fobo} 
   :
-FoBo.Toolkit.Init=FoBo.Toolkit.AngularJS153      //The core files 
+fobo.Toolkit.init=fobo.Toolkit.AngularJS153      //The core files 
   :
 ```
 ### Lift FoBo Template hooks
@@ -157,19 +157,6 @@ For more information on how to use AngularJS and included components:
 - FoBo AngularJS Resources module see [FoBo AngularJSRes](https://github.com/karma4u101/FoBo/Angular/AngularJSRes).
 - FoBo AngularJS API module see [FoBo AngularJSAPI](https://github.com/karma4u101/FoBo/Angular/AngularJSAPI).
 - FoBo AngularJS in the FoBo module see the [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo).
-
-#### Update log
-
-For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/CHANGELOG.md#history-log) section
-
-**Latest Module Version:**
-- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo)  
-
-**Latest Update:**
-see [Changelog](https://github.com/karma4u101/FoBo/blob/develop/CHANGELOG.md)
-
-**Latest Releases:**
-- See [FoBo - Lift Front-End Toolkit Module](https://github.com/karma4u101/FoBo) for releas information.
 
 ## Contributions
 Improvements, contributions and suggestions are welcome! Clone the project and start working on a PR. You can also leave a issue report or drop a question/suggestion to the [Lift's mailing list](http://groups.google.com/group/liftweb/) 

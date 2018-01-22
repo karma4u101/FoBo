@@ -21,7 +21,7 @@ package object fobogcpapi {
   /**
     * Initiate FoBo's Google Code Prettify API in you bootstrap liftweb Boot.
     *
-    *  '''Example:'''
+    *  @example
     * {{{
     *   import net.liftmodules.{fobogcpapi => fobo}
     *    :
@@ -48,7 +48,7 @@ package object fobogcpapi {
       * Enable usage of FoBo's Google Code Prettify API version 1 in your bootstrap liftweb Boot.
       * @version 1.X.X
       *
-      * '''Example:'''
+      * @example
       *
       * {{{
       *   import net.liftmodules.{fobogcpapi => fobo}
