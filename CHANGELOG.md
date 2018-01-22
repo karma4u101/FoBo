@@ -67,7 +67,6 @@ way to v2.0 as it (and v1.6) provides a easy migration path.
   [UI Bootstrap](https://angular-ui.github.io/bootstrap/)
 - [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.7.0 - [Font-Awesome](http://fontawesome.io/)
 
-
 ## FoBo v1.7
 
 ### Build system update
