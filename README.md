@@ -29,10 +29,10 @@ resource injection, script generation and more.
 **Bootstrap** A Lift v2.6 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) 
 is available from here [Lift v2.6 Template Applications](https://github.com/lift/lift_26_sbt/)
 
-**Bootstrap** A Lift v3.0 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) 
-is available from here [Lift v3.0 Template Applications](https://github.com/lift/lift_30_sbt/)
+**Bootstrap** A Lift v3.x starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) 
+is available from here [Lift v3.x Template Applications](https://github.com/lift/lift_30_sbt/)
 
-**Material Design** A Lift v3.0 starter template with FoBo setup using Angular Material and FoBo's MaterialMegaMetaProtoUser (for mapper ProtoUser 
+**Material Design** A Lift v3.x starter template with FoBo setup using Angular Material and FoBo's MaterialMegaMetaProtoUser (for mapper ProtoUser 
 views) is available from here [FoBo-Demo](https://github.com/karma4u101/FoBo-Demo/)
 
 For more information on how to get started with FoBo's starter templates see [Quick Start with Lift Template Applications](#quick-start-with-lift-template-applications)
@@ -80,17 +80,17 @@ Setup example:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo_3.1 % "2.0"
+"net.liftmodules" %% "fobo_3.2 % "2.0"
 ```      
 **Maven:**      
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo_3.1_2.12.2</artifactId>
+  <artifactId>fobo_3.2_2.12.2</artifactId>
   <version>2.0</version>
 </dependency>
 ```
-The example shows how to include the FoBo/FoBo module built for lift 3.1.x. 
+The example shows how to include the FoBo/FoBo module built for lift 3.2.x. 
 If you are using maven observe that the artifact id also needs the Scala version.
 	
 ### Dependency setting (Toolkit / API / Resource)
@@ -103,17 +103,17 @@ Setup example using the FoBo/Lift Bootstrap3 API module:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-twbs-bootstrap3-api_3.1" % "2.0"
+"net.liftmodules" %% "fobo-twbs-bootstrap4-api_3.2" % "2.0"
 ```      
 **Maven:**
 ```xml      
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-twbs-bootstrap3-api_3.1_2.12.2</artifactId>
+  <artifactId>fobo-twbs-bootstrap4-api_3.2_2.12.2</artifactId>
   <version>2.0</version>
 </dependency>
 ```
-The example shows how to include the FoBo Bootstrap3 API module built for lift 3.1.x. 
+The example shows how to include the FoBo Bootstrap4 API module built for lift 3.2.x. 
 If you are using maven observe that the artifact id also needs the Scala version. 
 	
 ### Lift FoBo boot hooks 
@@ -205,7 +205,7 @@ Twitter Bootstrap v2.3.0) For more information on how to set this up see below.
 
 ## FoBo Modules -- Toolkit:s and available versions
 
-FoBo artifacts is available for: Lift 2.4, 2.5, 2.6.x, 3.0.x and 3.1.x 
+FoBo artifacts is available for: Lift 2.4, 2.5, 2.6.x, 3.0.x, 3.1.x and 3.2.x 
 
 - [FoBo](https://github.com/karma4u101/FoBo/tree/master/FoBo/FoBo) This module contains all the bellow listed toolkit modules. 
 
