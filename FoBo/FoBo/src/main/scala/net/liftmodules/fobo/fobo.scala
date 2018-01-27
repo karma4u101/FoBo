@@ -76,7 +76,7 @@ package net.liftmodules
   * You may substitute Toolkit for Resource or API and if you wish also adjust the artifact dependencies
   * accordingly to include just the FoBo modules you use, but if size is not a issue using the FoBo/FoBo
   * module is convenient and gives you a lot to pick from.
-  * @version v2.0-SNAPSHOT
+  * @version v2.0
   * @author Peter Petersson (Github karma4u101) and the Lift community
   *
   */
