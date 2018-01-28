@@ -7,10 +7,11 @@ import LiftModuleKeys.{liftVersion, liftEdition}
 //##############
 
 //scalacOptions in Compile ++= Seq("-doc-root-content", "rootdoc.txt")
+onLoad in Global := { s => "dependencyUpdates" :: s }
 
 lazy val commonSettings = Seq(
   organization := "net.liftmodules",
-  version := "2.0-SNAPSHOT",
+  version := "2.0",
   scalacOptions ++= Seq("-unchecked", "-deprecation"),
   autoAPIMappings := true
 )
