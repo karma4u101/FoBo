@@ -1,4 +1,4 @@
-package net.liftmodules.FoBoHL.snippet.FoBo
+package net.liftmodules.fobohl.snippet.FoBo
 
 import xml._
 import org.specs2.mutable.Specification

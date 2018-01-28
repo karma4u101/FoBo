@@ -11,30 +11,30 @@ Example setup:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-jquery-api_3.0 % "1.6"
+"net.liftmodules" %% "fobo-jquery-api_3.1 % "2.0"
 ```
 **Maven:**
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-jquery-api_3.0_2.11.7</artifactId>
-  <version>1.6</version>
+  <artifactId>fobo-jquery-api_3.1_2.12.2</artifactId>
+  <version>2.0</version>
 </dependency>
 ```
-The example will include a module built for lift 3.0.x. 
+The example will include a module built for lift 3.1.x. 
 If you are using maven observe that the artifact id also needs the Scala version.
 
 ### Lift FoBo boot hooks (when used as stand alone module)
 ```scala
-import net.liftmodules.{FoBoJQAPI => FoBo} 
+import net.liftmodules.{fobojqapi => fobo} 
   :
-FoBo.API.Init=FoBo.API.JQueryX
+fobo.API.init = fobo.API.JQueryX
 ```    
 ### Lift FoBo boot hooks (when used in the FoBo module)
 ```scala
-import net.liftmodules.FoBo 
+import net.liftmodules.fobo 
   :
-FoBo.API.Init=FoBo.API.JQueryX
+fobo.API.init = fobo.API.JQueryX
 ```    
 ## Contributions
 

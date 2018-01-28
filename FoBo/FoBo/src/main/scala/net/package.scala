@@ -1,5 +1,5 @@
 /**
-  * Proceed to starting point for this document => [[net.liftmodules.FoBo]]
+  * For a overview, proceed to the starting point for this document => [[net.liftmodules.fobo]]
   *
   */
 package object net {}

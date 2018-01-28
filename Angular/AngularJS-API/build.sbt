@@ -1,10 +1,10 @@
+import LiftModuleKeys.{liftEdition, liftVersion}
+
 moduleName := "fobo-angularjs-api"
 
-moduleName <<= (name, liftEdition) { (n, e) =>
-  n + "_" + e
-}
+moduleName := { name.value + "_" + liftEdition.value }
 
-libraryDependencies <++= liftVersion { v =>
-  "net.liftweb" %% "lift-mapper" % v % "provided" ::
+libraryDependencies ++= {
+  "net.liftweb" %% "lift-mapper" % liftVersion.value % "provided" ::
     Nil
 }

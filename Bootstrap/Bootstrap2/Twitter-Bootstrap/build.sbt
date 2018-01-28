@@ -1,11 +1,11 @@
+import LiftModuleKeys.liftEdition
+
 moduleName := "fobo-twitter-bootstrap"
 
-moduleName <<= (name, liftEdition) { (n, e) =>
-  n + "_" + e
-}
+moduleName := { name.value + "_" + liftEdition.value }
 
-libraryDependencies <++= (liftVersion, liftEdition, version) { (v, e, mv) =>
-  "net.liftmodules"   %% ("fobo-twitter-bootstrap-res" + "_" + e) % mv % "provided" ::
-    "net.liftmodules" %% ("fobo-twitter-bootstrap-api" + "_" + e) % mv % "provided" ::
-      Nil
+libraryDependencies ++= {
+  "net.liftmodules" %% ("fobo-twitter-bootstrap-res" + "_" + liftEdition.value) % version.value % "provided" ::
+    "net.liftmodules" %% ("fobo-twitter-bootstrap-api" + "_" + liftEdition.value) % version.value % "provided" ::
+    Nil
 }

@@ -1,10 +1,10 @@
+import LiftModuleKeys.{liftEdition, liftVersion}
+
 moduleName := "fobo-twbs-bootstrap3-api"
 
-moduleName <<= (name, liftEdition) { (n, e) =>
-  n + "_" + e
-}
+moduleName := { name.value + "_" + liftEdition.value }
 
-libraryDependencies <++= liftVersion { lv =>
-  "net.liftweb" %% "lift-mapper" % lv % "provided" ::
+libraryDependencies ++= {
+  "net.liftweb" %% "lift-mapper" % liftVersion.value % "provided" ::
     Nil
 }

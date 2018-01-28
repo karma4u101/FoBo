@@ -6,11 +6,13 @@ Lift 2.6.x is built with java 6 and lift 3.x is built with java 8
 
 More memory to sbt http://stackoverflow.com/questions/15280839/how-to-set-heap-size-for-sbt
 
-To publish use the publish.sh script, to change to a local publish replace 'publish' with 'publish-local' in respective publish script.
+To publish use the publish.sh script, to change to a local publish replace 'publish' with 'publish-local' or 
+'publishlocal' in respective publish script.
 
-As of FoBo v1.4 builds against Lift 2.5 is no longer supported. 
+As of FoBo v1.4 builds against Lift 2.5 is no longer supported.
+As of FoBo v2.0 builds against Lift 2.6 is no longer supported. 
 
-./project/autobuildscript/publish.sh -t [2.5,2.6,3.0]
+./project/autobuildscript/publish.sh -t [2.5,2.6,3.0,3.1,3.2]
 
 The build script will make sure the correct JDK is set and execute one of the following 
 sbt command files depending on chosen input (target) parameter.
@@ -21,8 +23,14 @@ sbt < project/autobuildscript/build-publish-Lift25.txt > build.log | tail -f bui
 Current target Lift 2.6 (java6 Scala 2.9.1, 2.9.1-1, 2.9.2, 2.10, 2.11)
 sbt < project/autobuildscript/build-publish-Lift26.txt > build.log | tail -f build.log
 
-Target Lift 3.x (OBS! use java8 Scala 2.11)
-sbt < project/autobuildscript/build-publish-Lift3.txt > build.log | tail -f build.log
+Target Lift 3.0 (OBS! use java8 Scala 2.11)
+sbt < project/autobuildscript/build-publish-Lift30.txt > build.log | tail -f build.log
+
+Target Lift 3.1 (java8 Scala 2.11, 2.12)
+sbt < project/autobuildscript/build-publish-Lift31.txt > build.log | tail -f build.log
+
+Target Lift 3.2 (java8 Scala 2.11, 2.12)
+sbt < project/autobuildscript/build-publish-Lift32.txt > build.log | tail -f build.log
 
 List of major Java major version numbers
 Java SE 8 = 52,

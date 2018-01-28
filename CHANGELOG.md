@@ -1,7 +1,8 @@
 # Changelog
 
 
-For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/CHANGELOG.md#history-log) section
+For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/CHANGELOG.md#history-log) 
+section
 
 **Latest Stable Releases:**
 - **2016-10-04** -- FoBo Module v1.7
@@ -9,24 +10,66 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 - **2015-12-30** -- FoBo Module v1.5.1
 
 **Latest Updates:**
-- **2016-09-23** -- [Issue #75](https://github.com/karma4u101/FoBo/issues/75) Adding Angular Material Design v1.1.1
-- **2016-07-31** -- [Issue #91](https://github.com/karma4u101/FoBo/issues/91) Adding Bootstrap v3.3.7
-- **2016-07**    -- [Issue #92](https://github.com/karma4u101/FoBo/issues/92),[#93](https://github.com/karma4u101/FoBo/issues/93),[#94](https://github.com/karma4u101/FoBo/issues/94),[#96](https://github.com/karma4u101/FoBo/issues/96),[#98](https://github.com/karma4u101/FoBo/issues/98),[#99](https://github.com/karma4u101/FoBo/issues/99),[#100](https://github.com/karma4u101/FoBo/issues/100) JQuery additions. 
-- **2016-07-09** -- [Issue #71](https://github.com/karma4u101/FoBo/issues/71) Extensive buildsystem update
-- **2016-07-09** -- [Issue #37](https://github.com/karma4u101/FoBo/issues/37) Unidoc is now a propper plugin
-- **2016-07-09** -- [Issue #85](https://github.com/karma4u101/FoBo/issues/85) Adding the scalafmt code formatter plugin
-- **2016-05-14** -- [Issue #80](https://github.com/karma4u101/FoBo/issues/80) Adding Font-Awesome v4.6.3 (removing unreleased v4.5.0)
-- **2016-04-30** -- [Issue #78](https://github.com/karma4u101/FoBo/issues/78) Adding Angular Material v1.0.8 (removing unreleased v1.0.7)
-- **2016-04-29** -- [Issue #76](https://github.com/karma4u101/FoBo/issues/76) Adding HighlightJS v9.3.0
-- **2016-03-30** -- [Issue #70](https://github.com/karma4u101/FoBo/issues/70) Adding Pace v1.0.2
-- **2016-03-29** -- [Issue #69](https://github.com/karma4u101/FoBo/issues/69) Adding AngularJS v1.5.3
-- **2016-03-25** -- Adding Font-Awesome v4.5.0
-- **2016-03-25** -- [PR #61](https://github.com/karma4u101/FoBo/pull/61) Re-factoring modules  
+- **2018-01-21** -- [PR #126](https://github.com/karma4u101/FoBo/pull/157) FoBo v2.0 -- Bootstrap v4.0.0 
+- **2018-01-21** -- [PR #1XX](https://github.com/karma4u101/FoBo/pull/1XX) FoBo v2.0 -- Updating Popper to v1.12.9
+- **2017-07-28** -- [PR #151](https://github.com/karma4u101/FoBo/pull/151) FoBo v2.0 -- Updating UI Bootstrap to v2.5.0
+- **2017-07-27** -- [PR #150](https://github.com/karma4u101/FoBo/pull/150) FoBo v2.0 -- Updating Popper to v1.11.0
+- **2017-07-25** -- [PR #145](https://github.com/karma4u101/FoBo/pull/145) FoBo v2.0 -- Adding Angular material v1.1.4
+- **2017-07-23** -- [PR #143](https://github.com/karma4u101/FoBo/pull/143) FoBo v2.0 -- Removing Kinetic
+- **2017-07-19** -- [PR #141](https://github.com/karma4u101/FoBo/pull/141) FoBo v2.0 -- Naming convention fix
+- **2017-07-17** -- [PR #132](https://github.com/karma4u101/FoBo/pull/132) FoBo v2.0 -- Adding popper and tooltip 
+  modules from Popper.js
+- **2017-02-19** -- [PR #129](https://github.com/karma4u101/FoBo/pull/129) FoBo v2.0 -- Adding the Tether toolkit 
+  library to FoBo
+- **2017-01-07** -- [PR #124](https://github.com/karma4u101/FoBo/pull/124) FoBo v2.0 -- Adding UI Bootstrap v2.4.0
+- **2016-10-08** -- [Issue #116](https://github.com/karma4u101/FoBo/issues/116) FoBo v2.0 -- Remove FoBoToolkit and 
+  FoBoJQuery deprecations 
+
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
+
+
+## FoBo v2.0
+
+### Braking changes
+- **Naming convention correction** -- As this is a major number release there was a opportunity to correct the package 
+  object naming and init function naming mistakes present in previous releases of FoBo. This means that the module 
+  initiation has changed from:
+   ```scala
+   FoBo.Toolkit.Init = FoBo.Toolkit.ToolkitXXX
+   ```
+   to
+   ```scala
+   fobo.Toolkit.init = fobo.Toolkit.ToolkitXXX
+   ```   
+   For more information about Scala's naming conventions see the 
+   [Scala naming conventions -- Style guide](http://docs.scala-lang.org/style/naming-conventions.html)
+- **Removing Kinetic** -- The motivation of removing this module is:
+  - This has been a very unfrequented used FoBo module and as FoBo does not have anny API hooks 
+    for this module it will be farly easy to replace the usage of this FoBo module with its javascript resources.
+  - The author of kineticjs has moved on to other ventures, kineticjs is stable but has not seen any updates in 3+ 
+    years. The author recommends using the more lightweight http://www.concretejs.com/ library. 
+
+### Deprecations 
+In order to cleanup and improve the API the old style FoBoTolkit and FoBoJQuery initiation functions have been removed 
+after some time of deprecation. v1.7 is the last version having FoBoTolkit and FoBoJQuery so if you have not already 
+switched to use the Toolkit, Resource and API objects in favour for the old init style, v1.7 is a good pit stop on the 
+way to v2.0 as it (and v1.6) provides a easy migration path. 
+
+  
+### New modules
+-   [Bootstrap v4](https://github.com/karma4u101/FoBo/tree/master/Bootstrap/Bootstrap4) [v4.0.0] - [Bootstrap](https://getbootstrap.com/docs/4.0/) 
+-   [Popper](https://github.com/karma4u101/FoBo/tree/master/Popper) [v1.12.9] - [Popper](https://popper.js.org/)
+
+### Updated modules
+- [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.1.4 - 
+  [Angular Material](https://material.angularjs.org/)
+- [FoBo-AngularJS UI Bootstrap](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v2.5.0 - 
+  [UI Bootstrap](https://angular-ui.github.io/bootstrap/)
+- [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) Adds v4.7.0 - [Font-Awesome](http://fontawesome.io/)
 
 ## FoBo v1.7
 
-### Buildsystem update
+### Build system update
 As SBT 1.0 won't support Build.scala usage see [sbt/sbt#2524](https://github.com/sbt/sbt/pull/2524) 
 the *'object XXXX extend Build {...}'* usage has been greatly reduced and is now using the build.sbt 
 multi-project build style the only thing left dependant on Build is two lift module specific settings keys. 
@@ -37,10 +80,14 @@ The build system is now much cleaner and easier to work with.
 - [scalafmt](https://olafurpg.github.io/scalafmt/) FoBo is now using the Scalafmt code formatter sbt plugin  
 
 ### Updated modules
-- [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.1.1 - [Angular Material](https://material.angularjs.org/)
-- [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) Adds v3.3.7 - [Bootstrap 3.x](http://getbootstrap.com/)
-- [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v2.2.4, v3.0.0, v3.1.0 - [JQuery](http://jquery.com/)
-- [FoBo-JQuery-Migrate](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v1.4.1, v3.0.0 - [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)
+- [FoBo-AngularJS Material Design](https://github.com/karma4u101/FoBo/tree/master/AngularJS) Adds v1.1.1 - 
+  [Angular Material](https://material.angularjs.org/)
+- [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/TwBs-Bootstrap3) Adds v3.3.7 - 
+  [Bootstrap 3.x](http://getbootstrap.com/)
+- [FoBo-JQuery](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v2.2.4, v3.0.0, v3.1.0 - 
+  [JQuery](http://jquery.com/)
+- [FoBo-JQuery-Migrate](https://github.com/karma4u101/FoBo/tree/master/JQuery) Adds v1.4.1, v3.0.0 - 
+  [JQuery-Migrate](https://github.com/jquery/jquery-migrate/)
 
 
 
@@ -202,6 +249,19 @@ A live demo showing some of FoBo's sub module features, including API documentat
 - **2013-05-19** -- Module v1.0 
 
 **Updates history:**
+- **2016-09-23** -- [Issue #75](https://github.com/karma4u101/FoBo/issues/75) Adding Angular Material Design v1.1.1
+- **2016-07-31** -- [Issue #91](https://github.com/karma4u101/FoBo/issues/91) Adding Bootstrap v3.3.7
+- **2016-07**    -- [Issue #92](https://github.com/karma4u101/FoBo/issues/92),[#93](https://github.com/karma4u101/FoBo/issues/93),[#94](https://github.com/karma4u101/FoBo/issues/94),[#96](https://github.com/karma4u101/FoBo/issues/96),[#98](https://github.com/karma4u101/FoBo/issues/98),[#99](https://github.com/karma4u101/FoBo/issues/99),[#100](https://github.com/karma4u101/FoBo/issues/100) JQuery additions. 
+- **2016-07-09** -- [Issue #71](https://github.com/karma4u101/FoBo/issues/71) Extensive buildsystem update
+- **2016-07-09** -- [Issue #37](https://github.com/karma4u101/FoBo/issues/37) Unidoc is now a propper plugin
+- **2016-07-09** -- [Issue #85](https://github.com/karma4u101/FoBo/issues/85) Adding the scalafmt code formatter plugin
+- **2016-05-14** -- [Issue #80](https://github.com/karma4u101/FoBo/issues/80) Adding Font-Awesome v4.6.3 (removing unreleased v4.5.0)
+- **2016-04-30** -- [Issue #78](https://github.com/karma4u101/FoBo/issues/78) Adding Angular Material v1.0.8 (removing unreleased v1.0.7)
+- **2016-04-29** -- [Issue #76](https://github.com/karma4u101/FoBo/issues/76) Adding HighlightJS v9.3.0
+- **2016-03-30** -- [Issue #70](https://github.com/karma4u101/FoBo/issues/70) Adding Pace v1.0.2
+- **2016-03-29** -- [Issue #69](https://github.com/karma4u101/FoBo/issues/69) Adding AngularJS v1.5.3
+- **2016-03-25** -- Adding Font-Awesome v4.5.0
+- **2016-03-25** -- [PR #61](https://github.com/karma4u101/FoBo/pull/61) Re-factoring modules  
 - **2015-12-24** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.1 (removing unreleased v1.0.0)
 - **2015-12-20** -- Module v1.5-SNAPSHOT Adding Angular UI Grid v3.0.7
 - **2015-12-15** -- Module v1.5-SNAPSHOT Adding Angular Material Design v1.0.0 (removing rc's)

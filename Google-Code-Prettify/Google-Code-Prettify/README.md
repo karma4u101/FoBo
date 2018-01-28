@@ -13,30 +13,30 @@ but can also be used as-is, see below for setup information.
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-google-code-prettify_3.0 % "1.6"
+"net.liftmodules" %% "fobo-google-code-prettify_3.1 % "2.0"
 ```
 **Maven:**
 ```xml      
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-google-code-prettify_3.0_2.11.7</artifactId>
-  <version>1.6</version>
+  <artifactId>fobo-google-code-prettify_3.1_2.12.2</artifactId>
+  <version>2.0</version>
 </dependency>
 ```
-The example will include a module built for lift 3.0.x. 
+The example will include a module built for lift 3.1.x. 
 If you are using maven observe that the artifact id also needs the Scala version.
 
 ### Lift FoBo boot hooks (when used as stand alone module)
 ```scala
-import net.liftmodules.{FoBoGCP => FoBo}
+import net.liftmodules.{fobogcp => fobo}
   :
-FoBo.Toolkit.Init=FoBo.Toolkit.PrettifyMMYYYY 
+fobo.Toolkit.init = fobo.Toolkit.PrettifyMMYYYY 
 ```
 ### Lift FoBo boot hooks (when used in the FoBo module)
 ```scala
-import net.liftmodules.FoBo 
+import net.liftmodules.fobo 
   :
-FoBo.Toolkit.Init=FoBo.Toolkit.PrettifyMMYYYY 
+fobo.Toolkit.init = fobo.Toolkit.PrettifyMMYYYY 
 ```    
 ### Lift FoBo Template hooks
 ```html
@@ -53,18 +53,6 @@ For more information on how to use Google-Code-Prettify see [Google-Code-Prettif
 ## Contributions
 
 Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
-
-## Update log
-
-For update history see the [History log](https://github.com/karma4u101/FoBo/tree/master/Foundation#history-log) section
-
-**Latest Update:**
-- **2013-05-01** -- Module v0.9.9-SNAPSHOT ++ One version to rule them all, unified FoBo module and sub-module versions.
-
-### History log
-
-**Updates history:**
-- **2013-03-29** -- Module v0.1.0-SNAPSHOT Making Google-Code-Prettify a FoBo subproject.
 
 
 
