@@ -1,4 +1,4 @@
-alias pub=publish
+alias pub=publishSigned
 
 set LiftModuleKeys.liftVersion in ThisBuild := "3.2.0"
 set version                    in ThisBuild := "2.0"
