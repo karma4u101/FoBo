@@ -12,7 +12,7 @@ To publish use the publish.sh script, to change to a local publish replace 'publ
 As of FoBo v1.4 builds against Lift 2.5 is no longer supported.
 As of FoBo v2.0 builds against Lift 2.6 is no longer supported. 
 
-./project/autobuildscript/publish.sh -t [2.5,2.6,3.0,3.1,3.2]
+./project/autobuildscript/publish.sh -t [2.5,2.6,3.0,3.1,3.2,3.3]
 
 The build script will make sure the correct JDK is set and execute one of the following 
 sbt command files depending on chosen input (target) parameter.

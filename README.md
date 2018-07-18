@@ -80,17 +80,17 @@ Setup example:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo_3.2 % "2.0"
+"net.liftmodules" %% "fobo_3.3 % "2.0"
 ```      
 **Maven:**      
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo_3.2_2.12.2</artifactId>
+  <artifactId>fobo_3.3_2.12.6</artifactId>
   <version>2.0</version>
 </dependency>
 ```
-The example shows how to include the FoBo/FoBo module built for lift 3.2.x. 
+The example shows how to include the FoBo/FoBo module built for lift 3.3.x. 
 If you are using maven observe that the artifact id also needs the Scala version.
 	
 ### Dependency setting (Toolkit / API / Resource)
@@ -103,13 +103,13 @@ Setup example using the FoBo/Lift Bootstrap3 API module:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-twbs-bootstrap4-api_3.2" % "2.0"
+"net.liftmodules" %% "fobo-twbs-bootstrap4-api_3.3" % "2.0"
 ```      
 **Maven:**
 ```xml      
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-twbs-bootstrap4-api_3.2_2.12.2</artifactId>
+  <artifactId>fobo-twbs-bootstrap4-api_3.3_2.12.6</artifactId>
   <version>2.0</version>
 </dependency>
 ```
@@ -205,7 +205,7 @@ Twitter Bootstrap v2.3.0) For more information on how to set this up see below.
 
 ## FoBo Modules -- Toolkit:s and available versions
 
-FoBo artifacts is available for: Lift 2.4, 2.5, 2.6.x, 3.0.x, 3.1.x and 3.2.x 
+FoBo artifacts is available for: Lift 2.4, 2.5, 2.6.x, 3.0.x, 3.1.x, 3.2.x and 3.3.x 
 
 - [FoBo](https://github.com/karma4u101/FoBo/tree/master/FoBo/FoBo) This module contains all the bellow listed toolkit modules. 
 
