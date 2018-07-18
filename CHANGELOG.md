@@ -12,7 +12,7 @@ section
 - **2015-12-30** -- FoBo Module v1.5.1
 
 **Latest Updates:**
-- **2018-07-18** -- [PR #165](https://github.com/karma4u101/FoBo/pull/165) FoBo v2.0 -- Prep for release of FoBo v2.0 for Lift v3.3 
+- **2018-07-18** -- [PR #166](https://github.com/karma4u101/FoBo/pull/166) FoBo v2.0 -- Release FoBo v2.0 for Lift v3.3 
 - **2018-01-21** -- [PR #126](https://github.com/karma4u101/FoBo/pull/157) FoBo v2.0 -- Bootstrap v4.0.0 
 - **2018-01-21** -- [PR #163](https://github.com/karma4u101/FoBo/pull/162) FoBo v2.0 -- Updating Popper to v1.12.9
 - **2017-07-28** -- [PR #151](https://github.com/karma4u101/FoBo/pull/151) FoBo v2.0 -- Updating UI Bootstrap to v2.5.0
