@@ -1,0 +1,21 @@
+alias pub=publishSigned
+
+set LiftModuleKeys.liftVersion in ThisBuild := "3.3.0"
+set version                    in ThisBuild := "2.0"
+
+set scalaVersion in ThisBuild := "2.12.6"
+project fobo
+clean
+cleanFiles
+; compile ; test ; pub
+
+set scalaVersion in ThisBuild := "2.11.11"
+project fobo
+clean
+cleanFiles
+; compile ; test ; pub
+
+
+
+
+
