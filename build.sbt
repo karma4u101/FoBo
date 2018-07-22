@@ -7,7 +7,7 @@ import LiftModuleKeys.{liftVersion, liftEdition}
 //##############
 
 //scalacOptions in Compile ++= Seq("-doc-root-content", "rootdoc.txt")
-// onLoad in Global := { s => "dependencyUpdates" :: s }
+onLoad in Global := { s => "dependencyUpdates" :: s }
 
 lazy val commonSettings = Seq(
   organization := "net.liftmodules",
@@ -20,9 +20,9 @@ lazy val fobometa = (project in file("."))
   .settings(commonSettings: _*)
   .enablePlugins(ScalaUnidocPlugin)
   .settings(name := "fobo-meta")
-  .settings(scalaVersion in ThisBuild := "2.12.2")
+  .settings(scalaVersion in ThisBuild := "2.12.6")
   .settings(
-    liftVersion in ThisBuild := { liftVersion ?? "3.2.0-SNAPSHOT" }.value)
+    liftVersion in ThisBuild := { liftVersion ?? "3.3.0" }.value)
   .settings(liftEdition in ThisBuild := {
     liftVersion apply { _.substring(0, 3) }
   }.value)
@@ -261,8 +261,10 @@ libraryDependencies in ThisBuild ++= {
       "org.specs2" %% "specs2" % "2.3.11" % "test"
     case (_, "3.0.0") => "org.specs2" %% "specs2"      % "3.7"   % "test"
     case (_, "3.0.1") => "org.specs2" %% "specs2-core" % "3.8.6" % "test"
+    case (_, "3.1.1") | (_, "3.1.2") =>
+      "org.specs2" %% "specs2-core" % "3.8.6" % "test" //lift 3.1.x / 3.2.x
     case (_, _) =>
-      "org.specs2" %% "specs2-core" % "3.8.6" % "test" //lift 3.1.x
+      "org.specs2" %% "specs2-core" % "4.0.2" % "test" //lift 3.3.x
   }) ::
     ((scalaVersion.value, liftVersion.value) match {
     case ("2.10.4", _) | ("2.9.2", _) | ("2.9.1", _) | ("2.9.1-1", _) =>
@@ -273,8 +275,10 @@ libraryDependencies in ThisBuild ++= {
       "org.specs2" %% "specs2" % "3.7" % "test" //no mather extras for 3.7
     case (_, "3.0.1") =>
       "org.specs2" %% "specs2-matcher-extra" % "3.8.6" % "test"
+    case (_, "3.1.1") | (_, "3.1.2") =>
+      "org.specs2" %% "specs2-matcher-extra" % "3.8.6" % "test" //lift 3.1.x / 3.2.x
     case (_, _) =>
-      "org.specs2" %% "specs2-matcher-extra" % "3.8.6" % "test" //lift 3.1.x
+      "org.specs2" %% "specs2-matcher-extra" % "4.0.2" % "test" //lift 3.3.x
   }) ::
     ((scalaVersion.value, liftVersion.value) match {
     case (_, "2.6.2") | (_, "2.6.3") =>
@@ -283,8 +287,10 @@ libraryDependencies in ThisBuild ++= {
       "org.specs2" %% "specs2-scalacheck" % "3.7" % "test"
     case (_, "3.0.1") =>
       "org.specs2" %% "specs2-scalacheck" % "3.8.6" % "test"
+    case (_, "3.1.1") | (_, "3.1.2") =>
+      "org.specs2" %% "specs2-scalacheck" % "3.8.6" % "test" //lift 3.1.x / 3.2.x
     case (_, _) =>
-      "org.specs2" %% "specs2-scalacheck" % "3.8.6" % "test" //lift 3.1.x
+      "org.specs2" %% "specs2-scalacheck" % "4.0.2" % "test" //lift 3.3.x
   }) ::
     Nil
 }
@@ -293,7 +299,8 @@ libraryDependencies in ThisBuild ++= {
   (liftVersion.value match {
     case "2.6.2" | "2.6.3" =>
       "javax.servlet" % "servlet-api" % "2.5" % "provided,test"
-    case _ => "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided,test"
+    case "3.0.2" | "3.1.1" | "3.2.0" => "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided,test"
+    case _ => "javax.servlet" % "javax.servlet-api" % "4.0.0" % "provided,test"
   }) ::
     Nil
 }
