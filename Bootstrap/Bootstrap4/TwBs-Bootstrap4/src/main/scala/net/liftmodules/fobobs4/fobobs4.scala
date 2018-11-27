@@ -95,7 +95,7 @@ package object fobobs4 {
       *    :
       *   fobo.Toolkit.init=fobo.Toolkit.Bootstrap413
       * }}}
-      * @since v2.0.1
+      * @since v2.1.0
       */
     case object Bootstrap413 extends Toolkit {
       net.liftmodules.fobobs4api.API.Bootstrap4
@@ -148,7 +148,7 @@ package object fobobs4 {
       *    :
       *   fobo.Resource.init=fobo.Resource.Bootstrap413
       * }}}
-      * @since v2.0.1
+      * @since v2.1.0
       */
     case object Bootstrap413 extends Resource {
       fobobs4res.Resource.Bootstrap413

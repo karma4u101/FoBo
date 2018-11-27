@@ -54,7 +54,7 @@ package object fobobs4res {
       *    :
       *   fobo.Resource.init=fobo.Resource.Bootstrap413
       * }}}
-      * @since v2.0.1
+      * @since v2.1.0
       */
     case object Bootstrap413 extends Resource {
       FoBoResources.init
