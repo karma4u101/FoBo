@@ -11,7 +11,7 @@ onLoad in Global := { s => "dependencyUpdates" :: s }
 
 lazy val commonSettings = Seq(
   organization := "net.liftmodules",
-  version := "2.0",
+  version := "2.1.0-SNAPSHOT",
   scalacOptions ++= Seq("-unchecked", "-deprecation"),
   autoAPIMappings := true
 )

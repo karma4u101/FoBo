@@ -1,14 +1,14 @@
 package net.liftmodules.fobobs4.snippet.FoBo
 
-import scala.xml.{NodeSeq, Text}
+import scala.xml.{NodeSeq}
 import net.liftweb.util._
 import net.liftweb.common._
 import net.liftweb.http._
-import net.liftweb._
 import Helpers._
 import net.liftweb.http.js._
 import net.liftweb.http.js.JsCmds._
 import net.liftmodules.fobobs4.lib.{BootstrapSH => sch}
+import net.liftweb.sitemap.{Loc, SiteMap}
 
 /**
   * ==Bs4Component's Snippet Bootstrap v4.x==
@@ -25,6 +25,7 @@ class Bs4Comp extends StatefulSnippet with Loggable {
   private lazy val sch = new sch()
 
   def dispatch = {
+    case "breadCrumb"                    => breadCrumb
     case "popover"                       => popover
     case "popoverAppendJs"               => popoverAppendJs
     case "popoverPreventDefault"         => popoverPreventDefault
@@ -33,6 +34,54 @@ class Bs4Comp extends StatefulSnippet with Loggable {
     case "tooltipAppendJs"               => tooltipAppendJs
     case "activateDropdown"              => activateDropdown
     case "activateDropdownAppendJs"      => activateDropdownAppendJs
+  }
+
+  /**
+    * This function creates a bootstrap breadCrumb component using Loc information from Lift.
+    *
+    * '''Snippet Params:'''
+    *
+    *  - '''Param''' ''prefix'' - A optional param to prefix the breadcrumb list with if it's value can
+    *    be found as a Loc.name.
+    *
+    * '''Example'''
+    * {{{ <script data-lift="FoBo.Bs4Comp.breadCrumb?prefix=Home"></script> }}}
+    *
+    * @since v2.0.1
+    */
+  def breadCrumb: CssSel = {
+    val locName              = S.attr("prefix") openOr ""
+    val aPrefix: Box[Loc[_]] = SiteMap.findLoc(locName)
+    var breadcrumbs: List[Loc[_]] =
+      for {
+        currentLoc <- S.location.toList
+        loc        <- currentLoc.breadCrumbs
+      } yield loc
+
+    breadcrumbs = aPrefix match {
+      case Full(prefix) => prefix :: breadcrumbs
+      case _            => breadcrumbs
+    }
+
+    " *" #> <nav aria-label="breadcrumb" role="navigation">
+      <ol class="breadcrumb">
+        {breadcrumbs.map { loc =>
+        val linkText = loc.linkText.openOr(NodeSeq.Empty)
+        val link = loc.createDefaultLink.getOrElse(NodeSeq.Empty)
+
+        if (loc == S.location.openOr(NodeSeq.Empty))
+          <li class="breadcrumb-item active" aria-current="page">
+            {linkText}
+          </li>
+        else
+          <li class="breadcrumb-item">
+            <a href={link}>
+              {linkText}
+            </a>
+          </li>
+      }}
+      </ol>
+    </nav>
   }
 
   /**
@@ -112,7 +161,7 @@ class Bs4Comp extends StatefulSnippet with Loggable {
     *     // ]]>
     *   </script>
     * }}}
-    * @see [[net.liftmodules.FoBoBs.lib.BootstrapSH.tooltipScript]]
+    * @see [[net.liftmodules.fobobs4.lib.BootstrapSH.tooltipScript]]
     * @since v2.0
     */
   def tooltip: CssSel = {

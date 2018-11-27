@@ -848,6 +848,22 @@ package object fobo {
     }
 
     /*===Bootstrap4 Toolkit===============================================================*/
+    /**
+      * Enable usage of Bootstrap API and resources version 4&#8228;1&#8228;3 in your bootstrap liftweb Boot.
+      * @version 4.1.3
+      *
+      *  @example
+      *
+      * {{{
+      *   import net.liftmodules.fobo
+      *    :
+      *   fobo.Toolkit.init=fobo.Toolkit.Bootstrap413
+      * }}}
+      * @since v2.0.1
+      */
+    case object Bootstrap413 extends Toolkit {
+      net.liftmodules.fobobs4.Toolkit.Bootstrap413
+    }
 
     /**
       * Enable usage of Bootstrap API and resources version 4&#8228;0&#8228;0 in your bootstrap liftweb Boot.
@@ -1719,6 +1735,23 @@ package object fobo {
     }
 
     /*===Bootstrap4 Resource===============================================================*/
+
+    /**
+      * Enable usage of Bootstrap version 4&#8228;1&#8228;3 resource files in your bootstrap liftweb Boot.
+      * @version 4.1.3
+      *
+      *  @example
+      *
+      * {{{
+      *   import net.liftmodules.fobo
+      *    :
+      *   fobo.Resource.init=fobo.Resource.Bootstrap413
+      * }}}
+      * @since v2.0.1
+      */
+    case object Bootstrap413 extends Resource {
+      net.liftmodules.fobobs4.Resource.Bootstrap413
+    }
 
     /**
       * Enable usage of Bootstrap version 4&#8228;0&#8228;0 resource files in your bootstrap liftweb Boot.

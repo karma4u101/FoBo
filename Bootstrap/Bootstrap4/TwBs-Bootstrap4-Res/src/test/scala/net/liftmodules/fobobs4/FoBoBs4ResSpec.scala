@@ -12,6 +12,19 @@ object FoBoBs4ResSpec extends Specification {
 
   sequential
 
+  //Bootstrap413
+  "With FoBoBsRes.Resource.init set to FoBoBsRes.Resource.Bootstrap413 the ResourceServer" should {
+    "allow fobo/bootstrap.js" in {
+      allowResource(fobobs4res.Resource.Bootstrap413,
+                    "fobo" :: "bootstrap.js" :: Nil) must_== true
+    }
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/4.1.3/js/bootstrap-min.js" in {
+      rewriteResource(fobobs4res.Resource.Bootstrap413,
+                      "fobo" :: "bootstrap.js" :: Nil) must_==
+        List("fobo", "bootstrap", "4.1.3", "js", "bootstrap.min.js")
+    }
+  }
+
   //Bootstrap400
   "With FoBoBsRes.Resource.init set to FoBoBsRes.Resource.Bootstrap400 the ResourceServer" should {
     "allow fobo/bootstrap.js" in {
