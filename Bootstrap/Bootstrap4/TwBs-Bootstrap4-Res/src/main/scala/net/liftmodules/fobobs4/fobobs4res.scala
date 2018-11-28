@@ -44,6 +44,24 @@ package object fobobs4res {
     override def toString() = "fobobs4res.Resource = " + store.toString()
 
     /**
+      * Enable usage of FoBo's Bootstrap version 4&#8228;1&#8228;3 resources files in your bootstrap liftweb Boot.
+      * @version 4.1.3
+      *
+      *  '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{fobobs4res => fobo}
+      *    :
+      *   fobo.Resource.init=fobo.Resource.Bootstrap413
+      * }}}
+      * @since v2.1.0
+      */
+    case object Bootstrap413 extends Resource {
+      FoBoResources.init
+      FoBoResources.bootstrap413
+    }
+
+    /**
       * Enable usage of FoBo's Bootstrap version 4&#8228;0&#8228;0 resources files in your bootstrap liftweb Boot.
       * @version 4.0.0
       *
@@ -71,6 +89,60 @@ package object fobobs4res {
     lazy val init: Unit = {
       ResourceServer.allow {
         case "fobo" :: tail => true
+      }
+    }
+
+    lazy val bootstrap413: Unit = {
+      ResourceServer.rewrite {
+        case "fobo" :: "bootstrap.css" :: Nil if Props.devMode =>
+          List("fobo", "bootstrap", "4.1.3", "css", "bootstrap.css")
+        case "fobo" :: "bootstrap.css" :: Nil =>
+          List("fobo", "bootstrap", "4.1.3", "css", "bootstrap.min.css")
+        case "fobo" :: "bootstrap.css.map" :: Nil if Props.devMode =>
+          List("fobo", "bootstrap", "4.1.3", "css", "bootstrap.css.map")
+        case "fobo" :: "bootstrap.css.map" :: Nil =>
+          List("fobo", "bootstrap", "4.1.3", "css", "bootstrap.min.css.map")
+        case "fobo" :: "bootstrap-grid.css" :: Nil if Props.devMode =>
+          List("fobo", "bootstrap", "4.1.3", "css", "bootstrap-grid.css")
+        case "fobo" :: "bootstrap-grid.css" :: Nil =>
+          List("fobo", "bootstrap", "4.1.3", "css", "bootstrap-grid.min.css")
+        case "fobo" :: "bootstrap-grid.css.map" :: Nil if Props.devMode =>
+          List("fobo", "bootstrap", "4.1.3", "css", "bootstrap-grid.css.map")
+        case "fobo" :: "bootstrap-grid.css.map" :: Nil =>
+          List("fobo",
+               "bootstrap",
+               "4.1.3",
+               "css",
+               "bootstrap-grid.min.css.map")
+        case "fobo" :: "bootstrap-reboot.css" :: Nil if Props.devMode =>
+          List("fobo", "bootstrap", "4.1.3", "css", "bootstrap-reboot.css")
+        case "fobo" :: "bootstrap-reboot.css" :: Nil =>
+          List("fobo", "bootstrap", "4.1.3", "css", "bootstrap-reboot.min.css")
+        case "fobo" :: "bootstrap-reboot.css.map" :: Nil if Props.devMode =>
+          List("fobo", "bootstrap", "4.1.3", "css", "bootstrap-reboot.css.map")
+        case "fobo" :: "bootstrap-reboot.css.map" :: Nil =>
+          List("fobo",
+               "bootstrap",
+               "4.1.3",
+               "css",
+               "bootstrap-reboot.min.css.map")
+        case "fobo" :: "bootstrap.js" :: Nil if Props.devMode =>
+          List("fobo", "bootstrap", "4.1.3", "js", "bootstrap.js")
+        case "fobo" :: "bootstrap.js" :: Nil =>
+          List("fobo", "bootstrap", "4.1.3", "js", "bootstrap.min.js")
+        case "fobo" :: "bootstrap.js.map" :: Nil =>
+          List("fobo", "bootstrap", "4.1.3", "js", "bootstrap.min.js.map")
+        case "fobo" :: "bootstrap.bundle.js" :: Nil if Props.devMode =>
+          List("fobo", "bootstrap", "4.1.3", "js", "bootstrap.bundle.js")
+        case "fobo" :: "bootstrap.bundle.js" :: Nil =>
+          List("fobo", "bootstrap", "4.1.3", "js", "bootstrap.bundle.min.js")
+        case "fobo" :: "bootstrap.bundle.js.map" :: Nil =>
+          List("fobo",
+               "bootstrap",
+               "4.1.3",
+               "js",
+               "bootstrap.bundle.min.js.map")
+
       }
     }
 

@@ -748,6 +748,53 @@ object FoBoSpec extends Specification {
   }
 
   /*=================Bootstrap ====================================*/
+  //Bootstrap413
+  "With fobo.Resource.init set to fobo.Resource.Bootstrap413 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowResource(fobo.Resource.Bootstrap413, "fobo" :: "bootstrap.js" :: Nil) must_== true
+    }
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/4.1.3/js/bootstrap-min.js" in {
+      rewriteResource(fobo.Resource.Bootstrap413,
+                      "fobo" :: "bootstrap.js" :: Nil) must_==
+        List("fobo", "bootstrap", "4.1.3", "js", "bootstrap.min.js")
+    }
+  }
+
+  "With fobo.Toolkit.init set to fobo.Toolkit.Bootstrap413 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowToolkitInit(fobo.Toolkit.Bootstrap413,
+                       "fobo" :: "bootstrap.js" :: Nil) must_== true
+    }
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/4.1.3/js/bootstrap-min.js" in {
+      rewriteToolkitInit(fobo.Toolkit.Bootstrap413,
+                         "fobo" :: "bootstrap.js" :: Nil) must_==
+        List("fobo", "bootstrap", "4.1.3", "js", "bootstrap.min.js")
+    }
+  }
+
+  //Bootstrap400
+  "With fobo.Resource.init set to fobo.Resource.Bootstrap400 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowResource(fobo.Resource.Bootstrap400, "fobo" :: "bootstrap.js" :: Nil) must_== true
+    }
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/4.0.0/js/bootstrap-min.js" in {
+      rewriteResource(fobo.Resource.Bootstrap400,
+                      "fobo" :: "bootstrap.js" :: Nil) must_==
+        List("fobo", "bootstrap", "4.0.0", "js", "bootstrap.min.js")
+    }
+  }
+
+  "With fobo.Toolkit.init set to fobo.Toolkit.Bootstrap400 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowToolkitInit(fobo.Toolkit.Bootstrap400,
+                       "fobo" :: "bootstrap.js" :: Nil) must_== true
+    }
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/4.0.0/js/bootstrap-min.js" in {
+      rewriteToolkitInit(fobo.Toolkit.Bootstrap400,
+                         "fobo" :: "bootstrap.js" :: Nil) must_==
+        List("fobo", "bootstrap", "4.0.0", "js", "bootstrap.min.js")
+    }
+  }
 
   //Bootstrap337
   "With fobo.Resource.init set to fobo.Resource.Bootstrap337 the ResourceServer" should {

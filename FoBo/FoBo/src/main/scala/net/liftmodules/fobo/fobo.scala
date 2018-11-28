@@ -35,7 +35,7 @@ package net.liftmodules
   *
   *  - JQuery [v1.7.2, v1.8.2, v1.9.1, v1.10.2, v1.11.3, v.2.1.1, v.2.1.4, v2.2.4, v3.0.0, v3.1.0] [[net.liftmodules.fobojq]]
   *  - JQueryMigrate [v1.2.1, v1.4.1, v3.0.0] [[net.liftmodules.fobojq]]
-  *  - Bootstrap v4.x series [v4.0.0] [[net.liftmodules.fobobs4]]
+  *  - Bootstrap v4.x series [v4.1.3, v4.0.0] [[net.liftmodules.fobobs4]]
   *  - Bootstrap v3.x series [v3.0.1, v3.1.1, v3.2.0, v3.3.7] [[net.liftmodules.fobobs]]
   *  - Bootstrap v2.x series [v2.3.2] [[net.liftmodules.fobotb]]
   *  - Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0, v4.7.0] [[net.liftmodules.fobofa]]
@@ -76,7 +76,7 @@ package net.liftmodules
   * You may substitute Toolkit for Resource or API and if you wish also adjust the artifact dependencies
   * accordingly to include just the FoBo modules you use, but if size is not a issue using the FoBo/FoBo
   * module is convenient and gives you a lot to pick from.
-  * @version v2.0
+  * @version v2.1.0
   * @author Peter Petersson (Github karma4u101) and the Lift community
   *
   */
@@ -848,6 +848,22 @@ package object fobo {
     }
 
     /*===Bootstrap4 Toolkit===============================================================*/
+    /**
+      * Enable usage of Bootstrap API and resources version 4&#8228;1&#8228;3 in your bootstrap liftweb Boot.
+      * @version 4.1.3
+      *
+      *  @example
+      *
+      * {{{
+      *   import net.liftmodules.fobo
+      *    :
+      *   fobo.Toolkit.init=fobo.Toolkit.Bootstrap413
+      * }}}
+      * @since v2.1.0
+      */
+    case object Bootstrap413 extends Toolkit {
+      net.liftmodules.fobobs4.Toolkit.Bootstrap413
+    }
 
     /**
       * Enable usage of Bootstrap API and resources version 4&#8228;0&#8228;0 in your bootstrap liftweb Boot.
@@ -1719,6 +1735,23 @@ package object fobo {
     }
 
     /*===Bootstrap4 Resource===============================================================*/
+
+    /**
+      * Enable usage of Bootstrap version 4&#8228;1&#8228;3 resource files in your bootstrap liftweb Boot.
+      * @version 4.1.3
+      *
+      *  @example
+      *
+      * {{{
+      *   import net.liftmodules.fobo
+      *    :
+      *   fobo.Resource.init=fobo.Resource.Bootstrap413
+      * }}}
+      * @since v2.0.1
+      */
+    case object Bootstrap413 extends Resource {
+      net.liftmodules.fobobs4.Resource.Bootstrap413
+    }
 
     /**
       * Enable usage of Bootstrap version 4&#8228;0&#8228;0 resource files in your bootstrap liftweb Boot.

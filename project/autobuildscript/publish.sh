@@ -23,8 +23,11 @@ PUBLISH_32_SBT_COMMAND_FILE=${PWD}/project/autobuildscript/build-publish-Lift32.
 PUBLISH_33_SBT_COMMAND_FILE=${PWD}/project/autobuildscript/build-publish-Lift33.txt
 #default location's for java on a ubuntu system
 JAVA_6_PATH=/usr/lib/jvm/java-6-oracle/jre/bin/java
+JAVAC_6_PATH=/usr/lib/jvm/java-6-oracle/bin/javac
 JAVA_7_PATH=/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+JAVAC_7_PATH=/usr/lib/jvm/java-7-openjdk-amd64/bin/javac
 JAVA_8_PATH=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+JAVAC_8_PATH=/usr/lib/jvm/java-8-openjdk-amd64/bin/javac
 LOG_FILE=build.log
 
 while getopts t: opts; do
@@ -74,11 +77,25 @@ function requiredJavaIsSuccessfullySet() {
   fi
 }
 
+function getJavacPath() {
+  local _javaPath=$1
+  if [[ ${_javaPath} == ${JAVA_6_PATH} ]]; then
+    echo ${JAVAC_6_PATH}
+  elif [[ ${_javaPath} == ${JAVA_7_PATH} ]]; then
+    echo ${JAVAC_7_PATH}
+  elif [[ ${_javaPath} == ${JAVA_8_PATH} ]]; then
+    echo ${JAVAC_8_PATH}
+  fi
+}
+
 #This function sets the JDK environment in a ubuntu system.
 function setJDKEnvironment() {
-  local javaPath=$1
-  debug "Need to switching JDK version "
-  sudo update-alternatives --set java $javaPath
+  local _javaPath=$1
+  local _javacPath=$(getJavacPath ${_javaPath})
+  debug "Need to switching JDK and javac version"
+  echo -e ${_javacPath}
+  sudo update-alternatives --set java ${_javaPath}
+  sudo update-alternatives --set javac ${_javacPath}
 }
 
 

@@ -1,7 +1,7 @@
-alias pub=publishSigned
+alias pub=publishLocal
 
 set LiftModuleKeys.liftVersion in ThisBuild := "3.3.0"
-set version                    in ThisBuild := "2.0"
+set version                    in ThisBuild := "2.1.0-SNAPSHOT"
 
 set scalaVersion in ThisBuild := "2.12.6"
 project fobo
