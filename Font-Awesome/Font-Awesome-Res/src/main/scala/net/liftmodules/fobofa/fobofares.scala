@@ -180,69 +180,75 @@ package object fobofares {
 
     lazy val fontAwesome550 = {
       ResourceServer.rewrite {
-        case "fobo" :: "all.css" :: Nil if Props.devMode =>
+        case "fobo" :: "font-awesome" :: "all.css" :: Nil if Props.devMode =>
           List("fobo", "font-awesome", "5.5.0", "css", "all.css")
-        case "fobo" :: "all.css" :: Nil =>
+        case "fobo" :: "font-awesome" :: "all.css" :: Nil =>
           List("fobo", "font-awesome", "5.5.0", "css", "all.min.css")
 
-        case "fobo" :: "brands.css" :: Nil if Props.devMode =>
+        case "fobo" :: "font-awesome" :: "brands.css" :: Nil if Props.devMode =>
           List("fobo", "font-awesome", "5.5.0", "css", "brands.css")
-        case "fobo" :: "brands.css" :: Nil =>
+        case "fobo" :: "font-awesome" :: "brands.css" :: Nil =>
           List("fobo", "font-awesome", "5.5.0", "css", "brands.min.css")
 
-        case "fobo" :: "fontawesome.css" :: Nil if Props.devMode =>
+        case "fobo" :: "font-awesome" :: "fontawesome.css" :: Nil
+            if Props.devMode =>
           List("fobo", "font-awesome", "5.5.0", "css", "fontawesome.css")
-        case "fobo" :: "fontawesome.css" :: Nil =>
+        case "fobo" :: "font-awesome" :: "fontawesome.css" :: Nil =>
           List("fobo", "font-awesome", "5.5.0", "css", "fontawesome.min.css")
 
-        case "fobo" :: "regular.css" :: Nil if Props.devMode =>
+        case "fobo" :: "font-awesome" :: "regular.css" :: Nil
+            if Props.devMode =>
           List("fobo", "font-awesome", "5.5.0", "css", "regular.css")
-        case "fobo" :: "regular.css" :: Nil =>
+        case "fobo" :: "font-awesome" :: "regular.css" :: Nil =>
           List("fobo", "font-awesome", "5.5.0", "css", "regular.min.css")
 
-        case "fobo" :: "solid.css" :: Nil if Props.devMode =>
+        case "fobo" :: "font-awesome" :: "solid.css" :: Nil if Props.devMode =>
           List("fobo", "font-awesome", "5.5.0", "css", "solid.css")
-        case "fobo" :: "solid.css" :: Nil =>
+        case "fobo" :: "font-awesome" :: "solid.css" :: Nil =>
           List("fobo", "font-awesome", "5.5.0", "css", "solid.min.css")
 
-        case "fobo" :: "svt-with-js.css" :: Nil if Props.devMode =>
-          List("fobo", "font-awesome", "5.5.0", "css", "svt-with-js.css")
-        case "fobo" :: "svt-with-js.css" :: Nil =>
-          List("fobo", "font-awesome", "5.5.0", "css", "svt-with-js.min.css")
+        case "fobo" :: "font-awesome" :: "svg-with-js.css" :: Nil
+            if Props.devMode =>
+          List("fobo", "font-awesome", "5.5.0", "css", "svg-with-js.css")
+        case "fobo" :: "font-awesome" :: "svg-with-js.css" :: Nil =>
+          List("fobo", "font-awesome", "5.5.0", "css", "svg-with-js.min.css")
 
-        case "fobo" :: "v4-shims.css" :: Nil if Props.devMode =>
+        case "fobo" :: "font-awesome" :: "v4-shims.css" :: Nil
+            if Props.devMode =>
           List("fobo", "font-awesome", "5.5.0", "css", "v4-shims.css")
-        case "fobo" :: "v4-shims.css" :: Nil =>
+        case "fobo" :: "font-awesome" :: "v4-shims.css" :: Nil =>
           List("fobo", "font-awesome", "5.5.0", "css", "v4-shims.min.css")
 
-        case "fobo" :: "all.js" :: Nil if Props.devMode =>
+        case "fobo" :: "font-awesome" :: "all.js" :: Nil if Props.devMode =>
           List("fobo", "font-awesome", "5.5.0", "js", "all.js")
-        case "fobo" :: "all.js" :: Nil =>
+        case "fobo" :: "font-awesome" :: "all.js" :: Nil =>
           List("fobo", "font-awesome", "5.5.0", "js", "all.min.js")
 
-        case "fobo" :: "brand.js" :: Nil if Props.devMode =>
+        case "fobo" :: "font-awesome" :: "brand.js" :: Nil if Props.devMode =>
           List("fobo", "font-awesome", "5.5.0", "js", "brand.js")
-        case "fobo" :: "brand.js" :: Nil =>
+        case "fobo" :: "font-awesome" :: "brand.js" :: Nil =>
           List("fobo", "font-awesome", "5.5.0", "js", "brand.min.js")
 
-        case "fobo" :: "fontawesome.js" :: Nil if Props.devMode =>
+        case "fobo" :: "font-awesome" :: "fontawesome.js" :: Nil
+            if Props.devMode =>
           List("fobo", "font-awesome", "5.5.0", "js", "fontawesome.js")
-        case "fobo" :: "fontawesome.js" :: Nil =>
+        case "fobo" :: "font-awesome" :: "fontawesome.js" :: Nil =>
           List("fobo", "font-awesome", "5.5.0", "js", "fontawesome.min.js")
 
-        case "fobo" :: "regular.js" :: Nil if Props.devMode =>
+        case "fobo" :: "font-awesome" :: "regular.js" :: Nil if Props.devMode =>
           List("fobo", "font-awesome", "5.5.0", "js", "regular.js")
-        case "fobo" :: "regular.js" :: Nil =>
+        case "fobo" :: "font-awesome" :: "regular.js" :: Nil =>
           List("fobo", "font-awesome", "5.5.0", "js", "regular.min.js")
 
-        case "fobo" :: "solid.js" :: Nil if Props.devMode =>
+        case "fobo" :: "font-awesome" :: "solid.js" :: Nil if Props.devMode =>
           List("fobo", "font-awesome", "5.5.0", "js", "solid.js")
-        case "fobo" :: "solid.js" :: Nil =>
+        case "fobo" :: "font-awesome" :: "solid.js" :: Nil =>
           List("fobo", "font-awesome", "5.5.0", "js", "solid.min.js")
 
-        case "fobo" :: "v4-shims.js" :: Nil if Props.devMode =>
+        case "fobo" :: "font-awesome" :: "v4-shims.js" :: Nil
+            if Props.devMode =>
           List("fobo", "font-awesome", "5.5.0", "js", "v4-shims.js")
-        case "fobo" :: "v4-shims.js" :: Nil =>
+        case "fobo" :: "font-awesome" :: "v4-shims.js" :: Nil =>
           List("fobo", "font-awesome", "5.5.0", "js", "v4-shims.min.js")
       }
     }

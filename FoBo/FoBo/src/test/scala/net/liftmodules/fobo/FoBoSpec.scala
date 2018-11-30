@@ -554,12 +554,14 @@ object FoBoSpec extends Specification {
 
   //FontAwesome550
   "With fobo.Toolkit.init set to fobo.Toolkit.FontAwesome550 the ResourceServer" should {
-    "allow  fobo/all.css" in {
-      allowToolkitInit(fobo.Toolkit.FontAwesome550, "fobo" :: "all.css" :: Nil) must_== true
+    "allow  fobo/font-awesome/all.css" in {
+      allowToolkitInit(
+        fobo.Toolkit.FontAwesome550,
+        "fobo" :: "font-awesome" :: "all.css" :: Nil) must_== true
     }
-    "rewrit fobo/all.css to fobo/font-awesome/5.5.0/css/all.min.css" in {
+    "rewrit fobo/font-awesome/all.css to fobo/font-awesome/5.5.0/css/all.min.css" in {
       rewriteToolkitInit(fobo.Toolkit.FontAwesome321,
-                         "fobo" :: "all.css" :: Nil) must_==
+                         "fobo" :: "font-awesome" :: "all.css" :: Nil) must_==
         List("fobo", "font-awesome", "5.5.0", "css", "all.min.css")
     }
   }

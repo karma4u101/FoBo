@@ -6,8 +6,8 @@
   font-family: 'Font Awesome 5 Brands';
   font-style: normal;
   font-weight: normal;
-  src: url("..fobo/font-awesome/5.5.0/webfonts/fa-brands-400.eot");
-  src: url("..fobo/font-awesome/5.5.0/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("..fobo/font-awesome/5.5.0/webfonts/fa-brands-400.woff2") format("woff2"), url("..fobo/font-awesome/5.5.0/webfonts/fa-brands-400.woff") format("woff"), url("..fobo/font-awesome/5.5.0/webfonts/fa-brands-400.ttf") format("truetype"), url("..fobo/font-awesome/5.5.0/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
+  src: url("../..fobo/font-awesome/5.5.0/webfonts/fa-brands-400.eot");
+  src: url("../..fobo/font-awesome/5.5.0/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../..fobo/font-awesome/5.5.0/webfonts/fa-brands-400.woff2") format("woff2"), url("../..fobo/font-awesome/5.5.0/webfonts/fa-brands-400.woff") format("woff"), url("../..fobo/font-awesome/5.5.0/webfonts/fa-brands-400.ttf") format("truetype"), url("../..fobo/font-awesome/5.5.0/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
 
 .fab {
   font-family: 'Font Awesome 5 Brands'; }
