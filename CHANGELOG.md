@@ -5,7 +5,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 section
 
 **Latest Stable Releases:**
-- **2018-12-03** -- FoBo Module v2.1 for Lift 3.3
+- **2018-12-04** -- FoBo Module v2.1 for Lift 3.3
 - **2018-07-18** -- FoBo Module v2.0 for Lift 3.3
 - **2018-01-28** -- FoBo Module v2.0
 - **2016-10-04** -- FoBo Module v1.7
