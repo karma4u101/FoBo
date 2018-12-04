@@ -167,13 +167,15 @@ Put something like the following in your Lift template(s) head section (see belo
 
 ```html 	
 <link rel="stylesheet" type='text/css' href='/classpath/fobo/[css file name]'>
-<link rel="stylesheet" type='text/css' href='/classpath/fobo/[another css file name]'> 
+<link rel="stylesheet" type='text/css' href='/classpath/fobo/[tolkit-name]/[css file name]'>
+<link rel="stylesheet" type='text/css' href='/classpath/fobo/[tolkit-name]/[another css file name]'> 
 <link rel="stylesheet" type='text/css' href='/classpath/fobo/[a third css file name]'>
   :	
 <link rel="stylesheet" type='text/css' href='[path/to/you/app/specific/css/file/in/the/webapp/dir]'>
   :
 <script type="text/javascript" src="/classpath/fobo/[script file name]"></script>
-<script type="text/javascript" src="/classpath/fobo/[another script file name]"></script>
+<script type="text/javascript" src="/classpath/fobo/[tolkit-name]/[script file name]"></script>
+<script type="text/javascript" src="/classpath/fobo/[tolkit-name]/[another script file name]"></script>
 <script type="text/javascript" src="/classpath/fobo/[a third script file name]"></script>
   :
 ``` 
@@ -215,7 +217,7 @@ beeing acessable from the FoBo / FoBo module the toolkit, api and resource modul
 The FoBo / FoBo module includes the following modules and supports the following toolkit versions
 
 -   [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/Angular) [v1.0.6, v1.2.11, v1.3.15, v1.4.1, v1.4.8, v1.5.3] (and components see [FoBo-AngularJS](https://github.com/karma4u101/FoBo/tree/master/Angular/AngularJS) )] - [Angular](http://angularjs.org/)
--   [FoBo-TwBs-Bootstrap4](https://github.com/karma4u101/FoBo/tree/master/Bootstrap/Bootstrap4) [v4.0.0, v4.1.3] - [Bootstrap 4.x](http://getbootstrap.com/)
+-   [FoBo-TwBs-Bootstrap4](https://github.com/karma4u101/FoBo/tree/master/Bootstrap/Bootstrap4) [v4.0.0, v4.1.3] - [Bootstrap 4.x](https://getbootstrap.com/docs/4.1)
 -   [FoBo-TwBs-Bootstrap3](https://github.com/karma4u101/FoBo/tree/master/Bootstrap/Bootstrap3) [v3.0.0, v3.0.1, v3.1.1, v3.2.0, v3.3.5, v3.3.6, v3.3.7] - [Bootstrap 3.x](http://getbootstrap.com/)
 -   [FoBo-Twitter-Bootstrap](https://github.com/karma4u101/FoBo/tree/master/Bootstrap/Bootstrap2) [v2.3.2] - [Twitter Bootstrap](http://twitter.github.com/bootstrap/)
 -   [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v2.0.0, v3.0.0, v3.2.1, v4.0.1, v4.0.3, v4.1.0, v4.3.0, v4.5.0, v5.5.0] - [Font Awesome](http://fortawesome.github.com/Font-Awesome/) 

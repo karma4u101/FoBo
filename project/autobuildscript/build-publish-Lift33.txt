@@ -1,9 +1,9 @@
-alias pub=publishLocal
+alias pub=publish
 
 set LiftModuleKeys.liftVersion in ThisBuild := "3.3.0"
-set version                    in ThisBuild := "2.1.0-SNAPSHOT"
+set version                    in ThisBuild := "2.1.0"
 
-set scalaVersion in ThisBuild := "2.12.6"
+set scalaVersion in ThisBuild := "2.12.7"
 project fobo
 clean
 cleanFiles
