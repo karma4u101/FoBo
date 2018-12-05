@@ -35,7 +35,7 @@ package object fobofaapi {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
-    def init: Store = store
+    def init: Store          = store
     def init_=(t: API): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -55,6 +55,22 @@ package object fobofaapi {
       * }}}
       */
     case object FontAwesome4 extends API {
+      FoBoAPI.init
+    }
+
+    /**
+      * Enable usage of FoBo's FontAwesome API version 5&#8228;X&#8228;X in your bootstrap liftweb Boot.
+      * @version 5.X.X
+      *
+      * @example
+      *
+      * {{{
+      *   import net.liftmodules.{fobofaapi => fobo}
+      *    :
+      *   fobo.API.init=fobo.API.FontAwesome5
+      * }}}
+      */
+    case object FontAwesome5 extends API {
       FoBoAPI.init
     }
   }

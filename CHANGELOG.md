@@ -5,6 +5,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 section
 
 **Latest Stable Releases:**
+- **2018-12-04** -- FoBo Module v2.1 for Lift 3.3
 - **2018-07-18** -- FoBo Module v2.0 for Lift 3.3
 - **2018-01-28** -- FoBo Module v2.0
 - **2016-10-04** -- FoBo Module v1.7
@@ -12,6 +13,8 @@ section
 - **2015-12-30** -- FoBo Module v1.5.1
 
 **Latest Updates:**
+- **2018-11-28** -- [PR #168](https://github.com/karma4u101/FoBo/pull/168) FoBo v2.1 -- Font Awesome v5.5.0
+- **2018-11-28** -- [PR #169](https://github.com/karma4u101/FoBo/pull/169) FoBo v2.1 -- Bootstrap v4.1.3
 - **2018-07-18** -- [PR #166](https://github.com/karma4u101/FoBo/pull/166) FoBo v2.0 -- Release FoBo v2.0 for Lift v3.3 
 - **2018-01-21** -- [PR #126](https://github.com/karma4u101/FoBo/pull/157) FoBo v2.0 -- Bootstrap v4.0.0 
 - **2018-01-21** -- [PR #163](https://github.com/karma4u101/FoBo/pull/162) FoBo v2.0 -- Updating Popper to v1.12.9
@@ -29,6 +32,12 @@ section
   FoBoJQuery deprecations 
 
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
+
+## FoBo v2.1
+
+### Updated modules
+- [Bootstrap v4](https://github.com/karma4u101/FoBo/tree/master/Bootstrap/Bootstrap4) [v4.1.3] - [Bootstrap](https://getbootstrap.com/docs/4.1/)
+- [FoBo-Font-Awesome](https://github.com/karma4u101/FoBo/tree/master/Font-Awesome) [v5.5.0] - [Font-Awesome](http://fontawesome.io/)
 
 
 ## FoBo v2.0

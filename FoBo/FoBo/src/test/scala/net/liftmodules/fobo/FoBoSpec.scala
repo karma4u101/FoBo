@@ -552,6 +552,20 @@ object FoBoSpec extends Specification {
 
   /*=================FontAwesome ====================================*/
 
+  //FontAwesome550
+  "With fobo.Toolkit.init set to fobo.Toolkit.FontAwesome550 the ResourceServer" should {
+    "allow  fobo/font-awesome/all.css" in {
+      allowToolkitInit(
+        fobo.Toolkit.FontAwesome550,
+        "fobo" :: "font-awesome" :: "all.css" :: Nil) must_== true
+    }
+    "rewrit fobo/font-awesome/all.css to fobo/font-awesome/5.5.0/css/all.min.css" in {
+      rewriteToolkitInit(fobo.Toolkit.FontAwesome321,
+                         "fobo" :: "font-awesome" :: "all.css" :: Nil) must_==
+        List("fobo", "font-awesome", "5.5.0", "css", "all.min.css")
+    }
+  }
+
   //FontAwesome321
   "With fobo.Toolkit.init set to fobo.Toolkit.FontAwesome321 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {
@@ -748,6 +762,53 @@ object FoBoSpec extends Specification {
   }
 
   /*=================Bootstrap ====================================*/
+  //Bootstrap413
+  "With fobo.Resource.init set to fobo.Resource.Bootstrap413 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowResource(fobo.Resource.Bootstrap413, "fobo" :: "bootstrap.js" :: Nil) must_== true
+    }
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/4.1.3/js/bootstrap-min.js" in {
+      rewriteResource(fobo.Resource.Bootstrap413,
+                      "fobo" :: "bootstrap.js" :: Nil) must_==
+        List("fobo", "bootstrap", "4.1.3", "js", "bootstrap.min.js")
+    }
+  }
+
+  "With fobo.Toolkit.init set to fobo.Toolkit.Bootstrap413 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowToolkitInit(fobo.Toolkit.Bootstrap413,
+                       "fobo" :: "bootstrap.js" :: Nil) must_== true
+    }
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/4.1.3/js/bootstrap-min.js" in {
+      rewriteToolkitInit(fobo.Toolkit.Bootstrap413,
+                         "fobo" :: "bootstrap.js" :: Nil) must_==
+        List("fobo", "bootstrap", "4.1.3", "js", "bootstrap.min.js")
+    }
+  }
+
+  //Bootstrap400
+  "With fobo.Resource.init set to fobo.Resource.Bootstrap400 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowResource(fobo.Resource.Bootstrap400, "fobo" :: "bootstrap.js" :: Nil) must_== true
+    }
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/4.0.0/js/bootstrap-min.js" in {
+      rewriteResource(fobo.Resource.Bootstrap400,
+                      "fobo" :: "bootstrap.js" :: Nil) must_==
+        List("fobo", "bootstrap", "4.0.0", "js", "bootstrap.min.js")
+    }
+  }
+
+  "With fobo.Toolkit.init set to fobo.Toolkit.Bootstrap400 the ResourceServer" should {
+    "allow  fobo/bootstrap.js" in {
+      allowToolkitInit(fobo.Toolkit.Bootstrap400,
+                       "fobo" :: "bootstrap.js" :: Nil) must_== true
+    }
+    "rewrit fobo/bootstrap.js to fobo/bootstrap/4.0.0/js/bootstrap-min.js" in {
+      rewriteToolkitInit(fobo.Toolkit.Bootstrap400,
+                         "fobo" :: "bootstrap.js" :: Nil) must_==
+        List("fobo", "bootstrap", "4.0.0", "js", "bootstrap.min.js")
+    }
+  }
 
   //Bootstrap337
   "With fobo.Resource.init set to fobo.Resource.Bootstrap337 the ResourceServer" should {

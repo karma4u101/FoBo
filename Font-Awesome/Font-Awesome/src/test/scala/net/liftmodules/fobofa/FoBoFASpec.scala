@@ -12,6 +12,20 @@ object FoBoFASpec extends Specification {
 
   sequential
 
+  //FontAwesome550
+  "With fobofa.Toolkit.init set to fobofa.Toolkit.FontAwesome470 the ResourceServer" should {
+    "allow  fobo/font-awesome/all.css" in {
+      allowToolkitInit(
+        fobofa.Toolkit.FontAwesome550,
+        "fobo" :: "font-awesome" :: "all.css" :: Nil) must_== true
+    }
+    "rewrit fobo/font-awesome/all.css to fobo/font-awesome/5.5.0/css/font-awesome.css" in {
+      rewriteToolkitInit(fobofa.Toolkit.FontAwesome550,
+                         "fobo" :: "font-awesome" :: "all.css" :: Nil) must_==
+        List("fobo", "font-awesome", "5.5.0", "css", "all.min.css")
+    }
+  }
+
   //FontAwesome470
   "With fobofa.Toolkit.init set to fobofa.Toolkit.FontAwesome470 the ResourceServer" should {
     "allow  fobo/font-awesome.css" in {

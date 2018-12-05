@@ -5,7 +5,7 @@ but can also be used as-is, see below for setup information.
 
 ## Components and available versions 
 
-- Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.6.3] - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
+- Font Awesome [v3.2.1, v4.0.3, v4.1.0, v4.3.0, v4.6.3, v5.5.0] - [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
 
 ## Integration into your project 
 
@@ -15,14 +15,14 @@ Example setup:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-font-awesome_3.1 % "2.0"
+"net.liftmodules" %% "fobo-font-awesome_3.1 % "2.1"
 ```
 **Maven:**
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
   <artifactId>fobo-font-awesome_3.1_2.12.2</artifactId>
-  <version>2.0</version>
+  <version>2.1</version>
 </dependency>
 ```
 The example will include a module built for lift 3.1.x. 
@@ -41,6 +41,23 @@ import net.liftmodules.fobo
 fobo.Toolkit.init = fobo.Toolkit.FontAwesomeXYZ 
 ```
 ### Lift FoBo Template hooks
+#### FoBo >= v2.1 and FontAwesome >= 5.5.0
+FoBo >= v2.1 adds */font-awesome/* to the fobo classpath to avoid future name clashes with other FoBo included resources.
+```html
+<link rel="stylesheet" type='text/css' href='/classpath/fobo/font-awesome/all.css'>
+<link rel="stylesheet" type='text/css' href='[path/to/you/app/specific/css/file/in/the/webapp/dir]'>
+
+<script src="/classpath/fobo/font-awesome/all.js"></script>
+```
+##### Available css files are 
+  - [solid.css, regular.css, brands.css, all.css, fontawesome.css]
+
+##### Available js files are 
+  - [solid.js, regular.js, brands.js, all.js, fontawesome.js]
+
+For more information on how to use the font awesome fonts see [Font Awesome](http://fortawesome.github.com/Font-Awesome/)
+
+### FoBo < v2.1 
 ```html
 <link rel="stylesheet" type='text/css' href='/classpath/fobo/font-awesome.css'> 
 <link rel="stylesheet" type='text/css' href='[path/to/you/app/specific/css/file/in/the/webapp/dir]'>

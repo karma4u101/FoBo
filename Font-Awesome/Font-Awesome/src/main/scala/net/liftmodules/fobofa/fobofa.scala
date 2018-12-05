@@ -69,12 +69,29 @@ package object fobofa {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Toolkit]
     private var store: Store = List()
-    def init: Store = store
+    def init: Store          = store
     def init_=(t: Toolkit): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
     }
     override def toString() = "fobofa.Toolkit = " + store.toString()
+
+    /**
+      * Enable usage of FoBo's FontAwesome resources and API version 5&#8228;5&#8228;0 in your bootstrap liftweb Boot.
+      * @version 5.5.0
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{fobofa => fobo}
+      *    :
+      *   fobo.Toolkit.init=fobo.Toolkit.FontAwesome550
+      * }}}
+      */
+    case object FontAwesome550 extends Toolkit {
+      fobofares.Resource.FontAwesome550
+      fobofaapi.API.FontAwesome5
+    }
 
     /**
       * Enable usage of FoBo's FontAwesome resources and API version 4&#8228;7&#8228;0 in your bootstrap liftweb Boot.
@@ -190,12 +207,28 @@ package object fobofa {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[Resource]
     private var store: Store = List()
-    def init: Store = store
+    def init: Store          = store
     def init_=(t: Resource): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
     }
     override def toString() = "fobofa.Resource = " + store.toString()
+
+    /**
+      * Enable usage of FoBo's FontAwesome resources version 5&#8228;5&#8228;0 in your bootstrap liftweb Boot.
+      * @version 5.5.0
+      *
+      * '''Example:'''
+      *
+      * {{{
+      *   import net.liftmodules.{fobofa => fobo}
+      *    :
+      *   fobo.Resource.init=fobo.Resource.FontAwesome550
+      * }}}
+      */
+    case object FontAwesome550 extends Resource {
+      fobofares.Resource.FontAwesome550
+    }
 
     /**
       * Enable usage of FoBo's FontAwesome resources version 4&#8228;7&#8228;0 in your bootstrap liftweb Boot.
@@ -303,7 +336,7 @@ package object fobofa {
     //the object name, we can easily change this if we need to
     private type Store = List[String] //List[API]
     private var store: Store = List()
-    def init: Store = store
+    def init: Store          = store
     def init_=(t: API): Store = {
       store = if (store contains t.toString) store else t.toString :: store
       store
@@ -324,6 +357,22 @@ package object fobofa {
       */
     case object FontAwesome4 extends API {
       fobofaapi.API.FontAwesome4
+    }
+
+    /**
+      * Enable usage of FoBo's FontAwesome API version 5&#8228;X&#8228;X in your bootstrap liftweb Boot.
+      * @version 5.X.X
+      *
+      * @example
+      *
+      * {{{
+      *   import net.liftmodules.{fobofa => fobo}
+      *    :
+      *   fobo.API.init=fobo.API.FontAwesome5
+      * }}}
+      */
+    case object FontAwesome5 extends API {
+      fobofaapi.API.FontAwesome5
     }
   }
 }
