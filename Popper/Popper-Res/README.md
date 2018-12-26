@@ -15,30 +15,30 @@ Example setup:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-tether-res_3.1 % "2.0"
+"net.liftmodules" %% "fobo-popper-res_3.3" % "2.1.0"
 ```
 **Maven:**
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-tether-res_3.1_2.12.2</artifactId>
-  <version>2.0</version>
+  <artifactId>fobo-popper-res_3.3_2.12.7</artifactId>
+  <version>2.1.0</version>
 </dependency>
 ```
-The example will include a module built for lift 3.1.x. 
+The example will include a module built for lift 3.3.x. 
 If you are using maven observe that the artifact id also needs the Scala version.
 
 ### Lift FoBo boot hooks (when used as stand alone module)
 ```scala
 import net.liftmodules.{fobopopres => fobo}
   :
-fobo.Resource.init = fobo.Resource.TetherXYZ 
+fobo.Resource.init = fobo.Resource.PopperXYZ 
 ```
 ### Lift FoBo boot hooks (when used in the FoBo module)
 ```scala
 import net.liftmodules.fobo 
   :
-fobo.Resource.init = fobo.Resource.TetherXYZ 
+fobo.Resource.init = fobo.Resource.PopperXYZ 
 ```
 ### Lift FoBo Template hooks
 ```html

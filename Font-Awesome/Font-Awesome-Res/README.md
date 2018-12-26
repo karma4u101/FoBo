@@ -15,14 +15,14 @@ Example setup:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-font-awesome-res_3.1 % "2.0"
+"net.liftmodules" %% "fobo-font-awesome-res_3.3" % "2.1.0"
 ```      
 **Maven:**
 ```xml        
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-font-awesome-res_3.1_2.12.2</artifactId>
-  <version>2.0</version>
+  <artifactId>fobo-font-awesome-res_3.3_2.12.7</artifactId>
+  <version>2.1.0</version>
 </dependency>
 ```
 The example will include a module built for lift 3.1.x. 
@@ -50,4 +50,3 @@ For more information on how to use the font awesome fonts see [Font Awesome](htt
 ## Contributions
 
 Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
-
