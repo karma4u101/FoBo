@@ -15,17 +15,17 @@ Example setup:
 
 **SBT:**
 ```scala
-    "net.liftmodules" %% "fobo-twitter-bootstrap-res_3.3 % "2.1"
+    "net.liftmodules" %% "fobo-twitter-bootstrap-res_3.3" % "2.1.0"
 ```      
 **Maven:**
  ```xml         
 <dependency>
   <groupId>net.liftmodules</groupId>
   <artifactId>fobo-twitter-bootstrap-res_3.3_2.12.6</artifactId>
-  <version>2.1</version>
+  <version>2.1.0</version>
 </dependency>
 ``` 
-The example will include a module built for lift 3.3.x. 
+The example will include a module built for lift v3.3.x. 
 If you are using maven observe that the artifact id also needs the Scala version.
 
 ### Lift FoBo boot hooks (when used in the FoBo module)

@@ -11,7 +11,7 @@ import LiftModuleKeys.{liftVersion, liftEdition}
 
 lazy val commonSettings = Seq(
   organization := "net.liftmodules",
-  version := "2.1.0",
+  version := "2.1.1-SNAPSHOT",
   scalacOptions ++= Seq("-unchecked", "-deprecation"),
   autoAPIMappings := true
 )

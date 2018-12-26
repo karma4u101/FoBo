@@ -10,16 +10,16 @@ but can also be used as-is, see below for setup information.
 Example setup:
 
 ```scala
-"net.liftmodules" %% "fobo-twbs-bootstrap3-api_3.1 % "2.0"
+"net.liftmodules" %% "fobo-twbs-bootstrap3-api_3.3" % "2.1.0"
 ```
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-twbs-bootstrap3-api_3.1_2.12.2</artifactId>
-  <version>2.0</version>
+  <artifactId>fobo-twbs-bootstrap3-api_3.3_2.12.7</artifactId>
+  <version>2.1.0</version>
 </dependency>
 ```
-The example will include the FoBo Bootstrap3 API module v2.0 built for Lift 3.1.x. 
+The example will include the FoBo Bootstrap3 API module v2.1.0 built for Lift 3.3.x. 
 If you are using maven observe that the artifact id also needs the Scala version.
 
 ### Lift FoBo boot hooks (when used in the FoBo module)
@@ -39,4 +39,3 @@ fobo.API.init = fobo.API.Bootstrap3
 
 Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). 
 You can also leave a issue report or drop a question/suggestion on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
-
