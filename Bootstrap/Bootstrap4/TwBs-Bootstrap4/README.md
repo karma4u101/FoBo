@@ -15,14 +15,14 @@ Example setup:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-twbs-bootstrap4_3.3 % "2.1"
+"net.liftmodules" %% "fobo-twbs-bootstrap4_3.3" % "2.1.0"
 ```
 **Maven:**
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-twbs-bootstrap4_3.3_2.12.6</artifactId>
-  <version>2.1</version>
+  <artifactId>fobo-twbs-bootstrap4_3.3_2.12.7</artifactId>
+  <version>2.1.0</version>
 </dependency>
 ```
 The example will include the FoBo Bootstrap3 toolkit module built for lift 3.3. 
@@ -58,4 +58,3 @@ For more information on how to use Twitter Bootstrap see [Twitter Bootstrap](htt
 ## Contributions
 
 Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
-

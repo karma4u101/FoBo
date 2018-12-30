@@ -11,17 +11,17 @@ Example setup:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-twitter-bootstrap-api_3.1 % "2.0"
+"net.liftmodules" %% "fobo-twitter-bootstrap-api_3.3" % "2.1.0"
 ```    
 **Maven:**
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-twitter-bootstrap-api_3.1_2.12.2</artifactId>
-  <version>2.0</version>
+  <artifactId>fobo-twitter-bootstrap-api_3.3_2.12.7</artifactId>
+  <version>2.1.0</version>
 </dependency>
 ``` 
-The example will include the Bootstrap2 Lift/FoBo API module built for Lift 3.1. 
+The example will include the Bootstrap2 Lift/FoBo API module built for Lift 3.3. 
 If you are using maven observe that the artifact id also needs the Scala version.
 
 ### Lift FoBo boot hooks (when used in the FoBo module)
@@ -45,4 +45,3 @@ For more information on how to use Twitter Bootstrap in the FoBo module see the 
 ## Contributions
 
 Improvements, contributions and suggestions are welcome! Please see the [Contribution Document](https://github.com/karma4u101/FoBo/blob/master/CONTRIBUTING.md). You can also leave a issue report or drop a question/suggestion on [Lift's mailing list](http://groups.google.com/group/liftweb/) 
-
