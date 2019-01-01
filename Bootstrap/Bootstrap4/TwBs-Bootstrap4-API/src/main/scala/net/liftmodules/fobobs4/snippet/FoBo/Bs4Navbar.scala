@@ -15,8 +15,7 @@ import xml._
   * This snippet object transforms lift SiteMap menu items associated with specified loc
   * group name's into Twitter Bootsrap Nav menu items including dropdown menu items from SiteMap submenu's.
   *
-  * See also the TBLocInfo object in [[net.liftmodules.FoBo]] for various, simple to use, SiteMap manipulation functions (menu dividers, labels...).
-  * If you are using the FoBoBs module separately from FoBo see the BsLocInfo object in [[net.liftmodules.FoBoBs]]
+  * See also the BSLocInfo object in [[net.liftmodules.fobobs4.lib]] for various, simple to use, SiteMap manipulation functions (menu dividers, labels...).
   *
   * '''Snippet Usage:'''
   * {{{<span data-lift="FoBo.Bs4Navbar.builder?group=[LocGroup name]"></span>}}}
@@ -132,9 +131,12 @@ trait Bs4Navbar extends FlexMenuBuilder with DispatchSnippet {
                            text: NodeSeq,
                            path: Boolean,
                            current: Boolean,
-                           f: Function0[_]): NodeSeq = {
+                           f: Function0[_],
+                           isDropDownItem: Boolean): NodeSeq = {
     val t: String = f().asInstanceOf[String]
-    <a class="nav-link" href={ uri } target={t}>{ text }</a>
+
+    if (isDropDownItem) <a class="dropdown-item" href={uri} target={t}>{text}</a>
+    else <a class="nav-link" href={uri} target={t}>{text}</a>
   }
 
   override def updateForPath(nodes: Elem, path: Boolean): Elem = nodes
@@ -148,9 +150,12 @@ trait Bs4Navbar extends FlexMenuBuilder with DispatchSnippet {
         <a href='#' class='nav-link dropdown-toggle' data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
           <span>{ item.text }</span> <b class='caret'></b>
         </a>
-        <div class="dropdown-menu">{
-          for(kid <- item.kids) yield renderDropdownItem(kid.uri, kid.text, kid.path, kid.current)
-          }</div>
+        <div class="dropdown-menu">
+          {for(kid <- item.kids) yield {
+            if (!kid.info.isEmpty) renderItemWithInfo(kid.info, renderInner, kid, true)
+            else renderDropdownItem(kid.uri, kid.text, kid.path, kid.current)
+          }}
+        </div>
       </li>,
       item.path,
       item.current
@@ -187,9 +192,9 @@ trait Bs4Navbar extends FlexMenuBuilder with DispatchSnippet {
     }
   }
 
-  def buildTBDivider(contents: NodeSeq, path: Boolean, current: Boolean): Elem =
-    updateForCurrent(updateForPath(<li class="nav-item divider"></li>, path),
-                     current)
+  def buildTBDivider(contents: NodeSeq, path: Boolean, current: Boolean, isDropDownItem: Boolean): Elem =
+    if (isDropDownItem) updateForCurrent(updateForPath(<div class="dropdown-divider"></div>, path), current)
+    else updateForCurrent(updateForPath(<li class="nav-item divider"></li>, path), current)
 
   def buildTBVerticalDivider(contents: NodeSeq,
                              path: Boolean,
@@ -230,21 +235,30 @@ trait Bs4Navbar extends FlexMenuBuilder with DispatchSnippet {
   private def renderItemWithInfo(
       info: List[net.liftweb.common.Box[Function0[_]]],
       renderInner: Seq[MenuItem] => NodeSeq,
-      item: MenuItem): Elem = {
+      item: MenuItem,
+      isDropDownItem: Boolean = false): Elem = {
 
     def buildWithInfo(f: Function0[_],
                       renderInner: Seq[MenuItem] => NodeSeq,
                       item: MenuItem): Elem = {
       if (f().equals("divider")) {
-        buildTBDivider(<xml:group></xml:group>, item.path, item.current)
+        buildTBDivider(<xml:group></xml:group>, item.path, item.current, isDropDownItem)
       } else if (f().equals("divider-vertical")) {
         buildTBVerticalDivider(<xml:group></xml:group>, item.path, item.current)
       } else if (f().equals("_blank") || f().equals("_self") || f().equals(
                    "_parent") || f().equals("_top")) {
-        buildInnerTag(
-          <xml:group>{ renderLinkWithTarget(item.uri, item.text, item.path, item.current, f) }{ renderInner(item.kids) }</xml:group>,
-          item.path,
-          item.current)
+        if (isDropDownItem)
+          // no li wrapping for dropdown items
+          updateForCurrent(
+            updateForPath(
+              {renderLinkWithTarget(item.uri, item.text, item.path, item.current, f, isDropDownItem)}.asInstanceOf[Elem],
+              item.path),
+            item.current)
+        else
+          buildInnerTag(
+            <xml:group>{ renderLinkWithTarget(item.uri, item.text, item.path, item.current, f, isDropDownItem) }{ renderInner(item.kids) }</xml:group>,
+            item.path,
+            item.current)
       } else {
         //Unknown function value do the default thingy
         buildInnerTag(
