@@ -3,10 +3,9 @@ package net.liftmodules.fobobs4.snippet.FoBo
 import net.liftweb._
 import http._
 import common._
-import common.Box._
-import http.{S, LiftRules}
+import net.liftweb.util.Helpers
 import sitemap._
-import util.Helpers
+
 import xml._
 
 /**
@@ -49,9 +48,11 @@ import xml._
   *
   * '''Result:''' This will create a list group of linked items associated with the specified
   * LocGroup names 'lg1, user, lg2, ...'.
-  * @since v1.1
+  * @since v2.1
   */
 trait Bs4LinkedListGroup extends FlexMenuBuilder with DispatchSnippet {
+
+  private val logger = Logger(classOf[Bs4LinkedListGroup])
 
   def dispatch: DispatchIt =
     overridenDispatch orElse net.liftweb.builtin.snippet.Menu.dispatch
@@ -99,10 +100,11 @@ trait Bs4LinkedListGroup extends FlexMenuBuilder with DispatchSnippet {
 
   override def updateForCurrent(nodes: Elem, current: Boolean): Elem = nodes
 
+  //placeholder is disabled in render
   override def renderPlaceholder(item: MenuItem,
-                                 renderInner: Seq[MenuItem] => NodeSeq): Elem =
-    updateForCurrent(updateForPath({ item }.asInstanceOf[Elem], item.path),
-                     item.current)
+                                 renderInner: Seq[MenuItem] => NodeSeq): Elem = {
+    updateForCurrent(updateForPath({ item }.asInstanceOf[Elem], item.path), item.current)
+  }
 
   override def buildItemMenu[A](loc: Loc[A],
                                 currLoc: Box[Loc[_]],
@@ -219,6 +221,54 @@ trait Bs4LinkedListGroup extends FlexMenuBuilder with DispatchSnippet {
     }
   }
 
+  override def render: NodeSeq = {
+
+    val level: Box[Int] = for (lvs <- S.attr("level"); i <- Helpers.asInt(lvs)) yield i
+
+    val toRender: Seq[MenuItem] = this.toRender
+
+    def ifExpandCurrent(f: => NodeSeq): NodeSeq = if (expandAny || expandAll) f else NodeSeq.Empty
+    def ifExpandAll(f: => NodeSeq): NodeSeq = if (expandAll) f else NodeSeq.Empty
+    toRender.toList match {
+      case Nil if S.attr("group").isDefined => emptyGroup
+      case Nil => emptyMenu
+      case xs =>
+        def buildANavItem(i: MenuItem): NodeSeq = {
+          i match {
+            //disable placeholder regardless if it has kids or not
+            case m@MenuItem(text, uri, kids, _, _, _) if m.placeholder_? => emptyPlaceholder
+            // Per Loc.PlaceHolder, placeholder implies HideIfNoKids
+            /* case m@MenuItem(text, uri, kids, _, _, _) if m.placeholder_? && kids.isEmpty => emptyPlaceholder
+             case m@MenuItem(text, uri, kids, _, _, _) if m.placeholder_? => renderPlaceholder(m, buildLine _)*/
+            case m@MenuItem(text, uri, kids, true, _, _) if linkToSelf   => renderSelfLinked(m, k => ifExpandCurrent(buildLine(k)))
+            case m@MenuItem(text, uri, kids, true, _, _) => renderSelfNotLinked(m, k => ifExpandCurrent(buildLine(k)))
+            // Not current, but on the path, so we need to expand children to show the current one
+            case m@MenuItem(text, uri, kids, _, true, _) => renderItemInPath(m, buildLine _)
+            case m =>renderItem(m, buildLine _)
+          }
+        }
+
+        def buildLine(in: Seq[MenuItem]): NodeSeq = buildUlLine(in, false)
+
+        def buildUlLine(in: Seq[MenuItem], top: Boolean): NodeSeq =
+          if (in.isEmpty) {
+            NodeSeq.Empty
+          } else {
+            renderOuterTag(in.flatMap(buildANavItem), top)
+          }
+
+        val realMenuItems = level match {
+          case Full(lvl) if lvl > 0 =>
+            def findKids(cur: Seq[MenuItem], depth: Int): Seq[MenuItem] = if (depth == 0) cur
+            else findKids(cur.flatMap(mi => mi.kids), depth - 1)
+
+            findKids(xs, lvl)
+
+          case _ => xs
+        }
+        buildUlLine(realMenuItems, true)
+    }
+  }
 }
 
 object Bs4LinkedListGroup extends Bs4LinkedListGroup
