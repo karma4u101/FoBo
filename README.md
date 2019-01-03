@@ -9,10 +9,10 @@ toolkits for developing mobile scalable responsive web applications that will ja
 
 The toolkit modules is in it's turn composed of a API module and a Resource module artifact making the usage of FoBo scalable and flexible.
 
-A **live demo** and introduction to using the FoBo module(s), including [unified Scaladoc API documentation](http://www.media4u101.se/fobo-lift-template-demo/foboapi/current/index.html#net.liftmodules.FoBo.package) 
+A **live demo** and introduction to using the FoBo module(s), including [unified Scaladoc API documentation](https://www.media4u101.se/fobo-lift-template-demo/foboapi/current/net/liftmodules/fobo/index.html) 
 and links to running examples of starter templates and more, can be seen at the [FoBo Template Demo](http://www.media4u101.se/fobo-lift-template-demo/). 
 
-With this Lift module you will get a hassle free inclusion and smooth upgrades of toolkits, you decide what toolkits artifacts and versions to enable.
+Using the Lift module you will get a hassle free inclusion and smooth upgrades of toolkits, you decide what toolkits artifacts and versions to enable.
 The FoBo module is making development, maintenance, upgrade and fall-back quick and easy (typically a one liner change in lift boot), by 
 simultaneously supporting several versions of the included toolkits and, without code or reference changes, providing debug-able js and css 
 files in development and minimized files otherwise. 
@@ -23,17 +23,20 @@ clutter your applications web-app resources directory.
 #### FoBo API
 Some of the FoBo toolkit modules also includes a evolving FoBo/Lift API module that includes snippet:s and helper object:s (see API documents for usage) 
 that will take care of some common toolkit and component initiation and usage, like lift site-map to bootstrap or Angular Material menu builders, 
-resource injection, script generation and more.
+breadCrumbs, resource injection, script generation and more.
 
 #### FoBo - Lift starter template
-**Bootstrap** A Lift v2.6 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) 
-is available from here [Lift v2.6 Template Applications](https://github.com/lift/lift_26_sbt/)
-
-**Bootstrap** A Lift v3.x starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) 
-is available from here [Lift v3.x Template Applications](https://github.com/lift/lift_30_sbt/)
+**Bootstrap v4** A Lift v3.x starter template with FoBo setup using Bootstrap v4.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) 
+is available from here [FoBo-Demo](https://github.com/karma4u101/FoBo-Demo/)
 
 **Material Design** A Lift v3.x starter template with FoBo setup using Angular Material and FoBo's MaterialMegaMetaProtoUser (for mapper ProtoUser 
 views) is available from here [FoBo-Demo](https://github.com/karma4u101/FoBo-Demo/)
+
+**Bootstrap v3** A Lift v3.x starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) 
+is available from here [Lift v3.x Template Applications](https://github.com/lift/lift_30_sbt/)
+
+**Bootstrap v3** A Lift v2.6 starter template with FoBo setup using Bootstrap v3.x and FoBo's BootstrapMegaMetaProtoUser (for mapper ProtoUser views) 
+is available from here [Lift v2.6 Template Applications](https://github.com/lift/lift_26_sbt/)
 
 For more information on how to get started with FoBo's starter templates see [Quick Start with Lift Template Applications](#quick-start-with-lift-template-applications)
 
@@ -80,14 +83,14 @@ Setup example:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo_3.3 % "2.1"
+"net.liftmodules" %% "fobo_3.3" % "2.1.0"
 ```      
 **Maven:**      
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
   <artifactId>fobo_3.3_2.12.6</artifactId>
-  <version>2.1</version>
+  <version>2.1.0</version>
 </dependency>
 ```
 The example shows how to include the FoBo/FoBo module built for lift 3.3.x. 
@@ -103,14 +106,14 @@ Setup example using the FoBo/Lift Bootstrap3 API module:
 
 **SBT:**
 ```scala
-"net.liftmodules" %% "fobo-twbs-bootstrap4-api_3.3" % "2.1"
+"net.liftmodules" %% "fobo-twbs-bootstrap4-api_3.3" % "2.1.0"
 ```      
 **Maven:**
 ```xml      
 <dependency>
   <groupId>net.liftmodules</groupId>
   <artifactId>fobo-twbs-bootstrap4-api_3.3_2.12.6</artifactId>
-  <version>2.1</version>
+  <version>2.1.0</version>
 </dependency>
 ```
 The example shows how to include the FoBo Bootstrap4 API module built for lift 3.2.x. 
@@ -211,8 +214,8 @@ FoBo artifacts is available for: Lift 2.4, 2.5, 2.6.x, 3.0.x, 3.1.x, 3.2.x and 3
 
 - [FoBo](https://github.com/karma4u101/FoBo/tree/master/FoBo/FoBo) This module contains all the bellow listed toolkit modules. 
 
-FoBo is built up of several toolkit that in it's turn is built up of corresponding api and resource modules. Appart from 
-beeing acessable from the FoBo / FoBo module the toolkit, api and resource modules is also available for use separately. 
+FoBo is built up of several toolkit that in it's turn is built up of corresponding api and resource modules. Apart from 
+being accessible from the FoBo / FoBo module the toolkit, api and resource modules is also available for use separately. 
  
 The FoBo / FoBo module includes the following modules and supports the following toolkit versions
 
@@ -286,9 +289,12 @@ The modules can still be used as stand alone modules (Lift version < 3.0).
 For feature listings on all releases see 
 - [Changelog](https://github.com/karma4u101/FoBo/blob/develop/CHANGELOG.md)
 
-## Authors
-The FoBo Lift module is mostly written by [Peter Petersson](http://www.media4u101.se). The Lift Module conventions were 
-developed by the [Lift community](http://groups.google.com/group/liftweb/).
+## Contributors
+The FoBo Lift module was created by [Peter Petersson](http://www.media4u101.se)- peter.petersson@gmail.com - Twitter: [@karma4u101](https://twitter.com/karma4u101).
+
+Contributors: @byrongibson, @LawlietS
+
+The Lift Module conventions were developed by the [Lift community](http://groups.google.com/group/liftweb/).
 
 
 

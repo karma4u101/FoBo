@@ -10,13 +10,13 @@ but can also be used as-is, see below for setup information.
 Example setup:
 
 ```scala
-"net.liftmodules" %% "fobo-twbs-bootstrap4-api_3.3 % "2.1"
+"net.liftmodules" %% "fobo-twbs-bootstrap4-api_3.3" % "2.1.0"
 ```
 ```xml
 <dependency>
   <groupId>net.liftmodules</groupId>
-  <artifactId>fobo-twbs-bootstrap4-api_3.3_2.12.6</artifactId>
-  <version>2.1</version>
+  <artifactId>fobo-twbs-bootstrap4-api_3.3_2.12.7</artifactId>
+  <version>2.1.0</version>
 </dependency>
 ```
 The example will include the FoBo Bootstrap4 API module v2.1 built for Lift 3.3.x. 
