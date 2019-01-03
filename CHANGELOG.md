@@ -36,6 +36,9 @@ section
 
 See [Development branch](https://github.com/karma4u101/FoBo/tree/develop/CHANGELOG.md)
 
+## FoBo v2.1.1
+Adds BSLocInfo and a breadCrumbs snippet function to FoBo's Bootstrap v4 API. 
+
 ## FoBo v2.1
 
 ### Updated modules
