@@ -5,6 +5,7 @@ For update history see the [History log](https://github.com/karma4u101/FoBo/tree
 section
 
 **Latest Stable Releases:**
+- **2019-01-03** -- FoBo Module v2.1.1 for Lift 3.3
 - **2018-12-04** -- FoBo Module v2.1 for Lift 3.3
 - **2018-07-18** -- FoBo Module v2.0 for Lift 3.3
 - **2018-01-28** -- FoBo Module v2.0
@@ -13,6 +14,8 @@ section
 - **2015-12-30** -- FoBo Module v1.5.1
 
 **Latest Updates:**
+- **2019-01-01** -- [PR #178](https://github.com/karma4u101/FoBo/pull/178) FoBo v2.1.1 -- BSLocInfo in Bootstrap 4 API
+- **2018-12-30** -- [PR #175](https://github.com/karma4u101/FoBo/pull/178) FoBo v2.1.1 -- Update documentation
 - **2018-11-28** -- [PR #168](https://github.com/karma4u101/FoBo/pull/168) FoBo v2.1 -- Font Awesome v5.5.0
 - **2018-11-28** -- [PR #169](https://github.com/karma4u101/FoBo/pull/169) FoBo v2.1 -- Bootstrap v4.1.3
 - **2018-07-18** -- [PR #166](https://github.com/karma4u101/FoBo/pull/166) FoBo v2.0 -- Release FoBo v2.0 for Lift v3.3 
